@@ -1,0 +1,6 @@
+C:\CSharp\HomeWork2\homework2\homework2_2\bin\Debug\homework2_2.exe.config
+C:\CSharp\HomeWork2\homework2\homework2_2\bin\Debug\homework2_2.exe
+C:\CSharp\HomeWork2\homework2\homework2_2\bin\Debug\homework2_2.pdb
+C:\CSharp\HomeWork2\homework2\homework2_2\obj\Debug\homework2_2.csproj.CoreCompileInputs.cache
+C:\CSharp\HomeWork2\homework2\homework2_2\obj\Debug\homework2_2.exe
+C:\CSharp\HomeWork2\homework2\homework2_2\obj\Debug\homework2_2.pdb

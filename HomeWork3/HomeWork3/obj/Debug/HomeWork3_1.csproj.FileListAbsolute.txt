@@ -1,0 +1,7 @@
+C:\CSharp\HomeWork3\HomeWork3\bin\Debug\HomeWork3.exe.config
+C:\CSharp\HomeWork3\HomeWork3\bin\Debug\HomeWork3.exe
+C:\CSharp\HomeWork3\HomeWork3\bin\Debug\HomeWork3.pdb
+C:\CSharp\HomeWork3\HomeWork3\obj\Debug\HomeWork3_1.csprojAssemblyReference.cache
+C:\CSharp\HomeWork3\HomeWork3\obj\Debug\HomeWork3_1.csproj.CoreCompileInputs.cache
+C:\CSharp\HomeWork3\HomeWork3\obj\Debug\HomeWork3.exe
+C:\CSharp\HomeWork3\HomeWork3\obj\Debug\HomeWork3.pdb

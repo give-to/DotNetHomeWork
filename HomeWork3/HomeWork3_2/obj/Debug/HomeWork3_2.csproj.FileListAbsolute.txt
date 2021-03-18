@@ -1,0 +1,11 @@
+C:\CSharp\HomeWork3\HomeWork3_2\bin\Debug\HomeWork3_2.exe.config
+C:\CSharp\HomeWork3\HomeWork3_2\bin\Debug\HomeWork3_2.exe
+C:\CSharp\HomeWork3\HomeWork3_2\bin\Debug\HomeWork3_2.pdb
+C:\CSharp\HomeWork3\HomeWork3_2\bin\Debug\HomeWork3.exe
+C:\CSharp\HomeWork3\HomeWork3_2\bin\Debug\HomeWork3.pdb
+C:\CSharp\HomeWork3\HomeWork3_2\bin\Debug\HomeWork3.exe.config
+C:\CSharp\HomeWork3\HomeWork3_2\obj\Debug\HomeWork3_2.csprojAssemblyReference.cache
+C:\CSharp\HomeWork3\HomeWork3_2\obj\Debug\HomeWork3_2.csproj.CoreCompileInputs.cache
+C:\CSharp\HomeWork3\HomeWork3_2\obj\Debug\HomeWork3_2.csproj.CopyComplete
+C:\CSharp\HomeWork3\HomeWork3_2\obj\Debug\HomeWork3_2.exe
+C:\CSharp\HomeWork3\HomeWork3_2\obj\Debug\HomeWork3_2.pdb

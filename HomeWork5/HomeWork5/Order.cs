@@ -9,15 +9,26 @@ namespace HomeWork5
     class Order
     {
         private static int count = 0;
-
+        private double costSum = 0;
         public string Sender { get; set; }
         public string Receiver { get; set; }
-        public DateTime PayTime { get; }
-        private double CostSum { get; set; }
+        public DateTime PayTime { get; }        
         public string SenderAddress { get; set; }
         public string ReceiverAddress { get; set; }
         public int ID { get; }
-        public List<OrderDetails> Goods;
+        public List<OrderDetails> Goods = new List<OrderDetails>();
+        public double CostSum
+        {
+            get
+            {
+                costSum = 0;
+                foreach (OrderDetails orderDetails in Goods)
+                {
+                    costSum += orderDetails.CostSum;
+                }
+                return costSum;
+            }
+        }
 
         public Order(string sender,string receiver,string senderAddress,string receiveAddress, List<OrderDetails> goods)
         {
@@ -28,22 +39,10 @@ namespace HomeWork5
             PayTime = DateTime.Now;
             count++;
             ID = count;
-            Goods = goods;
-            foreach(OrderDetails orderDetails in goods)
-            {
-                CostSum += orderDetails.CostSum;
-            }
+            Goods = goods;            
         }
         
-        public double GetRefreshCostSum()
-        {
-            CostSum = 0;
-            foreach (OrderDetails orderDetails in Goods)
-            {
-                CostSum += orderDetails.CostSum;
-            }
-            return CostSum;
-        }
+       
 
         public override string ToString()
         {
@@ -58,7 +57,7 @@ namespace HomeWork5
             {
                 str.Append(orderDetails.ToString());
             }
-            str.Append("总价为：" + GetRefreshCostSum() + '\n');
+            str.Append("总价为：" + CostSum + '\n');
             str.Append('\n');
             return str.ToString();                
         }

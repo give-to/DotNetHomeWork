@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="referrer" content="always">
+</head>
+
+<body>
+    <script>
+    let str = location.href;
+    let curchat = str.split('?')[1],obj={};
+    if(curchat){
+       curchat =  curchat.split('&')
+       console.log(curchat,'===')
+       for(let [,item] of curchat.entries()){
+            let it = item.split('=')
+            obj[it[0]] = it[1]
+       }
+    }
+    location.href="https://im.csdn.net/chat/"+(obj.userName || '');
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,1027 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>实现简单的文件系统_实现文件系统,简单文件系统的实现-其它代码类资源-CSDN下载</title>
+    <meta charset="UTF-8">
+    <meta name="author" content="CSDN"/>
+    <meta name="Copyright" content="CSDN"/>
+    <meta name="title"
+          content="实现简单的文件系统_实现文件系统,简单文件系统的实现-其它代码类资源-CSDN下载"/>
+    <meta name="description"
+          content="实验内容：通过对具体的文件存储空间的管理、文件的物理结构、目录结构和文件操作的实现，加深对文件系实现文件系统更多下载资源、学习资料请访问CSDN下载频道."/>
+    <meta name="keywords"
+          content="实现文件系统"/>
+    <meta name="referrer" content="always">
+    <meta name="applicable-device" content="pc">
+    <link rel="canonical" href="https://download.csdn.net/download/qq_36041703/10225946">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="csdnFooter" content='{"type": "2", "el": ".download-common-footer"}'>
+        <meta name="report" content='{"spm":"1003.2020"}'>
+    <script type="text/javascript" src="https://g.csdnimg.cn/tingyun/1.8.5/download.js"></script>
+    <script>
+        var CFG = {
+            STATIC_URL: "/static_files",                             //静态资源根目录  对应本地服务的dist目录
+            STATIC_GLOBAL_URL: "/static_files",                  //老版静态资源根目录
+            STATIC_GLOBAL_COMBO_URL: "/static_files",      //新版静态资源根目录
+            API_URL: "@@CFG.API_URL",                                    //API地址（默认）
+            PROJECT_URL: "@@CFG.PROJECT_URL",                              //项目地址（默认）
+        };
+    </script>
+    <script src="https://g.csdnimg.cn/??lib/jquery/1.12.4/jquery.min.js,lib/art-template/4.13.0/template-web.js" type="text/javascript"></script>
+    <script src='//g.csdnimg.cn/common/csdn-report/report.js' type='text/javascript'></script>
+    <script src="https://g.csdnimg.cn/login-box/1.1.4/login-box.js"></script>
+    <link rel="stylesheet" href="https://csdnimg.cn/cdn/font-awesome-4.4.0/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="//csdnimg.cn/release/download/static_files/pc/css/common-c2e9c244bc.css"/>
+    <link href="https://g.csdnimg.cn/static/logo/favicon32.ico" rel="shortcut icon" type="image/x-icon"/>
+    <link rel="stylesheet" href="https://g.csdnimg.cn/nav-second/1.0.3/css/nav-second.css"/>
+
+    <!-- google自动广告测试，请帮忙添加代码 AdSense -->
+    <!-- <script data-ad-client="ca-pub-1076724771190722" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script> -->
+
+<script>
+    var _hmt = _hmt || [];
+    _hmt.push(['_setPageviewProperty', {
+        'dl_zeroresource':0,
+        'dl_remove':0,
+        'dl_delistingresource':0,
+        'dl_ebookreplacereso':0,
+        'dl_pdfPreview':0
+    }]);
+</script>
+<style>
+    * { touch-action: pan-y; }
+</style>
+<script>
+    (function () {
+            var el = document.createElement("script");
+            el.src = "https://s3a.pstatp.com/toutiao/push.js?3619105d6542cec7ed09b35e4857bb2b600b0181b36ce1a5b95af92aa299aa09921243249be9fb32069f07420166cb688a879f660d90d6d1486ca20345d06a862c73688ffaca649957015de8ae0a2658";
+            el.id = "ttzz";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(el, s);
+        }
+    )(window)
+</script>
+<script src="//g.csdnimg.cn/lib/qrcode/1.0.0/qrcode.min.js" type="text/javascript"></script>
+<script>
+    var source = {
+        title: "实现简单的文件系统",
+        id: "10225946",
+        username: "qq_36041703",
+        login_username: "",
+        isSelf:  "",
+        isPreview: "",
+        isPPT: 0,
+        nickname: "Boltor",
+        firstPage: 1,
+        showPage: "1",
+        isFromSo: "",
+        channal_str: "",
+        channal_code: "",
+        is_download: "0",
+        goods_id: "10225946",
+        flag: 26,
+        downloadUrl: "https://download.csdn.net/",
+        buyVipPath: "https://mall.csdn.net/vip",
+        is_show_vip_alert: 0,
+        is_not_upload_user: 0
+    };
+    var toolbarSearchExt = {
+        title: "实现简单的文件系统",
+        tag: ["文件系统"],
+        queryWord: "",
+        landingWord: ["实现文件系统","简单文件系统的实现"]
+    };
+    toolbarSearchExt = JSON.stringify(toolbarSearchExt);
+</script>
+<link rel="stylesheet" href="//csdnimg.cn/release/download/static_files/pc/css/download_detail-d1682490bb.css"/>
+<meta name="csdn-baidu-search" content='{"keyword":"实现文件系统"}'>
+<meta name="csdnFooter" content='{"type": "2", "el": ".download-common-footer"}'>
+</head>
+<body>
+<div class="home_page_wrap">
+    <div class="main clearfix">
+        <div class="clearfix fr" style="width:1094px">
+            <div class="main_l fl right_main_box">
+                <div class="page-breadcrumb">
+                    <a href="https://download.csdn.net/" data-report-click='{"spm": "1003.2020.3001.5735"}' data-report-query="spm=1003.2020.3001.5735">下载首页</a>
+                                <span class="page-breadcrumb-separator">/</span>
+                                <a href="https://download.csdn.net/search/12/10/0/0/1" data-report-click='{"spm": "1003.2020.3001.5735"}' data-report-query="spm=1003.2020.3001.5735">操作系统</a>
+                                <span class="page-breadcrumb-separator">/</span>
+                                <a href="https://download.csdn.net/search/12010/10/0/0/1" data-report-click='{"spm": "1003.2020.3001.5735"}' data-report-query="spm=1003.2020.3001.5735">其它</a>
+                </div>
+                <div class="resource_box  ">
+                    <div class="resource_copyright">
+                        <span class="icon-arrow"></span>
+                        <div class="copyright-desc">
+                            <span>该资源内容由用户上传，如若侵权请选择举报</span>
+                        </div>
+                    </div>
+
+                    <div class="resource_box_info">
+                        <h3>
+                            <span class="resource_title">实现简单的文件系统</span>
+                        </h3>
+                        <!-- 评分 -->
+                        <div class="dl_bread_score">
+                            <div>
+                                <div class="dl_score">
+                                    <span class="starts">
+                                            <i aria-hidden="true" class="fa fa-star yellow"></i><span class="res_info_cost">4星（超过85%的资源）</span>
+                                    </span>
+                                </div>
+                                <strong class="info_box">
+                                    <span class="res_info_cost">所需积分/C币：<em class="cost">43</em></span>
+                                    <span>2018-01-26 16:50:47</span>
+                                    <span>16KB</span>
+                                        <span class="file_type">CPP</span>
+                                        <div class="file_statistics">
+                                            <img src="//csdnimg.cn/release/download/static_files/pc/images/icon-pv.png" alt="" />
+                                            <span>3617</span>
+                                        </div>
+
+                                    <!-- 收藏功能 favored -->
+                                            <div id="favorite" class="dl_func collect">
+                                                <img src="//csdnimg.cn/release/download/static_files/pc/images/icon_collect.png" alt="收藏" />
+                                                <span class="unsave">收藏</span>
+                                        </div>
+                            <span id="download_report" class="download_report dl_func">举报</span>
+                            </strong>
+                        </div>
+                    </div>
+                    <div class="copyright_declare_info">版权声明：该资源内容由用户上传，如若侵权请选择举报</div>
+                    <div class="resource_box_info_c clearfix pr">
+                        <dl class="resource_box_dl ">
+                            <dd>
+                                <div class="resource_box_desc">
+                                    <div class="resource_description">
+                                        <p>实验内容：
+
+通过对具体的文件存储空间的管理、文件的物理结构、目录结构和文件操作的实现，加深对文件系统内部功能和实现过程的理解。
+
+要求：
+1.在内存中开辟一个虚拟磁盘空间作为文件存储器，在其上实现一个简单的单用户文件系统。在退出这个简单的文件系统时，将该虚拟文件系统保存到磁盘上，以便下次再将它恢复到内存的虚拟磁盘空间中。
+2.提供以下操作：
+•new：建立一个新的简单文件系统；
+•sfs：打开一个简单文件系统；
+•exit：退出打开的简单文件系统；
+•mkdir：创建子目录；
+•rmdir：删除子目录；
+•ls：显示目录；
+•cd：更改当前目录；
+•create：创建文件；
+•open：打开文件；
+•close：关闭文件；
+•read：读文件；
+•write：写文件；
+•delete：删除文件。<br/></p>
+                                    </div>
+                                    <a class="show-hide-btn" href="javascript:;">...展开详情</a>
+                                    <div class="resource_box_b">
+                                        <label class="resource_tags">
+                                                            <a href="//download.csdn.net/tagalbum/10033" class="tag" target="_blank" data-report-click='{"mod":"1586333473_016"}'>文件系统</a>
+                                        </label>
+                                    </div>
+                                </div>
+                            </dd>
+                        </dl>
+                </div>
+            </div>
+            <div id="textBottom" style="width:0;height:0;"></div>
+            <div class="resource_box_fn clearfix">
+                <div class="left_fn fl 2">
+                    <!-- 下载 按钮 -->
+                            <a href="javascript:;" class="c_dl_btn download_btn normal_download" data-report-click='{"mod":"1582594662_006", "spm":"1003.2020.3001.4165","extend1":"normal_download"}'>立即下载</a>
+                                    <a href="https://mall.csdn.net/vip" class="c_dl_btn open_vip" data-report-query="spm=1003.2020.3001.5555" data-report-click='{"spm":"1003.2020.3001.4167","extend1":"normal_buy"}'>
+                                        <img src="/static_files/pc/images/vip.png">
+                                        <span class="report_101_source_click">低至0.43元/次</span>
+                                    </a>
+                            <span data-url="https://i.csdn.net/#/user-center/profile?floor=edu" target="_blank"
+                                  data-report-click='{"spm":"1003.2020.3001.4168"}'
+                            class="c_dl_btn open_authentication">
+                                <span>身份认证VIP会员低至7折</span>
+                            </span>
+
+                    <!-- 置灰资源 -->
+                </div>
+            </div>
+
+        </div>
+
+        <!-- 用户评论 -->
+        <div id="comment" class="dl_comm clearfix">
+            <!-- 评论框 -->
+            <div class="comm_area clearfix">
+                <div class="comm_area_l fl">
+                    <a href="https://my.csdn.net/">
+                        <img src="https://avatar.csdn.net/D/4/1/2_.jpg">
+                    </a>
+                </div>
+                <div class="comm_area_r fl">
+                    <div class="r_textarea clearfix">
+                        <div class="comm_text">
+
+                            <textarea id="cc_body" disabled placeholder="下载该资源后方可评论"></textarea>
+                                <div class="commit-reward"></div>
+                        </div>
+                        <button disabled >评论</button>
+                    </div>
+                    <div class="r_toolbar clearfix">
+                        <div class="toolbar_left fl">
+                            <input class="star" id="star" name="star" value="0" type="hidden">
+                            <div class="stars">
+                                <i aria-hidden="true" class="fa fa-star"></i>
+                                <i aria-hidden="true" class="fa fa-star"></i>
+                                <i aria-hidden="true" class="fa fa-star"></i>
+                                <i aria-hidden="true" class="fa fa-star"></i>
+                                <i aria-hidden="true" class="fa fa-star"></i>
+                            </div>
+                            <div class="comment_error"></div>
+                        </div>
+                        <div class="comment_btn fr">
+                            <div class="comment_tips">一个资源只可评论一次，评论内容不能少于5个字</div>
+                            <button data-report-click='{"mod":"1582594662_007"}'>发表评论</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--列表-->
+                <div class="comm_t">
+                    <div class="comm_box">
+                                <dl class="comm_list clearfix">
+                                    <dt class="comm_list_t clearfix">
+                                        <div class="comm_list_t_l fl">
+                                            <a href="https://me.csdn.net/wwt819635881" target="_blank">
+                                                <img class="comm_avatar" src="https://avatar.csdn.net/C/A/8/2_wwt819635881.jpg">
+                                            </a>
+                                            <a class="dl_user" href="#"
+                                               target="_blank"><span>文天哥哥</span>：</a>
+                                            <span class="comm_con">蛮不错的源码
+                                    <!--资源拥有者回复权限判断-->
+                                </span>
+                            </div>
+                            <div class="comm_list_t_r fr">
+                                <label>
+                                    <li class="stats">
+                                                <i aria-hidden="true" class="fa fa-star yellow"></i>
+                                                <i aria-hidden="true" class="fa fa-star yellow"></i>
+                                                <i aria-hidden="true" class="fa fa-star yellow"></i>
+                                                <i aria-hidden="true" class="fa fa-star yellow"></i>
+                                                <!--实现显示空心星星-->
+                                                <i aria-hidden="true" class="fa fa-star"></i>
+                                    </li>
+                                </label>
+                                <span>2019-01-03</span>
+                            </div>
+                        </dt>
+                        <dd class="comm_reply">
+                            <form class="form1">
+                                            <textarea name="resTextarea" class="comm_reply_area"
+                                                      placeholder="回复wwt819635881"></textarea>
+                                <a href="javascript:;" class="res_btn" comment_id="37470395"
+                                   to_user="文天哥哥">回复</a>
+                                <div class="reply_tips"></div>
+                            </form>
+                        </dd>
+                        <!--回复内容列表-->
+                                </dl>
+
+                </div>
+            </div>
+            <!--页码-->
+        </div>
+
+        <!-- 相关推荐 -->
+            <div class="resource_recommend" style="padding:0">
+                <link rel="stylesheet" href="//g.csdnimg.cn/pub-recom/1.0.4/css/pub-recom.css"><ul class="pub_recommend pub_recommend_b" popu="popu_595" utm="distribute.pc_relevant_download.none-task-"><li class="pub_recom_item download"><a class="pr_item" href=https://download.csdn.net/download/wxyyxc1992/4954899 target="_blank" data-report-view={"mod":"popu_595","extra":"{\"utm_medium\":\"distribute.pc_relevant_download.none-task-download-2~default~BlogCommendFromBaidu~default-1.nonecase\"}","index":"1","strategy":"2~default~BlogCommendFromBaidu~default"} data-report-click={"mod":"popu_595","extra":"{\"utm_medium\":\"distribute.pc_relevant_download.none-task-download-2~default~BlogCommendFromBaidu~default-1.nonecase\"}","index":"1","strategy":"2~default~BlogCommendFromBaidu~default"} data-report-query=utm_medium=distribute.pc_relevant_download.none-task-download-2~default~BlogCommendFromBaidu~default-1.nonecase&dist_request_id=1619715111171_08283&depth_1-utm_source=distribute.pc_relevant_download.none-task-download-2~default~BlogCommendFromBaidu~default-1.nonecase><div class="pr_item_l"><div class="fix"><img src=//g.csdnimg.cn/pub-recom/img/type//unknow.svg alt=""><span>21KB</span></div> </div><div class="pr_item_r"><p class="pr_i_t"><em>简单</em><em>文件系统</em>的<em>实现</em>代码</p><span class="pr_item_t_r fr"><span class="pr_t_date">2013-01-03</span></span><p class="pr_i_d">这是用C语言对于linux下面<em>简单</em>的<em>文件系统</em>的<em>实现</em>，<em>实现</em>了二级目录即不同用户共存和一些基本的创建之类的功能。</p></div></a></li><li class="pub_recom_item blog"><div class="pr_item_r" data-report-view={"mod":"popu_595","extra":"{\"utm_medium\":\"distribute.pc_relevant_download.none-task-blog-2~default~BlogCommendFromBaidu~default-2.nonecase\"}","index":"2","strategy":"2~default~BlogCommendFromBaidu~default"}><a class="pr_i_t" target="_blank" href=https://blog.csdn.net/westbrookliu/article/details/81868985 data-report-click={"mod":"popu_595","extra":"{\"utm_medium\":\"distribute.pc_relevant_download.none-task-blog-2~default~BlogCommendFromBaidu~default-2.nonecase\"}","index":"2","strategy":"2~default~BlogCommendFromBaidu~default"} data-report-query= utm_medium=distribute.pc_relevant_download.none-task-blog-2~default~BlogCommendFromBaidu~default-2.nonecase&dist_request_id=1619715111171_08283&depth_1-utm_source=distribute.pc_relevant_download.none-task-blog-2~default~BlogCommendFromBaidu~default-2.nonecas>操作系统大实验二:<em>简单</em><em>文件系统</em>的<em>实现</em></a><span class="pr_item_t_r fr"> <span class="pr_t_num">14364</span><span class="pr_t_date">2018-08-20</span></span><a class="pr_i_d" target="_blank" href=https://blog.csdn.net/westbrookliu/article/details/81868985 data-report-click={"mod":"popu_595","extra":"{\"utm_medium\":\"distribute.pc_relevant_download.none-task-blog-2~default~BlogCommendFromBaidu~default-2.nonecase\"}","index":"2","strategy":"2~default~BlogCommendFromBaidu~default"} data-report-query= utm_medium=distribute.pc_relevant_download.none-task-blog-2~default~BlogCommendFromBaidu~default-2.nonecase&dist_request_id=1619715111171_08283&depth_1-utm_source=distribute.pc_relevant_download.none-task-blog-2~default~BlogCommendFromBaidu~default-2.nonecas>出于<em>简单</em>起见，该<em>文件系统</em>是基于内存的，以下是各个文件:
+
+&nbsp;
+1、内存资源管理（Disk.h, Disk.cpp）
+2、文件读写接口（File.h, File.cpp）
+3、主程序（main.cpp, my_shell.cpp）
+
+目录项数据结构：
+&nbsp;
+一个目录项包含了文件名和文件类型，当文件为目录时，起始盘块指示了目录表所在的盘块号，当文件为文件时，起始盘块指示了FCB所在的盘块号。
+
+目录表数...</a></div></li><li class="pub_recom_item blog"><div class="pr_item_r" data-report-view={"mod":"popu_595","extra":"{\"utm_medium\":\"distribute.pc_relevant_download.none-task-blog-2~default~BlogCommendFromBaidu~default-3.nonecase\"}","index":"3","strategy":"2~default~BlogCommendFromBaidu~default"}><a class="pr_i_t" target="_blank" href=https://blog.csdn.net/qq_24489717/article/details/72816047 data-report-click={"mod":"popu_595","extra":"{\"utm_medium\":\"distribute.pc_relevant_download.none-task-blog-2~default~BlogCommendFromBaidu~default-3.nonecase\"}","index":"3","strategy":"2~default~BlogCommendFromBaidu~default"} data-report-query= utm_medium=distribute.pc_relevant_download.none-task-blog-2~default~BlogCommendFromBaidu~default-3.nonecase&dist_request_id=1619715111171_08283&depth_1-utm_source=distribute.pc_relevant_download.none-task-blog-2~default~BlogCommendFromBaidu~default-3.nonecas>File-OS(<em>简单</em><em>文件系统</em>的<em>实现</em>)</a><span class="pr_item_t_r fr"> <span class="pr_t_num">17064</span><span class="pr_t_date">2017-05-31</span></span><a class="pr_i_d" target="_blank" href=https://blog.csdn.net/qq_24489717/article/details/72816047 data-report-click={"mod":"popu_595","extra":"{\"utm_medium\":\"distribute.pc_relevant_download.none-task-blog-2~default~BlogCommendFromBaidu~default-3.nonecase\"}","index":"3","strategy":"2~default~BlogCommendFromBaidu~default"} data-report-query= utm_medium=distribute.pc_relevant_download.none-task-blog-2~default~BlogCommendFromBaidu~default-3.nonecase&dist_request_id=1619715111171_08283&depth_1-utm_source=distribute.pc_relevant_download.none-task-blog-2~default~BlogCommendFromBaidu~default-3.nonecas>前言期末的OS的大作业，写了一个<em>简单</em>的文件管理系统，写了5天左右（实际整个项目历经一个月(大部分时间在挂机)，花了不少时间来构思，设计系统的架构。。。。），写的比较辛苦，既然花了这么久的时间，那就拿出来分享下，希望各位指点指正。。项目github地址https://github.com/qq1367212627/File-OS<em>简单</em>的介绍基本的功能是在磁盘上（D:/VitualDisk/）开辟一个虚拟</a></div></li><li class="pub_recom_item blog"><div class="pr_item_r" data-report-view={"mod":"popu_595","extra":"{\"utm_medium\":\"distribute.pc_relevant_download.none-task-blog-2~default~BlogCommendFromBaidu~default-4.nonecase\"}","index":"4","strategy":"2~default~BlogCommendFromBaidu~default"}><a class="pr_i_t" target="_blank" href=https://blog.csdn.net/qq_36894974/article/details/104945666 data-report-click={"mod":"popu_595","extra":"{\"utm_medium\":\"distribute.pc_relevant_download.none-task-blog-2~default~BlogCommendFromBaidu~default-4.nonecase\"}","index":"4","strategy":"2~default~BlogCommendFromBaidu~default"} data-report-query= utm_medium=distribute.pc_relevant_download.none-task-blog-2~default~BlogCommendFromBaidu~default-4.nonecase&dist_request_id=1619715111171_08283&depth_1-utm_source=distribute.pc_relevant_download.none-task-blog-2~default~BlogCommendFromBaidu~default-4.nonecas>设计一个<em>文件系统</em>，需要考虑哪些因素？</a><span class="pr_item_t_r fr"> <span class="pr_t_num">2407</span><span class="pr_t_date">2020-03-18</span></span><a class="pr_i_d" target="_blank" href=https://blog.csdn.net/qq_36894974/article/details/104945666 data-report-click={"mod":"popu_595","extra":"{\"utm_medium\":\"distribute.pc_relevant_download.none-task-blog-2~default~BlogCommendFromBaidu~default-4.nonecase\"}","index":"4","strategy":"2~default~BlogCommendFromBaidu~default"} data-report-query= utm_medium=distribute.pc_relevant_download.none-task-blog-2~default~BlogCommendFromBaidu~default-4.nonecase&dist_request_id=1619715111171_08283&depth_1-utm_source=distribute.pc_relevant_download.none-task-blog-2~default~BlogCommendFromBaidu~default-4.nonecas><em>文件系统</em>的<em>实现</em>
+在对文件有了基本认识之后，现在是时候把目光转移到<em>文件系统</em>的<em>实现</em>上了。之前用户关心的一直都是文件是怎样命名的、可以进行哪些操作、目录树是什么，如何找到正确的文件路径等问题。而设计人员关心的是文件和目录是怎样存储的、磁盘空间是如何管理的、如何使<em>文件系统</em>得以流畅运行的问题，下面我们就来一起讨论一下这些问题。
+<em>文件系统</em>布局
+<em>文件系统</em>存储在磁盘中。大部分的磁盘能够划分出一到多个分区，叫做磁盘...</a></div></li><li class="pub_recom_item blog"><div class="pr_item_r" data-report-view={"mod":"popu_595","extra":"{\"utm_medium\":\"distribute.pc_relevant_download.none-task-blog-2~default~BlogCommendFromBaidu~default-5.nonecase\"}","index":"5","strategy":"2~default~BlogCommendFromBaidu~default"}><a class="pr_i_t" target="_blank" href=https://blog.csdn.net/Purpleendurer/article/details/393716 data-report-click={"mod":"popu_595","extra":"{\"utm_medium\":\"distribute.pc_relevant_download.none-task-blog-2~default~BlogCommendFromBaidu~default-5.nonecase\"}","index":"5","strategy":"2~default~BlogCommendFromBaidu~default"} data-report-query= utm_medium=distribute.pc_relevant_download.none-task-blog-2~default~BlogCommendFromBaidu~default-5.nonecase&dist_request_id=1619715111171_08283&depth_1-utm_source=distribute.pc_relevant_download.none-task-blog-2~default~BlogCommendFromBaidu~default-5.nonecas>如何<em>实现</em>一个<em>文件系统</em>（全文） </a><span class="pr_item_t_r fr"> <span class="pr_t_num">4781</span><span class="pr_t_date">2005-06-13</span></span><a class="pr_i_d" target="_blank" href=https://blog.csdn.net/Purpleendurer/article/details/393716 data-report-click={"mod":"popu_595","extra":"{\"utm_medium\":\"distribute.pc_relevant_download.none-task-blog-2~default~BlogCommendFromBaidu~default-5.nonecase\"}","index":"5","strategy":"2~default~BlogCommendFromBaidu~default"} data-report-query= utm_medium=distribute.pc_relevant_download.none-task-blog-2~default~BlogCommendFromBaidu~default-5.nonecase&dist_request_id=1619715111171_08283&depth_1-utm_source=distribute.pc_relevant_download.none-task-blog-2~default~BlogCommendFromBaidu~default-5.nonecas>http://www.csdn.net/subject/linux/filesystem.mht如何<em>实现</em>一个<em>文件系统</em>摘要本章目的是分析在Linux系统中如何<em>实现</em>新的<em>文件系统</em>。在介绍<em>文件系统</em>具体<em>实现</em>前先介绍<em>文件系统</em>的概念和作用，抽象出了<em>文件系统</em>概念模型。熟悉<em>文件系统</em>的内涵后，我们再近一步讨论Linux系统中和<em>文件系统</em>的特殊风格和具体<em>文件系统</em>在Linux中组成结构，逐步为读者勾画出Linux中<em>文件系统</em></a></div></li><li class="pub_recom_item blog"><div class="pr_item_r" data-report-view={"mod":"popu_595","extra":"{\"utm_medium\":\"distribute.pc_relevant_download.none-task-blog-2~default~BlogCommendFromBaidu~default-6.nonecase\"}","index":"6","strategy":"2~default~BlogCommendFromBaidu~default"}><a class="pr_i_t" target="_blank" href=https://blog.csdn.net/hnhbdss/article/details/1968070 data-report-click={"mod":"popu_595","extra":"{\"utm_medium\":\"distribute.pc_relevant_download.none-task-blog-2~default~BlogCommendFromBaidu~default-6.nonecase\"}","index":"6","strategy":"2~default~BlogCommendFromBaidu~default"} data-report-query= utm_medium=distribute.pc_relevant_download.none-task-blog-2~default~BlogCommendFromBaidu~default-6.nonecase&dist_request_id=1619715111171_08283&depth_1-utm_source=distribute.pc_relevant_download.none-task-blog-2~default~BlogCommendFromBaidu~default-6.nonecas>如何<em>实现</em>一个<em>文件系统</em></a><span class="pr_item_t_r fr"> <span class="pr_t_num">4266</span><span class="pr_t_date">2007-12-26</span></span><a class="pr_i_d" target="_blank" href=https://blog.csdn.net/hnhbdss/article/details/1968070 data-report-click={"mod":"popu_595","extra":"{\"utm_medium\":\"distribute.pc_relevant_download.none-task-blog-2~default~BlogCommendFromBaidu~default-6.nonecase\"}","index":"6","strategy":"2~default~BlogCommendFromBaidu~default"} data-report-query= utm_medium=distribute.pc_relevant_download.none-task-blog-2~default~BlogCommendFromBaidu~default-6.nonecase&dist_request_id=1619715111171_08283&depth_1-utm_source=distribute.pc_relevant_download.none-task-blog-2~default~BlogCommendFromBaidu~default-6.nonecas>摘要本章目的是分析在Linux系统中如何<em>实现</em>新的<em>文件系统</em>。在介绍<em>文件系统</em>具体<em>实现</em>前先介绍<em>文件系统</em>的概念和作用，抽象出了<em>文件系统</em>概念模型。熟悉<em>文件系统</em>的内涵后，我们再近一步讨论Linux系统中和<em>文件系统</em>的特殊风格和具体<em>文件系统</em>在Linux中组成结构，逐步为读者勾画出Linux中<em>文件系统</em>工作的全景图。最后在事例部分，我们将以romfs<em>文件系统</em>作实例分析<em>实现</em><em>文件系统</em>的普遍步骤。 什么</a></div></li><li class="pub_recom_item blog"><div class="pr_item_r" data-report-view={"mod":"popu_595","extra":"{\"utm_medium\":\"distribute.pc_relevant_download.none-task-blog-2~default~BlogCommendFromBaidu~default-7.nonecase\"}","index":"7","strategy":"2~default~BlogCommendFromBaidu~default"}><a class="pr_i_t" target="_blank" href=https://blog.csdn.net/weixin_48692664/article/details/107401244 data-report-click={"mod":"popu_595","extra":"{\"utm_medium\":\"distribute.pc_relevant_download.none-task-blog-2~default~BlogCommendFromBaidu~default-7.nonecase\"}","index":"7","strategy":"2~default~BlogCommendFromBaidu~default"} data-report-query= utm_medium=distribute.pc_relevant_download.none-task-blog-2~default~BlogCommendFromBaidu~default-7.nonecase&dist_request_id=1619715111171_08283&depth_1-utm_source=distribute.pc_relevant_download.none-task-blog-2~default~BlogCommendFromBaidu~default-7.nonecas>操作系统:<em>简单</em><em>文件系统</em>的<em>实现</em>(实例代码)</a><span class="pr_item_t_r fr"> <span class="pr_t_num">723</span><span class="pr_t_date">2020-12-30</span></span><a class="pr_i_d" target="_blank" href=https://blog.csdn.net/weixin_48692664/article/details/107401244 data-report-click={"mod":"popu_595","extra":"{\"utm_medium\":\"distribute.pc_relevant_download.none-task-blog-2~default~BlogCommendFromBaidu~default-7.nonecase\"}","index":"7","strategy":"2~default~BlogCommendFromBaidu~default"} data-report-query= utm_medium=distribute.pc_relevant_download.none-task-blog-2~default~BlogCommendFromBaidu~default-7.nonecase&dist_request_id=1619715111171_08283&depth_1-utm_source=distribute.pc_relevant_download.none-task-blog-2~default~BlogCommendFromBaidu~default-7.nonecas>哈喽，欢迎来到小朱课堂，下面开始你的学习吧！
+操作系统:<em>简单</em><em>文件系统</em>的<em>实现</em>(实例代码)
+原文链接：https://blog.csdn.net/westbrookliu/article/details/81868985
+废话不多说，直接上代码
+出于<em>简单</em>起见，该<em>文件系统</em>是基于内存的，以下是各个文件:
+
+1、内存资源管理（Disk.h, Disk.cpp）
+2、文件读写接口（File.h, File.cpp）
+3、主程序（main.cpp, my_shell.cpp）
+目录项数据结构：
+
+一个目录项包含了文件名和</a></div></li><li class="pub_recom_item blog"><div class="pr_item_r" data-report-view={"mod":"popu_595","extra":"{\"utm_medium\":\"distribute.pc_relevant_download.none-task-blog-2~default~BlogCommendFromBaidu~default-8.nonecase\"}","index":"8","strategy":"2~default~BlogCommendFromBaidu~default"}><a class="pr_i_t" target="_blank" href=https://blog.csdn.net/caimouse/article/details/109391661 data-report-click={"mod":"popu_595","extra":"{\"utm_medium\":\"distribute.pc_relevant_download.none-task-blog-2~default~BlogCommendFromBaidu~default-8.nonecase\"}","index":"8","strategy":"2~default~BlogCommendFromBaidu~default"} data-report-query= utm_medium=distribute.pc_relevant_download.none-task-blog-2~default~BlogCommendFromBaidu~default-8.nonecase&dist_request_id=1619715111171_08283&depth_1-utm_source=distribute.pc_relevant_download.none-task-blog-2~default~BlogCommendFromBaidu~default-8.nonecas>Python从zip文件里导入包</a><span class="pr_item_t_r fr"> <span class="pr_t_num">306</span><span class="pr_t_date">2020-10-30</span></span><a class="pr_i_d" target="_blank" href=https://blog.csdn.net/caimouse/article/details/109391661 data-report-click={"mod":"popu_595","extra":"{\"utm_medium\":\"distribute.pc_relevant_download.none-task-blog-2~default~BlogCommendFromBaidu~default-8.nonecase\"}","index":"8","strategy":"2~default~BlogCommendFromBaidu~default"} data-report-query= utm_medium=distribute.pc_relevant_download.none-task-blog-2~default~BlogCommendFromBaidu~default-8.nonecase&dist_request_id=1619715111171_08283&depth_1-utm_source=distribute.pc_relevant_download.none-task-blog-2~default~BlogCommendFromBaidu~default-8.nonecas>有时候为了节省空间，可以把包压缩成zip文件，这样方便管理，方便上传到网络上，也方便拷贝。但是有没有方法可以直接使用zip文件的包，而不需要解压出来呢？这是有的。
+
+ 先创建一个目录如下：
+
+
+
+然后把demo目录使用压缩软件，或者使用Python里的zip模块，就可以生成压缩文件mylib.zip。在目录demo中创建__init__.py文件，然后在文件里输入下面内容：
+
+
+#学习算法笔记-蔡军生（qq:9073204)
+#https://mysoft.blog.csdn.net/
+#2020-1...</a></div></li><li class="pub_recom_item blog"><div class="pr_item_r" data-report-view={"mod":"popu_595","extra":"{\"utm_medium\":\"distribute.pc_relevant_download.none-task-blog-2~default~BlogCommendFromBaidu~default-9.nonecase\"}","index":"9","strategy":"2~default~BlogCommendFromBaidu~default"}><a class="pr_i_t" target="_blank" href=https://blog.csdn.net/weixin_48692664/article/details/107254340 data-report-click={"mod":"popu_595","extra":"{\"utm_medium\":\"distribute.pc_relevant_download.none-task-blog-2~default~BlogCommendFromBaidu~default-9.nonecase\"}","index":"9","strategy":"2~default~BlogCommendFromBaidu~default"} data-report-query= utm_medium=distribute.pc_relevant_download.none-task-blog-2~default~BlogCommendFromBaidu~default-9.nonecase&dist_request_id=1619715111171_08283&depth_1-utm_source=distribute.pc_relevant_download.none-task-blog-2~default~BlogCommendFromBaidu~default-9.nonecas><em>简单</em><em>文件系统</em>的<em>实现</em></a><span class="pr_item_t_r fr"> <span class="pr_t_num">297</span><span class="pr_t_date">2020-07-10</span></span><a class="pr_i_d" target="_blank" href=https://blog.csdn.net/weixin_48692664/article/details/107254340 data-report-click={"mod":"popu_595","extra":"{\"utm_medium\":\"distribute.pc_relevant_download.none-task-blog-2~default~BlogCommendFromBaidu~default-9.nonecase\"}","index":"9","strategy":"2~default~BlogCommendFromBaidu~default"} data-report-query= utm_medium=distribute.pc_relevant_download.none-task-blog-2~default~BlogCommendFromBaidu~default-9.nonecase&dist_request_id=1619715111171_08283&depth_1-utm_source=distribute.pc_relevant_download.none-task-blog-2~default~BlogCommendFromBaidu~default-9.nonecas>**
+
+<em>简单</em><em>文件系统</em>的<em>实现</em>
+                               夏斯华 xiasihua00001@hotmail.com
+
+引言：
+文件管理是操作系统中四大资源管理中重要一项。通过<em>实现</em><em>简单</em>的<em>文件系统</em>的这样的方式，加深对其原理的理解。由于<em>文件系统</em>的博大和考虑的东西很多，再加上自己时间和能力的局限性，故<em>实现</em>一个较为<em>简单</em>的<em>文件系统</em>。
+概述：
+<em>文件系统</em>主流的不乏有windows的FAT,FAT32,NTFS,以及Linux的等。由于多种...</a></div></li><li class="pub_recom_item blog"><div class="pr_item_r" data-report-view={"mod":"popu_595","extra":"{\"utm_medium\":\"distribute.pc_relevant_download.none-task-blog-2~default~BlogCommendFromBaidu~default-10.nonecase\"}","index":"10","strategy":"2~default~BlogCommendFromBaidu~default"}><a class="pr_i_t" target="_blank" href=https://blog.csdn.net/qq_38438768/article/details/96213105 data-report-click={"mod":"popu_595","extra":"{\"utm_medium\":\"distribute.pc_relevant_download.none-task-blog-2~default~BlogCommendFromBaidu~default-10.nonecase\"}","index":"10","strategy":"2~default~BlogCommendFromBaidu~default"} data-report-query= utm_medium=distribute.pc_relevant_download.none-task-blog-2~default~BlogCommendFromBaidu~default-10.nonecase&dist_request_id=1619715111171_08283&depth_1-utm_source=distribute.pc_relevant_download.none-task-blog-2~default~BlogCommendFromBaidu~default-10.nonecas>基于C语言的<em>简单</em><em>文件系统</em>的<em>实现</em></a><span class="pr_item_t_r fr"> <span class="pr_t_num">1203</span><span class="pr_t_date">2019-07-16</span></span><a class="pr_i_d" target="_blank" href=https://blog.csdn.net/qq_38438768/article/details/96213105 data-report-click={"mod":"popu_595","extra":"{\"utm_medium\":\"distribute.pc_relevant_download.none-task-blog-2~default~BlogCommendFromBaidu~default-10.nonecase\"}","index":"10","strategy":"2~default~BlogCommendFromBaidu~default"} data-report-query= utm_medium=distribute.pc_relevant_download.none-task-blog-2~default~BlogCommendFromBaidu~default-10.nonecase&dist_request_id=1619715111171_08283&depth_1-utm_source=distribute.pc_relevant_download.none-task-blog-2~default~BlogCommendFromBaidu~default-10.nonecas>1 题目介绍通过具体的文件存储空间的管理、文件物理结构、目录结构和文件操作的<em>实现</em>，加深对<em>文件系统</em>内部的数据结构、功能以及<em>实现</em>过程的理解。1.1 要求在内存中开辟一个虚拟磁盘空间作为文件存储分区，在其上<em>实现</em>一个<em>简单</em>的基于多级目录的单用户单任务系统中的<em>文件系统</em>。在推出该<em>文件系统</em>的使用时，应将虚拟磁盘上的内容以一个文件的方式保存到磁盘上，一遍下次可以将它恢复到内...</a></div></li><li class="pub_recom_item blog"><div class="pr_item_r" data-report-view={"mod":"popu_595","extra":"{\"utm_medium\":\"distribute.pc_relevant_download.none-task-blog-2~default~BlogCommendFromBaidu~default-11.nonecase\"}","index":"11","strategy":"2~default~BlogCommendFromBaidu~default"}><a class="pr_i_t" target="_blank" href=https://blog.csdn.net/weixin_48692664/article/details/107253954 data-report-click={"mod":"popu_595","extra":"{\"utm_medium\":\"distribute.pc_relevant_download.none-task-blog-2~default~BlogCommendFromBaidu~default-11.nonecase\"}","index":"11","strategy":"2~default~BlogCommendFromBaidu~default"} data-report-query= utm_medium=distribute.pc_relevant_download.none-task-blog-2~default~BlogCommendFromBaidu~default-11.nonecase&dist_request_id=1619715111171_08283&depth_1-utm_source=distribute.pc_relevant_download.none-task-blog-2~default~BlogCommendFromBaidu~default-11.nonecas><em>简单</em><em>文件系统</em>的<em>实现</em>（经验分享）</a><span class="pr_item_t_r fr"> <span class="pr_t_num">432</span><span class="pr_t_date">2020-07-10</span></span><a class="pr_i_d" target="_blank" href=https://blog.csdn.net/weixin_48692664/article/details/107253954 data-report-click={"mod":"popu_595","extra":"{\"utm_medium\":\"distribute.pc_relevant_download.none-task-blog-2~default~BlogCommendFromBaidu~default-11.nonecase\"}","index":"11","strategy":"2~default~BlogCommendFromBaidu~default"} data-report-query= utm_medium=distribute.pc_relevant_download.none-task-blog-2~default~BlogCommendFromBaidu~default-11.nonecase&dist_request_id=1619715111171_08283&depth_1-utm_source=distribute.pc_relevant_download.none-task-blog-2~default~BlogCommendFromBaidu~default-11.nonecas>实验内容：
+通过对具体的文件存储空间的管理、文件的物理结构、目录结构和文件操作的<em>实现</em>，加深对<em>文件系统</em>内部功能和<em>实现</em>过程的理解。
+要求：
+1.在内存中开辟一个虚拟磁盘空间作为文件存储器，在其上<em>实现</em>一个<em>简单</em>的单用户<em>文件系统</em>。在退出这个<em>简单</em>的<em>文件系统</em>时，将该虚拟<em>文件系统</em>保存到磁盘上，以便下次再将它恢复到内存的虚拟磁盘空间中。
+2.提供以下操作：
+&bull;new：建立一个新的<em>简单</em><em>文件系统</em>；
+&bull;sfs：打开一个<em>简单</em><em>文件系统</em>；
+&bull;exit：退出打开的<em>简单</em><em>文件系统</em>；
+&bull;mkdir：创建子目录；
+&bull;rmdir：删除子目录；
+&bull;l</a></div></li><li class="pub_recom_item blog"><div class="pr_item_r" data-report-view={"mod":"popu_595","extra":"{\"utm_medium\":\"distribute.pc_relevant_download.none-task-blog-2~default~BlogCommendFromBaidu~default-12.nonecase\"}","index":"12","strategy":"2~default~BlogCommendFromBaidu~default"}><a class="pr_i_t" target="_blank" href=https://blog.csdn.net/CYBEREXP2008/article/details/4364279 data-report-click={"mod":"popu_595","extra":"{\"utm_medium\":\"distribute.pc_relevant_download.none-task-blog-2~default~BlogCommendFromBaidu~default-12.nonecase\"}","index":"12","strategy":"2~default~BlogCommendFromBaidu~default"} data-report-query= utm_medium=distribute.pc_relevant_download.none-task-blog-2~default~BlogCommendFromBaidu~default-12.nonecase&dist_request_id=1619715111171_08283&depth_1-utm_source=distribute.pc_relevant_download.none-task-blog-2~default~BlogCommendFromBaidu~default-12.nonecas>一个<em>简单</em><em>文件系统</em>的<em>实现</em></a><span class="pr_item_t_r fr"> <span class="pr_t_num">3842</span><span class="pr_t_date">2009-07-20</span></span><a class="pr_i_d" target="_blank" href=https://blog.csdn.net/CYBEREXP2008/article/details/4364279 data-report-click={"mod":"popu_595","extra":"{\"utm_medium\":\"distribute.pc_relevant_download.none-task-blog-2~default~BlogCommendFromBaidu~default-12.nonecase\"}","index":"12","strategy":"2~default~BlogCommendFromBaidu~default"} data-report-query= utm_medium=distribute.pc_relevant_download.none-task-blog-2~default~BlogCommendFromBaidu~default-12.nonecase&dist_request_id=1619715111171_08283&depth_1-utm_source=distribute.pc_relevant_download.none-task-blog-2~default~BlogCommendFromBaidu~default-12.nonecas>&nbsp;/*转载请注明作者author goteremail prowlman@gmail.com*/花了将进两个月的时候阅读完内核<em>文件系统</em>，对于<em>文件系统</em>是如何运行的还是有点模糊，所以想通过写一个<em>简单</em>的<em>文件系统</em>来使自己对<em>文件系统</em>有个深入的了解。经过拷贝抄袭ext2和minix<em>文件系统</em>后，写了一个<em>简单</em>的<em>文件系统</em>，我把这个<em>简单</em>的<em>文件系统</em>叫作GTFS，估计还有很多BUG，欢迎大</a></div></li><li class="pub_recom_item blog"><div class="pr_item_r" data-report-view={"mod":"popu_595","extra":"{\"utm_medium\":\"distribute.pc_relevant_download.none-task-blog-2~default~BlogCommendFromBaidu~default-13.nonecase\"}","index":"13","strategy":"2~default~BlogCommendFromBaidu~default"}><a class="pr_i_t" target="_blank" href=https://blog.csdn.net/Genius_LG/article/details/14488819 data-report-click={"mod":"popu_595","extra":"{\"utm_medium\":\"distribute.pc_relevant_download.none-task-blog-2~default~BlogCommendFromBaidu~default-13.nonecase\"}","index":"13","strategy":"2~default~BlogCommendFromBaidu~default"} data-report-query= utm_medium=distribute.pc_relevant_download.none-task-blog-2~default~BlogCommendFromBaidu~default-13.nonecase&dist_request_id=1619715111171_08283&depth_1-utm_source=distribute.pc_relevant_download.none-task-blog-2~default~BlogCommendFromBaidu~default-13.nonecas>如何<em>实现</em>一个<em>文件系统</em>（一）</a><span class="pr_item_t_r fr"> <span class="pr_t_num">1140</span><span class="pr_t_date">2013-11-07</span></span><a class="pr_i_d" target="_blank" href=https://blog.csdn.net/Genius_LG/article/details/14488819 data-report-click={"mod":"popu_595","extra":"{\"utm_medium\":\"distribute.pc_relevant_download.none-task-blog-2~default~BlogCommendFromBaidu~default-13.nonecase\"}","index":"13","strategy":"2~default~BlogCommendFromBaidu~default"} data-report-query= utm_medium=distribute.pc_relevant_download.none-task-blog-2~default~BlogCommendFromBaidu~default-13.nonecase&dist_request_id=1619715111171_08283&depth_1-utm_source=distribute.pc_relevant_download.none-task-blog-2~default~BlogCommendFromBaidu~default-13.nonecas>摘要
+本章目的是分析在Linux系统中如何<em>实现</em>新的<em>文件系统</em>。在介绍<em>文件系统</em>具体<em>实现</em>前先介绍<em>文件系统</em>的概念和作用，抽象出<em>文件系统</em>概念模型。熟悉<em>文件系统</em>的内涵后，我们再进一步讨论Linux系统中<em>文件系统</em>的特殊风格和具体<em>文件系统</em>在Linux中的组成结构，逐步为读者勾画出Linux中<em>文件系统</em>工作的全景图。最后在事例部分，我们将以romfs<em>文件系统</em>作实例,分析<em>实现</em><em>文件系统</em>的普遍步骤。
+什么是<em>文件系统</em></a></div></li><li class="pub_recom_item blog"><div class="pr_item_r" data-report-view={"mod":"popu_595","extra":"{\"utm_medium\":\"distribute.pc_relevant_download.none-task-blog-2~default~BlogCommendFromBaidu~default-14.nonecase\"}","index":"14","strategy":"2~default~BlogCommendFromBaidu~default"}><a class="pr_i_t" target="_blank" href=https://blog.csdn.net/weixin_45792450/article/details/109509768 data-report-click={"mod":"popu_595","extra":"{\"utm_medium\":\"distribute.pc_relevant_download.none-task-blog-2~default~BlogCommendFromBaidu~default-14.nonecase\"}","index":"14","strategy":"2~default~BlogCommendFromBaidu~default"} data-report-query= utm_medium=distribute.pc_relevant_download.none-task-blog-2~default~BlogCommendFromBaidu~default-14.nonecase&dist_request_id=1619715111171_08283&depth_1-utm_source=distribute.pc_relevant_download.none-task-blog-2~default~BlogCommendFromBaidu~default-14.nonecas>文件管理 <em>文件系统</em><em>实现</em></a><span class="pr_item_t_r fr"> <span class="pr_t_num">94</span><span class="pr_t_date">2020-11-05</span></span><a class="pr_i_d" target="_blank" href=https://blog.csdn.net/weixin_45792450/article/details/109509768 data-report-click={"mod":"popu_595","extra":"{\"utm_medium\":\"distribute.pc_relevant_download.none-task-blog-2~default~BlogCommendFromBaidu~default-14.nonecase\"}","index":"14","strategy":"2~default~BlogCommendFromBaidu~default"} data-report-query= utm_medium=distribute.pc_relevant_download.none-task-blog-2~default~BlogCommendFromBaidu~default-14.nonecase&dist_request_id=1619715111171_08283&depth_1-utm_source=distribute.pc_relevant_download.none-task-blog-2~default~BlogCommendFromBaidu~default-14.nonecas>目录
+https://blog.csdn.net/weixin_45792450/article/details/109314765
+
+<em>文件系统</em><em>实现</em>概述
+<em>文件系统</em>是操作系统专门负责存取和管理外存上的文件信息的功能模块，<em>文件系统</em>的<em>实现</em>主要分两部分：目录<em>实现</em>和文件<em>实现</em>。
+<em>文件系统</em>的<em>实现</em>，需考虑的主要方面有：组织方式，层次结构，存取控制
+
+
+文件控制块
+文件分为两部分：文件体和文件控制块FCB(File Control Block)
+文件体：文件正文部分，存储文件本身的内容和有效的数据，是用户需要处理和保存的信息</a></div></li><li class="pub_recom_item blog"><div class="pr_item_r" data-report-view={"mod":"popu_595","extra":"{\"utm_medium\":\"distribute.pc_relevant_download.none-task-blog-2~default~BlogCommendFromBaidu~default-15.nonecase\"}","index":"15","strategy":"2~default~BlogCommendFromBaidu~default"}><a class="pr_i_t" target="_blank" href=https://blog.csdn.net/Lzedo/article/details/53844155 data-report-click={"mod":"popu_595","extra":"{\"utm_medium\":\"distribute.pc_relevant_download.none-task-blog-2~default~BlogCommendFromBaidu~default-15.nonecase\"}","index":"15","strategy":"2~default~BlogCommendFromBaidu~default"} data-report-query= utm_medium=distribute.pc_relevant_download.none-task-blog-2~default~BlogCommendFromBaidu~default-15.nonecase&dist_request_id=1619715111171_08283&depth_1-utm_source=distribute.pc_relevant_download.none-task-blog-2~default~BlogCommendFromBaidu~default-15.nonecas><em>简单</em><em>文件系统</em>的<em>实现</em>（beta1.1）</a><span class="pr_item_t_r fr"> <span class="pr_t_num">647</span><span class="pr_t_date">2016-12-23</span></span><a class="pr_i_d" target="_blank" href=https://blog.csdn.net/Lzedo/article/details/53844155 data-report-click={"mod":"popu_595","extra":"{\"utm_medium\":\"distribute.pc_relevant_download.none-task-blog-2~default~BlogCommendFromBaidu~default-15.nonecase\"}","index":"15","strategy":"2~default~BlogCommendFromBaidu~default"} data-report-query= utm_medium=distribute.pc_relevant_download.none-task-blog-2~default~BlogCommendFromBaidu~default-15.nonecase&dist_request_id=1619715111171_08283&depth_1-utm_source=distribute.pc_relevant_download.none-task-blog-2~default~BlogCommendFromBaidu~default-15.nonecas>完善了一下小bug，增加了一点新的功能1. 支持命令及其<em>实现</em>细节1.1 cd
+相对路径  
+绝对路径  
+<em>实现</em>细节 
+(1) 获得cmd中的路径path 
+(2) 若第一个为&rdquo;/&rdquo;，转到绝对路径处理程序，否则转到相对路径处理程序 
+相对路径处理： 
+(1) 对path进行解析，如果含有&rdquo;/&rdquo;，转到(3)，否则，转到(2) 
+(2) 若为&rdquo;.&rdquo;，不做操作；若为&rdquo;..&rdquo;，若当前目录是根目录，不做操作，否</a></div></li><li class="pub_recom_item blog"><div class="pr_item_r" data-report-view={"mod":"popu_595","extra":"{\"utm_medium\":\"distribute.pc_relevant_download.none-task-blog-2~default~BlogCommendFromBaidu~default-16.nonecase\"}","index":"16","strategy":"2~default~BlogCommendFromBaidu~default"}><a class="pr_i_t" target="_blank" href=https://blog.csdn.net/qq_38474647/article/details/101471611 data-report-click={"mod":"popu_595","extra":"{\"utm_medium\":\"distribute.pc_relevant_download.none-task-blog-2~default~BlogCommendFromBaidu~default-16.nonecase\"}","index":"16","strategy":"2~default~BlogCommendFromBaidu~default"} data-report-query= utm_medium=distribute.pc_relevant_download.none-task-blog-2~default~BlogCommendFromBaidu~default-16.nonecase&dist_request_id=1619715111171_08283&depth_1-utm_source=distribute.pc_relevant_download.none-task-blog-2~default~BlogCommendFromBaidu~default-16.nonecas>[源码和文档分享]基于C语言的<em>简单</em><em>文件系统</em>的<em>实现</em></a><span class="pr_item_t_r fr"> <span class="pr_t_num">579</span><span class="pr_t_date">2019-09-26</span></span><a class="pr_i_d" target="_blank" href=https://blog.csdn.net/qq_38474647/article/details/101471611 data-report-click={"mod":"popu_595","extra":"{\"utm_medium\":\"distribute.pc_relevant_download.none-task-blog-2~default~BlogCommendFromBaidu~default-16.nonecase\"}","index":"16","strategy":"2~default~BlogCommendFromBaidu~default"} data-report-query= utm_medium=distribute.pc_relevant_download.none-task-blog-2~default~BlogCommendFromBaidu~default-16.nonecase&dist_request_id=1619715111171_08283&depth_1-utm_source=distribute.pc_relevant_download.none-task-blog-2~default~BlogCommendFromBaidu~default-16.nonecas>1 题目介绍
+      通过具体的文件存储空间的管理、文件物理结构、目录结构和文件操作的<em>实现</em>，加深对<em>文件系统</em>内部的数据结构、功能以及<em>实现</em>过程的理解。
+      1.1 要求
+      在内存中开辟一个虚拟磁盘空间作为文件存储分区，在其上<em>实现</em>一个<em>简单</em>的基于多级目录的单用户单任务系统中的<em>文件系统</em>。在推出该<em>文件系统</em>的使用时，应将虚拟磁盘上的内容以一个文件的方式保存到磁...</a></div></li><li class="pub_recom_item blog"><div class="pr_item_r" data-report-view={"mod":"popu_595","extra":"{\"utm_medium\":\"distribute.pc_relevant_download.none-task-blog-2~default~BlogCommendFromBaidu~default-17.nonecase\"}","index":"17","strategy":"2~default~BlogCommendFromBaidu~default"}><a class="pr_i_t" target="_blank" href=https://blog.csdn.net/xiasihua000001/article/details/274211 data-report-click={"mod":"popu_595","extra":"{\"utm_medium\":\"distribute.pc_relevant_download.none-task-blog-2~default~BlogCommendFromBaidu~default-17.nonecase\"}","index":"17","strategy":"2~default~BlogCommendFromBaidu~default"} data-report-query= utm_medium=distribute.pc_relevant_download.none-task-blog-2~default~BlogCommendFromBaidu~default-17.nonecase&dist_request_id=1619715111171_08283&depth_1-utm_source=distribute.pc_relevant_download.none-task-blog-2~default~BlogCommendFromBaidu~default-17.nonecas><em>简单</em><em>文件系统</em>的<em>实现</em></a><span class="pr_item_t_r fr"> <span class="pr_t_num">7380</span><span class="pr_t_date">2005-01-30</span></span><a class="pr_i_d" target="_blank" href=https://blog.csdn.net/xiasihua000001/article/details/274211 data-report-click={"mod":"popu_595","extra":"{\"utm_medium\":\"distribute.pc_relevant_download.none-task-blog-2~default~BlogCommendFromBaidu~default-17.nonecase\"}","index":"17","strategy":"2~default~BlogCommendFromBaidu~default"} data-report-query= utm_medium=distribute.pc_relevant_download.none-task-blog-2~default~BlogCommendFromBaidu~default-17.nonecase&dist_request_id=1619715111171_08283&depth_1-utm_source=distribute.pc_relevant_download.none-task-blog-2~default~BlogCommendFromBaidu~default-17.nonecas><em>简单</em><em>文件系统</em>的<em>实现</em>夏斯华 xiasihua00001@hotmail.com引言：文件管理是操作系统中四大资源管理中重要一项。通过<em>实现</em><em>简单</em>的<em>文件系统</em>的这样的方式，加深对其原理的理解。由于<em>文件系统</em>的博大和考虑的东西很多，再加上自己时间和能力的局限性，故<em>实现</em>一个较为<em>简单</em>的<em>文件系统</em>。概述：<em>文件系统</em>主流的不乏有windows的FAT,FAT32,NTFS,以及Linux的等。由于多种原</a></div></li><li class="pub_recom_item blog"><div class="pr_item_r" data-report-view={"mod":"popu_595","extra":"{\"utm_medium\":\"distribute.pc_relevant_download.none-task-blog-2~default~BlogCommendFromBaidu~default-18.nonecase\"}","index":"18","strategy":"2~default~BlogCommendFromBaidu~default"}><a class="pr_i_t" target="_blank" href=https://blog.csdn.net/qq_44587855/article/details/106267731 data-report-click={"mod":"popu_595","extra":"{\"utm_medium\":\"distribute.pc_relevant_download.none-task-blog-2~default~BlogCommendFromBaidu~default-18.nonecase\"}","index":"18","strategy":"2~default~BlogCommendFromBaidu~default"} data-report-query= utm_medium=distribute.pc_relevant_download.none-task-blog-2~default~BlogCommendFromBaidu~default-18.nonecase&dist_request_id=1619715111171_08283&depth_1-utm_source=distribute.pc_relevant_download.none-task-blog-2~default~BlogCommendFromBaidu~default-18.nonecas><em>文件系统</em><em>实现</em></a><span class="pr_item_t_r fr"> <span class="pr_t_num">94</span><span class="pr_t_date">2020-05-22</span></span><a class="pr_i_d" target="_blank" href=https://blog.csdn.net/qq_44587855/article/details/106267731 data-report-click={"mod":"popu_595","extra":"{\"utm_medium\":\"distribute.pc_relevant_download.none-task-blog-2~default~BlogCommendFromBaidu~default-18.nonecase\"}","index":"18","strategy":"2~default~BlogCommendFromBaidu~default"} data-report-query= utm_medium=distribute.pc_relevant_download.none-task-blog-2~default~BlogCommendFromBaidu~default-18.nonecase&dist_request_id=1619715111171_08283&depth_1-utm_source=distribute.pc_relevant_download.none-task-blog-2~default~BlogCommendFromBaidu~default-18.nonecas>17. <em>文件系统</em><em>实现</em>&mdash;&mdash;设计师的文件视角
+<em>文件系统</em>的<em>实现</em>细节。
+对于操作系统设计人员来说，他们关心的问题是：
+●<em>文件系统</em>如何分布的。
+●文件是怎么<em>实现</em>的。
+●文件夹是怎么<em>实现</em>的。
+●共享文件是怎么<em>实现</em>的。
+●磁盘空间是如何管理的。
+前面讲过，文件主要在磁盘上<em>实现</em>。当然你也可以将<em>文件系统</em>放到其他介质上。但不管是什么介质，其原理大同小异。这里以磁盘为介质进行说明。
+买过磁盘的人都知道，磁盘买来后要做的第一件事情是对磁盘进行分区和格式化。那么磁盘为什么要进行分区呢？或者说我们必须分区吗？
+分区的理由多种多样：
+
+</a></div></li><li class="pub_recom_item blog"><div class="pr_item_r" data-report-view={"mod":"popu_595","extra":"{\"utm_medium\":\"distribute.pc_relevant_download.none-task-blog-2~default~BlogCommendFromBaidu~default-19.nonecase\"}","index":"19","strategy":"2~default~BlogCommendFromBaidu~default"}><a class="pr_i_t" target="_blank" href=https://blog.csdn.net/allen6268198/article/details/23822389 data-report-click={"mod":"popu_595","extra":"{\"utm_medium\":\"distribute.pc_relevant_download.none-task-blog-2~default~BlogCommendFromBaidu~default-19.nonecase\"}","index":"19","strategy":"2~default~BlogCommendFromBaidu~default"} data-report-query= utm_medium=distribute.pc_relevant_download.none-task-blog-2~default~BlogCommendFromBaidu~default-19.nonecase&dist_request_id=1619715111171_08283&depth_1-utm_source=distribute.pc_relevant_download.none-task-blog-2~default~BlogCommendFromBaidu~default-19.nonecas><em>简单</em><em>文件系统</em><em>实现</em></a><span class="pr_item_t_r fr"> <span class="pr_t_num">4472</span><span class="pr_t_date">2014-04-16</span></span><a class="pr_i_d" target="_blank" href=https://blog.csdn.net/allen6268198/article/details/23822389 data-report-click={"mod":"popu_595","extra":"{\"utm_medium\":\"distribute.pc_relevant_download.none-task-blog-2~default~BlogCommendFromBaidu~default-19.nonecase\"}","index":"19","strategy":"2~default~BlogCommendFromBaidu~default"} data-report-query= utm_medium=distribute.pc_relevant_download.none-task-blog-2~default~BlogCommendFromBaidu~default-19.nonecase&dist_request_id=1619715111171_08283&depth_1-utm_source=distribute.pc_relevant_download.none-task-blog-2~default~BlogCommendFromBaidu~default-19.nonecas>#include 
+#include 
+#include 
+#include 
+//*********************定义的常量************************
+#define NULL 0
+#define BLOCKSIZE 1024 //磁盘块大小
+#define SIZE 1024000
+//虚拟磁盘空间大小
+#define END 65535
+/</a></div></li><li class="pub_recom_item blog"><div class="pr_item_r" data-report-view={"mod":"popu_595","extra":"{\"utm_medium\":\"distribute.pc_relevant_download.none-task-blog-2~default~BlogCommendFromBaidu~default-20.nonecase\"}","index":"20","strategy":"2~default~BlogCommendFromBaidu~default"}><a class="pr_i_t" target="_blank" href=https://blog.csdn.net/Doraemon___/article/details/53561749 data-report-click={"mod":"popu_595","extra":"{\"utm_medium\":\"distribute.pc_relevant_download.none-task-blog-2~default~BlogCommendFromBaidu~default-20.nonecase\"}","index":"20","strategy":"2~default~BlogCommendFromBaidu~default"} data-report-query= utm_medium=distribute.pc_relevant_download.none-task-blog-2~default~BlogCommendFromBaidu~default-20.nonecase&dist_request_id=1619715111171_08283&depth_1-utm_source=distribute.pc_relevant_download.none-task-blog-2~default~BlogCommendFromBaidu~default-20.nonecas><em>简单</em><em>文件系统</em>的<em>实现</em></a><span class="pr_item_t_r fr"> <span class="pr_t_num">1414</span><span class="pr_t_date">2016-12-10</span></span><a class="pr_i_d" target="_blank" href=https://blog.csdn.net/Doraemon___/article/details/53561749 data-report-click={"mod":"popu_595","extra":"{\"utm_medium\":\"distribute.pc_relevant_download.none-task-blog-2~default~BlogCommendFromBaidu~default-20.nonecase\"}","index":"20","strategy":"2~default~BlogCommendFromBaidu~default"} data-report-query= utm_medium=distribute.pc_relevant_download.none-task-blog-2~default~BlogCommendFromBaidu~default-20.nonecase&dist_request_id=1619715111171_08283&depth_1-utm_source=distribute.pc_relevant_download.none-task-blog-2~default~BlogCommendFromBaidu~default-20.nonecas>#include&nbsp;&nbsp;&nbsp;
+#include&nbsp;&nbsp;&nbsp;
+#include&nbsp;&nbsp;&nbsp;
+#include&nbsp;&nbsp;&nbsp;
+using&nbsp;namespace&nbsp;std;&nbsp;&nbsp;
+&nbsp;&nbsp;
+//1代表普通文件2代表目录文件0表示空文件&nbsp;&nbsp;
+#define&nbsp;GENERAL&nbsp;1&nbsp;&nbsp;
+#define&nbsp;DIRECTORY&nbsp;2&nbsp;&nbsp;
+#define&nbsp;NULL&nbsp;0&nbsp;&nbsp;
+&nbsp;&nbsp;
+struct&nbsp;FCB&nbsp;&nbsp;
+{&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;char&nbsp;</a></div></li><li class="pub_recom_item blog"><div class="pr_item_r" data-report-view={"mod":"popu_595","extra":"{\"utm_medium\":\"distribute.pc_relevant_download.none-task-blog-2~default~BlogCommendFromBaidu~default-21.nonecase\"}","index":"21","strategy":"2~default~BlogCommendFromBaidu~default"}><a class="pr_i_t" target="_blank" href=https://blog.csdn.net/jenhy/article/details/1650615 data-report-click={"mod":"popu_595","extra":"{\"utm_medium\":\"distribute.pc_relevant_download.none-task-blog-2~default~BlogCommendFromBaidu~default-21.nonecase\"}","index":"21","strategy":"2~default~BlogCommendFromBaidu~default"} data-report-query= utm_medium=distribute.pc_relevant_download.none-task-blog-2~default~BlogCommendFromBaidu~default-21.nonecase&dist_request_id=1619715111171_08283&depth_1-utm_source=distribute.pc_relevant_download.none-task-blog-2~default~BlogCommendFromBaidu~default-21.nonecas><em>简单</em><em>文件系统</em>的<em>实现</em></a><span class="pr_item_t_r fr"> <span class="pr_t_num">5251</span><span class="pr_t_date">2007-06-13</span></span><a class="pr_i_d" target="_blank" href=https://blog.csdn.net/jenhy/article/details/1650615 data-report-click={"mod":"popu_595","extra":"{\"utm_medium\":\"distribute.pc_relevant_download.none-task-blog-2~default~BlogCommendFromBaidu~default-21.nonecase\"}","index":"21","strategy":"2~default~BlogCommendFromBaidu~default"} data-report-query= utm_medium=distribute.pc_relevant_download.none-task-blog-2~default~BlogCommendFromBaidu~default-21.nonecase&dist_request_id=1619715111171_08283&depth_1-utm_source=distribute.pc_relevant_download.none-task-blog-2~default~BlogCommendFromBaidu~default-21.nonecas>/*----------------------------------------------------------------------------------------------*//*----------------------------一个单用户<em>文件系统</em>的<em>实现</em>------------------------------------------*//*--------------</a></div></li><li class="pub_recom_item blog"><div class="pr_item_r" data-report-view={"mod":"popu_595","extra":"{\"utm_medium\":\"distribute.pc_relevant_download.none-task-blog-2~default~BlogCommendFromBaidu~default-22.nonecase\"}","index":"22","strategy":"2~default~BlogCommendFromBaidu~default"}><a class="pr_i_t" target="_blank" href=https://blog.csdn.net/kexinxin1/article/details/93012944 data-report-click={"mod":"popu_595","extra":"{\"utm_medium\":\"distribute.pc_relevant_download.none-task-blog-2~default~BlogCommendFromBaidu~default-22.nonecase\"}","index":"22","strategy":"2~default~BlogCommendFromBaidu~default"} data-report-query= utm_medium=distribute.pc_relevant_download.none-task-blog-2~default~BlogCommendFromBaidu~default-22.nonecase&dist_request_id=1619715111171_08283&depth_1-utm_source=distribute.pc_relevant_download.none-task-blog-2~default~BlogCommendFromBaidu~default-22.nonecas><em>文件系统</em><em>实现</em></a><span class="pr_item_t_r fr"> <span class="pr_t_num">488</span><span class="pr_t_date">2018-11-10</span></span><a class="pr_i_d" target="_blank" href=https://blog.csdn.net/kexinxin1/article/details/93012944 data-report-click={"mod":"popu_595","extra":"{\"utm_medium\":\"distribute.pc_relevant_download.none-task-blog-2~default~BlogCommendFromBaidu~default-22.nonecase\"}","index":"22","strategy":"2~default~BlogCommendFromBaidu~default"} data-report-query= utm_medium=distribute.pc_relevant_download.none-task-blog-2~default~BlogCommendFromBaidu~default-22.nonecase&dist_request_id=1619715111171_08283&depth_1-utm_source=distribute.pc_relevant_download.none-task-blog-2~default~BlogCommendFromBaidu~default-22.nonecas><em>文件系统</em><em>实现</em>
+<em>文件系统</em>结构
+磁盘提供大量的外部空间来维持<em>文件系统</em>。磁盘的下述两个特点，使其成为存储多个文件的方便介质：
+
+
+可以原地重写，可以从磁盘上读一块，修改该快，并将它写回到原来的位置。 
+
+
+可以直接访问磁盘上的任意一块信息。因此，可以<em>简单</em>地顺序或随机地访问文件，从一个文件切换到另一个文件只需要<em>简单</em>地移动读写磁头并等待磁盘转动即可以完成。 
+
+
+为了提供对磁盘的高效且...</a></div></li><li class="pub_recom_item download"><a class="pr_item" href=https://download.csdn.net/download/disney_007/1428292 target="_blank" data-report-view={"mod":"popu_595","extra":"{\"utm_medium\":\"distribute.pc_relevant_download.none-task-download-2~default~BlogCommendFromBaidu~default-23.nonecase\"}","index":"23","strategy":"2~default~BlogCommendFromBaidu~default"} data-report-click={"mod":"popu_595","extra":"{\"utm_medium\":\"distribute.pc_relevant_download.none-task-download-2~default~BlogCommendFromBaidu~default-23.nonecase\"}","index":"23","strategy":"2~default~BlogCommendFromBaidu~default"} data-report-query=utm_medium=distribute.pc_relevant_download.none-task-download-2~default~BlogCommendFromBaidu~default-23.nonecase&dist_request_id=1619715111171_08283&depth_1-utm_source=distribute.pc_relevant_download.none-task-download-2~default~BlogCommendFromBaidu~default-23.nonecase><div class="pr_item_l"><div class="fix"><img src=//g.csdnimg.cn/pub-recom/img/type//unknow.svg alt=""><span>5KB</span></div> </div><div class="pr_item_r"><p class="pr_i_t">文件操作---<em>简单</em><em>文件系统</em>的<em>实现</em></p><span class="pr_item_t_r fr"><span class="pr_t_date">2009-06-22</span></span><p class="pr_i_d">在TC、VB、Delphi、C++Builder等语言与开发环境中，<em>实现</em>对文件的各项操作（复制、打开、保存、录入、查找、显示属性等）；使学生进一步了解文件的主要操作。
+
+为DOS系统设计一个<em>简单</em>的二级<em>文件系统</em>。要求做到以下几点：
+①可以<em>实现</em>下列几条命令
+LOGIN    用户登陆
+DIR       列文件目录
+CREATE   创建文件
+DELETE   删除文件
+OPEN     打开文件
+CLOSE    关闭文件
+READ     读文件
+WRITE    写文件
+MODIFY   修改文件内容
+②列目录时要列出文件名，物理地址，保护码和文件长度。
+③源文件可以进行读写保护</p></div></a></li><li class="pub_recom_item blog"><div class="pr_item_r" data-report-view={"mod":"popu_595","extra":"{\"utm_medium\":\"distribute.pc_relevant_download.none-task-blog-2~default~BlogCommendFromBaidu~default-24.nonecase\"}","index":"24","strategy":"2~default~BlogCommendFromBaidu~default"}><a class="pr_i_t" target="_blank" href=https://blog.csdn.net/Genius_LG/article/details/14489383 data-report-click={"mod":"popu_595","extra":"{\"utm_medium\":\"distribute.pc_relevant_download.none-task-blog-2~default~BlogCommendFromBaidu~default-24.nonecase\"}","index":"24","strategy":"2~default~BlogCommendFromBaidu~default"} data-report-query= utm_medium=distribute.pc_relevant_download.none-task-blog-2~default~BlogCommendFromBaidu~default-24.nonecase&dist_request_id=1619715111171_08283&depth_1-utm_source=distribute.pc_relevant_download.none-task-blog-2~default~BlogCommendFromBaidu~default-24.nonecas>如何<em>实现</em>一个<em>文件系统</em>（二）</a><span class="pr_item_t_r fr"> <span class="pr_t_num">1081</span><span class="pr_t_date">2013-11-07</span></span><a class="pr_i_d" target="_blank" href=https://blog.csdn.net/Genius_LG/article/details/14489383 data-report-click={"mod":"popu_595","extra":"{\"utm_medium\":\"distribute.pc_relevant_download.none-task-blog-2~default~BlogCommendFromBaidu~default-24.nonecase\"}","index":"24","strategy":"2~default~BlogCommendFromBaidu~default"} data-report-query= utm_medium=distribute.pc_relevant_download.none-task-blog-2~default~BlogCommendFromBaidu~default-24.nonecase&dist_request_id=1619715111171_08283&depth_1-utm_source=distribute.pc_relevant_download.none-task-blog-2~default~BlogCommendFromBaidu~default-24.nonecas>Linux <em>文件系统</em>组成结构
+Linux<em>文件系统</em>的结构除了我们上面所提到的概念结构外，还有两个最主要的特点，一个是<em>文件系统</em>抽象出了一个通用文件表示层&mdash;&mdash;虚拟<em>文件系统</em>或称做VFS。另外一个重要特点就是它的<em>文件系统</em>支持动态安装（或说挂载等），大多数<em>文件系统</em>都可以作为根<em>文件系统</em>的叶子节点被挂在到根文件目录树下的子目录上。另外Linux系统在文件读写的I/O操作上也采取了一些先进技术和策略。
+我们先从</a></div></li><li class="pub_recom_item download"><a class="pr_item" href=https://download.csdn.net/download/ericktianyun/1428489 target="_blank" data-report-view={"mod":"popu_595","extra":"{\"utm_medium\":\"distribute.pc_relevant_download.none-task-download-2~default~BlogCommendFromBaidu~default-25.nonecase\"}","index":"25","strategy":"2~default~BlogCommendFromBaidu~default"} data-report-click={"mod":"popu_595","extra":"{\"utm_medium\":\"distribute.pc_relevant_download.none-task-download-2~default~BlogCommendFromBaidu~default-25.nonecase\"}","index":"25","strategy":"2~default~BlogCommendFromBaidu~default"} data-report-query=utm_medium=distribute.pc_relevant_download.none-task-download-2~default~BlogCommendFromBaidu~default-25.nonecase&dist_request_id=1619715111171_08283&depth_1-utm_source=distribute.pc_relevant_download.none-task-download-2~default~BlogCommendFromBaidu~default-25.nonecase><div class="pr_item_l"><div class="fix"><img src=//g.csdnimg.cn/pub-recom/img/type//unknow.svg alt=""><span>12KB</span></div> </div><div class="pr_item_r"><p class="pr_i_t"><em>简单</em><em>文件系统</em>的模拟<em>实现</em></p><span class="pr_item_t_r fr"><span class="pr_t_date">2009-06-22</span></span><p class="pr_i_d"><em>简单</em><em>文件系统</em>的模拟<em>实现</em>
+<em>实现</em>一个<em>简单</em>的类似于dos的<em>文件系统</em></p></div></a></li><li class="pub_recom_item download"><a class="pr_item" href=https://download.csdn.net/download/lics999/4872480 target="_blank" data-report-view={"mod":"popu_595","extra":"{\"utm_medium\":\"distribute.pc_relevant_download.none-task-download-2~default~BlogCommendFromBaidu~default-26.nonecase\"}","index":"26","strategy":"2~default~BlogCommendFromBaidu~default"} data-report-click={"mod":"popu_595","extra":"{\"utm_medium\":\"distribute.pc_relevant_download.none-task-download-2~default~BlogCommendFromBaidu~default-26.nonecase\"}","index":"26","strategy":"2~default~BlogCommendFromBaidu~default"} data-report-query=utm_medium=distribute.pc_relevant_download.none-task-download-2~default~BlogCommendFromBaidu~default-26.nonecase&dist_request_id=1619715111171_08283&depth_1-utm_source=distribute.pc_relevant_download.none-task-download-2~default~BlogCommendFromBaidu~default-26.nonecase><div class="pr_item_l"><div class="fix"><img src=//g.csdnimg.cn/pub-recom/img/type/doc.svg alt=""><span>109KB</span></div> </div><div class="pr_item_r"><p class="pr_i_t"><em>简单</em><em>文件系统</em><em>实现</em></p><span class="pr_item_t_r fr"><span class="pr_t_date">2012-12-11</span></span><p class="pr_i_d">这是对<em>文件系统</em>的<em>简单</em><em>实现</em>，实验环境为windos环境</p></div></a></li><li class="pub_recom_item download"><a class="pr_item" href=http://download.csdn.net/download/christinaghj/10192063 target="_blank" data-report-view={"mod":"popu_595","extra":"{\"utm_medium\":\"distribute.pc_relevant_download.none-task-download-2~default~BlogCommendFromBaidu~default-27.nonecase\"}","index":"27","strategy":"2~default~BlogCommendFromBaidu~default"} data-report-click={"mod":"popu_595","extra":"{\"utm_medium\":\"distribute.pc_relevant_download.none-task-download-2~default~BlogCommendFromBaidu~default-27.nonecase\"}","index":"27","strategy":"2~default~BlogCommendFromBaidu~default"} data-report-query=utm_medium=distribute.pc_relevant_download.none-task-download-2~default~BlogCommendFromBaidu~default-27.nonecase&dist_request_id=1619715111171_08283&depth_1-utm_source=distribute.pc_relevant_download.none-task-download-2~default~BlogCommendFromBaidu~default-27.nonecase><div class="pr_item_l"><div class="fix"><img src=//g.csdnimg.cn/pub-recom/img/type//unknow.svg alt=""><span>13KB</span></div> </div><div class="pr_item_r"><p class="pr_i_t">一个<em>简单</em>的<em>文件系统</em>（操作系统课程设计）</p><span class="pr_item_t_r fr"><span class="pr_t_date">2018-01-06</span></span><p class="pr_i_d">一个<em>简单</em>的<em>文件系统</em>（操作系统课程设计）主要任务是对用户文件和系统文件进行管理，以方便用户使用，并保证文件的安全性。文件管理具有对文件存储空间的管理、目录管理、文件的读/写管理以及文件的共享与保护功能。从用户的角度看，目录在用户（应用程序）所需要的文件名和文件之间提供一种映射，所以目录应<em>实现</em>&ldquo;按名存取&rdquo;，&ldquo;按名存取&rdquo;是目录管理中最基本的功能，也是<em>文件系统</em>向用户提供的最基本的服务。目录管理中有多种<em>实现</em>机制，其中二级目录机制可以解决多用户之间的文件重名问题，<em>文件系统</em>可以在目录上<em>实现</em>访问限制。</p></div></a></li></ul><script type="text/javascript" src="//g.csdnimg.cn/pub-recom/1.0.9/js/pub-recom-baidu.js"></script><script type="text/javascript" src="//g.csdnimg.cn/baidu-search/1.0.9/baidu-search.js" async></script>
+            </div>
+        <div id="down-questionnaire">
+            <div class="down-questionnaire-content">
+                <div class="down-questionnaire-title">您会向同学/朋友/同事推荐我们的CSDN下载吗？</div>
+                <div class="down-questionnaire-radio-box">
+                    <label>
+                        <input type="radio" name="recommend" value="1">
+                        非常推荐
+                    </label>
+                    <label>
+                        <input type="radio" name="recommend" value="2">
+                        推荐
+                    </label>
+                    <label>
+                        <input type="radio" name="recommend" value="3">
+                        无所谓
+                    </label>
+                    <label>
+                        <input type="radio" name="recommend" value="4">
+                        不推荐
+                    </label>
+                    <label>
+                        <input type="radio" name="recommend" value="5">
+                        非常不推荐
+                    </label>
+                </div>
+                <div class="down-questionnaire-input">
+                    <input type="text" placeholder="写下您迫切需要的资源，我们会尽最大努力满足～">
+                    <button disabled>提交</button>
+                </div>
+            </div>
+            <div class="down-questionnaire-finish">
+                <div class="down-questionnaire-title">谢谢参与！您的真实评价是我们改进的动力~</div>
+                <span class="close-questionnaire"></span>
+            </div>
+        </div>
+        <div class="download-common-footer" style="margin-top: 8px;"></div>
+    </div>
+    <!-- 个人信息 -->
+    <div class="main_r fr">
+        <div class="dl_right_fixed" nofixed="true">
+            <div class="user_card">
+                <div class="user_card_top">
+                    <div class="user_card_avatar">
+                        <a target="_blank" href="https://my.csdn.net/qq_36041703">
+                            <img src="https://avatar.csdn.net/E/9/4/2_qq_36041703.jpg">
+                        </a>
+                    </div>
+                    <div class="user_card_info" >
+                    <div class="user_card_info_t">
+                        <a href="https://my.csdn.net/qq_36041703" target="_blank" class=name>Boltor</a>
+                    </div>
+                        <div class="user_card_info_b">
+                        <div class="code_age">码龄5年</div>
+                        <a  href=https://i.csdn.net/#/uc/profile target=_blank>
+                                <img src="//csdnimg.cn/release/download/static_files/pc/images/cert_.png" alt="">
+                                <span>暂无认证</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="user_card_middle">
+                <div class="user_card_middle_data">
+                    <ul>
+                        <li>
+                            <a href="https://download.csdn.net//user/qq_36041703/uploads" data-report-click='{"spm": "3001.5449"}' data-report-query="spm=3001.5449">
+                                <div class="middle_data_num">13</div>
+                                <div class="middle_data_name">资源</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://blog.csdn.net/qq_36041703" data-report-click='{"spm": "3001.5450"}' data-report-query="spm=3001.5450">
+                                <div class="middle_data_num">5</div>
+                                <div class="middle_data_name">粉丝</div>
+                            </a>
+                        </li>
+                        <li>
+                            <div class="middle_data_num"><img src="//csdnimg.cn/release/download/static_files/pc/images/level/level_3.png" alt=""></div>
+                            <div class="middle_data_name">等级</div>
+                        </li>
+                    </ul>
+                </div>
+                <!-- 勋章部分 -->
+        </div>
+        <div class="user_card_bottom">
+                <div class="user_fn">
+                        <span class="user_btn attention" data-report-click='{"spm": "1003.2020.3001.5736"}'>关注</span>
+                    <span class="user_btn private talk_btn" data-url="https://im.csdn.net/chat/qq_36041703" data-report-click='{"spm": "1003.2020.3001.5737"}' data-report-query="spm=1003.2020.3001.5737">私信</span>
+                </div>
+        </div>
+    </div>
+            <div class="upload">
+                <span data-url="https://mp.csdn.net/console/uploadResources" data-report-click='{"spm":"1003.2020.3001.4171"' data-report-query="spm=1003.2020.3001.4171" class="dl_upload_btn">上传资源赚钱or赚积分</span>
+            </div>
+            <!-- 详情页侧边栏相关内容推荐 -->
+                    <div class="content_recom right_plate_con">
+                    <div class="com_plate_tit">
+                        <span class="plate_title">最新推荐</span>
+                    </div>
+                    <div class="recom_list">
+                        <ul class="resource_c_list">
+                                <li data-report-view='{"mod":popu_882,
+                                "index":1,
+                                "extra":{"utm_medium":"distribute.pc_download_right_sidebar.none-task-download-alirec-1.nonecase"},
+                                "strategy":alirec,
+                                "dest":https://download.csdn.net/download/qq_38412739/18255573
+                                }'>
+                                    <i class="item dl">下载</i>
+                                <a
+                                        href="https://download.csdn.net/download/qq_38412739/18255573" target="_blank"
+                                        data-report-click='{"mod":popu_882,
+                                "index":1,
+                                "extra":{"utm_medium":"distribute.pc_download_right_sidebar.none-task-download-alirec-1.nonecase"},
+                                "strategy":alirec,
+                                "dest":https://download.csdn.net/download/qq_38412739/18255573,
+                                "spm":"1003.2020.3001.4174"}'
+                                data-report-query='utm_medium=distribute.down_relevant_right.none-task-download-alirec-1.nonecase&depth_1-utm_source=distribute.down_relevant_right.none-task-download-alirec-1.nonecase&spm=1003.2020.3001.4174'
+                                >
+                                    20210429-西南证券-元隆雅图-002878-礼赠品隐形冠军，优势显著持续高增.pdf
+                                </a>
+                                <p class="resource_top">20210429-西南证券-元隆雅图-002878-礼赠品隐形冠军，优势显著持续高增.pdf</p>
+                                </li>
+                                <li data-report-view='{"mod":popu_882,
+                                "index":2,
+                                "extra":{"utm_medium":"distribute.pc_download_right_sidebar.none-task-download-alirec-2.nonecase"},
+                                "strategy":alirec,
+                                "dest":https://download.csdn.net/download/qq_38412739/18255547
+                                }'>
+                                    <i class="item dl">下载</i>
+                                <a
+                                        href="https://download.csdn.net/download/qq_38412739/18255547" target="_blank"
+                                        data-report-click='{"mod":popu_882,
+                                "index":2,
+                                "extra":{"utm_medium":"distribute.pc_download_right_sidebar.none-task-download-alirec-2.nonecase"},
+                                "strategy":alirec,
+                                "dest":https://download.csdn.net/download/qq_38412739/18255547,
+                                "spm":"1003.2020.3001.4174"}'
+                                data-report-query='utm_medium=distribute.down_relevant_right.none-task-download-alirec-2.nonecase&depth_1-utm_source=distribute.down_relevant_right.none-task-download-alirec-2.nonecase&spm=1003.2020.3001.4174'
+                                >
+                                    20210429-广发证券-浙富控股-002266-2021Q1业绩同比增长516%，危废资源化龙头起航.pdf
+                                </a>
+                                <p class="resource_top">20210429-广发证券-浙富控股-002266-2021Q1业绩同比增长516%，危废资源化龙头起航.pdf</p>
+                                </li>
+                                <li data-report-view='{"mod":popu_882,
+                                "index":3,
+                                "extra":{"utm_medium":"distribute.pc_download_right_sidebar.none-task-download-alirec-3.nonecase"},
+                                "strategy":alirec,
+                                "dest":https://download.csdn.net/download/qq_38412739/18255666
+                                }'>
+                                    <i class="item dl">下载</i>
+                                <a
+                                        href="https://download.csdn.net/download/qq_38412739/18255666" target="_blank"
+                                        data-report-click='{"mod":popu_882,
+                                "index":3,
+                                "extra":{"utm_medium":"distribute.pc_download_right_sidebar.none-task-download-alirec-3.nonecase"},
+                                "strategy":alirec,
+                                "dest":https://download.csdn.net/download/qq_38412739/18255666,
+                                "spm":"1003.2020.3001.4174"}'
+                                data-report-query='utm_medium=distribute.down_relevant_right.none-task-download-alirec-3.nonecase&depth_1-utm_source=distribute.down_relevant_right.none-task-download-alirec-3.nonecase&spm=1003.2020.3001.4174'
+                                >
+                                    昊志机电：2020年年度报告.PDF
+                                </a>
+                                <p class="resource_top">昊志机电：2020年年度报告.PDF</p>
+                                </li>
+                                <li data-report-view='{"mod":popu_882,
+                                "index":4,
+                                "extra":{"utm_medium":"distribute.pc_download_right_sidebar.none-task-download-alirec-4.nonecase"},
+                                "strategy":alirec,
+                                "dest":https://download.csdn.net/download/qq_38412739/18255671
+                                }'>
+                                    <i class="item dl">下载</i>
+                                <a
+                                        href="https://download.csdn.net/download/qq_38412739/18255671" target="_blank"
+                                        data-report-click='{"mod":popu_882,
+                                "index":4,
+                                "extra":{"utm_medium":"distribute.pc_download_right_sidebar.none-task-download-alirec-4.nonecase"},
+                                "strategy":alirec,
+                                "dest":https://download.csdn.net/download/qq_38412739/18255671,
+                                "spm":"1003.2020.3001.4174"}'
+                                data-report-query='utm_medium=distribute.down_relevant_right.none-task-download-alirec-4.nonecase&depth_1-utm_source=distribute.down_relevant_right.none-task-download-alirec-4.nonecase&spm=1003.2020.3001.4174'
+                                >
+                                    牧原股份：2020年年度报告.PDF
+                                </a>
+                                <p class="resource_top">牧原股份：2020年年度报告.PDF</p>
+                                </li>
+                                <li data-report-view='{"mod":popu_882,
+                                "index":5,
+                                "extra":{"utm_medium":"distribute.pc_download_right_sidebar.none-task-download-alirec-5.nonecase"},
+                                "strategy":alirec,
+                                "dest":https://download.csdn.net/download/lihao1107156171/18254437
+                                }'>
+                                    <i class="item dl">下载</i>
+                                <a
+                                        href="https://download.csdn.net/download/lihao1107156171/18254437" target="_blank"
+                                        data-report-click='{"mod":popu_882,
+                                "index":5,
+                                "extra":{"utm_medium":"distribute.pc_download_right_sidebar.none-task-download-alirec-5.nonecase"},
+                                "strategy":alirec,
+                                "dest":https://download.csdn.net/download/lihao1107156171/18254437,
+                                "spm":"1003.2020.3001.4174"}'
+                                data-report-query='utm_medium=distribute.down_relevant_right.none-task-download-alirec-5.nonecase&depth_1-utm_source=distribute.down_relevant_right.none-task-download-alirec-5.nonecase&spm=1003.2020.3001.4174'
+                                >
+                                    kafka+zookeeper.zip
+                                </a>
+                                <p class="resource_top">kafka+zookeeper.zip</p>
+                                </li>
+                                <li data-report-view='{"mod":popu_882,
+                                "index":6,
+                                "extra":{"utm_medium":"distribute.pc_download_right_sidebar.none-task-download-alirec-6.nonecase"},
+                                "strategy":alirec,
+                                "dest":https://download.csdn.net/download/xiaomaodiaoyu520/18254340
+                                }'>
+                                    <i class="item dl">下载</i>
+                                <a
+                                        href="https://download.csdn.net/download/xiaomaodiaoyu520/18254340" target="_blank"
+                                        data-report-click='{"mod":popu_882,
+                                "index":6,
+                                "extra":{"utm_medium":"distribute.pc_download_right_sidebar.none-task-download-alirec-6.nonecase"},
+                                "strategy":alirec,
+                                "dest":https://download.csdn.net/download/xiaomaodiaoyu520/18254340,
+                                "spm":"1003.2020.3001.4174"}'
+                                data-report-query='utm_medium=distribute.down_relevant_right.none-task-download-alirec-6.nonecase&depth_1-utm_source=distribute.down_relevant_right.none-task-download-alirec-6.nonecase&spm=1003.2020.3001.4174'
+                                >
+                                    精品商业计划书2020-艺术灯饰艺术酒桶等产品融资说明书商业计划书.pdf
+                                </a>
+                                <p class="resource_top">精品商业计划书2020-艺术灯饰艺术酒桶等产品融资说明书商业计划书.pdf</p>
+                                </li>
+                                <li data-report-view='{"mod":popu_882,
+                                "index":7,
+                                "extra":{"utm_medium":"distribute.pc_download_right_sidebar.none-task-download-alirec-7.nonecase"},
+                                "strategy":alirec,
+                                "dest":https://download.csdn.net/download/qq_38412739/18255698
+                                }'>
+                                    <i class="item dl">下载</i>
+                                <a
+                                        href="https://download.csdn.net/download/qq_38412739/18255698" target="_blank"
+                                        data-report-click='{"mod":popu_882,
+                                "index":7,
+                                "extra":{"utm_medium":"distribute.pc_download_right_sidebar.none-task-download-alirec-7.nonecase"},
+                                "strategy":alirec,
+                                "dest":https://download.csdn.net/download/qq_38412739/18255698,
+                                "spm":"1003.2020.3001.4174"}'
+                                data-report-query='utm_medium=distribute.down_relevant_right.none-task-download-alirec-7.nonecase&depth_1-utm_source=distribute.down_relevant_right.none-task-download-alirec-7.nonecase&spm=1003.2020.3001.4174'
+                                >
+                                    罗牛山：2020年年度报告.PDF
+                                </a>
+                                <p class="resource_top">罗牛山：2020年年度报告.PDF</p>
+                                </li>
+                                <li data-report-view='{"mod":popu_882,
+                                "index":8,
+                                "extra":{"utm_medium":"distribute.pc_download_right_sidebar.none-task-download-alirec-8.nonecase"},
+                                "strategy":alirec,
+                                "dest":https://download.csdn.net/download/xiaomaodiaoyu520/18254336
+                                }'>
+                                    <i class="item dl">下载</i>
+                                <a
+                                        href="https://download.csdn.net/download/xiaomaodiaoyu520/18254336" target="_blank"
+                                        data-report-click='{"mod":popu_882,
+                                "index":8,
+                                "extra":{"utm_medium":"distribute.pc_download_right_sidebar.none-task-download-alirec-8.nonecase"},
+                                "strategy":alirec,
+                                "dest":https://download.csdn.net/download/xiaomaodiaoyu520/18254336,
+                                "spm":"1003.2020.3001.4174"}'
+                                data-report-query='utm_medium=distribute.down_relevant_right.none-task-download-alirec-8.nonecase&depth_1-utm_source=distribute.down_relevant_right.none-task-download-alirec-8.nonecase&spm=1003.2020.3001.4174'
+                                >
+                                    精品商业计划书2020医鹭-医疗器械跨境B2B商业计划书.pdf
+                                </a>
+                                <p class="resource_top">精品商业计划书2020医鹭-医疗器械跨境B2B商业计划书.pdf</p>
+                                </li>
+                                <li data-report-view='{"mod":popu_882,
+                                "index":9,
+                                "extra":{"utm_medium":"distribute.pc_download_right_sidebar.none-task-download-alirec-9.nonecase"},
+                                "strategy":alirec,
+                                "dest":https://download.csdn.net/download/qq_38412739/18255674
+                                }'>
+                                    <i class="item dl">下载</i>
+                                <a
+                                        href="https://download.csdn.net/download/qq_38412739/18255674" target="_blank"
+                                        data-report-click='{"mod":popu_882,
+                                "index":9,
+                                "extra":{"utm_medium":"distribute.pc_download_right_sidebar.none-task-download-alirec-9.nonecase"},
+                                "strategy":alirec,
+                                "dest":https://download.csdn.net/download/qq_38412739/18255674,
+                                "spm":"1003.2020.3001.4174"}'
+                                data-report-query='utm_medium=distribute.down_relevant_right.none-task-download-alirec-9.nonecase&depth_1-utm_source=distribute.down_relevant_right.none-task-download-alirec-9.nonecase&spm=1003.2020.3001.4174'
+                                >
+                                    中国长城：2020年年度报告.PDF
+                                </a>
+                                <p class="resource_top">中国长城：2020年年度报告.PDF</p>
+                                </li>
+                                <li data-report-view='{"mod":popu_882,
+                                "index":10,
+                                "extra":{"utm_medium":"distribute.pc_download_right_sidebar.none-task-download-alirec-10.nonecase"},
+                                "strategy":alirec,
+                                "dest":https://download.csdn.net/download/xiaomaodiaoyu520/18254348
+                                }'>
+                                    <i class="item dl">下载</i>
+                                <a
+                                        href="https://download.csdn.net/download/xiaomaodiaoyu520/18254348" target="_blank"
+                                        data-report-click='{"mod":popu_882,
+                                "index":10,
+                                "extra":{"utm_medium":"distribute.pc_download_right_sidebar.none-task-download-alirec-10.nonecase"},
+                                "strategy":alirec,
+                                "dest":https://download.csdn.net/download/xiaomaodiaoyu520/18254348,
+                                "spm":"1003.2020.3001.4174"}'
+                                data-report-query='utm_medium=distribute.down_relevant_right.none-task-download-alirec-10.nonecase&depth_1-utm_source=distribute.down_relevant_right.none-task-download-alirec-10.nonecase&spm=1003.2020.3001.4174'
+                                >
+                                    精品商业计划书2020-中国留学生会创新创业大赛项目计划书.pdf
+                                </a>
+                                <p class="resource_top">精品商业计划书2020-中国留学生会创新创业大赛项目计划书.pdf</p>
+                                </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="card-wrap">
+                <div class="card-item card-75">
+                    <div id="kp_box_75" data-pid="75"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- pc-论坛内页右侧视窗-300*600 -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:600px"
+     data-ad-client="ca-pub-1076724771190722"
+     data-ad-slot="9406032482"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script><img class="pre-img-lasy" data-src="https://kunyu.csdn.net/1.png?p=75&a=2457&c=0&k=&spm=3001.5059&d=1&t=3&u=f0663e77db554120b3dc98576cdf566c" style="display: block;width: 0px;height: 0px;"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="//g.csdnimg.cn/common/csdn-toolbar/csdn-toolbar.js"></script>
+
+<div id="navs" class="clearfix">
+</div>
+<script>
+    $(function () {
+        window.csdn.navSecond.init({
+            nav:[
+                {
+                    value:"精品专辑",
+                    url:"https://download.csdn.net//album",
+                },
+                {
+                    value:"我的资源",
+                    url:"https://mp.csdn.net/console/upDetailed",
+                },
+                {
+                    value:"我的积分",
+                    url:"https://mp.csdn.net/console/dataWatch/downList",
+                },
+                {
+                    value:"我的收藏",
+                    url:"https://i.csdn.net/#/uc/collection-list",
+                },
+                {
+                    value:"已下载",
+                    url:"https://mp.csdn.net/console/DownloadDetailed",
+                },
+                {
+                    value:"下载帮助",
+                    url:"https://blog.csdn.net/blogdevteam/category_9584548.html"
+                }
+            ],
+            elId: "navs",
+            extraBtn: [
+                {
+                    value: '上传资源',
+                    url: "https://mp.csdn.net/console/uploadResources",
+                    reportQuery: "spm=1003.2020.3001.4172",
+                    reportClick: '{"spm":"1003.2020.3001.4172"}'
+                }
+            ]
+        })
+    })
+</script>
+<link rel="stylesheet" href="//csdnimg.cn/release/download/static_files/pc/css/float_box-f507429dbc.css" />
+<div class="float_box">
+    
+</div>
+<script>
+    $(function () {
+        function fixBox() {
+            var el = document.querySelector('.float_box')
+            var navEl = document.querySelector('#navs')
+            var sLeft = window.pageXOffset || document.documentElement.scrollLeft || document.body.scrollLeft || 0
+            // 跟nav左边同步
+            var navLeft = navEl.offsetLeft - sLeft
+            var boxTop = $('#csdn-toolbar').height() + $('#csdn-nav-second').height() + 18
+            el.style.left = navLeft + 'px'
+            el.style.top = boxTop + 'px'
+        }
+        setTimeout(function () {
+            fixBox()
+        }, 300)
+        document.addEventListener('scroll', function(){
+            fixBox()
+        })
+        window.addEventListener('resize', function () {
+            fixBox()
+        })
+
+        var storage = window.localStorage.getItem('hideFloat')
+        if (!storage || storage !== getCurrentDay()) {
+            $('.float_box').show()
+        }
+        $('.float_box_close').on('click', function () {
+            var clickTime = getCurrentDay()
+            window.localStorage.setItem('hideFloat', clickTime)
+            $('.float_box').hide()
+        })
+        function getCurrentDay () {
+            return new Date().getFullYear() + '/' + (new Date().getMonth() + 1) + '/' + new Date().getDate()
+        }
+    })
+</script>
+</div>
+</div>
+
+<!-- 验证安全手机 -->
+<div class="risk_box_mask check" style="display:none">
+    <div class="risk_box">
+        <div class="title">
+            <span>验证安全手机</span>
+            <img class="close" src="//csdnimg.cn/release/download/static_files/pc/images/pop_close.png" alt="">
+        </div>
+        <div class="risk_main">
+            <p>请使用绑定的手机号<span></span>（国内）编辑短信内容 <span></span> 发送至 <span></span> 进行短信验证，发送完成后点击<span>“我已发送”</span>按钮</p>
+        </div>
+        <div class="risk_btn_box ">
+            <a class="back" href="javascript:;">返回</a>
+            <a class="sure" href="javascript:;">我已发送</a>
+        </div>
+    </div>
+</div>
+
+
+<!-- 微信安全验证-->
+<div class="weixin_code_check" style="display:none;">
+    <div class="code_check_back"></div>
+    <div class="code_check_area">
+        <p class="check_area_title">安全验证</p>
+        <div class="check_area_img"><img id="check_area_img"/></div>
+        <p class="check_area_msg">微信扫码并关注</p>
+        <i class="el-icon-close" style="background:none;"></i>
+    </div>
+</div>
+
+
+<!-- 绑定微信 -->
+<div class="risk_box_mask bind_wx" style="display:none">
+    <div class="risk_box">
+        <div class="title">
+            <span>安全校验</span>
+            <img class="close" src="//csdnimg.cn/release/download/static_files/pc/images/pop_close.png" alt="">
+        </div>
+        <div class="risk_main">
+            <p>您的账号存在较高风险</p>
+            <p>请先身份认证</p>
+        </div>
+        <div class="risk_btn_box" style="position: absolute;right: 0;bottom: 19px;">
+            <a class="back" href="javascript:;">返回</a>
+            <a class="sure" target="_blank" href="https://i.csdn.net/#/account/bind">立即绑定</a>
+        </div>
+    </div>
+</div>
+
+<!-- 员工认证弹窗 -->
+<div class="people_authentication" style="display:none">
+    <div class="people_main">
+        <div class="title">添加认证 <img src="//csdnimg.cn/release/download/static_files/pc/images/pop_close.png" /></div>
+        <a class="li mb16" target="_blank" href="https://i.csdn.net/#/user-center/profile?floor=job"
+           data-report-click='{"spm":"1003.2020.3001.4169}"'
+        data-report-query="spm=1003.2020.3001.4169"
+        >
+        <img src="//csdnimg.cn/release/download/static_files/pc/images/staff_icon.png" alt="" class="">
+        员工认证VIP会员8折
+        </a>
+        <a class="li" target="_blank" href="https://i.csdn.net/#/user-center/profile?floor=edu"
+           data-report-click={"spm":1003.2020.3001.4170}
+
+        data-report-query="spm=1003.2020.3001.4170"
+        >
+        <img src="//csdnimg.cn/release/download/static_files/pc/images/stu_icon.png" alt="" class="">
+        学生认证VIP会员7折
+        </a>
+    </div>
+</div>
+<!-- pdf预览弹窗 -->
+    <div class="pdf_box_warp">
+        <div class="pdf_title">
+            <div class="pdf_t_main">
+                <img class="type" src="//g.csdnimg.cn/pub-recom/img/type/pdf.svg" alt="">
+                <span class="tit">实现简单的文件系统</span>
+                        <a href="javascript:;" class="down download_btn" data-report-click='{"mod":"1586333473_038","spm":1003.2020.3001.4257,"extend1":"normal_download"}' data-report-view='{"mod":"1586333473_038","spm":1003.2020.3001.4257,"extend1":"normal_download"}'>43积分/C币 立即下载</a>
+                <div class="page fr">
+                    <span class="page_now">1</span>/<span class="page_all">0</span>
+                </div>
+                <img class="close_btn" src="//csdnimg.cn/release/download/static_files/pc/images/close_g.png" alt="">
+            </div>
+        </div>
+            <div class="pdf_img_box">
+                <div class='main'  previewNo="0">
+                </div>
+            </div>
+    </div>
+
+<script>
+    if (window.csdn === undefined) {
+        window.csdn = {};
+    }
+    window.csdn.sideToolbar = {
+        options: {
+            contentEl: document.getElementsByClassName("main")[0]
+        }
+    }
+</script>
+<!-- 右侧返回顶部 -->
+<script type="text/javascript" src="https://g.csdnimg.cn/side-toolbar/3.0/side-toolbar.js?t=1594881824401"></script>
+
+<!-- copyright 信息  -->
+<script src="//g.csdnimg.cn/common/csdn-footer/csdn-footer.js"></script>
+<!-- 二级菜单组件 -->
+<script type="text/javascript" src="https://g.csdnimg.cn/nav-second/1.0.3/nav-second.js"></script>
+<!--右侧整体固定-->
+<script type="text/javascript" src="//g.csdnimg.cn/fixed-sidebar/1.0.5/fixed-sidebar.js"></script>
+<script>
+    $(function () {
+            /** toolbar是否悬浮*/
+            if(toolbarIsSuspension()){
+                window.csdn.configuration_tool_parameterv({
+                    'need_first_suspend': true,//第一栏悬浮
+                    'need_little_suspend': false,//第二栏悬浮
+                    'little_tool_id': '' ,//第二栏id
+                    'little_need_insert_type': '',//第二栏需要模块类型
+                    //第二栏需要模块类型,
+                    need_change_function: function (flag) {
+                        window.csdn.navSecond.changeNavFix(flag)
+                    }
+                })
+            }
+            function toolbarIsSuspension(){
+                if(window.csdn.configuration_tool_parameterv){
+                    return true;
+                }else{
+                    return false;
+                }
+            }
+    })
+</script>
+<script type="text/javascript" src="https://g.csdnimg.cn/user-login/2.3.2/user-login.js"></script>
+<script type="text/javascript" src="//csdnimg.cn/release/download/static_files/pc/js/libs/libs-d4f6439928.js"></script>
+    <script type="text/javascript" src="https://g.csdnimg.cn/user-medal/1.0.5/user-medal.js"></script>
+<script>
+    (function(){
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https')
+
+        { bp.src = 'https://zz.bdstatic.com/linksubmit/push.js'; }
+        else
+
+        { bp.src = 'http://push.zhanzhang.baidu.com/push.js'; }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+<script type="text/javascript" src="https://g.csdnimg.cn/user-voice/1.0.4/user-voice-verification.js"></script>
+<script type="text/javascript" src="//csdnimg.cn/release/download/static_files/pc/js/tools/jquery-7373324e57.form.min.js"></script>
+<script type="text/javascript" src="//csdnimg.cn/release/download/static_files/mobile/js/bscroll-853a793a84.min.js"></script>
+<script src="//g.csdnimg.cn/user-ordercart/2.0.1/user-ordercart.js"></script>
+<script src="//g.csdnimg.cn/lib/qrcode/1.0.0/qrcode.min.js"></script>
+
+
+    <script src="//g.csdnimg.cn/user-ordertip/3.0.2/user-ordertip.js"></script>
+
+
+<script type="text/javascript" src="//csdnimg.cn/release/download/static_files/pc/js/download_detail-7ca9484bd3.js"></script>
+<!-- 分页插件 -->
+<script type="text/javascript" src="//csdnimg.cn/release/download/static_files/pc/js/xlPaging-27bdebbe6c.js"></script>
+<!-- 公共收藏组件 -->
+<script type="text/javascript" src="https://g.csdnimg.cn/collection-box/2.0.2/collection-box.js"></script>
+
+<!--迁移资源增加上报-->
+<script type="text/javascript">
+    _hmt.push(['_trackCustomEvent', 'download_pdf', {}]);
+</script>
+<script>
+    csdn.report.reportView({"mod":"1586333473_017","extra":"{\"vType\":\""+_getCookieValue("p_uid")+"\",\"sourec_num\":\"43\"}"})
+</script>
+</body>
+</html>

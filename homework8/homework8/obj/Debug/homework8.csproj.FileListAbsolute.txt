@@ -1,0 +1,11 @@
+C:\CSharp\homework8\homework8\bin\Debug\homework8.exe.config
+C:\CSharp\homework8\homework8\bin\Debug\homework8.exe
+C:\CSharp\homework8\homework8\bin\Debug\homework8.pdb
+C:\CSharp\homework8\homework8\obj\Debug\homework8.CreateOrder.resources
+C:\CSharp\homework8\homework8\obj\Debug\homework8.Form1.resources
+C:\CSharp\homework8\homework8\obj\Debug\homework8.Properties.Resources.resources
+C:\CSharp\homework8\homework8\obj\Debug\homework8.csproj.GenerateResource.cache
+C:\CSharp\homework8\homework8\obj\Debug\homework8.csproj.CoreCompileInputs.cache
+C:\CSharp\homework8\homework8\obj\Debug\homework8.exe
+C:\CSharp\homework8\homework8\obj\Debug\homework8.pdb
+C:\CSharp\homework8\homework8\obj\Debug\homework8.csprojAssemblyReference.cache

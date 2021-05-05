@@ -9,3 +9,8 @@ C:\CSharp\homework8\homework8\obj\Debug\homework8.csproj.CoreCompileInputs.cache
 C:\CSharp\homework8\homework8\obj\Debug\homework8.exe
 C:\CSharp\homework8\homework8\obj\Debug\homework8.pdb
 C:\CSharp\homework8\homework8\obj\Debug\homework8.csprojAssemblyReference.cache
+C:\CSharp\homework8\homework8\obj\Debug\homework8.AddOneDetail.resources
+C:\CSharp\homework8\homework8\obj\Debug\homework8.DeleteOrder.resources
+C:\CSharp\homework8\homework8\obj\Debug\homework8.UpdateOrder.resources
+C:\CSharp\homework8\homework8\obj\Debug\homework8.SearchOrder.resources
+C:\CSharp\homework8\homework8\obj\Debug\homework8.Message.resources

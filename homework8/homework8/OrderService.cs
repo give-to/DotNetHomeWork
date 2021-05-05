@@ -17,6 +17,7 @@ namespace homework8
         {            
             orders.Add(order);
         }
+        /*
         public void DisplayOrders()
         {
             for (int i = 0; i < orders.Count; i++)
@@ -24,6 +25,7 @@ namespace homework8
                 Console.WriteLine(orders[i].ToString());
             }
         }
+        */
         public void DeleteOneOrder(int IDDelete)
         {
             for (int i = 0; i < orders.Count; i++)
@@ -36,34 +38,7 @@ namespace homework8
             }
             throw new ArgumentException("不存在该ID的订单");
         }
-
-        public void ModifyOrder(int IDModify, int num, char ModifyProject, string ValueAfterModify)
-        {
-
-            for (int i = 0; i < orders.Count; i++)
-            {
-                if (orders[i].ID == IDModify)
-                {
-                    switch (ModifyProject)
-                    {
-                        case 'A':
-                            orders[i].Goods[num - 1].GoodName = ValueAfterModify;
-                            break;
-                        case 'B':
-                            orders[i].Goods[num - 1].CostPerGood = Double.Parse(ValueAfterModify);
-                            break;
-                        case 'C':
-                            orders[i].Goods[num - 1].NumOfGood = Int32.Parse(ValueAfterModify);
-                            break;
-                        default:
-                            throw new ArgumentException("不存在该项目");
-                    }
-                    return;
-                }
-            }
-            throw new ArgumentException("不存在该ID的订单");
-        }
-
+        
         public IEnumerable<Order> SearchOrder(char choice, string item)
         {
             switch (choice)

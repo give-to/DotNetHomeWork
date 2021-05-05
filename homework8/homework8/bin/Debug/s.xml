@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<ArrayOfOrder xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Order>
+    <Goods>
+      <OrderDetails>
+        <GoodName>LOVE</GoodName>
+        <CostPerGood>1314</CostPerGood>
+        <NumOfGood>1</NumOfGood>
+      </OrderDetails>
+    </Goods>
+    <Sender>刘心雨</Sender>
+    <Receiver>杨小凡</Receiver>
+    <SenderAddress>311</SenderAddress>
+    <ReceiverAddress>313</ReceiverAddress>
+    <ID>1</ID>
+  </Order>
+  <Order>
+    <Goods>
+      <OrderDetails>
+        <GoodName>22</GoodName>
+        <CostPerGood>22</CostPerGood>
+        <NumOfGood>2</NumOfGood>
+      </OrderDetails>
+    </Goods>
+    <Sender>2</Sender>
+    <Receiver>2</Receiver>
+    <SenderAddress>2</SenderAddress>
+    <ReceiverAddress>2</ReceiverAddress>
+    <ID>2</ID>
+  </Order>
+</ArrayOfOrder>

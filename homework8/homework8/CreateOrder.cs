@@ -13,19 +13,13 @@ namespace homework8
     public partial class CreateOrder : Form
     {
         public Order order = new Order();
+        
         public CreateOrder()
         {
             InitializeComponent();
             orderDetailDataSource.DataSource = order.Goods;
-            order.AddOneDetail("11", 2, 3);
+            //order.AddOneDetail("11", 2, 3);
         }
-        
-        public void CreateOneOrder()
-        {
-            
-        }
-
-
         private void CreateOrder_Load(object sender, EventArgs e)
         {
             txtSender.DataBindings.Add("Text", this.order, "Sender");
@@ -34,18 +28,25 @@ namespace homework8
             txtReceiverAddress.DataBindings.Add("Text", this.order, "ReceiverAddress");
             
         }
-
         private void btnAdd_Click(object sender, EventArgs e)
         {
             if (txtSender == null || txtReceiver == null || txtSenderAddress == null || txtReceiverAddress == null)
                 return;
-            for(int i=0;i< orderDataGridView.Rows.Count;i++)
-            {
-                order.AddOneDetail(orderDataGridView.Rows[i].Cells[0].ToString(), Double.Parse(orderDataGridView.Rows[i].Cells[0].ToString()), Int32.Parse(orderDataGridView.Rows[i].Cells[0].ToString()));
-            }
+            Intent.dict["order"] = order;            
+            this.DialogResult = DialogResult.OK;
+            //this.Close();
 
         }
+        private void btnAddOneDetail_Click(object sender, EventArgs e)
+        {
+            AddOneDetail addOneDetail = new AddOneDetail();
+            if(addOneDetail.ShowDialog()==DialogResult.OK)
+            {
+                order.AddOneDetail((OrderDetails)Intent.dict["detail"]);
+                orderDetailDataSource.DataSource = null;
+                orderDetailDataSource.DataSource = order.Goods;
+            }            
+        }
 
-         
     }
 }

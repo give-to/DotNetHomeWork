@@ -8,7 +8,7 @@ namespace homework8
 {
     public class OrderDetails
     {
-        public string GoodName { get; set; }
+        public string GoodName { get; set; }        
         public double CostPerGood { get; set; }
         private int numOfGood;
         public int NumOfGood
@@ -21,14 +21,15 @@ namespace homework8
             }
         }
         public double CostSum { get { return CostPerGood * NumOfGood; } }
-
+        public OrderDetails()
+        {
+        }
         public OrderDetails(string name, double price, int num)
         {
             GoodName = name;
             CostPerGood = price;
             NumOfGood = num;
         }
-
         public override string ToString()
         {
             StringBuilder str = new StringBuilder();
@@ -36,7 +37,5 @@ namespace homework8
             return str.ToString();
 
         }
-
-
     }
 }

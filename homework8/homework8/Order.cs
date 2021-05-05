@@ -15,7 +15,7 @@ namespace homework8
         public DateTime PayTime { get; }
         public string SenderAddress { get; set; }
         public string ReceiverAddress { get; set; }
-        public int ID { get; }
+        public int ID { get; set; }
         public List<OrderDetails> Goods = new List<OrderDetails>();
         public double CostSum
         {
@@ -29,7 +29,12 @@ namespace homework8
                 return costSum;
             }
         }
-        public Order() { }
+        public Order()
+        {
+            count++;
+            ID = count;
+            PayTime = DateTime.Now;
+        }
         public Order(string sender, string receiver, string senderAddress, string receiveAddress)
         {
             count++;
@@ -46,6 +51,10 @@ namespace homework8
             OrderDetails orderDetailsTemp;
             orderDetailsTemp = new OrderDetails(name, price, num);
             Goods.Add(orderDetailsTemp);
+        }
+        public void AddOneDetail(OrderDetails orderDetails)
+        {            
+            Goods.Add(orderDetails);
         }
 
 

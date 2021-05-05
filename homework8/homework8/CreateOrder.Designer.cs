@@ -40,6 +40,7 @@ namespace homework8
             this.txtReceiver = new System.Windows.Forms.TextBox();
             this.txtSenderAddress = new System.Windows.Forms.TextBox();
             this.txtReceiverAddress = new System.Windows.Forms.TextBox();
+            this.btnAddOneDetail = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
             this.orderDataGridView = new System.Windows.Forms.DataGridView();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
@@ -68,6 +69,7 @@ namespace homework8
             this.tableLayoutPanel1.Controls.Add(this.txtReceiver, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.txtSenderAddress, 1, 2);
             this.tableLayoutPanel1.Controls.Add(this.txtReceiverAddress, 1, 3);
+            this.tableLayoutPanel1.Controls.Add(this.btnAddOneDetail, 1, 4);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -162,6 +164,17 @@ namespace homework8
             this.txtReceiverAddress.Size = new System.Drawing.Size(100, 25);
             this.txtReceiverAddress.TabIndex = 8;
             // 
+            // btnAddOneDetail
+            // 
+            this.btnAddOneDetail.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btnAddOneDetail.Location = new System.Drawing.Point(123, 123);
+            this.btnAddOneDetail.Name = "btnAddOneDetail";
+            this.btnAddOneDetail.Size = new System.Drawing.Size(121, 25);
+            this.btnAddOneDetail.TabIndex = 9;
+            this.btnAddOneDetail.Text = "添加一条明细";
+            this.btnAddOneDetail.UseVisualStyleBackColor = true;
+            this.btnAddOneDetail.Click += new System.EventHandler(this.btnAddOneDetail_Click);
+            // 
             // btnAdd
             // 
             this.btnAdd.Anchor = System.Windows.Forms.AnchorStyles.Right;
@@ -177,6 +190,8 @@ namespace homework8
             // orderDataGridView
             // 
             this.orderDataGridView.AllowDrop = true;
+            this.orderDataGridView.AllowUserToAddRows = false;
+            this.orderDataGridView.AllowUserToDeleteRows = false;
             this.orderDataGridView.AutoGenerateColumns = false;
             this.orderDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.orderDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -208,36 +223,36 @@ namespace homework8
             // 
             // goodNameDataGridViewTextBoxColumn
             // 
+            this.goodNameDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.goodNameDataGridViewTextBoxColumn.DataPropertyName = "GoodName";
             this.goodNameDataGridViewTextBoxColumn.HeaderText = "商品名称";
             this.goodNameDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.goodNameDataGridViewTextBoxColumn.Name = "goodNameDataGridViewTextBoxColumn";
-            this.goodNameDataGridViewTextBoxColumn.Width = 125;
             // 
             // costPerGoodDataGridViewTextBoxColumn
             // 
+            this.costPerGoodDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.costPerGoodDataGridViewTextBoxColumn.DataPropertyName = "CostPerGood";
             this.costPerGoodDataGridViewTextBoxColumn.HeaderText = "商品单价";
             this.costPerGoodDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.costPerGoodDataGridViewTextBoxColumn.Name = "costPerGoodDataGridViewTextBoxColumn";
-            this.costPerGoodDataGridViewTextBoxColumn.Width = 125;
             // 
             // numOfGoodDataGridViewTextBoxColumn
             // 
+            this.numOfGoodDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.numOfGoodDataGridViewTextBoxColumn.DataPropertyName = "NumOfGood";
             this.numOfGoodDataGridViewTextBoxColumn.HeaderText = "商品数量";
             this.numOfGoodDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.numOfGoodDataGridViewTextBoxColumn.Name = "numOfGoodDataGridViewTextBoxColumn";
-            this.numOfGoodDataGridViewTextBoxColumn.Width = 125;
             // 
             // costSumDataGridViewTextBoxColumn
             // 
+            this.costSumDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.costSumDataGridViewTextBoxColumn.DataPropertyName = "CostSum";
             this.costSumDataGridViewTextBoxColumn.HeaderText = "总价";
             this.costSumDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.costSumDataGridViewTextBoxColumn.Name = "costSumDataGridViewTextBoxColumn";
             this.costSumDataGridViewTextBoxColumn.ReadOnly = true;
-            this.costSumDataGridViewTextBoxColumn.Width = 125;
             // 
             // orderDetailDataSource
             // 
@@ -280,6 +295,7 @@ namespace homework8
         private System.Windows.Forms.DataGridView orderDataGridView;
         private System.Windows.Forms.BindingSource orderDetailDataSource;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
+        private System.Windows.Forms.Button btnAddOneDetail;
         private System.Windows.Forms.DataGridViewTextBoxColumn goodNameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn costPerGoodDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn numOfGoodDataGridViewTextBoxColumn;

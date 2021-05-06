@@ -46,7 +46,7 @@ namespace HomeWork5
             ID = count;         
         }
         public void AddOneDetail(OrderDetails orderDetails)
-        {
+        {            
             Goods.Add(orderDetails);
         }
         public void AddOneDetail(string name, double price, int num)

@@ -10,7 +10,7 @@ namespace HomeWork5
 {
     public class OrderService
     {
-        private List<Order> orders = new List<Order>();
+        public List<Order> orders = new List<Order>();
         public void AddOneOrder(Order order)
         {
             orders.Add(order);
@@ -64,7 +64,7 @@ namespace HomeWork5
                 o => o.Sender==sender);
             return query.ToList();
         }        
-        public void Sort()
+        public List<Order> Sort()
         {
             for(int i=0;i<orders.Count-1;i++)
             {
@@ -78,6 +78,7 @@ namespace HomeWork5
                     }
                 }
             }
+            return orders;
         }
         public void Export()
         {

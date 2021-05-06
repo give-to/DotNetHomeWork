@@ -1,0 +1,616 @@
+﻿
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Mozilla Foundation - Homepage</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta property='og:type' content='website'>
+<meta property='og:locale' content='en_US'>
+<meta property='wagtail:language' content='en'>
+<link rel="alternate" type="application/rss+xml" href="/en/blog/rss/" />
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Mozilla Foundation">
+<meta name="twitter:description" content="Mozilla is a global nonprofit dedicated to keeping the Internet a global public resource that is open and accessible to all.">
+<meta name="twitter:image" content="https://assets.mofoprod.net/network/images/mozilla-og-image-min.original.jpg">
+<meta property="og:url" content="https://foundation.mozilla.org/en/" />
+<meta property="og:title" content="Mozilla Foundation" />
+<meta property="og:description" content="Mozilla is a global nonprofit dedicated to keeping the Internet a global public resource that is open and accessible to all." />
+<meta property="og:site_name" content="Mozilla Foundation" />
+<meta property="og:image" content="https://assets.mofoprod.net/network/images/mozilla-og-image-min.original.jpg" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="1200" />
+<meta itemprop='url' content='https://foundation.mozilla.org/en/' />
+<meta itemprop="name" content="Mozilla Foundation">
+<meta itemprop='description' content='Mozilla is a global nonprofit dedicated to keeping the Internet a global public resource that is open and accessible to all.' />
+<meta itemprop='image' content='https://assets.mofoprod.net/network/images/mozilla-og-image-min.original.jpg' />
+<title>Mozilla Foundation</title>
+<meta name="description" content="Mozilla is a global nonprofit dedicated to keeping the Internet a global public resource that is open and accessible to all.">
+<meta name="google-site-verification" content="D7k-r3fHm-XfJ9E7T1uZ5aqHJG2mx-0uUZFeBUDN2lY">
+<meta name="ga-identifier" content="UA-87658599-6">
+<meta name="gtm-identifier" content="GTM-MD3XGZ4">
+<link rel="stylesheet" href="https://assets.mofoprod.net/static/_css/main.compiled.5653a9e22d5a.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,300,700,300i,800,900">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Zilla+Slab:300,400,600,700,300i">
+<link rel="apple-touch-icon" type="image/png" sizes="180x180" href="https://assets.mofoprod.net/static/_images/favicons/apple-touch-icon-180x180@2x.a419247988c1.png">
+<link rel="icon" type="image/png" sizes="196x196" href="https://assets.mofoprod.net/static/_images/favicons/favicon-196x196@2x.0ce47c9bbc65.png">
+<link rel="shortcut icon" href="https://assets.mofoprod.net/static/_images/favicons/favicon.d4f1f46b91f4.ico">
+<link rel="canonical" href="https://foundation.mozilla.org/en/">
+<link rel="alternate" hreflang="x-default" href="https://foundation.mozilla.org/">
+<link rel="alternate" hreflang="en" href="https://foundation.mozilla.org/en/" title="English">
+<link rel="alternate" hreflang="de" href="https://foundation.mozilla.org/de/" title="Deutsch">
+<link rel="alternate" hreflang="pt" href="https://foundation.mozilla.org/pt/" title="Português">
+<link rel="alternate" hreflang="pt-PT" href="https://foundation.mozilla.org/pt/" title="Português">
+<link rel="alternate" hreflang="pt-BR" href="https://foundation.mozilla.org/pt/" title="Português">
+<link rel="alternate" hreflang="es" href="https://foundation.mozilla.org/es/" title="español">
+<link rel="alternate" hreflang="es-AR" href="https://foundation.mozilla.org/es/" title="español">
+<link rel="alternate" hreflang="es-CL" href="https://foundation.mozilla.org/es/" title="español">
+<link rel="alternate" hreflang="es-ES" href="https://foundation.mozilla.org/es/" title="español">
+<link rel="alternate" hreflang="es-MX" href="https://foundation.mozilla.org/es/" title="español">
+<link rel="alternate" hreflang="fr" href="https://foundation.mozilla.org/fr/" title="français">
+<link rel="alternate" hreflang="fy" href="https://foundation.mozilla.org/fy-NL/" title="frysk">
+<link rel="alternate" hreflang="fy-NL" href="https://foundation.mozilla.org/fy-NL/" title="frysk">
+<link rel="alternate" hreflang="nl" href="https://foundation.mozilla.org/nl/" title="Nederlands">
+<link rel="alternate" hreflang="pl" href="https://foundation.mozilla.org/pl/" title="polski">
+<script type="application/ld+json">
+    {
+      "@context" : "http://schema.org",
+      "@type" : "Organization",
+      "legalName" : "Mozilla Foundation",
+      "url" : "https://foundation.mozilla.org",
+      "logo" : "https://foundation.mozilla.org/_images/mozlogo.jpg"
+    }
+  </script>
+</head>
+<body class="" id="view-home">
+<div class="wrapper">
+<div class="sticky-top d-print-none">
+<div class="primary-nav-container">
+<div class="wrapper-burger">
+<div class="menu-container">
+<div class="narrow-screen-menu hidden d-lg-none">
+<div class="narrow-screen-menu-background dark-theme">
+<div class="narrow-screen-menu-container">
+<div class="container" role="navigation">
+<div class="row">
+<div class="col">
+<div class="nav-links pt-3">
+<div><a class="active" href="https://foundation.mozilla.org/en/">Home</a></div>
+<div><a class="" href="https://foundation.mozilla.org/en/who-we-are/">Who we are</a></div>
+<div><a class="" href="https://foundation.mozilla.org/en/what-we-do/">What we do</a></div>
+<div><a class="" href="https://foundation.mozilla.org/en/what-we-fund/">What we fund</a></div>
+<div><a class="" href="https://foundation.mozilla.org/en/what-you-can-do/">What you can do</a></div>
+<div><a class="" href="https://foundation.mozilla.org/en/blog/">Blog</a></div>
+<div class="mt-2"><button class="btn btn-secondary btn-newsletter">Newsletter</button></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<nav class="container wide-screen-menu-container" title="main site navigation">
+<div class="row">
+<div class="col">
+<div class="d-flex flex-row justify-content-between">
+<div id="primary-nav-links">
+<div class="d-flex align-items-center flex-wrap">
+<button class="burger  d-lg-none ml-md-0 " aria-label="Open menu">
+<div class="burger-bar burger-bar-top"></div>
+<div class="burger-bar burger-bar-middle"></div>
+<div class="burger-bar burger-bar-bottom"></div>
+</button>
+<a class="logo text-hide" href="/" aria-label="Mozilla Foundation Homepage">Mozilla Foundation</a>
+<div class="wide-screen-menu">
+<div class="nav-links d-none d-lg-block">
+<a class="" href="https://foundation.mozilla.org/en/who-we-are/">Who we are</a>
+<a class="" href="https://foundation.mozilla.org/en/what-we-do/">What we do</a>
+<a class="" href="https://foundation.mozilla.org/en/what-we-fund/">What we fund</a>
+<a class="" href="https://foundation.mozilla.org/en/what-you-can-do/">What you can do</a>
+<a class="" href="https://foundation.mozilla.org/en/blog/">Blog</a>
+</div>
+</div>
+</div>
+</div>
+<div class="d-flex align-items-center">
+<a id="donate-header-btn" class="primary-nav-special-link heart-glyph" href="https://donate.mozilla.org/" target="_blank" rel="noopener noreferrer">Donate</a>
+<button class="btn btn-secondary btn-newsletter d-none d-lg-block ml-md-3">Newsletter</button>
+</div>
+</div>
+</div>
+</div>
+</nav>
+</div>
+</div>
+</div>
+<div id="nav-newsletter-form-wrapper" class="d-none">
+<div class="container dark-theme">
+<div class="row">
+<div class="col-12">
+<div class="join-us pt-5 on-nav" data-layout="2-column" data-form-position="header" data-button-position="side"></div>
+<div class="text-center mt-3 d-lg-none">
+<button class="btn form-dismiss">No thanks</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<header role="banner">
+<div id="hero">
+<div class="banner bg-black">
+<picture>
+<source media="(min-width: 1200px)" srcset="https://assets.mofoprod.net/network/images/news-byte-artwork-v2.2e16d0ba.fill-4032x480.jpg">
+<source media="(min-width: 992px)" srcset="https://assets.mofoprod.net/network/images/news-byte-artwork-v2.2e16d0ba.fill-2400x480.jpg">
+<source media="(min-width: 768px)" srcset="https://assets.mofoprod.net/network/images/news-byte-artwork-v2.2e16d0ba.fill-1984x480.jpg">
+<source media="(min-width: 576px)" srcset="https://assets.mofoprod.net/network/images/news-byte-artwork-v2.2e16d0ba.fill-1536x390.jpg">
+<img src="https://assets.mofoprod.net/network/images/news-byte-artwork-v2.2e16d0ba.fill-1536x390.jpg" alt="">
+</picture>
+<div class="container dark-theme banner-content">
+<div class="row">
+<div class="col-12 col-md-9 col-xl-6 mt-3 d-flex flex-column justify-content-end">
+<h1 class="h1-heading">Wrapping Up MozFest 2021</h1>
+<div>
+<a href="https://foundation.mozilla.org/blog/mozilla-news-byte-march-19-2021/#mozfest-2021" class="btn btn-secondary text-wrap" id="homepage-hero-cta">Check It Out</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</header>
+<main role="main">
+<div class="container">
+<div class="row mb-4">
+<div class="col">
+<div class="section-cause-statement dark-theme p-5 text-center">
+<p class="h4-heading">The Mozilla Foundation works to ensure the internet remains a public resource that is open and accessible to us all.</p>
+<a href="https://foundation.mozilla.org/en/what-we-do/" class="cta-link" id="homepage-cause-statement-cta">Learn more about our work</a>
+</div>
+</div>
+</div>
+<div class="row areas-of-focus">
+<div class="col my-3 my-sm-5">
+<h2 class="focus-heading text-center mb-4">Our areas of focus</h2>
+<div class="row">
+<div class="col-12 col-lg-4 mb-3 mb-lg-0 d-block d-sm-flex flex-sm-row flex-lg-column">
+<img alt="01_empower-action-icon.jpg" class="icon flex-shrink-0 mb-3 mb-sm-0 mb-lg-3 mr-sm-5 align-self-start" height="100" src="https://assets.mofoprod.net/network/images/01_empower-action-icon.width-100.jpg" width="100">
+<div class="focus-content">
+<h2 class="h4-heading">Rally Citizens</h2>
+<p>Issues like privacy, trustworthy AI, and digital rights impact all of us who use the internet. Mozilla helps translate them and empower meaningful change.</p>
+</div>
+</div>
+<div class="col-12 col-lg-4 mb-3 mb-lg-0 d-block d-sm-flex flex-sm-row flex-lg-column">
+<img alt="02_connect-leaders.jpg" class="icon flex-shrink-0 mb-3 mb-sm-0 mb-lg-3 mr-sm-5 align-self-start" height="100" src="https://assets.mofoprod.net/network/images/02_connect-leaders.width-100.jpg" width="100">
+<div class="focus-content">
+<h2 class="h4-heading">Connect Leaders</h2>
+<p>We support activists and thought leaders shaping the future of our online lives.</p>
+</div>
+</div>
+<div class="col-12 col-lg-4 mb-3 mb-lg-0 d-block d-sm-flex flex-sm-row flex-lg-column">
+<img alt="03_investigate-research.jpg" class="icon flex-shrink-0 mb-3 mb-sm-0 mb-lg-3 mr-sm-5 align-self-start" height="100" src="https://assets.mofoprod.net/network/images/03_investigate-research.width-100.jpg" width="100">
+<div class="focus-content">
+<h2 class="h4-heading">Shape the Agenda</h2>
+<p>We publish open-source research and host global convenings to make ideas like trustworthy AI mainstream.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-gray">
+<div class="container">
+<div class="row section-news-you-can-use section-padding">
+<div class="col-12 d-flex flex-row justify-content-between">
+<h2 class="h4-heading mb-4">News you can use</h2>
+<a href="/blog" class="cta-link d-none d-md-inline-block" id="news-you-can-use-cta">Read more news</a>
+</div>
+<div class="col-12">
+<div class="row d-flex flex-row mb-4">
+<div class="d-none d-xl-block col-xl-12 feature mb-md-5">
+<div class="position-relative h-100 d-flex justify-content-end">
+<div class="feature-image">
+<img alt="Press Blog Header.png" height="500" src="https://assets.mofoprod.net/network/images/Press_Blog_Header_pSFxvy9.2e16d0ba.fill-1000x500.png" width="1000">
+</div>
+<div class="feature-content align-self-center">
+<div class="h6-heading d-md-block d-none mb-2">&nbsp;</div>
+<h3 class="mb-2 pb-1"><a href="https://foundation.mozilla.org/en/blog/with-net-neutrality-back-on-national-agenda-mozilla-survey-finds-americans-do-not-trust-isps-to-look-out-for-their-best-interests/">With Net Neutrality Back On National Agenda, Mozilla Survey Finds Americans Do Not Trust ISPs To Look Out For Their Best Interests</a></h3>
+<p class="d-none d-xl-block">With a real possibility that the US could restore net neutrality rules at the federal level under the Biden administration, Mozilla is launching a two-pron…</p>
+<div class="blog-authors d-flex flex-wrap align-items-center">
+<div class="author-images d-flex flex-wrap">
+<div class="author-image d-flex align-items-center justify-content-center " aria-label="Kaili Lambe">
+<img src="https://assets.mofoprod.net/network/images/kaili_lambe.2e16d0ba.fill-100x100.jpg" alt="Kaili Lambe" title="Kaili Lambe" />
+</div>
+</div>
+<p class="body-small my-2">
+<span><b>Kaili Lambe</b></span>
+</p>
+</div>
+</div>
+</div>
+</div>
+<div class="col-12 col-md-6 col-xl-4 d-flex  d-xl-none mb-5 mb-xl-0  ">
+<div class="bg-white">
+<img alt="Press Blog Header.png" class="embed-responsive-item" height="394" src="https://assets.mofoprod.net/network/images/Press_Blog_Header_pSFxvy9.2e16d0ba.fill-700x394.png" width="700">
+<div class="p-4">
+<div class="h6-heading d-md-block d-none mb-1">&nbsp;</div>
+<h3 class="h4-heading"><a href="https://foundation.mozilla.org/en/blog/with-net-neutrality-back-on-national-agenda-mozilla-survey-finds-americans-do-not-trust-isps-to-look-out-for-their-best-interests/">With Net Neutrality Back On National Agenda, Mozilla Survey Finds Americans Do Not Trust ISPs To Look Out For Their Best Interests</a></h3>
+<div class="blog-authors d-flex flex-wrap align-items-center">
+<div class="author-images d-flex flex-wrap">
+<div class="author-image d-flex align-items-center justify-content-center " aria-label="Kaili Lambe">
+<img src="https://assets.mofoprod.net/network/images/kaili_lambe.2e16d0ba.fill-100x100.jpg" alt="Kaili Lambe" title="Kaili Lambe" />
+</div>
+</div>
+<p class="body-small my-2">
+<span><b>Kaili Lambe</b></span>
+</p>
+</div>
+</div>
+</div>
+</div>
+<div class="col-12 col-md-6 col-xl-4 d-flex   mb-5 mb-xl-0 ">
+<div class="bg-white">
+<img alt="Illustration for blogpost sounds.jpg" class="embed-responsive-item" height="394" src="https://assets.mofoprod.net/network/images/Illustration_for_blogpost_sounds.2e16d0ba.fill-700x394.jpg" width="700">
+<div class="p-4">
+<a class="h6-heading d-block mb-1" href="/blog/category/insights">Insights</a>
+<h3 class="h4-heading"><a href="https://foundation.mozilla.org/en/blog/tune-into-the-sounds-of-the-internet-health-report/">Tune into the Sounds of the Internet Health Report</a></h3>
+<div class="blog-authors d-flex flex-wrap align-items-center">
+<div class="author-images d-flex flex-wrap">
+<div class="author-image d-flex align-items-center justify-content-center " aria-label="Laura Vidal">
+<img src="https://assets.mofoprod.net/network/images/T027LFU12-U01ART5NQEM-77a16e1e1abc.2e16d0ba.fill-100x100.jpg" alt="Laura Vidal" title="Laura Vidal" />
+</div>
+</div>
+<p class="body-small my-2">
+<span><b>Laura Vidal</b></span>
+</p>
+</div>
+</div>
+</div>
+</div>
+<div class="col-12 col-md-6 col-xl-4 d-flex    mb-5 mb-md-0">
+<div class="bg-white">
+<img alt="News-Byte-Blog-Header@2x.png" class="embed-responsive-item" height="394" src="https://assets.mofoprod.net/network/images/News-Byte-Blog-Header2x.2e16d0ba.fill-700x394.png" width="700">
+<div class="p-4">
+<a class="h6-heading d-block mb-1" href="/blog/category/moz-news-beat">Moz News Beat</a>
+<h3 class="h4-heading"><a href="https://foundation.mozilla.org/en/blog/mozilla-news-byte-april-30-2021/">Mozilla News Byte, April 30, 2021</a></h3>
+<div class="blog-authors d-flex flex-wrap align-items-center">
+<div class="author-images d-flex flex-wrap">
+<div class="author-image d-flex align-items-center justify-content-center " aria-label="Mozilla">
+<img src="https://assets.mofoprod.net/network/images/mozilla.2e16d0ba.fill-100x100.jpg" alt="Mozilla" title="Mozilla" />
+</div>
+</div>
+<p class="body-small my-2">
+<span><b>Mozilla</b></span>
+</p>
+</div>
+</div>
+</div>
+</div>
+<div class="col-12 col-md-6 col-xl-4 d-flex   ">
+<div class="bg-white">
+<img alt="Future is Intersectional at MozFest.png" class="embed-responsive-item" height="394" src="https://assets.mofoprod.net/network/images/Future_is_Intersection_MozFest.2e16d0ba.fill-700x394.png" width="700">
+<div class="p-4">
+<a class="h6-heading d-block mb-1" href="/blog/category/mozilla-festival">Mozilla Festival</a>
+<h3 class="h4-heading"><a href="https://foundation.mozilla.org/en/blog/the-future-is-intersectional-black-women-interrogating-technology-series-at-mozfest-2021/">The Future is Intersectional: Black Women Interrogating Technology Series at MozFest 2021</a></h3>
+<div class="blog-authors d-flex flex-wrap align-items-center">
+<div class="author-images d-flex flex-wrap">
+<div class="author-image d-flex align-items-center justify-content-center " aria-label="Temi Popo">
+<img src="https://assets.mofoprod.net/network/images/Eyitemi_Popo.2e16d0ba.fill-100x100.jpg" alt="Temi Popo" title="Temi Popo" />
+</div>
+</div>
+<p class="body-small my-2">
+<span><b>Temi Popo</b></span>
+</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<a href="/blog" class="cta-link d-block d-md-none text-right">Read more news</a>
+</div>
+</div>
+</div>
+</div>
+<div class="container">
+<div class="row section-spotlight section-padding">
+<div class="col-12">
+<h2 class="capsule-label mb-0 ml-md-4">Spotlight</h2>
+</div>
+<div class="col-12 col-lg-6 mb-md-4 mb-lg-0 dark-theme">
+<div class="spotlight-banner d-flex align-items-end full-bleed-xs p-3 p-md-4" style="background-image: linear-gradient(180deg, rgba(238,238,238,0) 14%, #000000 100%), url(https://assets.mofoprod.net/network/images/social-share-OG2x_VVmVdga.width-540.jpg);">
+<h3 class="h2-heading spotlight-headline mb-0">Election Integrity &amp; Platform Accountability</h3>
+</div>
+</div>
+<div class="col-12 col-lg-6">
+<div class="spotlight-post">
+<h4 class="mb-2 h5-heading">
+<a href="https://foundation.mozilla.org/en/blog/misinformation-in-the-2020-us-elections-a-timeline-of-platform-changes/">Misinformation in the 2020 US Elections: A Timeline of Platform Changes (1 of 3)</a>
+</h4>
+<div class="blog-authors d-flex flex-wrap align-items-center">
+<div class="author-images d-flex flex-wrap">
+<div class="author-image d-flex align-items-center justify-content-center " aria-label="Jon Lloyd">
+<img src="https://assets.mofoprod.net/network/images/jon-lloyd.2e16d0ba.fill-100x100.jpg" alt="Jon Lloyd" title="Jon Lloyd" />
+</div>
+<div class="author-image d-flex align-items-center justify-content-center " aria-label="Kaili Lambe">
+<img src="https://assets.mofoprod.net/network/images/kaili_lambe.2e16d0ba.fill-100x100.jpg" alt="Kaili Lambe" title="Kaili Lambe" />
+</div>
+<div class="author-image d-flex align-items-center justify-content-center " aria-label="Alan Davidson">
+<img src="https://assets.mofoprod.net/network/images/alan-davidson.2e16d0ba.fill-100x100.jpg" alt="Alan Davidson" title="Alan Davidson" />
+</div>
+<div class="author-image d-flex align-items-center justify-content-center " aria-label="Christine Jakobson">
+<img src="https://assets.mofoprod.net/network/images/christine-jakobson.2e16d0ba.fill-100x100.jpg" alt="Christine Jakobson" title="Christine Jakobson" />
+</div>
+</div>
+<p class="body-small my-2">
+<span><b>Jon Lloyd, </b></span><span><b>Kaili Lambe, </b></span><span><b>Alan Davidson </b></span><span>and <b>Christine Jakobson</b></span>
+</p>
+</div>
+</div>
+<div class="spotlight-post">
+<h4 class="mb-2 h5-heading">
+<a href="https://foundation.mozilla.org/en/blog/transparency-of-policy-enforcement/">Transparency of Policy Enforcement (2 of 3)</a>
+</h4>
+<div class="blog-authors d-flex flex-wrap align-items-center">
+<div class="author-images d-flex flex-wrap">
+<div class="author-image d-flex align-items-center justify-content-center " aria-label="Kaili Lambe">
+<img src="https://assets.mofoprod.net/network/images/kaili_lambe.2e16d0ba.fill-100x100.jpg" alt="Kaili Lambe" title="Kaili Lambe" />
+</div>
+<div class="author-image d-flex align-items-center justify-content-center " aria-label="Jon Lloyd">
+<img src="https://assets.mofoprod.net/network/images/jon-lloyd.2e16d0ba.fill-100x100.jpg" alt="Jon Lloyd" title="Jon Lloyd" />
+</div>
+<div class="author-image d-flex align-items-center justify-content-center " aria-label="Alan Davidson">
+<img src="https://assets.mofoprod.net/network/images/alan-davidson.2e16d0ba.fill-100x100.jpg" alt="Alan Davidson" title="Alan Davidson" />
+</div>
+<div class="author-image d-flex align-items-center justify-content-center " aria-label="Christine Jakobson">
+<img src="https://assets.mofoprod.net/network/images/christine-jakobson.2e16d0ba.fill-100x100.jpg" alt="Christine Jakobson" title="Christine Jakobson" />
+</div>
+</div>
+<p class="body-small my-2">
+<span><b>Kaili Lambe, </b></span><span><b>Jon Lloyd, </b></span><span><b>Alan Davidson </b></span><span>and <b>Christine Jakobson</b></span>
+</p>
+</div>
+</div>
+<div class="spotlight-post">
+<h4 class="mb-2 h5-heading">
+<a href="https://foundation.mozilla.org/en/blog/election-misinformation-recommendations-for-the-road-ahead/">Election Misinformation: Recommendations for the Road Ahead (3 of 3)</a>
+</h4>
+<div class="blog-authors d-flex flex-wrap align-items-center">
+<div class="author-images d-flex flex-wrap">
+<div class="author-image d-flex align-items-center justify-content-center " aria-label="Jon Lloyd">
+<img src="https://assets.mofoprod.net/network/images/jon-lloyd.2e16d0ba.fill-100x100.jpg" alt="Jon Lloyd" title="Jon Lloyd" />
+</div>
+<div class="author-image d-flex align-items-center justify-content-center " aria-label="Kaili Lambe">
+<img src="https://assets.mofoprod.net/network/images/kaili_lambe.2e16d0ba.fill-100x100.jpg" alt="Kaili Lambe" title="Kaili Lambe" />
+</div>
+<div class="author-image d-flex align-items-center justify-content-center " aria-label="Alan Davidson">
+<img src="https://assets.mofoprod.net/network/images/alan-davidson.2e16d0ba.fill-100x100.jpg" alt="Alan Davidson" title="Alan Davidson" />
+</div>
+<div class="author-image d-flex align-items-center justify-content-center " aria-label="Christine Jakobson">
+<img src="https://assets.mofoprod.net/network/images/christine-jakobson.2e16d0ba.fill-100x100.jpg" alt="Christine Jakobson" title="Christine Jakobson" />
+</div>
+</div>
+<p class="body-small my-2">
+<span><b>Jon Lloyd, </b></span><span><b>Kaili Lambe, </b></span><span><b>Alan Davidson </b></span><span>and <b>Christine Jakobson</b></span>
+</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-gray">
+<div class="container">
+<div class="section-take-action section-padding">
+<div class="row">
+<div class="col-12">
+<h2 class="take-action-title mb-4">Take action</h2>
+</div>
+<div class="col-lg-8 col-md-12">
+<div class="row">
+<div class="col-md-6 d-flex">
+<div class="card flex-grow-1 mb-4">
+<a href="https://foundation.mozilla.org/en/blog/volunteer-mozfest-2021/">
+<img src="https://assets.mofoprod.net/network/images/45650700811_3a4b886db7_b.2e16d0ba.fill-350x130.jpg" class="card-img-top" alt="mozfest-volunteers-2019.jpg" aria-label="Volunteer at MozFest 2021">
+</a>
+<div class="card-body">
+<a href="https://foundation.mozilla.org/en/blog/volunteer-mozfest-2021/" class="h5-heading d-inline-block my-2">
+Volunteer at MozFest 2021
+</a>
+</div>
+</div>
+</div>
+<div class="col-md-6 d-flex">
+<div class="card flex-grow-1 mb-4">
+<a href="https://foundation.mozilla.org/en/blog/lets-unfck-internet/">
+<img src="https://assets.mofoprod.net/network/images/blog-post-unfck-the-internet2x.2e16d0ba.fill-350x130.jpg" class="card-img-top" alt="blog-post-unfck-the-internet@2x.jpg" aria-label="Let’s Unfck The Internet">
+</a>
+<div class="card-body">
+<a href="https://foundation.mozilla.org/en/blog/lets-unfck-internet/" class="h5-heading d-inline-block my-2">
+Let’s Unfck The Internet
+</a>
+</div>
+</div>
+</div>
+<div class="col-md-6 d-flex">
+<div class="card flex-grow-1 mb-4">
+<a href="https://foundation.mozilla.org/en/blog/supporting-black-artists-who-are-examining-ai/">
+<img src="https://assets.mofoprod.net/network/images/supporting-black-artists-ai-action.2e16d0ba.fill-350x130.jpg" class="card-img-top" alt="supporting-black-artists-ai-action.jpg" aria-label="Supporting Black Artists Examining AI">
+</a>
+<div class="card-body">
+<a href="https://foundation.mozilla.org/en/blog/supporting-black-artists-who-are-examining-ai/" class="h5-heading d-inline-block my-2">
+Supporting Black Artists Examining AI
+</a>
+</div>
+</div>
+</div>
+<div class="col-md-6 d-flex">
+<div class="card flex-grow-1 mb-4">
+<a href="https://foundation.mozilla.org/en/campaigns/dearinternet/">
+<img src="https://assets.mofoprod.net/network/images/Mozilla-Foundation_DearInternet_Ba.2e16d0ba.fill-350x130.jpg" class="card-img-top" alt="Mozilla-Foundation_DearInternet_Banner-2@2x.jpg" aria-label="How’s the internet helped you this year? Tell us!">
+</a>
+<div class="card-body">
+<a href="https://foundation.mozilla.org/en/campaigns/dearinternet/" class="h5-heading d-inline-block my-2">
+How’s the internet helped you this year? Tell us!
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-lg-4 mb-md-4 mt-md-4 mt-lg-0 d-flex align-items-stretch">
+<div class="bg-black p-4 dark-theme">
+<div class="join-us" data-form-position="body" data-cta-header="Protect the internet as a global public resource" data-cta-description="<p class='mb-3'>Join our <b>Mozilla News</b> email list to take action and stay updated!</p>" data-newsletter="">
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="container">
+<div class="row section-quote section-padding">
+<div class="col-md-4 col-lg-6 mb-5 mb-md-0">
+<picture class="cms-image ">
+<source media="(min-width: 992px)" srcset="https://assets.mofoprod.net/network/images/quote-image.width-540.jpg, https://assets.mofoprod.net/network/images/quote-image.width-1080.jpg 2x" alt="">
+<source media="(min-width: 768px)" srcset="https://assets.mofoprod.net/network/images/quote-image.width-210.jpg, https://assets.mofoprod.net/network/images/quote-image.width-420.jpg 2x" alt="">
+<source srcset="https://assets.mofoprod.net/network/images/quote-image.width-510.jpg, https://assets.mofoprod.net/network/images/quote-image.width-1020.jpg 2x" alt="">
+<img src="https://assets.mofoprod.net/network/images/quote-image.width-540.jpg" class="wagtail-image w-100" srcset="https://assets.mofoprod.net/network/images/quote-image.width-510.jpg 510w, https://assets.mofoprod.net/network/images/quote-image.width-210.jpg 210w, https://assets.mofoprod.net/network/images/quote-image.width-540.jpg 540w" alt="" />
+</picture>
+</div>
+<div class="col-md-8 col-lg-6">
+<blockquote>
+<p class="quote-text">Of all the groups we work with regularly, very few have had the impact that our collaborations with Mozilla have had over the years…it’s absolutely a match made in heaven.</p>
+<footer>
+<cite>Jenny Toomey</cite>
+<p>Ford Foundation</p>
+</footer>
+</blockquote>
+</div>
+</div>
+</div>
+<div class="bg-secondary partner-section dark-theme" style='background-image: url("https://assets.mofoprod.net/network/images/partner-with-us.2e16d0ba.fill-1200x600.jpg");'>
+<div class="container">
+<div class="row">
+<div class="col-12">
+<h2 class="h3-heading">Partner with us</h2>
+<p class="partner-section-text">
+Help fund, shape, and expand Mozilla work toward a healthy internet and trustworthy AI.
+</p>
+<a href="https://foundation.mozilla.org/en/what-we-fund/fellowships-and-awards-partners/" class="text-white cta-link font-weight-bold" id="partner-cta">
+Let’s work together
+</a>
+</div>
+<div class="partner-section-logos d-sm-flex flex-wrap d-none container">
+<div class="partner-section-logo ">
+<img src="https://assets.mofoprod.net/network/images/logo-ford-foundation.width-340.png" width="170" alt="Ford Foundation logo">
+</div>
+<div class="partner-section-logo ">
+<img src="https://assets.mofoprod.net/network/images/logo-omidyar_urjZbce.width-340.png" width="170" alt="Omidyar Network logo">
+</div>
+<div class="partner-section-logo ">
+<img src="https://assets.mofoprod.net/network/images/logo-color-of-change.width-230.png" width="115" alt="Color of Change logo">
+</div>
+<div class="partner-section-logo ">
+<img src="https://assets.mofoprod.net/network/images/logo-consumer-international.width-340.png" width="170" alt="Consumers International logo">
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<footer role="contentinfo">
+<div class="donate-banner dark-theme d-print-none py-5">
+<div class="container">
+<div class="row">
+<div class="col-12">
+<p class="h3-heading mb-0">We all love the Web. Join Mozilla in defending it.</p>
+<p class="h3-heading mb-4">Let’s protect the world’s largest resource for future generations.</p>
+<div>
+<a href="https://donate.mozilla.org/" target="_blank" rel="noopener noreferrer" class="btn btn-secondary dark-theme" id="donate-banner-cta">Donate now</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="site-footer dark-theme py-5 d-print-none">
+<div class="container">
+<div class="row">
+<div class="col-md-5 col-lg-6 d-flex flex-column justify-content-between">
+<div class="join-us" data-form-position="footer" data-button-position="side"></div>
+<a class="logo d-block my-5 my-md-0" href="https://foundation.mozilla.org" aria-label="Return to Homepage"><img src="https://assets.mofoprod.net/static/_images/mozilla-block-white.8a5ea59a8186.svg" alt="Mozilla Foundation" width="96"></a>
+</div>
+<div class="col-md-6 col-lg-5 offset-md-1 d-flex flex-column justify-content-between">
+<div class="row">
+<div class="col-lg-6 col-xl-5">
+<p class="h5-heading">More about us</p>
+<ul class="d-flex list-unstyled">
+<li class="mr-2"><a class="twitter-glyph small d-inline-block" href="https://twitter.com/mozilla"><span class="sr-only">Twitter</span></a></li>
+<li class="mr-2"><a class="instagram-glyph small d-inline-block" href="https://www.instagram.com/mozilla/"><span class="sr-only">Instagram</span></a></li>
+<li class="mr-2"><a class="github-glyph small d-inline-block" href="https://www.github.com/mozilla/foundation.mozilla.org/"><span class="sr-only">GitHub</span></a></li>
+</ul>
+</div>
+<div class="col-lg-6 col-xl-7">
+<ul class="link-list list-unstyled mb-0">
+<li><a id="donate-footer-btn" href="https://donate.mozilla.org/" target="_blank" rel="noopener noreferrer" class="dark-theme">Donate</a></li>
+
+<li><a href="https://careers.mozilla.org/listings/?team=Mozilla%20Foundation" class="dark-theme">Careers</a></li>
+<li><a href="https://www.mozilla.org/privacy/websites/#cookies" class="dark-theme">Cookies</a></li>
+<li><a href="https://www.mozilla.org/about/legal/terms/mozilla/" class="dark-theme">Legal</a></li>
+<li><a href="https://www.mozilla.org/about/governance/policies/participation/" class="dark-theme">Participation Guidelines</a></li>
+<li><a href="https://foundation.mozilla.org/en/press-center/" class="dark-theme">Press Center</a></li>
+<li><a href="https://mozilla.org/privacy/websites/" class="dark-theme">Privacy</a></li>
+</ul>
+</div>
+</div>
+<div class="row mt-5">
+<div class="col-12">
+<form action="/i18n/setlang/" method="post">
+<input name="next" type="hidden" value="/en/">
+<div class="d-flex flex-column flex-md-row align-items-md-center justify-content-center mb-md-0">
+<label class="h5-heading mb-0 d-flex align-items-center globe-glyph medium" for="language-switcher">Language</label>
+<select name="language" id="language-switcher" class="mt-3 mt-md-0 ml-md-3 w-100 form-control" onchange="this.form.submit()">
+<option value="de">
+Deutsch
+</option>
+<option value="en" selected>
+English
+</option>
+<option value="es">
+Español
+</option>
+<option value="fr">
+Français
+</option>
+<option value="fy-NL">
+Frysk
+</option>
+<option value="nl">
+Nederlands
+</option>
+<option value="pl">
+Polski
+</option>
+<option value="pt">
+Português
+</option>
+</select>
+</div>
+</form>
+</div>
+</div>
+<div class="row">
+<div class="col-12">
+<hr class="mt-5 mb-3" />
+<p class="dark-theme body-small mb-0">
+Mozilla is a global non-profit dedicated to putting you in control of your online experience and shaping the future of the web for the public good. Visit us at <a href="https://foundation.mozilla.org">foundation.mozilla.org</a>. Most content available under a <a href="https://foundation.mozilla.org/about/website-licensing/">Creative Commons license</a>.
+</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<script src="https://assets.mofoprod.net/static/_js/main.compiled.eabefe90d300.js"></script>
+</body>
+</html>

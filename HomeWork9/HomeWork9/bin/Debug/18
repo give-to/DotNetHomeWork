@@ -1,0 +1,2948 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>ThunderbirdOSXAdressBookEdititon-开源-其它代码类资源-CSDN下载</title>
+    <meta charset="UTF-8">
+    <meta name="author" content="CSDN"/>
+    <meta name="Copyright" content="CSDN"/>
+    <meta name="title"
+          content="ThunderbirdOSXAdressBookEdititon-开源_-互联网文档类资源-CSDN下载"/>
+    <meta name="description"
+          content="ThunderbirdOSXAdressBookEdititon-开源,MacOSX下的MozillaThunderbird2.0x具有无法使用集成通讯簿的缺点。此版本可以将MacOSX地址簿与LDAP一起使用。此补丁来自MozillaBugzilla。重要说明：阅读发行说明更多下载资源、学习资料请访问CSDN下载频道"/>
+    <meta name="keywords"
+          content="ThunderbirdOSXAdressBookEdititon-开源"/>
+    <meta name="referrer" content="always">
+    <meta name="applicable-device" content="pc">
+    <link rel="canonical" href="https://download.csdn.net/download/weixin_42129005/18407506">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="csdnFooter" content='{"type": "2", "el": ".download-common-footer"}'>
+        <meta name="report" content='{"spm":"1003.2020"}'>
+    <script type="text/javascript" src="https://g.csdnimg.cn/tingyun/1.8.5/download.js"></script>
+    <script>
+        var CFG = {
+            STATIC_URL: "/static_files",                             //静态资源根目录  对应本地服务的dist目录
+            STATIC_GLOBAL_URL: "/static_files",                  //老版静态资源根目录
+            STATIC_GLOBAL_COMBO_URL: "/static_files",      //新版静态资源根目录
+            API_URL: "@@CFG.API_URL",                                    //API地址（默认）
+            PROJECT_URL: "@@CFG.PROJECT_URL",                              //项目地址（默认）
+        };
+    </script>
+    <script src="https://g.csdnimg.cn/??lib/jquery/1.12.4/jquery.min.js,lib/art-template/4.13.0/template-web.js" type="text/javascript"></script>
+    <script src='//g.csdnimg.cn/common/csdn-report/report.js' type='text/javascript'></script>
+    <script src="https://g.csdnimg.cn/login-box/1.1.4/login-box.js"></script>
+    <link rel="stylesheet" href="https://csdnimg.cn/cdn/font-awesome-4.4.0/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="//csdnimg.cn/release/download/static_files/pc/css/common-c2e9c244bc.css"/>
+    <link href="https://g.csdnimg.cn/static/logo/favicon32.ico" rel="shortcut icon" type="image/x-icon"/>
+    <link rel="stylesheet" href="https://g.csdnimg.cn/nav-second/1.0.3/css/nav-second.css"/>
+
+    <!-- google自动广告测试，请帮忙添加代码 AdSense -->
+    <!-- <script data-ad-client="ca-pub-1076724771190722" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script> -->
+
+<script>
+    var _hmt = _hmt || [];
+    _hmt.push(['_setPageviewProperty', {
+        'dl_zeroresource':0,
+        'dl_remove':1,
+        'dl_delistingresource':0,
+        'dl_ebookreplacereso':0,
+        'dl_pdfPreview':0
+    }]);
+</script>
+<style>
+    * { touch-action: pan-y; }
+</style>
+<script>
+    (function () {
+            var el = document.createElement("script");
+            el.src = "https://s3a.pstatp.com/toutiao/push.js?3619105d6542cec7ed09b35e4857bb2b600b0181b36ce1a5b95af92aa299aa09921243249be9fb32069f07420166cb688a879f660d90d6d1486ca20345d06a862c73688ffaca649957015de8ae0a2658";
+            el.id = "ttzz";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(el, s);
+        }
+    )(window)
+</script>
+<script src="//g.csdnimg.cn/lib/qrcode/1.0.0/qrcode.min.js" type="text/javascript"></script>
+<script>
+    var source = {
+        title: "Thunderbird OS X Adress Book Edititon-开源",
+        id: "18407506",
+        username: "weixin_42129005",
+        login_username: "",
+        isSelf:  "",
+        isPreview: "",
+        isPPT: 0,
+        nickname: "晔晔匠",
+        firstPage: 1,
+        showPage: "1",
+        isFromSo: "",
+        channal_str: "",
+        channal_code: "",
+        is_download: "0",
+        goods_id: "18407506",
+        flag: 26,
+        downloadUrl: "https://download.csdn.net/",
+        buyVipPath: "https://mall.csdn.net/vip",
+        is_show_vip_alert: 0,
+        is_not_upload_user: 0
+    };
+    var toolbarSearchExt = {
+        title: "Thunderbird OS X Adress Book Edititon-开源",
+        tag: ["开源软件"],
+        queryWord: "",
+        landingWord: []
+    };
+    toolbarSearchExt = JSON.stringify(toolbarSearchExt);
+</script>
+<link rel="stylesheet" href="//csdnimg.cn/release/download/static_files/pc/css/download_detail-d1682490bb.css"/>
+<meta name="csdn-baidu-search" content='{"keyword":"ThunderbirdOSXAdressBookEdititon-开源"}'>
+<meta name="csdnFooter" content='{"type": "2", "el": ".download-common-footer"}'>
+</head>
+<body>
+<div class="home_page_wrap">
+    <div class="main clearfix">
+        <div class="clearfix fr" style="width:1094px">
+            <div class="main_l fl right_main_box">
+                <div class="page-breadcrumb">
+                    <a href="https://download.csdn.net/" data-report-click='{"spm": "1003.2020.3001.5735"}' data-report-query="spm=1003.2020.3001.5735">下载首页</a>
+                                <span class="page-breadcrumb-separator">/</span>
+                                <a href="https://download.csdn.net/search/16/10/0/0/1" data-report-click='{"spm": "1003.2020.3001.5735"}' data-report-query="spm=1003.2020.3001.5735">开发技术</a>
+                                <span class="page-breadcrumb-separator">/</span>
+                                <a href="https://download.csdn.net/search/16014/10/0/0/1" data-report-click='{"spm": "1003.2020.3001.5735"}' data-report-query="spm=1003.2020.3001.5735">其它</a>
+                </div>
+                <div class="resource_box  ">
+                    <div class="resource_copyright">
+                        <span class="icon-arrow"></span>
+                        <div class="copyright-desc">
+                            <span>该资源内容由用户上传，如若侵权请选择举报</span>
+                        </div>
+                    </div>
+
+                    <div class="resource_box_info">
+                        <h3>
+                            <span class="resource_title">Thunderbird OS X Adress Book Edititon-开源</span>
+                        </h3>
+                        <!-- 评分 -->
+                        <div class="dl_bread_score">
+                            <div>
+                                <div class="dl_score">
+                                    <span class="starts">
+                                                    <!--实现显示空心星星-->
+                                                    <i aria-hidden="true" class="fa fa-star"></i>
+                                                    <!--实现显示空心星星-->
+                                                    <i aria-hidden="true" class="fa fa-star"></i>
+                                                    <!--实现显示空心星星-->
+                                                    <i aria-hidden="true" class="fa fa-star"></i>
+                                                    <!--实现显示空心星星-->
+                                                    <i aria-hidden="true" class="fa fa-star"></i>
+                                                    <!--实现显示空心星星-->
+                                                    <i aria-hidden="true" class="fa fa-star"></i>
+                                    </span>
+                                </div>
+                                <strong class="info_box">
+                                    <span class="res_info_cost">所需积分/C币：<em class="cost">5</em></span>
+                                    <span>2021-05-06 11:14:33</span>
+                                    <span>10.66MB</span>
+                                        <span class="file_type">DMG</span>
+                                        <div class="file_statistics">
+                                            <img src="//csdnimg.cn/release/download/static_files/pc/images/icon-pv.png" alt="" />
+                                            <span>2</span>
+                                        </div>
+
+                                    <!-- 收藏功能 favored -->
+                                            <div id="favorite" class="dl_func collect">
+                                                <img src="//csdnimg.cn/release/download/static_files/pc/images/icon_collect.png" alt="收藏" />
+                                                <span class="unsave">收藏</span>
+                                        </div>
+                            <span id="download_report" class="download_report dl_func">举报</span>
+                            </strong>
+                        </div>
+                    </div>
+                    <div class="copyright_declare_info">版权声明：该资源内容由用户上传，如若侵权请选择举报</div>
+                    <div class="resource_box_info_c clearfix pr">
+                        <dl class="resource_box_dl ">
+                            <dd>
+                                <div class="resource_box_desc">
+                                    <div class="resource_description">
+                                        <p>Mac OS X下的Mozilla Thunderbird 2.0x具有无法使用集成通讯簿的缺点。 此版本可以将Mac OS X地址簿与LDAP一起使用。 此补丁来自Mozilla Bugzilla。 重要说明：阅读发行说明<br/></p>
+                                    </div>
+                                    <a class="show-hide-btn" href="javascript:;">...展开详情</a>
+                                    <div class="resource_box_b">
+                                        <label class="resource_tags">
+                                                            <a href="//download.csdn.net/tagalbum/41736" class="tag" target="_blank" data-report-click='{"mod":"1586333473_016"}'>开源软件</a>
+                                        </label>
+                                    </div>
+                                </div>
+                            </dd>
+                        </dl>
+                </div>
+            </div>
+            <div id="textBottom" style="width:0;height:0;"></div>
+            <div class="resource_box_fn clearfix">
+                <div class="left_fn fl 2">
+                    <!-- 下载 按钮 -->
+                            <a href="javascript:;" class="c_dl_btn download_btn normal_download" data-report-click='{"mod":"1582594662_006", "spm":"1003.2020.3001.4165","extend1":"normal_download"}'>立即下载</a>
+                                    <a href="https://mall.csdn.net/vip" class="c_dl_btn open_vip" data-report-query="spm=1003.2020.3001.5555" data-report-click='{"spm":"1003.2020.3001.4167","extend1":"normal_buy"}'>
+                                        <img src="/static_files/pc/images/vip.png">
+                                        <span class="report_101_source_click">低至0.43元/次</span>
+                                    </a>
+                            <span data-url="https://i.csdn.net/#/user-center/profile?floor=edu" target="_blank"
+                                  data-report-click='{"spm":"1003.2020.3001.4168"}'
+                            class="c_dl_btn open_authentication">
+                                <span>身份认证VIP会员低至7折</span>
+                            </span>
+
+                    <!-- 置灰资源 -->
+                </div>
+            </div>
+
+        </div>
+
+        <!-- 用户评论 -->
+        <div id="comment" class="dl_comm clearfix">
+            <!-- 评论框 -->
+            <div class="comm_area clearfix">
+                <div class="comm_area_l fl">
+                    <a href="https://my.csdn.net/">
+                        <img src="https://avatar.csdn.net/D/4/1/2_.jpg">
+                    </a>
+                </div>
+                <div class="comm_area_r fl">
+                    <div class="r_textarea clearfix">
+                        <div class="comm_text">
+
+                            <textarea id="cc_body" disabled placeholder="下载该资源后方可评论"></textarea>
+                                <div class="commit-reward"></div>
+                        </div>
+                        <button disabled >评论</button>
+                    </div>
+                    <div class="r_toolbar clearfix">
+                        <div class="toolbar_left fl">
+                            <input class="star" id="star" name="star" value="0" type="hidden">
+                            <div class="stars">
+                                <i aria-hidden="true" class="fa fa-star"></i>
+                                <i aria-hidden="true" class="fa fa-star"></i>
+                                <i aria-hidden="true" class="fa fa-star"></i>
+                                <i aria-hidden="true" class="fa fa-star"></i>
+                                <i aria-hidden="true" class="fa fa-star"></i>
+                            </div>
+                            <div class="comment_error"></div>
+                        </div>
+                        <div class="comment_btn fr">
+                            <div class="comment_tips">一个资源只可评论一次，评论内容不能少于5个字</div>
+                            <button data-report-click='{"mod":"1582594662_007"}'>发表评论</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--列表-->
+                <div class="comm_t">
+                    <div class="comm_box">
+
+                </div>
+            </div>
+            <!--页码-->
+        </div>
+
+        <!-- 相关推荐 -->
+            <div class="resource_recommend" style="padding:0">
+                <link rel="stylesheet" href="//g.csdnimg.cn/pub-recom/1.0.4/css/pub-recom.css"><ul class="pub_recommend pub_recommend_b" popu="popu_595" utm="distribute.pc_relevant_download.none-task-"><li class="pub_recom_item download"><a class="pr_item" href=https://download.csdn.net/download/z363374365/2643913 target="_blank" data-report-view={"mod":"popu_595","extra":"{\"utm_medium\":\"distribute.pc_relevant_download.none-task-download-2~default~OPENSEARCH~default-1.nonecase\"}","dist_request_id":"1620275042504_12218","index":"1","strategy":"2~default~OPENSEARCH~default"} data-report-click={"mod":"popu_595","extra":"{\"utm_medium\":\"distribute.pc_relevant_download.none-task-download-2~default~OPENSEARCH~default-1.nonecase\"}","dist_request_id":"1620275042504_12218","index":"1","strategy":"2~default~OPENSEARCH~default"} data-report-query=utm_medium=distribute.pc_relevant_download.none-task-download-2~default~OPENSEARCH~default-1.nonecase&depth_1-utm_source=distribute.pc_relevant_download.none-task-download-2~default~OPENSEARCH~default-1.nonecase><div class="pr_item_l"><div class="fix"><img src=//g.csdnimg.cn/pub-recom/img/type//unknow.svg alt=""><span>18KB</span></div> </div><div class="pr_item_r"><p class="pr_i_t"><em>Adress</em> and E-Mail from CSDN</p><span class="pr_item_t_r fr"><span class="pr_t_date">2010-08-24</span></span><p class="pr_i_d">AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</p></div></a></li><li class="pub_recom_item download"><a class="pr_item" href=https://download.csdn.net/download/weixin_42106299/15691543 target="_blank" data-report-view={"mod":"popu_595","extra":"{\"utm_medium\":\"distribute.pc_relevant_download.none-task-download-2~default~OPENSEARCH~default-2.nonecase\"}","dist_request_id":"1620275042504_12218","index":"2","strategy":"2~default~OPENSEARCH~default"} data-report-click={"mod":"popu_595","extra":"{\"utm_medium\":\"distribute.pc_relevant_download.none-task-download-2~default~OPENSEARCH~default-2.nonecase\"}","dist_request_id":"1620275042504_12218","index":"2","strategy":"2~default~OPENSEARCH~default"} data-report-query=utm_medium=distribute.pc_relevant_download.none-task-download-2~default~OPENSEARCH~default-2.nonecase&depth_1-utm_source=distribute.pc_relevant_download.none-task-download-2~default~OPENSEARCH~default-2.nonecase><div class="pr_item_l"><div class="fix"><img src=//g.csdnimg.cn/pub-recom/img/type/zip.svg alt=""><span>59KB</span></div> </div><div class="pr_item_r"><p class="pr_i_t"><em>adress</em>-<em>book</em>-源码</p><span class="pr_item_t_r fr"><span class="pr_t_date">2021-03-10</span></span><p class="pr_i_d">地址簿
+本网站正在建设中！</p></div></a></li><li class="pub_recom_item download"><a class="pr_item" href=https://download.csdn.net/download/perfectguyipeng/9806906 target="_blank" data-report-view={"mod":"popu_595","extra":"{\"utm_medium\":\"distribute.pc_relevant_download.none-task-download-2~default~OPENSEARCH~default-3.nonecase\"}","dist_request_id":"1620275042504_12218","index":"3","strategy":"2~default~OPENSEARCH~default"} data-report-click={"mod":"popu_595","extra":"{\"utm_medium\":\"distribute.pc_relevant_download.none-task-download-2~default~OPENSEARCH~default-3.nonecase\"}","dist_request_id":"1620275042504_12218","index":"3","strategy":"2~default~OPENSEARCH~default"} data-report-query=utm_medium=distribute.pc_relevant_download.none-task-download-2~default~OPENSEARCH~default-3.nonecase&depth_1-utm_source=distribute.pc_relevant_download.none-task-download-2~default~OPENSEARCH~default-3.nonecase><div class="pr_item_l"><div class="fix"><img src=//g.csdnimg.cn/pub-recom/img/type/zip.svg alt=""><span>2KB</span></div> </div><div class="pr_item_r"><p class="pr_i_t">通讯录（<em>Adress</em> <em>book</em>）</p><span class="pr_item_t_r fr"><span class="pr_t_date">2017-04-07</span></span><p class="pr_i_d">c语言 链表</p></div></a></li><li class="pub_recom_item download"><a class="pr_item" href=https://download.csdn.net/download/weixin_45998055/15186340 target="_blank" data-report-view={"mod":"popu_595","extra":"{\"utm_medium\":\"distribute.pc_relevant_download.none-task-download-2~default~OPENSEARCH~default-4.nonecase\"}","dist_request_id":"1620275042504_12218","index":"4","strategy":"2~default~OPENSEARCH~default"} data-report-click={"mod":"popu_595","extra":"{\"utm_medium\":\"distribute.pc_relevant_download.none-task-download-2~default~OPENSEARCH~default-4.nonecase\"}","dist_request_id":"1620275042504_12218","index":"4","strategy":"2~default~OPENSEARCH~default"} data-report-query=utm_medium=distribute.pc_relevant_download.none-task-download-2~default~OPENSEARCH~default-4.nonecase&depth_1-utm_source=distribute.pc_relevant_download.none-task-download-2~default~OPENSEARCH~default-4.nonecase><div class="pr_item_l"><div class="fix"><img src=//g.csdnimg.cn/pub-recom/img/type/zip.svg alt=""><span>35KB</span></div> </div><div class="pr_item_r"><p class="pr_i_t"><em>adress</em> <em>book</em>.zip</p><span class="pr_item_t_r fr"><span class="pr_t_date">2021-02-11</span></span><p class="pr_i_d">使用makefile进行封装，采用单链表完成添加，展示，查找，删除，修改等功能</p></div></a></li><li class="pub_recom_item download"><a class="pr_item" href=https://download.csdn.net/download/h1319/10787721 target="_blank" data-report-view={"mod":"popu_595","extra":"{\"utm_medium\":\"distribute.pc_relevant_download.none-task-download-2~default~OPENSEARCH~default-5.nonecase\"}","dist_request_id":"1620275042504_12218","index":"5","strategy":"2~default~OPENSEARCH~default"} data-report-click={"mod":"popu_595","extra":"{\"utm_medium\":\"distribute.pc_relevant_download.none-task-download-2~default~OPENSEARCH~default-5.nonecase\"}","dist_request_id":"1620275042504_12218","index":"5","strategy":"2~default~OPENSEARCH~default"} data-report-query=utm_medium=distribute.pc_relevant_download.none-task-download-2~default~OPENSEARCH~default-5.nonecase&depth_1-utm_source=distribute.pc_relevant_download.none-task-download-2~default~OPENSEARCH~default-5.nonecase><div class="pr_item_l"><div class="fix"><img src=//g.csdnimg.cn/pub-recom/img/type/zip.svg alt=""><span>52.35MB</span></div> </div><div class="pr_item_r"><p class="pr_i_t">这可能时最全的与Java相关的jar</p><span class="pr_item_t_r fr"><span class="pr_t_date">2018-11-15</span></span><p class="pr_i_d">c3p0连接池,dom4j,jstl,json,mysql驱动相关的jar，j2ee的api文档，commons-all</p></div></a></li><li class="pub_recom_item download"><a class="pr_item" href=https://download.csdn.net/download/fdgrh/3201189 target="_blank" data-report-view={"mod":"popu_595","extra":"{\"utm_medium\":\"distribute.pc_relevant_download.none-task-download-2~default~OPENSEARCH~default-6.nonecase\"}","dist_request_id":"1620275042504_12218","index":"6","strategy":"2~default~OPENSEARCH~default"} data-report-click={"mod":"popu_595","extra":"{\"utm_medium\":\"distribute.pc_relevant_download.none-task-download-2~default~OPENSEARCH~default-6.nonecase\"}","dist_request_id":"1620275042504_12218","index":"6","strategy":"2~default~OPENSEARCH~default"} data-report-query=utm_medium=distribute.pc_relevant_download.none-task-download-2~default~OPENSEARCH~default-6.nonecase&depth_1-utm_source=distribute.pc_relevant_download.none-task-download-2~default~OPENSEARCH~default-6.nonecase><div class="pr_item_l"><div class="fix"><img src=//g.csdnimg.cn/pub-recom/img/type//unknow.svg alt=""><span>133KB</span></div> </div><div class="pr_item_r"><p class="pr_i_t">address_<em>book</em></p><span class="pr_item_t_r fr"><span class="pr_t_date">2011-04-18</span></span><p class="pr_i_d">大大大iofhsaiofhdiso打扫房间哦idhfg</p></div></a></li><li class="pub_recom_item download"><a class="pr_item" href=https://download.csdn.net/download/andrewmaple/241935 target="_blank" data-report-view={"mod":"popu_595","extra":"{\"utm_medium\":\"distribute.pc_relevant_download.none-task-download-2~default~OPENSEARCH~default-7.nonecase\"}","dist_request_id":"1620275042504_12218","index":"7","strategy":"2~default~OPENSEARCH~default"} data-report-click={"mod":"popu_595","extra":"{\"utm_medium\":\"distribute.pc_relevant_download.none-task-download-2~default~OPENSEARCH~default-7.nonecase\"}","dist_request_id":"1620275042504_12218","index":"7","strategy":"2~default~OPENSEARCH~default"} data-report-query=utm_medium=distribute.pc_relevant_download.none-task-download-2~default~OPENSEARCH~default-7.nonecase&depth_1-utm_source=distribute.pc_relevant_download.none-task-download-2~default~OPENSEARCH~default-7.nonecase><div class="pr_item_l"><div class="fix"><img src=//g.csdnimg.cn/pub-recom/img/type//unknow.svg alt=""><span>200KB</span></div> </div><div class="pr_item_r"><p class="pr_i_t">address</p><span class="pr_item_t_r fr"><span class="pr_t_date">2007-09-04</span></span><p class="pr_i_d"><em>adress</em> <em>book</em></p></div></a></li><li class="pub_recom_item download"><a class="pr_item" href=https://download.csdn.net/download/eyanhao/1884796 target="_blank" data-report-view={"mod":"popu_595","extra":"{\"utm_medium\":\"distribute.pc_relevant_download.none-task-download-2~default~OPENSEARCH~default-8.nonecase\"}","dist_request_id":"1620275042504_12218","index":"8","strategy":"2~default~OPENSEARCH~default"} data-report-click={"mod":"popu_595","extra":"{\"utm_medium\":\"distribute.pc_relevant_download.none-task-download-2~default~OPENSEARCH~default-8.nonecase\"}","dist_request_id":"1620275042504_12218","index":"8","strategy":"2~default~OPENSEARCH~default"} data-report-query=utm_medium=distribute.pc_relevant_download.none-task-download-2~default~OPENSEARCH~default-8.nonecase&depth_1-utm_source=distribute.pc_relevant_download.none-task-download-2~default~OPENSEARCH~default-8.nonecase><div class="pr_item_l"><div class="fix"><img src=//g.csdnimg.cn/pub-recom/img/type//unknow.svg alt=""><span>1000KB</span></div> </div><div class="pr_item_r"><p class="pr_i_t">MTK Flash Tool V6.1.8</p><span class="pr_item_t_r fr"><span class="pr_t_date">2009-12-08</span></span><p class="pr_i_d">Extra Options: 1- External Clock (13MHz, 26MHz, 52MHz)
+
+2- Base band Chip Types MT6205, MT6205b, MT6208, MT6218, MT6218b MT6217, MT6219, MT6226, MT6226M, MT6227, MT6228, MT6229 
+
+3- DA(Download Option) Option [DA Start <em>Adress</em>] 
+
+4- Multi-bin download Option (Compare resource project id)</p></div></a></li><li class="pub_recom_item download"><a class="pr_item" href=https://download.csdn.net/download/weixin_38551143/16080385 target="_blank" data-report-view={"mod":"popu_595","extra":"{\"utm_medium\":\"distribute.pc_relevant_download.none-task-download-2~default~OPENSEARCH~default-9.nonecase\"}","dist_request_id":"1620275042504_12218","index":"9","strategy":"2~default~OPENSEARCH~default"} data-report-click={"mod":"popu_595","extra":"{\"utm_medium\":\"distribute.pc_relevant_download.none-task-download-2~default~OPENSEARCH~default-9.nonecase\"}","dist_request_id":"1620275042504_12218","index":"9","strategy":"2~default~OPENSEARCH~default"} data-report-query=utm_medium=distribute.pc_relevant_download.none-task-download-2~default~OPENSEARCH~default-9.nonecase&depth_1-utm_source=distribute.pc_relevant_download.none-task-download-2~default~OPENSEARCH~default-9.nonecase><div class="pr_item_l"><div class="fix"><img src=//g.csdnimg.cn/pub-recom/img/type//unknow.svg alt=""><span>10KB</span></div> </div><div class="pr_item_r"><p class="pr_i_t">快速选择电子邮件地址「quick pick email <em>adress</em>」-crx插件</p><span class="pr_item_t_r fr"><span class="pr_t_date">2021-03-24</span></span><p class="pr_i_d">此扩展程序有助于快速复制您的电子邮件地址
+这个简单的应用程序旨在简化你的生活，当在网页或表单中输入你的电子邮件地址。
+事实上，您经常需要输入您的电子邮件地址来识别您自己或其他互联网交易。
+这个扩展名打开成你已经输入到配置文件中的电子邮件地址列表。在你的磁盘上，我解释一下：
+一旦安装了扩展程序：
++++++++++++++++++++++++++++++++++++++++++++
+一开始你会得到的
+文件夹链接在哪里创建文本文件
+输入您的电子邮件地址或其他数据。
++++++++++++++++++++++++++++++++++++++++++++
+如果您稍后想要修改这些值，那么您将需要：
+1）转到Chrome页面：// extensions /（Menu&gt; Tools&gt; Extensions ...）
+2）在列表中找到&ldquo;快速选择电子邮件地址&rdquo;扩展名并复制或记录ID密钥
+3）将您的驱动器导航到％USERPROFILE％\ AppData \ Local \ Google \ Chrome \ User Data \ Default \ Extensions \目录
+4）打开具有您的ID名称的目录。
+5）创建并编辑文件&ldquo;<em>Adress</em>.txt&rdquo;，然后按您自己的值输入4行文本。
+/！\不要忘记他们：1,2,3行结束。这是分离值的关键。
+例如：
+my<em>adress</em>1@gmail.com：
+my<em>adress</em>2@gmail.com：
+my<em>adress</em>3@gmail.com：
+my<em>adress</em>4@domain.com
+支持语言:Fran&ccedil;ais</p></div></a></li><li class="pub_recom_item download"><a class="pr_item" href=https://download.csdn.net/download/shuitudiyi/3939548 target="_blank" data-report-view={"mod":"popu_595","extra":"{\"utm_medium\":\"distribute.pc_relevant_download.none-task-download-2~default~OPENSEARCH~default-10.nonecase\"}","dist_request_id":"1620275042504_12218","index":"10","strategy":"2~default~OPENSEARCH~default"} data-report-click={"mod":"popu_595","extra":"{\"utm_medium\":\"distribute.pc_relevant_download.none-task-download-2~default~OPENSEARCH~default-10.nonecase\"}","dist_request_id":"1620275042504_12218","index":"10","strategy":"2~default~OPENSEARCH~default"} data-report-query=utm_medium=distribute.pc_relevant_download.none-task-download-2~default~OPENSEARCH~default-10.nonecase&depth_1-utm_source=distribute.pc_relevant_download.none-task-download-2~default~OPENSEARCH~default-10.nonecase><div class="pr_item_l"><div class="fix"><img src=//g.csdnimg.cn/pub-recom/img/type/txt.svg alt=""><span>1KB</span></div> </div><div class="pr_item_r"><p class="pr_i_t">Access violation at address 00000000.Read of <em>adress</em> 00000000解决方法</p><span class="pr_item_t_r fr"><span class="pr_t_date">2011-12-19</span></span><p class="pr_i_d">Access violation at address 00000000.Read of <em>adress</em> 00000000之类错误的解决方法</p></div></a></li><li class="pub_recom_item download"><a class="pr_item" href=https://download.csdn.net/download/luowei505050/3089789 target="_blank" data-report-view={"mod":"popu_595","extra":"{\"utm_medium\":\"distribute.pc_relevant_download.none-task-download-2~default~OPENSEARCH~default-11.nonecase\"}","dist_request_id":"1620275042504_12218","index":"11","strategy":"2~default~OPENSEARCH~default"} data-report-click={"mod":"popu_595","extra":"{\"utm_medium\":\"distribute.pc_relevant_download.none-task-download-2~default~OPENSEARCH~default-11.nonecase\"}","dist_request_id":"1620275042504_12218","index":"11","strategy":"2~default~OPENSEARCH~default"} data-report-query=utm_medium=distribute.pc_relevant_download.none-task-download-2~default~OPENSEARCH~default-11.nonecase&depth_1-utm_source=distribute.pc_relevant_download.none-task-download-2~default~OPENSEARCH~default-11.nonecase><div class="pr_item_l"><div class="fix"><img src=//g.csdnimg.cn/pub-recom/img/type//unknow.svg alt=""><span>3.68MB</span></div> </div><div class="pr_item_r"><p class="pr_i_t">Bochs - The cr<em>os</em>s platform IA-32 (x86) emulator</p><span class="pr_item_t_r fr"><span class="pr_t_date">2011-03-14</span></span><p class="pr_i_d">Changes in 2.4.6 (February 22, 2011):
+
+Brief summary :
+- Support more h<em>os</em>t <em>OS</em> to run on:
+  - Include win64 native binary in the release.
+  - Fixed failures on big endian h<em>os</em>ts.
+- BI<em>OS</em>: Support for up to 2M ROM BI<em>OS</em> images.
+- GUI: select mouse capture toggle method in .bochsrc.
+- Ported m<em>os</em>t of Qemu&#39;s &#39;virtual VFAT&#39; block driver
+  (except runtime write support, but plus FAT32 suppport)
+- Added write protect option for floppy drives.
+- Bugfixes / improved internal debugger + instrumentation.
+
+Detailed change log :
+
+- CPU and internal debugger
+  - Implemented Process Context ID (PCID) feature
+  - Implemented FS/GS BASE access instructions support
+    (according to document from http://software.intel.com/en-us/avx/)
+  - Rewritten from scratch SMC detection algorithm
+    - Implemented fine-grained SMC detection (on 128 byte granularity)
+  - Bugfixes for CPU emulation correctness and stability
+    - Fixed failures on Big Endian h<em>os</em>ts !
+  - Print detailed page walk information and attributes in
+    internal debugger &#39;page&#39; command
+  - Updated/Fixed instrumentation callbacks
+
+- Configure and compile
+  - Bochs now can be compiled as native Windows x86-64 application
+    (tested with Mingw gcc 4.5.1 and Micr<em>os</em>oft Visual Studio Express 2010)
+  - Added ability to configure CPUID stepping through .bochsrc.
+    The default stepping value is 3.
+  - Added ability to disable MONITOR/MWAIT support through .bochsrc
+    CPUID option. The option is available only if compiled with
+    --enable-monitor-mwait configure option.
+  - Determine and select max physical address size automatically at
+    configure time:
+    - 32-bit physical address for 386/486 guests
+    - 36-bit physical address for PSE-36 enabled Pentium guest
+    - 40-bit physical address for PAE enabled P6 or later guests
+  - Update config.guess/config.sub scripts to May 2010 revisions.
+  - Update Visual Studio 2008 project files in build/win32/vs2008ex-workspace.zip
+  - Added Bochs compilation timestamp after Bochs version string.
+
+- GUI and display libraries (Volker)
+  - Added new .bochsrc option to select mouse capture toggle method.
+    In addition to the default Bochs method using the CTRL key and the
+    middle mouse button there are now the choices:
+    - CTRL+F10 (like D<em>OS</em>Box)
+    - CTRL+ALT (like QEMU)
+    - F12 (replaces win32 &#39;legacyF12&#39; option)
+  - display library &#39;x&#39; now uses the desktop size for the maximum guest resolution
+
+- ROM BI<em>OS</em>
+  - Support for up to 2M ROM BI<em>OS</em> images
+
+- I/O Devices
+  - 3 new &#39;pseudo device&#39; plugins created by plugin separation (see below)
+  - Fixes for emulated DHCP in eth_vnet (patch from @SF tracker)
+  - Added support for VGA graphics mode with 400 lines (partial fix for SF bug #2948724)
+  - NE2K: Fixed &quot;send buffer&quot; command issue on big endian h<em>os</em>ts
+  - USB
+    - converted common USB code plus devices to the new &#39;usb_common&#39; plugin
+      Now the USB device classes no longer exist twice if both HC plugins are loaded.
+    - added &#39;pseudo device&#39; in common USB code for the device creation. This makes
+      the HCs independent from the device specific code.
+    - USB MSD: added support for disk image modes (like ATA disks)
+    - USB printer: output file creation failure now causes a disconnect
+    - re-implemented &quot;options&quot; parameter for additional options of connected
+      devices (currently only used to set the speed reported by device and to
+      specify an alternative redolog file of USB MSD disk image modes)
+  - hard drive
+    - new disk image mode &#39;vvfat&#39;
+      - ported the read-only part of Qemu&#39;s &#39;virtual VFAT&#39; block driver
+      - additions: configurable disk geometry, FAT32 support, read MBR and/or
+        boot sector from file, volatile write support using hdimage redolog_t
+        class, optional commit support on Bochs exit, save/restore file
+        attributes, 1.44 MB floppy support, set file modification date/time
+    - converted the complete hdimage stuff to the new &#39;hdimage&#39; plugin
+    - new hdimage method get_capabilities() that can return special flags
+    - vmware3, vmware4 and vvfat classes now return HDIMAGE_HAS_GEOMETRY flag
+    - other disk image modes by default return HDIMAGE_AUTO_GEOMETRY if
+      cylinder value is set to 0
+    - multiple sector read/write support for some image modes
+    - new log prefix &quot;IMG&quot; for hdimage messages
+  - floppy
+    - added write protect option for floppy drives (based on @SF patch by Ben Lunt)
+    - vvfat support
+    - bugfix: cl<em>os</em>e images on exit
+  - SB16
+    - converted the sound output module stuff to the new &#39;soundmod&#39; plugin
+
+- SF patches applied
+ [3164945] hack to compile under WIN64 by Darek Mihocka and Stanislav
+ [3164073] Fine grain SMC invalidation by Stanislav
+ [1539417] write protect for floppy drives by Ben Lunt
+ [2862322] fixes for emulated DHCP in eth_vnet
+
+- these S.F. bugs were cl<em>os</em>ed/fixed
+ [2588085] Mouse capture
+ [3140332] typo in mf3/ps2 mapping of BX_KEY_CTRL_R
+ [3111577] No &quot;back&quot; option in log settings
+ [3108422] Timing window in NE2K emulation
+ [3084390] Bochs won&#39;t load floppy plugin right on startup
+ [3043174] Doc<em>book</em> use of &#39;_&#39; build failure
+ [3085140] Ia_arpl_Ew_Rw definition of error
+ [3078995] ROL/ROR/SHL/SHR modeling wrong when dest reg is 32 bit
+ [2864794] BX_INSTR_OPCODE in &quot;cpu_loop&quot; causes crash in x86_64 h<em>os</em>t
+ [2884071] [AIX h<em>os</em>t] prefetch: EIP [00010000] &gt; CS.limit [0000ffff]
+ [3053542] 64 bit mode: far-jmp instruction is error
+ [3011112] error compile vs2008/2010 with X2APIC
+ [3002017] compile error with vs 2010
+ [3009767] guest RFLAGS.IF blocks externel interrupt in VMX guest mode
+ [2964655] VMX not enabled in MSR IA32_FEATURE_CONTROL
+ [3005865] IDT show bug
+ [3001637] CM<em>OS</em> MAP register meaning error
+ [2994370] Cannot build with 3DNow support
+
+- these S.F. feature requests were cl<em>os</em>ed/implemented
+ [1510142] Native Windows XP x64 Edition binary
+ [1062553] select mouse (de)activation in bochsrc
+ [2930633] legacy mouse capture key : not specific enough
+ [2930679] Let user change mouse capture control key
+ [2803538] Show flags for pages when using &quot;info tab&quot;
+
+-------------------------------------------------------------------------
+Changes in 2.4.5 (April 25, 2010):
+
+Brief summary :
+- Major configure/cpu rework allowing to enable/disable CPU options at runtime
+  through .bochsrc (Stanislav)
+- Bugfixes for CPU emulation correctness and stability
+- Implemented X2APIC extensions (Stanislav)
+- Implemented Intel VMXx2 extensions (Stanislav)
+  - Extended VMX capability MSRs, APIC Virtualization,
+    X2APIC Virtualization, Extended Page Tables (EPT),
+    VPID, Unrestricted Guests, new VMX controls.
+- Implemented PCLMULQDQ AES instruction
+- Extended Bochs internal debugger functionality
+- USB HP DeskJet 920C printer device emulation (Ben Lunt)
+
+Detailed change log :
+
+- Configure rework
+  - Deprecate --enable-popcnt configure option. POPCNT instruction will be 
+    enabled automatically iff SSE4_2 is supported (like in hardware).
+
+  - Make --ignore-bad-msrs runtime option in .bochsrc. Old --ignore-bad-msrs
+    configure option is deprecated and should not be used anymore.
+
+  - Enable changing part of CPU functionality at runtime through .bochsrc.
+    - Now you could enable/disable any of SSEx/AES/MOVBE/SYSENTER_SYSEXIT/XSAVE
+      instruction sets using new CPUID option in .bochsrc.
+    - When x86-64 support is compiled in, you could enable/disable long mode
+      1G pages support without recompile using new CPUID option in .bochsrc.
+    Configure options:
+       --enable-mmx, --enable-sse, --enable-movbe, --enable-xsave,
+       --enable-sep, --enable-aes, --enable-1g-pages
+    are deprecated and should not be used anymore.
+
+  - Local APIC configure option --enable-apic is deprecated and should not
+    be used anymore. The LAPIC option now automatically determined from
+    other configure options. XAPIC functionality could be enabled using
+    new CPUID .bochsrc option.
+
+  - Changed default CPU configuration (generated by configure script with
+    default options) to BX_CPU_LEVEL=6 with SSE2 enabled.
+
+- CPU
+  - Implemented PCLMULQDQ AES instruction
+  - Implemented X2APIC extensions / enable extended topology CPUID leaf (0xb),
+    in order to enable X2APIC configure with --enable-x2apic
+  - Implemented Intel VMXx2 extensions:
+    - Enabled extended VMX capability MSRs
+    - Implemented VMX controls for loading/storing of MSR_PAT and MSR_EFER
+    - Enabled/Implemented secondary proc-based vmexec controls:
+       - Implemented APIC virtualization
+       - Implemented Extended Page Tables (EPT) mode
+       - Implemented Descriptor Table Access VMEXIT control
+       - Implemented RDTSCP VMEXIT control
+       - Implemented Virtualize X2APIC mode control
+       - Implemented Virtual Process ID (VPID)
+       - Implemented WBINVD VMEXIT control
+       - Implemented Unrestricted Guest mode
+    In order to enable emulation of VMXx2 extensions configure with
+        --enable-vmx=2 option (x86-64 must be enabled)
+  - Bugfixes for CPU emulation correctness
+  - Fixed Bochs crash when accessing the first byte above emulated memory size
+
+- Internal Debugger
+  - Introduced range read/write physical watchpoints
+  - Allow reloading of segment registers from internal debugger
+  - Improved verb<em>os</em>e physical memory access tracing
+
+- BI<em>OS</em>
+  - Fix MTRR configuration (prevented boot of modern Linux kernels)
+  - Fix interrupt vectors for INT 60h-66h (reserved for user interrupt) by
+    setting them to zero
+  - Fix BI<em>OS</em> INT13 function 08 when the number of cylinders on the disk = 1
+
+- I/O Devices
+  - USB HP DeskJet 920C printer device emulation (Ben Lunt)
+
+- Misc
+  - Updated Bochs TESTFORM to version 0.5
+
+- SF patches applied
+ [2864402] outstanding x2apic patches by Stanislav
+ [2960379] Fix build with -Wformat -Werror=format-security by Per Oyvind Karlsen
+ [2938273] allow instrumentation to change execute by Konrad Grochowski
+ [2926072] Indirection operators in expressions by Derek Peschel
+ [2914433] makesym.perl misses symbols by John R. Jackson
+ [2908481] USB Printer by Ben Lunt
+
+- these S.F. bugs were cl<em>os</em>ed/fixed
+ [2861662] dbg_xlate_linear2phy needs to be updated
+ [2956217] INT13 AH=8 returns wrong values when cylinders=1
+ [2981161] Allow DMA transfers to continue when CPU is in HALT state
+ [2795115] NX fault could be missed
+ [2964824] bad newline sequence in aspi-win32.h
+  [913419] configure options and build process needs some work
+ [2938398] gdbstub compile error with x86_64 enabled
+ [2734455] shutdown/reset type 05 should reinit the PICs
+ [1921294] extended memory less than 1M wrong size
+ [1947249] BX_USE_EBDA_TABLES and MP table placement
+ [1933859] BX_USE_EBDA_TABLES and memory overlapping
+ [2923680] &quot;help dregs&quot; is a syntax error
+ [2919661] CPU may fail to do 16bit near call
+ [2790768] Memory corruption with SMP &gt; 32, Panic BI<em>OS</em> Keyboard Error
+ [2902118] interrupts vectors 0x60 to 67 should be NULL !
+ [2912502] Instruction Pointer behaving erratically
+ [2901047] Bochs crashed, cl<em>os</em>ed by guest <em>os</em>
+ [2905385] Bochs crash
+ [2901481] Instruction SYSRET and SS(PL)
+ [2900632] Broken long mode RETF to outer priviledge with null SS
+ [1429011] Use bx_phyaddr_t for physaddr vars and bx_<em>adress</em> for lin adr
+
+- these S.F. feature requests were cl<em>os</em>ed/implemented
+ [2955911] RPM preuninstall scriptlet removes /core
+ [2947863] don&#39;t abort on unrecognised options
+ [2878861] numerics in the disassembler output
+ [2900619] make more CPU state changeable
+
+-------------------------------------------------------------------------
+Changes in 2.4.2 (November 12, 2009):
+
+- CPU and internal debugger
+  - VMX: Implemented TPR shadow VMEXIT
+  - Bugfixes for CPU emulation correctness (m<em>os</em>tly for VMX support).
+  - Bugfixes and updates for Bochs internal debugger
+    - On SMP system stepN command now affects only current processor
+
+- Memory
+  - Bugfixes for &gt; 32-bit physical address space.
+  - Allow to emulate more physical memory than h<em>os</em>t actually could or would
+    like to allocate. For more details look for new .bochsrc &#39;memory&#39; option.
+
+- Cleanup configure options
+  - All paging related options now will be automatically determined according
+    to  --enable-cpu-level option. Related configure options
+        --enable-global-pages, --enable-large-pages,
+        --enable-pae, --enable-mtrr
+    are deprecated now. Only 1G paging option still remaining unchanged.
+  - Deprecate --enable-daz configure option. Denormals-are-zer<em>os</em> MXCSR control
+    will be enabled automatically iff SSE2 is supported (like in hardware).
+  - Deprecate --enable-vme configure option, now it will be supported iff
+    CPU_LEVEL &gt;= 5 (like in hardware).
+
+- I/O Devices
+  - Bugfixes for 8254 PIT, VGA, Cirrus-Logic SVGA, USB UCHI
+
+- SF patches applied
+ [2817840] Make old_callback static by Mark Marshall
+ [2874004] fix for VMWRITE instruction by Roberto Paleari
+ [2873999] fix CS segment type during fast syscall invocation by Roberto Paleari
+ [2864389] Debugger gui maximize on startup by Thomas Nilsen
+ [2817868] Rework loops in the memory code by Mark Marshall
+ [2812948] PIT bug by Derek
+
+- these S.F. bugs were cl<em>os</em>ed/fixed
+ [2833504] GUI debugger bug-about GDT display
+ [2872244] BI<em>OS</em> writes not allowed value to MTRR MSR causing #GP
+ [2885383] SDL GUI memory leak
+ [2872290] compilation in AIX5.3 ML10 failes
+ [2867904] crash with cirrus bx_vga_c::mem_write
+ [2851495] BI<em>OS</em> PCI returns with INT flag = 0
+ [2860333] vista 64 guest STOP 109 (GDT modification)
+ [2849745] disassembler bug for 3DNow and SSE opcodes
+ [1066748] Wrong registers values after #RESET, #INIT
+ [2836893] Regression: Windows XP installer unable to format harddrive
+ [2812239] VMX: VM-Exit: Incorrect instruction length on software int
+ [2814130] bx_debug lex/yacc files incorrectly generated
+ [2813199] MP Tables Missing From BI<em>OS</em>
+ [2824093] VMX exception bug
+ [2811909] VMX : CS Access-rights Type.Accessed stays 0
+ [2810571] Compile Errors on <em>OS</em>X
+ [2823749] GCC regression or VM_EXIT RDMSR/WRMSR bug
+ [2815929] Vista/XP64 unnecessary panic
+ [2803519] Wrong example in man page bochsrc
+
+- these S.F. feature requests were cl<em>os</em>ed/implemented
+  [422766] Large Memory configurations
+ [1311287] Idea for a better GUI
+  [455971] USB support
+  [615363] debugger shortcut for repeat last cmd
+
+-------------------------------------------------------------------------
+Changes in 2.4.1 (June 7, 2009):
+
+- Fixed bunch of CPUID issues
+  - Bochs is now able to install and boot 64-bit Windows images!
+    (special thanks to Mark Ebersole for his patch)
+- Several bugfixes in CPU emulation (m<em>os</em>tly for x87 instructions)
+- Fixed two critical deadlock bugs in the Win32 gui (patches from @SF tracker)
+- Fixes related to the &#39;show ips&#39; feature
+  - removed conflicting win32-specific alarm() functions (&#39;win32&#39; and &#39;sdl&#39; gui)
+  - feature now works in wx on win32
+- Added support for gdb stub on big endian machine (patch by Godmar Back)
+- Rewritten obsolete hash_map code in dbg symbols module (patch from @SF)
+- BI<em>OS</em>: implemented missing INT 15h/89h (patch by Sebastian Herbszt)
+
+-------------------------------------------------------------------------
+Changes in 2.4 (May 3, 2009):
+
+Brief summary :
+
+- Added graphical Bochs debugger frontend for m<em>os</em>t of the supported platforms.
+  - Thanks for Chourdakis Michael and Bruce Ewing.
+- Many new CPU features in emulation
+  - Support for &gt; 32 bit physical address space and configurable MSRs
+  - VMX, 1G pages in long mode, MOVBE instruction
+- Bugfixes for CPU emulation correctness, debugger and CPU instrumentation.
+- New config interface &#39;win32config&#39; with start and runtime menu
+- USB: added OHCI support, external hub and cdrom
+- Added user plugin interface support.
+
+Detailed change log :
+
+- CPU and internal debugger
+  - Support for VMX hardware emulation in Bochs CPU, to enable configure with
+        --enable-vmx option
+    Nearly complete VMX implementation, with few exceptions:
+       - Dual-monitor treatment of SMIs and SMM not implemented yet
+       - NMI virtualization, APIC virtualization not implemented yet
+       - VMENTER to not-active state not supported yet
+       - No advanced features like Extended Page Tables or VPID
+  - Support for configurable MSR registers emulation, to enable configure with
+        --enable-configurable-msrs option
+    Look for configuration example in .bochsrc and msrs.def
+  - Support new Intel Atom(R) MOVBE instruction, to enable configure with
+        --enable-movbe option
+  - Support for 1G pages in long mode, to enable configure with
+        --enable-1g-pages option
+  - Support for &gt; 32 bit physical address space in CPU. Up to 36 bit could be
+    seen in legacy mode (PAE) and up to 40 bit in x86-64 mode.
+    Still support the same amount of the physical memory in the memory object,
+    so system with &gt; 4Gb of RAM yet cannot be emulated.
+    To enable configure with --enable-long-phy-address option.
+  - Implemented modern BI<em>OS</em>es mode limiting max reported CPUID function
+    to 3 using .bochsrc CPU option. The mode is required in order to
+    correctly install and boot WinNT.
+  - Added ability to configure CPUID vendor/brand strings through .bochsrc
+    (patch from @SF by Doug Reed).
+  - Many bugfixes for CPU emulation correctness (both x86 and x86-64).
+  - Updated CPU instrumentation callbacks.
+  - Fixed Bochs internal debugger breakpoints/watchpoints handling.
+
+- Configure and compile
+  - Added ability to cho<em>os</em>e Bochs log file name and Bochs debugger log file
+    name from Bochs command line (using new -log and -dbglog options)
+  - Removed Peter Tattam&#39;s cl<em>os</em>ed source external debugger interface from
+    the code.
+  - Removed --enable-guest2h<em>os</em>t-tlb configure option. The option is always
+    enabled for any Bochs configuration.
+  - Removed --enable-icache configure option. The option is always enabled
+    for any Bochs configuration. Trace cache support still remains optional
+    and could be configured off.
+  - Added configure option to compile in GUI frontend for Bochs debugger,
+    to enable configure with --enable-debugger-gui option.
+    The GUI debugger frontend is enabled by default with Bochs debugger.
+  - Removed --enable-port-e9-hack configure option. The feature now could be
+    configured at runtime through .bochsrc.
+  - Added configure option to enable/disable A20 pin support. Disabling the
+    A20 pin support slightly speeds up the emulation.
+  - reduced dependencies between source files for faster code generation
+
+- BI<em>OS</em>
+  - Added S3 (suspend to RAM) ACPI state to BI<em>OS</em> (patch by Gleb Natapov)
+  - Implemented MTRR support in the bi<em>os</em> (patches by Avi Kivity and Alex
+    Williamsion with additions by Sebastian Herbszt)
+  - Bug fixes
+
+- I/O Devices
+  - Added user plugin support
+  - remaining devices converted to plugins: pit, ioapic, iodebug
+  - added &#39;plugin_ctrl&#39; bochsrc option to control the presence of optional
+    device plugins without a separate option. By default all plugins are enabled.
+  - added register mechanism for removable mouse and keyboard devices
+  - Hard drive / cdrom
+    - PACKET-DMA feature now supported by all ATAPI commands
+    - ATAPI command 0x1A added (based on the Qemu implementation)
+  - sb16
+    - Added ALSA sound support on Linux (PCM/MIDI output)
+    - FM synthesizer now usable with MIDI output (simple piano only)
+      - Fixed OPL frequency to MIDI note translation
+      - Fixed MIDI output command
+  - keyboard
+    - added keyboard controller commands 0xCA and 0xCB
+  - USB
+    - USB code reorganized to support more HC types and devices
+    - added USB OHCI support written by Ben Lunt
+    - added external USB hub support (initial code ported from Qemu)
+    - added USB cdrom support (SCSI layer ported from Qemu)
+    - added status bar indicators to show data transfer
+  - VGA
+    - VBE video memory increased to 16 MB
+    - implemented changeable VBE LFB base address (PCI only, requires latest
+      BI<em>OS</em> and VGABI<em>OS</em> images)
+  - I/O APIC
+    - implemented I/O APIC device hardware reset
+
+- Config interface
+  - new config interface &#39;win32config&#39; with start and runtime menu is now
+    the default on Windows (&#39;textconfig&#39; is still available)
+  - win32 device config dialogs are now created dynamicly from a parameter list
+    (works like the wx ParamDialog)
+  - changes in textcofig and the wx ParamDialog for compatibility with the new
+    win32 dialog behaviour
+  - Bochs param tree index keys are case independent now
+  - some other additions / bugfixes in the simulator interface code
+
+- Misc
+  - updated LGPL&#39;d VGABI<em>OS</em> to version 0.6c
+  - Updated Bochs TESTFORM to version 0.4
+
+- SF patches applied
+ [2784858] IO Handler names are not compared properly
+ [2712569] Legacy bi<em>os</em> serial data buffer timeout bug by grybranix
+ [2655090] 64 bit BSWAP with REX.W broken by M. Eby
+ [2645919] CR8 bug when reading by M. Eby
+ [1895665] kvm: bi<em>os</em>: add support to memory above the pci hole by Izik Eidus
+ [2403372] rombi<em>os</em>: check for valid cdrom before using it by Sebastian
+ [2307269] acpi: handle S3 by Sebastian
+ [2354134] TAP networking on Solaris/Sparc repaired
+ [2144692] The scsi device can not complete its writing data command by naiyue
+ [1827082] [PATCH] Configurable CPU vendor by Marcel Sondaar
+ [2217229] Panic on EBDA overflow in rombi<em>os</em>32 by Sebastian
+ [2210194] Log pci class code by Sebastian
+ [1984662] red led for disk write and titlebar mod by ggbsf
+ [2142955] Fix for monitor/mwait by Doug Gibson
+ [2137774] Patch to fix bug: cdrom: read_block: lseek returned error by Gabor Olah
+ [2134642] Fix scan_to_scanascii table for F11 and F12 by Ben Guthro &amp; Steve Ofsthun
+ [2123036] sdl fullscreen fix by ggbsf
+ [2073039] Remove CM<em>OS</em> accsess from AML code by Gleb Natapov
+ [2072168] smbi<em>os</em>: add L1-L3 cache handle to processor information by Sebastian
+ [2055416] bochsrc cpu options for cpuid vendor and brand string by Doug Reed
+ [2035278] rombi<em>os</em>: Fix return from BEV via retf by Sebastian
+ [2035260] rombi<em>os</em>: El Torito load segment fix by Sebastian
+ [2031978] Fix VMware backdoor command 0Ah by Jamie Lokier
+ [2015277] Remove obsolete comment about DATA_SEG_DEFS_HERE hack by Sebastian
+ [2011268] Set new default format and unit only if both are supported by Sebastian
+ [2001919] gdbstub: fix qSupported reply by Sebastian
+ [2001912] gdbstub: encl<em>os</em>e packet data by ap<em>os</em>trophes by Sebastian
+ [1998071] fix missing SIGHUP and SIGQUIT with term ui on mingw by Sebastian
+ [1998063] fix wrong colors with term ui by Sebastian
+ [1995064] Compile fix needed for --enable-debugger and gcc 4.3 by Hans de Goede
+ [1994564] Fix typo in RDMSR BX_MSR_MTRRFIX16K_A0000 by Sebastian
+ [1994396] Change hard_drive_p<em>os</em>t #if by Sebastian
+ [1993235] TESTFORM email address update by Sebastian
+ [1992322] PATCH: fix compilation of bochs 2.3.7 on bigendian machines by Hans de Goede
+ [1991280] Shutdown status code 0Ch handler by Sebastian
+ [1990108] Shutdown status code 0Bh handler by Sebastian
+ [1988907] Shutdown status code 0Ah handler by Sebastian
+ [1984467] two typ<em>os</em> in a release! (2.3.7)
+ [1981505] Init PIIX4 PCI to ISA bridge and IDE by Sebastian
+
+- these S.F. bugs were cl<em>os</em>ed/fixed
+ [2784148] an integer overflow BUG of Bochs-2.3.7 source code
+ [2695273] MSVC cpu.dsp failure in 2.3.7.zip
+  [616114] Snapshot/Copy crash on Win2K
+ [2628318] &#39;VGABI<em>OS</em>-latest&#39; bug
+ [1945055] can&#39;t &#39;make install&#39; lastest bochs on loepard
+ [2031993] Mac <em>OS</em> X Makefile bug
+ [1843199] install error on mac <em>os</em>x
+ [2710931] Problem compiling both instrumentation and debugger
+ [2617003] ExceptionInfo conflicts with <em>OS</em> X api
+ [2609432] stepping causes segfault (CVS)
+ [2605861] compile error with --enable-smp
+ [1757068] current cvs(Jul19, 07) failed to boot smp
+ [2426271] cannot get correct symbol entry
+ [2471982] VGA character height glitches
+ [1659659] wrong behaviour a20 at boot
+ [1998027] minwg + --with-term + --with-out-win32 = link failure
+ [1871936] bochs-2.3.6 make fails on wx.cc
+ [1684666] info idt for long mode
+ [2105989] could not read() hard drive image file at byte 269824
+ [1173093] Debugger totally not supports x86-64
+ [1803018] new win32debug dialog problems
+ [2141679] windows vcc build broken
+ [2162824] latest cvs fails to compile
+ [2164506] latest bochs fails to start
+ [2129223] MOV reg16, SS not working in real mode due to dead code
+ [2106514] RIS / startrom.com install ALM<em>OS</em>T works
+ [2123358] SMP (HTT): wbinvd executed by CPU1 crashes CPU0
+ [2002758] Arch Linux: &gt;&gt;PANIC&lt;&lt; ATAPI command with zero byte count
+ [2026501] El Torito incorrect boot segment:offset
+ [2029758] BEV can return via retf instead of int 18h
+ [2010173] x command breaks after one error about x/s or x/i
+ [1830665] harddrv PANIC: ATAPI command with zero byte count
+ [1985387] fail to make using gcc4 with --enable-debugger
+ [1990187] testform feedback
+ [1992138] Misspell in cpu/ia_opcodes.h
+
+- these S.F. feature requests were cl<em>os</em>ed/implemented
+ [2175153] Update MSVC project files
+  [658800] front end program and bi<em>os</em>
+ [1883370] Make cd and floppy images more usable
+  [422783] change floppy size without restarting
+ [2552685] param tree names should be case insensitive
+ [1214659] PC Speaker emu turnoff. Plugin Controll.
+ [1977045] support 40 bit physical address
+ [1506385] Intel Core Duo VT features
+ [1429015] Support for user plugins
+ [1488136] debugger access to floppy controller  
+ [1363136] Full debugger SMP and 64 bit support
+ [2068304] Support for ACPI
+  [431032] debugger &quot;x&quot; command
+  [423420] profiling ideas (SMF)
+  [445342] Add FM support?
+  [928439] alsa  
+
+-------------------------------------------------------------------------
+Changes in 2.3.7 (June 3, 2008):
+
+Brief summary :
+
++ More optimizations in CPU code - Bochs 2.3.7 is more than 2x faster
+  than Bochs 2.3.5 build !
+- Implemented LBA48 support in BI<em>OS</em>
+- Added memory access tracing for Bochs internal debugger
+- Implemented Intel(R) XSAVE/XRSTOR and AES instruction set extensions
+- Many fixes in CPU emulation and internal debugger
+  - Menuet<em>OS</em>64 floppy images booting perfect again !
+- updated LGPL&#39;d VGABI<em>OS</em> to version 0.6b
+
+Detailed change log :
+
+- CPU
+  - Support of XSAVE/XRSTOR CPU extensions, to enable configure with
+        --enable-xsave option
+  - Support of AES CPU extensions, to enable configure with
+        --enable-aes option
+  - Fixed Bochs failure on RISC h<em>os</em>t machines with BxRepeatSpeedups
+    optimization enabled
+  - Implemented SYSENTER/SYSEXIT instructions in long mode
+  - More than 100 bugfixes for CPU emulation correctness (both x86 and x86-64)
+    - Menuet<em>OS</em>64 floppy images booting perfect again !
+  - Updated CPU instrumentation callbacks
+
+- Bochs Internal Debugger and Disassembler
+  - Added memory access tracing for Bochs internal debugger, enable
+    by typing &#39;trace-mem on&#39; in debugger command line
+  - Many bug fixes in Bochs internal debugger and disassembler
+
+- System BI<em>OS</em> (Volker)
+  - Implemented LBA48 support
+  - Added generation of SSDT ACPI table that contains definitions
+    for available processors
+  - Added RTC device to ACPI DSDT table
+  - Added implementation of SMBI<em>OS</em>
+
+- I/O devices (Volker)
+  - VGA
+    - Implemented screen disable bit in sequencer register #1
+    - Implemented text mode cursor blinking
+  - Serial
+    - new serial modes &#39;pipe-server&#39; and &#39;pipe-client&#39; for win32
+    - new serial mode &#39;socket-server&#39;
+
+- Configure and compile
+  - Fixed configure bug with enabling of POPCNT instruction, POPCNT
+    instruction should be enabled by default when SSE4.2 is enabled.
+  - Removed --enable-magic-breakpoint configure option. The option is
+    automatically enabled  if Bochs internal debugger is compiled in.
+    It is still p<em>os</em>sible to turn on/off the feature through .bochsrc.
+  - Allow boot from network option in .bochsrc
+  - Added Bochs version info for Win32
+
+- Display libraries
+  - implemented text mode character blinking in some guis
+  - improved &#39;X&#39; gui runtime dialogs
+
+- SF patches applied
+ [1980833] Fix shutdown status code 5h handler by Kevin O&#39;Connor
+ [1928848] &quot;pipe&quot; mode for serial port (win32 only) by Eugene Toder
+ [1956843] Set the compatible pci interrupt router back to PIIX by Sebastian
+ [1956366] Do not announce C2 &amp; C3 cpu power state support by Igor Lvovsky
+ [1921733] support for LBA48 by Robert Millan
+ [1938185] Fix link problem with --enable-debugger by Sebastian
+ [1938182] Makefile.in - use @IODEV_LIB_VAR@ by Sebastian
+ [1928945] fix for legacy rombi<em>os</em> - e820 map and ACPI_DATA_SIZE by Sebastian
+ [1925578] rombi<em>os</em>32.c - fix ram_size in ram_probe for low memory setup by Sebastian
+ [1908921] rombi<em>os</em>32.c - move uuid_probe() call by Sebastian
+ [1928902] improvements to load-symbols by Eugene Toder
+ [1925568] PATCH: msvc compilation by Eugene Toder
+ [1913150] rombi<em>os</em>.c - e820 cover full size if memory &lt;= 16 mb by Alexander van Heukelum
+ [1919804] rombi<em>os</em>.c - fix and add #ifdef comments by Sebastian
+ [1909782] rombi<em>os</em>.c - remove segment values from comment by Sebastian
+ [1908918] SMBI<em>OS</em> - BI<em>OS</em> characteristics fix by Sebastian
+ [1901027] BI<em>OS</em> boot menu support (take 3)
+ [1902579] rombi<em>os</em>32.c - define pci ids by Sebastian
+ [1859447] Pass segment:offset to put_str and introduce %S by Sebastian
+ [1889057] rombi<em>os</em>.c - boot failure message by Sebastian
+ [1891469] rombi<em>os</em>.c - print BEV product string by Sebastian
+ [1889851] Win32 version information FILEVERSION for bochs.exe by Sebastian
+ [1889042] rombi<em>os</em>.c - fix comment by Sebastian
+ [1881500] bochsrc, allow boot: network by Sebastian
+ [1880755] Win32 version information for bochs.exe by Sebastian
+ [1880471] SMBI<em>OS</em> fix type 0 by Sebastian
+ [1878558] SMBI<em>OS</em> fixes by Sebastian
+ [1864692] SMBI<em>OS</em> support by Filip Navara
+ [1865105] Move bi<em>os</em>_table_area_end to 0xcc00 by Sebastian
+ [1875414] Makefile.in - change make use by Sebastian
+ [1874276] Added instrumentation for sysenter/sysexit by Lluis
+ [1873221] TLB page flush: add logical address to instrumentation by Lluis
+ [1830626] lba32 support by Samuel Thibault
+ [1861839] Move option rom scan after floppy and hard drive p<em>os</em>t by Sebastian
+ [1838283] Early vga bi<em>os</em> init by Sebastian
+ [1838272] rom_scan range parameter by Sebastian
+ [1864680] Save CPUID signature by Filip Navara
+
+- these S.F. bugs were cl<em>os</em>ed
+ [1976171] Keyboard missing break code for enter (0x9C)
+  [666433] physical read/write breakpoint sometimes fails
+ [1744820] info gdt and info idt shows the entire tables
+ [1755652] graphics: Menuet<em>OS</em>64 shows black screen
+ [1782207] Windows Installer malfunction, H<em>os</em>t=Linux, Guest=Win98SE
+ [1697762] <em>OS</em>/2 Warp Install Failed
+ [1952548] String to char * warnings
+ [1940714] SYSENTER/SYSEXIT doesn&#39;t work in long mode
+ [1422342] SYSRET errors
+ [1923803] legacy rombi<em>os</em> - e820 map and ACPI_DATA_SIZE
+ [1936132] Link problem with --enable-debugger &amp; --enable-disasm
+ [1934477] Linear address wrap is not working
+ [1424984] virtual machine freezes in Bochs 2.2.6
+ [1902928] with debugger cpu_loop leaves CPU with unstable state
+ [1898929] Bochs VESA BI<em>OS</em> violates specs (banks == 1)
+ [1569256] bug in datasegment change in long mode
+ [1830662] ACPI: no DMI BI<em>OS</em> year, acpi=force is required
+ [1868806] VGA blink enable &amp; screen disable
+ [1875721] Bit &quot;Accessed&quot; in LDT/GDT descriptors &amp; #PF
+ [1874124] bx_Instruction_c::ilen() const
+ [1873488] bochs-2.3.6 make fails on dbg_main.cc
+
+- these S.F. feature requests were implemented
+ [1422769] SYSENTER/SYSEXIT support in x86-64 mode
+ [1847955] Version information for bochs(dbg).exe
+  [939797] SMBI<em>OS</em> support
+
+-------------------------------------------------------------------------
+Changes in 2.3.6 (December 24, 2007):
+
+Brief summary :
+
++ More than 25% emulation speedup vs Bochs 2.3.5 release!
+
+      - Thanks to Darek Mihocka (http://www.emulators.com)
+        for providing patches and ideas that made the
+        speedup p<em>os</em>sible!
+
++ Up to 40% speedup vs Bochs 2.3.5 release with trace cache optimization!
+
+- Lots of bugfixes in CPU emulation
+- Bochs benchmarking support
+- Added emulation of Intel SSE4.2 instruction set
+
+Detailed change log :
+
+- CPU
+  - Added emulation of SSE4.2 instruction set, to enable use
+        --enable-sse=4 --enable-sse-extension configure options
+    to enable POPCNT instruction only use configure option
+        --enable-popcnt
+  - Implemented MTRR emulation, to enable use --enable-mtrr configure
+    option. MTRRs is enabled by default when cpu-level &gt;= 6.
+  - Implemented experimental MONITOR/MWAIT support including optimized
+    MWAIT CPU state and hardware monitoring of physical address range,
+    to enable use --enable-monitor-mwait configure option.
+  - Removed h<em>os</em>tasm optimizations, after Bochs rebenchmarking it was found
+    that the feature bringing no speedup or even sometimes slows down
+    emulation!
+  - Merged trace cache optimization patch, the trace cache optimization
+    is enabled by default when configure with --enable-all-optimizations
+    option, to disable trace cache optimization configure with
+        --disable-trace-cache
+  - Many minor bugfixes in CPU emulation (both ia32 and x86-64)
+  - Updated CPU instrumentation callbacks
+
+- Bochs Internal Debugger and Disassembler
+  - Many fixes in Bochs internal debugger and disassembler, some debugger
+    interfaces significantly changed due transition to the param tree
+    architecture
+  - Added support for restoring of the CPU state from external file
+    directly from Bochs debugger
+
+- Configure and compile
+  - Renamed configure option --enable-4meg-pages to --enable-large-pages.
+    The option enables page size extensions (PSE) which refers to 2M pages
+    as well.
+  - Removed --enable-save-restore configure option, save/restore feature
+    changed to be one of the basic Bochs features and compiled by default
+    for all configurations.
+  - Added new Bochs benchmark mode. To run Bochs in benchmark mode execute
+    it with new command line option &#39;bochs -benchmark time&#39;. The emulation
+    will be automatically stopped after &#39;time&#39; millions of emulation
+    cycles executed.
+  - Another very useful option for benchmarking of Bochs could be enabled
+    using new &#39;print_timestamps&#39; directive from .bochsrc:
+        print_timestamps: enable=1
+  - Added --enable-show-ips option to all configuration scripts used to
+    build release binaries, so all future releases will enjoy IPS display.
+  - Enable alignment check in the CPU and #AC exception by default for
+    --cpu-level &gt;= 4 (like in real hardware)
+
+- SF patches applied
+ [1491207] Trace Cache Speedup patch by Stanislav
+ [1857149] Define some IPL values by Sebastian
+ [1850183] Get memory access mode in BX_INSTR_LIN_READ by Lluis Vilanova
+ [1841421] pic: keep slave_pic.INT and master_pic.IRQ_in bit 2 in sync by Russ Cox
+ [1841420] give segment numbers in exception logs by Russ Cox
+ [1801696] Allow Intel builds on Mac <em>OS</em> X
+ [1830658] Fix &gt;32GB disk banner by Samuel Thibault
+ [1813314] Move #define IPL_* and typedef ipl_entry by Sebastian
+ [1809001] Save PnP Option ROM Product Name string in IPL Boot Table by Sebastian
+ [1821242] Fix for #1801285, Niclist.exe broken by Sebastian
+ [1819567] Code warning cleanup
+ [1816162] Update comment on bi<em>os</em>_printf() by Sebastian
+ [1811139] Trivial Fix when BX_PCIBI<em>OS</em> and BX_ROMBI<em>OS</em>32 not defined by Myles Watson
+ [1811190] Improve HD recognition and CD boot by Myles Watson
+ [1811860] Implement %X in bi<em>os</em>_printf by Sebastian
+ [1809649] printf %lx %ld %lu by Myles Watson
+ [1809651] move BX_SUPPORT_FLOPPY by Myles Watson
+ [1809652] dpte and Int13DPT fixes by Myles Watson
+ [1809669] clip cylinders to 16383 in hard drive by Myles Watson
+ [1799903] Build BI<em>OS</em> on amd64 by Robert Millan
+ [1799877] Fix for parallel build (make -j2) by Robert Millan
+
+- these S.F. bugs were cl<em>os</em>ed
+ [1837354] website bug: View the Source link broken
+ [1801268] Reset from real mode no longer working
+ [1843250] Using forward slashes gives invalid filename
+ [1823446] BI<em>OS</em> bug, local APIC #0 not detected
+ [1801285] Niclist.exe broken
+ [1364472] breakpoints sometimes don&#39;t work
+  [994451] breakpoint bug
+ [1801295] NSIS installer vs Windows Notepad
+ [1715328] Unreal mode quirk
+ [1503972] debugger doesn&#39;t debug first instruction on exception
+ [1069071] div al, byte ptr [ds:0x7c18] fails to execute
+ [1800080] Wrong &quot;BX_MAX_SMP_THREADS_SUPPORTED&quot; assertion
+
+- these S.F. feature requests were implemented
+ [1662687] Download for Win32-exe with x64 Mode and debugging
+  [604221] Debugger command: query lin-&gt;phys mapping
+
+-------------------------------------------------------------------------
+Changes in 2.3.5 (September 16, 2007):
+
+Brief summary :
+- Critical problems fixed for x86-64 support in CPU and Bochs internal debugger
+- ACPI support
+- The release compiled with x86-64 and ACPI
+- Hard disk emulation supports ATA-6 (LBA48 addressing, UDMA modes)
+- Added emulation of Intel SSE4.1 instruction set
+
+Detailed change log :
+
+- CPU
+  - Fixed critical bug with 0x90 opcode (NOP) handling in x86-64 mode
+  - implied stack references where the stack address is not in canonical form
+    should causes a stack exception (#SS)
+  - Added emulation of SSE4.1 instruction set (Stanislav)
+  - Do not save and restore XMM8-XMM15 registers when not in x86-64 mode
+  - Fixed zero upper 32-bit part of GPR in x86-64 mode
+  - CMOV_GdEd should zero upper 32-bit part of GPR register even if the
+    &#39;cmov&#39; condition was false !
+  - Implemented CLFLUSH instruction, report non-zero cache size in CPUID
+  - Fixed PUSHA/POPA instructions behavior in real mode
+  - Fixed detection of inexact result by FPU
+  - Fixed denormals-are-zero (DAZ) handling by SSE convert instructions
+  - Implemented Misaligned Exception Mask support for SSE (MXCSR[17])
+  - Implemented Alignment Check in the CPU and #AC exception, to enable
+    use --enable-alignment-check configure option
+
+- General
+  - 2nd simulation support in wxBochs now alm<em>os</em>t usable (simulation cleanup
+    code added and memory leaks fixed)
+
+- Configure and compile
+  - several fixes for Mac<em>OS</em>X, OpenBSD and Solaris 10
+  - enable save/restore feature by default for all configurations
+  - reorganized SSE configure options to match Intel(R) Programming
+    Reference Manual, new option introduced for SSE extensions enabling.
+    To enable Intel Core Duo 2 new instructions use
+        --enable-sse=3 --enable-sse-extension
+    enabling of SSE4.1 (--enable-sse=4) will enable SSE3 extensions as well
+  - removed old PIT, always use new PIT written by Greg Alexander,
+    removed configure option --enable-new-pit
+
+- I/O devices (Volker)
+  - Floppy
+    - partial non-DMA mode support (patch by John Comeau)
+  - Hard drive / cdrom
+    - hard disk emulation now supports ATA-6 (LBA48 addressing, UDMA modes)
+    - VMWare version 4 disk image support added (patch by Sharvil Nanavati)
+  - PCI
+    - initial support for the PIIX4 ACPI controller
+  - Serial
+    - added support for 3-button mouse with Mousesystems protocol
+  - USB
+    - experimental USB device change support added
+    - rewrite of the existing USB devices code
+    - new USB devices &#39;disk&#39; and &#39;tablet&#39; (ported from the Qemu project)
+
+- Bochs internal debugger
+  - fixed broken debugger &quot;rc file&quot; option (execute debugger command from file)
+  - implementation of a gui frontend (&quot;windebug&quot;) for win32 started
+  - gdbstub now accepts connection from any h<em>os</em>t
+  - several documentation updates
+  - a lot of disasm and internal debugger x86_64 support fixes
+
+- Configuration interface
+  - fixes and improvements to the save state dialog handling
+
+- Display libraries
+  - text mode color handling improved in some guis
+  - win32 fullscreen mode (patch by John Comeau)
+
+- System BI<em>OS</em> (Volker)
+  - 32-bit PM BI<em>OS</em> init code for ACPI, PCI, SMP and SMM (initial patches by
+    Fabrice Bellard)
+  - PCI BI<em>OS</em> function &quot;find class code&quot; implemented
+
+- SF patches applied
+ [1791000] 15h 8600h is reading the wrong stack frame by Sebastian
+ [1791016] rombi<em>os</em>32.c, ram_probe(), BX_INFO missing value by Sebastian
+ [1786429] typo in bochsrc.5 by Sebastian
+ [1785204] Extend acpi_build_table_header to accept a revision number by Sebastian
+ [1766536] Partial Patch for Bug Report 1549873 by Ben Lunt
+ [1763578] ACPI Table Revision 0 -&gt; 1
+ [1642490] implement alignment check and #AC exception by Stanislav Shwartsman
+ [1695652] [PATCH] .pcap pktlog and vnet PXE boot by Duane Voth
+ [1741153] Add expansion-ROM boot support to the ROMBI<em>OS</em>
+ [1734159] Implemented INT15h, fn 0xC2 (mouse), subfn 3, set resolution
+ [1712970] bi<em>os</em>_printf %s fix
+ [1573297] PUSHA/POPA real mode fix by Stanislav Shwartsman
+ [1641816] partial support for non-DMA access to floppy by John Comeau
+ [1624032] shows where write outside of memory occurred by John Comeau
+ [1607793] allow fullscreen when app requests it by John Comeau
+ [1603013] Bugfix for major NOP problem on x64 by mvysin
+ [1600178] Make tap and tuntap compile on OpenBSD by Jonathan Gray
+ [1149659] improve gdbstub network efficiency by Avi Kivity
+ [1554502] Trivial FPU exception handling fix
+
+- these S.F. bugs were cl<em>os</em>ed
+ [1316008] Double faults when it shouldn&#39;t - gcc 4.0.2
+ [1787289] broken ABI for redolog class when enable-compressed-hd
+ [1787500] tftp_send_optack not 64bit clean
+ [1264540] Security issue with Bochs website
+ [1767217] Debugger Faults including ud2
+ [1729822] Various security issues in io device emulation
+ [1675202] mptable h<em>os</em>ed (bad entry count in header)
+ [1197141] &#39;make install&#39; installs to bad location
+ [1157623] x86Solaris10 cannot recoginize ACPI RSD PTR
+ [1768254] large HDD in Bochs/bximage
+ [1496157] Windows Vista Beta2 d<em>os</em>n&#39;t boot
+ [1755915] Illegal Hard Disk Signature Output
+ [1717790] info gdt and info idt scrolls away, too long result
+ [1726640] Debugger displays incorrect segment for mov instruction
+ [1719156] Typo in misc_mem.cpp
+ [1715270] Debugger broken in/beyond 2.3
+ [1689107] v8086 mode priviledge check failed
+ [1704484] A few checks when CPU_LEVEL &lt; 4
+ [1678395] Problem with zero sector...
+  [876990] SA-RTL <em>OS</em> fails on PIC configuration
+ [1673582] save/restore didn&#39;t restore simulation correctly
+ [1586662] EDD int 13h bug, modify eax
+  [666618] POP_A Panic in D<em>OS</em> EMU
+ [1001485] panic: not enough bytes on stack
+ [1667336] delay times an order of magnitude slow
+ [1665601] crash disassembling bootcode
+ [1657065] CVS sources won&#39;t compile
+ [1653805] bochs&#39;s gdbstub uses incorrect protocol
+ [1640737] ASM sti command frezzes guest <em>OS</em>
+ [1636439] latest CVS sources don&#39;t compile under Cygwin
+ [1634357] disasm incorrect (no sign ext) displacement in 64-bit mode
+ [1376453] pcidev segfaults bochs
+ [1180890] IOAPIC in BOCHS - WinXP 64 in MP version
+ [1597528] 2.3 fails to compile on amd64
+ [1526255] FLD1 broken when compaling with gcc 4.0.x
+ [1597451] eth_fbsd is broken under FreeBSD
+ [1571949] Bochs will not compile under Solaris
+ [1500216] Bochs fails to boot Be<em>Os</em> CD
+ [1458339] bochs-2.2.6 WinXP Binary ACPI error installing FreeBSD 6.0
+ [1440011] patches needed for FreeBSD 6.0 to compile Bochs
+  [431674] some devices don&#39;t have a prefix
+  [458150] QNX demo disk crashes with new pit
+  [818322] Bochs 2.1 cvs: <em>OS</em>/2 - read verify on non disk
+  [906840] KBD: bogus scan codes generated in set 3
+ [1005053] No keyboard codes translation
+ [1109374] Problem with Scancodeset 2
+ [1572345] Bochs won&#39;t continue
+ [1568153] Bochs looks for (and loads?) unspecified display libraries
+ [1563462] Errors in /iodev/harddrv.h
+ [1562172] TLB_init() fails to initialize priv_check array if USE_TLB 0
+ [1385303] debugger crashes after panic
+ [1438227] crc.cpp missing in bx_debug version 2.2.6
+ [1501825] debugger crashes on to high input
+ [1420959] Memory leak + buffer overflow in Bochs debugger
+ [1553289] Error in Dis-assembler
+  [542464] I cannot use FLAT
+ [1548270] Bochs won&#39;t die with its pseudo terminal
+ [1545588] roundAndPackFloatx80 does not detect round up correctly
+
+-------------------------------------------------------------------------
+Changes in 2.3 (August 27, 2006):
+
+Brief summary :
+- limited save/restore support added (config + log options, hardware state)
+- configuration parameter handling rewritten to a parameter tree
+- lots of cpu and internal debugger fixes
+- hard disk geometry autodetection now supported by m<em>os</em>t of the image types
+- hard disk emulation now supports ATA-3 (multiple sector transfers)
+- VBE memory size increased to 8MB and several VGA/VBE fixes
+- updated LGPL&#39;d VGABI<em>OS</em> to version 0.6a
+
+Detailed change log :
+
+- CPU and internal debugger fixes
+  - Fixed bug in FSTENV instruction (Stanislav Shwartsman)
+  - Recognize #XF exception (19) when SSE is enabled
+  - Fixed bug in PSRAW/PSRAD MMX and SSE instructions
+  - Save and restore RIP/RSP only for FAULT-type exceptions, not for traps
+  - Correctly decode, disassemble and execute multi-byte NOP &#39;0F F1&#39; opcode
+  - Raise A20 line after system reset (Stanislav Shwartsman)
+  - Implemented SMI and NMI delivery (APIC) and handling in CPU (Stanislav)
+  - Experimental implementation of System Management Mode (Stanislav)
+  - Added emulation of SSE3E instructions (Stanislav Shwarstman)
+  - Save and restore FPU opcode, FIP and FDP in FXSAVE/FRSTOR instructions
+  - Fixed bug in MOVD_EdVd opcode (always generated #UD exception)
+  - Fixed critical issue, Bochs was not supporting &gt; 16 bit LDT.LIMIT values
+  - Many fixes in Bochs internal debugger and disassembler
+
+- CPU x86-64 fixes
+  - Fixed SYSRET instruction implementation
+  - Fixed bug in CALL/JMP far through 64-bit callgate in x86-64 mode
+  - Correctly decode, disassemble and execute &#39;XCHG R8, rAX&#39; instruction
+  - Correctly decode and execute &#39;BSWAP R8-R15&#39; instructions
+  - Fixed ENTER and LEAVE instructions in x86-64 mode (Stanislav)
+  - Fixed CR4 exception condition (No Name)
+  - Fixed x86 debugger to support x86-64 mode (Stanislav)
+
+- APIC and SMP
+  - Support for Dual Core and Intel(R) HyperThreading Technology. Now you
+    could cho<em>os</em>e amount of cores per processor and amount of HT threads per
+    core from .bochsrc for SMP simulation (Stanislav Shwartsman)
+  - Allow to control SMP quantum value through .bochsrc CPU
+    option parameter. Previous Bochs versions used hardcoded quantum=5
+    value.
+  - Fixed interrupt priority bug in service_local_apic()
+  - Fixed again reading of APIC IRR/ISR/TMR registers. Finally it becomes
+    fully correct :-)
+
+- Configure and compile
+  - Moved configure time --enable-reset-on-triple-fault option to runtime,
+    the &#39;cpu&#39; option in .bochsrc is extended and the old configure option
+    is deprecated (Stanislav Shwartsman)
+  - Removed --enable-pni configure option, to compile with PNI use
+    --enable-sse=3 instead (Stanislav Shwartsman)
+  - enable SEP (SYSENTER/SYSEXIT) support by default for Penitum II+
+    processor emulation (i.e. if cpu-level &gt;= 6 and MMX is enabled)
+
+- general
+  - Limited save/restore support added. The state of CPU, memory and all
+    devices can be saved now (state of harddisk images not handled yet).
+  - Fixed several memory leaks
+
+- configuration interface
+  - Configuration parameter handling rewritten to a parameter tree. This is
+    required for dynamic menus/dialogs, user-defined options and save/restore.
+  - Support for user-defined bochsrc options added
+  - help support at the parameter prompt in textconfig added
+
+- I/O devices (Volker)
+  - Floppy
+    - partial sector transfers fixed
+  - Hard drive / cdrom
+    - several fixes to the IDE register behaviour (e.g. in case of a channel
+      with only one drive connected)
+    - fixed data alignment of &#39;growing&#39; hard drive images (sharing images
+      between Windows and Linux now p<em>os</em>sible)
+    - disk geometry autodetection now supported by m<em>os</em>t of the image types
+      (unsupported: external, dll and compressed modes)
+    - multi sector read/write commands implemented
+    - hard disk now reporting ATA-3 supported
+    - ATAPI &#39;inquiry&#39; now returns a unique device name
+  - Keyboard
+    - reset sent to keyboard has no effect on the 8042 (scancode translation)
+  - PCI
+    - forward PIRQ register changes to the I/O APIC (if present)
+    - attempt to fix and update the emulation part of &#39;pcidev&#39; (untested)
+  - VGA
+    - VBE memory size increased to 8MB and several VBE fixes
+    - VGA memory read access fixed (bit plane access and read mode)
+    - VGA memory is now a part of the common video memory
+
+- System BI<em>OS</em> (Volker)
+  - enable interrupts before executing INT 19h
+  - fixed ATA device detection in case of one drive only connected to controller
+  - improved INT 15h function AX=E820h
+  - real mode PCI BI<em>OS</em> now returns IRQ routing information (function 0Eh)
+  - keyboard LED flags handling fixed and improved
+  - fixed handling of extended keys in INT 09h
+  - Updated LGPL&#39;d VGABI<em>OS</em> to version 0.6a
+
+- SF patches applied
+ [1340111] fixes and updates to usb support by Ben Lunt
+ [1539420] minor addition to pci_usb code by Ben Lunt
+ [1455958] call/jmp through call gate in 64-bit mode
+ [1433107] PATCH: fix compile with wxwindows 2.6 (unicode / utf8) by jwrdegoede
+ [1386671] Combined dual core and hyper-threading patch
+
+- these S.F. bugs were cl<em>os</em>ed
+  [833927] TTD: System Error TNT.40025: Unexpected processor exception
+  [789230] Sending code that shows lock up when setting idt
+  [909670] Problems with Symantec Gh<em>os</em>t
+ [1540241] include missing in <em>os</em>dep.cc
+ [1539373] Incorrect disasm for &quot;mov moffset,bla&quot; in 64bit
+ [1538419] incorrect disassembly of [rip+disp] with rex.b
+ [1535432] shift+cursor key maps to a digit
+ [1504891] Knoopix 5.0.1 error
+ [1424355] bochs-2.2.6 ata failure in windoze 98se
+ [1533979] wrong disassembly of IN instruction
+  [620059] paste won&#39;t stop
+ [1164904] status bar doesn&#39;t show num/caps/scroll lock status
+ [1061720] ATA Support level for HD
+ [1522196] Broken CHANGES link in main page
+ [1438415] crash if screen scrolled downwards
+  [778441] Shouldn&#39;t interrupts be enable after BI<em>OS</em>?
+ [1514949] I got a problem with the 8253 timer
+ [1513544] disasm of 0xec (in AL,DX) returns ilen of 2 instead of 1
+ [1508947] APIC interrupt priority checking and interrupt delivery
+  [766286] Debugger halts after any GPF exception
+  [639143] va_list is not a pointer on linuxppc
+ [1501815] debugger examines memory over page-boundary wrong
+ [1503978] movsb/w/d doesn&#39;t work when direction is stored
+ [1499405] WinPCap has changed URL h<em>os</em>ting
+ [1498519] APIC IRR bits not set while interrupts disabled
+ [1498193] Bochs segfaults on LTR instruction
+  [787140] Guest2H<em>os</em>tTLB optimization bug
+ [1492070] instrument stop
+ [1487772] No SEP on P4
+ [1488335] Growing hard disk images severe interoperability errors!
+ [1076312] Shadow RAM and TLB
+ [1282249] The real i440FX chipset Award bi<em>os</em> hangs
+ [1479763] mistake &quot;mov ax,[es:di]&quot; for &quot;mov ax,[ds:di]&quot;
+ [1453575] Misconfigured floppy DMA transfers do not terminate.
+ [1460068] Incorrect handling for the Options Menu Item
+  [910203] bochs-2.1.1 wx.lo failed
+ [1438654] PANIC when trying to run install-amd64-minimal-2005.0.iso
+ [1458320] compile hdimage.h fails
+ [1455880] bochs-2.2.6,2: make error on FreeBSD
+  [696890] Network wouldn&#39;t run under W2k h<em>os</em>ting MSD<em>OS</em>
+  [673391] SMP timer problems
+ [1291059] wxWindows GUI on non-windows/configure issue
+ [1356450] bochs 2.2.1 errors-omittions
+ [1178017] Win98 guest cannot receive network packets from h<em>os</em>t
+ [1076315] a20_mask after restarting
+ [1436323] real hw does not panic when bad Ib in CMPSS_VssWssIb
+ [1435269] cdrom_amiga<em>os</em> is not compilable
+ [1433314] disasm issues
+ [1170614] relative jumps/calls wrong in debugger
+  [758121] user might get confused when interrupt handler invoked
+ [1170622] You cannot toggle OFF &quot;show&quot; flags
+ [1406387] JMP instruction should display absolute address
+ [1428813] PANIC: ROM address space out of range
+ [1426288] DR-D<em>OS</em>s EMM386 problem
+ [1412036] Bochs cannot recognize PCI NIC correctly
+  [435115] dbg: modebp broken and no docs
+ [1419366] disasm cs:eip does not work anymore
+ [1419393] SSE&#39;s #XF exception -&gt; &quot;exception(19): bad vector&quot;
+ [1419429] disassembly of &quot;260f6f00&quot; show DS: instead of ES: prefix
+ [1417583] Interrupt behaviour changed from 2.2.1 to 2.2.5
+ [1418281] &#39;push&#39; (6A) incorrectly disassembled
+ [1417791] FLDENV generating exception when real hw does not.
+ [1264583] <em>OS</em>/2 1.1 doesn&#39;t run
+
+-------------------------------------------------------------------------
+Changes in 2.2.6 (January 29, 2006):
+
+- First major SMP release !
+  - several APIC and I/O APIC fixes make SMP Bochs booting Windows NT4.0
+    or Knoppix 4.0.2 without noapic kernel option in SMP configuration.
+  - critical APIC timer bug fixed
+  - obsolete SMP BI<em>OS</em> images removed (MP tables created dynamicaly)
+  - determine number of processors in SMP configuration through .bochsrc
+    new .bochsrc option &#39;CPU&#39; allows to cho<em>os</em>e number of processors to emulate
+  - new configure option --enable-smp to configure Bochs for SMP support,
+    the old --enable-processors=N option is deprecated
+- CPU and internal debugger fixes
+  - enabled #PCE bit in CR4 register, previ<em>os</em>ly setting of this bit
+    generated #GP(0) fault
+  - enabled LAHF/SAHF instructions in x86-64 mode
+  - fixed bug in PMULUDQ SSE2 instruction
+  - fixes in Bochs debugger
+- Configure and compile
+  - enable VME (virtual 8086 mode extensions) by default if cpu-level &gt;= 5
+  - enable Bochs disassembler by default for all configurations
+  - win32 installer script improvements
+  - ips parameter moved to new &#39;CPU&#39; option
+  - show IPS value in status bar if BX_SHOW_IPS is enabled
+- Other
+  - several fixes in the hard drive, keyboard, timer, usb and vga code
+  - new user button shortcut &quot;bksl&quot; (backslash)
+  - updated Bochs instrumentation examples
+  - user and development documentation improved
+
+-------------------------------------------------------------------------
+Changes in 2.2.5 (December 30, 2005):
+
+Brief summary :
+- added virtual 8086 mode extensions (VME) implementation
+- several fixes/improvements in x86-64 emulation, debugger and disassembler
+- new serial mode &#39;socket&#39; connects a network socket
+- IDE busmaster DMA feature for harddisks and cdroms completed and enabled
+- many improvements in Bochs emulated I/O devices (e.g. floppy, cdrom)
+- Updated LGPL&#39;d VGABI<em>OS</em> to version 0.5d
+
+Detailed change log :
+
+- CPU
+  - fixed XMM registers restore in FXRSTOR instruction (Andrej Palkovsky)
+  - print registers dump to the log if tripple fault occured
+  - fixed PANIC in LTR instruction (Stanislav)
+  - added virtual 8086 mode extensions (VME) implementation, to enable
+    configure with --enable-vme (Stanislav)
+  - flush caches and TLBs when executing WBINVD and INVD instructions
+  - do not modify segment limit and AR bytes when modifying segment
+    register in real mode (support for unreal mode)
+  - fixed init/reset values for LDTR and TR registers
+  - reimplemented hardware task switching mechanism (Stanislav)
+  - generate #GP(0) when fetching instruction cr<em>os</em>s segment boundary
+
+- CPU (x86-64) (Stanislav Shwartsman)
+  - implemented call_far/ret_far/jmp_far instructions in long mode
+  - fixed IRET operation in long mode
+  - fixed bug prevented setting of NXE/FFXSR bits in MSR.EFER register
+  - implemented RDTSCP instruction
+  - do not check CS.limit when prefetching instructions in long mode
+  - fixed masked write instructions (MASKMOVQ/MASKMOVDQU) in long mode
+  - fetchdecode fixes for x86-64
+
+- APIC
+  - Fixed bug in changing local APIC id (Stanislav)
+  - Fixed reading of IRR/ISR/TMR registers (patch by wmrieker)
+  - Implemented spurious interrupt register (Stanislav, patch by wmrieker)
+  - Fixed interrupt delivery bug (anonymous #SF patch)
+  - Correctly implemented ESR APIC register (Stanislav)
+
+- Bochs debugger
+  - Fixed bug in bochs debugger caused breakpoints doesn&#39;t fire sometimes
+    (Alexander Krisak)
+  - watchpoints in device memory fixed (Nickolai Zeldovich)
+  - new debug interface to access Bochs CPU general purp<em>os</em>e registers
+    with support for x86-64
+
+- Disassembler (Stanislav Shwartsman)
+  - Fixed disassembly for FCOMI/FUCOMI instructions
+  - Full x86-64 support in disassembler. The disassembler module extended
+    to support x86-64 extensions. Still limited by Bochs debugger which
+    is not supporting x86-64 at all ;(
+
+- I/O devices (Volker)
+  - general
+    - memory management prepared for large BI<em>OS</em> images (up to 512k)
+    - slowdown timer sleep rate fixed (now using 1 msec on all platforms)
+    - some device specific parameter handlers moved into the device code
+  - serial
+    - new serial mode &#39;socket&#39; connects a network socket (#SF patch by Andrew Backer)
+  - hard drive / cdrom
+    - assign a unique serial number to each drive (fixes harddrive detection
+      problems with Linux kernels 2.6.x: &quot;ignoring undecoded slave&quot;)
+    - geometry autodetection for &#39;flat&#39; hard disk images added. Works with
+      images created with bximage (heads = 16, sectors per track = 63)
+    - ATAPI command &#39;read cd&#39; implemented, some other commands improved
+    - cdrom read block function now tries up to 3 times before giving up
+    - emulation of raw cdrom reads added, some other lowlevel cdrom fixes
+    - IDE busmaster DMA feature for harddisks and cdroms completed and enabled
+    - disk image size limit changed from 32 to 127 GB
+    - split ATA/ATAPI emulation code and image handling code
+  - floppy
+    - fixes for <em>OS</em>/2 (patch by Robin Kay)
+    - disk change line behaviour fixed (initial patch by Ben Lunt)
+    - end-of-track (EOT) condition handling implemented
+    - more accurate timing for read/write data and format track commands using
+      a motor speed of 300 RPM
+    - timing of recalibrate and seek commands now depends on the step rate,
+      date rate and the steps to do
+    - floppy controller type changed to 82077AA
+  - cm<em>os</em>
+    - RTC 12-hour and binary mode implemented
+    - number of CM<em>OS</em> registers changed from 64 to 128
+    - bochsrc option &#39;cm<em>os</em>image&#39; improved
+    - save cm<em>os</em> image on exit if enabled
+  - speaker
+    - simple speaker support for <em>OS</em> X added (patch by brianonn@telus.net)
+  - pci
+    - Be<em>OS</em> boot failure fix in the PCI IDE code
+    - don&#39;t register i/o and memory regions during PCI probe
+  - vga
+    - memory allocation for vga extensions fixed
+  - usb
+    - some bugfixes by Ben Lunt (mouse and keypad are usable now)
+  - networking modules
+    - VDE networking module now enabled on Linux
+
+- display libraries
+  - general
+    - new syntax for the userbutton shortcut string and more keys supported
+  - win32
+    - fixed keycode generation for right alt/ctrl/shift keys
+    - runtime dialog is now a property sheet
+  - x11
+    - simple dialog boxes for the &quot;ask&quot; and &quot;user shortcut&quot; feature implemented
+    - Slovenian keymap added (contributed by Mitja Ursic)
+
+- configuration interface
+  - ask dialog is now enabled by default for win32, wx and x display libraries
+  - bochsrc option floppy_command_delay is obsolete now (floppy timing now based
+    on hardware specs)
+  - floppy image size detection now available in the whole config interface
+  - some device specific parameter handlers moved into the device code
+  - calculate BI<em>OS</em> ROM start address from image if not specified
+
+- System BI<em>OS</em> (Volker)
+  - PCI i/o and memory base address initialization added
+  - several keyboard interrupt handler fixes (e.g. patch by japheth)
+  - several floppy fixes (e.g. <em>OS</em>/2 works with patch by Robin Kay)
+  - some more APM functions added
+  - Updated LGPL&#39;d VGABI<em>OS</em> to version 0.5d
+  - generate SMP specific tables dynamicly by the Bochs memory init code
+
+- SF patches applied
+ [1389776] Disk sizes over 64 Gbytes by Andrzej Zaborowski
+ [1359162] disasm support for x86-64 by Stanislav Shwartsman
+  [857235] task priority and other APIC bugs, etc by wmrieker
+ [1359011] build breaks for 386 + debugger + disasm by shirokuma
+ [1352761] Infinite loop when trying to debug a triple exception
+ [1311170] small APIC bug fix (interrupt sent to the wrong CPU)
+ [1309763] Watchpoints don&#39;t work in device memory by Nickolai Zeldovich
+ [1294930] change line status on floppy by Ben Lunt
+ [1282033] SSE FXRESTORE not working correctly by Ondrej Palkovsky
+  [816979] wget generalizations by Lyndon Nerenberg
+ [1214886] No more pageWriteStamp / unified icache by H. Johansson
+ [1107945] com-&gt;socket redirection support by Andrew Backer
+
+- these S.F. bugs were cl<em>os</em>ed
+  [669180] win95 install : unknown SET FEATURES subcommand 0x03
+ [1346692] bochs 2.2.1 VGA BI<em>OS</em> error
+ [1354963] floppy in Kolibri<em>OS</em>
+ [1378204] error: bochs-2.2.1, --enable-sb16, --disable-gameport
+ [1368412] VDE problems in BOCHS
+  [533446] CPU and APIC devices appear twice
+ [1000796] bximage fails to create image of specified size
+ [1170793] Quarterdeck QEMM doesn&#39;t work
+  [923704] Multiple opcode prefixes don&#39;t reflect Trap 13
+ [1166392] Doc<em>Book</em>/documentation issues
+ [1368239] broken grater than 4GB size of sparse type hd image
+ [1365830] i386 compile breaks on paging
+  [427550] Incomplete IRETD implementation
+ [1215081] MSVC workspace STILL not fixed
+  [736279] Jump to Task
+ [1356488] FD change fail &amp; occur error
+  [957615] [CPU ] prefetch: RIP &gt; CS.limit
+ [1353866] not booting linux-2.6.14
+ [1351667] load32bit<em>OS</em>Image does not work with --enable-x86-debugger
+ [1217476] Incorrect (?) handling of segment registers in real mode
+ [1184711] <em>OS</em>2 D<em>OS</em> crash [2.2.pre2]
+  [624330] support for disks &gt; 32GiB
+ [1348368] bochs 2.2.1 bximage error
+ [1342081] Configuration Menu option failed
+ [1138616] <em>OS</em>/2 Warp 4 hangs when booting
+ [1049840] mouse and video conflict
+ [1164570] Unable to perform Fedora Core 4 test 1 installation
+ [1183201] Windows 2000 (MSDN build 2150?) does not completely install
+ [1194284] Can&#39;t boot from CD-ROM (Windows NT)
+  [962969] Windows NT crashes while trying to intall them.
+ [1054594] WinXP install halts (redo)
+ [1153107] Windows XP fails with BSOD on &#39;vga&#39;
+  [938518] Win XP installation fails
+  [645420] getH<em>os</em>tMemAddr vetoed direct read
+ [1179985] MS XENIX: &gt;&gt;PANIC&lt;&lt; VGABI<em>OS</em> panic at vgabi<em>os</em>.c, line 0
+ [1329600] WBINVD and INVD should flush caches and TLB
+  [638924] eliminate BX_USE_CONFIG_INTERFACE
+ [1048711] Funny behaviour with CTRL
+ [1288450] keyboard BI<em>OS</em> error
+ [1310706] Keyboard - about key SHIFT
+ [1295981] Ubuntu 5.04 Live-CD won&#39;t boot in Bochs
+  [879047] APIC timer behavior different before reset and after
+ [1188506] I still can&#39;t install the german Windows XP!
+ [1301847] Windows XP d<em>os</em>n&#39;t boot - FXRSTOR problem ?
+  [661259] does not boot QNX under WinX
+  [924412] Keyboard lock states all whacked
+  [681127] MIPSpro compiler (IRIX) is allergic to ^M
+ [1285923] BI<em>OS</em> keyboard handler
+  [516639] ATA controller revisited...
+  [657918] does not boot Be<em>OS</em> under WinX
+  [649245] Be<em>OS</em> CD locks halfway on boot
+ [1094385] Attachment for bug 1090339 (be<em>os</em> failure)
+ [1183196] Be<em>OS</em> 4.5 developer CD does not install
+ [1090339] Be<em>OS</em> fails to boot
+  [639484] panics when int 13 is called
+  [711701] divide by zero
+  [704295] ATAPI/BI<em>OS</em> call missing
+  [682856] hard drive problems
+  [627691] Cursor keys problem
+  [588011] keyboard not working
+  [542260] <em>os</em>/2 warp crashes with floppy handling
+ [1273878] SB16 doesn&#39;t work in pure D<em>OS</em>
+  [542254] <em>OS</em>/2 FDC driver dies
+ [1099610] Windows 98 SE Does not install
+  [875479] cr3 problem on task switch
+  [731423] NE2000 causing PANIC on Win2K detection
+ [1156155] bochs fails to boot plan9 iso
+ [1251979] --enable-cpu-level=3 should assume --without-fpu
+ [1257538] Interupt 15h 83h - set wait event interval
+  [658396] Panic for DR D<em>OS</em> emm386
+  [679339] /? doesn&#39;t divulge Bochs command-line syntax
+ [1167016] call/jump/return_protected doesn&#39;t support x86-64
+ [1252432] Mac <em>OS</em> X compile bug
+  [881442] Bochs 2.1 PANIC when loading D<em>OS</em> Turbo Pascal protected mode
+ [1249324] Boch2.2.1 Buffer Overfollow in void bx_local_apic_c::init ()
+ [1197144] &#39;make install&#39; has dependency on wget
+ [1079595] LTR:386TSS: loading tr.limit &lt; 103
+ [1244070] Compilation Error in gui/rfb.cc
+  [761707] CPU error when trying to start Privateer
+  [517281] Crash running Privateer in D<em>OS</em>...
+
+-------------------------------------------------------------------------
+Changes in 2.2.1 (July 8, 2005):
+
+- Fixed several compilation warnings and errors for different platforms (Volker)
+- Fixed FPU tag word restore in FXRSTOR instruction (Stanislav)
+- Added missing scancodes for F11 and F12 to BI<em>OS</em> translation table (Volker)
+- Bochs disassembler bugfixes (h.johansson)
+- About 5% emulation speed improvement (h.johansson)
+- Handle writing of zero to APIC timer initial count register (Stanislav)
+- Enable Idle-Hack for &#39;TERM&#39; GUI (h.johansson)
+- Reduced overhead of BX_SHOW_IPS option to minimum. Now every simulation
+  could run with --enable-show-ips without significant performance
+  penalty. (Stanislav)
+- Fixed pcipnic register access (Volker)
+- Limited write support for TFTP server in &#39;vnet&#39; networking module added (Volker)
+- Changed some timing defaults to more useful values (Volker)
+- WinXP/2003 style common controls now supported (Vitaly Vorobyov)
+- Updated LGPL&#39;d VGABI<em>OS</em> to version 0.5c (Volker)
+- Added new BX_INSTR_HLT callback to instrumentation (Stanislav)
+
+-------------------------------------------------------------------------
+Changes in 2.2 (May 28, 2005):
+
+Brief summary :
+- New floating point emulator based on SoftFloat floating point
+  emulation library.
+- improved x86-64 emulation
+- Cirrus SVGA card emulation added
+- status bar with indicators for keyboard, floppy, cdrom and disk (gui dependant)
+- many improvements in Bochs emulated I/O devices (e.g. PCI subsystem)
+
+Detailed change log :
+
+- CPU
+  - fixes for booting <em>OS</em>/2 by Dmitri Froloff
+    - fixed v8086 priveleged instruction processing bug (was also reported
+      by LightCone Aug 7 2003)
+    - exception process bug (was reported by Diego Henriquez Sat Nov 15
+      01:16:51 CET 2003)
+    - segment validation with IRET instruction
+    - CS segment not present exception processing with IRET
+  - several fixes by Kevin Lawton
+  - add MSVC h<em>os</em>t asm instructions (patch by suzu)
+  - fixed bug in HADDPD/HSUBP</p></div></a></li><li class="pub_recom_item download"><a class="pr_item" href=https://download.csdn.net/download/liuyun600/3241353 target="_blank" data-report-view={"mod":"popu_595","extra":"{\"utm_medium\":\"distribute.pc_relevant_download.none-task-download-2~default~OPENSEARCH~default-12.nonecase\"}","dist_request_id":"1620275042504_12218","index":"12","strategy":"2~default~OPENSEARCH~default"} data-report-click={"mod":"popu_595","extra":"{\"utm_medium\":\"distribute.pc_relevant_download.none-task-download-2~default~OPENSEARCH~default-12.nonecase\"}","dist_request_id":"1620275042504_12218","index":"12","strategy":"2~default~OPENSEARCH~default"} data-report-query=utm_medium=distribute.pc_relevant_download.none-task-download-2~default~OPENSEARCH~default-12.nonecase&depth_1-utm_source=distribute.pc_relevant_download.none-task-download-2~default~OPENSEARCH~default-12.nonecase><div class="pr_item_l"><div class="fix"><img src=//g.csdnimg.cn/pub-recom/img/type//unknow.svg alt=""><span>44KB</span></div> </div><div class="pr_item_r"><p class="pr_i_t">12864显示的万年历</p><span class="pr_item_t_r fr"><span class="pr_t_date">2011-05-02</span></span><p class="pr_i_d">/*-----------------------------------------------------------*/
+#define LCD_OFF 0x3E
+#define LCD_ON  0x3F
+
+#define Add_X 0xB8     //the start address of the page 0 ;(0~7)
+#define Add_Y 0x40     //the start address of the Y counter ; (0~64)
+#define Add_Z 0xC0     //the start address of the DDRAM ; (0~64)
+
+#define UPLINE      0x01
+#define UNDERLINE	0x80
+/*-----------------------------------------------------------*/
+#define  LCD12864_DATA_PORT  P0
+
+sbit  LCD12864_EN         =P1^4;
+sbit  LCD12864_RW         =P1^3;       //0:write ; 1:read 
+sbit  LCD12864_RS         =P1^2;	   //0:the command .1:the data
+sbit  LCD12864_CS_L       =P1^1;       //select the left of the lcd when 1
+sbit  LCD12864_CS_R       =P1^0;  
+sbit  LCD12864_RST 	   =P1^5;
+/*------------------------------------------------------------*/
+void delayus(unsigned int us)
+{
+   while(us--);
+}
+void delayms(unsigned ms)
+{
+   unsigned int i,j;
+   for (i=0;i&lt;ms;i++)
+   {
+      for (j=0;j&lt;1000;j++)
+	  ;
+   } 
+}
+
+/*--------------------------select the LCD--------------------*/
+void LCDSel(unsigned char sel)
+{
+    switch(sel)
+	{
+	   case 0: LCD12864_CS_L=0;LCD12864_CS_R=0;break;	  
+	   case 1: LCD12864_CS_L=1;LCD12864_CS_R=0;break;       //left 
+	   case 2: LCD12864_CS_L=0;LCD12864_CS_R=1;break;		//right
+	   default:;
+	};
+}
+/*------------------------------------------------------------*/
+void WaitLCD()
+{
+   unsigned char flag;
+
+   LCD12864_DATA_PORT=0xFF;
+   LCD12864_RW=1;
+   LCD12864_RS=0;
+   LCD12864_EN=1;
+   LCD12864_EN=1;
+   LCD12864_EN=0;
+
+   LCD12864_DATA_PORT=0xFF;		//读有效数据
+   LCD12864_RW=1;
+   LCD12864_RS=0;
+   ;
+   LCD12864_EN=1;
+   do
+   {
+      flag=LCD12864_DATA_PORT;
+	  LCD12864_DATA_PORT=0xFF;
+   }while(!((flag&amp;0x80)==0x80));
+
+   LCD12864_EN=0;
+}				 //*/
+/*-------------------------------------------------------------*/
+void WriteDatToLCD12864(unsigned char dat)
+{
+   WaitLCD();
+   LCD12864_RS=1;   //the data
+   LCD12864_RW=0;   //write
+   LCD12864_DATA_PORT=dat;
+   LCD12864_EN=1;
+   ;
+   LCD12864_EN=0;  //下降沿写入
+}
+/*-------------------------------------------------------------*/
+void WriteCmdToLCD12864(unsigned char cmd)
+{
+   WaitLCD();
+   LCD12864_RS=0;   //the command
+   LCD12864_RW=0;	//write
+   LCD12864_DATA_PORT=cmd;
+   LCD12864_EN=1;
+   ;
+   LCD12864_EN=0;
+}
+/*-------------------------------------------------------------*/
+unsigned char ReadDatFromLCD12864(void)
+{
+   unsigned char dat;
+   WaitLCD();
+   LCD12864_DATA_PORT=0xFF;		      //读空操作
+   LCD12864_RS=1;    //the data
+   LCD12864_RW=1;     //read
+   LCD12864_EN=1;
+   LCD12864_EN=1
+   ;
+   LCD12864_EN=0;
+
+   LCD12864_DATA_PORT=0xFF;			  //来读有效数据
+   LCD12864_RS=1;    //the data
+   LCD12864_RW=1;     //read
+   LCD12864_EN=1;
+   dat=LCD12864_DATA_PORT;
+   LCD12864_EN=0;
+   return dat;
+}	
+/*--------------------------------------------------------------*/
+//from the chip manual
+void LCD12864_init(void)
+{
+    LCD12864_RST=0;
+	delayus(50);
+	LCD12864_RST=1;
+	LCDSel(0);       //left and right
+	WriteCmdToLCD12864(LCD_OFF);
+	WriteCmdToLCD12864(LCD_ON);
+}
+/*------------------------------------------------------------*/
+//x:0~7
+void SetX(unsigned char x)
+{
+    WriteCmdToLCD12864(Add_X+x);
+}
+/*------------------------------------------------------------*/
+//y:0~127
+void SetY(unsigned char y)
+{
+    WriteCmdToLCD12864(Add_Y+y);
+}
+/*------------------------------------------------------------*/
+//z:0~63
+void SetZ(unsigned char z)
+{
+    WriteCmdToLCD12864(Add_Z+z);
+}
+/*------------------------------------------------------------*/
+void ClearLCD()
+{
+    int i,j;
+    LCDSel(0);
+	for(j=0;j&lt;8;j++)
+	{
+	   WriteCmdToLCD12864(LCD_ON);
+       SetX(j);  
+       WriteCmdToLCD12864(Add_Y);  //diffrent from SetY(0),SetY(64);     
+	   SetZ(0);
+	   for (i=0;i&lt;64;i++)
+	   {
+	      WriteDatToLCD12864(0x00);
+	   }
+	}	
+}
+/*------------------------------------------------------------*/
+//左上角第一个点为原点，向下Y为轴，向右为X轴
+//x:0~63~127    y:0~63
+//flag :  0：擦除某个点
+//        1：显示某个点 
+unsigned char code Tab[]={0x01,0x02,0x04,0x08,0x10,0x20,0x40,0x80};
+void Dot(char x,char y,bit flag)
+{
+    unsigned char dat;
+//	y=63-y;	                              //坐标轴的移动和反转
+    if(x&lt;64)
+	{
+	    LCDSel(1);
+		SetX(y/8);   //set the page address
+		SetY(x);         //set the Y <em>adress</em>
+		dat=ReadDatFromLCD12864();
+
+		if(flag)
+		  dat=dat|(Tab[y%8]);
+		else
+		  dat=dat&amp;(~(Tab[y%8]));
+
+		SetY(x);         //set the Y <em>adress</em>
+		WriteDatToLCD12864(dat);
+	}
+	else if(x&lt;128)
+	{
+	    LCDSel(2);
+		SetX(y/8);
+		SetY(x-64);
+
+		dat=ReadDatFromLCD12864();
+
+		if(flag)
+		  dat=dat|(Tab[y%8]);
+		else
+		  dat=dat&amp;(~(Tab[y%8]));
+
+		SetY(x-64);
+		WriteDatToLCD12864(dat);
+	}     
+}	   
+/*------------------------------------------------------------*/
+//draw a line between point(x1,y1) and point(x2,y2)
+//flag   0:erase the line    1:draw a line
+void Line(unsigned char x1,unsigned char y1,unsigned char x2,unsigned char y2,bit flag)
+{
+    unsigned char i;
+	unsigned char temp;
+	float k;
+	if(x1==x2)
+	{
+	   if(y1&gt;y2)
+	   {   temp=x1;x1=x2;x2=temp;
+    	   temp=y1;y1=y2;y2=temp;
+		}
+	   for(i=y1;i&lt;=y2;i++)
+	   {
+	       Dot(x1,i,flag);
+	   }
+	}else
+	{
+    	if(x1&gt;x2)
+    	{
+    	   temp=x1;x1=x2;x2=temp;
+    	   temp=y1;y1=y2;y2=temp;
+     	 }
+
+         k=(float)(y2-y1)/(float)(x2-x1);
+
+         for(i=0;i&lt;x2-x1;i++)
+        {
+           Dot(x1+i,(unsigned char)(y1+k*i),flag);
+         }
+	}
+}	   
+/*-------------------------------------------------------------*/
+void Rect(unsigned char x1,unsigned char y1,unsigned char x2,unsigned char y2,bit flag)
+{
+    Line(x1,y1,x2,y1,flag);
+	Line(x2,y1,x2,y2,flag);
+	Line(x2,y2,x1,y2,flag);
+	Line(x1,y2,x1,y1,flag);
+} 
+/*-------------------------------------------------------------*/
+void RectArea(unsigned char x1,unsigned char y1,unsigned char x2,unsigned char y2,bit flag)
+{
+    unsigned char temp;
+	unsigned char i;
+    if(x1&gt;x2)
+	{
+	    temp=x1;x1=x2;x2=temp; 
+		temp=y1;y1=y2;y2=temp;
+     }
+
+	 for(i=0;i&lt;=x2-x1;i++)
+	 {
+	    Line(x1+i,y1,x1+i,y2,flag);
+	 }
+
+}			  //*/
+/*-------------------------------------------------------------*/
+//16*16
+//x行  0~7      y列 0~127
+//flag 0:汉字反白显示
+//upline: 0表示有上划线
+//underline: 0表示有下划线
+void hz_disp(unsigned char x,unsigned char y,unsigned char n,unsigned char code * hz,bit flag,bit upline,bit underline)
+{
+    unsigned char i,j;
+	for (j=0;j&lt;n;j++)
+	{
+	    //显示上半个汉字
+	    for(i=0;i&lt;16;i++)
+		{
+		    //点的位置是在左还是右
+			if(y+16*j+i&lt;64)
+			{
+			    LCDSel(1);
+				WriteCmdToLCD12864(LCD_ON);
+				SetX(x);
+				SetZ(0);
+				SetY(y+16*j+i);
+				if(upline)
+				{
+					if(flag)
+				 	   WriteDatToLCD12864(hz[32*j+i]);
+			    	else
+				   	 WriteDatToLCD12864(~hz[32*j+i]);
+				}
+				else
+				{
+					if(flag)
+				 	   WriteDatToLCD12864(hz[32*j+i]|UPLINE);
+			    	else
+				   	 WriteDatToLCD12864(~hz[32*j+i]|UPLINE);	
+				}
+			}
+			else if(y+16*j+i&lt;128)
+			{
+			    LCDSel(2);
+				WriteCmdToLCD12864(LCD_ON);
+				SetX(x);
+				SetZ(0);
+				SetY(y+16*j+i-64);
+				if(upline)
+				{
+					if(flag)
+				 	   WriteDatToLCD12864(hz[32*j+i]);
+			    	else
+				   	 WriteDatToLCD12864(~hz[32*j+i]);
+				}
+				else
+				{
+					if(flag)
+				 	   WriteDatToLCD12864(hz[32*j+i]|UPLINE);
+			    	else
+				   	 WriteDatToLCD12864(~hz[32*j+i]|UPLINE);	
+				}
+			}
+		}
+		//显示下半个汉字
+		for(i=16;i&lt;32;i++)
+		{
+		    //先判断点是在左还是在右
+			if(y+16*j+i-16&lt;64)
+			{	if(x+1&lt;8)	       //最后一行显示上半个字
+			    {
+			        LCDSel(1);
+			    	WriteCmdToLCD12864(LCD_ON);
+				    SetX(x+1);
+				    SetZ(0);
+				    SetY(y+16*j+i-16);
+				if(underline)
+				{
+					if(flag)
+				 	   WriteDatToLCD12864(hz[32*j+i]);
+			    	else
+				   	 WriteDatToLCD12864(~hz[32*j+i]);
+				}
+				else
+				{
+					if(flag)
+				 	   WriteDatToLCD12864(hz[32*j+i]|UNDERLINE);
+			    	else
+				   	 WriteDatToLCD12864(~hz[32*j+i]|UNDERLINE);	
+				}
+				}
+			}else if(y+16*j+i-16&lt;127)
+			{
+			    if(x+1&lt;8) 	      //最后一行
+				{
+			        LCDSel(2);
+				    WriteCmdToLCD12864(LCD_ON);
+				    SetX(x+1);
+				    SetZ(0);
+				    SetY(y+16*j+i-16-64);
+				if(underline)
+				{
+					if(flag)
+				 	   WriteDatToLCD12864(hz[32*j+i]);
+			    	else
+				   	 WriteDatToLCD12864(~hz[32*j+i]);
+				}
+				else
+				{
+					if(flag)
+				 	   WriteDatToLCD12864(hz[32*j+i]|UNDERLINE);
+			    	else
+				   	 WriteDatToLCD12864(~hz[32*j+i]|UNDERLINE);	
+				}
+				}
+			}
+		}
+	}
+}				  
+/*-------------------------------------------------------------*/
+//x:行0~7
+//y:列0~127
+//asc: 指向标准交换码
+//string: 指向要显示的字符串
+//flag:  0 反白显示
+//online: 0 带上划线
+//underline : 0带下划线
+//n: the number of the string
+void en_disp(unsigned char x,unsigned char y,unsigned char n,unsigned char code *asc,unsigned char *string,bit flag,bit online,bit underline)
+{
+    unsigned char i,j,loc;
+	for (j=0;j&lt;n;j++)
+	{
+	    loc=string[j]-0x20;	    //确定要显示的字符在asc表中的位置（乘上16）
+	    //显示上半个字母
+	    for(i=0;i&lt;8;i++)
+		{
+		    //点的位置是在左还是右
+			if(y+8*j+i&lt;64)
+			{
+			    LCDSel(1);
+				WriteCmdToLCD12864(LCD_ON);
+				SetX(x);
+				SetZ(0);
+				SetY(y+8*j+i);
+				if(online)
+				{
+					if(flag)
+					    WriteDatToLCD12864(asc[16*loc+i]);
+				    else
+					    WriteDatToLCD12864(~asc[16*loc+i]);
+				}
+				else
+				{
+					if(flag)
+					    WriteDatToLCD12864(asc[16*loc+i]|UPLINE);
+				    else
+					    WriteDatToLCD12864(~asc[16*loc+i]|UPLINE);
+				}
+			}
+			else if(y+8*j+i&lt;128)
+			{
+			    LCDSel(2);
+				WriteCmdToLCD12864(LCD_ON);
+				SetX(x);
+				SetZ(0);
+				SetY(y+8*j+i-64);
+				if(online)
+				{
+					if(flag)
+					    WriteDatToLCD12864(asc[16*loc+i]);
+				    else
+					    WriteDatToLCD12864(~asc[16*loc+i]);
+				}
+				else
+				{
+				  	if(flag)
+					    WriteDatToLCD12864(asc[16*loc+i]|UPLINE);
+				    else
+					    WriteDatToLCD12864(~asc[16*loc+i]|UPLINE);
+				}
+			}
+		}
+		//显示下半个字母
+		for(i=8;i&lt;16;i++)
+		{
+		    //先判断点是在左还是在右
+			if(y+8*j+i-8&lt;64)
+			{  
+			    if(x+1&lt;8)	//最后一行
+				{
+			       LCDSel(1);
+				   WriteCmdToLCD12864(LCD_ON);
+				   SetX(x+1);
+				   SetZ(0);
+				   SetY(y+8*j+i-8);
+	 				if(underline)
+					{
+						if(flag)
+						    WriteDatToLCD12864(asc[16*loc+i]);
+					    else
+						    WriteDatToLCD12864(~asc[16*loc+i]);
+					}
+					else
+					{
+					  	if(flag)
+						    WriteDatToLCD12864(asc[16*loc+i]|UNDERLINE);
+					    else
+						    WriteDatToLCD12864(~asc[16*loc+i]|UNDERLINE);
+					}
+
+				}
+			}else if(y+8*j+i-8&lt;128)
+			{
+			    if(x+1&lt;8) 	      //最后一行
+				{
+			        LCDSel(2);
+				    WriteCmdToLCD12864(LCD_ON);
+				    SetX(x+1);
+				    SetZ(0);
+				    SetY(y+8*j+i-8-64);
+					if(underline)
+					{
+						if(flag)
+						    WriteDatToLCD12864(asc[16*loc+i]);
+					    else
+						    WriteDatToLCD12864(~asc[16*loc+i]);
+					}
+					else
+					{
+					  	if(flag)
+						    WriteDatToLCD12864(asc[16*loc+i]|UNDERLINE);
+					    else
+						    WriteDatToLCD12864(~asc[16*loc+i]|UNDERLINE);
+					}
+				}
+			}
+		}
+	}  
+}
+
+
+/*-------------------------------------------------------------*/
+//(x,y)要显示图片的左上角的坐标
+//x  0~7   y  0~127
+//l:要显示图片的长度
+//w:要显示图片的宽度
+//img:指向图片的数据
+//执行有点慢
+/*void img_disp(unsigned char x,unsigned char y,unsigned char l,unsigned char w,unsigned char code *img)
+{
+    unsigned char i,j;
+	for(j=0;j&lt;w/8;j++)
+	{
+	    if(j+x&lt;8)       //保证不越下面的界限 
+	    {
+	   	    for(i=0;i&lt;l;i++)
+	    	{	
+		       //先判断点的位置是在右半屏还是左半屏
+		        if(y+i&lt;64)
+		    	{
+			        LCDSel(1);
+			        WriteCmdToLCD12864(LCD_ON);
+			        SetX(x+j);
+			        SetZ(0);
+			        SetY(y+i);
+		            WriteDatToLCD12864(img[j*l+i]);
+		    	 }
+			    else if(y+i&lt;127)
+		        {
+			        LCDSel(2);
+			        WriteCmdToLCD12864(LCD_ON);
+			        SetX(x+j);
+			        SetZ(0);
+			        SetY(y+i-64);
+			        WriteDatToLCD12864(img[j*l+i]);
+			     }
+			}
+		}
+	}
+}	//*/
+/*-------------------------------------------------------------*/
+//显示128*64图片
+//执行效率高
+void img12864_disp(unsigned char code *img)
+{
+    unsigned char i,j;
+	for(j=0;j&lt;8;j++)
+	{
+	    LCDSel(1);
+		WriteCmdToLCD12864(LCD_ON);
+		SetX(j);
+		SetZ(0);
+		SetY(0);
+		for(i=0;i&lt;64;i++)
+		   WriteDatToLCD12864(img[j*128+i]);
+		LCDSel(2);
+		WriteCmdToLCD12864(LCD_ON);
+		SetX(j);
+		SetZ(0);
+		SetY(0);
+		for(i=64;i&lt;128;i++)
+		   WriteDatToLCD12864(img[j*128+i]);
+	}
+}	
+
+//亦木明 2008.2.23
+//显示一个16X32的字符
+void Show16X32(unsigned char line,unsigned char column, unsigned char code *pt,bit flag)
+{
+	unsigned char i,column_temp1,column_temp2,column_temp3;
+	column_temp1=column;
+	column_temp2=column;
+	column_temp3=column;
+	LCDSel(1);                         //选通左屏
+	SetY(column);                      //设置起始列
+	SetX(line);                          //设置行
+	for(i=0;i&lt;16;i++)
+	{
+		if(column&gt;=64)                      //如果列&gt;=64，则选通右屏
+		{
+			LCDSel(2);
+			column=column%64;               //设置右屏起始列
+			SetY(column);
+			SetX(line);
+		}
+		if(flag)	
+		WriteDatToLCD12864(*pt);                     //写数据
+		else
+		WriteDatToLCD12864(~(*pt)); //colinluan 080729
+		pt++;
+		column++;
+	}
+	LCDSel(1);
+	SetX(line+1);
+	column=column_temp1;
+	SetY(column);
+	for(i=0;i&lt;16;i++)
+	{
+		if(column&gt;=64)
+		{
+			LCDSel(2);
+			column=column%64;
+			SetY(column);
+			SetX(line+1);
+		}	
+		if(flag)	
+		WriteDatToLCD12864(*pt);                     //写数据
+		else
+		WriteDatToLCD12864(~(*pt)); //colinluan 080729
+		pt++;
+		column++;
+	}
+	LCDSel(1);
+	SetX(line+2);
+	column=column_temp2;
+	SetY(column);
+	for(i=0;i&lt;16;i++)
+	{
+		if(column&gt;=64)
+		{
+			LCDSel(2);
+			column=column%64;
+			SetY(column);
+			SetX(line+2);
+		}	
+		if(flag)	
+		WriteDatToLCD12864(*pt);                     //写数据
+		else
+		WriteDatToLCD12864(~(*pt)); //colinluan 080729
+		pt++;
+		column++;
+	}
+	LCDSel(1);
+	SetX(line+3);
+	column=column_temp3;
+	SetY(column);
+	for(i=0;i&lt;16;i++)
+	{
+		if(column&gt;=64)
+		{
+			LCDSel(2);
+			column=column%64;
+			SetY(column);
+			SetX(line+3);
+		}	
+		if(flag)	
+		WriteDatToLCD12864(*pt);                     //写数据
+		else
+		WriteDatToLCD12864(~(*pt)); //colinluan 080729
+		pt++;
+		column++;
+	}
+}
+/*-------------------------------------------------------*/用12864进行制作万年历</p></div></a></li><li class="pub_recom_item download"><a class="pr_item" href=https://download.csdn.net/download/weixin_38524871/15932247 target="_blank" data-report-view={"mod":"popu_595","extra":"{\"utm_medium\":\"distribute.pc_relevant_download.none-task-download-2~default~OPENSEARCH~default-13.nonecase\"}","dist_request_id":"1620275042504_12218","index":"13","strategy":"2~default~OPENSEARCH~default"} data-report-click={"mod":"popu_595","extra":"{\"utm_medium\":\"distribute.pc_relevant_download.none-task-download-2~default~OPENSEARCH~default-13.nonecase\"}","dist_request_id":"1620275042504_12218","index":"13","strategy":"2~default~OPENSEARCH~default"} data-report-query=utm_medium=distribute.pc_relevant_download.none-task-download-2~default~OPENSEARCH~default-13.nonecase&depth_1-utm_source=distribute.pc_relevant_download.none-task-download-2~default~OPENSEARCH~default-13.nonecase><div class="pr_item_l"><div class="fix"><img src=//g.csdnimg.cn/pub-recom/img/type//unknow.svg alt=""><span>38KB</span></div> </div><div class="pr_item_r"><p class="pr_i_t">FullFill Ali <em>Adress</em>-crx插件</p><span class="pr_item_t_r fr"><span class="pr_t_date">2021-03-19</span></span><p class="pr_i_d">FullFill Ali地址
+Dung Vuong的FullFill Ali <em>Adress</em>
+支持语言:English</p></div></a></li><li class="pub_recom_item download"><a class="pr_item" href=https://download.csdn.net/download/weixin_42172204/15260282 target="_blank" data-report-view={"mod":"popu_595","extra":"{\"utm_medium\":\"distribute.pc_relevant_download.none-task-download-2~default~OPENSEARCH~default-14.nonecase\"}","dist_request_id":"1620275042504_12218","index":"14","strategy":"2~default~OPENSEARCH~default"} data-report-click={"mod":"popu_595","extra":"{\"utm_medium\":\"distribute.pc_relevant_download.none-task-download-2~default~OPENSEARCH~default-14.nonecase\"}","dist_request_id":"1620275042504_12218","index":"14","strategy":"2~default~OPENSEARCH~default"} data-report-query=utm_medium=distribute.pc_relevant_download.none-task-download-2~default~OPENSEARCH~default-14.nonecase&depth_1-utm_source=distribute.pc_relevant_download.none-task-download-2~default~OPENSEARCH~default-14.nonecase><div class="pr_item_l"><div class="fix"><img src=//g.csdnimg.cn/pub-recom/img/type/zip.svg alt=""><span>35KB</span></div> </div><div class="pr_item_r"><p class="pr_i_t">普雷斯塔-源码</p><span class="pr_item_t_r fr"><span class="pr_t_date">2021-02-14</span></span><p class="pr_i_d">安装
+测试自动化安装prestashop
+优等服务
+档案管理员init.sh和执行者： 
+$ curl -o init.sh https://raw.githubusercontent.com/qcome/presta/master/init.sh
+$ bash init.sh
+ 注意：服务于数字海洋，从小到大都可以进行部分初始化的
+帐户&agrave;http 倒入配置
+配置基础：
+ <em>adress</em>: some-mysql
+nom: prestashop
+user: root
+pwd: admin
+去做
+要获取最新的国际化数据，请升级ICU系统软件包和国际PHP扩展。 Docker撰写</p></div></a></li><li class="pub_recom_item download"><a class="pr_item" href=https://download.csdn.net/download/shatanzhihu/2274069 target="_blank" data-report-view={"mod":"popu_595","extra":"{\"utm_medium\":\"distribute.pc_relevant_download.none-task-download-2~default~OPENSEARCH~default-15.nonecase\"}","dist_request_id":"1620275042504_12218","index":"15","strategy":"2~default~OPENSEARCH~default"} data-report-click={"mod":"popu_595","extra":"{\"utm_medium\":\"distribute.pc_relevant_download.none-task-download-2~default~OPENSEARCH~default-15.nonecase\"}","dist_request_id":"1620275042504_12218","index":"15","strategy":"2~default~OPENSEARCH~default"} data-report-query=utm_medium=distribute.pc_relevant_download.none-task-download-2~default~OPENSEARCH~default-15.nonecase&depth_1-utm_source=distribute.pc_relevant_download.none-task-download-2~default~OPENSEARCH~default-15.nonecase><div class="pr_item_l"><div class="fix"><img src=//g.csdnimg.cn/pub-recom/img/type//unknow.svg alt=""><span>10KB</span></div> </div><div class="pr_item_r"><p class="pr_i_t">qt 简单示例 <em>adress</em>通讯</p><span class="pr_item_t_r fr"><span class="pr_t_date">2010-04-23</span></span><p class="pr_i_d">qt 简单示例qt 简单示例做的一个简单的<em>adress</em>通讯qt 简单示例qt 简单示例做的一个简单的<em>adress</em>通讯qt 简单示例qt 简单示例做的一个简单的<em>adress</em>通讯</p></div></a></li><li class="pub_recom_item download"><a class="pr_item" href=https://download.csdn.net/download/nonstop1981/1791277 target="_blank" data-report-view={"mod":"popu_595","extra":"{\"utm_medium\":\"distribute.pc_relevant_download.none-task-download-2~default~OPENSEARCH~default-16.nonecase\"}","dist_request_id":"1620275042504_12218","index":"16","strategy":"2~default~OPENSEARCH~default"} data-report-click={"mod":"popu_595","extra":"{\"utm_medium\":\"distribute.pc_relevant_download.none-task-download-2~default~OPENSEARCH~default-16.nonecase\"}","dist_request_id":"1620275042504_12218","index":"16","strategy":"2~default~OPENSEARCH~default"} data-report-query=utm_medium=distribute.pc_relevant_download.none-task-download-2~default~OPENSEARCH~default-16.nonecase&depth_1-utm_source=distribute.pc_relevant_download.none-task-download-2~default~OPENSEARCH~default-16.nonecase><div class="pr_item_l"><div class="fix"><img src=//g.csdnimg.cn/pub-recom/img/type//unknow.svg alt=""><span>676B</span></div> </div><div class="pr_item_r"><p class="pr_i_t">Blog <em>Adress</em></p><span class="pr_item_t_r fr"><span class="pr_t_date">2009-11-03</span></span><p class="pr_i_d">.NET相关网址。
+如Jeffery Zhao,DUDU等。</p></div></a></li><li class="pub_recom_item download"><a class="pr_item" href=https://download.csdn.net/download/cuiweiixe/3503884 target="_blank" data-report-view={"mod":"popu_595","extra":"{\"utm_medium\":\"distribute.pc_relevant_download.none-task-download-2~default~OPENSEARCH~default-17.nonecase\"}","dist_request_id":"1620275042504_12218","index":"17","strategy":"2~default~OPENSEARCH~default"} data-report-click={"mod":"popu_595","extra":"{\"utm_medium\":\"distribute.pc_relevant_download.none-task-download-2~default~OPENSEARCH~default-17.nonecase\"}","dist_request_id":"1620275042504_12218","index":"17","strategy":"2~default~OPENSEARCH~default"} data-report-query=utm_medium=distribute.pc_relevant_download.none-task-download-2~default~OPENSEARCH~default-17.nonecase&depth_1-utm_source=distribute.pc_relevant_download.none-task-download-2~default~OPENSEARCH~default-17.nonecase><div class="pr_item_l"><div class="fix"><img src=//g.csdnimg.cn/pub-recom/img/type//unknow.svg alt=""><span>116KB</span></div> </div><div class="pr_item_r"><p class="pr_i_t">交换机基本命令 交换机基本命令</p><span class="pr_item_t_r fr"><span class="pr_t_date">2011-08-08</span></span><p class="pr_i_d">交换机基本命令 交换机基本命令 交换机基本命令 交换机基本命令</p></div></a></li><li class="pub_recom_item download"><a class="pr_item" href=https://download.csdn.net/download/a3714327a/6228825 target="_blank" data-report-view={"mod":"popu_595","extra":"{\"utm_medium\":\"distribute.pc_relevant_download.none-task-download-2~default~OPENSEARCH~default-18.nonecase\"}","dist_request_id":"1620275042504_12218","index":"18","strategy":"2~default~OPENSEARCH~default"} data-report-click={"mod":"popu_595","extra":"{\"utm_medium\":\"distribute.pc_relevant_download.none-task-download-2~default~OPENSEARCH~default-18.nonecase\"}","dist_request_id":"1620275042504_12218","index":"18","strategy":"2~default~OPENSEARCH~default"} data-report-query=utm_medium=distribute.pc_relevant_download.none-task-download-2~default~OPENSEARCH~default-18.nonecase&depth_1-utm_source=distribute.pc_relevant_download.none-task-download-2~default~OPENSEARCH~default-18.nonecase><div class="pr_item_l"><div class="fix"><img src=//g.csdnimg.cn/pub-recom/img/type/zip.svg alt=""><span>990KB</span></div> </div><div class="pr_item_r"><p class="pr_i_t">EVD4_UI <em>Adress</em>.zip</p><span class="pr_item_t_r fr"><span class="pr_t_date">2013-09-07</span></span><p class="pr_i_d">carel电子膨胀阀控制器参数设置读取备份下载软件</p></div></a></li></ul><script type="text/javascript" src="//g.csdnimg.cn/pub-recom/1.0.9/js/pub-recom-baidu.js"></script><script type="text/javascript" src="//g.csdnimg.cn/baidu-search/1.0.9/baidu-search.js" async></script>
+            </div>
+        <div id="down-questionnaire">
+            <div class="down-questionnaire-content">
+                <div class="down-questionnaire-title">您会向同学/朋友/同事推荐我们的CSDN下载吗？</div>
+                <div class="down-questionnaire-radio-box">
+                    <label>
+                        <input type="radio" name="recommend" value="1">
+                        非常推荐
+                    </label>
+                    <label>
+                        <input type="radio" name="recommend" value="2">
+                        推荐
+                    </label>
+                    <label>
+                        <input type="radio" name="recommend" value="3">
+                        无所谓
+                    </label>
+                    <label>
+                        <input type="radio" name="recommend" value="4">
+                        不推荐
+                    </label>
+                    <label>
+                        <input type="radio" name="recommend" value="5">
+                        非常不推荐
+                    </label>
+                </div>
+                <div class="down-questionnaire-input">
+                    <input type="text" placeholder="写下您迫切需要的资源，我们会尽最大努力满足～">
+                    <button disabled>提交</button>
+                </div>
+            </div>
+            <div class="down-questionnaire-finish">
+                <div class="down-questionnaire-title">谢谢参与！您的真实评价是我们改进的动力~</div>
+                <span class="close-questionnaire"></span>
+            </div>
+        </div>
+        <div class="download-common-footer" style="margin-top: 8px;"></div>
+    </div>
+    <!-- 个人信息 -->
+    <div class="main_r fr">
+        <div class="dl_right_fixed" nofixed="true">
+            <div class="user_card">
+                <div class="user_card_top">
+                    <div class="user_card_avatar">
+                        <a target="_blank" href="https://my.csdn.net/weixin_42129005">
+                            <img src="https://avatar.csdn.net/1/F/9/2_weixin_42129005.jpg">
+                        </a>
+                    </div>
+                    <div class="user_card_info" >
+                    <div class="user_card_info_t">
+                        <a href="https://my.csdn.net/weixin_42129005" target="_blank" class=name>晔晔匠</a>
+                    </div>
+                        <div class="user_card_info_b">
+                        <div class="code_age">码龄1年</div>
+                        <a  href=https://i.csdn.net/#/uc/profile target=_blank>
+                                <img src="//csdnimg.cn/release/download/static_files/pc/images/cert_.png" alt="">
+                                <span>暂无认证</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="user_card_middle">
+                <div class="user_card_middle_data">
+                    <ul>
+                        <li>
+                            <a href="https://download.csdn.net//user/weixin_42129005/uploads" data-report-click='{"spm": "3001.5449"}' data-report-query="spm=3001.5449">
+                                <div class="middle_data_num">2230</div>
+                                <div class="middle_data_name">资源</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://blog.csdn.net/weixin_42129005" data-report-click='{"spm": "3001.5450"}' data-report-query="spm=3001.5450">
+                                <div class="middle_data_num">1</div>
+                                <div class="middle_data_name">粉丝</div>
+                            </a>
+                        </li>
+                        <li>
+                            <div class="middle_data_num"><img src="//csdnimg.cn/release/download/static_files/pc/images/level/level_2.png" alt=""></div>
+                            <div class="middle_data_name">等级</div>
+                        </li>
+                    </ul>
+                </div>
+                <!-- 勋章部分 -->
+                    <div class="medal_box">
+                        <ul class="medal_list">
+                                <li class="icon-badge" title="至尊王者">
+                                    <div class="mouse-box csdn-user-medal-btn" data-username="weixin_42129005" data-nickname="晔晔匠" data-avatar="https://avatar.csdn.net/1/F/9/2_weixin_42129005.jpg" data-report-click='{"spm":"3001.4297"}' data-report-view='{"spm":"3001.4297"'>
+                                        <img src="https://csdnimg.cn/medal/zhizunwangzhe@240.png" alt="">
+                                        <div class="icon-arrow"></div>
+                                    </div>
+                                    <div class="grade-detail-box">
+                                        <div class="pos-box">
+                                            <div class="left-box">
+                                                <img src="https://csdnimg.cn/medal/zhizunwangzhe@240.png" alt="" >
+                                                <p>至尊王者</p>
+                                            </div>
+                                            <div class="right-box">
+                                                
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                    </ul>
+                </div>
+        </div>
+        <div class="user_card_bottom">
+                <div class="user_fn">
+                        <span class="user_btn attention" data-report-click='{"spm": "1003.2020.3001.5736"}'>关注</span>
+                    <span class="user_btn private talk_btn" data-url="https://im.csdn.net/chat/weixin_42129005" data-report-click='{"spm": "1003.2020.3001.5737"}' data-report-query="spm=1003.2020.3001.5737">私信</span>
+                </div>
+        </div>
+    </div>
+            <div class="upload">
+                <span data-url="https://mp.csdn.net/console/uploadResources" data-report-click='{"spm":"1003.2020.3001.4171"' data-report-query="spm=1003.2020.3001.4171" class="dl_upload_btn">上传资源赚钱or赚积分</span>
+            </div>
+            <!-- 详情页侧边栏相关内容推荐 -->
+                    <div class="content_recom right_plate_con">
+                    <div class="com_plate_tit">
+                        <span class="plate_title">最新推荐</span>
+                    </div>
+                    <div class="recom_list">
+                        <ul class="resource_c_list">
+                                <li data-report-view='{"mod":popu_882,
+                                "index":1,
+                                "extra":{"utm_medium":"distribute.pc_download_right_sidebar.none-task-download-alirec-1.nonecase"},
+                                "strategy":alirec,
+                                "dest":https://download.csdn.net/download/weixin_42169971/18407410
+                                }'>
+                                    <i class="item dl">下载</i>
+                                <a
+                                        href="https://download.csdn.net/download/weixin_42169971/18407410" target="_blank"
+                                        data-report-click='{"mod":popu_882,
+                                "index":1,
+                                "extra":{"utm_medium":"distribute.pc_download_right_sidebar.none-task-download-alirec-1.nonecase"},
+                                "strategy":alirec,
+                                "dest":https://download.csdn.net/download/weixin_42169971/18407410,
+                                "spm":"1003.2020.3001.4174"}'
+                                data-report-query='utm_medium=distribute.down_relevant_right.none-task-download-alirec-1.nonecase&depth_1-utm_source=distribute.down_relevant_right.none-task-download-alirec-1.nonecase&spm=1003.2020.3001.4174'
+                                >
+                                    RetroMessenger: Secure & Serverless Chat-开源
+                                </a>
+                                <p class="resource_top">RetroMessenger: Secure & Serverless Chat-开源</p>
+                                </li>
+                                <li data-report-view='{"mod":popu_882,
+                                "index":2,
+                                "extra":{"utm_medium":"distribute.pc_download_right_sidebar.none-task-download-alirec-2.nonecase"},
+                                "strategy":alirec,
+                                "dest":https://download.csdn.net/download/qq_38412739/18408028
+                                }'>
+                                    <i class="item dl">下载</i>
+                                <a
+                                        href="https://download.csdn.net/download/qq_38412739/18408028" target="_blank"
+                                        data-report-click='{"mod":popu_882,
+                                "index":2,
+                                "extra":{"utm_medium":"distribute.pc_download_right_sidebar.none-task-download-alirec-2.nonecase"},
+                                "strategy":alirec,
+                                "dest":https://download.csdn.net/download/qq_38412739/18408028,
+                                "spm":"1003.2020.3001.4174"}'
+                                data-report-query='utm_medium=distribute.down_relevant_right.none-task-download-alirec-2.nonecase&depth_1-utm_source=distribute.down_relevant_right.none-task-download-alirec-2.nonecase&spm=1003.2020.3001.4174'
+                                >
+                                    20210506-申港证券-电气设备行业周报：电新行业2020及21Q1财报总结.pdf
+                                </a>
+                                <p class="resource_top">20210506-申港证券-电气设备行业周报：电新行业2020及21Q1财报总结.pdf</p>
+                                </li>
+                                <li data-report-view='{"mod":popu_882,
+                                "index":3,
+                                "extra":{"utm_medium":"distribute.pc_download_right_sidebar.none-task-download-alirec-3.nonecase"},
+                                "strategy":alirec,
+                                "dest":https://download.csdn.net/download/weixin_42163404/18407489
+                                }'>
+                                    <i class="item dl">下载</i>
+                                <a
+                                        href="https://download.csdn.net/download/weixin_42163404/18407489" target="_blank"
+                                        data-report-click='{"mod":popu_882,
+                                "index":3,
+                                "extra":{"utm_medium":"distribute.pc_download_right_sidebar.none-task-download-alirec-3.nonecase"},
+                                "strategy":alirec,
+                                "dest":https://download.csdn.net/download/weixin_42163404/18407489,
+                                "spm":"1003.2020.3001.4174"}'
+                                data-report-query='utm_medium=distribute.down_relevant_right.none-task-download-alirec-3.nonecase&depth_1-utm_source=distribute.down_relevant_right.none-task-download-alirec-3.nonecase&spm=1003.2020.3001.4174'
+                                >
+                                    Real Time Drives Scouter-开源
+                                </a>
+                                <p class="resource_top">Real Time Drives Scouter-开源</p>
+                                </li>
+                                <li data-report-view='{"mod":popu_882,
+                                "index":4,
+                                "extra":{"utm_medium":"distribute.pc_download_right_sidebar.none-task-download-alirec-4.nonecase"},
+                                "strategy":alirec,
+                                "dest":https://download.csdn.net/download/weixin_42097450/18407429
+                                }'>
+                                    <i class="item dl">下载</i>
+                                <a
+                                        href="https://download.csdn.net/download/weixin_42097450/18407429" target="_blank"
+                                        data-report-click='{"mod":popu_882,
+                                "index":4,
+                                "extra":{"utm_medium":"distribute.pc_download_right_sidebar.none-task-download-alirec-4.nonecase"},
+                                "strategy":alirec,
+                                "dest":https://download.csdn.net/download/weixin_42097450/18407429,
+                                "spm":"1003.2020.3001.4174"}'
+                                data-report-query='utm_medium=distribute.down_relevant_right.none-task-download-alirec-4.nonecase&depth_1-utm_source=distribute.down_relevant_right.none-task-download-alirec-4.nonecase&spm=1003.2020.3001.4174'
+                                >
+                                    CP Services Groups-开源
+                                </a>
+                                <p class="resource_top">CP Services Groups-开源</p>
+                                </li>
+                                <li data-report-view='{"mod":popu_882,
+                                "index":5,
+                                "extra":{"utm_medium":"distribute.pc_download_right_sidebar.none-task-download-alirec-5.nonecase"},
+                                "strategy":alirec,
+                                "dest":https://download.csdn.net/download/shamofeng24/18408314
+                                }'>
+                                    <i class="item dl">下载</i>
+                                <a
+                                        href="https://download.csdn.net/download/shamofeng24/18408314" target="_blank"
+                                        data-report-click='{"mod":popu_882,
+                                "index":5,
+                                "extra":{"utm_medium":"distribute.pc_download_right_sidebar.none-task-download-alirec-5.nonecase"},
+                                "strategy":alirec,
+                                "dest":https://download.csdn.net/download/shamofeng24/18408314,
+                                "spm":"1003.2020.3001.4174"}'
+                                data-report-query='utm_medium=distribute.down_relevant_right.none-task-download-alirec-5.nonecase&depth_1-utm_source=distribute.down_relevant_right.none-task-download-alirec-5.nonecase&spm=1003.2020.3001.4174'
+                                >
+                                    GigaDevice.GD32F4xx_DFP.2.0.0.pack
+                                </a>
+                                <p class="resource_top">GigaDevice.GD32F4xx_DFP.2.0.0.pack</p>
+                                </li>
+                                <li data-report-view='{"mod":popu_882,
+                                "index":6,
+                                "extra":{"utm_medium":"distribute.pc_download_right_sidebar.none-task-download-alirec-6.nonecase"},
+                                "strategy":alirec,
+                                "dest":https://download.csdn.net/download/weixin_42121272/18407522
+                                }'>
+                                    <i class="item dl">下载</i>
+                                <a
+                                        href="https://download.csdn.net/download/weixin_42121272/18407522" target="_blank"
+                                        data-report-click='{"mod":popu_882,
+                                "index":6,
+                                "extra":{"utm_medium":"distribute.pc_download_right_sidebar.none-task-download-alirec-6.nonecase"},
+                                "strategy":alirec,
+                                "dest":https://download.csdn.net/download/weixin_42121272/18407522,
+                                "spm":"1003.2020.3001.4174"}'
+                                data-report-query='utm_medium=distribute.down_relevant_right.none-task-download-alirec-6.nonecase&depth_1-utm_source=distribute.down_relevant_right.none-task-download-alirec-6.nonecase&spm=1003.2020.3001.4174'
+                                >
+                                    kde-meta ebuilds-开源
+                                </a>
+                                <p class="resource_top">kde-meta ebuilds-开源</p>
+                                </li>
+                                <li data-report-view='{"mod":popu_882,
+                                "index":7,
+                                "extra":{"utm_medium":"distribute.pc_download_right_sidebar.none-task-download-alirec-7.nonecase"},
+                                "strategy":alirec,
+                                "dest":https://download.csdn.net/download/tomorain6/18408148
+                                }'>
+                                    <i class="item dl">下载</i>
+                                <a
+                                        href="https://download.csdn.net/download/tomorain6/18408148" target="_blank"
+                                        data-report-click='{"mod":popu_882,
+                                "index":7,
+                                "extra":{"utm_medium":"distribute.pc_download_right_sidebar.none-task-download-alirec-7.nonecase"},
+                                "strategy":alirec,
+                                "dest":https://download.csdn.net/download/tomorain6/18408148,
+                                "spm":"1003.2020.3001.4174"}'
+                                data-report-query='utm_medium=distribute.down_relevant_right.none-task-download-alirec-7.nonecase&depth_1-utm_source=distribute.down_relevant_right.none-task-download-alirec-7.nonecase&spm=1003.2020.3001.4174'
+                                >
+                                    信息系统项目管理师考试辅导（软考高项）（针对案例分析）.pdf
+                                </a>
+                                <p class="resource_top">信息系统项目管理师考试辅导（软考高项）（针对案例分析）.pdf</p>
+                                </li>
+                                <li data-report-view='{"mod":popu_882,
+                                "index":8,
+                                "extra":{"utm_medium":"distribute.pc_download_right_sidebar.none-task-download-alirec-8.nonecase"},
+                                "strategy":alirec,
+                                "dest":https://download.csdn.net/download/weixin_42133918/18407430
+                                }'>
+                                    <i class="item dl">下载</i>
+                                <a
+                                        href="https://download.csdn.net/download/weixin_42133918/18407430" target="_blank"
+                                        data-report-click='{"mod":popu_882,
+                                "index":8,
+                                "extra":{"utm_medium":"distribute.pc_download_right_sidebar.none-task-download-alirec-8.nonecase"},
+                                "strategy":alirec,
+                                "dest":https://download.csdn.net/download/weixin_42133918/18407430,
+                                "spm":"1003.2020.3001.4174"}'
+                                data-report-query='utm_medium=distribute.down_relevant_right.none-task-download-alirec-8.nonecase&depth_1-utm_source=distribute.down_relevant_right.none-task-download-alirec-8.nonecase&spm=1003.2020.3001.4174'
+                                >
+                                    Crimson Headgear Mini Installer-开源
+                                </a>
+                                <p class="resource_top">Crimson Headgear Mini Installer-开源</p>
+                                </li>
+                                <li data-report-view='{"mod":popu_882,
+                                "index":9,
+                                "extra":{"utm_medium":"distribute.pc_download_right_sidebar.none-task-download-alirec-9.nonecase"},
+                                "strategy":alirec,
+                                "dest":https://download.csdn.net/download/qq_38412739/18408072
+                                }'>
+                                    <i class="item dl">下载</i>
+                                <a
+                                        href="https://download.csdn.net/download/qq_38412739/18408072" target="_blank"
+                                        data-report-click='{"mod":popu_882,
+                                "index":9,
+                                "extra":{"utm_medium":"distribute.pc_download_right_sidebar.none-task-download-alirec-9.nonecase"},
+                                "strategy":alirec,
+                                "dest":https://download.csdn.net/download/qq_38412739/18408072,
+                                "spm":"1003.2020.3001.4174"}'
+                                data-report-query='utm_medium=distribute.down_relevant_right.none-task-download-alirec-9.nonecase&depth_1-utm_source=distribute.down_relevant_right.none-task-download-alirec-9.nonecase&spm=1003.2020.3001.4174'
+                                >
+                                    20210505-巨量算数-电商行业2021抖音电商生态发展报告：新生意，新选择.pdf
+                                </a>
+                                <p class="resource_top">20210505-巨量算数-电商行业2021抖音电商生态发展报告：新生意，新选择.pdf</p>
+                                </li>
+                                <li data-report-view='{"mod":popu_882,
+                                "index":10,
+                                "extra":{"utm_medium":"distribute.pc_download_right_sidebar.none-task-download-alirec-10.nonecase"},
+                                "strategy":alirec,
+                                "dest":https://download.csdn.net/download/qq_38412739/18408084
+                                }'>
+                                    <i class="item dl">下载</i>
+                                <a
+                                        href="https://download.csdn.net/download/qq_38412739/18408084" target="_blank"
+                                        data-report-click='{"mod":popu_882,
+                                "index":10,
+                                "extra":{"utm_medium":"distribute.pc_download_right_sidebar.none-task-download-alirec-10.nonecase"},
+                                "strategy":alirec,
+                                "dest":https://download.csdn.net/download/qq_38412739/18408084,
+                                "spm":"1003.2020.3001.4174"}'
+                                data-report-query='utm_medium=distribute.down_relevant_right.none-task-download-alirec-10.nonecase&depth_1-utm_source=distribute.down_relevant_right.none-task-download-alirec-10.nonecase&spm=1003.2020.3001.4174'
+                                >
+                                    1951-2015影响广东沿海台风的统计分析.docx
+                                </a>
+                                <p class="resource_top">1951-2015影响广东沿海台风的统计分析.docx</p>
+                                </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="card-wrap">
+                <div class="card-item card-75">
+                    <div id="kp_box_75" data-pid="75"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- pc-论坛内页右侧视窗-300*600 -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:600px"
+     data-ad-client="ca-pub-1076724771190722"
+     data-ad-slot="9406032482"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script><img class="pre-img-lasy" data-src="https://kunyu.csdn.net/1.png?p=75&a=2457&c=0&k=&spm=3001.5059&d=1&t=3&u=ff13f1d169da47c1b1612e4d7b90d9c4" style="display: block;width: 0px;height: 0px;"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="//g.csdnimg.cn/common/csdn-toolbar/csdn-toolbar.js"></script>
+
+<div id="navs" class="clearfix">
+</div>
+<script>
+    $(function () {
+        window.csdn.navSecond.init({
+            nav:[
+                {
+                    value:"精品专辑",
+                    url:"https://download.csdn.net//album",
+                },
+                {
+                    value:"我的资源",
+                    url:"https://mp.csdn.net/console/upDetailed",
+                },
+                {
+                    value:"我的积分",
+                    url:"https://mp.csdn.net/console/dataWatch/downList",
+                },
+                {
+                    value:"我的收藏",
+                    url:"https://i.csdn.net/#/uc/collection-list",
+                },
+                {
+                    value:"已下载",
+                    url:"https://mp.csdn.net/console/DownloadDetailed",
+                },
+                {
+                    value:"下载帮助",
+                    url:"https://blog.csdn.net/blogdevteam/category_9584548.html"
+                }
+            ],
+            elId: "navs",
+            extraBtn: [
+                {
+                    value: '上传资源',
+                    url: "https://mp.csdn.net/console/uploadResources",
+                    reportQuery: "spm=1003.2020.3001.4172",
+                    reportClick: '{"spm":"1003.2020.3001.4172"}'
+                }
+            ]
+        })
+    })
+</script>
+<link rel="stylesheet" href="//csdnimg.cn/release/download/static_files/pc/css/float_box-f507429dbc.css" />
+<div class="float_box">
+    
+</div>
+<script>
+    $(function () {
+        function fixBox() {
+            var el = document.querySelector('.float_box')
+            var navEl = document.querySelector('#navs')
+            var sLeft = window.pageXOffset || document.documentElement.scrollLeft || document.body.scrollLeft || 0
+            // 跟nav左边同步
+            var navLeft = navEl.offsetLeft - sLeft
+            var boxTop = $('#csdn-toolbar').height() + $('#csdn-nav-second').height() + 18
+            el.style.left = navLeft + 'px'
+            el.style.top = boxTop + 'px'
+        }
+        setTimeout(function () {
+            fixBox()
+        }, 300)
+        document.addEventListener('scroll', function(){
+            fixBox()
+        })
+        window.addEventListener('resize', function () {
+            fixBox()
+        })
+
+        var storage = window.localStorage.getItem('hideFloat')
+        if (!storage || storage !== getCurrentDay()) {
+            $('.float_box').show()
+        }
+        $('.float_box_close').on('click', function () {
+            var clickTime = getCurrentDay()
+            window.localStorage.setItem('hideFloat', clickTime)
+            $('.float_box').hide()
+        })
+        function getCurrentDay () {
+            return new Date().getFullYear() + '/' + (new Date().getMonth() + 1) + '/' + new Date().getDate()
+        }
+    })
+</script>
+</div>
+</div>
+
+<!-- 验证安全手机 -->
+<div class="risk_box_mask check" style="display:none">
+    <div class="risk_box">
+        <div class="title">
+            <span>验证安全手机</span>
+            <img class="close" src="//csdnimg.cn/release/download/static_files/pc/images/pop_close.png" alt="">
+        </div>
+        <div class="risk_main">
+            <p>请使用绑定的手机号<span></span>（国内）编辑短信内容 <span></span> 发送至 <span></span> 进行短信验证，发送完成后点击<span>“我已发送”</span>按钮</p>
+        </div>
+        <div class="risk_btn_box ">
+            <a class="back" href="javascript:;">返回</a>
+            <a class="sure" href="javascript:;">我已发送</a>
+        </div>
+    </div>
+</div>
+
+
+<!-- 微信安全验证-->
+<div class="weixin_code_check" style="display:none;">
+    <div class="code_check_back"></div>
+    <div class="code_check_area">
+        <p class="check_area_title">安全验证</p>
+        <div class="check_area_img"><img id="check_area_img"/></div>
+        <p class="check_area_msg">微信扫码并关注</p>
+        <i class="el-icon-close" style="background:none;"></i>
+    </div>
+</div>
+
+
+<!-- 绑定微信 -->
+<div class="risk_box_mask bind_wx" style="display:none">
+    <div class="risk_box">
+        <div class="title">
+            <span>安全校验</span>
+            <img class="close" src="//csdnimg.cn/release/download/static_files/pc/images/pop_close.png" alt="">
+        </div>
+        <div class="risk_main">
+            <p>您的账号存在较高风险</p>
+            <p>请先身份认证</p>
+        </div>
+        <div class="risk_btn_box" style="position: absolute;right: 0;bottom: 19px;">
+            <a class="back" href="javascript:;">返回</a>
+            <a class="sure" target="_blank" href="https://i.csdn.net/#/account/bind">立即绑定</a>
+        </div>
+    </div>
+</div>
+
+<!-- 员工认证弹窗 -->
+<div class="people_authentication" style="display:none">
+    <div class="people_main">
+        <div class="title">添加认证 <img src="//csdnimg.cn/release/download/static_files/pc/images/pop_close.png" /></div>
+        <a class="li mb16" target="_blank" href="https://i.csdn.net/#/user-center/profile?floor=job"
+           data-report-click='{"spm":"1003.2020.3001.4169}"'
+        data-report-query="spm=1003.2020.3001.4169"
+        >
+        <img src="//csdnimg.cn/release/download/static_files/pc/images/staff_icon.png" alt="" class="">
+        员工认证VIP会员8折
+        </a>
+        <a class="li" target="_blank" href="https://i.csdn.net/#/user-center/profile?floor=edu"
+           data-report-click={"spm":1003.2020.3001.4170}
+
+        data-report-query="spm=1003.2020.3001.4170"
+        >
+        <img src="//csdnimg.cn/release/download/static_files/pc/images/stu_icon.png" alt="" class="">
+        学生认证VIP会员7折
+        </a>
+    </div>
+</div>
+<!-- pdf预览弹窗 -->
+    <div class="pdf_box_warp">
+        <div class="pdf_title">
+            <div class="pdf_t_main">
+                <img class="type" src="//g.csdnimg.cn/pub-recom/img/type/pdf.svg" alt="">
+                <span class="tit">Thunderbird OS X Adress Book Edititon-开源</span>
+                        <a href="javascript:;" class="down download_btn" data-report-click='{"mod":"1586333473_038","spm":1003.2020.3001.4257,"extend1":"normal_download"}' data-report-view='{"mod":"1586333473_038","spm":1003.2020.3001.4257,"extend1":"normal_download"}'>5积分/C币 立即下载</a>
+                <div class="page fr">
+                    <span class="page_now">1</span>/<span class="page_all">0</span>
+                </div>
+                <img class="close_btn" src="//csdnimg.cn/release/download/static_files/pc/images/close_g.png" alt="">
+            </div>
+        </div>
+            <div class="pdf_img_box">
+                <div class='main'  previewNo="0">
+                </div>
+            </div>
+    </div>
+
+<script>
+    if (window.csdn === undefined) {
+        window.csdn = {};
+    }
+    window.csdn.sideToolbar = {
+        options: {
+            contentEl: document.getElementsByClassName("main")[0]
+        }
+    }
+</script>
+<!-- 右侧返回顶部 -->
+<script type="text/javascript" src="https://g.csdnimg.cn/side-toolbar/3.0/side-toolbar.js?t=1594881824401"></script>
+
+<!-- copyright 信息  -->
+<script src="//g.csdnimg.cn/common/csdn-footer/csdn-footer.js"></script>
+<!-- 二级菜单组件 -->
+<script type="text/javascript" src="https://g.csdnimg.cn/nav-second/1.0.3/nav-second.js"></script>
+<!--右侧整体固定-->
+<script type="text/javascript" src="//g.csdnimg.cn/fixed-sidebar/1.0.5/fixed-sidebar.js"></script>
+<script>
+    $(function () {
+            /** toolbar是否悬浮*/
+            if(toolbarIsSuspension()){
+                window.csdn.configuration_tool_parameterv({
+                    'need_first_suspend': true,//第一栏悬浮
+                    'need_little_suspend': false,//第二栏悬浮
+                    'little_tool_id': '' ,//第二栏id
+                    'little_need_insert_type': '',//第二栏需要模块类型
+                    //第二栏需要模块类型,
+                    need_change_function: function (flag) {
+                        window.csdn.navSecond.changeNavFix(flag)
+                    }
+                })
+            }
+            function toolbarIsSuspension(){
+                if(window.csdn.configuration_tool_parameterv){
+                    return true;
+                }else{
+                    return false;
+                }
+            }
+    })
+</script>
+<script type="text/javascript" src="https://g.csdnimg.cn/user-login/2.3.2/user-login.js"></script>
+<script type="text/javascript" src="//csdnimg.cn/release/download/static_files/pc/js/libs/libs-d4f6439928.js"></script>
+    <script type="text/javascript" src="https://g.csdnimg.cn/user-medal/1.0.5/user-medal.js"></script>
+<script>
+    (function(){
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https')
+
+        { bp.src = 'https://zz.bdstatic.com/linksubmit/push.js'; }
+        else
+
+        { bp.src = 'http://push.zhanzhang.baidu.com/push.js'; }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+<script type="text/javascript" src="https://g.csdnimg.cn/user-voice/1.0.4/user-voice-verification.js"></script>
+<script type="text/javascript" src="//csdnimg.cn/release/download/static_files/pc/js/tools/jquery-7373324e57.form.min.js"></script>
+<script type="text/javascript" src="//csdnimg.cn/release/download/static_files/mobile/js/bscroll-853a793a84.min.js"></script>
+<script src="//g.csdnimg.cn/user-ordercart/2.0.1/user-ordercart.js"></script>
+<script src="//g.csdnimg.cn/lib/qrcode/1.0.0/qrcode.min.js"></script>
+
+
+    <script src="//g.csdnimg.cn/user-ordertip/3.0.2/user-ordertip.js"></script>
+
+
+<script type="text/javascript" src="//csdnimg.cn/release/download/static_files/pc/js/download_detail-7ca9484bd3.js"></script>
+<!-- 分页插件 -->
+<script type="text/javascript" src="//csdnimg.cn/release/download/static_files/pc/js/xlPaging-27bdebbe6c.js"></script>
+<!-- 公共收藏组件 -->
+<script type="text/javascript" src="https://g.csdnimg.cn/collection-box/2.0.2/collection-box.js"></script>
+
+<!--迁移资源增加上报-->
+<script type="text/javascript">
+    _hmt.push(['_trackCustomEvent', 'download_pdf', {}]);
+</script>
+<script>
+    csdn.report.reportView({"mod":"1586333473_017","extra":"{\"vType\":\""+_getCookieValue("p_uid")+"\",\"sourec_num\":\"5\"}"})
+</script>
+</body>
+</html>

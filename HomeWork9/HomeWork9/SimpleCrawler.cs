@@ -20,11 +20,17 @@ namespace HomeWork9
         public Action refreshData;
         public string CrawlUrl { get; set; }
         public bool OnlyHtmlAspxJsp { get; set; }
+        private int MaxPage = 50;
 
         public void Crawl()
         {
             if (CrawlUrl==null)
                 return;
+            if (urls.ContainsKey(CrawlUrl) && (bool)urls[CrawlUrl] == true)
+                return;
+            count = 0;
+            SuccessUrl.Clear();
+            FailUrl.Clear();
             urls.Add(CrawlUrl, false);//加入初始页面
             while (true)
             {
@@ -36,25 +42,12 @@ namespace HomeWork9
                     current = url;
                 }
 
-                if (current == null || count > 10) break;
-                //Console.WriteLine("爬行" + current + "页面!");
-                if(!OnlyHtmlAspxJsp)
-                {
-                    string html = DownLoad(current); // 下载
-                    urls[current] = true;
-                    count++;
-                    Parse(html);//解析,并加入新的链接
-                }
-                else
-                {
-                    if(Regex.IsMatch(current,"$html")|| Regex.IsMatch(current, "$aspx")|| Regex.IsMatch(current, "$jsp"))
-                    {
-                        string html = DownLoad(current); // 下载
-                        urls[current] = true;
-                        count++;
-                        Parse(html);//解析,并加入新的链接
-                    }
-                }
+                if (current == null || count > MaxPage) break;
+                //Console.WriteLine("爬行" + current + "页面!");                
+                string html = DownLoad(current); // 下载
+                urls[current] = true;
+                count++;
+                Parse(html);//解析,并加入新的链接                
                 //Console.WriteLine("爬行结束");
                 refreshData();
             }
@@ -89,12 +82,16 @@ namespace HomeWork9
             string strRef;
             if(!OnlyHtmlAspxJsp)
             {
-                strRef = @"^(href|HREF)[]*=[]*[""'][^""'#>]+[""']$";
-                //href="//common.cnblogs.com/favicon.svg"
+                strRef = @"(href|HREF)[]*=[]*[""'][^""'#>]+[""']";
+                
+                //老师写的：
+                //UrlDetectRegex = @"(href|HREF)[]*=[]*[""'](?<url>[^""'#>]+)[""']";
+                //urlParseRegex = @"^(?<site>(?<protocal>https?)://(?<host>[\w.-]+)(:\d+)?($|/))(\w+/)*(?<file>[^#?]*)";
+                //示例：href="//common.cnblogs.com/favicon.svg"
             }
             else
             {
-                strRef= @"^(href|HREF)[]*=[]*[""'][^""'#>]+(html|aspx|jsp)[""']$";
+                strRef= @"(href|HREF)[]*=[]*[""'][^""'#>]+(html?|aspx|jsp)[""']";
             }
                 
             MatchCollection matches = new Regex(strRef).Matches(html);

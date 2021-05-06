@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace HomeWork5
 {
-    class Order
+    public class Order
     {
         private static int count = 0;
         private double costSum = 0;
@@ -15,7 +15,7 @@ namespace HomeWork5
         public DateTime PayTime { get; }        
         public string SenderAddress { get; set; }
         public string ReceiverAddress { get; set; }
-        public int ID { get; }
+        public int ID { get; set; }
         public List<OrderDetails> Goods = new List<OrderDetails>();
         public double CostSum
         {
@@ -29,8 +29,13 @@ namespace HomeWork5
                 return costSum;
             }
         }
-
-        public Order(string sender,string receiver,string senderAddress,string receiveAddress, List<OrderDetails> goods)
+        public Order()
+        {
+            count++;
+            ID = count;
+            PayTime = DateTime.Now;
+        }
+        public Order(string sender,string receiver,string senderAddress,string receiveAddress)
         {
             Sender = sender;
             Receiver = receiver;
@@ -38,12 +43,14 @@ namespace HomeWork5
             ReceiverAddress = receiveAddress;
             PayTime = DateTime.Now;
             count++;
-            ID = count;
-            Goods = goods;            
+            ID = count;         
         }
-        
-       
-
+        public void AddOneDetail(string name, double price, int num)
+        {
+            OrderDetails orderDetailsTemp;
+            orderDetailsTemp = new OrderDetails(name, price, num);
+            Goods.Add(orderDetailsTemp);
+        }
         public override string ToString()
         {
             StringBuilder str = new StringBuilder();
@@ -61,6 +68,5 @@ namespace HomeWork5
             str.Append('\n');
             return str.ToString();                
         }
-        
     }
 }

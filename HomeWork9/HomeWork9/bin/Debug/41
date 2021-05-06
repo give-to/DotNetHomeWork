@@ -1,0 +1,874 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>开发技术资源下载-CSDN下载</title>
+    <meta charset="UTF-8">
+    <meta name="author" content="CSDN" />
+    <meta name="Copyright" content="CSDN" />
+    <meta name="title" content="开发技术资源下载-CSDN下载" />
+    <meta name="description" content="开发技术资源,为IT开发人员提供权威的开发技术学习资源、开发技术编程源码、开发技术IT电子书、各阶段资料下载等服务.更多下载资源请访问CSDN下载频道." />
+    <meta name="keywords" content="" />
+    <meta name="referrer" content="always">
+    <meta name="applicable-device" content="pc">
+    <link rel="canonical" href="https://download.csdn.net/search/16/10/0/0/1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+            <meta name="report" content='{"spm":"1003.2021"}'>
+        <script type="text/javascript" src="https://g.csdnimg.cn/tingyun/1.8.5/download.js"></script>
+    <script>
+        var CFG = {
+            STATIC_URL : '//csdnimg.cn/release/download/static_files',                             //静态资源根目录  对应本地服务的dist目录
+            STATIC_GLOBAL_URL : '//csdnimg.cn/release/download/static_files',                  //老版静态资源根目录
+            STATIC_GLOBAL_COMBO_URL : '//csdnimg.cn/release/download/static_files',      //新版静态资源根目录
+            API_URL : "@@CFG.API_URL",                                    //API地址（默认）
+            PROJECT_URL : "@@CFG.PROJECT_URL",                              //项目地址（默认）
+        };
+    </script>
+    <script src="https://g.csdnimg.cn/??lib/jquery/1.12.4/jquery.min.js,lib/art-template/4.13.0/template-web.js" type="text/javascript"></script>
+    <script src='//g.csdnimg.cn/common/csdn-report/report.js' type='text/javascript'></script>
+    <script src="https://g.csdnimg.cn/login-box/1.1.4/login-box.js"></script>
+    <link rel="stylesheet" href="https://csdnimg.cn/cdn/font-awesome-4.4.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="//csdnimg.cn/release/download/static_files/pc/css/common-c2e9c244bc.css" />
+    <link href="https://g.csdnimg.cn/static/logo/favicon32.ico"  rel="shortcut icon" type="image/x-icon" />
+    <link rel="stylesheet" href="https://g.csdnimg.cn/nav-second/1.0.3/css/nav-second.css" />
+    <!-- google自动广告测试，请帮忙添加代码 AdSense -->
+    <!-- <script data-ad-client="ca-pub-1076724771190722" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script> -->
+<link rel="stylesheet" href="//csdnimg.cn/release/download/static_files/pc/css/download_index-fb4beb261b.css"/>
+<script>
+    var source = {
+        is_not_upload_user: 0    };
+    var searchValue = {
+        category_id: '16',
+        source_type: '10'
+    };
+    </script>
+<script type="text/javascript" src="//cpro.baidustatic.com/cpro/ui/c.js" async="async" defer="defer" ></script>
+<meta name="csdnFooter" content='{"type": "3", "el": ".fixed_dl"}'>
+</head>
+<body>
+
+<div class="home_page_wrap">
+    <div class="main clearfix">
+        <!-- 公共 导航 引入 开始 -->
+        
+<script src="//g.csdnimg.cn/common/csdn-toolbar/csdn-toolbar.js"></script>
+
+<div id="navs" class="clearfix">
+</div>
+<script>
+    $(function () {
+         window.csdn.navSecond.init({
+            nav:[
+                {
+                    value:"精品专辑",
+                    url:"https://download.csdn.net/album",
+                },
+                {
+                    value:"我的资源",
+                    url:"https://mp.csdn.net/console/upDetailed",
+                },
+                {
+                    value:"我的积分",
+                    url:"https://mp.csdn.net/console/dataWatch/downList",
+                },
+                {
+                    value:"我的收藏",
+                    url:"https://i.csdn.net/#/uc/collection-list",
+                },
+                {
+                    value:"已下载",
+                    url:"https://mp.csdn.net/console/DownloadDetailed",
+                },
+                {
+                    value:"下载帮助",
+                    url:"https://blog.csdn.net/blogdevteam/category_9584548.html"
+                }
+            ],
+            elId: "navs",
+            extraBtn: [
+                {
+                  value: '上传资源',
+                  url: "https://mp.csdn.net/console/uploadResources",
+                  reportQuery: "spm=1003.2021.3001.5722",
+                  reportClick: '{"spm":"1003.2021.3001.5722"}'
+                }
+            ]
+         })
+    })
+</script>
+        <!-- 公共 导航 引入 结束 -->
+        <div class="clearfix fr" style="width:1096px">
+            <div class="main_l fl right_main_box">
+                <div class="main_l">
+                    <div class="dl_wrap">
+                        <dl class="cate_sea_list clearfix">
+                            <dd>
+                                                            <ul class="cate_list clearfix">
+                                    <li >
+                                        <a href="/">
+                                            全部
+                                        </a>
+                                    </li>
+
+                                                                            <li >
+                                            <a href="/search/10/10/0/0/1">
+                                                安全技术                                            </a>
+                                            <span class="triangle"></span>
+                                        </li>
+                                                                            <li >
+                                            <a href="/search/11/10/0/0/1">
+                                                存储                                            </a>
+                                            <span class="triangle"></span>
+                                        </li>
+                                                                            <li >
+                                            <a href="/search/12/10/0/0/1">
+                                                操作系统                                            </a>
+                                            <span class="triangle"></span>
+                                        </li>
+                                                                            <li >
+                                            <a href="/search/13/10/0/0/1">
+                                                服务器应用                                            </a>
+                                            <span class="triangle"></span>
+                                        </li>
+                                                                            <li >
+                                            <a href="/search/14/10/0/0/1">
+                                                行业                                            </a>
+                                            <span class="triangle"></span>
+                                        </li>
+                                                                            <li >
+                                            <a href="/search/15/10/0/0/1">
+                                                课程资源                                            </a>
+                                            <span class="triangle"></span>
+                                        </li>
+                                                                            <li class="cate_cur cart_cur_f">
+                                            <a href="/search/16/10/0/0/1">
+                                                开发技术                                            </a>
+                                            <span class="triangle"></span>
+                                        </li>
+                                                                            <li >
+                                            <a href="/search/17/10/0/0/1">
+                                                考试认证                                            </a>
+                                            <span class="triangle"></span>
+                                        </li>
+                                                                            <li >
+                                            <a href="/search/18/10/0/0/1">
+                                                数据库                                            </a>
+                                            <span class="triangle"></span>
+                                        </li>
+                                                                            <li >
+                                            <a href="/search/19/10/0/0/1">
+                                                网络技术                                            </a>
+                                            <span class="triangle"></span>
+                                        </li>
+                                                                                                                <div class="subSearch">
+                                            <ul>
+                                                                                                    <li >
+                                                        <a href="/search/16001/10/0/0/1">Actionscript</a>
+                                                    </li>
+                                                                                                    <li >
+                                                        <a href="/search/16002/10/0/0/1">C</a>
+                                                    </li>
+                                                                                                    <li >
+                                                        <a href="/search/16003/10/0/0/1">C#</a>
+                                                    </li>
+                                                                                                    <li >
+                                                        <a href="/search/16004/10/0/0/1">C++</a>
+                                                    </li>
+                                                                                                    <li >
+                                                        <a href="/search/16005/10/0/0/1">Delphi</a>
+                                                    </li>
+                                                                                                    <li >
+                                                        <a href="/search/16006/10/0/0/1">Java</a>
+                                                    </li>
+                                                                                                    <li >
+                                                        <a href="/search/16007/10/0/0/1">Javascript</a>
+                                                    </li>
+                                                                                                    <li >
+                                                        <a href="/search/16008/10/0/0/1">Perl</a>
+                                                    </li>
+                                                                                                    <li >
+                                                        <a href="/search/16009/10/0/0/1">PHP</a>
+                                                    </li>
+                                                                                                    <li >
+                                                        <a href="/search/16010/10/0/0/1">Python</a>
+                                                    </li>
+                                                                                                    <li >
+                                                        <a href="/search/16011/10/0/0/1">VB</a>
+                                                    </li>
+                                                                                                    <li >
+                                                        <a href="/search/16012/10/0/0/1">Web开发</a>
+                                                    </li>
+                                                                                                    <li >
+                                                        <a href="/search/16013/10/0/0/1">硬件开发</a>
+                                                    </li>
+                                                                                                    <li >
+                                                        <a href="/search/16014/10/0/0/1">其它</a>
+                                                    </li>
+                                                                                            </ul>
+                                        </div>
+                                                                    </ul>
+
+                                <ul class="cate_list clearfix">
+                                                                            <li >
+                                            <a href="/search/20/10/0/0/1">
+                                                信息化                                            </a>
+                                            <span class="triangle"></span>
+                                        </li>
+                                                                            <li >
+                                            <a href="/search/21/10/0/0/1">
+                                                移动开发                                            </a>
+                                            <span class="triangle"></span>
+                                        </li>
+                                                                            <li >
+                                            <a href="/search/22/10/0/0/1">
+                                                云计算                                            </a>
+                                            <span class="triangle"></span>
+                                        </li>
+                                                                            <li >
+                                            <a href="/search/23/10/0/0/1">
+                                                大数据                                            </a>
+                                            <span class="triangle"></span>
+                                        </li>
+                                                                            <li >
+                                            <a href="/search/24/10/0/0/1">
+                                                跨平台                                            </a>
+                                            <span class="triangle"></span>
+                                        </li>
+                                                                            <li >
+                                            <a href="/search/25/10/0/0/1">
+                                                音视频                                            </a>
+                                            <span class="triangle"></span>
+                                        </li>
+                                                                            <li >
+                                            <a href="/search/26/10/0/0/1">
+                                                游戏开发                                            </a>
+                                            <span class="triangle"></span>
+                                        </li>
+                                                                            <li >
+                                            <a href="/search/27/10/0/0/1">
+                                                人工智能                                            </a>
+                                            <span class="triangle"></span>
+                                        </li>
+                                                                            <li >
+                                            <a href="/search/28/10/0/0/1">
+                                                区块链                                            </a>
+                                            <span class="triangle"></span>
+                                        </li>
+                                                                                                                <div class="subSearch">
+                                            <ul>
+                                                                                                    <li >
+                                                        <a href="/search/16001/10/0/0/1">Actionscript</a>
+                                                    </li>
+                                                                                                    <li >
+                                                        <a href="/search/16002/10/0/0/1">C</a>
+                                                    </li>
+                                                                                                    <li >
+                                                        <a href="/search/16003/10/0/0/1">C#</a>
+                                                    </li>
+                                                                                                    <li >
+                                                        <a href="/search/16004/10/0/0/1">C++</a>
+                                                    </li>
+                                                                                                    <li >
+                                                        <a href="/search/16005/10/0/0/1">Delphi</a>
+                                                    </li>
+                                                                                                    <li >
+                                                        <a href="/search/16006/10/0/0/1">Java</a>
+                                                    </li>
+                                                                                                    <li >
+                                                        <a href="/search/16007/10/0/0/1">Javascript</a>
+                                                    </li>
+                                                                                                    <li >
+                                                        <a href="/search/16008/10/0/0/1">Perl</a>
+                                                    </li>
+                                                                                                    <li >
+                                                        <a href="/search/16009/10/0/0/1">PHP</a>
+                                                    </li>
+                                                                                                    <li >
+                                                        <a href="/search/16010/10/0/0/1">Python</a>
+                                                    </li>
+                                                                                                    <li >
+                                                        <a href="/search/16011/10/0/0/1">VB</a>
+                                                    </li>
+                                                                                                    <li >
+                                                        <a href="/search/16012/10/0/0/1">Web开发</a>
+                                                    </li>
+                                                                                                    <li >
+                                                        <a href="/search/16013/10/0/0/1">硬件开发</a>
+                                                    </li>
+                                                                                                    <li >
+                                                        <a href="/search/16014/10/0/0/1">其它</a>
+                                                    </li>
+                                                                                            </ul>
+                                        </div>
+                                                                    </ul>
+                            </dd>
+                        </dl>
+                        <!-- 删除资源类型 4/17 -->
+                        <div class="condition clearfix">
+                            <div class="condition_wrap">
+                                                                    <label id="source_type" class="condition_item"><em>开发技术</em><a class="cate_close" id="tech_close" href="/"></a></label>
+                                
+                                
+                                
+                                
+                                                                    <label class="removeAll">
+                                        <a href="/" class="removeAll_btn">清空全部</a>
+                                    </label>
+                                                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="main_l">
+                    <div class="resouces_tab_shows tab_nav J_tabSwitch">
+
+                        <div class="tab_con_box">
+                            <!-- 代码资源列表-->
+                            <div class="tab_page tab3_con">
+                                <div class="album_detail_wrap">
+                                    <!-- 循环开始 -->
+                                                                    <ul class="album_detail">
+                                                                            <li class="recom_item download">
+                                            <a class="pr_item" href="/download/liuchunhua78/18405980" target="_blank"
+                                                >
+                                                <div class="pr_item_l">
+                                                    <div class="fix">
+                                                        <img src="//csdnimg.cn/release/download/static_files/pc/images/minetype/7Z.png" alt="">
+                                                        <span>9.22MB</span>
+                                                    </div>
+                                                </div>
+                                                <div class="pr_item_r">
+                                                    <p class="pr_i_t">RazorPagesMovie.7z</p>
+                                                    <span class="pr_item_t_r fr">
+                                                        <span class="pr_t_date">2021-05-06</span>
+                                                    </span>
+                                                                                                            <p class="pr_i_d">本教程适合初学</p>
+                                                                                                    </div>
+                                            </a>
+                                        </li>
+                                                                            <li class="recom_item download">
+                                            <a class="pr_item" href="/download/weixin_44504146/18405656" target="_blank"
+                                                >
+                                                <div class="pr_item_l">
+                                                    <div class="fix">
+                                                        <img src="//csdnimg.cn/release/download/static_files/pc/images/minetype/ZIP.png" alt="">
+                                                        <span>4KB</span>
+                                                    </div>
+                                                </div>
+                                                <div class="pr_item_r">
+                                                    <p class="pr_i_t">camerasOnline.zip</p>
+                                                    <span class="pr_item_t_r fr">
+                                                        <span class="pr_t_date">2021-05-06</span>
+                                                    </span>
+                                                                                                            <p class="pr_i_d">浏览器调用前后摄像头实现在线拍照，兼容谷歌,火狐,360,IE等大部分浏览器;实际项目中使用的代码，可以用于采集照片,人脸识别!</p>
+                                                                                                    </div>
+                                            </a>
+                                        </li>
+                                                                            <li class="recom_item download">
+                                            <a class="pr_item" href="/download/CSNN2019/18405535" target="_blank"
+                                                >
+                                                <div class="pr_item_l">
+                                                    <div class="fix">
+                                                        <img src="//csdnimg.cn/release/download/static_files/pc/images/minetype/unkonw.svg" alt="">
+                                                        <span>463B</span>
+                                                    </div>
+                                                </div>
+                                                <div class="pr_item_r">
+                                                    <p class="pr_i_t">SEH系列：代码文件3</p>
+                                                    <span class="pr_item_t_r fr">
+                                                        <span class="pr_t_date">2021-05-06</span>
+                                                    </span>
+                                                                                                            <p class="pr_i_d">SEH系列：代码文件3</p>
+                                                                                                    </div>
+                                            </a>
+                                        </li>
+                                                                            <li class="recom_item download">
+                                            <a class="pr_item" href="/download/CSNN2019/18405530" target="_blank"
+                                                >
+                                                <div class="pr_item_l">
+                                                    <div class="fix">
+                                                        <img src="//csdnimg.cn/release/download/static_files/pc/images/minetype/unkonw.svg" alt="">
+                                                        <span>743B</span>
+                                                    </div>
+                                                </div>
+                                                <div class="pr_item_r">
+                                                    <p class="pr_i_t">SEH系列：代码文件2</p>
+                                                    <span class="pr_item_t_r fr">
+                                                        <span class="pr_t_date">2021-05-06</span>
+                                                    </span>
+                                                                                                            <p class="pr_i_d">SEH系列：代码文件2</p>
+                                                                                                    </div>
+                                            </a>
+                                        </li>
+                                                                            <li class="recom_item download">
+                                            <a class="pr_item" href="/download/m0_37592063/18405528" target="_blank"
+                                                >
+                                                <div class="pr_item_l">
+                                                    <div class="fix">
+                                                        <img src="//csdnimg.cn/release/download/static_files/pc/images/minetype/ZIP.png" alt="">
+                                                        <span>28.01MB</span>
+                                                    </div>
+                                                </div>
+                                                <div class="pr_item_r">
+                                                    <p class="pr_i_t">apidemo.zip</p>
+                                                    <span class="pr_item_t_r fr">
+                                                        <span class="pr_t_date">2021-05-06</span>
+                                                    </span>
+                                                                                                            <p class="pr_i_d">在SpringBoot中应用swagger2的一个DEMO，主要功能包括：WEB访问API，API导出为adco、html、pdf。项目中有中文字体文件，使用的时候删先除目录docs、html和pdf目录，启动项目，然后点击idea maven的test lifecycle。可方便的移植到自己的项目中。</p>
+                                                                                                    </div>
+                                            </a>
+                                        </li>
+                                                                            <li class="recom_item download">
+                                            <a class="pr_item" href="/download/CSNN2019/18405516" target="_blank"
+                                                >
+                                                <div class="pr_item_l">
+                                                    <div class="fix">
+                                                        <img src="//csdnimg.cn/release/download/static_files/pc/images/minetype/unkonw.svg" alt="">
+                                                        <span>2KB</span>
+                                                    </div>
+                                                </div>
+                                                <div class="pr_item_r">
+                                                    <p class="pr_i_t">SEH系列：代码文件1</p>
+                                                    <span class="pr_item_t_r fr">
+                                                        <span class="pr_t_date">2021-05-06</span>
+                                                    </span>
+                                                                                                            <p class="pr_i_d">SEH系列：代码文件1</p>
+                                                                                                    </div>
+                                            </a>
+                                        </li>
+                                                                            <li class="recom_item download">
+                                            <a class="pr_item" href="/download/kexuedalao/18405494" target="_blank"
+                                                >
+                                                <div class="pr_item_l">
+                                                    <div class="fix">
+                                                        <img src="//csdnimg.cn/release/download/static_files/pc/images/minetype/ZIP.png" alt="">
+                                                        <span>3.1MB</span>
+                                                    </div>
+                                                </div>
+                                                <div class="pr_item_r">
+                                                    <p class="pr_i_t">村田电容2011年之后的模型库  ADS</p>
+                                                    <span class="pr_item_t_r fr">
+                                                        <span class="pr_t_date">2021-05-06</span>
+                                                    </span>
+                                                                                                            <p class="pr_i_d">ADS 村田电容封装库</p>
+                                                                                                    </div>
+                                            </a>
+                                        </li>
+                                                                            <li class="recom_item download">
+                                            <a class="pr_item" href="/download/kexuedalao/18405483" target="_blank"
+                                                >
+                                                <div class="pr_item_l">
+                                                    <div class="fix">
+                                                        <img src="//csdnimg.cn/release/download/static_files/pc/images/minetype/ZIP.png" alt="">
+                                                        <span>226KB</span>
+                                                    </div>
+                                                </div>
+                                                <div class="pr_item_r">
+                                                    <p class="pr_i_t">MW6S010N_MDL_ADS.zip</p>
+                                                    <span class="pr_item_t_r fr">
+                                                        <span class="pr_t_date">2021-05-06</span>
+                                                    </span>
+                                                                                                            <p class="pr_i_d">适用于ADS  任何版本的ADS模型库</p>
+                                                                                                    </div>
+                                            </a>
+                                        </li>
+                                                                            <li class="recom_item download">
+                                            <a class="pr_item" href="/download/kexuedalao/18405462" target="_blank"
+                                                >
+                                                <div class="pr_item_l">
+                                                    <div class="fix">
+                                                        <img src="//csdnimg.cn/release/download/static_files/pc/images/minetype/ZIP.png" alt="">
+                                                        <span>26.73MB</span>
+                                                    </div>
+                                                </div>
+                                                <div class="pr_item_r">
+                                                    <p class="pr_i_t">Cree的管子最新模型，包含近几年的一些封装，与以往的ADS2011模型稍有区别</p>
+                                                    <span class="pr_item_t_r fr">
+                                                        <span class="pr_t_date">2021-05-06</span>
+                                                    </span>
+                                                                                                            <p class="pr_i_d">Cree的管子最新模型，包含近几年的一些封装，与以往的ADS2011模型稍有区别</p>
+                                                                                                    </div>
+                                            </a>
+                                        </li>
+                                                                            <li class="recom_item download">
+                                            <a class="pr_item" href="/download/fkzxf/18405420" target="_blank"
+                                                >
+                                                <div class="pr_item_l">
+                                                    <div class="fix">
+                                                        <img src="//csdnimg.cn/release/download/static_files/pc/images/minetype/RAR.png" alt="">
+                                                        <span>861KB</span>
+                                                    </div>
+                                                </div>
+                                                <div class="pr_item_r">
+                                                    <p class="pr_i_t">记账软件网页版20210506090328.rar</p>
+                                                    <span class="pr_item_t_r fr">
+                                                        <span class="pr_t_date">2021-05-06</span>
+                                                    </span>
+                                                                                                            <p class="pr_i_d">登陆账号 admin 密码：admin888
+本网页记账版采用sql2008数据库，vs2010
+有客户资料 服务商资料，销售登记 支出登记，
+数据作废（不可删除）
+销售服务单打印，
+账目可以通过时间端查询，
+是个人电脑店 广告店可以使用记账网页。
+</p>
+                                                                                                    </div>
+                                            </a>
+                                        </li>
+                                                                            <li class="recom_item download">
+                                            <a class="pr_item" href="/download/PHONONE/18405409" target="_blank"
+                                                >
+                                                <div class="pr_item_l">
+                                                    <div class="fix">
+                                                        <img src="//csdnimg.cn/release/download/static_files/pc/images/minetype/ZIP.png" alt="">
+                                                        <span>1.8MB</span>
+                                                    </div>
+                                                </div>
+                                                <div class="pr_item_r">
+                                                    <p class="pr_i_t">74hc+4000.zip</p>
+                                                    <span class="pr_item_t_r fr">
+                                                        <span class="pr_t_date">2021-05-06</span>
+                                                    </span>
+                                                                                                            <p class="pr_i_d">74和4000系列逻辑电路目录
+型号-功能对照表
+便于快速查找型号、设计选型</p>
+                                                                                                    </div>
+                                            </a>
+                                        </li>
+                                                                            <li class="recom_item download">
+                                            <a class="pr_item" href="/download/PHONONE/18405350" target="_blank"
+                                                >
+                                                <div class="pr_item_l">
+                                                    <div class="fix">
+                                                        <img src="//csdnimg.cn/release/download/static_files/pc/images/minetype/PDF.png" alt="">
+                                                        <span>474KB</span>
+                                                    </div>
+                                                </div>
+                                                <div class="pr_item_r">
+                                                    <p class="pr_i_t">CCD4096x4096DataSheetRevB.pdf</p>
+                                                    <span class="pr_item_t_r fr">
+                                                        <span class="pr_t_date">2021-05-06</span>
+                                                    </span>
+                                                                                                            <p class="pr_i_d">s a 4096(H) x 4097(V) solid state Charge Coupled 
+Device (CCD) full frame sensor. The CCD is intended for
+advanced scientific, space, industrial, and commercial digital 
+imaging applications. The CCD486 active area is organized as an
+array of 4096 horizontal by 4097 vertical imaging elements. The
+pixel pitch is 15µm with a 100% fill factor. For dark reference, 
+each readout line is preceded by 18 dark pixels. The imager is 
+available in front-illuminated as well as back-illuminated
+configuration. A split readout architecture has been adopted to
+facilitate high data rates with simultaneous readout from four
+output ports, and provides the flexibility to read out the entire 
+image frame from two output ports, or from a single output port to
+simplify the drive electronics requirements</p>
+                                                                                                    </div>
+                                            </a>
+                                        </li>
+                                                                            <li class="recom_item download">
+                                            <a class="pr_item" href="/download/PHONONE/18405323" target="_blank"
+                                                >
+                                                <div class="pr_item_l">
+                                                    <div class="fix">
+                                                        <img src="//csdnimg.cn/release/download/static_files/pc/images/minetype/PDF.png" alt="">
+                                                        <span>1.33MB</span>
+                                                    </div>
+                                                </div>
+                                                <div class="pr_item_r">
+                                                    <p class="pr_i_t">ccd6161_data_sheet_january_2013.pdf</p>
+                                                    <span class="pr_item_t_r fr">
+                                                        <span class="pr_t_date">2021-05-06</span>
+                                                    </span>
+                                                                                                            <p class="pr_i_d">60mm方形CCD，不是CMOS喔。
+a 4096(H) x 4096(V) solid state Charge
+Coupled Device (CCD) Full Frame sensor. The CCD is intended
+for advanced scientific, space, industrial, and commercial 
+digital imaging applications. The CCD6161 active area is
+organized as an array of 4096 horizontal by 4096 vertical
+imaging elements.
+In addition to 4096(H) x 4096(V) imaging elements there 
+are 8 peripheral columns on left and right edges of the imaging
+area to improve non-uniformity at t h e edges. These 16 
+peripheral columns are not connected to t h e serial register.
+There are 32 isolation rows on top and bottom of the imaging
+area and these 64 isolation rows are covered by metal, making 
+the total array 4112(H) x 4160(V). The pixel pitch is 15µm with 
+a 100% fill factor. For dark reference, each readout line is 
+preceded by 18 dark pixels. A split readout architecture has 
+been adopted to facilitate high data rates with simultaneous
+readout from four output ports, and provides the flexibility to
+read out the entire image frame from two output ports, or from a
+single output port to simplify the drive electronics requirements.
+</p>
+                                                                                                    </div>
+                                            </a>
+                                        </li>
+                                                                            <li class="recom_item download">
+                                            <a class="pr_item" href="/download/PHONONE/18405233" target="_blank"
+                                                >
+                                                <div class="pr_item_l">
+                                                    <div class="fix">
+                                                        <img src="//csdnimg.cn/release/download/static_files/pc/images/minetype/PDF.png" alt="">
+                                                        <span>297KB</span>
+                                                    </div>
+                                                </div>
+                                                <div class="pr_item_r">
+                                                    <p class="pr_i_t">data_sheet_ccd9216x9216.pdf</p>
+                                                    <span class="pr_item_t_r fr">
+                                                        <span class="pr_t_date">2021-05-06</span>
+                                                    </span>
+                                                                                                            <p class="pr_i_d">A 9216 x 9216 active element solid state Charge Coupled 
+Device (CCD) Full Frame sensor. The CCD is intended for advanced 
+scientific, space, and aerial reconnaissance applications. The CCD 595 is 
+organized as an array of 9216 horizontal by 9216 vertical imaging 
+elements. The pixel pitch is 8.75um with a 100% fill factor. Three-phase 
+clocking is employed in the imaging area with two-phase clocking in the 
+serial readout registers. Image readout is performed via 4 serial registers 
+containing 19 isolation rows between imaging and readout sections. The 
+imaging array can be clocked unidirectional (4-output configuration) or bidirectional (8-output configuration). The imaging area segments are split 
+in mid-array for the latter configuration. To maximize the 
+exposure/readout cycle rate, concurrent array and serial register clocking 
+is utilized. Fast transfer clocking between the array and serial registers is 
+accomplished with strapped transfer gates that load each line in less than 
+five microseconds. </p>
+                                                                                                    </div>
+                                            </a>
+                                        </li>
+                                                                            <li class="recom_item download">
+                                            <a class="pr_item" href="/download/qq_43239398/18405221" target="_blank"
+                                                >
+                                                <div class="pr_item_l">
+                                                    <div class="fix">
+                                                        <img src="//csdnimg.cn/release/download/static_files/pc/images/minetype/unkonw.svg" alt="">
+                                                        <span>1KB</span>
+                                                    </div>
+                                                </div>
+                                                <div class="pr_item_r">
+                                                    <p class="pr_i_t">自动填报健康信息.py</p>
+                                                    <span class="pr_item_t_r fr">
+                                                        <span class="pr_t_date">2021-05-06</span>
+                                                    </span>
+                                                                                                            <p class="pr_i_d">自动填报健康信息.py</p>
+                                                                                                    </div>
+                                            </a>
+                                        </li>
+                                                                            <li class="recom_item download">
+                                            <a class="pr_item" href="/download/weixin_45774074/18405162" target="_blank"
+                                                >
+                                                <div class="pr_item_l">
+                                                    <div class="fix">
+                                                        <img src="//csdnimg.cn/release/download/static_files/pc/images/minetype/7Z.png" alt="">
+                                                        <span>466.08MB</span>
+                                                    </div>
+                                                </div>
+                                                <div class="pr_item_r">
+                                                    <p class="pr_i_t">TEST_Python_jingege.zip</p>
+                                                    <span class="pr_item_t_r fr">
+                                                        <span class="pr_t_date">2021-05-06</span>
+                                                    </span>
+                                                                                                            <p class="pr_i_d">自用学习资料</p>
+                                                                                                    </div>
+                                            </a>
+                                        </li>
+                                                                            <li class="recom_item download">
+                                            <a class="pr_item" href="/download/PHONONE/18405086" target="_blank"
+                                                >
+                                                <div class="pr_item_l">
+                                                    <div class="fix">
+                                                        <img src="//csdnimg.cn/release/download/static_files/pc/images/minetype/PDF.png" alt="">
+                                                        <span>2.22MB</span>
+                                                    </div>
+                                                </div>
+                                                <div class="pr_item_r">
+                                                    <p class="pr_i_t">ATI_FT_Catalog.pdf</p>
+                                                    <span class="pr_item_t_r fr">
+                                                        <span class="pr_t_date">2021-05-06</span>
+                                                    </span>
+                                                                                                            <p class="pr_i_d">The Force/Torque (F/T) sensor system measures the full
+six components of force and torque (Fx, Fy, Fz, Tx, Ty, Tz)
+using a monolithic instrumented transducer. The F/T
+transducer uses silicon strain gages for excellent noise
+immunity. The use of silicon gages allows the F/T
+transducer to have high stiffness and increased overload
+protection. All transducer models are available with Net
+F/T, DAQ F/T, or Controller F/T interfaces</p>
+                                                                                                    </div>
+                                            </a>
+                                        </li>
+                                                                            <li class="recom_item download">
+                                            <a class="pr_item" href="/download/PHONONE/18405083" target="_blank"
+                                                >
+                                                <div class="pr_item_l">
+                                                    <div class="fix">
+                                                        <img src="//csdnimg.cn/release/download/static_files/pc/images/minetype/ZIP.png" alt="">
+                                                        <span>3.91MB</span>
+                                                    </div>
+                                                </div>
+                                                <div class="pr_item_r">
+                                                    <p class="pr_i_t">PCI Express Rev_2.0.zip</p>
+                                                    <span class="pr_item_t_r fr">
+                                                        <span class="pr_t_date">2021-05-06</span>
+                                                    </span>
+                                                                                                            <p class="pr_i_d">设计PICe卡的必要资料
+1）PCI Express® Card Electromechanical Specification Revision 2.0 April 11, 2007
+2）PCI Express® Base Specification Revision 5.0 Version 1.0 22 May 2019
+
+</p>
+                                                                                                    </div>
+                                            </a>
+                                        </li>
+                                                                            <li class="recom_item download">
+                                            <a class="pr_item" href="/download/dandingkaer2/18404722" target="_blank"
+                                                >
+                                                <div class="pr_item_l">
+                                                    <div class="fix">
+                                                        <img src="//csdnimg.cn/release/download/static_files/pc/images/minetype/RAR.png" alt="">
+                                                        <span>191.91MB</span>
+                                                    </div>
+                                                </div>
+                                                <div class="pr_item_r">
+                                                    <p class="pr_i_t">手写字符识别+VS2015+OpenCV.rarp</p>
+                                                    <span class="pr_item_t_r fr">
+                                                        <span class="pr_t_date">2021-05-06</span>
+                                                    </span>
+                                                                                                            <p class="pr_i_d">使用OpenCV的 SVM 训练MNIST数据集,并实际测试.除了9容易误判外,其他数字识别率非常高. 包含所有代码,可直接运行,测试,更改</p>
+                                                                                                    </div>
+                                            </a>
+                                        </li>
+                                                                            <li class="recom_item download">
+                                            <a class="pr_item" href="/download/weixin_44480968/18404679" target="_blank"
+                                                >
+                                                <div class="pr_item_l">
+                                                    <div class="fix">
+                                                        <img src="//csdnimg.cn/release/download/static_files/pc/images/minetype/TXT.png" alt="">
+                                                        <span>147B</span>
+                                                    </div>
+                                                </div>
+                                                <div class="pr_item_r">
+                                                    <p class="pr_i_t">java实现简历管理系统的下载链接.txt</p>
+                                                    <span class="pr_item_t_r fr">
+                                                        <span class="pr_t_date">2021-05-06</span>
+                                                    </span>
+                                                                                                            <p class="pr_i_d">1、构思基于B/S的简历信息管理系统的功能需求、栏目设置、操作流程，表现方式等。
+2、使用HTML、CSS、JavaScript、Servlet和JSP等技术实现简历信息管理中的增、删、改、查和展示（列表及详细页）等基本功能</p>
+                                                                                                    </div>
+                                            </a>
+                                        </li>
+                                                                        </ul>
+                                                                    <!-- 循环结束 -->
+                                                                    <div class="pagination">
+                                        <a class="page disabled prev_btn" href="javascript:;"> </a><strong class="current page">1</strong><a class="page" href="/search/16/10/0/0/2">2</a><a class="page" href="/search/16/10/0/0/3">3</a><a class="page" href="/search/16/10/0/0/4">4</a><a class="page next_btn" href="/search/16/10/0/0/2"> </a>                                    </div>
+                                                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="main_r fr">
+                <div class="dl_right_fixed" nofixed="true">
+                    <!-- <div class="quake-slider-images">
+                        <a target="_blank" href="https://edu.csdn.net/course/detail/3903" data-report-query="utm_source=down">
+                            <img src="https://public-download.csdn.net/uploads_album/homebanner/banner/2019/04/09/81e20dc4f4c66655f3658c3a0fc86f98.png" alt="Clean Business Free">
+                        </a>
+                    </div> -->
+                    <!--用户登录信息-->
+                    <!-- 用户未登录 -->
+                    <!-- 用户未登录 -->
+                    <!--用户登录信息-->
+                                        <div class="upload">
+                                                <a data-bind-login = "true" data-url="https://mp.csdn.net/console/uploadResources"  class="dl_upload_btn">上传资源赚积分or赚钱</a>
+                                                                    </div>
+                    
+                    <!--  copyright 信息-->
+
+                                    <!--公告-->
+                    <div class="right_plate_con index_notice">
+                        <div class="com_plate_tit">
+                            <span class="plate_title">公告</span>
+                        </div>
+                        <div  class="con_detail">
+                            <ul class="resource_c_list">
+                                <li>
+                                    <i class="fa fa-caret-right"></i>
+                                    <a href="http://bbs.csdn.net/topics/392285451"> CSDN下载频道资源及相关规则调整公告V11.10</a>
+                                </li>
+                                <li>
+                                    <i class="fa fa-caret-right"></i>
+                                    <a href="http://bbs.csdn.net/topics/392275720">下载频道积分规则调整V1710.18</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="fixed_dl"></div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+  if (window.csdn === undefined) {
+      window.csdn = {};
+  }
+  window.csdn.sideToolbar = {
+      options: {
+          contentEl: document.getElementsByClassName("main")[0]
+      }
+  }
+</script>
+<!-- 右侧返回顶部 -->
+<script type="text/javascript" src="https://g.csdnimg.cn/side-toolbar/3.0/side-toolbar.js?t=1594881824401"></script>
+
+<!-- copyright 信息  -->
+<script src="//g.csdnimg.cn/common/csdn-footer/csdn-footer.js"></script>
+<!-- 二级菜单组件 -->
+<script type="text/javascript" src="https://g.csdnimg.cn/nav-second/1.0.3/nav-second.js"></script>
+<!--右侧整体固定-->
+<script type="text/javascript" src="//g.csdnimg.cn/fixed-sidebar/1.0.5/fixed-sidebar.js"></script>
+<script>
+    $(function () {
+                    /** toolbar是否悬浮*/
+            if(toolbarIsSuspension()){
+                window.csdn.configuration_tool_parameterv({
+                    'need_first_suspend': true,//第一栏悬浮
+                    'need_little_suspend': false,//第二栏悬浮
+                    'little_tool_id': '' ,//第二栏id
+                    'little_need_insert_type': '',//第二栏需要模块类型
+                    //第二栏需要模块类型,
+                    need_change_function: function (flag) {
+                        window.csdn.navSecond.changeNavFix(flag)
+                    }
+                })
+            }
+            function toolbarIsSuspension(){
+                if(window.csdn.configuration_tool_parameterv){
+                    return true;
+                }else{
+                    return false;
+                }
+            }
+            })
+
+</script>
+<script type="text/javascript" src="https://g.csdnimg.cn/user-login/2.3.2/user-login.js"></script>
+<script type="text/javascript" src="//csdnimg.cn/release/download/static_files/pc/js/libs/libs-d4f6439928.js"></script>
+  <script type="text/javascript" src="https://g.csdnimg.cn/user-medal/1.0.5/user-medal.js"></script>
+<script>
+(function(){
+var bp = document.createElement('script');
+var curProtocol = window.location.protocol.split(':')[0];
+if (curProtocol === 'https')
+
+{ bp.src = 'https://zz.bdstatic.com/linksubmit/push.js'; }
+else
+
+{ bp.src = 'http://push.zhanzhang.baidu.com/push.js'; }
+var s = document.getElementsByTagName("script")[0];
+s.parentNode.insertBefore(bp, s);
+})();
+</script>
+<script src="//csdnimg.cn/release/download/static_files/pc/js/index-27cbcb63ff.js" type="text/javascript"></script>
+
+</body>
+</html>

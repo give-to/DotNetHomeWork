@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace HomeWork5
 {
-    class OrderDetails
+    public class OrderDetails
     {
         public string GoodName { get; set; }
         public double CostPerGood { get; set; }
@@ -16,12 +16,13 @@ namespace HomeWork5
             set 
             { 
                 numOfGood = value < 0 ? 0 : value;
-
             } 
         }
 
         public double CostSum { get { return CostPerGood * NumOfGood; } }
-
+        public OrderDetails()
+        {
+        }
         public OrderDetails(string name,double price,int num)
         {
             GoodName = name;

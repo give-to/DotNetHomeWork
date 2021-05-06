@@ -24,44 +24,39 @@ namespace HomeWork9
             myCrawler.refreshData += RefreshDGV;
             dgvSuccessUrl.DataSource = myCrawler.SuccessUrl;            
             dgvFailUrl.DataSource = myCrawler.FailUrl;
-
-            threadNow = new Thread(myCrawler.Crawl);
-    }
+        }
 
         private void Form1_Load(object sender, EventArgs e)
         {
             txtURL.DataBindings.Add("Text", this.myCrawler, "CrawlUrl");
-            chkType.DataBindings.Add("Checked", this.myCrawler, "OnlyHtmlAspxJsp");
-            
+            chkType.DataBindings.Add("Checked", this.myCrawler, "OnlyHtmlAspxJsp");            
         }
 
         private void btnAction_Click(object sender, EventArgs e)
         {
-            
-            /*
-            if (txtURL.Text == "")
-            {
-                return;
-            }
-            if(HadCrawl.ContainsKey(txtURL.Text))
-            {
-                return;
-            }
-            threadNow.Abort();
-            */
-            threadNow = new Thread(myCrawler.Crawl);
-            threadNow.Start();
-            //HadCrawl.Add(txtURL.Text, "true");
-            
-            
+            dgvSuccessUrl.DataSource = null;
+            dgvFailUrl.DataSource = null;
+            new Thread(myCrawler.Crawl).Start();
             
         }
         public void RefreshDGV()
         {
-            dgvSuccessUrl.DataSource = null;
-            dgvFailUrl.DataSource = null;
-            dgvSuccessUrl.DataSource = myCrawler.SuccessUrl;
-            dgvFailUrl.DataSource = myCrawler.FailUrl;
+            Action action = () =>
+            {
+                dgvSuccessUrl.DataSource = null;
+                dgvFailUrl.DataSource = null;
+                dgvSuccessUrl.DataSource = myCrawler.SuccessUrl;
+                dgvFailUrl.DataSource = myCrawler.FailUrl;
+            };
+            if(this.InvokeRequired)
+            {
+                this.Invoke(action);
+            }
+            else
+            {
+                action();
+            }
+            
         }
     }
 }

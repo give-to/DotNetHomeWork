@@ -38,42 +38,36 @@ namespace homework8
             }
             throw new ArgumentException("不存在该ID的订单");
         }
-        
-        public IEnumerable<Order> SearchOrder(char choice, string item)
-        {
-            switch (choice)
-            {
-                case 'A':
-                    int searchID = Int32.Parse(item);
-                    var query1 = from o in orders
-                                 where o.ID == searchID
-                                 orderby o.CostSum
-                                 select o;
-                    return query1;
 
-                case 'B':
-                    string searchGoodName = item;
-                    var query2 = from o in orders
-                                 from o2 in o.Goods
-                                 where o2.GoodName == searchGoodName
-                                 orderby o.CostSum
-                                 select o;
-                    return query2;
-                case 'C':
-                    string searchSenderName = item;
-                    var query3 = from o in orders
-                                 where o.Sender == searchSenderName
-                                 orderby o.CostSum
-                                 select o;
-                    return query3;
-                case 'D':
-                    var query4 = from o in orders
-                                 orderby o.CostSum
-                                 select o;
-                    return query4;
-                default:
-                    throw new ApplicationException("不存在该项目");
-            }
+        public void UpdateOrder(int IDUpdate, Order newOrder)
+        {
+            DeleteOneOrder(IDUpdate);
+            newOrder.ID = IDUpdate;
+            orders.Add(newOrder);
+        }
+        public List<Order> SearchById(int id)
+        {
+            var query = orders.Where(
+                o => o.ID == id);
+            return query.ToList();
+        }
+        public List<Order> SearchByGoodName(string goodname)
+        {
+            var query = orders.Where(
+                o => o.Goods.Any(d => d.GoodName == goodname));
+            return query.ToList();
+        }
+        public List<Order> SearchByTotalPrice(double price)
+        {
+            var query = orders.Where(
+                o => o.CostSum == price);
+            return query.ToList();
+        }
+        public List<Order> SearchBySenderName(string sender)
+        {
+            var query = orders.Where(
+                o => o.Sender == sender);
+            return query.ToList();
         }
         public void Sort()
         {

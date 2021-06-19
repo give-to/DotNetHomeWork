@@ -18,6 +18,9 @@ namespace HomeWork9
         public List<MyURL> SuccessUrl = new List<MyURL>();
         public List<MyURL> FailUrl = new List<MyURL>();
         public Action refreshData;
+        public string strDetect = @"(href|HREF)[]*=[]*[""'](?<url>[^""'#>]+)(.html?|.aspx|.jsp)[""']";//
+        public string strParse = @"^(?<site>(?<protocal>https?)://(?<host>[\w.-]+)(:\d+)?($|/))(\w+/)*(?<file>[^#?]*)";
+        public string current;
         public string CrawlUrl { get; set; }
         public bool OnlyHtmlAspxJsp { get; set; }
         private int MaxPage = 50;
@@ -34,7 +37,7 @@ namespace HomeWork9
             urls.Add(CrawlUrl, false);//加入初始页面
             while (true)
             {
-                string current = null;
+                current = null;
                 foreach (string url in urls.Keys)
                 {
                     if ((bool)urls[url])
@@ -79,30 +82,50 @@ namespace HomeWork9
 
         private void Parse(string html)
         {
-            string strRef;
-            if(!OnlyHtmlAspxJsp)
-            {
-                strRef = @"(href|HREF)[]*=[]*[""'][^""'#>]+[""']";
-                
-                //老师写的：
-                //UrlDetectRegex = @"(href|HREF)[]*=[]*[""'](?<url>[^""'#>]+)[""']";
-                //urlParseRegex = @"^(?<site>(?<protocal>https?)://(?<host>[\w.-]+)(:\d+)?($|/))(\w+/)*(?<file>[^#?]*)";
-                //示例：href="//common.cnblogs.com/favicon.svg"
-            }
-            else
-            {
-                strRef= @"(href|HREF)[]*=[]*[""'][^""'#>]+(html?|aspx|jsp)[""']";
-            }
-                
-            MatchCollection matches = new Regex(strRef).Matches(html);
+            MatchCollection matches = new Regex(strDetect).Matches(html);
             foreach (Match match in matches)
             {
-                strRef = match.Value.Substring(match.Value.IndexOf('=') + 1)
+                string str = match.Value.Substring(match.Value.IndexOf('=') + 1)
                           .Trim('"', '\"', '#', '>');
-                if (strRef.Length == 0) continue;
-                if (urls[strRef] == null) urls[strRef] = false;
+                str = FixUrl(str, current);
+                if (str.Length == 0) continue;
+                if (urls[str] == null) urls[str] = false;
             }
         }
-        
+        //转换成完整路径
+        public string FixUrl(string url, string pageUrl)
+        {
+            if (url.Contains("://"))
+            { //完整路径
+                return url;
+            }
+            if (url.StartsWith("//"))
+            {
+                Match urlMatch = Regex.Match(pageUrl, strParse);
+                string protocal = urlMatch.Groups["protocal"].Value;
+                return protocal + ":" + url;
+            }
+            if (url.StartsWith("/"))
+            {
+                Match urlMatch = Regex.Match(pageUrl, strParse);
+                String site = urlMatch.Groups["site"].Value;
+                return site.EndsWith("/") ? site + url.Substring(1) : site + url;
+            }
+
+            if (url.StartsWith("../"))
+            {
+                url = url.Substring(3);
+                int idx = pageUrl.LastIndexOf('/');
+                return FixUrl(url, pageUrl.Substring(0, idx));
+            }
+
+            if (url.StartsWith("./"))
+            {
+                return FixUrl(url.Substring(2), pageUrl);
+            }
+            //非上述开头的相对路径
+            int end = pageUrl.LastIndexOf("/");
+            return pageUrl.Substring(0, end) + "/" + url;
+        }
     }
 }

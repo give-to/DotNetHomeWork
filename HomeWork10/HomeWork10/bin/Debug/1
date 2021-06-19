@@ -1,0 +1,910 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <link rel="canonical" href="https://blog.csdn.net/youdaotech/category_10871913.html"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="renderer" content="webkit"/>
+    <meta name="force-rendering" content="webkit"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="report" content='{"pid": "blog", "spm":"1001.2014"}'>
+    <meta name="referrer" content="always">
+    <meta http-equiv="Cache-Control" content="no-siteapp" /><link rel="alternate" media="handheld" href="#" />
+    <meta name="shenma-site-verification" content="5a59773ab8077d4a62bf469ab966a63b_1497598848">
+    <meta name="applicable-device" content="pc">
+    <link  href="https://g.csdnimg.cn/static/logo/favicon32.ico"  rel="shortcut icon" type="image/x-icon" />
+    <title>有道技术干货_youdaotech的博客-CSDN博客</title>
+    <meta name="description" content="网易有道开源EMLL：高性能端侧机器学习计算库，大幅提高计算性能,有道精品课全链路测试的改进和思考,从源码中来，到业务中去，React性能优化终极指南,kubernetes,容器,分布式">
+    <script src="//g.csdnimg.cn/tingyun/1.8.5/blog.js" type='text/javascript'></script>
+        <link rel="stylesheet" type="text/css" href="https://csdnimg.cn/release/blogv2/dist/pc/css/column_enter-b8e0d1dddb.min.css">
+    <script src="https://csdnimg.cn/public/common/libs/jquery/jquery-1.9.1.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        var isCorporate = true;//注释删除enterprise
+        var username =  "youdaotech";
+        var skinImg = "white";
+        var blog_address = "https://blog.csdn.net/youdaotech";
+        var currentUserName = "";
+        var isOwner = false;
+        var loginUrl = "http://passport.csdn.net/account/login?from=https://blog.csdn.net/youdaotech/category_10871913.html";
+        var blogUrl = "https://blog.csdn.net/";
+        var avatar = "https://profile.csdnimg.cn/E/9/3/3_youdaotech";
+        var articleTitle = "youdaotech的博客";
+        var articleDesc = "网易有道开源EMLL：高性能端侧机器学习计算库，大幅提高计算性能,有道精品课全链路测试的改进和思考,从源码中来，到业务中去，React性能优化终极指南,kubernetes,容器,分布式";
+        var articleTitles = "有道技术干货_youdaotech的博客-CSDN博客";
+        var nickName = "有道技术团队";
+        var articleDetailUrl = "";
+        if(window.location.host.split('.').length == 3) {
+            blog_address = blogUrl + username;
+        }
+        var skinStatus = 'White';
+        var blogStaticHost = "https://csdnimg.cn/release/blogv2/"
+    </script>
+    <script src="https://g.csdnimg.cn/??fixed-sidebar/1.1.6/fixed-sidebar.js" type="text/javascript"></script>
+    <script src='//g.csdnimg.cn/common/csdn-report/report.js' type='text/javascript'></script>
+    <link rel="stylesheet" type="text/css" href="https://csdnimg.cn/public/sandalstrap/1.4/css/sandalstrap.min.css">
+    <style>
+        .MathJax, .MathJax_Message, .MathJax_Preview{
+            display: none
+        }
+    </style>
+    <script src="https://dup.baidustatic.com/js/ds.js"></script>
+</head>
+<body class="nodata company_blog" style="">
+    <script src="https://g.csdnimg.cn/common/csdn-toolbar/csdn-toolbar.js" type="text/javascript"></script>
+    <script>
+    (function(){
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        }
+        else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+    </script>
+<link rel="stylesheet" href="https://g.csdnimg.cn/lib/cropper/3.1.6/cropper.css">
+<script src="https://g.csdnimg.cn/lib/cropper/3.1.6/cropper.js"></script>
+<script type="text/javascript" crossorigin src="https://g.csdnimg.cn/user-login/3.0.1/user-login.js"></script>
+<script>
+	$("#msgToastText").hide()
+</script>
+<div class="skin-boxshadow"></div>
+<header>
+	<div class="container d-flex clearfix">
+		<div class="header-content-box company-header-content-box" style="background-image:url(&quot;https://csdnimg.cn/release/blogv2/dist/pc/img/head.png&quot;); padding:0 16px;">
+		<div class="title-box">
+			<h1 class="title-blog company-title-blog">
+				<a href="https://blog.csdn.net/youdaotech" style="">youdaotech的博客</a>
+			</h1>
+			<p class="description " style=""></p>
+		</div>
+		<div class="opt-box d-flex justify-content-end">
+		</div>
+		</div>
+	</div>
+		<ul class="corporate-blog-navigation">	
+			<li><a href="https://blog.csdn.net/youdaotech" target="_blank" rel="noopener">博客首页</a></li>
+		</ul>
+</header>
+<div class="container clearfix pt0 container_company_blog" id="mainBox">
+<aside class="blog_container_aside">
+	<div id="asideProfile" class="aside-box">
+    <div class="profile-intro d-flex">
+        <div class="avatar-box d-flex justify-content-center flex-column">
+            <a href="https://blog.csdn.net/youdaotech" data-report-click='{"mod":"popu_379","spm":"1001.2101.3001.4121","dest":"https://blog.csdn.net/youdaotech","ab":"new"}'>
+                <img src="https://profile.csdnimg.cn/E/9/3/3_youdaotech" class="avatar_pic">
+            </a>
+        </div>
+        <div class="user-info d-flex flex-column profile-intro-name-box">
+            <div class="profile-intro-name-boxTop">
+                <a href="https://blog.csdn.net/youdaotech" class="" id="uid" title="有道技术团队" data-report-click='{"mod":"popu_379","spm":"1001.2101.3001.4122","dest":"https://blog.csdn.net/youdaotech","ab":"new"}'>
+                    <span class="name " username="youdaotech">有道技术团队</span>
+                </a>
+                <span>
+                </span>
+                <span class="flag expert-blog">
+                <span class="bubble">CSDN认证博客专家</span>
+                </span>
+                <span class="flag company-blog">
+                <img class="identity" src="https://csdnimg.cn/release/blogv2/dist/mobile/img/enterpriseNew.png"/>
+                <span class="bubble">CSDN认证企业博客</span>
+                </span>
+            </div>
+            <div class="profile-intro-name-boxFooter">
+            </div>
+        </div>
+    </div>
+    <div class="data-info d-flex item-tiling">
+        <dl class="text-center" title="18">
+            <a href="https://blog.csdn.net/youdaotech" data-report-click='{"mod":"1598321000_001","spm":"1001.2101.3001.4310"}' data-report-query="t=1">  
+                <dt><span class="count">18</span></dt>
+                <dd class="font">原创</dd>
+            </a>
+        </dl>
+        <dl class="text-center" data-report-click='{"mod":"1598321000_002","spm":"1001.2101.3001.4311"}' title="225976">
+            <a href="https://blog.csdn.net/rank/list/weekly" target="_blank">
+                <dt><span class="count">22万+</span></dt>
+                <dd class="font">周排名</dd>
+            </a>
+        </dl>
+        <dl class="text-center" title="394882">
+            <a href="https://blog.csdn.net/rank/list/total" data-report-click='{"mod":"1598321000_003","spm":"1001.2101.3001.4312"}' target="_blank">
+                <dt><span class="count">39万+</span></dt>
+                <dd class="font">总排名</dd>
+            </a>
+        </dl>
+        <dl class="text-center" style="min-width:58px" title="6220">  
+            <dt><span class="count">6220</span></dt>
+            <dd>访问</dd>
+        </dl>
+        <dl class="text-center" title="2级,点击查看等级说明">
+            <dt><a href="https://blog.csdn.net/blogdevteam/article/details/103478461" target="_blank">
+                <img class="level" src="https://csdnimg.cn/identity/blog2.png">
+            </a>
+            </dt>
+            <dd>等级</dd>
+        </dl>
+    </div>
+    <div class="item-rank"></div>
+    <div class="data-info d-flex item-tiling">
+        <dl class="text-center" title="227">
+            <dt><span class="count">227</span></dt>
+            <dd>积分</dd>
+        </dl>
+         <dl class="text-center" id="fanBox" title="7">
+            <dt><span class="count" id="fan">7</span></dt>
+            <dd>粉丝</dd>
+        </dl>
+        <dl class="text-center" title="10">
+            <dt><span class="count">10</span></dt>
+            <dd>获赞</dd>
+        </dl>
+        <dl class="text-center" title="10">
+            <dt><span class="count">10</span></dt>
+            <dd>评论</dd>
+        </dl>
+        <dl class="text-center" title="12">
+            <dt><span class="count">12</span></dt>
+            <dd>收藏</dd>
+        </dl>
+    </div>
+    <div class="aside-box-footer" data-report-view='{"spm":"3001.4296"}'>
+        <div class="badge-box d-flex">
+            <div class="badge d-flex">
+                <div class="icon-badge" title="持之以恒">
+                    <div class="mouse-box">
+                        <img class="medal-img" data-report-click='{"spm":"3001.4296"}' src="https://csdnimg.cn/medal/chizhiyiheng@240.png" alt="持之以恒">
+                    </div>
+                </div>
+                <div class="icon-badge" title="勤写标兵Lv1">
+                    <div class="mouse-box">
+                        <img class="medal-img" data-report-click='{"spm":"3001.4296"}' src="https://csdnimg.cn/medal/qixiebiaobing1@240.png" alt="勤写标兵Lv1">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="profile-intro-name-boxOpration">
+        <div class="opt-letter-watch-box">
+        <a class="bt-button personal-letter" href="https://im.csdn.net/chat/youdaotech" target="_blank" rel="noopener">私信</a>
+        </div>
+        <div class="opt-letter-watch-box"> 
+            <a class="personal-watch bt-button" id="btnAttent" >关注</a>  
+        </div>
+    </div>
+</div>
+<div id="asideSearchArticle" class="aside-box">
+	<div class="aside-content search-comter">
+    <div class="aside-search aside-search-blog">         
+        <input type="text" class="input-serch-blog" name="" autocomplete="off" value="" id="search-blog-words" placeholder="搜博主文章">
+        <a class="btn-search-blog">
+                    <img src="//csdnimg.cn/cdn/content-toolbar/csdn-sou.png?v=1587021042">
+        </a>
+    </div>
+    </div>
+</div>
+
+
+<div id="asideHotArticle" class="aside-box">
+	<h3 class="aside-title">热门文章</h3>
+	<div class="aside-content">
+		<ul class="hotArticle-list">
+			<li>
+				<a href="https://blog.csdn.net/youdaotech/article/details/117961795" target="_blank"  data-report-click='{"mod":"popu_541","spm":"1001.2101.3001.4139","dest":"https://blog.csdn.net/youdaotech/article/details/117961795","ab":"new"}'>
+				网易有道开源EMLL：高性能端侧机器学习计算库，大幅提高计算性能
+					<img src="https://csdnimg.cn/release/blogv2/dist/pc/img/readCountWhite.png" alt="">
+					<span class="read">754</span>
+                </a>
+			</li>
+			<li>
+				<a href="https://blog.csdn.net/youdaotech/article/details/114690688" target="_blank"  data-report-click='{"mod":"popu_541","spm":"1001.2101.3001.4139","dest":"https://blog.csdn.net/youdaotech/article/details/114690688","ab":"new"}'>
+				网易 Duilib：功能全面的开源桌面 UI 开发框架
+					<img src="https://csdnimg.cn/release/blogv2/dist/pc/img/readCountWhite.png" alt="">
+					<span class="read">454</span>
+                </a>
+			</li>
+			<li>
+				<a href="https://blog.csdn.net/youdaotech/article/details/117323516" target="_blank"  data-report-click='{"mod":"popu_541","spm":"1001.2101.3001.4139","dest":"https://blog.csdn.net/youdaotech/article/details/117323516","ab":"new"}'>
+				从源码中来，到业务中去，React性能优化终极指南
+					<img src="https://csdnimg.cn/release/blogv2/dist/pc/img/readCountWhite.png" alt="">
+					<span class="read">270</span>
+                </a>
+			</li>
+			<li>
+				<a href="https://blog.csdn.net/youdaotech/article/details/115329262" target="_blank"  data-report-click='{"mod":"popu_541","spm":"1001.2101.3001.4139","dest":"https://blog.csdn.net/youdaotech/article/details/115329262","ab":"new"}'>
+				硬件测试的思考和改进：有道词典笔的高效测试探索
+					<img src="https://csdnimg.cn/release/blogv2/dist/pc/img/readCountWhite.png" alt="">
+					<span class="read">316</span>
+                </a>
+			</li>
+			<li>
+				<a href="https://blog.csdn.net/youdaotech/article/details/115164856" target="_blank"  data-report-click='{"mod":"popu_541","spm":"1001.2101.3001.4139","dest":"https://blog.csdn.net/youdaotech/article/details/115164856","ab":"new"}'>
+				技术杂谈 | Flutter 的性能分析、工程架构与细节处理
+					<img src="https://csdnimg.cn/release/blogv2/dist/pc/img/readCountWhite.png" alt="">
+					<span class="read">250</span>
+                </a>
+			</li>
+		</ul>
+	</div>
+</div>
+<div id="asideCategory" class="aside-box ">
+    <h3 class="aside-title">分类专栏</h3>
+    <div class="aside-content">
+        <ul>
+            <li class="">
+                <a class="clearfix" target="_blank" href="https://blog.csdn.net/youdaotech/category_10871913.html" data-report-click='{"mod":"popu_537","spm":"1001.2101.3001.4137","strategy":"pc付费专栏左侧入口","dest":"https://blog.csdn.net/youdaotech/category_10871913.html","ab":"new"}'>
+                    <img src="https://img-blog.csdnimg.cn/20201014180756916.png?x-oss-process=image/resize,m_fixed,h_64,w_64" alt="" onerror="this.src='https://img-blog.csdnimg.cn/20201014180756922.png?x-oss-process=image/resize,m_fixed,h_64,w_64'">
+                    <span class="title oneline">
+                        <span class="text">有道技术干货</span>
+                    </span>
+                    <span class="count float-right">13篇</span>
+                </a>
+            </li>
+            <li class="">
+                <a class="clearfix" target="_blank" href="https://blog.csdn.net/youdaotech/category_11002870.html" data-report-click='{"mod":"popu_537","spm":"1001.2101.3001.4137","strategy":"pc付费专栏左侧入口","dest":"https://blog.csdn.net/youdaotech/category_11002870.html","ab":"new"}'>
+                    <img src="https://img-blog.csdnimg.cn/20201014180756926.png?x-oss-process=image/resize,m_fixed,h_64,w_64" alt="" onerror="this.src='https://img-blog.csdnimg.cn/20201014180756922.png?x-oss-process=image/resize,m_fixed,h_64,w_64'">
+                    <span class="title oneline">
+                        <span class="text">有道技术团队</span>
+                    </span>
+                    <span class="count float-right">2篇</span>
+                </a>
+            </li>
+            <li class="">
+                <a class="clearfix" target="_blank" href="https://blog.csdn.net/youdaotech/category_10890796.html" data-report-click='{"mod":"popu_537","spm":"1001.2101.3001.4137","strategy":"pc付费专栏左侧入口","dest":"https://blog.csdn.net/youdaotech/category_10890796.html","ab":"new"}'>
+                    <img src="https://img-blog.csdnimg.cn/20201014180756757.png?x-oss-process=image/resize,m_fixed,h_64,w_64" alt="" onerror="this.src='https://img-blog.csdnimg.cn/20201014180756922.png?x-oss-process=image/resize,m_fixed,h_64,w_64'">
+                    <span class="title oneline">
+                        <span class="text">有道技术沙龙</span>
+                    </span>
+                    <span class="count float-right">2篇</span>
+                </a>
+            </li>
+            <li class="">
+                <a class="clearfix" target="_blank" href="https://blog.csdn.net/youdaotech/category_10984695.html" data-report-click='{"mod":"popu_537","spm":"1001.2101.3001.4137","strategy":"pc付费专栏左侧入口","dest":"https://blog.csdn.net/youdaotech/category_10984695.html","ab":"new"}'>
+                    <img src="https://img-blog.csdnimg.cn/20201014180756780.png?x-oss-process=image/resize,m_fixed,h_64,w_64" alt="" onerror="this.src='https://img-blog.csdnimg.cn/20201014180756922.png?x-oss-process=image/resize,m_fixed,h_64,w_64'">
+                    <span class="title oneline">
+                        <span class="text">在有道 | 系列专访</span>
+                    </span>
+                    <span class="count float-right">1篇</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
+<div id="asideNewComments" class="aside-box">
+    <h3 class="aside-title">最新评论</h3>
+    <div class="aside-content">
+        <ul class="newcomment-list">
+            <li>
+                <a class="title text-truncate" target="_blank" href="https://blog.csdn.net/youdaotech/article/details/115351237#comments_16717478" data-report-click='{"mod":"popu_542","spm":"1001.2101.3001.4231","dest":"https://blog.csdn.net/youdaotech/article/details/115351237#comments_16717478","ab":"new"}' data-report-view='{"mod":"popu_542","spm":"1001.2101.3001.4231","dest":"https://blog.csdn.net/youdaotech/article/details/115351237#comments_16717478","ab":"new"}'>有道云笔记新版编辑器架构设计（上）</a>
+                <p class="comment ellipsis">
+                    <a href="https://blog.csdn.net/weixin_44622241" class="user-name" target="_blank">-》代码: </a>
+                    <span class="code-comments">大佬的代码就是有深度🤣【xx行代码教你实现富文本编辑器】</span>
+                </p>
+            </li>
+            <li>
+                <a class="title text-truncate" target="_blank" href="https://blog.csdn.net/youdaotech/article/details/114690688#comments_15923277" data-report-click='{"mod":"popu_542","spm":"1001.2101.3001.4231","dest":"https://blog.csdn.net/youdaotech/article/details/114690688#comments_15923277","ab":"new"}' data-report-view='{"mod":"popu_542","spm":"1001.2101.3001.4231","dest":"https://blog.csdn.net/youdaotech/article/details/114690688#comments_15923277","ab":"new"}'>网易 Duilib：功能全面的开源桌面 UI 开发框架</a>
+                <p class="comment ellipsis">
+                    <a href="https://blog.csdn.net/xiaoyu21520" class="user-name" target="_blank">顾小白xx: </a>
+                    <span class="code-comments">你们有没有社区专门 解答库的使用问题啊。我有个问题不知道去哪里问<img src="https://g.csdnimg.cn/static/face/monkey2/013.png" alt='表情包' ></span>
+                </p>
+            </li>
+            <li>
+                <a class="title text-truncate" target="_blank" href="https://blog.csdn.net/youdaotech/article/details/114690688#comments_15920805" data-report-click='{"mod":"popu_542","spm":"1001.2101.3001.4231","dest":"https://blog.csdn.net/youdaotech/article/details/114690688#comments_15920805","ab":"new"}' data-report-view='{"mod":"popu_542","spm":"1001.2101.3001.4231","dest":"https://blog.csdn.net/youdaotech/article/details/114690688#comments_15920805","ab":"new"}'>网易 Duilib：功能全面的开源桌面 UI 开发框架</a>
+                <p class="comment ellipsis">
+                    <a href="https://blog.csdn.net/youdaotech" class="user-name" target="_blank">有道技术团队: </a>
+                    <span class="code-comments">谢谢~同时我们也希望 NIM_Duilib 越来越好！</span>
+                </p>
+            </li>
+            <li>
+                <a class="title text-truncate" target="_blank" href="https://blog.csdn.net/youdaotech/article/details/114690688#comments_15920322" data-report-click='{"mod":"popu_542","spm":"1001.2101.3001.4231","dest":"https://blog.csdn.net/youdaotech/article/details/114690688#comments_15920322","ab":"new"}' data-report-view='{"mod":"popu_542","spm":"1001.2101.3001.4231","dest":"https://blog.csdn.net/youdaotech/article/details/114690688#comments_15920322","ab":"new"}'>网易 Duilib：功能全面的开源桌面 UI 开发框架</a>
+                <p class="comment ellipsis">
+                    <a href="https://blog.csdn.net/youdaotech" class="user-name" target="_blank">有道技术团队: </a>
+                    <span class="code-comments">目前来说肯定是的，我们也希望 NIM_Duilib 越来越好，希望更多开发者们和我们一起维护起来~</span>
+                </p>
+            </li>
+            <li>
+                <a class="title text-truncate" target="_blank" href="https://blog.csdn.net/youdaotech/article/details/114690688#comments_15905122" data-report-click='{"mod":"popu_542","spm":"1001.2101.3001.4231","dest":"https://blog.csdn.net/youdaotech/article/details/114690688#comments_15905122","ab":"new"}' data-report-view='{"mod":"popu_542","spm":"1001.2101.3001.4231","dest":"https://blog.csdn.net/youdaotech/article/details/114690688#comments_15905122","ab":"new"}'>网易 Duilib：功能全面的开源桌面 UI 开发框架</a>
+                <p class="comment ellipsis">
+                    <a href="https://blog.csdn.net/xiaoyu21520" class="user-name" target="_blank">顾小白xx: </a>
+                    <span class="code-comments">一直在使用 DUlib 一直在熟读redrain大神的文章包括酷狗播放器的例子，确实受益匪浅希望NIM_Duilib能够一直走下去</span>
+                </p>
+            </li>
+        </ul>
+    </div>
+</div>
+<div id="asideArchive" class="aside-box" style="display:block!important; width:300px;">
+    <h3 class="aside-title">最新文章</h3>
+    <div class="aside-content">
+        <ul class="inf_list clearfix">
+            <li class="clearfix">
+            <a href="https://blog.csdn.net/youdaotech/article/details/117961795" target="_blank" data-report-click='{"mod":"popu_382","spm":"1001.2101.3001.4136","dest":"https://blog.csdn.net/youdaotech/article/details/117961795","ab":"new"}' data-report-view='{"mod":"popu_382","dest":"https://blog.csdn.net/youdaotech/article/details/117961795","ab":"new"}'>网易有道开源EMLL：高性能端侧机器学习计算库，大幅提高计算性能</a>
+            </li>
+            <li class="clearfix">
+            <a href="https://blog.csdn.net/youdaotech/article/details/117561903" target="_blank" data-report-click='{"mod":"popu_382","spm":"1001.2101.3001.4136","dest":"https://blog.csdn.net/youdaotech/article/details/117561903","ab":"new"}' data-report-view='{"mod":"popu_382","dest":"https://blog.csdn.net/youdaotech/article/details/117561903","ab":"new"}'>有道精品课全链路测试的改进和思考</a>
+            </li>
+            <li class="clearfix">
+            <a href="https://blog.csdn.net/youdaotech/article/details/117323516" target="_blank" data-report-click='{"mod":"popu_382","spm":"1001.2101.3001.4136","dest":"https://blog.csdn.net/youdaotech/article/details/117323516","ab":"new"}' data-report-view='{"mod":"popu_382","dest":"https://blog.csdn.net/youdaotech/article/details/117323516","ab":"new"}'>从源码中来，到业务中去，React性能优化终极指南</a>
+            </li>
+        </ul>
+        <div class="archive-bar"></div>
+        <div class="archive-box">
+                <div class="archive-list-item"><a href="https://blog.csdn.net/youdaotech/article/month/2021/06" target="_blank" data-report-click='{"mod":"popu_538","spm":"1001.2101.3001.4138","ab":"new","dest":""}'><span class="year">2021年</span><span class="num">18篇</span></a></div>
+        </div>
+    </div>
+</div>
+	<div id="footerRightAds" class="isShowFooterAds">
+		<div class="aside-box">
+			<div id="kp_box_57" data-pid="57"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- PC-博客详情页-左下视窗（300*600） -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-1076724771190722"
+     data-ad-slot="1173711872"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script><img class="pre-img-lasy" data-src="https://kunyu.csdn.net/1.png?p=57&a=2488&c=0&k=&spm=1001.2015.3001.5001&d=1&t=3&u=907fa1d264f64b03990f6df0af69435b" style="display: block;width: 0px;height: 0px;"></div>
+		</div>
+	</div>
+    <!-- 详情页显示目录 -->
+</aside>
+<script>
+	$("a.flexible-btn").click(function(){
+		$(this).parents('div.aside-box').removeClass('flexible-box');
+		$(this).parents("p.text-center").remove();
+	})
+</script>
+<script type="text/javascript"  src="https://g.csdnimg.cn/user-tooltip/2.4/user-tooltip.js"></script>
+<script type="text/javascript"  src="https://g.csdnimg.cn/user-medal/1.0.7/user-medal.js"></script><main>
+    <div id="column">
+    <div class="column_info_box">
+            <div class="column_info_box_all">
+                <div class="left_mode_box">
+                    <div class="left_img"><img src="https://img-blog.csdnimg.cn/20201014180756916.png?x-oss-process=image/resize,m_fixed,h_64,w_64" alt=""
+                                onerror="this.src='https://img-blog.csdnimg.cn/20201014180756922.png?x-oss-process=image/resize,m_fixed,h_64,w_64'">
+                    </div>
+                    <div class="middle_con">
+                        <div class="column_info clearfix">
+                            <div class="column_info_text">
+                                <div class="column_top_template">
+                                    <h3 class="column_title oneline">有道技术干货</h3>
+                                            <div class="column_button follow_column_button">
+                                                关注
+                                            </div>
+                                        <!--判断付费专栏是否是更新中的状态 需要后端-->
+                                </div>
+                                <div class="column_text">
+                                    <span class="column_text_desc"></span>
+                                    <span class="management_article_box">
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="column_operating">
+                            <span class="column_data">
+                                  <span>关注数：<span class="mumber-color column-subscribe-num">0</span></span>
+                                <span>文章数：<span class="mumber-color">13</span></span>
+                                <span>访问量：<span class="mumber-color">5008</span></span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="right_mode_box">
+                </div> 
+           </div>
+        </div>
+        <!--专栏个人简介-->
+        <div class="column_person_box">
+        <div class="column_person_box_bg">
+            <h3 class="column_person_tit"><span class="author text">作者:
+            </span><span class="text">
+                     有道技术团队
+            </span>
+            </h3>
+            <div class="column_person_con have__introduce">
+                这个作者很懒，什么都没留下…
+            </div>
+        </div>
+        </div>
+<ul class="column_article_list">
+      <li>
+          <a href="https://blog.csdn.net/youdaotech/article/details/117961795" target="_blank" rel="noopener">
+              <div class="column_article_title">
+                  <h2 class="title">
+                  <span class="article-type type-1">原创</span>
+                  网易有道开源EMLL：高性能端侧机器学习计算库，大幅提高计算性能
+                      <!--####试读-->
+                      <!--####试读--></h2>
+
+              </div>
+              <div class="column_article_desc">
+                  网易有道开源EMLL：高性能端侧机器学习计算库，大幅提高计算性能简介一、端侧AI端侧AI具有以下优势：端侧AI挑战：二、ARM第三方BLAS库EigenOpenBLASARM Compute Library三、EMLL特点高性能易用性扩展性四、EMLL性能优化方法分块重排汇编优化五、EMLL功能支持的计算函数支持的架构支持的端侧操作系统六、应用案例简介在人工智能技术不断深入发展的今天，我们对于计算的性能要求越来越高。传统的计算处理多数是基于云侧的，把所有图像、音频等数据通过网络传输到云中心进行处理后将结
+              </div>
+              <div class="column_article_data">
+                  <span>
+                  2021-06-16 16:45:24
+                  </span>
+                  <span>
+                  <img src="https://csdnimg.cn/release/blogv2/dist/pc/img/readCountWhite.png" alt="">
+                    1205
+                  </span>
+                  </span>
+                  <span><img src="https://csdnimg.cn/release/blogv2/dist/pc/img/commentCountWhite.png" alt="">
+                    0
+                  </span>
+              </div>
+          </a>
+      </li>
+      <li>
+          <a href="https://blog.csdn.net/youdaotech/article/details/117561903" target="_blank" rel="noopener">
+              <div class="column_article_title">
+                  <h2 class="title">
+                  <span class="article-type type-1">原创</span>
+                  有道精品课全链路测试的改进和思考
+                      <!--####试读-->
+                      <!--####试读--></h2>
+
+              </div>
+              <div class="column_article_desc">
+                  导读这篇文章主要给大家分享精品课测试团队为保证大促稳定性，在最近一年半时间的所做的一些尝试和探索。比如，如何准确预估开闸瞬间的用户流量，如何更好地进行性能优化后的验证和回测，如何解决夜深人静压测的尴尬等等。值得欣慰的是，经过持续测试和优化，精品课的所有服务，在几十亿规模的交易流量下，都表现出了很好的稳定性和可靠性。作者/ 有道精品课测开小组编辑/ Ein背景类似于电商平台的618，双11大促，在线教育平台也存在两个重要的时间节点：04月春续暑秋，10月秋续寒春，产研侧需要针对销售策略与售.
+              </div>
+              <div class="column_article_data">
+                  <span>
+                  2021-06-04 15:00:22
+                  </span>
+                  <span>
+                  <img src="https://csdnimg.cn/release/blogv2/dist/pc/img/readCountWhite.png" alt="">
+                    204
+                  </span>
+                  </span>
+                  <span><img src="https://csdnimg.cn/release/blogv2/dist/pc/img/commentCountWhite.png" alt="">
+                    0
+                  </span>
+              </div>
+          </a>
+      </li>
+      <li>
+          <a href="https://blog.csdn.net/youdaotech/article/details/117323516" target="_blank" rel="noopener">
+              <div class="column_article_title">
+                  <h2 class="title">
+                  <span class="article-type type-1">原创</span>
+                  从源码中来，到业务中去，React性能优化终极指南
+                      <!--####试读-->
+                      <!--####试读--></h2>
+
+              </div>
+              <div class="column_article_desc">
+                  前言：我们从React源码入手，结合有道精品课大前端的具体业务，运用三大原则对系统进行外科手术式的优化。同时介绍React Profiler这款工具如何帮我们定位性能瓶颈前言：我们从React源码入手，结合有道精品课大前端的具体业务，运用三大原则对系统进行外科手术式的优化。同时介绍React Profiler这款工具如何帮我们定位性能瓶颈作者/ 安增平编辑/ EinReact性能优化是在业务迭代过程中不得不考虑的问题，大部分情况是由于项目启动之初，没有充分考虑到项目的复杂度，定位该产品的用.
+              </div>
+              <div class="column_article_data">
+                  <span>
+                  2021-05-27 10:41:38
+                  </span>
+                  <span>
+                  <img src="https://csdnimg.cn/release/blogv2/dist/pc/img/readCountWhite.png" alt="">
+                    669
+                  </span>
+                  </span>
+                  <span><img src="https://csdnimg.cn/release/blogv2/dist/pc/img/commentCountWhite.png" alt="">
+                    0
+                  </span>
+              </div>
+          </a>
+      </li>
+      <li>
+          <a href="https://blog.csdn.net/youdaotech/article/details/116233180" target="_blank" rel="noopener">
+              <div class="column_article_title">
+                  <h2 class="title">
+                  <span class="article-type type-1">原创</span>
+                  网易云课堂个性化推荐实践与思考
+                      <!--####试读-->
+                      <!--####试读--></h2>
+
+              </div>
+              <div class="column_article_desc">
+                  作者/ 韩虹莹  编辑/ Ein从人和信息的博弈谈推荐系统缘起首先谈谈我理解的推荐系统。如果说推荐系统的定义是什么，每本书每篇文章说的都不太一样，协同过滤1992年就已经有了，三十年里无数大佬分析了个性化推荐的缘起和意义，世界已经不需要多一个人的见解。但是，当所有人都说一件事情是正确的时候，我们也要想清楚它为什么是正确的。如果你问我推荐系统是什么，我会告诉你，是信息到人的精准分发。那么为什么在这个时代推荐系统才应运而生？古人不会需要信息精准分发，车马信息都很慢，古人学富五车不过现在一个书包的信..
+              </div>
+              <div class="column_article_data">
+                  <span>
+                  2021-04-28 15:00:30
+                  </span>
+                  <span>
+                  <img src="https://csdnimg.cn/release/blogv2/dist/pc/img/readCountWhite.png" alt="">
+                    224
+                  </span>
+                  </span>
+                  <span><img src="https://csdnimg.cn/release/blogv2/dist/pc/img/commentCountWhite.png" alt="">
+                    0
+                  </span>
+              </div>
+          </a>
+      </li>
+      <li>
+          <a href="https://blog.csdn.net/youdaotech/article/details/115724460" target="_blank" rel="noopener">
+              <div class="column_article_title">
+                  <h2 class="title">
+                  <span class="article-type type-1">原创</span>
+                  有道写作浏览器扩展实践
+                      <!--####试读-->
+                      <!--####试读--></h2>
+
+              </div>
+              <div class="column_article_desc">
+                  有道写作浏览器扩展作为一款为网页增加英文语法批改的辅助工具，允许用户在任意网页上绝大部分的富文本编辑器、多行文本输入框中编辑英文文本，可实时得到批改结果反馈，并自行接受建议自动修改，实现完美写作。来源/ 有道技术团队公众号作者/ 李靖雯编辑/ 刘振宇一、背景介绍有道写作服务是有道出品的写作智能批改产品，为用户提供优质的作文拼写、语法、样式方面的批改服务。有道写作不仅仅支持浏览器扩展形式，还支持在其他平台使用：例如有道词典 APP-作文批改、Web 在线端、Word 插件、PC 词典内。欢迎各..
+              </div>
+              <div class="column_article_data">
+                  <span>
+                  2021-04-15 15:00:03
+                  </span>
+                  <span>
+                  <img src="https://csdnimg.cn/release/blogv2/dist/pc/img/readCountWhite.png" alt="">
+                    210
+                  </span>
+                  </span>
+                  <span><img src="https://csdnimg.cn/release/blogv2/dist/pc/img/commentCountWhite.png" alt="">
+                    0
+                  </span>
+              </div>
+          </a>
+      </li>
+      <li>
+          <a href="https://blog.csdn.net/youdaotech/article/details/115466046" target="_blank" rel="noopener">
+              <div class="column_article_title">
+                  <h2 class="title">
+                  <span class="article-type type-1">原创</span>
+                  团队协作中，如何写出让同事赞不绝口的代码
+                      <!--####试读-->
+                      <!--####试读--></h2>
+
+              </div>
+              <div class="column_article_desc">
+                  团队中的每个人都会用不同的视角来’审视‘你的”作品“，那么我们如何拿出一份像艺术品一样的项目代码，然后赢得得同事们的赞许呢？作者/ 琼虎(安增平)编辑/ hjy00 前言在加入了拥有较高技术底蕴的有道精品课团队后，发现自己在前面的职业生涯中养成的一些‘作坊’习惯必须得到纠正。在日常工作中，研发同学只在coding阶段中不需要别人关心自己的代码，其他需要将自己的产出展示给别人的场景变得十分常见。简单举几个例子：① feature准入后，同产品业务线的同事需要trans-review② me.
+              </div>
+              <div class="column_article_data">
+                  <span>
+                  2021-04-08 10:20:20
+                  </span>
+                  <span>
+                  <img src="https://csdnimg.cn/release/blogv2/dist/pc/img/readCountWhite.png" alt="">
+                    210
+                  </span>
+                  </span>
+                  <span><img src="https://csdnimg.cn/release/blogv2/dist/pc/img/commentCountWhite.png" alt="">
+                    0
+                  </span>
+              </div>
+          </a>
+      </li>
+      <li>
+          <a href="https://blog.csdn.net/youdaotech/article/details/115368107" target="_blank" rel="noopener">
+              <div class="column_article_title">
+                  <h2 class="title">
+                  <span class="article-type type-1">原创</span>
+                  有道云笔记新版编辑器架构设计（下）
+                      <!--####试读-->
+                      <!--####试读--></h2>
+
+              </div>
+              <div class="column_article_desc">
+                  上期文章，我们从整体上介绍了富文本编辑器的背景，并分享了有道云笔记新版编辑器技术选型中的模型和渲染部分。本期文章，我们将继续分享技术选型中的编辑和指令部分内容，并详细解读有道云笔记编辑器的分层架构设计。作者/ 金鑫编辑/ 刘振宇二、云笔记新版编辑器技术选型2.3 编辑由于 contentEditable 会产生不受控事件，导致很多 bug，例如，一开始数据是 abc，对应渲染出的视图是一个 span，内容是 abc。由于需要提供可编辑，span abc 是一个 contentEdi..
+              </div>
+              <div class="column_article_data">
+                  <span>
+                  2021-04-01 10:42:48
+                  </span>
+                  <span>
+                  <img src="https://csdnimg.cn/release/blogv2/dist/pc/img/readCountWhite.png" alt="">
+                    247
+                  </span>
+                  </span>
+                  <span><img src="https://csdnimg.cn/release/blogv2/dist/pc/img/commentCountWhite.png" alt="">
+                    0
+                  </span>
+              </div>
+          </a>
+      </li>
+      <li>
+          <a href="https://blog.csdn.net/youdaotech/article/details/115351237" target="_blank" rel="noopener">
+              <div class="column_article_title">
+                  <h2 class="title">
+                  <span class="article-type type-1">原创</span>
+                  有道云笔记新版编辑器架构设计（上）
+                      <!--####试读-->
+                      <!--####试读--></h2>
+
+              </div>
+              <div class="column_article_desc">
+                  在开发有道云笔记的新版编辑器的过程中，我们遇到很多实际问题，愈发感觉到这是一个非常有深度的前端技术领域，所以我们将新版编辑器的技术选型、架构和部分实现细节拿出来分享给大家，希望对大家开发富文本编辑器、做复杂系统的架构设计有一定参考意义。作者/ 金鑫编辑/ Ryan来源/ 有道技术团队（ID: youdaotech）1. 富文本编辑器背景1.1 什么是编辑器编辑器在前端开发领域是指可以提供给用户编辑纯文本、富文本、代码、多媒体内容等的功能模块，例如以云笔记为例，编辑器指下图中绿色的区域。..
+              </div>
+              <div class="column_article_data">
+                  <span>
+                  2021-03-31 17:40:52
+                  </span>
+                  <span>
+                  <img src="https://csdnimg.cn/release/blogv2/dist/pc/img/readCountWhite.png" alt="">
+                    251
+                  </span>
+                  </span>
+                  <span><img src="https://csdnimg.cn/release/blogv2/dist/pc/img/commentCountWhite.png" alt="">
+                    1
+                  </span>
+              </div>
+          </a>
+      </li>
+      <li>
+          <a href="https://blog.csdn.net/youdaotech/article/details/115329262" target="_blank" rel="noopener">
+              <div class="column_article_title">
+                  <h2 class="title">
+                  <span class="article-type type-1">原创</span>
+                  硬件测试的思考和改进：有道词典笔的高效测试探索
+                      <!--####试读-->
+                      <!--####试读--></h2>
+
+              </div>
+              <div class="column_article_desc">
+                  作者/ 刘哲; 编辑/ Ryan ; 来源/ 有道技术团队（ID: youdaotech）引言当我们提到智能硬件的高效测试时，通常会考虑使用自动化测试的方案，提升产品的测试效率和质量。由于智能硬件的使用过程中，包括了大量和用户的行为交互，这就导致在测试方案上，传统的软件自动化测试很难完全模拟用户的完整使用行为。因此，我们除了要考虑借鉴和使用软件测试的思路之外，还要考虑如何实现硬件测试自动化。一、背景有道词典笔 2.0 是网易有道自研的学习型智能硬件。有道词典笔搭载了有道自研的 OCR、NM.
+              </div>
+              <div class="column_article_data">
+                  <span>
+                  2021-03-30 16:43:16
+                  </span>
+                  <span>
+                  <img src="https://csdnimg.cn/release/blogv2/dist/pc/img/readCountWhite.png" alt="">
+                    378
+                  </span>
+                  </span>
+                  <span><img src="https://csdnimg.cn/release/blogv2/dist/pc/img/commentCountWhite.png" alt="">
+                    0
+                  </span>
+              </div>
+          </a>
+      </li>
+      <li>
+          <a href="https://blog.csdn.net/youdaotech/article/details/115164856" target="_blank" rel="noopener">
+              <div class="column_article_title">
+                  <h2 class="title">
+                  <span class="article-type type-1">原创</span>
+                  技术杂谈 | Flutter 的性能分析、工程架构与细节处理
+                      <!--####试读-->
+                      <!--####试读--></h2>
+
+              </div>
+              <div class="column_article_desc">
+                  出品 | 有道智云编辑 | Ryan来源 | 有道技术团队（ID：youdaotech）一、为何 Flutter跨端技术众多，为何选择 Flutter？它能带来哪些优势，有哪些缺点？先看看具体的工程效果：https://v.qq.com/txp/iframe/player.html?vid=z316221rmveweb 端效果体验：https://test-pupilmath.youdao.com/pupil-flutter-test/web/#/1.1 Flutter VS 原生无论.
+              </div>
+              <div class="column_article_data">
+                  <span>
+                  2021-03-24 10:46:18
+                  </span>
+                  <span>
+                  <img src="https://csdnimg.cn/release/blogv2/dist/pc/img/readCountWhite.png" alt="">
+                    261
+                  </span>
+                  </span>
+                  <span><img src="https://csdnimg.cn/release/blogv2/dist/pc/img/commentCountWhite.png" alt="">
+                    1
+                  </span>
+              </div>
+          </a>
+      </li>
+      <li>
+          <a href="https://blog.csdn.net/youdaotech/article/details/114655093" target="_blank" rel="noopener">
+              <div class="column_article_title">
+                  <h2 class="title">
+                  <span class="article-type type-1">原创</span>
+                  有道 Kubernetes 容器API监控系统设计和实践
+                      <!--####试读-->
+                      <!--####试读--></h2>
+
+              </div>
+              <div class="column_article_desc">
+                  有道 Kubernetes 容器API监控系统设计和实践1.背景2.技术选型方案分析3.整体设计思路4.具体实践操作4.1 添加service 级别API监控告警4.2 自动生成pod API监控5.难点和重点问题解决5.1 误报消减5.2策略优化5.3易用性5.4业务适配6.上线效果7.总结与展望7.1总结7.2展望8.结语本期文章，我们将给大家分享有道容器服务API监控方案，这个方案同时具有轻量级和灵活性的特点，很好地体现了k8s集群化管理的优势，解决了静态配置的监控不满足容器服务监控的需求。并做了
+              </div>
+              <div class="column_article_data">
+                  <span>
+                  2021-03-11 11:07:33
+                  </span>
+                  <span>
+                  <img src="https://csdnimg.cn/release/blogv2/dist/pc/img/readCountWhite.png" alt="">
+                    255
+                  </span>
+                  </span>
+                  <span><img src="https://csdnimg.cn/release/blogv2/dist/pc/img/commentCountWhite.png" alt="">
+                    1
+                  </span>
+              </div>
+          </a>
+      </li>
+      <li>
+          <a href="https://blog.csdn.net/youdaotech/article/details/114934568" target="_blank" rel="noopener">
+              <div class="column_article_title">
+                  <h2 class="title">
+                  <span class="article-type type-1">原创</span>
+                  有道精品课实时数据中台建设实践
+                      <!--####试读-->
+                      <!--####试读--></h2>
+
+              </div>
+              <div class="column_article_desc">
+                  撰文/ 李荣谦编辑/ Ryan来源：有道技术团队（ID: youdaotech）0 序言本期文章中，有道精品课技术团队将和大家分享有道精品课数据中台的架构演进过程以及 Doris 作为一个 MPP 分析型数据库是如何为不断增长的业务体量提供有效支撑并进行数据赋能的。本文以我们在实时数仓选型的经验为切入点，进一步着重分享使用 Doris 过程中遇到的问题，以及我们针对这些问题所做出的调整和优化。1 背景概述1.1 业务场景根据业务需求，目前有道精品课的数据层架构上可分为离线和实时两部分。离线
+              </div>
+              <div class="column_article_data">
+                  <span>
+                  2021-03-18 10:53:38
+                  </span>
+                  <span>
+                  <img src="https://csdnimg.cn/release/blogv2/dist/pc/img/readCountWhite.png" alt="">
+                    240
+                  </span>
+                  </span>
+                  <span><img src="https://csdnimg.cn/release/blogv2/dist/pc/img/commentCountWhite.png" alt="">
+                    0
+                  </span>
+              </div>
+          </a>
+      </li>
+      <li>
+          <a href="https://blog.csdn.net/youdaotech/article/details/114690688" target="_blank" rel="noopener">
+              <div class="column_article_title">
+                  <h2 class="title">
+                  <span class="article-type type-1">原创</span>
+                  网易 Duilib：功能全面的开源桌面 UI 开发框架
+                      <!--####试读-->
+                      <!--####试读--></h2>
+
+              </div>
+              <div class="column_article_desc">
+                  01 网易 Duilib 框架概述Duilib 是 Windows 系统下的开源的 DirectUI 界面库（遵循 BSD 协议），完全免费，可用于商业软件开发。Duilib 可以简单方便地实现大多数界面需求，包括换肤、换色、透明等功能，支持多种图片格式，使用 XML 可以方便地定制窗口，能较好地做到 UI 和逻辑相分离，尽量减少在代码里创建 UI 控件。目前，Duilib 已经在国内有较为广泛的使用。网易在研发网易易信 PC 版时引入 Duilib，经过多年开发和改进，由网易云信在2019年4月开.
+              </div>
+              <div class="column_article_data">
+                  <span>
+                  2021-03-16 11:28:04
+                  </span>
+                  <span>
+                  <img src="https://csdnimg.cn/release/blogv2/dist/pc/img/readCountWhite.png" alt="">
+                    654
+                  </span>
+                  </span>
+                  <span><img src="https://csdnimg.cn/release/blogv2/dist/pc/img/commentCountWhite.png" alt="">
+                    7
+                  </span>
+              </div>
+          </a>
+      </li>
+</ul>
+<div class="blog-footer-bottom" style="margin-top:10px;"></div>
+<script src="https://g.csdnimg.cn/common/csdn-footer/csdn-footer.js" data-isfootertrack="false" type="text/javascript"></script>
+<script type="text/javascript">
+    window.csdn.csdnFooter.options = {
+        el: '.blog-footer-bottom',
+        type: 2
+    }
+</script>    </div>
+</main>
+</div>
+<div class="skin-boxshadow"></div>
+<script type="text/javascript">
+    var currentPage = 1;
+    var baseUrl = 'https://blog.csdn.net/youdaotech/category_10871913'
+    var pageSize = 40;
+    var listTotal = 13;
+    function getAllUrl(page) {
+        if (page > 1) {
+            return baseUrl + "_" + page + ".html";
+        }
+        return baseUrl + ".html";
+    }
+</script>
+<script>window._bd_share_config = {
+        "common": {
+            "bdSnsKey": {},
+            "bdText": "",
+            "bdMini": "1",
+            "bdMiniList": false,
+            "bdPic": "",
+            "bdStyle": "0",
+            "bdSize": "16"
+        }, "share": {}
+    };
+    with (document) 0[(getElementsByTagName('head')[0] || body).appendChild(createElement('script')).src = '//csdnimg.cn/static/api/js/share.js?v=89860594'];</script>
+</body>
+<script type="text/javascript">
+    $(function () {
+        $(document).on('click', '.follow_column_button', function () {
+          if (!currentUserName) {
+              window.csdn.loginBox.show();
+              return false;
+          }
+          var url = "https://blog.csdn.net/" + "phoenix/web/v1/subscribe/subscribe";
+          var columnId = "10871913";
+          var info = {columnId: columnId};
+          $.ajax({
+            url: url,
+            type: 'post',
+            dataType: 'json',
+            data: info,
+            xhrFields: {
+                withCredentials: true
+            },
+            success: function (data) {
+              if (data.code === 200 && data.data.status) {
+                  $('.column_button').removeClass('follow_column_button').addClass('unfollow_column_button').text('已关注')
+                  var columnNum = parseInt($('.column-subscribe-num').text()) + 1;
+                  $('.column-subscribe-num').text(columnNum)
+              }
+            }
+          })
+        });
+        $(document).on('click', '.unfollow_column_button', function () {
+            var url = "https://blog.csdn.net/" + "phoenix/web/v1/subscribe/un-subscribe";
+            var columnId = "10871913";
+            var info = {columnId: columnId};
+            $.ajax({
+              url: url,
+              type: 'post',
+              dataType: 'json',
+              data: info,
+              xhrFields: {
+                  withCredentials: true
+              },
+              success: function (data) {
+                if (data.code === 200 && data.data.status) {
+                  $('.column_button').removeClass('unfollow_column_button').addClass('follow_column_button').text('关注')
+                  var columnNum = parseInt($('.column-subscribe-num').text()) - 1;
+                  $('.column-subscribe-num').text(columnNum < 0 ? 0 : columnNum)
+                }
+              }
+            })
+        })
+
+        $(document).on('mouseenter mouseleave', '.unfollow_column_button', function (e) {
+            if (e.type === 'mouseenter') {
+                $(this).text('取消关注')
+            } else if (e.type === 'mouseleave') {
+                $(this).text('已关注')
+            }
+        })
+    })
+</script>
+<script type="text/javascript">
+    if (localStorage.getItem("isReload") != null) {
+        window.location.reload();
+        localStorage.removeItem("isReload")
+	  }
+     $(document).on('click','#edit',function(){
+        localStorage.setItem("isReload","true");
+     })
+</script>
+<script src="https://csdnimg.cn/release/blogv2/dist/pc/js/common-d56939e7f0.min.js" type="text/javascript"></script>
+<script src="https://csdnimg.cn/release/download/old_static/js/qrcode.js"></script>
+<script src="https://g.csdnimg.cn/user-ordercart/1.0.6/user-ordercart.js"></script>
+<script src="https://csdnimg.cn/release/blogv2/dist/pc/js/column-78261cfea6.min.js" type="text/javascript"></script>
+<script src="https://csdnimg.cn/release/blogv2/dist/pc/js/list-89444d1228.min.js" type="text/javascript"></script>
+<script src="https://g.csdnimg.cn/side-toolbar/3.0/side-toolbar.js" type="text/javascript"></script>
+<script type="text/javascript" crossorigin src="https://g.csdnimg.cn/login-box/1.1.4/login-box.js"></script></body>
+</html>

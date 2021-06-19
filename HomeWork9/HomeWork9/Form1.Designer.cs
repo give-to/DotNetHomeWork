@@ -38,15 +38,15 @@ namespace HomeWork9
             this.btnAction = new System.Windows.Forms.Button();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.dgvSuccessUrl = new System.Windows.Forms.DataGridView();
-            this.dgvFailUrl = new System.Windows.Forms.DataGridView();
-            this.bdsUrl = new System.Windows.Forms.BindingSource(this.components);
             this.SuccessCrawl = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bdsUrl = new System.Windows.Forms.BindingSource(this.components);
+            this.dgvFailUrl = new System.Windows.Forms.DataGridView();
             this.FailCrawl = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSuccessUrl)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvFailUrl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdsUrl)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvFailUrl)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -91,6 +91,8 @@ namespace HomeWork9
             // 
             this.chkType.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.chkType.AutoSize = true;
+            this.chkType.Checked = true;
+            this.chkType.CheckState = System.Windows.Forms.CheckState.Checked;
             this.chkType.Location = new System.Drawing.Point(294, 41);
             this.chkType.Name = "chkType";
             this.chkType.Size = new System.Drawing.Size(18, 17);
@@ -148,6 +150,18 @@ namespace HomeWork9
             this.dgvSuccessUrl.Size = new System.Drawing.Size(394, 344);
             this.dgvSuccessUrl.TabIndex = 0;
             // 
+            // SuccessCrawl
+            // 
+            this.SuccessCrawl.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.SuccessCrawl.DataPropertyName = "Url";
+            this.SuccessCrawl.HeaderText = "爬取成功";
+            this.SuccessCrawl.MinimumWidth = 6;
+            this.SuccessCrawl.Name = "SuccessCrawl";
+            // 
+            // bdsUrl
+            // 
+            this.bdsUrl.DataSource = typeof(HomeWork9.MyURL);
+            // 
             // dgvFailUrl
             // 
             this.dgvFailUrl.AutoGenerateColumns = false;
@@ -162,18 +176,6 @@ namespace HomeWork9
             this.dgvFailUrl.RowTemplate.Height = 27;
             this.dgvFailUrl.Size = new System.Drawing.Size(394, 344);
             this.dgvFailUrl.TabIndex = 1;
-            // 
-            // bdsUrl
-            // 
-            this.bdsUrl.DataSource = typeof(HomeWork9.MyURL);
-            // 
-            // SuccessCrawl
-            // 
-            this.SuccessCrawl.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.SuccessCrawl.DataPropertyName = "Url";
-            this.SuccessCrawl.HeaderText = "爬取成功";
-            this.SuccessCrawl.MinimumWidth = 6;
-            this.SuccessCrawl.Name = "SuccessCrawl";
             // 
             // FailCrawl
             // 
@@ -197,8 +199,8 @@ namespace HomeWork9
             this.tableLayoutPanel1.PerformLayout();
             this.tableLayoutPanel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvSuccessUrl)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvFailUrl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdsUrl)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvFailUrl)).EndInit();
             this.ResumeLayout(false);
 
         }

@@ -1,0 +1,542 @@
+﻿<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, user-scalable=no,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,viewport-fit=cover"><title>大前端开发：前端如何开发 APP_GitChat</title><meta name="description" content="GitChat 是一款基于微信平台的知识分享产品。通过这款产品我们希望改变IT知识的学习方式。"><meta name="robots" content="index,follow"><meta name="keywords" content="GitChat,机器学习,大数据,程序员,用户体验,软件开发,知识付费,技术分享"><meta name="baidu-site-verification" content="BRkuL6TTfM"><link href="/dist/site/gitbook/bundle1.css" rel="stylesheet"><script src="/dist/gitbook/js/productionSa.js"></script><script src="/dist/site/gitbook/js1.js"></script><script src="/dist/js/jquery.lazyload.min.js"></script><link href="/css/gitbook/common/common.css" rel="stylesheet"><script src="/dist/gitbook/js/common.js"></script><link rel="icon" type="image/png" href="https://images.gitbook.cn/FrfR1mB39xM-U6iSAmDCpxWVxvoa" sizes="16x16"><link rel="icon" type="image/png" href="https://images.gitbook.cn/FrfR1mB39xM-U6iSAmDCpxWVxvoa" sizes="32x32"></head><link href="/dist/site/gitchat/bundle2.css" rel="stylesheet"><link rel="stylesheet" href="/dist/gitbook/css/gitchatActivityDetail.css"><script src="/dist/site/gitchat/js1.js"></script><link href="/dist/gitbook/css/couponList.css" rel="stylesheet"><link href="/dist/gitbook/css/followDialog.css" rel="stylesheet"><link href="/dist/gitbook/css/modals.css" rel="stylesheet"><script src="/dist/gitchat/js/qrcode.min.js"></script><body><div class="container_view"><link rel="stylesheet" href="/css/gitbook/topV6.css"><link rel="stylesheet" href="/dist/gitbook/css/topV6.css"><link rel="stylesheet" href="/dist/gitbook/scss2css/v5.css"><script async src="/dist/js/storage.js"></script><style>.blk-filter-vp { color: #fff !important;background:#3A4156; }
+.link_to_vip {
+  width: fit-content !important;
+  height: fit-content !important;
+  font-size: 14px !important;
+  padding: 2px 6px;
+  line-height: unset !important;
+  font-weight: 400 !important;
+}
+.home_top_img {
+  margin: 0 auto !important;
+  margin-top: 20px !important;
+}
+#globalSearch .modal-dialog {
+  width: 100%;
+  height: 100%;margin:0;
+}
+#globalSearch .modal-content {
+  border: none;
+  box-shadow: none;
+  background: transparent;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+}
+.home_tab {
+  margin: 0 auto !important;
+  margin-bottom: 15px !important;
+}
+.home_top_logo {
+  margin-bottom: 25px !important;
+}</style><script>let isV5 = location.search.indexOf('v5') >= 0;</script><div id="header" class="headroom hidden-md hidden-lg hidden-sm top_box"><div style="float: left;-webkit-animation-name:none;animation-name:none;" class="container hidden-md hidden-lg hidden-sm"><ul id="gn-menu" class="gn-menu-main"><li class="gn-trigger"><a class="gn-icon gn-icon-menu"><span>Menu</span></a><nav class="gn-menu-wrapper"><div class="gn-scroller"><ul style="border-bottom:0" class="gn-menu"><li><a href="/" class="icon lnr-home">首 页</a></li><li><a href="/gitchat/columns" class="icon lnr-rocket">专 栏</a></li><li><a href="/gitchat/series/list" class="icon lnr-diamond">专 题</a></li><li><a href="/gitchat/geekbooks" class="icon lnr-book">电子书</a></li><li><a href="/books/5b398139328f856827673b50/index.html" class="icon lnr-earth">关于我们</a></li><li><a class="icon lnr-text-align-justify">活动分类</a><div class="activity_type clearfix"><a href="/gitchat/categories/58e84f875295227534aad506/1">前端</a><a href="/gitchat/categories/58e84f53ec8e9e7b34457809/2">人工智能</a><a href="/gitchat/categories/58e84f6bad952d6b3428af9a/3">架构</a><a href="/gitchat/categories/5953698a3d38293ecceacb89/4">区块链</a><a href="/gitchat/categories/58e84f1584c651693437f27c/5">职场</a><a href="/gitchat/categories/59c491948fee063dc3c447ab/6">编程语言</a><a href="/gitchat/categories/58e84f31ad952d6b3428af99/7">技术管理</a><a href="/gitchat/categories/58e84f7bec8e9e7b3445780d/8">大数据</a><a href="/gitchat/categories/591171a3e692d5280d8157b6/9">移动开发</a><a href="/gitchat/categories/58e84f2284c651693437f27d/10">产品与运营</a><a href="/gitchat/categories/58e84f425295227534aad502/11">测试</a><a href="/gitchat/categories/591f073981be962a981acf18/12">安全</a><a href="/gitchat/categories/5901bd477b61a76bc4016423/13">运维</a></div><div style="margin:0 auto;width:90%;margin-top: 180px;"></div></li></ul></div></nav></li></ul></div><div class="top_logo_m"><a href="/"><img src="https://images.gitbook.cn/FnzjNghzs_ktFPUKeLaFX38rbNsL"></a></div></div><div class="hidden-xs home_top_box"><div class="top_fix"><div class="home_top_logo"><a href="/"><img src="https://images.gitbook.cn/FpdQSGLQ9JWwdHIQHK7Cp4m0LEXj" alt="GitChat" title="GitChat"></a></div><div class="home_top_tabs"><a href="/" class="home_tab">首页</a><a href="/chat" class="home_tab">Chat</a><a href="/gitchat/columns" class="home_tab">专栏</a><div id="find_tab" class="home_tab"><span>发现</span><span class="menu_sign"></span><div class="book_series_menu"><a href="/gitchat/geekbooks" class="inner_menu">电子书</a><a href="/gitchat/series/list" class="inner_menu">专题</a></div></div><a id="loginBtn3" href="javascript:void(0)" role="button" class="home_tab">消息</a><div style="border-left:none;border-right:none;width:60%;margin:0 auto;" class="flex a-center p-v-10 gc-add-border"><img src="https://images.gitbook.cn/FjE2q1EynW2BnBwH1NgAGenNXl40" alt="搜索" width="20" height="20" class="no-shrink"><a role="button" data-toggle="modal" href="#globalSearch" class="global-search-ipt-trigger inlineBlock">搜索</a></div><a href="/gitchat/vip" target="_blank" style="font-size:13px !important;margin-top:24px;" class="link_to_vip br-2"><span>开通会员</span></a><a id="loginBtn2" href="javascript:void(0)" role="button" style="margin:24px auto 0" class="login_box">登录 / 注册</a></div><script>const qrcodeMouseEnter = function (event) {
+  const trgt = event.currentTarget;
+  if (trgt.tagName == 'A') {
+    const showTooltipTotalHeight = trgt.offsetTop + trgt.scrollHeight + 123;
+    if (showTooltipTotalHeight > window.innerHeight) {
+      $(trgt).children('.qr-code-tooltip').addClass('t-center').show();
+    } else {
+      $(trgt).children('.qr-code-tooltip').addClass('b-center').show();
+    }
+  }
+}
+const qrcodeMouseLeave = function (event) {
+  const trgt = event.currentTarget;
+  if (trgt.tagName == 'A') {
+    $(trgt).children('.qr-code-tooltip').removeClass('t-center').hide();
+  }
+}</script><a onmouseenter="qrcodeMouseEnter(event)" onmouseleave="qrcodeMouseLeave(event)" role="button" style="margin-top: 20px" class="hidden-xs home_top_publish relative">团队入驻<div class="qr-code-tooltip ls"><div class="qr-code-tooltip-content flex"><img src="https://images.gitbook.cn/FmZj8QbIjP7O5AyZCAMMZeU6yqEq" width="99" height="99"><div style="line-height:14px" class="m-t-5 fs-14 t-left m-l-5"><div class="m-b-5">添加小助手申请</div><span class="fs-12">团队入驻</span></div></div></div></a><a onmouseenter="qrcodeMouseEnter(event)" onmouseleave="qrcodeMouseLeave(event)" role="button" style="margin-top: 20px" class="hidden-xs home_top_publish relative">下载APP<div class="qr-code-tooltip ls"><div class="qr-code-tooltip-content flex"><img src="https://images.gitbook.cn/Fqz-Z28mupLvMTQxiuvoxW-UAVA2" width="99" height="99"><div style="line-height:14px" class="m-t-3 fs-14 t-left m-l-5"><div class="m-b-5">下载 App </div><span class="fs-12">即可获得 4 张优惠券</span></div></div></div></a></div></div><div id="globalSearch" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" style="background: rgba(255,255,255,.9)" class="modal fade"><div role="document" class="modal-dialog"><div class="modal-content"><div style="width: 60%;margin:0 auto;margin-top: 100px"><div class="flex a-center j-space-between"><img src="https://images.gitbook.cn/FpdQSGLQ9JWwdHIQHK7Cp4m0LEXj" alt="GitChat" width="40" height="42"><img src="https://images.gitbook.cn/FgORKeqHG2cPcFTGkEMhFRBGXujN?imageView2" width="24" height="24" class="c-p globalSearch-close-btn"></div><div style="width:80%;margin:0 auto;margin-top:130px;"><script nomodule async type="module">import { refreshHistory } from '/dist/js/webModules/v5.js';
+window.refreshHistory = refreshHistory;
+let history = refreshHistory();
+const cache = $('#history-list');
+if (cache && cache[0]) {
+  let cacheItems = '';
+  history.forEach(h => {
+    cacheItems += `<a class='fl m-r-10 br-2 block p-v-3 p-h-5 fs-16 t-center c-p hover-text-black'
+      style='color: #848999;min-width:88px;background:#efeeee;'>
+      ${h.kw}
+    </a>`;
+  });
+  cache.html(cacheItems);
+  cache.children('a').click((e) => {
+    const _self = e.currentTarget;
+    const keyword = _self.innerText;
+    refreshHistory(keyword);
+    window.open(`/articles?search=${keyword}`, '_self');
+  })
+}</script><script>const search = () => {
+  const trgt = $('.global-search-ipt');
+  if (event.keyCode == 13 || event.which == 13) {
+    const keyword = trgt.val();
+    refreshHistory(keyword);
+    window.open(`/articles?search=${keyword}`, '_self');
+  }
+}</script><input onKeyup="search()" type="text" placeholder="请输入关键词" class="global-search-ipt"><div style="margin-top: 44px;color:#3A4156" class="bold fs-20"># 热门搜索 #</div><div class="hot-kw-list text-grey fs-16 m-v-20 o-hidden">暂无</div><div style="margin-top: 20px;color:#3A4156" class="bold fs-20 w-full flex a-center j-space-between"># 历史记录 #<script>const cleanSearchHistory = () => {
+  storagejs('web_search_history').deleteAll((err) => {
+    if (err) alert('清除记录失败～')
+    else alert('清除记录成功～')
+  });
+  $('#history-list').hide();
+  $('.history-list').hide();
+}</script><div onclick="cleanSearchHistory()" class="flex a-center fs-14 text-grey c-p hover-text-black">清除历史记录<img src="https://images.gitbook.cn/FpU9E201Ec9zTcRu7V6TBfWwVsnJ" width="16" height="16" class="m-l-10"></div></div><div id="history-list" class="w-full m-t-20"></div></div></div></div></div></div><div id="myArtsAlertModal" style="margin-top: 100px;" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" class="modal fade"><div role="document" class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" data-dismiss="modal" aria-label="Close" class="close"><span aria-hidden="true">×</span></button><h4 id="authorModalLabel" class="modal-title">提示</h4></div><div class="modal-body"><div style="text-align:center;padding-top:10px;">此功能目前只对PC端开放，请用PC访问网站 gitbook.cn</div></div><div style="margin-top: 20px;" class="modal-footer"><button type="button" data-dismiss="modal" class="btn btn-default">返回</button></div></div></div></div><div id="newChatModal" style="margin-top: 100px;" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" class="modal fade"><div role="document" class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" data-dismiss="modal" aria-label="Close" class="close"><span aria-hidden="true">×</span></button><h4 id="newChatLabel" style="text-align:center;" class="modal-title">微信扫码，发起Chat</h4></div><div class="modal-body"><div style="text-align:center;"><img src="https://images.gitbook.cn/new_chat_qr_code.jpg" style="width:250px;margin-top:-10px;"></div></div></div></div></div><div id="contactUsModal" style="margin-top: 100px;" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" class="modal fade"><div role="document" class="modal-dialog"><div class="modal-content"><div style="text-align:center;" class="modal-header"><h4 id="followWeixinModalLabel" class="modal-title">微信扫描二维码联系客服</h4></div><div style="padding:0;" class="modal-body"><div style="text-align:center;padding-top:10px;"><img src="https://images.gitbook.cn/FrlpzkY_9jMjGMSgc4XQFrwy4xf3" style="margin:5px;width:172px;height:172px;"></div></div><div style="margin-top: 10px;text-align:center;" class="modal-footer"><button type="button" data-dismiss="modal" class="btn btn-default">关闭</button></div></div></div></div><div id="publishModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" class="modal fade"><div role="document" class="modal-dialog"><div class="modal-content"><img data-dismiss="modal" aria-label="Close" src="https://images.gitbook.cn/FmvfihH2VOBiRj3ynta4yK_DvZM_" class="close"><div class="flex_view clearfix"><div class="helf_view bg_left"><div class="scope_title scope_blue">发布免费内容</div><ul><li>· 即时创作和发布文章</li><li>· 读者可免费阅读</li></ul><div id="freeChatBtn" class="chat_btn bg_blue">创作/发布文章</div></div><div class="line"></div><div class="helf_view bg_right"><div class="scope_title scope_orange">发布收费 Chat</div><ul><li>· 发布话题开启众筹</li><li>· 为你的文章收费</li><li>· 可选择与读者在微信群交流</li></ul><div id="payChatBtn" class="chat_btn bg_orange">发布话题</div></div></div></div></div></div><a id="telModalLink" role="button" data-toggle="modal" href="#telModal" style="display:none;"></a><link href="/dist/gitbook/css/modals.css" rel="stylesheet"><div id="pwdModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" class="modal fade"><div class="login-error-tip"></div><div role="document" class="modal-dialog"><img src="https://images.gitbook.cn/FmolTdK1yu4DdPWmTFDgRbSRrACQ" class="login-modal-close"><div class="tel_title pwd_title">设置密码</div><div class="tel_input_view"><input id="pwdInput-1" type="password" placeholder="请设置登录密码" maxlength="20"></div><div class="tel_input_view"><input id="pwdInput-2" type="password" placeholder="确认登录密码" maxlength="20"></div><div class="pwd_tip">8-20位的数字混合密码更安全哦～</div><div id="pwdSubmit" class="tel_btn">确定</div></div></div><div id="pwdEditModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" class="modal fade"><div class="login-error-tip"></div><div role="document" class="modal-dialog"><img src="https://images.gitbook.cn/FmolTdK1yu4DdPWmTFDgRbSRrACQ" class="login-modal-close"><div class="tel_title pwd_title">修改密码</div><div class="tel_input_view"><input id="pwdInput-old" type="password" placeholder="请输入原始密码" maxlength="20"></div><div class="tel_input_view"><input id="pwdInput-new" type="password" placeholder="请输入新密码" maxlength="20"></div><div class="tel_input_view"><input id="pwdInput-repeat" type="password" placeholder="请再次输入新密码" maxlength="20"></div><div class="pwd_tip">8-20位的数字混合密码更安全哦～</div><div id="pwdEditSubmit" class="tel_btn">确认修改</div></div></div><div id="telModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" class="modal fade"><div class="login-error-tip"></div><div role="document" class="modal-dialog"><img src="https://images.gitbook.cn/FmolTdK1yu4DdPWmTFDgRbSRrACQ" class="login-modal-close"><div class="tel_title">绑定手机号</div><div class="tel_tip">根据相关法规要求，请完善您的信息</div><div class="tel_input_view"><input id="telInput" type="text" placeholder="手机号" maxlength="11"><button class="codeBtn code_btn">获取验证码</button></div><div class="tel_input_view"><input id="codeInput" type="text" placeholder="验证码" maxlength="6"></div><div id="telSubmit" class="tel_btn">确定</div></div></div><div id="telEditModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" class="modal fade"><div class="login-error-tip"></div><div role="document" class="modal-dialog"><img src="https://images.gitbook.cn/FmolTdK1yu4DdPWmTFDgRbSRrACQ" class="login-modal-close"><div class="tel_title">更换绑定手机号</div><div class="tel_old_tip">当前手机号：undefined</div><div class="tel_input_view"><input id="telEditInput" type="text" placeholder="新手机号" maxlength="12"><button class="codeBtn code_btn">获取验证码</button></div><div class="tel_input_view"><input id="codeEditInput" type="text" placeholder="验证码" maxlength="6"></div><div id="telEditSubmit" class="tel_btn tel_btn_margin">确认更换</div></div></div><a id="auditSuccessLink" role="button" data-toggle="modal" href="#auditSuccessModal"></a><div id="auditSuccessModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" class="modal fade"><div role="document" class="modal-dialog"><div class="modal-content"><img data-dismiss="modal" aria-label="Close" src="https://images.gitbook.cn/FmvfihH2VOBiRj3ynta4yK_DvZM_" class="as_close"><img src="https://images.gitbook.cn/Fk5dJI2l4uoORgulVV86kaHqJ9jS" class="as_img"><div class="as_tip">提交成功</div><div class="as_txt">平台会在 48 小时内通知您审核结果</div><a href="/mazi/my/activity" class="as_chat_button">查看我的创作</a><div class="as_bottom"><img src="https://images.gitbook.cn/FmtmUdg3yuMFRE_vO7vV6PvW-Iot" class="as_qrcode"><span class="as_tip_bottom">关注公众号<br>第一时间获得相关结果通知</span></div></div></div></div><a id="auditWrongLink" role="button" data-toggle="modal" href="#auditWrongModal"></a><div id="auditWrongModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" class="modal fade"><div role="document" class="modal-dialog"><div class="modal-content"><img src="https://images.gitbook.cn/FhPXnIoHYe2jzxy-3k0hpQT3dpoH" class="aw_img"><div class="aw_tip">提交审核失败</div><div class="aw_txt">请检查您的网络状态后再试一次</div><div class="aw_btn">重新提交</div></div></div></div><div class="mine_tip mine_tip_yes"><img src="https://images.gitbook.cn/FjeoT6Flh_RPDTwaJa3i4927CQMI"><span>保存成功</span></div><div class="mine_tip order_tip_yes"><img src="https://images.gitbook.cn/FjeoT6Flh_RPDTwaJa3i4927CQMI"><span>订阅成功</span></div><div class="mine_tip mine_tip_no"><img src="https://images.gitbook.cn/Fq0bYPvfhvhi_dHp9Hhr4h4rb6Q0" alt=""><span>保存失败，请重试</span></div><div class="mine_tip tip_submit"><img src="https://images.gitbook.cn/FjeoT6Flh_RPDTwaJa3i4927CQMI"><span>提交成功</span><script>// grab an element
+var myElement = document.getElementById("header");
+// construct an instance of Headroom, passing the element
+var headroom  = new Headroom(myElement);
+// initialise
+headroom.init();
+var pointAjax = function(type){
+    if($('#tab_item_'+type).length == 0||$('#tab_item_'+type).is(':hidden')){
+        return;
+    }
+    $.ajax ({
+        url: '/notifications?type='+type,
+        type: "POST",
+        data: JSON.stringify({lastTime:''}),
+        dataType: "json",
+        contentType: "application/json; charset=utf-8",
+        success: function (data) {
+            if(data.code == 0){
+                $('#tab_item_'+type).hide();
+            }
+        }
+    })
+}
+$(function(){
+    var isYearCard = "";
+    var isNormalCard = "";
+    var vipEndTime = "";
+    var msgView = $('#message_view');
+    var sortStr = 'activity';
+    const getHotKeywords = () => {
+      $.ajax ({
+          url: '/gitchat/rest/tag/hot',
+          type: 'GET',
+          dataType: "json",
+          contentType: "application/json; charset=utf-8",
+          success: function (res) {
+            if(res.code == 0) {
+              const list = $('.hot-kw-list');
+              if (list && list[0]) {
+                let items = '';
+                res.data.forEach(kw => {
+                  items += `<a class='fl m-r-10 br-2 block p-v-3 p-h-5 fs-16 t-center c-p hover-text-black'
+                    style='color: #848999;min-width:88px;background:#efeeee;'>
+                    ${kw}
+                  </a>`;
+                });
+                list.html(items);
+                list.children('a').click((e) => {
+                  const _self = e.currentTarget;
+                  const keyword = _self.innerText;
+                  window.open(`/articles?search=${keyword}`, '_self');
+                })
+              } 
+            }
+          }
+      })
+    }
+    getHotKeywords();
+    if(sortStr == 'geekbook' || sortStr == 'series'){
+        $('#find_tab').addClass('home_tab_select')
+        $('.menu_sign').addClass('menu_sign_hover')
+    }else{
+        $('.book_series_menu').hover(function(){
+            $('#find_tab').addClass('home_tab_select')
+            $('.menu_sign').addClass('menu_sign_hover')
+            $(this).show()
+        },function(){
+        })
+        $('#find_tab').hover(function(){
+            $(this).addClass('home_tab_select')
+            $('.menu_sign').addClass('menu_sign_hover')
+            $('.book_series_menu').show()
+        },function(){
+            $(this).removeClass('home_tab_select')
+            $('.book_series_menu').hide()
+            $('.menu_sign').removeClass('menu_sign_hover')
+        })
+    }
+    if(isNormalCard == 'true'){
+        var vipObj = {
+            "cardImg": "https://images.gitbook.cn/Fts0XPWoZzTOhFWLuyg-GlswFlwB?imageslim",
+            "className": "normalClass",
+            "textColor": "#46669B",
+            "cardList": ["全场 Chat 免费订", "每月免费学习 2 门专栏", "全站文章和实录免费阅读", "进入上百位专家的读者圈，无限互动与追问"]
+        }
+    }else if(isYearCard=='true'){
+        var vipObj = {
+            "cardImg": "https://images.gitbook.cn/FvC7tICKSIS7XCR0Oftj41OhcpkN?imageslim",
+            "className":"yearClass",
+            "textColor": "#DDC492",
+            "cardList": ["全场 Chat 免费订", "全场专栏免费学", "全站文章和实录免费阅读", "每月免费领一本电子书", "进入上百位专家的读者圈，无限互动与追问"]
+        }
+    }
+    if(isYearCard=='true' || isNormalCard == 'true'){
+        var htmlString = '<div id="vipDialog" class="vip_model"><div class="vip_model_content"><img src="'+vipObj.cardImg+'" class="vip_img"><div class="'+vipObj.className+'">'+vipEndTime+' 到期</div><ul class="vip_list_ul"><li style="color:'+vipObj.textColor+'">会员权益</li>';
+        for(var hIndex = 0;hIndex<vipObj.cardList.length;hIndex++){
+            htmlString += '<li>'+vipObj.cardList[hIndex]+'</li>';
+        }
+        htmlString += '</ul><img src="https://images.gitbook.cn/FoZcXZPNXxknIpi0zhdlAuUCfkJR" class="vip_close"></div></div>';
+        $('body').append(htmlString);
+        $('.vip_model_content').click(function () {
+            return false;
+        })
+        $('#vipDialog,.vip_close').click(function () {
+            $('#vipDialog').hide();
+        })
+    }
+    $('.msg_tab').click(function(){
+        if(msgView.is(':hidden')){
+            msgView.fadeIn();
+            $('span').remove('.red_point');
+            pointAjax(2);
+        }else{
+            msgView.fadeOut();
+        }
+        return false;
+    })
+    msgView.click(function(event){
+        event.stopPropagation();
+    })
+    $(document).click(function(){
+        msgView.fadeOut();
+    })
+    $('.tab_item').click(function(){
+        $('.tab_item').removeClass('msg_choose');
+        $(this).addClass('msg_choose');
+        if($(this).data('name')=='comment'){
+            $('.like_list,.msg_list').hide();
+            $('.comment_list').show();
+            $('.msg_more').attr('href','/notifications?type=comment');
+        }else if($(this).data('name')=='like'){
+            $('.comment_list,.msg_list').hide();
+            $('.like_list').show();
+            $('.msg_more').attr('href','/notifications?type=like');
+        }else{
+            $('.comment_list,.like_list').hide();
+            $('.msg_list').show();
+            $('.msg_more').attr('href','/notifications?type=navigation');
+        }
+    })
+    $('.top_search_img').on('click', function () {
+        var searchKey = $('#rightTopSearchInput').val();
+        if(searchKey != ''){
+            window.open("/articles?search=" + searchKey,"_blank");
+        }
+    })
+    $('.menu_out').click(function(){
+        try{
+            sensors.logout();
+        }catch(e){}
+        window.location.href='/customers/logout';
+    })
+    let searchFocusTimer;
+    $('.global-search-ipt').focus(() => {
+      clearInterval(searchFocusTimer);
+    })
+    $('.global-search-ipt-trigger').click(() => {
+      searchFocusTimer = setInterval(() => $('.global-search-ipt').focus(), 1000)
+    })
+})
+$('#freeChatBtn').click(function(){
+    $('#publishModal').modal('hide')
+    $('.modal-backdrop').hide();
+    setTimeout(function(){
+        window.open('/new/gitchat/activity?type=free')
+    },200)
+})
+$('#payChatBtn').click(function(){
+    $('#publishModal').modal('hide')
+    $('.modal-backdrop').hide();
+    setTimeout(function(){
+        window.open('/new/gitchat/activity?type=crowdfunding')
+    },200)
+})
+$('.globalSearch-close-btn').click(() => {
+  $('#globalSearch').modal('hide');
+});</script></div><script>var timeCount = 60;
+var msg_id;
+$(function(){
+    var codeBtn = $('.codeBtn');
+    var telSubmit = $('#telSubmit');
+    var pwdSubmit = $('#pwdSubmit');
+    var telEditSubmit = $('#telEditSubmit');
+    var resCodeNum = '0000';
+    var password,repassword,oldpassword = '';
+    var telNum,codeNum = '';
+    var oldPwd = '';//原始密码
+    var pwdEditSubmit = $('#pwdEditSubmit');
+    $('.as_chat_button').click(function(){
+        window.location.href='/mazi/my/activity'
+        return false
+    })
+    codeBtn.click(function(){
+        telNum = $('#telInput').val().trim() || $('#telEditInput').val().trim();
+        if(isPhoneNumber(telNum)){
+            codeBtn.attr('disabled','true');
+            codeBtn.text(--timeCount+'s后重新获取');
+            // 计时器
+            var timer = setInterval(function(){
+                if(timeCount == 0){
+                    clearInterval(timer);
+                    timeCount = 60;
+                    codeBtn.text('获取验证码');
+                    codeBtn.removeAttr('disabled');
+                }else{
+                    codeBtn.text(--timeCount+'s后重新获取');
+                }
+            }, 1000)
+            $.ajax({
+                url: "/sms/code",
+                type: "POST",
+                data: JSON.stringify({mobile:telNum}),
+                dataType: "json",
+                contentType: "application/json; charset=utf-8",
+                success: function (data, status) {
+                    if (status == 'success' && data.code == 0) {
+                        msg_id = data.msg_id;
+                    } else {
+                        alert(data.message);
+                        clearInterval(timer);
+                        timeCount = 60;
+                        codeBtn.text('获取验证码');
+                        codeBtn.removeAttr('disabled');
+                    }
+                }
+            })
+            
+        } else{
+            showErrTip('请输入正确的手机号！');
+        }
+    })
+    telSubmit.click(function(){
+        telNum = $('#telInput').val().trim();
+        codeNum = $('#codeInput').val().trim();
+        if(isPhoneNumber(telNum)){
+            $.ajax({
+                url: "/sms/check/code",
+                type: "POST",
+                data: JSON.stringify({msg_id: msg_id, code: codeNum}),
+                dataType: "json",
+                contentType: "application/json; charset=utf-8",
+                success: function (data, status) {
+                    if (status == 'success' && data.code == 0) {
+                        mineYes()
+                        closeTelModal();
+                        if(window.location.href.indexOf('v2/editor') == -1 && window.location.href.indexOf('new/gitchat/activity') == -1){
+                            setTimeout(function(){
+                                window.location.reload();
+                            },1000)
+                        }
+                    } else {
+                        mineNo()
+                    }
+                }
+            })
+        }else{
+            showErrTip('请输入正确的手机号！');
+        }
+    })
+    telEditSubmit.click(function(){
+        telNum = $('#telEditInput').val().trim();
+        codeNum = $('#codeEditInput').val().trim();
+        if(isPhoneNumber(telNum)){
+            $.ajax({
+                url: "/sms/check/code",
+                type: "POST",
+                data: JSON.stringify({msg_id: msg_id, code: codeNum}),
+                dataType: "json",
+                contentType: "application/json; charset=utf-8",
+                success: function (data, status) {
+                    if (status == 'success' && data.code == 0) {
+                        mineYes()
+                        setTimeout(function(){
+                            $('.modal').modal('hide');
+                            window.location.reload();
+                        },1000)
+                    } else {
+                        mineNo()
+                    }
+                }
+            })
+        }else{
+            showErrTip('请输入正确的手机号！');
+        }
+    })
+    pwdSubmit.click(function(){
+        password = $('#pwdInput-1').val().trim();
+        repassword = $('#pwdInput-2').val().trim();
+        if(!passwordReg(password)){
+            showErrTip('请输入正确格式的密码！');
+        } else if(password != repassword){
+            showErrTip('两次密码不一致！');
+        } else{
+            showErrTip('设置密码成功！');
+            setTimeout(function(){
+                window.location.reload();
+            },1000)
+        }
+    })
+    pwdEditSubmit.click(function(){
+        oldpassword = $('#pwdInput-old').val().trim();
+        password = $('#pwdInput-new').val().trim();
+        repassword = $('#pwdInput-repeat').val().trim();
+        if(oldpassword != oldPwd){
+            showErrTip('原始密码不正确！');
+        }else if(!passwordReg(password)){
+            showErrTip('请输入正确格式的密码！');
+        }else if(password != repassword){
+            showErrTip('两次密码不一致！');
+        } else{
+            showErrTip('修改密码成功！');
+            setTimeout(function(){
+                $('.modal').modal('hide');
+                window.location.reload();
+            },1000)
+        }
+    })
+    $('.aw_btn').click(function(){
+        closeErrModal();
+    })
+})</script><div class="home_container"><div class="chat_container"><div class="chat_top"><div data-st='10' class="chat_header_view"><div class="header_left"><img src="https://images.gitbook.cn/Fse37vnWgmAY4Et_LQ5tJkS9GyUi?imageslim" class="header_bg"><div class="status_tips"><span></span></div><h1 id="chat_title" class="chat_title user_select_text">大前端开发：前端如何开发 APP</h1><div class="chat_head_price"><span class="price_free">免费</span></div></div><a href="/gitchat/author/59f6b7557ed02a227b4f69ed" data-aid="5acb04a731c1e06e53b20174" target="_blank" class="header_right"><img src="https://images.gitbook.cn/793a2e40-bd32-11e7-a4d0-01a65989f9d2?imageView2/2/h/100" class="author_img"><div class="author_name">罗忠浩</div><div class="stars"></div></a></div><div class="no_strict_line"></div><div class="chat_desc_view user_select_text"><p>做为一个前端开发人员，有时候除去传统的前端开发还需要进行其他开发，比如公众号开发，小程序开发，APP 开发。</p>
+<p>本场 Chat 将带你从0开始，基于 APICloud 进行 APP 开发，你只需要会前端就可以。</p>
+<p>本场 Chat 主要内容为下:</p>
+<ol>
+<li>什么是APICloud？</li>
+<li>开发工具的了解；</li>
+<li>提供的前端框架；</li>
+<li>相关 API；</li>
+<li>控制台；</li>
+<li>开始你的 APP 开发。</li>
+</ol>
+<p>本场 Chat 将会用一个新的案例从0来带领大家，用实际的开发案例来学习，知道开发过程的每一个步骤，让大家真的能开发，而不是一知半解，最后 Chat 结束后大家都可以都拥有一个自己的 APP。</p></div></div><div class="chat_status_view"><div class="long_reader_list_view clearfix"><div class="reader_txt"><span class="num_strong">388</span><span> 人已订阅</span></div><div class="reader_list"><a href="javascript:void(0);" target="_blank" class="reader_img_link"><img src="https://images.gitbook.cn/793a2e40-bd32-11e7-a4d0-01a65989f9d2?imageView2/2/h/100" class="reader_img"></a><a href="javascript:void(0);" target="_blank" class="reader_img_link"><img src="https://images.gitbook.cn/1a135340-8f71-11e7-af88-1bc4a89c4876?imageView2/2/h/100" class="reader_img"></a><a href="javascript:void(0);" target="_blank" class="reader_img_link"><img src="https://images.gitbook.cn/c4990d20-758e-11e7-8414-1dc4048302a8?imageView2/2/h/100" class="reader_img"></a><a href="javascript:void(0);" target="_blank" class="reader_img_link"><img src="https://images.gitbook.cn/1332e8d0-87ea-11e7-911a-f92952e8735e?imageView2/2/h/100" class="reader_img"></a><a href="javascript:void(0);" target="_blank" class="reader_img_link"><img src="https://images.gitbook.cn/6483ab10-6798-11e7-94bc-850542ac25e3?imageView2/2/h/100" class="reader_img"></a><a href="javascript:void(0);" target="_blank" class="reader_img_link"><img src="https://images.gitbook.cn/be339b80-f671-11e7-8957-212570edb2bf?imageView2/2/h/100" class="reader_img"></a><a href="javascript:void(0);" target="_blank" class="reader_img_link"><img src="https://images.gitbook.cn/62c77360-8078-11e9-b985-65fee8fce09c?imageView2/2/h/100" class="reader_img"></a><a href="javascript:void(0);" target="_blank" class="reader_img_link"><img src="https://images.gitbook.cn/13b97d40-8b74-11e7-911a-f92952e8735e?imageView2/2/h/100" class="reader_img"></a><a href="javascript:void(0);" target="_blank" class="reader_img_link"><img src="https://images.gitbook.cn/0bd61b70-6d28-11e7-8c11-1b696ff1afcc?imageView2/2/h/100" class="reader_img"></a><a href="javascript:void(0);" target="_blank" class="reader_img_link"><img src="https://images.gitbook.cn/24d4a740-8245-11e7-bcd9-f7ed42ec1ce5?imageView2/2/h/100" class="reader_img"></a></div></div></div><div class="buy_btns_view"><div id="scanQRLoginBtn" class="buy_btn btn_bg_2">免费订阅</div></div><div class="recommend_view"><div class="recommend_title">你可能还喜欢</div><a href="60cac35558d84a142f8707cc" target="_blank" class="recommend_item"><div class="recommend_item_title user_select_text">Vue 3.0 新特性</div><div class="recommend_item_infos"><img src="https://images.gitbook.cn/dad2ad40-a578-11ea-a506-f32f5295a5a9?imageView2/2/h/50" class="info_img"><span class="info_name user_select_text">养乐多</span><span class="info_author_title user_select_text">工程师</span><span class="info_order">9 订阅</span></div></a></div></div></div><link rel="stylesheet" href="/dist/gitbook/css/chatDescRight.css"><div class="hidden-xs index_right"><div class="right_fix"><div class="right_search_box"><input id="rightTopSearchInput" type="search" placeholder="搜索"><img src="https://images.gitbook.cn/FjE2q1EynW2BnBwH1NgAGenNXl40" alt="搜索" class="top_search_img"></div><div style="" data-authorname="罗忠浩" class="right_chat_author"><h3 class="right_title"><span class="color_strong user_select_text">罗忠浩</span><span>的个人简介</span><span class="under_line"></span></h3><div class="chat_icon"><img src="https://images.gitbook.cn/FiKRAd9Tw-4I4FzG26cSbkroX2iq"><span>Chat 作者</span></div><div class="right_author_desc user_select_text">曾就职于JD ，后任职于几家交易所，担任CTO。目前自由职业者。英国攻读人工智能方向研究生。</div><div class="right_follor_flex"><div onclick="chatFollow('59f6b7557ed02a227b4f69ed')" class="right_follow unfollowed"><img src="https://images.gitbook.cn/FgDEYWvHG14DT1MUtlGeQUH62XPd" class="follow_icon"><span>关注</span></div><a href="/gitchat/author/59f6b7557ed02a227b4f69ed" target="_blank" class="right_author_page">个人主页</a></div><div class="right_split_line"></div><h3 class="right_title"><span class="color_strong user_select_text">罗忠浩</span><span>的其他作品</span><span class="under_line"></span></h3><a href="/gitchat/activity/5a7acf34d63a611715a4843b" target="_blank" class="more_chat_item user_select_text">前端大师炼成记：初中级前端成长指南</a><a href="/gitchat/activity/5c41364a495db442e759e075" target="_blank" class="more_chat_item user_select_text">前端大师炼成记：中高级前端进阶指南</a><a href="/gitchat/activity/5b050110a7d1f60a82973af2" target="_blank" class="more_chat_item user_select_text">前端交互的正确打开方式</a></div><a href="/gitchat/author/59f6b7557ed02a227b4f69ed" target="_blank" class="search_more">查看更多</a></div></div><script src="https://res.wx.qq.com/connect/zh_CN/htmledition/js/wxLogin.js"></script><div class="fat-nav"><div class="login-error-tip"></div><div class="login-modal"><img src="https://images.gitbook.cn/FmolTdK1yu4DdPWmTFDgRbSRrACQ" class="login-modal-close"><div class="login-modal-content"><img src="https://images.gitbook.cn/FkY0yoXWhzILK9EC-t-Uhs9ffpCv" data-type="1" class="login-change-type"><div class="login-title-view"><img src="https://images.gitbook.cn/FsTnKJc1n62yCeTvOpMs09f5wZuk" class="login-title-img"><h3 class="login-title-txt">登录 GitChat</h3></div><div class="login-by-code"><div class="login-tel-view"><input id="loginTelInput" type="text" maxlength="12" placeholder="手机号" class="login-tel-input"><button id="loginCode" class="login-get-code">获取验证码</button></div><div class="login-code-view"><input id="loginCodeInput" type="text" maxlength="8" placeholder="输入6位验证码" class="login-code-input"></div><div class="login-tip">验证即登录，未注册则自动创建新账号</div></div><div class="login-by-pwd"><div class="login-tel-view"><input id="loginPwdTelInput" type="text" maxlength="12" placeholder="手机号" class="login-tel-input"></div><div class="login-code-view"><input id="loginPwdInput" type="password" maxlength="20" placeholder="密码" class="login-code-input"></div><div class="login-tip forget-pwd">忘记登录密码</div></div><button class="login-btn">登录</button><button class="login-change">密码登录</button><div class="login-agreement"><span>登录即表示您同意</span><a href="javascript:void(0)" target="_blank" class="login-agreement-link">《用户协议》</a></div></div><div class="login-modal-new-password"><div class="login-new-pwd-title">设置登录密码</div><div class="login-new-pwd-view"><input id="loginNewPwdInput" type="password" maxlength="20" placeholder="设置密码" class="login-input-pwd"></div><div class="login-tip">验证即登录，未注册则自动创建新账号</div><button class="login-new-pwd-btn">保存并登录</button></div><div class="login-modal-find-pwd"><div class="login-find-pwd-title"><div class="login-find-back"><img src="https://images.gitbook.cn/FjzVephZ66cbiGNQd7ZEqnLM8XaB"><span>返回</span></div><span>找回密码</span></div><div class="login-tel-view"><input id="loginFindTelInput" type="text" maxlength="12" placeholder="手机号" class="login-tel-input"><button class="login-get-code">获取验证码</button></div><div class="login-code-view"><input id="loginFindCode" type="text" maxlength="8" placeholder="输入6位验证码" class="login-code-input"></div><div class="login-find-pwd-view"><input id="loginFindPwdInput" type="password" maxlength="20" placeholder="设置密码" class="login-input-pwd"></div><div class="login-tip">8-20位的数字混合密码更安全哦～</div><button class="login-find-pwd-btn">保存并登录</button></div><div class="login-modal-qr-new"><div class="login-qr-new-jump">跳过</div><div class="login-qr-new-title">温馨提示</div><div class="login-qr-new-tips">若您曾经在微信端使用过 GitChat 产品 请您绑定微信以避免数据丢失， 也可以在设置/微信绑定里进行绑定</div><div class="login-qr-new-code"><div class="login-qr-new-success"><img src="https://images.gitbook.cn/FhZRtbS3b0UVaVg3hEN_Utstfh78"><p>绑定成功</p></div></div><div class="login-qr-new-tips2">请使用微信APP扫描二维码绑定</div></div><div class="login-modal-qr-login"><img src="https://images.gitbook.cn/FlubT1vz8CZXxft08deUqOpCo2cT" data-type="2" class="login-change-type"><div class="login-qr-login-title">微信登录</div><div id="login_container" class="login-qr-login-code"></div><div class="login-qr-login-tip">请使用微信APP扫描二维码登录</div></div><div class="login-modal-bind-tel"><div class="login-bind-title">绑定手机</div><div class="login-bind-tip">绑定手机可以和微信端保持数据同步</div><div class="login-tel-view"><input id="loginBindTelInput" type="text" maxlength="12" placeholder="手机号" class="login-tel-input"><button id="loginBindCode" class="login-get-code">获取验证码</button></div><div class="login-code-view"><input id="loginBindCodeInput" type="text" maxlength="6" placeholder="输入6位验证码" class="login-code-input"></div><div class="login-pwd-view"><input id="loginBindPwdInput" type="password" maxlength="20" placeholder="密码" class="login-input-pwd"></div><div style="display:none" class="login-tip">8-20位的数字混合密码更安全哦～</div><button class="login-bind-btn">确认并登录</button></div></div>
+</div><div id="authorModal" style="margin-top: 60px;" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" class="modal fade"><div role="document" class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" data-dismiss="modal" aria-label="Close" class="close"><span aria-hidden="true">×</span></button><h4 id="authorModalLabel" class="modal-title">帐号设置</h4></div><div class="modal-body"><div style="display:inline-block;width: 100%;"><div style="display:inline;float:left;padding: 20px 0 0 10px;min-width: 280px;"><div id="authorThumb" style="display: inline-block;float:left;width: 100px;height: 100px;border: 1px solid #cccccc;margin-right: 20px;                        line-height: 100px;font-size: 30px;text-align: center;-webkit-border-radius: 50px;margin-bottom:20px;">头像</div><form id="thumbUploadForm" style="margin-top:25px;" method="post" action="/upload/book/image" enctype="multipart/form-data"><div style="display: inline" class="form-group"><a href="javascript:;" class="file">选择头像<input id="thumbInputFile" type="file" name="tmpFile" onchange="javascript:submitThumbForm()"></a><p style="font-size:12px;" class="help-block">最佳分辨率：200*200像素</p></div></form></div><!--if customerAccountStatus == 'onlymail'--><!--    div.hidden-xs(style='display:inline;float:right;width:50%;height: 220px;text-align: center;')--><!--        span 绑 定 微 信 帐 号--><!--        div#bandweixin(style='height: 220px;overflow: hidden;')--><!--    script.--><!--        if (!(/MicroMessenger/i).test(window.navigator.userAgent)) {--><!--            var state = encodeURI(window.location.href);--><!--            $.ajax ({--><!--                url: "/weixin/bind/weixin/qr",--><!--                type: "POST",--><!--                dataType: "json",--><!--                contentType: "application/json; charset=utf-8",--><!--                success: function(data,status){--><!--                    if(data.code == 0){--><!--                        var obj = new WxLogin({--><!--                            id:"bandweixin",--><!--                            appid: data.appId,--><!--                            scope: data.scope,--><!--                            redirect_uri: data.redirectUrl,--><!--                            state: state,--><!--                            style: "black",--><!--                            href: "https%3A%2F%2Foabbwo5lj.qnssl.com%2FweixinLoginQr2.css"--><!--                            });--><!--                    }--><!--                }--><!--            });--><!--        }--></div><div style="display:inline-block;width:100%;border-top:1px dashed #f5f5f5;height:20px;"></div><div style="display:inline-block;width:100%;"><div style="float:left;line-height:30px;">昵   称:</div><div style="margin-left:70px;"><input id="authorName" style="margin-bottom: 10px;" type="text" placeholder="用户昵称" value="" class="form-control"></div></div><div style="display:inline-block;width:100%;"><div style="float:left;line-height:30px;">微信号:</div><div style="margin-left:70px;"><input id="weixinAccount" style="margin-bottom: 10px;" type="text" placeholder="不填写微信号就不能发布Chat活动哦^_^" value="" class="form-control"></div></div><div style="display:inline-block;width:100%;"><div style="float:left;line-height:30px;">头   衔:</div><div style="margin-left:70px;"><input id="authorTitle" style="margin-bottom: 10px;" type="text" placeholder="用户头衔" value="" class="form-control"></div></div><div style="display:inline-block;width:100%;"><div style="float:left;line-height:30px;">背景介绍:</div><div style="margin-left:70px;"><textarea id="authorBackground" style="margin-bottom: 10px;" rows="3" placeholder="用户背景简介" class="form-control"></textarea><input id="hideCustomerThumbImage" style="display:none"></div></div><div style="font-size: 25px;line-height: 35px;"></div><div id="thumbUploadingAlertDiv" style="display:none;margin-top: 50px;margin-bottom: -20px;" class="alert alert-info">正在上传头像，请稍等......</div><div id="updatingAlertDiv" style="display:none;margin-top: 50px;margin-bottom: -20px;" class="alert alert-info">正在更新，请稍等......</div><div id="emailCheckAlertDiv" style="display:none;margin-top: 50px;margin-bottom: -20px;" class="alert alert-danger">邮件地址格式不正确，请重新填写</div><div id="dupEmailAlertDiv" style="display:none;margin-top: 50px;margin-bottom: -20px;" class="alert alert-danger">此邮件地址已经被其他用户使用</div></div><div style="margin-top: 20px;" class="modal-footer"><button type="button" data-dismiss="modal" class="btn btn-default">取消</button><button id="authorSubmitBtn" type="button" data-dismiss="modal" class="btn btn-primary">保存</button></div></div></div></div><script>if (!(/MicroMessenger/i).test(window.navigator.userAgent)) {
+    var state = encodeURI(window.location.href);
+    $.ajax ({
+            url: "/weixin/login/qr",
+            type: "POST",
+            dataType: "json",
+            contentType: "application/json; charset=utf-8",
+            success: function(data,status){
+                if(data.code == 0){
+                    var obj = new WxLogin({
+                        id:"login_container",
+                        appid: data.appId,
+                        scope: data.scope,
+                        redirect_uri: data.redirectUrl,
+                        state: state,
+                        style: "white",
+                        href: "https%3A%2F%2Fgitbook.cn%2Fdist%2Fsite%2Fgitbook%2FweixinLoginQr.css"
+                    });
+                }
+            }
+    });
+}</script><script src="/dist/js/jquery.fatNav.js"></script><script>new gnMenu( document.getElementById( 'gn-menu' ) );</script></div></body><script>var mobileNum = '';
+var isR = false;
+function rotate() {
+    if (!isR) {
+        $('#rotateArrow').css("-webkit-transform", "rotate(90deg)");
+        $('#collapseCommentDiv').removeClass( 'collapse' );
+        $('#collapseCommentDiv').addClass( 'in' );
+        isR = true;
+    } else {
+        $('#rotateArrow').css("-webkit-transform", "rotate(0deg)");
+        $('#collapseCommentDiv').removeClass('in');
+        $('#collapseCommentDiv').addClass('collapse');
+        isR = false;
+    }
+
+}</script><script src="https://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script><div id="marketingQr" style="margin-top: 100px;" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" class="modal fade"><div role="document" class="modal-dialog"><div class="modal-content"><div style="text-align:center;" class="modal-header"><h4 id="marketingQrModalLabel" style="font-size:14px;weight:300;" class="modal-title">请先关注 GitChat 以接收服务通知</h4></div><div style="padding:0;" class="modal-body"><div id="marketingQrDefaultImg" style="display:none;text-align:center;padding-top:10px;"><img src="https://images.gitbook.cn/weixinqrcode.png" style="width:200px;height:200px;"></div><div id="marketingQrImg" style="text-align:center;padding-top:10px;"></div></div><div style="margin-top: 10px;text-align:center;" class="modal-footer"><button type="button" data-dismiss="modal" class="btn btn-default">关闭</button></div></div></div></div><div id="followWeixin" style="margin-top: 100px;" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" class="modal fade"><div role="document" class="modal-dialog"><div class="modal-content"><div style="text-align:center;" class="modal-header"><h4 id="followWeixinModalLabel" class="modal-title">扫描获取Chat通知</h4></div><div style="padding:0;" class="modal-body"><div style="text-align:center;padding-top:10px;"><img src="https://images.gitbook.cn/weixinqrcode.png" style="width:200px;height:200px;"></div></div><div style="margin-top: 10px;text-align:center;" class="modal-footer"><button type="button" data-dismiss="modal" class="btn btn-default">关闭</button></div></div></div></div><div id="buyForGroupTips" style="margin-top: 100px;" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" class="modal fade"><div role="document" class="modal-dialog"><div class="modal-content"><div style="text-align:center;" class="modal-header"><h4 id="buyForGroupTipsLabel" class="modal-title">提 示</h4></div><div style="padding:10px 20px 5px 20px;line-height:30px;" class="modal-body"><div id="buyForGroupTipsTips" style="text-align: center;">购买后即可去读者圈向作者提问！</div></div><div style="margin-top: 10px;text-align:center;" class="modal-footer"><button type="button" data-dismiss="modal" class="btn btn-default">知道了</button></div></div></div></div><div id="payMethodModal" style="margin-top: 150px;" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" class="modal fade"><div role="document" class="modal-dialog"><div class="modal-content"><div class="modal-header"><h4 id="payMethodModalLabel" style="text-align:center;" class="modal-title"><div class="modal-main-title">微信扫码支付 ￥0</div></h4></div><div style="padding:10px;line-height:30px;text-align: center;" class="modal-body"><div>登录后，扫码支付</div><button style="line-height: 25px;min-width:180px;height:40px;font-size:16px;background-color:#1169ac;color:#fff" onclick="pcLogin()" class="btn">登录</button></div><div style="margin-top: 10px;text-align:center;" class="modal-footer"><button type="button" onclick="reloadCurrentPageAfterPay()" style="background-color: #FF700A;color:white;border:none" class="btn btn-default">支付完成</button></div></div></div></div><div class="order_dialog"><div class="dialog_content"><div class="dialog_title"><span class="dialog_title_txt">关注提示</span><span class="dialog_close">×</span></div><img src="https://images.gitbook.cn/b41208f0-b6ec-11eb-9ab2-9beb976e1ff2" class="dialog_code"><div class="dialog_text">扫码关注公众号，获得 Chat 最新进展通知！</div></div></div><div id="helper_dialog"><div class="dialog_content"><div class="dialog_title"><span class="dialog_title_txt">入群与作者交流</span><span id="helper_close">×</span><div class="dialog_desc"><span>扫码后回复关键字 </span><span id="signal_data" class="strong_txt"></span><span> 入群</span></div></div><div class="dialog_center"><div class="center_head"><img src="https://images.gitbook.cn/FqBRJMdWEhG9plwITYTiKrq-oOnH"><span>Chat·作者交流群</span></div><img id="helperImg" src="" alt="入群码"><div class="dialog_text">该二维码永久有效</div></div></div></div><div class="strict_dialog"><div class="dialog_content"><div class="strict_dialog_title">严选标准</div><ul class="strict_dialog_ul"><li>1. 原创</li><li>2. 评审团老师评分在 7 分以上</li><li>3. 无严重投诉</li><li>4. 有理有据，内容能达到满足读者内心的某些预期（偏主观的判断）</li><li>5. 读者订阅量（参考）</li></ul><div class="dialog_close">知道了</div></div></div><div class="status_dialog"><div class="status_content"><div class="status_title">Chat 状态详情</div><div class="status_view"><div class="status_item"><img src="https://images.gitbook.cn/FtJcru-1IJK6QBrZWED8uPtL-Ypm"><span class="status_item_title">开始预订</span><span class="status_time"></span></div><div class="status_item_txt height_40"></div><div class="status_item"><img src="https://images.gitbook.cn/FtJcru-1IJK6QBrZWED8uPtL-Ypm"><span class="status_item_title">预订结果公布</span><span class="status_time">18.04.16</span></div><div class="status_item_txt height_60"><p>预订达标，作者开始写作</p><p>审核未达标，本场 Chat 终止</p></div><div class="status_item"><img src="https://images.gitbook.cn/FtJcru-1IJK6QBrZWED8uPtL-Ypm"><span class="status_item_title">作者文章审核结果公布</span><span class="status_time">18.04.30</span></div><div class="status_item_txt height_60"><p>审核达标，文章发布</p><p>审核未达标，本场 Chat 终止</p></div><div class="status_item"><img src="https://images.gitbook.cn/FtJcru-1IJK6QBrZWED8uPtL-Ypm"><span class="status_item_title">Chat 完结</span><span class="status_time"></span></div></div><span class="status_dialog_close">×</span></div></div><div class="readers_dialog"><div class="readers_content"><img src="https://images.gitbook.cn/Fnnb3D0k2A2d6FcKQsrndhffOZeM" class="close_readers"><div class="readers_title">已购列表</div><div id="reader_dialog_list" class="reader_dialog_list"></div></div></div><script async src="https://www.googletagmanager.com/gtag/js?id=UA-96766334-1"></script><script>window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+var userId = '';
+if(userId && userId != '' && userId != 'do_not_exist'){
+    gtag('set', {'user_id': userId});
+}
+gtag('config', 'UA-96766334-1');
+var gEvent = ''
+if (gEvent && gEvent != '') {
+    gtag('event', gEvent);
+}</script><script>var _hmt = _hmt || [];
+(function() {
+    var hm = document.createElement("script");
+    hm.src = "https://hm.baidu.com/hm.js?5667c6d502e51ebd8bd9e9be6790fb5d";
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(hm, s);
+})();</script><script>(function () {
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();</script><script src="/layer/layer.js"></script><script src="/dist/gitbook/js/gitchatActivityDetail.js"></script><script>var sersorData = {
+    content_type:'',
+    chatID:'',
+    chat_name:'',
+    author_name:'',
+    price:0,
+    chat_state:'',
+    is_pay:false,
+    chat_type:''
+}
+sersorData.chatID = '5acb04a731c1e06e53b20174'
+sersorData.chat_name = '大前端开发：前端如何开发 APP'
+sersorData.author_name = '罗忠浩'
+sersorData.chat_state = '10'
+try{
+    checkSersor('');
+    sersorData.price = parseFloat('0')
+    sersorData.is_pay = 'false'=='true'
+    sensors.track('Chat_pageview',sersorData);
+}catch(e){}
+function showPayModal(price) {
+    if(mobileNum != 'undefined'){
+        var coupons = document.getElementById('coupons')
+        if (coupons) {
+            var data = JSON.parse($('#coupons').attr('product'));
+            var sceneId = data.sceneId;
+            var isContinueSale = data.isContinueSale;
+            var activityId = data.activityId;
+            initChatParams({price, type: 'chat', sceneId, isContinueSale, activityId})
+            $('#coupons').show()
+        } else {
+            $('#payMethodModal').modal('show');
+            $('#qrcode3').empty();
+            var url = $('#qrUrl').text()
+            new QRCode(document.getElementById("qrcode3"), {
+                text: url,
+                width: 160,
+                height: 160,
+                colorDark: "#000000",
+                colorLight: "#ffffff",
+                correctLevel: QRCode.CorrectLevel.L
+            });
+        }
+        var orderSersorData = {
+            content_type:'',
+            chatID:'',
+            chat_name:'',
+            author_name:'',
+            price:0,
+            chat_state:'',
+            chat_type:'',
+            is_promotion:false,
+            promotion_type:''
+        }
+        orderSersorData.chatID = '5acb04a731c1e06e53b20174'
+        orderSersorData.chat_name = '大前端开发：前端如何开发 APP'
+        orderSersorData.author_name = '罗忠浩'
+        orderSersorData.chat_state = '10'
+        try{
+            orderSersorData.price = parseFloat('0')
+            sensors.track('order_submit_chat', orderSersorData);
+        }catch(e){}
+    }else{
+        showTelModal()
+    }
+}</script></html>

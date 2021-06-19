@@ -1,0 +1,1457 @@
+﻿
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <link rel="canonical" href="https://blog.csdn.net/youdaotech/article/details/117323516"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="renderer" content="webkit"/>
+    <meta name="force-rendering" content="webkit"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="report" content='{"pid": "blog", "spm":"1001.2101"}'>
+    <meta name="referrer" content="always">
+    <meta http-equiv="Cache-Control" content="no-siteapp" /><link rel="alternate" media="handheld" href="#" />
+    <meta name="shenma-site-verification" content="5a59773ab8077d4a62bf469ab966a63b_1497598848">
+    <meta name="applicable-device" content="pc">
+    <link  href="https://g.csdnimg.cn/static/logo/favicon32.ico"  rel="shortcut icon" type="image/x-icon" />
+    <title>从源码中来，到业务中去，React性能优化终极指南_youdaotech的博客-CSDN博客</title>
+    <script>
+      (function(){ 
+        var el = document.createElement("script"); 
+        el.src = "https://s3a.pstatp.com/toutiao/push.js?1abfa13dfe74d72d41d83c86d240de427e7cac50c51ead53b2e79d40c7952a23ed7716d05b4a0f683a653eab3e214672511de2457e74e99286eb2c33f4428830"; 
+        el.id = "ttzz"; 
+        var s = document.getElementsByTagName("script")[0]; 
+        s.parentNode.insertBefore(el, s);
+      })(window)
+    </script>
+        <meta name="keywords" content="从源码中来，到业务中去，React性能优化终极指南">
+    <meta name="description" content="前言：我们从React源码入手，结合有道精品课大前端的具体业务，运用三大原则对系统进行外科手术式的优化。同时介绍React Profiler这款工具如何帮我们定位性能瓶颈前言：我们从React源码入手，结合有道精品课大前端的具体业务，运用三大原则对系统进行外科手术式的优化。同时介绍React Profiler这款工具如何帮我们定位性能瓶颈作者/ 安增平编辑/ EinReact性能优化是在业务迭代过程中不得不考虑的问题，大部分情况是由于项目启动之初，没有充分考虑到项目的复杂度，定位该产品的用.">
+    <script src="//g.csdnimg.cn/tingyun/1.8.5/blog.js" type='text/javascript'></script>
+        <link rel="stylesheet" type="text/css" href="https://csdnimg.cn/release/blogv2/dist/pc/css/corporate_blog_enter-33ac579bb3.min.css">
+    <script src="https://csdnimg.cn/public/common/libs/jquery/jquery-1.9.1.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        var isCorporate = true;//注释删除enterprise
+        var username =  "youdaotech";
+        var skinImg = "white";
+        var blog_address = "https://blog.csdn.net/youdaotech";
+        var currentUserName = "";
+        var isOwner = false;
+        var loginUrl = "http://passport.csdn.net/account/login?from=https://blog.csdn.net/youdaotech/article/details/117323516";
+        var blogUrl = "https://blog.csdn.net/";
+        var avatar = "https://profile.csdnimg.cn/E/9/3/3_youdaotech";
+        var articleTitle = "从源码中来，到业务中去，React性能优化终极指南";
+        var articleDesc = "前言：我们从React源码入手，结合有道精品课大前端的具体业务，运用三大原则对系统进行外科手术式的优化。同时介绍React Profiler这款工具如何帮我们定位性能瓶颈前言：我们从React源码入手，结合有道精品课大前端的具体业务，运用三大原则对系统进行外科手术式的优化。同时介绍React Profiler这款工具如何帮我们定位性能瓶颈作者/ 安增平编辑/ EinReact性能优化是在业务迭代过程中不得不考虑的问题，大部分情况是由于项目启动之初，没有充分考虑到项目的复杂度，定位该产品的用.";
+        var articleTitles = "从源码中来，到业务中去，React性能优化终极指南_youdaotech的博客-CSDN博客";
+        var nickName = "有道技术团队";
+        var articleDetailUrl = "https://blog.csdn.net/youdaotech/article/details/117323516";
+        if(window.location.host.split('.').length == 3) {
+            blog_address = blogUrl + username;
+        }
+        var skinStatus = 'White';
+        var blogStaticHost = "https://csdnimg.cn/release/blogv2/"
+    </script>
+    <script src="https://g.csdnimg.cn/??fixed-sidebar/1.1.6/fixed-sidebar.js" type="text/javascript"></script>
+    <script src='//g.csdnimg.cn/common/csdn-report/report.js' type='text/javascript'></script>
+    <link rel="stylesheet" type="text/css" href="https://csdnimg.cn/public/sandalstrap/1.4/css/sandalstrap.min.css">
+    <style>
+        .MathJax, .MathJax_Message, .MathJax_Preview{
+            display: none
+        }
+    </style>
+    <script src="https://dup.baidustatic.com/js/ds.js"></script>
+</head>
+<body class="nodata company_blog" style="">
+        <script>
+            var toolbarSearchExt = '{"landingWord":[],"queryWord":"","tag":["大前端","react"],"title":"从源码中来，到业务中去，React性能优化终极指南"}';
+        </script>
+    <script src="https://g.csdnimg.cn/common/csdn-toolbar/csdn-toolbar.js" type="text/javascript"></script>
+    <script>
+    (function(){
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        }
+        else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+    </script>
+<link rel="stylesheet" href="https://csdnimg.cn/release/blogv2/dist/pc/css/blog_code-01256533b5.min.css">
+<link rel="stylesheet" href="https://csdnimg.cn/release/blogv2/dist/mdeditor/css/editerView/chart-3456820cac.css" />
+<div class="main_father clearfix d-flex justify-content-center" style="height:100%;"> 
+    <div class="container clearfix" id="mainBox">
+        <main>
+<script type="text/javascript">
+    var blogSensitiveWords = "";
+    function getQueryString(name) {   
+      var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)"); //构造一个含有目标参数的正则表达式对象  
+      var r = window.location.search.substr(1).match(reg);  //匹配目标参数
+      if( r != null ) return decodeURIComponent( r[2] ); return '';   
+    }
+    function stripscript(s){ 
+      var pattern = new RegExp("[`~!@#$^&*()=|{}':;',\\[\\].<>/?~！@#￥……&*（）——|{}【】‘；：”“'。，、？%]") 
+      var rs = ""; 
+      for (var i = 0; i < s.length; i++) { 
+        rs = rs+s.substr(i, 1).replace(pattern, ''); 
+      } 
+      return rs; 
+    }
+    var blogHotWords = stripscript(getQueryString('utm_term')).length > 1 ? stripscript(getQueryString('utm_term')) : ''
+</script>
+<div class="blog-content-box">
+    <div class="article-header-box">
+        <div class="article-header">
+            <div class="article-title-box">
+                <h1 class="title-article" id="articleContentId">从源码中来，到业务中去，React性能优化终极指南</h1>
+            </div>
+            <div class="article-info-box">
+                <div class="article-bar-top">
+                    <img class="article-type-img" src="https://csdnimg.cn/release/blogv2/dist/pc/img/original.png" alt="">
+                    <div class="bar-content">
+                    <a class="follow-nickName " href="https://blog.csdn.net/youdaotech" target="_blank" rel="noopener">有道技术团队</a>
+                    <span class="time">2021-05-27 10:41:38</span>
+                    <img class="article-read-img article-heard-img" src="https://csdnimg.cn/release/blogv2/dist/pc/img/articleReadEyes.png" alt="">
+                    <span class="read-count">668</span>
+                    <a id="blog_detail_zk_collection" class="un-collection" data-report-click='{"mod":"popu_823","spm":"1001.2101.3001.4232","ab":"new"}'>
+                        <img class="article-collect-img article-heard-img un-collect-status isdefault" style="display:inline-block" src="https://csdnimg.cn/release/blogv2/dist/pc/img/tobarCollect.png" alt="">
+                        <img class="article-collect-img article-heard-img collect-status isactive" style="display:none" src="https://csdnimg.cn/release/blogv2/dist/pc/img/tobarCollectionActive.png" alt="">
+                        <span class="name">收藏</span>
+                        <span class="get-collection">
+                            4
+                        </span>
+                    </a>
+                    </div>
+                </div>
+                <div class="blog-tags-box">
+                    <div class="tags-box artic-tag-box">
+                            <span class="label">分类专栏：</span>
+                                <a class="tag-link" href="https://blog.csdn.net/youdaotech/category_10871913.html" target="_blank" rel="noopener">有道技术干货</a>
+                            <span class="label">文章标签：</span>
+                                <a data-report-click='{"mod":"popu_626","spm":"1001.2101.3001.4223","strategy":"大前端","ab":"new"}' class="tag-link" href="https://www.csdn.net/tags/MtTaEg0sMzMzNDAtYmxvZwO0O0OO0O0O.html" target="_blank" rel="noopener">大前端</a>
+                                <a data-report-click='{"mod":"popu_626","spm":"1001.2101.3001.4223","strategy":"react","ab":"new"}' class="tag-link" href="https://www.csdn.net/tags/MtjaIg5sNzA5OS1ibG9n.html" target="_blank" rel="noopener">react</a>
+                    </div>
+                </div>
+                <div class="slide-content-box">
+                    <div class="article-copyright">
+                        <div class="creativecommons">
+                            版权声明：本文为博主原创文章，遵循<a href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener"> CC 4.0 BY-SA </a>版权协议，转载请附上原文出处链接和本声明。
+                        </div>
+                        <div class="article-source-link">
+                            本文链接：<a href="https://blog.csdn.net/youdaotech/article/details/117323516" target="_blank">https://blog.csdn.net/youdaotech/article/details/117323516</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="operating">
+                    <a class="href-article-edit slide-toggle">版权</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="csdn-shop-window-top" class="csdn-shop-window-common" style="margin-top:18px;padding:0"></div>
+    <article class="baidu_pl">
+        <div id="article_content" class="article_content clearfix">
+        <link rel="stylesheet" href="https://csdnimg.cn/release/blogv2/dist/mdeditor/css/editerView/ck_htmledit_views-b5506197d8.css">
+                <div id="content_views" class="markdown_views prism-atom-one-dark">
+                    <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+                        <path stroke-linecap="round" d="M5,0 0,2.5 5,5z" id="raphael-marker-block" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path>
+                    </svg>
+                    <blockquote> 
+ <p>前言&#xff1a;我们从React源码入手&#xff0c;结合有道精品课大前端的具体业务&#xff0c;运用三大原则对系统进行外科手术式的优化。同时介绍React Profiler这款工具如何帮我们定位性能瓶颈前言&#xff1a;我们从React源码入手&#xff0c;结合有道精品课大前端的具体业务&#xff0c;运用三大原则对系统进行外科手术式的优化。同时介绍React Profiler这款工具如何帮我们定位性能瓶颈</p> 
+</blockquote> 
+<blockquote> 
+ <p>作者/ 安增平</p> 
+</blockquote> 
+<blockquote> 
+ <p>编辑/ Ein</p> 
+</blockquote> 
+<p>React性能优化是在业务迭代过程中不得不考虑的问题&#xff0c;大部分情况是由于项目启动之初&#xff0c;没有充分考虑到项目的复杂度&#xff0c;定位该产品的用户体量及技术场景并不复杂&#xff0c;那么我们在业务前期可能并不需要考虑性能优化。但是随着业务场景的复杂化&#xff0c;性能优化就变得格外重要。</p> 
+<p>我们从React源码入手&#xff0c;结合有道精品课大前端的具体业务&#xff0c;运用优化技巧对系统进行外科手术式的优化。同时介绍一下React Profiler这款性能优化的利器是如何帮我们定位性能瓶颈的。</p> 
+<p>本文中的项目代码全部是在有道大前端组开发项目中的工作记录&#xff0c;如有不足欢迎在留言区讨论交流&#xff0c;笔芯❤</p> 
+<h1><a id="_12"></a>页面加载流程</h1> 
+<p><img src="https://img-blog.csdnimg.cn/img_convert/54001c12b7f5b7b931c708f40ef5d4d2.png" alt="" /></p> 
+<ol><li>假设用户首次打开页面&#xff08;无缓存&#xff09;&#xff0c;这个时候页面是完全空白的&#xff1b;</li><li>html 和引用的 css 加载完毕&#xff0c;浏览器进行<strong>首次渲染</strong>&#xff1b;</li><li>react、react-dom、业务代码加载完毕&#xff0c;应用第一次渲染&#xff0c;或者说<strong>首次内容渲染</strong>&#xff1b;</li><li>应用的代码开始执行&#xff0c;拉取数据、进行动态import、响应事件等等&#xff0c;完毕后页面进入<strong>可交互</strong>状态&#xff1b;</li><li>接下来 lazyload 的图片等多媒体内容开始逐渐加载完毕&#xff1b;</li><li>直到页面的其它资源&#xff08;如错误上报组件、打点上报组件等&#xff09;加载完毕&#xff0c;整个页面加载完成。</li></ol> 
+<p><strong>我们主要来针对React进行剖析</strong>&#xff1a;</p> 
+<p>React 针对渲染性能优化的三个方向&#xff0c;也适用于其他软件开发领域&#xff0c;这三个方向分别是:</p> 
+<ol><li><strong>减少计算的量</strong>&#xff1a;React 中就是减少渲染的节点或通过索引减少渲染复杂度&#xff1b;</li><li><strong>利用缓存</strong>&#xff1a;React 中就是避免重新渲染&#xff08;利用 memo 方式来避免组件重新渲染&#xff09;&#xff1b;</li><li><strong>精确重新计算的范围</strong>&#xff1a;React 中就是绑定组件和状态关系, 精确判断更新的’时机’和’范围’. 只重新渲染变更的组件&#xff08;减少渲染范围&#xff09;。</li></ol> 
+<p>如何做到这三点呢&#xff1f;我们从React本身的特性入手分析。</p> 
+<h1><a id="React__31"></a>React 工作流</h1> 
+<p>React 是声明式 UI 库&#xff0c;负责将 State 转换为页面结构&#xff08;虚拟 DOM 结构&#xff09;后&#xff0c;再转换成真实 DOM 结构&#xff0c;交给浏览器渲染。State 发生改变时&#xff0c;React 会先进行Reconciliation&#xff0c;结束后立刻进入Commit阶段&#xff0c;Commit结束后&#xff0c;新 State 对应的页面才被展示出来。</p> 
+<p><img src="https://img-blog.csdnimg.cn/img_convert/5bcb1666d12306ba550c593625877a10.png" alt="" /></p> 
+<p>React 的<strong>Reconciliation</strong>需要做两件事&#xff1a;</p> 
+<ol><li>计算出目标 State 对应的虚拟 DOM 结构。</li><li>寻找「将虚拟 DOM 结构修改为目标虚拟 DOM 结构」的最优方案。</li></ol> 
+<p>React 按照深度优先遍历虚拟 DOM 树的方式&#xff0c;在一个虚拟 DOM 上完成Render和Diff的计算后&#xff0c;再计算下一个虚拟 DOM。Diff 算法会记录虚拟 DOM 的更新方式&#xff08;如&#xff1a;Update、Mount、Unmount&#xff09;&#xff0c;为Commit做准备。</p> 
+<p>React 的<strong>Commit</strong>也需要做两件事&#xff1a;</p> 
+<ol><li>将Reconciliation结果应用到 DOM 中。</li><li>调用暴露的hooks如&#xff1a;componentDidUpdate、useLayoutEffect 等。</li></ol> 
+<p><strong>下面我们将针对三个优化方向进行精准分析。</strong></p> 
+<h1><a id="_50"></a>减少计算的量</h1> 
+<p>关于以上<strong>Reconciliation</strong>与<strong>Commit</strong>两个阶段的优化办法&#xff0c;我在实现的过程中遵循<strong>减少计算量</strong>的方法进行优化&#xff08;<strong>列表项使用 key 属性</strong>)该过程是优化的重点&#xff0c;React 内部的 Fiber 结构和并发模式也是在减少该过程的耗时阻塞。对于<strong>Commit</strong>在执行hooks时&#xff0c;开发者应保证hooks中的代码尽量轻量&#xff0c;避免耗时阻塞&#xff0c;同时应避免在 <strong>CDM、CDU</strong>周期中更新组件。</p> 
+<p><strong>列表项使用 key 属性</strong></p> 
+<blockquote> 
+ <p>特定框架中&#xff0c;提示也做的十分友好。假如你没有在列表中添加key属性&#xff0c;控制台会为你展示一片大红</p> 
+</blockquote> 
+<p><img src="https://img-blog.csdnimg.cn/img_convert/83036110256264a3e3b22831b318d795.png" alt="" /></p> 
+<p>系统会时刻提醒你记得加Key哦~~</p> 
+<h2><a id="Render__61"></a>优化Render 过程</h2> 
+<p>Render 过程&#xff1a;即Reconciliation中计算出目标 State 对应的虚拟 DOM 结构这一阶段 。</p> 
+<p>触发 React 组件的 Render 过程目前有三种方式&#xff1a;</p> 
+<ol><li>forceUpdate、</li><li>State 更新、</li><li>父组件 Render 触发子组件 Render 过程。</li></ol> 
+<h3><a id="_70"></a>优化技巧</h3> 
+<h4><a id="PureComponentReactmemo_71"></a>PureComponent、React.memo</h4> 
+<p>在 React 工作流中&#xff0c;如果只有父组件发生状态更新&#xff0c;即使父组件传给子组件的所有 Props 都没有修改&#xff0c;也会引起子组件的 Render 过程。</p> 
+<p>从 React 的声明式设计理念来看&#xff0c;如果子组件的 Props 和 State 都没有改变&#xff0c;那么其生成的 DOM 结构和副作用也不应该发生改变。当子组件符合声明式设计理念时&#xff0c;就可以忽略子组件本次的 Render 过程。</p> 
+<p>PureComponent 和 React.memo 就是应对这种场景的&#xff0c;PureComponent 是对类组件的 Props 和 State 进行浅比较&#xff0c;React.memo 是对函数组件的 Props 进行浅比较。</p> 
+<h5><a id="useMemouseCallback__Props__78"></a>useMemo、useCallback 实现稳定的 Props 值</h5> 
+<p>如果传给子组件的派生状态或函数&#xff0c;每次都是新的引用&#xff0c;那么 PureComponent 和 React.memo 优化就会失效。所以需要使用 useMemo 和 useCallback 来生成稳定值&#xff0c;并结合 PureComponent 或 React.memo 避免子组件重新 Render。</p> 
+<h5><a id="useMemo__Render__81"></a>useMemo 减少组件 Render 过程耗时</h5> 
+<p>useMemo 是一种缓存机制提速&#xff0c;当它的依赖未发生改变时&#xff0c;就不会触发重新计算。一般用在「计算派生状态的代码」非常耗时的场景中&#xff0c;如&#xff1a;遍历大列表做统计信息。</p> 
+<p><img src="https://img-blog.csdnimg.cn/img_convert/b13687f84df67564f720fc2c92c2adf3.png" alt="大列表渲染" /></p> 
+<p>显然useMemo的作用是缓存昂贵的计算(避免在每次渲染时都进行高开销的计算)&#xff0c;在业务中使用它去控制变量来更新表格</p> 
+<h4><a id="shouldComponentUpdate_87"></a>shouldComponentUpdate</h4> 
+<p>在类组件中&#xff0c;例如要往数组中添加一项数据时&#xff0c;当时的代码很可能是 state.push(item)&#xff0c;而不是 const newState &#61; […state, item]。</p> 
+<p><img src="https://img-blog.csdnimg.cn/img_convert/b23385d1d77bbdda6fd5373fa034907d.png" alt="" /></p> 
+<p>在此背景下&#xff0c;当时的开发者经常使用</p> 
+<p>shouldComponentUpdate 来深比较 Props&#xff0c;只在 Props 有修改才执行组件的 Render 过程。如今由于数据不可变性和函数组件的流行&#xff0c;这样的优化场景已经不会再出现了。</p> 
+<p>为了贴合shouldComponentUpdate的思想&#xff1a;给子组件传props的时候一定只传其需要的而并非一股脑全部传入&#xff1a;</p> 
+<p><img src="https://img-blog.csdnimg.cn/img_convert/e7be9fafd1513c2748467a489f852664.png" alt="" /></p> 
+<p>传入到子组件的参数一定保证其在自组件中被使用到。</p> 
+<h2><a id="_Render__101"></a>批量更新&#xff0c;减少 Render 次数</h2> 
+<p>在 React 管理的事件回调和生命周期中&#xff0c;setState 是异步的&#xff0c;而其他时候 setState 都是同步的。这个问题根本原因就是 React 在自己管理的事件回调和生命周期中&#xff0c;对于 setState 是批量更新的&#xff0c;而在其他时候是立即更新的。</p> 
+<p>批量更新 setState 时&#xff0c;多次执行 setState 只会触发一次 Render 过程。相反在立即更新 setState 时&#xff0c;每次 setState 都会触发一次 Render 过程&#xff0c;就存在性能影响。</p> 
+<p>假设有如下组件代码&#xff0c;该组件在 getData() 的 API 请求结果返回后&#xff0c;分别更新了两个 State 。</p> 
+<p><img src="https://img-blog.csdnimg.cn/img_convert/e89ce686f1abdb5e8a388cabf17d7ea7.png" alt="" /></p> 
+<p>该组件会在 setList(data.list) 后触发组件的 Render 过程&#xff0c;然后在 setInfo(data.info) 后再次触发 Render 过程&#xff0c;造成性能损失。那我们该如何解决呢&#xff1a;</p> 
+<ol><li>将多个 State 合并为单个 State。例如 useState({ list: null, info: null }) 替代 list 和 info 两个 State。</li><li>使用 React 官方提供的 unstable_batchedUpdates 方法&#xff0c;将多次 setState 封装到 unstable_batchedUpdates 回调中。</li></ol> 
+<p>修改后代码如下&#xff1a;</p> 
+<p><img src="https://img-blog.csdnimg.cn/img_convert/0f7cfd285a9e7662ae217fadc4d7b9c3.png" alt="" /></p> 
+<h1><a id="_119"></a>精细化渲染阶段</h1> 
+<h2><a id="_120"></a>按优先级更新&#xff0c;及时响应用户</h2> 
+<p>优先级更新是批量更新的逆向操作&#xff0c;其思想是&#xff1a;优先响应用户行为&#xff0c;再完成耗时操作。常见的场景是&#xff1a;页面弹出一个 Modal&#xff0c;当用户点击 Modal 中的确定按钮后&#xff0c;代码将执行两个操作&#xff1a;</p> 
+<ol><li>关闭 Modal。</li><li>页面处理 Modal 传回的数据并展示给用户。</li></ol> 
+<p>当操作2需要执行500ms时&#xff0c;用户会明显感觉到从点击按钮到 Modal 被关闭之间的延迟。</p> 
+<p>以下为一般的实现方式&#xff0c;将 slowHandle 函数作为用户点击按钮的回调函数。</p> 
+<p><img src="https://img-blog.csdnimg.cn/img_convert/41a5c8ecd695319397cd150b5390a194.png" alt="" /></p> 
+<p>slowHandle() 执行过程耗时长&#xff0c;用户点击按钮后会明显感觉到页面卡顿。</p> 
+<p>如果让页面优先隐藏输入框&#xff0c;用户便能立刻感知到页面更新&#xff0c;不会有卡顿感。</p> 
+<p>实现优先级更新的要点是将耗时任务移动到下一个宏任务中执行&#xff0c;优先响应用户行为。</p> 
+<p>例如在该例中&#xff0c;将 setNumbers 移动到 setTimeout 的回调中&#xff0c;用户点击按钮后便能立即看到输入框被隐藏&#xff0c;不会感知到页面卡顿。mhd项目中优化后的代码如下&#xff1a;</p> 
+<p><img src="https://img-blog.csdnimg.cn/img_convert/23cfebc1409589c2fa6cb64c8d99e136.png" alt="" /></p> 
+<h2><a id="_Render__142"></a>发布者订阅者跳过中间组件 Render 过程</h2> 
+<p>React 推荐将公共数据放在所有「需要该状态的组件」的公共祖先上&#xff0c;但将状态放在公共祖先上后&#xff0c;该状态就需要层层向下传递&#xff0c;直到传递给使用该状态的组件为止。</p> 
+<p><img src="https://img-blog.csdnimg.cn/img_convert/08cca2818e10fb7b118b24560617112b.png" alt="" /></p> 
+<p>每次状态的更新都会涉及中间组件的 Render 过程&#xff0c;但中间组件并不关心该状态&#xff0c;它的 Render 过程只负责将该状态再传给子组件。在这种场景下可以将状态用发布者订阅者模式维护&#xff0c;只有关心该状态的组件才去订阅该状态&#xff0c;不再需要中间组件传递该状态。</p> 
+<p>当状态更新时&#xff0c;发布者发布数据更新消息&#xff0c;只有订阅者组件才会触发 Render 过程&#xff0c;中间组件不再执行 Render 过程。</p> 
+<p>只要是发布者订阅者模式的库&#xff0c;都可以使用useContext进行该优化。比如&#xff1a;redux、use-global-state、React.createContext 等。</p> 
+<p>业务代码中的使用如下&#xff1a;</p> 
+<p><img src="https://img-blog.csdnimg.cn/img_convert/11333f107f7ac122bcd175c25aa21986.png" alt="" /></p> 
+<p>从图中可看出&#xff0c;优化后只有使用了公共状态的组件renderTable才会发生更新&#xff0c;由此可见这样做可以大大减少父组件和 其他renderSon… 组件的 Render 次数(减少叶子节点的重渲染)。</p> 
+<h2><a id="useMemo__DOM__Render__158"></a>useMemo 返回虚拟 DOM 可跳过该组件 Render 过程</h2> 
+<p>利用 useMemo 可以缓存计算结果的特点&#xff0c;如果 useMemo 返回的是组件的虚拟 DOM&#xff0c;则将在 useMemo 依赖不变时&#xff0c;跳过组件的 Render 阶段。</p> 
+<p>该方式与 React.memo 类似&#xff0c;但与 React.memo 相比有以下优势&#xff1a;</p> 
+<ol><li>更方便。React.memo 需要对组件进行一次包装&#xff0c;生成新的组件。而 useMemo 只需在存在性能瓶颈的地方使用&#xff0c;不用修改组件。</li><li>更灵活。useMemo 不用考虑组件的所有 Props&#xff0c;而只需考虑当前场景中用到的值&#xff0c;也可使用 useDeepCompareMemo 对用到的值进行深比较。</li></ol> 
+<p>该例子中&#xff0c;父组件状态更新后&#xff0c;不使用 useMemo 的子组件会执行 Render 过程&#xff0c;而使用 useMemo 的子组件会按需执行更新。业务代码中的使用方法&#xff1a;</p> 
+<p><img src="https://img-blog.csdnimg.cn/img_convert/e39c328f208371ff1e449825cca5cf37.png" alt="" /></p> 
+<h1><a id="_171"></a>精确判断更新的’时机’和’范围’</h1> 
+<h2><a id="debouncethrottle__172"></a>debounce、throttle 优化频繁触发的回调</h2> 
+<p>在搜索组件中&#xff0c;当 input 中内容修改时就触发搜索回调。当组件能很快处理搜索结果时&#xff0c;用户不会感觉到输入延迟。</p> 
+<p>但实际场景中&#xff0c;中后台应用的列表页非常复杂&#xff0c;组件对搜索结果的 Render 会造成页面卡顿&#xff0c;明显影响到用户的输入体验。</p> 
+<p>在搜索场景中一般使用 useDebounce&#43; useEffect 的方式获取数据。</p> 
+<p><img src="https://img-blog.csdnimg.cn/img_convert/92fc1793e042cd5f1db96a22af4b6118.png" alt="" /></p> 
+<p>在搜索场景中&#xff0c;只需响应用户最后一次输入&#xff0c;无需响应用户的中间输入值&#xff0c;debounce 更适合。而 throttle 更适合需要实时响应用户的场景中更适合&#xff0c;如通过拖拽调整尺寸或通过拖拽进行放大缩小&#xff08;如&#xff1a;window 的 resize 事件&#xff09;。</p> 
+<h2><a id="_183"></a>懒加载</h2> 
+<p>在 SPA 中&#xff0c;懒加载优化一般用于从一个路由跳转到另一个路由。</p> 
+<p>还可用于用户操作后才展示的复杂组件&#xff0c;比如点击按钮后展示的弹窗模块&#xff08;大数据量弹窗&#xff09;。</p> 
+<p>在这些场景下&#xff0c;结合 Code Split 收益较高。懒加载的实现是通过 Webpack 的动态导入和 React.lazy 方法。</p> 
+<p>实现懒加载优化时&#xff0c;不仅要考虑加载态&#xff0c;还需要对加载失败进行容错处理。</p> 
+<p><img src="https://img-blog.csdnimg.cn/img_convert/87e741eedf3ff4d66cb86c54c3174dcf.png" alt="" /></p> 
+<h2><a id="_194"></a>懒渲染</h2> 
+<p>懒渲染指当组件进入或即将进入可视区域时才渲染组件。常见的组件 Modal/Drawer 等&#xff0c;当 visible 属性为 true 时才渲染组件内容&#xff0c;也可以认为是懒渲染的一种实现。懒渲染的使用场景有&#xff1a;</p> 
+<ol><li>页面中出现多次的组件&#xff0c;且组件渲染费时、或者组件中含有接口请求。如果渲染多个带有请求的组件&#xff0c;由于浏览器限制了同域名下并发请求的数量&#xff0c;就可能会阻塞可见区域内的其他组件中的请求&#xff0c;导致可见区域的内容被延迟展示。</li><li>需用户操作后才展示的组件。这点和懒加载一样&#xff0c;但懒渲染不用动态加载模块&#xff0c;不用考虑加载态和加载失败的兜底处理&#xff0c;实现上更简单。</li></ol> 
+<p>懒渲染的实现中判断组件是否出现在可视区域内借助react-visibility-observer依赖&#xff1a;</p> 
+<p><img src="https://img-blog.csdnimg.cn/img_convert/e3e3fe7f29786e1ba81df2fabdba228b.png" alt="" /></p> 
+<h2><a id="_204"></a>虚拟列表</h2> 
+<p>虚拟列表是懒渲染的一种特殊场景。虚拟列表的组件有 react-window和 react-virtualized&#xff0c;它们都是同一个作者开发的。</p> 
+<p>react-window 是 react-virtualized 的轻量版本&#xff0c;其 API 和文档更加友好。推荐使用 react-window&#xff0c;只需要计算每项的高度即可&#xff1a;</p> 
+<p><img src="https://img-blog.csdnimg.cn/img_convert/31893c163051d8876fcff4d7272e39b8.png" alt="" /></p> 
+<p>如果每项的高度是变化的&#xff0c;可给 itemSize 参数传一个函数。</p> 
+<p>所以在开发过程中&#xff0c;遇到接口返回的是所有数据时&#xff0c;需提前预防这类会有展示的性能瓶颈的需求时&#xff0c;推荐使用虚拟列表优化。使用示例&#xff1a;<a href="https://react-window.vercel.app/#/examples/list/fixed-size" title="react-window​react-window.vercel.app">react-window​react-window.vercel.app</a></p> 
+<h2><a id="_DOM__Render__215"></a>动画库直接修改 DOM 属性&#xff0c;跳过组件 Render 阶段</h2> 
+<p>这个优化在业务中应该用不上&#xff0c;但还是非常值得学习的&#xff0c;将来可以应用到组件库中。</p> 
+<p>参考 react-spring 的动画实现&#xff0c;当一个动画启动后&#xff0c;每次动画属性改变不会引起组件重新 Render &#xff0c;而是直接修改了 dom 上相关属性值&#xff1a;</p> 
+<p><img src="https://img-blog.csdnimg.cn/img_convert/d525c4e3d6ee991645a6e9efe91b5f20.png" alt="" /></p> 
+<h2><a id="_didMountdidUpdate__State_222"></a>避免在 didMount、didUpdate 中更新组件 State</h2> 
+<p>这个技巧不仅仅适用于 didMount、didUpdate&#xff0c;还包括 willUnmount、useLayoutEffect 和特殊场景下的 useEffect&#xff08;当父组件的 cDU/cDM 触发时&#xff0c;子组件的 useEffect 会同步调用&#xff09;&#xff0c;本文为叙述方便将他们统称为「提交阶段钩子」。</p> 
+<p><strong>React 工作流commit</strong>阶段的第二步就是执行提交阶段钩子&#xff0c;它们的执行会阻塞浏览器更新页面。</p> 
+<p>如果在提交阶段钩子函数中更新组件 State&#xff0c;会再次触发组件的更新流程&#xff0c;造成两倍耗时。一般在提交阶段的钩子中更新组件状态的场景有&#xff1a;</p> 
+<ol><li>计算并更新组件的派生状态&#xff08;Derived State&#xff09;。在该场景中&#xff0c;类组件应使用 <strong>getDerivedStateFromProps</strong> 钩子方法代替&#xff0c;函数组件应使用函数调用时执行 <strong>setState</strong> 的方式代替。使用上面两种方式后&#xff0c;React 会将新状态和派生状态在一次更新内完成。</li><li>根据 DOM 信息&#xff0c;修改组件状态。在该场景中&#xff0c;除非想办法不依赖 DOM 信息&#xff0c;否则两次更新过程是少不了的&#xff0c;就只能用其他优化技巧了。</li></ol> 
+<p>use-swr 的源码就使用了该优化技巧。当某个接口存在缓存数据时&#xff0c;use-swr 会先使用该接口的缓存数据&#xff0c;并在 requestIdleCallback 时再重新发起请求&#xff0c;获取最新数据。模拟一个swr&#xff1a;</p> 
+<p>[外链图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-IqSTlxbG-1622083230967)(https://oscimg.oschina.net/oscnet/up-e3d6a721a15a3c031398737fa555c5dbe70.png)]</p> 
+<ol><li>它的第二个参数 deps&#xff0c;是为了在请求带有参数时&#xff0c;如果参数改变了就重新发起请求。</li><li>暴露给调用方的 fetch 函数&#xff0c;可以应对主动刷新的场景&#xff0c;比如页面上的刷新按钮。</li></ol> 
+<p>如果 use-swr 不做该优化的话&#xff0c;就会在 useLayoutEffect 中触发重新验证并设置 isValidating 状态为 true·&#xff0c;引起组件的更新流程&#xff0c;造成性能损失。</p> 
+<h1><a id="React_Profiler_242"></a>工具介绍——React Profiler</h1> 
+<h2><a id="React_Profiler__Render__243"></a>React Profiler 定位 Render 过程瓶颈</h2> 
+<p>React Profiler 是 React 官方提供的性能审查工具&#xff0c;本文只介绍笔者的使用心得&#xff0c;详细的使用手册请移步官网文档。</p> 
+<p>Note&#xff1a;react-dom 16.5&#43; 在 DEV 模式下才支持 Profiling&#xff0c;同时生产环境下也可以通过一个 profiling bundle react-dom/profiling 来支持。请在 fb.me/react-profi… 上查看如何使用这个 bundle。</p> 
+<p>“Profiler” 的面板在刚开始的时候是空的。你可以点击 record 按钮来启动 profile&#xff1a;</p> 
+<p><img src="https://img-blog.csdnimg.cn/img_convert/4c7694d5e0d8dcd2adde2210bf0eae3c.png" alt="" /></p> 
+<h2><a id="Profiler__Render__252"></a>Profiler 只记录了 Render 过程耗时</h2> 
+<p>不要通过 Profiler 定位非 Render 过程的性能瓶颈问题</p> 
+<p>通过 React Profiler&#xff0c;开发者可以查看组件 Render 过程耗时&#xff0c;但无法知晓提交阶段的耗时。</p> 
+<p>尽管 Profiler 面板中有 Committed at 字段&#xff0c;但这个字段是相对于录制开始时间&#xff0c;根本没有意义。</p> 
+<p>通过在 React v16 版本上进行实验&#xff0c;同时开启 Chrome 的 Performance 和 React Profiler 统计。</p> 
+<p>如下图&#xff0c;在 Performance 面板中&#xff0c;Reconciliation和Commit阶段耗时分别为 642ms 和 300ms&#xff0c;而 Profiler 面板中只显示了 642ms&#xff1a;</p> 
+<p>[外链图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-iatTJCEj-1622083230969)(https://oscimg.oschina.net/oscnet/up-ae3c815e9b3e80c2b42ed83a2bdfd99e38b.png)]</p> 
+<h2><a id="_265"></a>开启「记录组件更新原因」</h2> 
+<p>点击面板上的齿轮&#xff0c;然后勾选「Record why each component rendered while profiling.」&#xff0c;如下图&#xff1a;</p> 
+<p><img src="https://img-blog.csdnimg.cn/img_convert/bfa7affeb9ce2e7b4cf6d2d93b19f7b2.png" alt="" /></p> 
+<p>然后点击面板中的虚拟 DOM 节点&#xff0c;右侧便会展示该组件重新 Render 的原因。</p> 
+<h2><a id="_Render__272"></a>定位产生本次 Render 过程原因</h2> 
+<p>由于 React 的批量更新&#xff08;Batch Update&#xff09;机制&#xff0c;产生一次 Render 过程可能涉及到很多个组件的状态更新。那么如何定位是哪些组件状态更新导致的呢&#xff1f;</p> 
+<p><img src="https://img-blog.csdnimg.cn/img_convert/a03b706192b4231e55da8f933e9ada1c.png" alt="" /></p> 
+<p>在 Profiler 面板左侧的虚拟 DOM 树结构中&#xff0c;从上到下审查每个发生了渲染的&#xff08;不会灰色的&#xff09;组件。</p> 
+<p>如果组件是由于 State 或 Hook 改变触发了 Render 过程&#xff0c;那它就是我们要找的组件&#xff0c;如下图&#xff1a;</p> 
+<p><img src="https://img-blog.csdnimg.cn/img_convert/64740eefe2f3caf0084bf7fe1a837506.png" alt="" /></p> 
+<h1><a id="_283"></a>站在巨人的肩膀上</h1> 
+<p><a href="https://react.docschina.org/docs/optimizing-performance.html" title="Optimizing Performance React">Optimizing Performance React</a> 官方文档&#xff0c;最好的教程, 利用好 React 的性能分析工具。</p> 
+<p><a href="https://medium.com/&#64;paularmstrong/twitter-lite-and-high-performance-react-progressive-web-apps-at-scale-d28a00e780a3" title="Twitter Lite and High Performance React Progressive Web Apps at Scale ">Twitter Lite and High Performance React Progressive Web Apps at Scale </a>看看 Twitter 如何优化的。</p> 
+<p><strong>-END-</strong></p>
+                </div>
+                <link href="https://csdnimg.cn/release/blogv2/dist/mdeditor/css/editerView/markdown_views-d7a94ec6ab.css" rel="stylesheet">
+                <link href="https://csdnimg.cn/release/blogv2/dist/mdeditor/css/style-f1c5feb645.css" rel="stylesheet">
+        </div>
+    </article>
+</div>
+            <div id="csdn-shop-window" class="csdn-shop-window-common"></div>
+<div class="more-toolbox" id="toolBarBox">
+    <span id="fixedBar"></span>
+    <div class="left-toolbox">
+        <ul class="toolbox-list ">
+            <li class="tool-item tool-item-size tool-active is-like" id="is-like"><a>
+            <img style="display:none;" id="is-like-imgactive-animation-like" class="animation-dom active-animation" src="https://csdnimg.cn/release/blogv2/dist/pc/img/tobarThumbUpactive.png" alt="">
+            <img class="isactive" style="display:none" id="is-like-imgactive" src="https://csdnimg.cn/release/blogv2/dist/pc/img/tobarThumbUpactive.png" alt="">
+            <img class="isdefault" style="display:block" id="is-like-img" src="https://csdnimg.cn/release/blogv2/dist/pc/img/tobarThumbUp.png" alt="">   
+            <span class="name" id="is-like-span">点赞</span>
+            <span id="spanCount" class="count">
+                    3
+            </span>
+            </a></li>
+            <li class="tool-item tool-item-size tool-active tool-item-comment">
+                <a href="#commentBox">
+                    <img class="isdefault" src="https://csdnimg.cn/release/blogv2/dist/pc/img/tobarComment.png" alt="">
+                    <img class="isactive" src="https://csdnimg.cn/release/blogv2/dist/pc/img/tobarCommentactive.png" style="display:none;" alt="">
+                    <span class="name">评论</span>
+                    <span class="count">
+                    </span>
+                </a>
+            </li>
+            <li class="tool-item tool-item-size tool-active tool-QRcode" id="tool-share">
+                <a href="javascript:;" data-report-click='{"mod":"1582594662_002","spm":"1001.2101.3001.4129","ab":"new"}'>
+                    <img class="isdefault" src="https://csdnimg.cn/release/blogv2/dist/pc/img/tobarShare.png" alt="">
+                    <img class="isactive" src="https://csdnimg.cn/release/blogv2/dist/pc/img/tobarShareactive.png" style="display:none;" alt="">
+                    <span class="name">分享</span>
+                </a>
+                <div class="QRcode" id="tool-QRcode" style="left:-92%;">
+                    <span id="QRcode-close">x</span>
+                    <p class="title">
+                    海报分享
+                    </p>
+                    <div id='shareCode'></div>
+                    <p>
+                    扫一扫，分享海报
+                    </p>
+                </div>
+            </li>
+            <li class="tool-item tool-item-size tool-active is-collection ">
+                <a href="javascript:;" data-report-click='{"mod":"popu_824","spm":"1001.2101.3001.4130","ab":"new"}'>
+                    <img style="display:none" id="is-collection-img-collection" class="animation-dom active-animation" src="https://csdnimg.cn/release/blogv2/dist/pc/img/tobarCollectionActive.png" alt="">
+                    <img class="isdefault" id="is-collection-img" style="display:block" src="https://csdnimg.cn/release/blogv2/dist/pc/img/tobarCollect.png" alt="">
+                    <img class="isactive" id="is-collection-imgactive" style="display:none" src="https://csdnimg.cn/release/blogv2/dist/pc/img/tobarCollectionActive.png" alt="">
+                    <span class="name" id="is-collection">收藏</span>
+                    <span class="count get-collection" id="get-collection">
+                        4
+                    </span>
+                </a>
+            </li>
+            <li class="tool-item tool-item-size tool-active tool-more">
+              <a class="article-report">
+                <img class="isdefault" src="https://csdnimg.cn/release/blogv2/dist/pc/img/tobarReport.png" alt="">
+                <img class="isactive" src="https://csdnimg.cn/release/blogv2/dist/pc/img/tobarReportactive.png" style="display:none;" alt="">
+                <span class="name">举报</span>
+              </a>
+            </li>
+            <li class="tool-item">
+                    <a class="tool-attend tool-bt-button tool-bt-attend" href="javascript:;" data-report-view='{"mod":"1592215036_002","spm":"1001.2101.3001.4232","extend1":"关注"}'>关注</a>
+                <a class="tool-item-follow active-animation" style="display:none;">关注</a>
+            </li>
+            <li class="tool-item">
+                    <p class="company active" id="health-companies" href="javascript:;" >一键三连</p>
+            </li>
+        </ul>
+    </div>  
+</div>
+<script type=text/javascript crossorigin src="https://csdnimg.cn/release/phoenix/production/qrcode-7c90a92189.min.js"></script>
+<script src="//g.csdnimg.cn/??sharewx/1.2.1/sharewx.js" type="text/javascript"></script>
+<script type="text/javascript" crossorigin src="https://g.csdnimg.cn/user-login/3.0.1/user-login.js"></script>
+<script type="text/javascript" crossorigin src="https://g.csdnimg.cn/collection-box/2.0.6/collection-box.js"></script>
+                <div id="dmp_ad_58" style="width:100%;overflow-x:hidden"><div id="kp_box_58" data-pid="58"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-format="fluid"
+     data-ad-layout-key="-gi-21+3s-18+2p"
+     data-ad-client="ca-pub-1076724771190722"
+     data-ad-slot="5869798804"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script><img class="pre-img-lasy" data-src="https://kunyu.csdn.net/1.png?p=58&a=3778&c=0&k=&spm=1001.2101.3001.5002&d=1&t=3&u=6b1d071bad7a4dc5992279e0550749e3" style="display: block;width: 0px;height: 0px;"></div></div>
+<a id="commentBox" name="commentBox"></a>
+<div class="comment-box">
+	<div class="comment-edit-box d-flex">
+		<a id="commentsedit"></a>
+		<div class="user-img">
+			<a href="javascript:void(0);" >
+				<img class="show_loginbox" src="https://g.csdnimg.cn/static/user-img/anonymous-User-img.png">
+			</a>
+		</div>
+		<form id="commentform">
+			<img class="comment-sofa-flag" src="https://csdnimg.cn/release/blogv2/dist/pc/img/commentFlag@2x.png">
+      <textarea class="comment-content" name="comment_content" id="comment_content" placeholder="优质评论可以帮助作者获得更高权重" maxlength="1000"></textarea>
+			<div class="comment-emoticon"><img class="comment-emoticon-img" data-url="https://csdnimg.cn/release/blogv2/dist/pc/img/" src="https://csdnimg.cn/release/blogv2/dist/pc/img/emoticon.png" alt="表情包"></div> 
+      <span class="comment-emoticon-tip">插入表情</span>
+      <div class="comment-emoticon-box">
+        <div class="comment-emoticon-img-box">
+            <img class="emoticon-monkey-img" data-emoticon="[face]emoji:001.png[/face]" src="https://g.csdnimg.cn/static/face/emoji/001.png">
+            <img class="emoticon-monkey-img" data-emoticon="[face]emoji:002.png[/face]" src="https://g.csdnimg.cn/static/face/emoji/002.png">
+            <img class="emoticon-monkey-img" data-emoticon="[face]emoji:003.png[/face]" src="https://g.csdnimg.cn/static/face/emoji/003.png">
+            <img class="emoticon-monkey-img" data-emoticon="[face]emoji:004.png[/face]" src="https://g.csdnimg.cn/static/face/emoji/004.png">
+            <img class="emoticon-monkey-img" data-emoticon="[face]emoji:005.png[/face]" src="https://g.csdnimg.cn/static/face/emoji/005.png">
+            <img class="emoticon-monkey-img" data-emoticon="[face]emoji:006.png[/face]" src="https://g.csdnimg.cn/static/face/emoji/006.png">
+            <img class="emoticon-monkey-img" data-emoticon="[face]emoji:007.png[/face]" src="https://g.csdnimg.cn/static/face/emoji/007.png">
+            <img class="emoticon-monkey-img" data-emoticon="[face]emoji:008.png[/face]" src="https://g.csdnimg.cn/static/face/emoji/008.png">
+            <img class="emoticon-monkey-img" data-emoticon="[face]emoji:009.png[/face]" src="https://g.csdnimg.cn/static/face/emoji/009.png">
+            <img class="emoticon-monkey-img" data-emoticon="[face]emoji:010.png[/face]" src="https://g.csdnimg.cn/static/face/emoji/010.png">
+            <img class="emoticon-monkey-img" data-emoticon="[face]emoji:011.png[/face]" src="https://g.csdnimg.cn/static/face/emoji/011.png">
+            <img class="emoticon-monkey-img" data-emoticon="[face]emoji:012.png[/face]" src="https://g.csdnimg.cn/static/face/emoji/012.png">
+            <img class="emoticon-monkey-img" data-emoticon="[face]emoji:013.png[/face]" src="https://g.csdnimg.cn/static/face/emoji/013.png">
+            <img class="emoticon-monkey-img" data-emoticon="[face]emoji:014.png[/face]" src="https://g.csdnimg.cn/static/face/emoji/014.png">
+            <img class="emoticon-monkey-img" data-emoticon="[face]emoji:015.png[/face]" src="https://g.csdnimg.cn/static/face/emoji/015.png">
+            <img class="emoticon-monkey-img" data-emoticon="[face]emoji:016.png[/face]" src="https://g.csdnimg.cn/static/face/emoji/016.png">
+            <img class="emoticon-monkey-img" data-emoticon="[face]emoji:017.png[/face]" src="https://g.csdnimg.cn/static/face/emoji/017.png">
+            <img class="emoticon-monkey-img" data-emoticon="[face]emoji:018.png[/face]" src="https://g.csdnimg.cn/static/face/emoji/018.png">
+            <img class="emoticon-monkey-img" data-emoticon="[face]emoji:019.png[/face]" src="https://g.csdnimg.cn/static/face/emoji/019.png">
+            <img class="emoticon-monkey-img" data-emoticon="[face]emoji:020.png[/face]" src="https://g.csdnimg.cn/static/face/emoji/020.png">
+            <img class="emoticon-monkey-img" data-emoticon="[face]emoji:021.png[/face]" src="https://g.csdnimg.cn/static/face/emoji/021.png">
+            <img class="emoticon-monkey-img" data-emoticon="[face]emoji:022.png[/face]" src="https://g.csdnimg.cn/static/face/emoji/022.png">
+            <img class="emoticon-monkey-img" data-emoticon="[face]emoji:023.png[/face]" src="https://g.csdnimg.cn/static/face/emoji/023.png">
+            <img class="emoticon-monkey-img" data-emoticon="[face]emoji:024.png[/face]" src="https://g.csdnimg.cn/static/face/emoji/024.png">
+            <img class="emoticon-monkey-img" data-emoticon="[face]emoji:025.png[/face]" src="https://g.csdnimg.cn/static/face/emoji/025.png">
+            <img class="emoticon-monkey-img" data-emoticon="[face]emoji:026.png[/face]" src="https://g.csdnimg.cn/static/face/emoji/026.png">
+            <img class="emoticon-monkey-img" data-emoticon="[face]emoji:027.png[/face]" src="https://g.csdnimg.cn/static/face/emoji/027.png">
+            <img class="emoticon-monkey-img" data-emoticon="[face]emoji:028.png[/face]" src="https://g.csdnimg.cn/static/face/emoji/028.png">
+            <img class="emoticon-monkey-img" data-emoticon="[face]emoji:029.png[/face]" src="https://g.csdnimg.cn/static/face/emoji/029.png">
+            <img class="emoticon-monkey-img" data-emoticon="[face]emoji:030.png[/face]" src="https://g.csdnimg.cn/static/face/emoji/030.png">
+            <img class="emoticon-monkey-img" data-emoticon="[face]emoji:031.png[/face]" src="https://g.csdnimg.cn/static/face/emoji/031.png">
+            <img class="emoticon-monkey-img" data-emoticon="[face]emoji:032.png[/face]" src="https://g.csdnimg.cn/static/face/emoji/032.png">
+            <img class="emoticon-monkey-img" data-emoticon="[face]emoji:033.png[/face]" src="https://g.csdnimg.cn/static/face/emoji/033.png">
+            <img class="emoticon-monkey-img" data-emoticon="[face]emoji:034.png[/face]" src="https://g.csdnimg.cn/static/face/emoji/034.png">
+            <img class="emoticon-monkey-img" data-emoticon="[face]emoji:035.png[/face]" src="https://g.csdnimg.cn/static/face/emoji/035.png">
+            <img class="emoticon-monkey-img" data-emoticon="[face]emoji:036.png[/face]" src="https://g.csdnimg.cn/static/face/emoji/036.png">
+            <img class="emoticon-monkey-img" data-emoticon="[face]emoji:037.png[/face]" src="https://g.csdnimg.cn/static/face/emoji/037.png">
+            <img class="emoticon-monkey-img" data-emoticon="[face]emoji:038.png[/face]" src="https://g.csdnimg.cn/static/face/emoji/038.png">
+            <img class="emoticon-monkey-img" data-emoticon="[face]emoji:039.png[/face]" src="https://g.csdnimg.cn/static/face/emoji/039.png">
+            <img class="emoticon-monkey-img" data-emoticon="[face]emoji:040.png[/face]" src="https://g.csdnimg.cn/static/face/emoji/040.png">
+            <img class="emoticon-monkey-img" data-emoticon="[face]emoji:041.png[/face]" src="https://g.csdnimg.cn/static/face/emoji/041.png">
+            <img class="emoticon-monkey-img" data-emoticon="[face]emoji:042.png[/face]" src="https://g.csdnimg.cn/static/face/emoji/042.png">
+            <img class="emoticon-monkey-img" data-emoticon="[face]emoji:043.png[/face]" src="https://g.csdnimg.cn/static/face/emoji/043.png">
+            <img class="emoticon-monkey-img" data-emoticon="[face]emoji:044.png[/face]" src="https://g.csdnimg.cn/static/face/emoji/044.png">
+            <img class="emoticon-monkey-img" data-emoticon="[face]emoji:045.png[/face]" src="https://g.csdnimg.cn/static/face/emoji/045.png">
+            <img class="emoticon-monkey-img" data-emoticon="[face]emoji:046.png[/face]" src="https://g.csdnimg.cn/static/face/emoji/046.png">
+            <img class="emoticon-monkey-img" data-emoticon="[face]emoji:047.png[/face]" src="https://g.csdnimg.cn/static/face/emoji/047.png">
+            <img class="emoticon-monkey-img" data-emoticon="[face]emoji:048.png[/face]" src="https://g.csdnimg.cn/static/face/emoji/048.png">
+            <img class="emoticon-monkey-img" data-emoticon="[face]emoji:049.png[/face]" src="https://g.csdnimg.cn/static/face/emoji/049.png">
+            <img class="emoticon-monkey-img" data-emoticon="[face]emoji:050.png[/face]" src="https://g.csdnimg.cn/static/face/emoji/050.png">
+            <img class="emoticon-monkey-img" data-emoticon="[face]emoji:051.png[/face]" src="https://g.csdnimg.cn/static/face/emoji/051.png">
+            <img class="emoticon-monkey-img" data-emoticon="[face]emoji:052.png[/face]" src="https://g.csdnimg.cn/static/face/emoji/052.png">
+            <img class="emoticon-monkey-img" data-emoticon="[face]emoji:053.png[/face]" src="https://g.csdnimg.cn/static/face/emoji/053.png">
+            <img class="emoticon-monkey-img" data-emoticon="[face]emoji:054.png[/face]" src="https://g.csdnimg.cn/static/face/emoji/054.png">
+            <img class="emoticon-monkey-img" data-emoticon="[face]emoji:055.png[/face]" src="https://g.csdnimg.cn/static/face/emoji/055.png">
+            <img class="emoticon-monkey-img" data-emoticon="[face]emoji:056.png[/face]" src="https://g.csdnimg.cn/static/face/emoji/056.png">
+            <img class="emoticon-monkey-img" data-emoticon="[face]emoji:057.png[/face]" src="https://g.csdnimg.cn/static/face/emoji/057.png">
+            <img class="emoticon-monkey-img" data-emoticon="[face]emoji:058.png[/face]" src="https://g.csdnimg.cn/static/face/emoji/058.png">
+            <img class="emoticon-monkey-img" data-emoticon="[face]emoji:059.png[/face]" src="https://g.csdnimg.cn/static/face/emoji/059.png">
+            <img class="emoticon-monkey-img" data-emoticon="[face]emoji:060.png[/face]" src="https://g.csdnimg.cn/static/face/emoji/060.png">
+            <img class="emoticon-monkey-img" data-emoticon="[face]emoji:061.png[/face]" src="https://g.csdnimg.cn/static/face/emoji/061.png">
+            <img class="emoticon-monkey-img" data-emoticon="[face]emoji:062.png[/face]" src="https://g.csdnimg.cn/static/face/emoji/062.png">
+            <img class="emoticon-monkey-img" data-emoticon="[face]emoji:063.png[/face]" src="https://g.csdnimg.cn/static/face/emoji/063.png">
+            <img class="emoticon-monkey-img" data-emoticon="[face]emoji:064.png[/face]" src="https://g.csdnimg.cn/static/face/emoji/064.png">
+            <img class="emoticon-monkey-img" data-emoticon="[face]emoji:065.png[/face]" src="https://g.csdnimg.cn/static/face/emoji/065.png">
+            <img class="emoticon-monkey-img" data-emoticon="[face]emoji:066.png[/face]" src="https://g.csdnimg.cn/static/face/emoji/066.png">
+            <img class="emoticon-monkey-img" data-emoticon="[face]emoji:067.png[/face]" src="https://g.csdnimg.cn/static/face/emoji/067.png">
+            <img class="emoticon-monkey-img" data-emoticon="[face]emoji:068.png[/face]" src="https://g.csdnimg.cn/static/face/emoji/068.png">
+            <img class="emoticon-monkey-img" data-emoticon="[face]emoji:069.png[/face]" src="https://g.csdnimg.cn/static/face/emoji/069.png">
+            <img class="emoticon-monkey-img" data-emoticon="[face]emoji:070.png[/face]" src="https://g.csdnimg.cn/static/face/emoji/070.png">
+            <img class="emoticon-monkey-img" data-emoticon="[face]emoji:071.png[/face]" src="https://g.csdnimg.cn/static/face/emoji/071.png">
+            <img class="emoticon-monkey-img" data-emoticon="[face]emoji:072.png[/face]" src="https://g.csdnimg.cn/static/face/emoji/072.png">
+        </div>
+      </div>
+      <div class="opt-box">
+				<div id="ubbtools" class="add_code">
+					<a href="#insertcode" code="code" target="_self"><i class="icon iconfont icon-daima"></i></a>
+				</div>
+				<input type="hidden" id="comment_replyId" name="comment_replyId">
+				<input type="hidden" id="article_id" name="article_id" value="117323516">
+				<input type="hidden" id="comment_userId" name="comment_userId" value="">
+				<input type="hidden" id="commentId" name="commentId" value="">
+				<div class="dropdown" id="myDrap">
+					<a class="dropdown-face d-flex align-items-center" data-toggle="dropdown" role="button"
+						aria-haspopup="true" aria-expanded="false">
+						<div class="txt-selected text-truncate">添加代码片</div>
+						<svg class="icon d-block" width="200px" height="100.00px" viewBox="0 0 2048 1024" version="1.1" xmlns="http://www.w3.org/2000/svg"><path  d="M597.33333292 298.666667h853.333334L1023.99999992 725.333333 597.33333292 298.666667z"  /></svg>
+					</a>
+					<ul class="dropdown-menu" id="commentCode" aria-labelledby="drop4">
+						<li><a data-code="html">HTML/XML</a></li>
+						<li><a data-code="objc">objective-c</a></li>
+						<li><a data-code="ruby">Ruby</a></li>
+						<li><a data-code="php">PHP</a></li>
+						<li><a data-code="csharp">C</a></li>
+						<li><a data-code="cpp">C++</a></li>
+						<li><a data-code="javascript">JavaScript</a></li>
+						<li><a data-code="python">Python</a></li>
+						<li><a data-code="java">Java</a></li>
+						<li><a data-code="css">CSS</a></li>
+						<li><a data-code="sql">SQL</a></li>
+						<li><a data-code="plain">其它</a></li>
+					</ul>
+				</div>
+				<div class="right-box" id="rightBox" data-type="2">
+							<span id="tip_comment" class="tip">还能输入<em>1000</em>个字符</span>
+							<a data-report-click='{"mod":"1582594662_003","spm":"1001.2101.3001.4227","ab":"new"}'><input type="submit"
+									class="btn btn-sm btn-comment" value="发表评论"></a>
+				</div>
+			</div>
+		</form>
+		<input type="button" class="bt-comment-show" value="评论">
+	</div>
+	<div class="comment-list-container">
+		<a id="comments"></a>
+		<div class="comment-list-box">
+		</div>
+		<div id="commentPage" class="pagination-box d-none"></div>
+		<div class="opt-box text-center">
+			<div class="btn btn-sm btn-link-blue" id="btnMoreComment"></div>
+		</div>
+	</div>
+</div>            <div class="recommend-tit-mod">相关推荐</div>
+            <div class="recommend-box insert-baidu-box">
+                <div class="recommend-item-box clearfix" style="display:none"></div>
+<div class="recommend-item-box type_blog clearfix" data-url="https://blog.csdn.net/youdaotech/article/details/117961795" >
+	<div class="content-box">
+		<div class="content-blog display-flex">
+			<div class="title-box">
+				<a href="https://blog.csdn.net/youdaotech/article/details/117961795" class="tit ellipsis-online ellipsis-online-1" target="_blank"  >
+					网易有道开源EMLL：高性能端侧机器学习计算库，大幅提高计算性能
+				</a>
+			</div>
+			<div class="info-box display-flex">
+				<div class="info display-flex">
+					<span class="info-block time">06-16</span>
+					<span class="info-block read"><img class="read-img" src="https://csdnimg.cn/release/blogv2/dist/pc/img/readCountWhite.png" alt="">
+					1205
+					</span>
+				</div>
+			</div>
+		</div>
+		<div class="desc-box">
+			<a href="https://blog.csdn.net/youdaotech/article/details/117961795" target="_blank"  >
+				<div class="desc ellipsis-online ellipsis-online-1">网易有道开源EMLL：高性能端侧机器学习计算库，大幅提高计算性能简介一、端侧AI端侧AI具有以下优势：端侧AI挑战：二、ARM第三方BLAS库EigenOpenBLASARM Compute Library三、EMLL特点高性能易用性扩展性四、EMLL性能优化方法分块重排汇编优化五、EMLL功能支持的计算函数支持的架构支持的端侧操作系统六、应用案例简介在人工智能技术不断深入发展的今天，我们对于计算的性能要求越来越高。传统的计算处理多数是基于云侧的，把所有图像、音频等数据通过网络传输到云中心进行处理后将结</div>
+			</a>
+		</div>
+	</div>
+</div>
+<div class="recommend-item-box type_blog clearfix" data-url="https://blog.csdn.net/youdaotech/article/details/117561903" >
+	<div class="content-box">
+		<div class="content-blog display-flex">
+			<div class="title-box">
+				<a href="https://blog.csdn.net/youdaotech/article/details/117561903" class="tit ellipsis-online ellipsis-online-1" target="_blank"  >
+					有道精品课全链路测试的改进和思考
+				</a>
+			</div>
+			<div class="info-box display-flex">
+				<div class="info display-flex">
+					<span class="info-block time">06-04</span>
+					<span class="info-block read"><img class="read-img" src="https://csdnimg.cn/release/blogv2/dist/pc/img/readCountWhite.png" alt="">
+					204
+					</span>
+				</div>
+			</div>
+		</div>
+		<div class="desc-box">
+			<a href="https://blog.csdn.net/youdaotech/article/details/117561903" target="_blank"  >
+				<div class="desc ellipsis-online ellipsis-online-1">导读这篇文章主要给大家分享精品课测试团队为保证大促稳定性，在最近一年半时间的所做的一些尝试和探索。比如，如何准确预估开闸瞬间的用户流量，如何更好地进行性能优化后的验证和回测，如何解决夜深人静压测的尴尬等等。值得欣慰的是，经过持续测试和优化，精品课的所有服务，在几十亿规模的交易流量下，都表现出了很好的稳定性和可靠性。作者/ 有道精品课测开小组编辑/ Ein背景类似于电商平台的618，双11大促，在线教育平台也存在两个重要的时间节点：04月春续暑秋，10月秋续寒春，产研侧需要针对销售策略与售.</div>
+			</a>
+		</div>
+	</div>
+</div>
+		<dl id="recommend-item-box-tow" class="recommend-item-box type_blog clearfix">
+		</dl>
+<div class="recommend-item-box type_blog clearfix" data-url="https://blog.csdn.net/youdaotech/article/details/117068147" >
+	<div class="content-box">
+		<div class="content-blog display-flex">
+			<div class="title-box">
+				<a href="https://blog.csdn.net/youdaotech/article/details/117068147" class="tit ellipsis-online ellipsis-online-1" target="_blank"  >
+					网易云课堂 Service Worker 运用与实践
+				</a>
+			</div>
+			<div class="info-box display-flex">
+				<div class="info display-flex">
+					<span class="info-block time">05-20</span>
+					<span class="info-block read"><img class="read-img" src="https://csdnimg.cn/release/blogv2/dist/pc/img/readCountWhite.png" alt="">
+					204
+					</span>
+				</div>
+			</div>
+		</div>
+		<div class="desc-box">
+			<a href="https://blog.csdn.net/youdaotech/article/details/117068147" target="_blank"  >
+				<div class="desc ellipsis-online ellipsis-online-1">前言本文首先会简单介绍下前端的常见缓存方式，再引入Service Worker的概念，针对其原理和如何运用进行介绍。然后基于google推出的第三方库Workbox，在产品中进行运用实践，并对其原理进行简要剖析。作者：刘放编辑：Ein前端缓存简介先简单介绍一下现有的前端缓存技术方案，主要分为http缓存和浏览器缓存。http缓存http缓存都是第二次请求时开始的，这也是个老生常谈的话题了。无非也是那几个http头的问题：ExpiresHTTP1.0的内容，服务器使用Expires.</div>
+			</a>
+		</div>
+	</div>
+</div>
+<div class="recommend-item-box type_blog clearfix" data-url="https://blog.csdn.net/youdaotech/article/details/116233180" >
+	<div class="content-box">
+		<div class="content-blog display-flex">
+			<div class="title-box">
+				<a href="https://blog.csdn.net/youdaotech/article/details/116233180" class="tit ellipsis-online ellipsis-online-1" target="_blank"  >
+					网易云课堂个性化推荐实践与思考
+				</a>
+			</div>
+			<div class="info-box display-flex">
+				<div class="info display-flex">
+					<span class="info-block time">04-28</span>
+					<span class="info-block read"><img class="read-img" src="https://csdnimg.cn/release/blogv2/dist/pc/img/readCountWhite.png" alt="">
+					224
+					</span>
+				</div>
+			</div>
+		</div>
+		<div class="desc-box">
+			<a href="https://blog.csdn.net/youdaotech/article/details/116233180" target="_blank"  >
+				<div class="desc ellipsis-online ellipsis-online-1">作者/ 韩虹莹  编辑/ Ein从人和信息的博弈谈推荐系统缘起首先谈谈我理解的推荐系统。如果说推荐系统的定义是什么，每本书每篇文章说的都不太一样，协同过滤1992年就已经有了，三十年里无数大佬分析了个性化推荐的缘起和意义，世界已经不需要多一个人的见解。但是，当所有人都说一件事情是正确的时候，我们也要想清楚它为什么是正确的。如果你问我推荐系统是什么，我会告诉你，是信息到人的精准分发。那么为什么在这个时代推荐系统才应运而生？古人不会需要信息精准分发，车马信息都很慢，古人学富五车不过现在一个书包的信..</div>
+			</a>
+		</div>
+	</div>
+</div>
+<div class="recommend-item-box type_blog clearfix" data-url="https://blog.csdn.net/youdaotech/article/details/116003310" >
+	<div class="content-box">
+		<div class="content-blog display-flex">
+			<div class="title-box">
+				<a href="https://blog.csdn.net/youdaotech/article/details/116003310" class="tit ellipsis-online ellipsis-online-1" target="_blank"  >
+					网易有道 ASR 团队斩获 Interspeech 2021 算法竞赛两项冠军
+				</a>
+			</div>
+			<div class="info-box display-flex">
+				<div class="info display-flex">
+					<span class="info-block time">04-22</span>
+					<span class="info-block read"><img class="read-img" src="https://csdnimg.cn/release/blogv2/dist/pc/img/readCountWhite.png" alt="">
+					248
+					</span>
+				</div>
+			</div>
+		</div>
+		<div class="desc-box">
+			<a href="https://blog.csdn.net/youdaotech/article/details/116003310" target="_blank"  >
+				<div class="desc ellipsis-online ellipsis-online-1">在近期举行的Interspeech 2021会议上，主办方开展了&ldquo;非母语儿童语音识别&rdquo;的特别会议，并发布专项数据集用于算法评测竞赛，旨在推动非母语儿童语音识别技术的研究。此次竞赛共分为4个细分赛道，网易有道ASR团队斩获其中2项冠军与1项亚军。Interspeech是由国际语音通讯协会（International Speech Communication Association, ISCA）创办的顶级旗舰国际会议，作为全球最大的综合性语音信号处理领域的科技盛会，历届Interspeech会议都备受全球.</div>
+			</a>
+		</div>
+	</div>
+</div>
+<div class="recommend-item-box type_blog clearfix" data-url="https://blog.csdn.net/youdaotech/article/details/115750606" >
+	<div class="content-box">
+		<div class="content-blog display-flex">
+			<div class="title-box">
+				<a href="https://blog.csdn.net/youdaotech/article/details/115750606" class="tit ellipsis-online ellipsis-online-1" target="_blank"  >
+					在有道 | L同学：一位十五年有道人的成长故事
+				</a>
+			</div>
+			<div class="info-box display-flex">
+				<div class="info display-flex">
+					<span class="info-block time">04-16</span>
+					<span class="info-block read"><img class="read-img" src="https://csdnimg.cn/release/blogv2/dist/pc/img/readCountWhite.png" alt="">
+					216
+					</span>
+				</div>
+			</div>
+		</div>
+		<div class="desc-box">
+			<a href="https://blog.csdn.net/youdaotech/article/details/115750606" target="_blank"  >
+				<div class="desc ellipsis-online ellipsis-online-1">写在前面从开始运营有道技术团队之初，我们就一直想要启动《在有道》这个栏目，去聆听有道技术同学们的故事。我们觉得技术的背后，其实还是关于人，那些技术的思考与实践，也都源于人的创造和灵感。唯有理解了在有道工作与生活的人们，才能更好地理解有道。《在有道》系列的第一期，我们和网易有道技术总监L同学聊了聊他的故事。作者/ Knopfler编辑/ Ein访谈全文共计2089字阅读需要6分钟关于选择：没什么特别的理由2007年，L同学刚刚从北大计算机系硕士毕业，和每一位应届毕业生一样，都面临.</div>
+			</a>
+		</div>
+	</div>
+</div>
+<div class="recommend-item-box type_blog clearfix" data-url="https://blog.csdn.net/youdaotech/article/details/115724460" >
+	<div class="content-box">
+		<div class="content-blog display-flex">
+			<div class="title-box">
+				<a href="https://blog.csdn.net/youdaotech/article/details/115724460" class="tit ellipsis-online ellipsis-online-1" target="_blank"  >
+					有道写作浏览器扩展实践
+				</a>
+			</div>
+			<div class="info-box display-flex">
+				<div class="info display-flex">
+					<span class="info-block time">04-15</span>
+					<span class="info-block read"><img class="read-img" src="https://csdnimg.cn/release/blogv2/dist/pc/img/readCountWhite.png" alt="">
+					210
+					</span>
+				</div>
+			</div>
+		</div>
+		<div class="desc-box">
+			<a href="https://blog.csdn.net/youdaotech/article/details/115724460" target="_blank"  >
+				<div class="desc ellipsis-online ellipsis-online-1">有道写作浏览器扩展作为一款为网页增加英文语法批改的辅助工具，允许用户在任意网页上绝大部分的富文本编辑器、多行文本输入框中编辑英文文本，可实时得到批改结果反馈，并自行接受建议自动修改，实现完美写作。来源/ 有道技术团队公众号作者/ 李靖雯编辑/ 刘振宇一、背景介绍有道写作服务是有道出品的写作智能批改产品，为用户提供优质的作文拼写、语法、样式方面的批改服务。有道写作不仅仅支持浏览器扩展形式，还支持在其他平台使用：例如有道词典 APP-作文批改、Web 在线端、Word 插件、PC 词典内。欢迎各..</div>
+			</a>
+		</div>
+	</div>
+</div>
+<div class="recommend-item-box type_blog clearfix" data-url="https://blog.csdn.net/youdaotech/article/details/115466046" >
+	<div class="content-box">
+		<div class="content-blog display-flex">
+			<div class="title-box">
+				<a href="https://blog.csdn.net/youdaotech/article/details/115466046" class="tit ellipsis-online ellipsis-online-1" target="_blank"  >
+					团队协作中，如何写出让同事赞不绝口的代码
+				</a>
+			</div>
+			<div class="info-box display-flex">
+				<div class="info display-flex">
+					<span class="info-block time">04-08</span>
+					<span class="info-block read"><img class="read-img" src="https://csdnimg.cn/release/blogv2/dist/pc/img/readCountWhite.png" alt="">
+					210
+					</span>
+				</div>
+			</div>
+		</div>
+		<div class="desc-box">
+			<a href="https://blog.csdn.net/youdaotech/article/details/115466046" target="_blank"  >
+				<div class="desc ellipsis-online ellipsis-online-1">团队中的每个人都会用不同的视角来&rsquo;审视&lsquo;你的&rdquo;作品&ldquo;，那么我们如何拿出一份像艺术品一样的项目代码，然后赢得得同事们的赞许呢？作者/ 琼虎(安增平)编辑/ hjy00 前言在加入了拥有较高技术底蕴的有道精品课团队后，发现自己在前面的职业生涯中养成的一些&lsquo;作坊&rsquo;习惯必须得到纠正。在日常工作中，研发同学只在coding阶段中不需要别人关心自己的代码，其他需要将自己的产出展示给别人的场景变得十分常见。简单举几个例子：① feature准入后，同产品业务线的同事需要trans-review② me.</div>
+			</a>
+		</div>
+	</div>
+</div>
+<div class="recommend-item-box type_blog clearfix" data-url="https://blog.csdn.net/youdaotech/article/details/115368107" >
+	<div class="content-box">
+		<div class="content-blog display-flex">
+			<div class="title-box">
+				<a href="https://blog.csdn.net/youdaotech/article/details/115368107" class="tit ellipsis-online ellipsis-online-1" target="_blank"  >
+					有道云笔记新版编辑器架构设计（下）
+				</a>
+			</div>
+			<div class="info-box display-flex">
+				<div class="info display-flex">
+					<span class="info-block time">04-01</span>
+					<span class="info-block read"><img class="read-img" src="https://csdnimg.cn/release/blogv2/dist/pc/img/readCountWhite.png" alt="">
+					247
+					</span>
+				</div>
+			</div>
+		</div>
+		<div class="desc-box">
+			<a href="https://blog.csdn.net/youdaotech/article/details/115368107" target="_blank"  >
+				<div class="desc ellipsis-online ellipsis-online-1">上期文章，我们从整体上介绍了富文本编辑器的背景，并分享了有道云笔记新版编辑器技术选型中的模型和渲染部分。本期文章，我们将继续分享技术选型中的编辑和指令部分内容，并详细解读有道云笔记编辑器的分层架构设计。作者/ 金鑫编辑/ 刘振宇二、云笔记新版编辑器技术选型2.3 编辑由于 contentEditable 会产生不受控事件，导致很多 bug，例如，一开始数据是 abc，对应渲染出的视图是一个 span，内容是 abc。由于需要提供可编辑，span abc 是一个 contentEdi..</div>
+			</a>
+		</div>
+	</div>
+</div>
+<div class="recommend-item-box type_blog clearfix" data-url="https://blog.csdn.net/youdaotech/article/details/115351237" >
+	<div class="content-box">
+		<div class="content-blog display-flex">
+			<div class="title-box">
+				<a href="https://blog.csdn.net/youdaotech/article/details/115351237" class="tit ellipsis-online ellipsis-online-1" target="_blank"  >
+					有道云笔记新版编辑器架构设计（上）
+				</a>
+			</div>
+			<div class="info-box display-flex">
+				<div class="info display-flex">
+					<span class="info-block time">03-31</span>
+					<span class="info-block read"><img class="read-img" src="https://csdnimg.cn/release/blogv2/dist/pc/img/readCountWhite.png" alt="">
+					251
+					</span>
+				</div>
+			</div>
+		</div>
+		<div class="desc-box">
+			<a href="https://blog.csdn.net/youdaotech/article/details/115351237" target="_blank"  >
+				<div class="desc ellipsis-online ellipsis-online-1">在开发有道云笔记的新版编辑器的过程中，我们遇到很多实际问题，愈发感觉到这是一个非常有深度的前端技术领域，所以我们将新版编辑器的技术选型、架构和部分实现细节拿出来分享给大家，希望对大家开发富文本编辑器、做复杂系统的架构设计有一定参考意义。作者/ 金鑫编辑/ Ryan来源/ 有道技术团队（ID: youdaotech）1. 富文本编辑器背景1.1 什么是编辑器编辑器在前端开发领域是指可以提供给用户编辑纯文本、富文本、代码、多媒体内容等的功能模块，例如以云笔记为例，编辑器指下图中绿色的区域。..</div>
+			</a>
+		</div>
+	</div>
+</div>
+<div class="recommend-item-box type_blog clearfix" data-url="https://blog.csdn.net/youdaotech/article/details/115329262" >
+	<div class="content-box">
+		<div class="content-blog display-flex">
+			<div class="title-box">
+				<a href="https://blog.csdn.net/youdaotech/article/details/115329262" class="tit ellipsis-online ellipsis-online-1" target="_blank"  >
+					硬件测试的思考和改进：有道词典笔的高效测试探索
+				</a>
+			</div>
+			<div class="info-box display-flex">
+				<div class="info display-flex">
+					<span class="info-block time">03-30</span>
+					<span class="info-block read"><img class="read-img" src="https://csdnimg.cn/release/blogv2/dist/pc/img/readCountWhite.png" alt="">
+					378
+					</span>
+				</div>
+			</div>
+		</div>
+		<div class="desc-box">
+			<a href="https://blog.csdn.net/youdaotech/article/details/115329262" target="_blank"  >
+				<div class="desc ellipsis-online ellipsis-online-1">作者/ 刘哲; 编辑/ Ryan ; 来源/ 有道技术团队（ID: youdaotech）引言当我们提到智能硬件的高效测试时，通常会考虑使用自动化测试的方案，提升产品的测试效率和质量。由于智能硬件的使用过程中，包括了大量和用户的行为交互，这就导致在测试方案上，传统的软件自动化测试很难完全模拟用户的完整使用行为。因此，我们除了要考虑借鉴和使用软件测试的思路之外，还要考虑如何实现硬件测试自动化。一、背景有道词典笔 2.0 是网易有道自研的学习型智能硬件。有道词典笔搭载了有道自研的 OCR、NM.</div>
+			</a>
+		</div>
+	</div>
+</div>
+<div class="recommend-item-box type_blog clearfix" data-url="https://blog.csdn.net/youdaotech/article/details/115210628" >
+	<div class="content-box">
+		<div class="content-blog display-flex">
+			<div class="title-box">
+				<a href="https://blog.csdn.net/youdaotech/article/details/115210628" class="tit ellipsis-online ellipsis-online-1" target="_blank"  >
+					报名倒计时 | 有道技术沙龙，聊聊明星语音背后的故事
+				</a>
+			</div>
+			<div class="info-box display-flex">
+				<div class="info display-flex">
+					<span class="info-block time">03-25</span>
+					<span class="info-block read"><img class="read-img" src="https://csdnimg.cn/release/blogv2/dist/pc/img/readCountWhite.png" alt="">
+					209
+					</span>
+				</div>
+			</div>
+		</div>
+		<div class="desc-box">
+			<a href="https://blog.csdn.net/youdaotech/article/details/115210628" target="_blank"  >
+				<div class="desc ellipsis-online ellipsis-online-1">自上周有道技术沙龙开始招募以来已经收到了众多小伙伴的报名给爱学习的同学们点个赞！目前，有道技术沙龙仍在报名中欢迎来有道技术沙龙现场交流到场观众赠送网易纪念款帆布包严选好物抽奖送不停！同时多位无法到现场的同学咨询直播问题有道技术团队决定联合 CSDN开启线上直播全程直播技术分享环节！直播间地址请点击 线上直播间有道技术沙龙等你来~彩蛋一枚：明星语音功能全新升级 有道词典首位女声明星上线-END-...</div>
+			</a>
+		</div>
+	</div>
+</div>
+<div class="recommend-item-box type_blog clearfix" data-url="https://blog.csdn.net/youdaotech/article/details/115164856" >
+	<div class="content-box">
+		<div class="content-blog display-flex">
+			<div class="title-box">
+				<a href="https://blog.csdn.net/youdaotech/article/details/115164856" class="tit ellipsis-online ellipsis-online-1" target="_blank"  >
+					技术杂谈 | Flutter 的性能分析、工程架构与细节处理
+				</a>
+			</div>
+			<div class="info-box display-flex">
+				<div class="info display-flex">
+					<span class="info-block time">03-24</span>
+					<span class="info-block read"><img class="read-img" src="https://csdnimg.cn/release/blogv2/dist/pc/img/readCountWhite.png" alt="">
+					261
+					</span>
+				</div>
+			</div>
+		</div>
+		<div class="desc-box">
+			<a href="https://blog.csdn.net/youdaotech/article/details/115164856" target="_blank"  >
+				<div class="desc ellipsis-online ellipsis-online-1">出品 | 有道智云编辑 | Ryan来源 | 有道技术团队（ID：youdaotech）一、为何 Flutter跨端技术众多，为何选择 Flutter？它能带来哪些优势，有哪些缺点？先看看具体的工程效果：https://v.qq.com/txp/iframe/player.html?vid=z316221rmveweb 端效果体验：https://test-pupilmath.youdao.com/pupil-flutter-test/web/#/1.1 Flutter VS 原生无论.</div>
+			</a>
+		</div>
+	</div>
+</div>
+<div class="recommend-item-box type_blog clearfix" data-url="https://blog.csdn.net/youdaotech/article/details/114934568" >
+	<div class="content-box">
+		<div class="content-blog display-flex">
+			<div class="title-box">
+				<a href="https://blog.csdn.net/youdaotech/article/details/114934568" class="tit ellipsis-online ellipsis-online-1" target="_blank"  >
+					有道精品课实时数据中台建设实践
+				</a>
+			</div>
+			<div class="info-box display-flex">
+				<div class="info display-flex">
+					<span class="info-block time">03-18</span>
+					<span class="info-block read"><img class="read-img" src="https://csdnimg.cn/release/blogv2/dist/pc/img/readCountWhite.png" alt="">
+					240
+					</span>
+				</div>
+			</div>
+		</div>
+		<div class="desc-box">
+			<a href="https://blog.csdn.net/youdaotech/article/details/114934568" target="_blank"  >
+				<div class="desc ellipsis-online ellipsis-online-1">撰文/ 李荣谦编辑/ Ryan来源：有道技术团队（ID: youdaotech）0 序言本期文章中，有道精品课技术团队将和大家分享有道精品课数据中台的架构演进过程以及 Doris 作为一个 MPP 分析型数据库是如何为不断增长的业务体量提供有效支撑并进行数据赋能的。本文以我们在实时数仓选型的经验为切入点，进一步着重分享使用 Doris 过程中遇到的问题，以及我们针对这些问题所做出的调整和优化。1 背景概述1.1 业务场景根据业务需求，目前有道精品课的数据层架构上可分为离线和实时两部分。离线</div>
+			</a>
+		</div>
+	</div>
+</div>
+<div class="recommend-item-box type_blog clearfix" data-url="https://blog.csdn.net/youdaotech/article/details/114919650" >
+	<div class="content-box">
+		<div class="content-blog display-flex">
+			<div class="title-box">
+				<a href="https://blog.csdn.net/youdaotech/article/details/114919650" class="tit ellipsis-online ellipsis-online-1" target="_blank"  >
+					有道技术沙龙 | AI 语音交互技术在语言学习场景的实践
+				</a>
+			</div>
+			<div class="info-box display-flex">
+				<div class="info display-flex">
+					<span class="info-block time">03-17</span>
+					<span class="info-block read"><img class="read-img" src="https://csdnimg.cn/release/blogv2/dist/pc/img/readCountWhite.png" alt="">
+					229
+					</span>
+				</div>
+			</div>
+		</div>
+		<div class="desc-box">
+			<a href="https://blog.csdn.net/youdaotech/article/details/114919650" target="_blank"  >
+				<div class="desc ellipsis-online ellipsis-online-1">经过数月的精心筹备有道技术沙龙即将正式启动！首先感谢：思否、将门-TechBeat、掘金技术社区合作伙伴的大力帮助首期我们将和大家聊聊语音交互技术的那些事儿明星爱豆的声音是如何生成的？一根笔如何教会小朋友读绘本？选择题也可以用语音来回答吗？答案尽在 有道技术沙龙 第一期！除了干货满满的技术分享当然不能少了福利吃好喝好必不可少还有精美伴手礼到场即送抽奖环节拼欧气抽严选好物前30位到场的早鸟同学还可兑换网易易间咖啡馆饮品一杯！活动场地：网易易间咖啡厅更重要的是：作为首期有.</div>
+			</a>
+		</div>
+	</div>
+</div>
+<div class="recommend-item-box type_blog clearfix" data-url="https://blog.csdn.net/youdaotech/article/details/114690688" >
+	<div class="content-box">
+		<div class="content-blog display-flex">
+			<div class="title-box">
+				<a href="https://blog.csdn.net/youdaotech/article/details/114690688" class="tit ellipsis-online ellipsis-online-1" target="_blank"  >
+					网易 Duilib：功能全面的开源桌面 UI 开发框架
+				</a>
+			</div>
+			<div class="info-box display-flex">
+				<div class="info display-flex">
+					<span class="info-block time">03-16</span>
+					<span class="info-block read"><img class="read-img" src="https://csdnimg.cn/release/blogv2/dist/pc/img/readCountWhite.png" alt="">
+					654
+					</span>
+				</div>
+			</div>
+		</div>
+		<div class="desc-box">
+			<a href="https://blog.csdn.net/youdaotech/article/details/114690688" target="_blank"  >
+				<div class="desc ellipsis-online ellipsis-online-1">01 网易 Duilib 框架概述Duilib 是 Windows 系统下的开源的 DirectUI 界面库（遵循 BSD 协议），完全免费，可用于商业软件开发。Duilib 可以简单方便地实现大多数界面需求，包括换肤、换色、透明等功能，支持多种图片格式，使用 XML 可以方便地定制窗口，能较好地做到 UI 和逻辑相分离，尽量减少在代码里创建 UI 控件。目前，Duilib 已经在国内有较为广泛的使用。网易在研发网易易信 PC 版时引入 Duilib，经过多年开发和改进，由网易云信在2019年4月开.</div>
+			</a>
+		</div>
+	</div>
+</div>
+<div class="recommend-item-box type_blog clearfix" data-url="https://blog.csdn.net/youdaotech/article/details/114655093" >
+	<div class="content-box">
+		<div class="content-blog display-flex">
+			<div class="title-box">
+				<a href="https://blog.csdn.net/youdaotech/article/details/114655093" class="tit ellipsis-online ellipsis-online-1" target="_blank"  >
+					有道 Kubernetes 容器API监控系统设计和实践
+				</a>
+			</div>
+			<div class="info-box display-flex">
+				<div class="info display-flex">
+					<span class="info-block time">03-11</span>
+					<span class="info-block read"><img class="read-img" src="https://csdnimg.cn/release/blogv2/dist/pc/img/readCountWhite.png" alt="">
+					255
+					</span>
+				</div>
+			</div>
+		</div>
+		<div class="desc-box">
+			<a href="https://blog.csdn.net/youdaotech/article/details/114655093" target="_blank"  >
+				<div class="desc ellipsis-online ellipsis-online-1">有道 Kubernetes 容器API监控系统设计和实践1.背景2.技术选型方案分析3.整体设计思路4.具体实践操作4.1 添加service 级别API监控告警4.2 自动生成pod API监控5.难点和重点问题解决5.1 误报消减5.2策略优化5.3易用性5.4业务适配6.上线效果7.总结与展望7.1总结7.2展望8.结语本期文章，我们将给大家分享有道容器服务API监控方案，这个方案同时具有轻量级和灵活性的特点，很好地体现了k8s集群化管理的优势，解决了静态配置的监控不满足容器服务监控的需求。并做了</div>
+			</a>
+		</div>
+	</div>
+</div>
+            </div>
+<div class="blog-footer-bottom" style="margin-top:10px;"></div>
+<script src="https://g.csdnimg.cn/common/csdn-footer/csdn-footer.js" data-isfootertrack="false" type="text/javascript"></script>
+<script type="text/javascript">
+    window.csdn.csdnFooter.options = {
+        el: '.blog-footer-bottom',
+        type: 2
+    }
+</script>        </main>
+<aside class="blog_container_aside">
+	<div id="asideProfile" class="aside-box">
+    <div class="profile-intro d-flex">
+        <div class="avatar-box d-flex justify-content-center flex-column">
+            <a href="https://blog.csdn.net/youdaotech" data-report-click='{"mod":"popu_379","spm":"1001.2101.3001.4121","dest":"https://blog.csdn.net/youdaotech","ab":"new"}'>
+                <img src="https://profile.csdnimg.cn/E/9/3/3_youdaotech" class="avatar_pic">
+            </a>
+        </div>
+        <div class="user-info d-flex flex-column profile-intro-name-box">
+            <div class="profile-intro-name-boxTop">
+                <a href="https://blog.csdn.net/youdaotech" class="" id="uid" title="有道技术团队" data-report-click='{"mod":"popu_379","spm":"1001.2101.3001.4122","dest":"https://blog.csdn.net/youdaotech","ab":"new"}'>
+                    <span class="name " username="youdaotech">有道技术团队</span>
+                </a>
+                <span>
+                </span>
+                <span class="flag expert-blog">
+                <span class="bubble">CSDN认证博客专家</span>
+                </span>
+                <span class="flag company-blog">
+                <img class="identity" src="https://csdnimg.cn/release/blogv2/dist/mobile/img/enterpriseNew.png"/>
+                <span class="bubble">CSDN认证企业博客</span>
+                </span>
+            </div>
+            <div class="profile-intro-name-boxFooter">
+            </div>
+        </div>
+    </div>
+    <div class="data-info d-flex item-tiling">
+        <dl class="text-center" title="18">
+            <a href="https://blog.csdn.net/youdaotech" data-report-click='{"mod":"1598321000_001","spm":"1001.2101.3001.4310"}' data-report-query="t=1">  
+                <dt><span class="count">18</span></dt>
+                <dd class="font">原创</dd>
+            </a>
+        </dl>
+        <dl class="text-center" data-report-click='{"mod":"1598321000_002","spm":"1001.2101.3001.4311"}' title="225976">
+            <a href="https://blog.csdn.net/rank/list/weekly" target="_blank">
+                <dt><span class="count">22万+</span></dt>
+                <dd class="font">周排名</dd>
+            </a>
+        </dl>
+        <dl class="text-center" title="394882">
+            <a href="https://blog.csdn.net/rank/list/total" data-report-click='{"mod":"1598321000_003","spm":"1001.2101.3001.4312"}' target="_blank">
+                <dt><span class="count">39万+</span></dt>
+                <dd class="font">总排名</dd>
+            </a>
+        </dl>
+        <dl class="text-center" style="min-width:58px" title="6219">  
+            <dt><span class="count">6219</span></dt>
+            <dd>访问</dd>
+        </dl>
+        <dl class="text-center" title="2级,点击查看等级说明">
+            <dt><a href="https://blog.csdn.net/blogdevteam/article/details/103478461" target="_blank">
+                <img class="level" src="https://csdnimg.cn/identity/blog2.png">
+            </a>
+            </dt>
+            <dd>等级</dd>
+        </dl>
+    </div>
+    <div class="item-rank"></div>
+    <div class="data-info d-flex item-tiling">
+        <dl class="text-center" title="227">
+            <dt><span class="count">227</span></dt>
+            <dd>积分</dd>
+        </dl>
+         <dl class="text-center" id="fanBox" title="7">
+            <dt><span class="count" id="fan">7</span></dt>
+            <dd>粉丝</dd>
+        </dl>
+        <dl class="text-center" title="10">
+            <dt><span class="count">10</span></dt>
+            <dd>获赞</dd>
+        </dl>
+        <dl class="text-center" title="10">
+            <dt><span class="count">10</span></dt>
+            <dd>评论</dd>
+        </dl>
+        <dl class="text-center" title="12">
+            <dt><span class="count">12</span></dt>
+            <dd>收藏</dd>
+        </dl>
+    </div>
+    <div class="aside-box-footer" data-report-view='{"spm":"3001.4296"}'>
+        <div class="badge-box d-flex">
+            <div class="badge d-flex">
+                <div class="icon-badge" title="持之以恒">
+                    <div class="mouse-box">
+                        <img class="medal-img" data-report-click='{"spm":"3001.4296"}' src="https://csdnimg.cn/medal/chizhiyiheng@240.png" alt="持之以恒">
+                    </div>
+                </div>
+                <div class="icon-badge" title="勤写标兵Lv1">
+                    <div class="mouse-box">
+                        <img class="medal-img" data-report-click='{"spm":"3001.4296"}' src="https://csdnimg.cn/medal/qixiebiaobing1@240.png" alt="勤写标兵Lv1">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="profile-intro-name-boxOpration">
+        <div class="opt-letter-watch-box">
+        <a class="bt-button personal-letter" href="https://im.csdn.net/chat/youdaotech" target="_blank" rel="noopener">私信</a>
+        </div>
+        <div class="opt-letter-watch-box"> 
+            <a class="personal-watch bt-button" id="btnAttent" >关注</a>  
+        </div>
+    </div>
+</div>
+<div id="asideSearchArticle" class="aside-box">
+	<div class="aside-content search-comter">
+    <div class="aside-search aside-search-blog">         
+        <input type="text" class="input-serch-blog" name="" autocomplete="off" value="" id="search-blog-words" placeholder="搜博主文章">
+        <a class="btn-search-blog">
+                    <img src="//csdnimg.cn/cdn/content-toolbar/csdn-sou.png?v=1587021042">
+        </a>
+    </div>
+    </div>
+</div>
+
+
+<div id="asideHotArticle" class="aside-box">
+	<h3 class="aside-title">热门文章</h3>
+	<div class="aside-content">
+		<ul class="hotArticle-list">
+			<li>
+				<a href="https://blog.csdn.net/youdaotech/article/details/117961795" target="_blank"  data-report-click='{"mod":"popu_541","spm":"1001.2101.3001.4139","dest":"https://blog.csdn.net/youdaotech/article/details/117961795","ab":"new"}'>
+				网易有道开源EMLL：高性能端侧机器学习计算库，大幅提高计算性能
+					<img src="https://csdnimg.cn/release/blogv2/dist/pc/img/readCountWhite.png" alt="">
+					<span class="read">754</span>
+                </a>
+			</li>
+			<li>
+				<a href="https://blog.csdn.net/youdaotech/article/details/114690688" target="_blank"  data-report-click='{"mod":"popu_541","spm":"1001.2101.3001.4139","dest":"https://blog.csdn.net/youdaotech/article/details/114690688","ab":"new"}'>
+				网易 Duilib：功能全面的开源桌面 UI 开发框架
+					<img src="https://csdnimg.cn/release/blogv2/dist/pc/img/readCountWhite.png" alt="">
+					<span class="read">454</span>
+                </a>
+			</li>
+			<li>
+				<a href="https://blog.csdn.net/youdaotech/article/details/117323516" target="_blank"  data-report-click='{"mod":"popu_541","spm":"1001.2101.3001.4139","dest":"https://blog.csdn.net/youdaotech/article/details/117323516","ab":"new"}'>
+				从源码中来，到业务中去，React性能优化终极指南
+					<img src="https://csdnimg.cn/release/blogv2/dist/pc/img/readCountWhite.png" alt="">
+					<span class="read">270</span>
+                </a>
+			</li>
+			<li>
+				<a href="https://blog.csdn.net/youdaotech/article/details/115329262" target="_blank"  data-report-click='{"mod":"popu_541","spm":"1001.2101.3001.4139","dest":"https://blog.csdn.net/youdaotech/article/details/115329262","ab":"new"}'>
+				硬件测试的思考和改进：有道词典笔的高效测试探索
+					<img src="https://csdnimg.cn/release/blogv2/dist/pc/img/readCountWhite.png" alt="">
+					<span class="read">316</span>
+                </a>
+			</li>
+			<li>
+				<a href="https://blog.csdn.net/youdaotech/article/details/115164856" target="_blank"  data-report-click='{"mod":"popu_541","spm":"1001.2101.3001.4139","dest":"https://blog.csdn.net/youdaotech/article/details/115164856","ab":"new"}'>
+				技术杂谈 | Flutter 的性能分析、工程架构与细节处理
+					<img src="https://csdnimg.cn/release/blogv2/dist/pc/img/readCountWhite.png" alt="">
+					<span class="read">250</span>
+                </a>
+			</li>
+		</ul>
+	</div>
+</div>
+<div id="asideCategory" class="aside-box ">
+    <h3 class="aside-title">分类专栏</h3>
+    <div class="aside-content">
+        <ul>
+            <li class="">
+                <a class="clearfix" target="_blank" href="https://blog.csdn.net/youdaotech/category_10871913.html" data-report-click='{"mod":"popu_537","spm":"1001.2101.3001.4137","strategy":"pc付费专栏左侧入口","dest":"https://blog.csdn.net/youdaotech/category_10871913.html","ab":"new"}'>
+                    <img src="https://img-blog.csdnimg.cn/20201014180756916.png?x-oss-process=image/resize,m_fixed,h_64,w_64" alt="" onerror="this.src='https://img-blog.csdnimg.cn/20201014180756922.png?x-oss-process=image/resize,m_fixed,h_64,w_64'">
+                    <span class="title oneline">
+                        <span class="text">有道技术干货</span>
+                    </span>
+                    <span class="count float-right">13篇</span>
+                </a>
+            </li>
+            <li class="">
+                <a class="clearfix" target="_blank" href="https://blog.csdn.net/youdaotech/category_11002870.html" data-report-click='{"mod":"popu_537","spm":"1001.2101.3001.4137","strategy":"pc付费专栏左侧入口","dest":"https://blog.csdn.net/youdaotech/category_11002870.html","ab":"new"}'>
+                    <img src="https://img-blog.csdnimg.cn/20201014180756926.png?x-oss-process=image/resize,m_fixed,h_64,w_64" alt="" onerror="this.src='https://img-blog.csdnimg.cn/20201014180756922.png?x-oss-process=image/resize,m_fixed,h_64,w_64'">
+                    <span class="title oneline">
+                        <span class="text">有道技术团队</span>
+                    </span>
+                    <span class="count float-right">2篇</span>
+                </a>
+            </li>
+            <li class="">
+                <a class="clearfix" target="_blank" href="https://blog.csdn.net/youdaotech/category_10890796.html" data-report-click='{"mod":"popu_537","spm":"1001.2101.3001.4137","strategy":"pc付费专栏左侧入口","dest":"https://blog.csdn.net/youdaotech/category_10890796.html","ab":"new"}'>
+                    <img src="https://img-blog.csdnimg.cn/20201014180756757.png?x-oss-process=image/resize,m_fixed,h_64,w_64" alt="" onerror="this.src='https://img-blog.csdnimg.cn/20201014180756922.png?x-oss-process=image/resize,m_fixed,h_64,w_64'">
+                    <span class="title oneline">
+                        <span class="text">有道技术沙龙</span>
+                    </span>
+                    <span class="count float-right">2篇</span>
+                </a>
+            </li>
+            <li class="">
+                <a class="clearfix" target="_blank" href="https://blog.csdn.net/youdaotech/category_10984695.html" data-report-click='{"mod":"popu_537","spm":"1001.2101.3001.4137","strategy":"pc付费专栏左侧入口","dest":"https://blog.csdn.net/youdaotech/category_10984695.html","ab":"new"}'>
+                    <img src="https://img-blog.csdnimg.cn/20201014180756780.png?x-oss-process=image/resize,m_fixed,h_64,w_64" alt="" onerror="this.src='https://img-blog.csdnimg.cn/20201014180756922.png?x-oss-process=image/resize,m_fixed,h_64,w_64'">
+                    <span class="title oneline">
+                        <span class="text">在有道 | 系列专访</span>
+                    </span>
+                    <span class="count float-right">1篇</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
+<div id="asideNewComments" class="aside-box">
+    <h3 class="aside-title">最新评论</h3>
+    <div class="aside-content">
+        <ul class="newcomment-list">
+            <li>
+                <a class="title text-truncate" target="_blank" href="https://blog.csdn.net/youdaotech/article/details/115351237#comments_16717478" data-report-click='{"mod":"popu_542","spm":"1001.2101.3001.4231","dest":"https://blog.csdn.net/youdaotech/article/details/115351237#comments_16717478","ab":"new"}' data-report-view='{"mod":"popu_542","spm":"1001.2101.3001.4231","dest":"https://blog.csdn.net/youdaotech/article/details/115351237#comments_16717478","ab":"new"}'>有道云笔记新版编辑器架构设计（上）</a>
+                <p class="comment ellipsis">
+                    <a href="https://blog.csdn.net/weixin_44622241" class="user-name" target="_blank">-》代码: </a>
+                    <span class="code-comments">大佬的代码就是有深度🤣【xx行代码教你实现富文本编辑器】</span>
+                </p>
+            </li>
+            <li>
+                <a class="title text-truncate" target="_blank" href="https://blog.csdn.net/youdaotech/article/details/114690688#comments_15923277" data-report-click='{"mod":"popu_542","spm":"1001.2101.3001.4231","dest":"https://blog.csdn.net/youdaotech/article/details/114690688#comments_15923277","ab":"new"}' data-report-view='{"mod":"popu_542","spm":"1001.2101.3001.4231","dest":"https://blog.csdn.net/youdaotech/article/details/114690688#comments_15923277","ab":"new"}'>网易 Duilib：功能全面的开源桌面 UI 开发框架</a>
+                <p class="comment ellipsis">
+                    <a href="https://blog.csdn.net/xiaoyu21520" class="user-name" target="_blank">顾小白xx: </a>
+                    <span class="code-comments">你们有没有社区专门 解答库的使用问题啊。我有个问题不知道去哪里问<img src="https://g.csdnimg.cn/static/face/monkey2/013.png" alt='表情包' ></span>
+                </p>
+            </li>
+            <li>
+                <a class="title text-truncate" target="_blank" href="https://blog.csdn.net/youdaotech/article/details/114690688#comments_15920805" data-report-click='{"mod":"popu_542","spm":"1001.2101.3001.4231","dest":"https://blog.csdn.net/youdaotech/article/details/114690688#comments_15920805","ab":"new"}' data-report-view='{"mod":"popu_542","spm":"1001.2101.3001.4231","dest":"https://blog.csdn.net/youdaotech/article/details/114690688#comments_15920805","ab":"new"}'>网易 Duilib：功能全面的开源桌面 UI 开发框架</a>
+                <p class="comment ellipsis">
+                    <a href="https://blog.csdn.net/youdaotech" class="user-name" target="_blank">有道技术团队: </a>
+                    <span class="code-comments">谢谢~同时我们也希望 NIM_Duilib 越来越好！</span>
+                </p>
+            </li>
+            <li>
+                <a class="title text-truncate" target="_blank" href="https://blog.csdn.net/youdaotech/article/details/114690688#comments_15920322" data-report-click='{"mod":"popu_542","spm":"1001.2101.3001.4231","dest":"https://blog.csdn.net/youdaotech/article/details/114690688#comments_15920322","ab":"new"}' data-report-view='{"mod":"popu_542","spm":"1001.2101.3001.4231","dest":"https://blog.csdn.net/youdaotech/article/details/114690688#comments_15920322","ab":"new"}'>网易 Duilib：功能全面的开源桌面 UI 开发框架</a>
+                <p class="comment ellipsis">
+                    <a href="https://blog.csdn.net/youdaotech" class="user-name" target="_blank">有道技术团队: </a>
+                    <span class="code-comments">目前来说肯定是的，我们也希望 NIM_Duilib 越来越好，希望更多开发者们和我们一起维护起来~</span>
+                </p>
+            </li>
+            <li>
+                <a class="title text-truncate" target="_blank" href="https://blog.csdn.net/youdaotech/article/details/114690688#comments_15905122" data-report-click='{"mod":"popu_542","spm":"1001.2101.3001.4231","dest":"https://blog.csdn.net/youdaotech/article/details/114690688#comments_15905122","ab":"new"}' data-report-view='{"mod":"popu_542","spm":"1001.2101.3001.4231","dest":"https://blog.csdn.net/youdaotech/article/details/114690688#comments_15905122","ab":"new"}'>网易 Duilib：功能全面的开源桌面 UI 开发框架</a>
+                <p class="comment ellipsis">
+                    <a href="https://blog.csdn.net/xiaoyu21520" class="user-name" target="_blank">顾小白xx: </a>
+                    <span class="code-comments">一直在使用 DUlib 一直在熟读redrain大神的文章包括酷狗播放器的例子，确实受益匪浅希望NIM_Duilib能够一直走下去</span>
+                </p>
+            </li>
+        </ul>
+    </div>
+</div>
+<div id="asideArchive" class="aside-box" style="display:block!important; width:300px;">
+    <h3 class="aside-title">最新文章</h3>
+    <div class="aside-content">
+        <ul class="inf_list clearfix">
+            <li class="clearfix">
+            <a href="https://blog.csdn.net/youdaotech/article/details/117961795" target="_blank" data-report-click='{"mod":"popu_382","spm":"1001.2101.3001.4136","dest":"https://blog.csdn.net/youdaotech/article/details/117961795","ab":"new"}' data-report-view='{"mod":"popu_382","dest":"https://blog.csdn.net/youdaotech/article/details/117961795","ab":"new"}'>网易有道开源EMLL：高性能端侧机器学习计算库，大幅提高计算性能</a>
+            </li>
+            <li class="clearfix">
+            <a href="https://blog.csdn.net/youdaotech/article/details/117561903" target="_blank" data-report-click='{"mod":"popu_382","spm":"1001.2101.3001.4136","dest":"https://blog.csdn.net/youdaotech/article/details/117561903","ab":"new"}' data-report-view='{"mod":"popu_382","dest":"https://blog.csdn.net/youdaotech/article/details/117561903","ab":"new"}'>有道精品课全链路测试的改进和思考</a>
+            </li>
+            <li class="clearfix">
+            <a href="https://blog.csdn.net/youdaotech/article/details/117068147" target="_blank" data-report-click='{"mod":"popu_382","spm":"1001.2101.3001.4136","dest":"https://blog.csdn.net/youdaotech/article/details/117068147","ab":"new"}' data-report-view='{"mod":"popu_382","dest":"https://blog.csdn.net/youdaotech/article/details/117068147","ab":"new"}'>网易云课堂 Service Worker 运用与实践</a>
+            </li>
+        </ul>
+        <div class="archive-bar"></div>
+        <div class="archive-box">
+                <div class="archive-list-item"><a href="https://blog.csdn.net/youdaotech/article/month/2021/06" target="_blank" data-report-click='{"mod":"popu_538","spm":"1001.2101.3001.4138","ab":"new","dest":""}'><span class="year">2021年</span><span class="num">18篇</span></a></div>
+        </div>
+    </div>
+</div>
+	<div id="footerRightAds" class="isShowFooterAds">
+		<div class="aside-box">
+			<div id="kp_box_57" data-pid="57"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- PC-博客详情页-左下视窗（300*600） -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-1076724771190722"
+     data-ad-slot="1173711872"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script><img class="pre-img-lasy" data-src="https://kunyu.csdn.net/1.png?p=57&a=2488&c=0&k=&spm=1001.2101.3001.5001&d=1&t=3&u=4a36a5557a364de194cd97e5d8563297" style="display: block;width: 0px;height: 0px;"></div>
+		</div>
+	</div>
+    <!-- 详情页显示目录 -->
+<!--文章目录-->
+<div id="asidedirectory" class="aside-box">
+    <div class='groupfile' id="directory">
+        <h3 class="aside-title">目录</h3>
+        <div class="align-items-stretch group_item">
+            <div class="pos-box">
+            <div class="scroll-box">
+                <div class="toc-box"></div>
+            </div>
+            </div>
+        </div>
+    </div>
+</div>
+</aside>
+<script>
+	$("a.flexible-btn").click(function(){
+		$(this).parents('div.aside-box').removeClass('flexible-box');
+		$(this).parents("p.text-center").remove();
+	})
+</script>
+<script type="text/javascript"  src="https://g.csdnimg.cn/user-tooltip/2.4/user-tooltip.js"></script>
+<script type="text/javascript"  src="https://g.csdnimg.cn/user-medal/1.0.7/user-medal.js"></script>    </div>
+<div class="recommend-right  align-items-stretch clearfix" id="rightAside" data-type="recommend">
+    <aside class="recommend-right_aside">
+        <div id="recommend-right" >
+                        <div class='flex-column aside-box groupfile' id="groupfile">
+                <div class="groupfile-div">
+                <h3 class="aside-title">目录</h3>
+                <div class="align-items-stretch group_item">
+                    <div class="pos-box">
+                        <div class="scroll-box">
+                            <div class="toc-box"></div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+            <div class='aside-box kind_person d-flex flex-column'>
+                    <h3 class="aside-title">分类专栏</h3>
+                    <div class="align-items-stretch kindof_item" id="kind_person_column">
+                        <div class="aside-content">
+                            <ul>
+                                <li class="">
+                                    <a class="clearfix" target="_blank" href="https://blog.csdn.net/youdaotech/category_10871913.html" data-report-click='{"mod":"popu_537","spm":"1001.2101.3001.4137","strategy":"pc付费专栏左侧入口","dest":"https://blog.csdn.net/youdaotech/category_10871913.html","ab":"new"}'>
+                                        <img src="https://img-blog.csdnimg.cn/20201014180756916.png?x-oss-process=image/resize,m_fixed,h_64,w_64" alt="" onerror="this.src='https://img-blog.csdnimg.cn/20201014180756922.png?x-oss-process=image/resize,m_fixed,h_64,w_64'">
+                                        <span class="title oneline">
+                                            <span class="text">有道技术干货</span>
+                                        </span>
+                                        <span class="count float-right">13篇</span>
+                                    </a>
+                                </li>
+                                <li class="">
+                                    <a class="clearfix" target="_blank" href="https://blog.csdn.net/youdaotech/category_11002870.html" data-report-click='{"mod":"popu_537","spm":"1001.2101.3001.4137","strategy":"pc付费专栏左侧入口","dest":"https://blog.csdn.net/youdaotech/category_11002870.html","ab":"new"}'>
+                                        <img src="https://img-blog.csdnimg.cn/20201014180756926.png?x-oss-process=image/resize,m_fixed,h_64,w_64" alt="" onerror="this.src='https://img-blog.csdnimg.cn/20201014180756922.png?x-oss-process=image/resize,m_fixed,h_64,w_64'">
+                                        <span class="title oneline">
+                                            <span class="text">有道技术团队</span>
+                                        </span>
+                                        <span class="count float-right">2篇</span>
+                                    </a>
+                                </li>
+                                <li class="">
+                                    <a class="clearfix" target="_blank" href="https://blog.csdn.net/youdaotech/category_10890796.html" data-report-click='{"mod":"popu_537","spm":"1001.2101.3001.4137","strategy":"pc付费专栏左侧入口","dest":"https://blog.csdn.net/youdaotech/category_10890796.html","ab":"new"}'>
+                                        <img src="https://img-blog.csdnimg.cn/20201014180756757.png?x-oss-process=image/resize,m_fixed,h_64,w_64" alt="" onerror="this.src='https://img-blog.csdnimg.cn/20201014180756922.png?x-oss-process=image/resize,m_fixed,h_64,w_64'">
+                                        <span class="title oneline">
+                                            <span class="text">有道技术沙龙</span>
+                                        </span>
+                                        <span class="count float-right">2篇</span>
+                                    </a>
+                                </li>
+                                <li class="">
+                                    <a class="clearfix" target="_blank" href="https://blog.csdn.net/youdaotech/category_10984695.html" data-report-click='{"mod":"popu_537","spm":"1001.2101.3001.4137","strategy":"pc付费专栏左侧入口","dest":"https://blog.csdn.net/youdaotech/category_10984695.html","ab":"new"}'>
+                                        <img src="https://img-blog.csdnimg.cn/20201014180756780.png?x-oss-process=image/resize,m_fixed,h_64,w_64" alt="" onerror="this.src='https://img-blog.csdnimg.cn/20201014180756922.png?x-oss-process=image/resize,m_fixed,h_64,w_64'">
+                                        <span class="title oneline">
+                                            <span class="text">在有道 | 系列专访</span>
+                                        </span>
+                                        <span class="count float-right">1篇</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </aside>
+</div>
+
+</div>
+<div class="mask-dark"></div>
+<script type="text/javascript">
+    var timert = setInterval(function(){
+      sideToolbar = $(".csdn-side-toolbar");
+      if (sideToolbar.length > 0) {
+        sideToolbar.css('cssText','bottom:64px !important;')
+        clearInterval(timert);
+      }
+    }, 200);
+</script>
+<script>
+    var articleId = 117323516;
+    var commentscount = 0;
+    var curentUrl = "https://blog.csdn.net/youdaotech/article/details/117323516";
+    var myUrl = "https://my.csdn.net/";
+    var highlight = [];
+    var isRecommendModule = true;
+    var isBaiduPre = false;
+    var baiduCount = 0;
+    var share_card_url = "https://blog.csdn.net/youdaotech/article/shareArticleCardPage?article_id=117323516"
+	var articleType = 1;
+    var baiduKey = "从源码中来，到业务中去，React性能优化终极指南";
+    var userNewReport = false;
+    var needInsertBaidu = false;
+    var recommendRegularDomainArr = ["blog.csdn.net/.+/article/details/","download.csdn.net/download/","edu.csdn.net/course/detail/","ask.csdn.net/questions/","bbs.csdn.net/topics/","www.csdn.net/gather_.+/"]
+    var codeStyle = "";
+    var baiduSearchType = "title";
+    var canRead = true;
+    var blogMoveHomeArticle = false;
+    var showPcWindowAd = false;
+    var showSearchText = "";
+    var linkPage = true;
+    var articleSource = 1;
+    var articleReport = '{"pid": "blog", "spm":"1001.2101"}';
+    var isShowToQuestion = false;
+</script>
+<script src="https://csdnimg.cn/public/sandalstrap/1.4/js/sandalstrap.min.js"></script>
+<div class="skin-boxshadow"></div>
+<div style="display:none;">
+	<img src="" onerror='setTimeout(function(){if(!/(csdn.net|iteye.com|baiducontent.com|googleusercontent.com|360webcache.com|sogoucdn.com|bingj.com|baidu.com)$/.test(window.location.hostname)){window.location.href="\x68\x74\x74\x70\x73\x3a\x2f\x2f\x77\x77\x77\x2e\x63\x73\x64\x6e\x2e\x6e\x65\x74"}},3000);'>
+</div>
+</body>
+<script src="https://csdnimg.cn/release/blogv2/dist/components/js/pc_wap_highlight-db1e81323a.min.js" type="text/javascript"></script>
+<script src="https://csdnimg.cn/release/blogv2/dist/components/js/pc_wap_common-906586e915.min.js" type="text/javascript"></script>
+<link rel="stylesheet" href="https://csdnimg.cn/release/blog_editor_html/release1.6.12/ckeditor/plugins/codesnippet/lib/highlight/styles/atom-one-light.css">
+<script>
+ // 全局声明
+ if (window.csdn === undefined) {
+      window.csdn = {};
+    }
+    window.csdn.sideToolbar = {
+        options: {
+            report:{
+                isShow: true,
+            },
+            qr: {
+                isShow: false,
+            },
+            guide: {
+                isShow: true
+            }
+        }
+    }
+    $(function(){
+        $(document).on('click',"a.option-box[data-type='report']",function() {
+            window.csdn.userLogin.loadAjax(function(res){
+                if(userNewReport){
+                    showReportNew(false,articleTitles);
+                }else{
+                    showReport(false,articleTitles);
+                }
+            })
+        });
+    })
+</script>
+<script src="https://g.csdnimg.cn/user-ordercart/1.0.6/user-ordercart.js" type="text/javascript"></script>
+<script src="https://csdnimg.cn/release/download/old_static/js/qrcode.js"></script>
+<script src="https://csdnimg.cn/release/blogv2/dist/pc/js/common-d56939e7f0.min.js" type="text/javascript"></script>
+<script src="https://csdnimg.cn/release/blogv2/dist/pc/js/detail-2dc339baaa.min.js" type="text/javascript"></script>
+<script src="https://csdnimg.cn/release/blogv2/dist/pc/js/column-78261cfea6.min.js" type="text/javascript"></script>
+<script src="https://g.csdnimg.cn/side-toolbar/3.0/side-toolbar.js" type="text/javascript"></script>
+<script src="https://g.csdnimg.cn/common/shop-window-v2/shop-window.js" type="text/javascript"></script>
+<script>
+    var shopUserName = username;
+    ;$(function(){
+        window.csdn.shop.show({
+            userName: shopUserName,
+            topEl: $("#csdn-shop-window-top"),
+            bottomEl: $("#csdn-shop-window"),
+            callBack: function(res){
+                if(!res.top){
+                    $("#blogColumnPayAdvert").css({"display":"block"})
+                    $("#csdn-shop-window-top").css({"display":"none"})
+                }
+            }
+        })
+    })
+</script>
+<script src="https://g.csdnimg.cn/copyright/1.0.3/copyright.js" type="text/javascript"></script>
+<script>
+    $(".MathJax").remove();
+    if ($('div.markdown_views pre.prettyprint code.hljs').length > 0) {
+        $('div.markdown_views')[0].className = 'markdown_views';
+    }
+</script>
+<script type="text/javascript" src="https://csdnimg.cn/release/blog_mathjax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+            "HTML-CSS": {
+                    linebreaks: { automatic: true, width: "94%container" },
+                    imageFont: null
+            },
+            tex2jax: {
+                preview: "none",
+                ignoreClass:"title-article"
+            },
+            mml2jax: {
+                preview: 'none'
+            }
+    });
+</script>
+<script type="text/javascript" crossorigin src="https://g.csdnimg.cn/login-box/1.1.4/login-box.js"></script></html>

@@ -1,0 +1,2320 @@
+﻿
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <link rel="canonical" href=""/>
+    <meta name="applicable-device" content="pc">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="renderer" content="webkit"/>
+    <meta name="force-rendering" content="webkit"/>
+    <meta name="csdn-baidu-search" content="{}">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="report" content='{"pid":"tags","spm":"1000.2123"}'>
+    <meta name="referrer" content="always">
+    <meta http-equiv="Cache-Control" content="no-siteapp"/>
+    <link rel="alternate" media="handheld" href="#"/>
+    <meta name="shenma-site-verification" content="5a59773ab8077d4a62bf469ab966a63b_1497598848">
+    <meta name="csdn-baidu-search" content=''>
+    <title>c++ - CSDN</title>
+    <link href="https://g.csdnimg.cn/static/logo/favicon32.ico" rel="shortcut icon" type="image/x-icon"/>
+    <meta name="keywords" content="c++">
+    <meta name="description" content="csdn已为您找到关于c++相关内容，包含c++相关文档代码介绍、相关教程视频课程，以及相关c++问答内容。为您解决当下相关问题，如果想了解更详细c++内容，请点击详情链接进行了解，或者注册账号与客服人员联系给您提供相关内容的帮助，以下是为您准备的相关内容。">
+    <meta name="csdnFooter" content='{"type": "3", "el": ".persion_article"}'>
+    <link rel="stylesheet" href="//csdnimg.cn/public/common/libs/bootstrap/css/bootstrap.css">
+    <script src="https://g.csdnimg.cn/??lib/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://g.csdnimg.cn/collection-box/2.0.4/collection-box.js"></script>
+    <script src="https://g.csdnimg.cn/login-box/1.1.4/login-box.js" type="text/javascript"></script>
+    <script>
+        window.csdn = window.csdn ? window.csdn : {};
+        window.csdn.toolbarIsBlack = false;
+    </script>
+    <script src="//g.csdnimg.cn/fixed-sidebar/1.1.6/fixed-sidebar.js" type="text/javascript"></script>
+    <script src="//g.csdnimg.cn/common/csdn-report/report.js" type="text/javascript"></script>
+    <script src="//g.csdnimg.cn/baidu-search/1.0.9/baidu-search.js" type="text/javascript"></script>
+    <style>
+        .MathJax, .MathJax_Message, .MathJax_Preview {
+            display: none
+        }
+    </style>
+</head>
+<body>
+<link rel="stylesheet" href="https://csdnimg.cn/public/common/toolbar/content_toolbar_css/content_toolbar.css">
+<script id="toolbar-tpl-scriptId" src="https://g.csdnimg.cn/common/csdn-toolbar/csdn-toolbar.js" type="text/javascript">
+</script>
+
+<link rel="stylesheet" href='https://csdnimg.cn/release/aggregate/css/pc-949af63466.min.css'>
+<link rel="stylesheet" href='https://csdnimg.cn/release/aggregate/css/pc_common-c5dae373c3.min.css'>
+<style type="text/css">
+    .qa-item .qa-item-ft .icon {
+        display: inline-block;
+        width: 16px;
+        height: 16px;
+        vertical-align: sub;
+        margin-right: 6px;
+        background-repeat: no-repeat;
+        background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABgCAYAAACtxXToAAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAQKADAAQAAAABAAAAYAAAAACHkG20AAAPT0lEQVR4Ae1cfYxU1RW/583MsghlAwIqEm1VqB9VQLA1JTQgpBTLAgvsNsIqHzs7a9I/TCVSVGwxpAjWUmvSpju7sEsQMPshrCttapGipU1tLIgGJH6laalo3LJUhP2Yee/2d+6b9/bNzJuZN7Mz2ybMzb5999177vndc+73ufeOEEV3eWuAchW/vnn/jdQf2SZJzAQT/jvs92kb165d9lGuPLNJJ5csuVHo+jakmSmIWI7DIhDYSO3tWeHnpIBwuGUqRD4qpRiRkOkuEv6ZodDS9xLC8/oJ4adC+KNgmoQv/P6ZtH+/Z3wtp5yRqFfCk9grhvsmBPwl10GTh8BrrBTR7TnxzCaRrteDPFF45jAWiskKP+sasGvXi1f29kW7UOnOBfzjrl2zZk4vI+/a1XJtbx+9h/DhckTp+LoV5V0cnm8nKyquFNFoOt5SjBw5nvbtS0djZyvrGtDfH53CqVEDTljC8/eqVVX/QuhpKSVpF3uu57CCuKiJn4Y3iR7v+FkrwBA0TYGTOJ2YCVSnMxwmNXFtYlzevimGn46hYXjGz1oBKPpVjE1S/D45D3RJhUm6IjkubyEKPwM3z/hZKSDc2HI/gG9HO/940qRxncmZkNeoME2eTY4bfAh6//tRALdn5OTzecb3Z2QWI6hvartZRI1n1aek9XPmzIkmppWCrkIDEKRr3fWdnXYpjO7pkVVVVT2J9Nl8y2XLbhb9/SZ+poS63i1DIRtfdHdLam11xc84CrS0tPi6P6elJOWz6PgmoPT3h2qrlrrlIdzQwnODmW5xCOvC3KF1dJlYD2V8kYImKVhWVvpEXx/jPYvSn5BE4D0A+NQqhg1bD2XY+EkKqH/zzQAd+/tkIjldCvkt8F8IoVCyarp3KBAYV+7s/Z34jY1t03Qpd5CQkzEY2LzBSwOPUkVL4nVx9fAFdeXlZn/hZAA/Si4gzp6dLDRtOgRW+Hgr/ATS3D6JgH/1AgqHFb6dyZ07W26N6iKMjH8D2UhsGqc0Er8IBisbMes0ckE2lWPsQwv5Kmm0LRSs3ODkIxcvvhWChvEAXyTiO0kH79e0bdTRofDtTjAaFc1m9ZUayu4DruoohYf9Pv/UulDVbbW1VeFcheccB4PLj/uIvs9+acjv8TvOGUYzhOfmU1jhGVQO4A+AkbgTpSNGXDFydHX1vZ/HZS5PH6NGyTe6z6Mpkbg6iSUR8JGBoXBS2vh2DUC2lH/lygUXCpWH8+e165k35PwkCUNi+jRUjsjGTwuKXv0gP3nLlya4ffPq9a+eeGragyCeBNp/eKL3TmTjp1UASupefrzzzUQp72YKDBB/yUSp4qdNa6CXXvoA/lc80XslcuDbCuBFjNf0udKh81MK8JPhpoAkfNq0yRxxchx5UuZT02x8WwEWMapnQXoiTKhGAuM2PBFNG3fcwhvyN1FElJXZ+EkKKFSGui/47gJvTCfEW6kmUoXCjuMr5VvU3NxrhQ2ZAkgaqvqjU7Orn5WJIX07qj/jDpkCMMdQIwDeb3gVWG7aZOYvn0OklHH4AxMhl1xhwvIbjAJ56hNiI0CJ33sNOH68Vi5a9ComDt92yV5uQQk1IK0CsOr7bm4o8amamvZ/uT8SuQqhXXWrKz6Mj03zZRi/ThObS1QXHTgQhz8kTaBfj86L5Tau+uUiwaDSECXh2zWAhz+eC/ByODR9uu4BKGPTaG4+Mqxf//d3wHk7E2ukvZCGL5MkzQXS0OcSlYRvA9aHW94Gx8zmplxgkQYK7qgNLq9INc9AW38bbb1g+MhAh+joSMK3mwAFfDXI3EnklWdfaR8WwssDsaPoSN8jQRsm3TR2eSrhlU79/hpk8iQeGJ4zPJhNI42XJwpevEu0Qdx5Z3p8lYniv6IGihq43DRgjwIseEND+0QpjKcx+5uNPsbc5MibRugsOsQjJLT1tbXLzrixlUuXTsTG59OIm40RIb/4RLxZcgTb5+vpxRdtfFsBpvD6CQg/xi1z+QqDEs6R8E1JVIISPhI5AZyC4oP/ORykmGIpwZ4IxUp+DIas3xJpocQMDlYBSsHSgNldLhBkcCmviONplnyhhWfIMbFapvDteYBZ7XnCkn/hGZUVyrzZb2Gx3+FmO/yF9tpYtgKsNp/vkndKMsDbpX3nu807gRP9DiyHAhKpLo/vogIuj3JOLWWxBqTWzeURU6wBl0c5p5bSngmmJjFjeJMUExhP+4RsTc6XQdXOF2+U8l6htV1mR8R7lCkd1mTh0aBakCYARbG1Jr9OylczCc+Aiga0XsE914C8l6jXHFp0EEqWl7+izGVWmNubN1Gy2EfwrAA3rCEOuw54QV5I5NMVpAnkM4OF5lVUQKE1/P/Ov1gDBkpI2cyUXXAgLL8+tgqZHE2sOO6mzS4uqGAfDiy7BrDBkgElzFYDGc1fFiyTGHO0sBK4H0n4LuSnjWUPg2ytxTHv+Wyzk1L/J/YKXTJApzWS1Tg1+jcrsqnpD6URvetxaYgay6pkxTnfhjT3W02jKLASHay1IhKZj+BC2wXPsWXYgrdrgLLZwVqL/bt9KKMU5+3lzRiGf2YlbmxsnRuJfvYOTn9tTCe8Sc9mcdrnZhHmeGWlhbUW1WMfnhT4FnIOb+bJvB0WYYXrldXOne03RKL6h2DyUWmJ7+t9/fp21JYHYunf0cjHlmTvpz+8AsfocF/gBtwXiDvcYLMgegdtN0SdnVnj203AZpbJI+V43Bo7DbKxeHpw8nuznPqVZ2pnzIhkSpr3eKIe8NyM4+/P4Ph7TvieFaDrujUH5fN+I7GjckiWBB4MZXPkZTAa6O+38E0uRIdwmv3BxCMv2UJ4VoBRhh2d/9AFVPs+HKt+OBSs2p0t2KDoS0vP4ebIBVT1PuHzPQzBhxafM49LFeOcd4EGJVAOiXF9ZlzcXaAceBSTFDVQ1EBRA0UNODRgH5BwhLl6MfxpDU2ts0RUVOBu6C2Y+vLKbiKmt+Ahz8B/BuHvYmw+MPpL+uu4HOnlsKUrllugsvaeODELvw9QgaHwFsxIJ+I9EW9cUwQ+0Rm838X7AC5Hvo7LkZ7wMyqgfm/nWHGxdwNQqrEO4PO+Xhx+SULsIRr2VG3t4k+9JEhFI++7D/gXNyC+GgJ6xoci9iDNU7hykxY/pQJ4ldcf/WwdDNy8chrFGYSu38V0rIN8vlclyTN+I4DfDGDXNwGnbCdirngPasMipPkah4L+ImrF9uHDRm174IH5FznMq5OrV5fizu862PdtfK9pHXQXkYntuCGyjXbvdsV3VUBjY8tNhhStKPGpMWYHfZr2BF9+dDBP6W1oaLvDkMaTIFgSIzoV8IvKtWurTqVM5IjAsdmb8NmKErfwHbE5eIlOQRGVuC2ahJ+kgHC4dSH2NZ4HTBlK8AOs8lYHg8v+lAOsCDe13yUjejPS3qpqA9GaumBlazpesP0vRGafh/Bl6ehyiOPasAZNIg4/TgG431uuG0Y7mAdA3Dpi+IjgYG+RqqnzJ72/gkCroAQdPy+xIhRa7mZtEbg/XA66djyBHATMnIQI+HIFls02vq0ANm7ohjiINjwMh9a31tVWPerGEaMBwbwVRC1hCxDfAoOjkzhdtgP2AL5cHb9qMwkEatZGpNkM2qjQ5JK6YBWwBhx+HGEuengOGzYQWhAfH6Begpqg8JUCGho6rjJk/9sQaDxWetux0lvnBl2/u/0a6tWfR9+Azi7ZoYQPy1Jfdd39y1wtOvj9oSehnR+BLu6sINo89+58XH58MleXEKI/QoifYlX4porV9RlI+wieWS7UbkH2WUFlEjNk3w4WHqXzSm1N5SNuKbjkLeFRymdw+WEF/4YQP+znMFaMSeN+CTMUqvoxNP4S6MYYArfFB9wOz8Jr2hYcfZ+NDq0TZrSz6oGfwzAH2TLAMq1vDOyPzUxBjY3tM3VDPwoBzvt9cjJ66s/ckobDbbU4TMlX6CG8nBIMVp1z0mHkGGNIwklTOREG1hDaeYMz3vLv2fPy6C8u9bwPga/EPf05wc7dEfiPWvFp31zyLHyKLXI1WTp27IjnmuDzzdEMQ/8Bg6J9bkslfCwebR4aE7Q+UXgO5zCOY7/ZP7Av2a1cubAbTWArxxhSPoTMKvxkSpcQVPtUwjO1iuOm4dXp+kMaJirfZHof+falT2d2eEYpHUlFNxBndY7ulLJEmr0wibvRlhW+O2VCqNXmE4LjPr3QDCS42zaL6yW2zW8gutA+TCcLDZGWP0Ys3OWVf1ZEfQmHl5NSqvtEQuuVs5OiYgEDcSZtKjrRR5VmHG5xyhh+SmJHBPf2mZwXGosHbpFq0oefp4FD+/0h2/ysuMQ3j/Mchvb9NHd4ifEcxnEcbtEm0vA3d4IQmhc3aHe+57BLo/DVd6Z/GOrs67QutCqOh0Ovjug5NQ+wDkChc/pdbbByAXr6pKqpJkCNrYfUUIeRgDs8q81zybPwagTAXAA85rnx4Hxhy20/Xkt4zoBjN3M5DNPfg3jdy/6Mjoe6adOeSOwMlfDHj2/G4umxjDyYgOgwJkNz/ewP+EVNf0QNYfOxkOFSTNIiC4SJUHVsnL8HAu8VvC0Bx3fs2LFQPBFKKXxD6yaU/hKQdmOLbJVKxP9KS2tg8j6BuMwTIRbw2LFZmDbHT4SOHctmItSNmqfw7alweGf7PJ6KooRLIMmWutrKx+0MOjyqJuQwFW5oaH0Mw95PoKYoQCtCocqXHWx5HTAPCjiIp8QZXgB/FDwrsB5Q+LYCGCi8o2URNnHb4A2gFFt8WkmwpmbxoH5VhhdD9GnPL7F7vBo1RIdyq/EjSi8wXqLDlHgRwtqghMIthmBYQdW38eMUwBmKrQh5OQwjCL1PfrE6tLbSHCmYIAu3Y0fbDN2Qzag1WDTRJfQba1KtBC22akVoGDF8KzQv70vgssa5EmSuSQrgwKamtkmRqGxDxu9QREQvo1SewFz+Lf7O5OqbWm4XUeL2vtSkpdMQfjmEP5kpLcdjJ3gS5upcExS+lzQZaHgzdzmET8J3VQAzw4+eDD9/ntahs+MOEbVBuVMQpEP4tcM+HKLAyvVjM9g0iUFhc2BJWoQwdQkaVZ6NED8vLRm1NWuTWGXlcHSMMMnF4Ztw3v8rfJjEtmZlEnPyZ6MoXep5VBpUjbLJ3Eubifmn6/ZqomRLnoyibJtgo6h3fIFfvEVnjvaem1HUqQT2o3Q9mcVxTrWjrEy89j8zi8Noi2H1Na9m8UQ5i99FDRQ1cHlp4L8KhCqc0FvyvwAAAABJRU5ErkJggg==);
+        background-size: 32px 48px;
+    }
+</style>
+<script type="text/javascript">
+    var mod_page = "1"
+    var mod_keywords = "c++"
+
+    var insert_baidu_first =
+    true
+    var insert_baidu_count = 10
+
+        //搜索热词
+        window.toolbarSearchExt = JSON.stringify({
+            tag: [mod_keywords],
+            title: "",
+            landingWord: [],
+            queryWord: ""
+        })
+</script>
+
+    <script>
+        var isContainBaidu = "1";
+    </script>
+
+
+<div class="main-tag-container">
+    <div class="con-l-tag">
+        <div class="top-banner hide"></div>
+            <script>
+                window.baiduCollection = {
+                    title: "c++ - CSDN",
+                    desc: "csdn已为您找到关于c++相关内容，包含c++相关文档代码介绍、相关教程视频课程，以及相关c++问答内容。为您解决当下相关问题，如果想了解更详细c++内容，请点击详情链接进行了解，或者注册账号与客服人员联系给您提供相关内容的帮助，以下是为您准备的相关内容。",
+                }
+            </script>
+            <div class="baike-container">
+                <div class="baike-view">
+                    <div class="baike-l">
+                            <img class="inner-img" src="https://img-search.csdnimg.cn/bkimg/730e0cf3d7ca7bcba0c4642cbc096b63f624a872/aggregate_page" alt="">
+                    </div>
+                    <div class="baike-r">
+                        <div class="b-title">
+                            <span>c++</span>
+                            <a class="collect-a" href="javascript:;">订阅</a>
+                        </div>
+                        <div class="b-description baike-intro" id="baike-intro">
+                            <span>C++是C语言的继承，它既可以进行C语言的过程化程序设计，又可以进行以抽象数据类型为特点的基于对象的程序设计，还可以进行以继承和多态为特点的面向对象的程序设计。C++擅长面向对象程序设计的同时，还可以进行基于过程的程序设计，因而C++就适应的问题规模而论，大小由之。
+[1] 
+C++不仅拥有计算机高效运行的实用性特征，同时还致力于提高大规模程序的编程质量与程序设计语言的问题描述能力。
+[2]</span>
+                            <a href="javascript:;">
+                                <span>展开全文</span>
+                                <img src='https://csdnimg.cn/release/aggregate/img/arrow-down@2x.png' alt="">
+                            </a>
+                        </div>
+                        <div class="b-description baike-all" id="baike-all">
+                            <span>C++是C语言的继承，它既可以进行C语言的过程化程序设计，又可以进行以抽象数据类型为特点的基于对象的程序设计，还可以进行以继承和多态为特点的面向对象的程序设计。C++擅长面向对象程序设计的同时，还可以进行基于过程的程序设计，因而C++就适应的问题规模而论，大小由之。
+[1] 
+C++不仅拥有计算机高效运行的实用性特征，同时还致力于提高大规模程序的编程质量与程序设计语言的问题描述能力。
+[2]</span>
+                        </div>
+                    </div>
+                </div>
+                        <div class="basic-info-wrap">
+                            <div class="title-basic">信息</div>
+                            <div class="basic-info">
+                                    <dl class="basicInfo-block basicInfo-right">
+                                            <dt>外文名</dt>
+                                            <dd>The C++ Programming Language/c plus plus</dd>
+                                            <dt>类    别</dt>
+                                            <dd>计算机程序设计语言</dd>
+                                            <dt>基本内容</dt>
+                                            <dd>类、封装、重载、继承、模版</dd>
+                                    </dl>
+                                    <dl class="basicInfo-block basicInfo-left">
+                                            <dt>中文名</dt>
+                                            <dd>C++语言</dd>
+                                            <dt>创始公司</dt>
+                                            <dd>贝尔实验室</dd>
+                                            <dt>创始人</dt>
+                                            <dd>Bjarne Stroustrup</dd>
+                                    </dl>
+                            </div>
+                        </div>
+                    <div class="basic-info-content">
+                        <div class="title-basic">C++发展历程</div>
+                        <div class="conetent">
+                            
+
+
+
+世界上第一种计算机高级语言是诞生于1954年的FORTRAN语言。之后出现了多种计算机高级语言。1970年，AT&T的Bell实验室的D.Ritchie和K.Thompson共同发明了C语言。研制C语言的初衷是用它编写UNIX系统程序，因此，它实际上是UNIX的“副产品”。它充分结合了汇编语言和高级语言的优点，高效而灵活，又容易移植。1971年，瑞士联邦技术学院N.Wirth教授发明了Pascal语言。Pascal语言语法严谨，层次分明，程序易写，具有很强的可读性，是第一个结构化的编程语言。20世纪70年代中期，Bjarne Stroustrup在剑桥大学计算机中心工作。他使用过Simula和ALGOL，接触过C。他对Simula的类体系感受颇深，对ALGOL的结构也很有研究，深知运行效率的意义。既要编程简单、正确可靠，又要运行高效、可移植，是Bjarne Stroustrup的初衷。以C为背景，以Simula思想为基础，正好符合他的设想。1979年，Bjame Sgoustrup到了Bell实验室，开始从事将C改良为带类的C（C with classes）的工作。1983年该语言被正式命名为C++。自从C++被发明以来，它经历了3次主要的修订，每一次修订都为C++增加了新的特征并作了一些修改。第一次修订是在1985年，第二次修订是在1990年，而第三次修订发生在c++的标准化过程中。在20世纪90年代早期，人们开始为C++建立一个标准，并成立了一个ANSI和ISO（Intemational Standards Organization）国际标准化组织的联合标准化委员会。该委员会在1994年1月25曰提出了第一个标准化草案。在这个草案中，委员会在保持Stroustrup最初定义的所有特征的同时，还增加了一些新的特征。在完成C++标准化的第一个草案后不久，发生了一件事情使得C++标准被极大地扩展了：Alexander stepanov创建了标准模板库（Standard Template Library，STL）。STL不仅功能强大，同时非常优雅，然而，它也是非常庞大的。在通过了第一个草案之后，委员会投票并通过了将STL包含到C++标准中的提议。STL对C++的扩展超出了C++的最初定义范围。虽然在标准中增加STL是个很重要的决定，但也因此延缓了C++标准化的进程。委员会于1997年11月14日通过了该标准的最终草案，1998年，C++的ANSI/IS0标准被投入使用。通常，这个版本的C++被认为是标准C++。所有的主流C++编译器都支持这个版本的C++，包括微软的Visual C++和Borland公司的C++Builder。
+[3-6] 
+
+                        </div>
+                    </div>
+                <div class="hide-content" href="javascript:;">收起全文 <img src="https://csdnimg.cn/release/aggregate/img/arrow-down@2x.png"
+                                                                        alt=""></div>
+            </div>
+
+
+        <div class="content-list">
+            <div class="ag-tab-bar">
+                <div class="ag-tb-lt">
+                    <div class="tab-hd-item active" type="hot">精华内容</div>
+                    <div class="tab-hd-item" type="download"
+                         data-report-click='{"spm":"3001.5558","extend1":"聚合页下载TAB"}'>下载资源
+                    </div>
+                    <div class="tab-hd-item" type="qa" data-report-click='{"spm":"3001.5197","extend1":"聚合页问答TAB"}'>
+                        问答
+                    </div>
+                </div>
+                <div class="ag-tb-rt">
+                    <div class="icon-link" data-report-query="spm=3001.5142"
+                         data-report-click='{"spm":"3001.5142","dest":"https://so.csdn.net/search?mode=1&q=c++&spm=1000.2123.3001.5142"}'>
+                    </div>
+                    <div class="tab-rt-btn">
+                        <a class="btn-ask" href="javascript:void(0);"
+                           data-report-click='{"spm":"3001.5198","dest":"https://ask.csdn.net/?word=c++"}'>我要提问</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-bd wrap-main-list active">
+                <ul class="main-ul">
+                        <li data-page="1">
+                            <div class="blog-title">
+                                <a href="https://edu.csdn.net/course/detail/474"
+                                   data-report-click='{"mod": "popu_876","spm": "3001.4430","dest": "https://edu.csdn.net/course/detail/474?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522162408790116780262544086%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D&amp;request_id=162408790116780262544086&amp;utm_term=c%2B%2B&amp;utm_medium=distribute.pc_aggpage_search_result.none-task-course-2~aggregatepage~first_rank_v2~rank_aggregation-1-474.pc_agg_rank_aggregation","extra": "{\&quot;utm_medium\&quot;:\&quot;distribute.pc_aggpage_search_result.none-task-course-2~aggregatepage~first_rank_v2~rank_aggregation-1-474.pc_agg_rank_aggregation\&quot;}","index": "0","strategy": "2~aggregatepage~first_rank_v2~rank_aggregation","biz_id": "3","ops_request_misc": "%257B%2522request%255Fid%2522%253A%2522162408790116780262544086%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D","request_id": "162408790116780262544086"}'
+                                   data-report-view='{"mod": "popu_876","spm": "3001.4430","dest": "https://edu.csdn.net/course/detail/474?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522162408790116780262544086%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D&amp;request_id=162408790116780262544086&amp;utm_term=c%2B%2B&amp;utm_medium=distribute.pc_aggpage_search_result.none-task-course-2~aggregatepage~first_rank_v2~rank_aggregation-1-474.pc_agg_rank_aggregation","extra": "{\&quot;utm_medium\&quot;:\&quot;distribute.pc_aggpage_search_result.none-task-course-2~aggregatepage~first_rank_v2~rank_aggregation-1-474.pc_agg_rank_aggregation\&quot;}","index": "0","strategy": "2~aggregatepage~first_rank_v2~rank_aggregation","biz_id": "3","ops_request_misc": "%257B%2522request%255Fid%2522%253A%2522162408790116780262544086%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D","request_id": "162408790116780262544086"}'
+                                   data-report-query="utm_medium=distribute.pc_aggpage_search_result.none-task-course-2~aggregatepage~first_rank_v2~rank_aggregation-1-474.pc_agg_rank_aggregation&utm_term=c%2B%2B&spm=3001.4430"
+                                   target="_blank" class="blog-title">
+                                    <h2><em>C++</em>语言基础视频教程</h2>
+                                </a>
+                                    <span class="tags">
+                                            <i class="c1">万人学习</i>
+                                    </span>
+                                <span class="update-time">2015-03-01 10:55:47</span>
+                            </div>
+                            <div class="description">
+                                <div class="desc-detail digest">
+                                    <em>C++</em>语言基础视频培训课程：本课与主讲者在大学开出的程序设计课程直接对接，准确把握知识点，注重教学视频与实践体系的结合，帮助初学者有效学习。本教程详细介绍<em>C++</em>语言中的封装、数据隐藏、继承、多态的实现等入门...
+                                </div>
+                                <div class="desc-detail content">
+                                    <div class='article_content'>
+                                        <pre class="preclass"></pre>
+                                    </div>
+                                    <div class="hide-content"><a href="javascript:;">收起 <img
+                                                    src="https://csdnimg.cn/release/aggregate/img/arrow-down@2x.png" alt=""></a></div>
+                                </div>
+                            </div>
+
+                        </li>
+                        <li data-page="1">
+                            <div class="blog-title">
+                                <a href="https://blog.csdn.net/weixin_42831477/article/details/81429004"
+                                   data-report-click='{"mod": "popu_876","spm": "3001.4430","dest": "https://blog.csdn.net/weixin_42831477/article/details/81429004?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522162408790116780262544086%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D&amp;request_id=162408790116780262544086&amp;utm_term=c%2B%2B&amp;utm_medium=distribute.pc_aggpage_search_result.none-task-blog-2~aggregatepage~first_rank_v2~rank_aggregation-2-81429004.pc_agg_rank_aggregation","extra": "{\&quot;utm_medium\&quot;:\&quot;distribute.pc_aggpage_search_result.none-task-blog-2~aggregatepage~first_rank_v2~rank_aggregation-2-81429004.pc_agg_rank_aggregation\&quot;}","index": "1","strategy": "2~aggregatepage~first_rank_v2~rank_aggregation","biz_id": "0","ops_request_misc": "%257B%2522request%255Fid%2522%253A%2522162408790116780262544086%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D","request_id": "162408790116780262544086"}'
+                                   data-report-view='{"mod": "popu_876","spm": "3001.4430","dest": "https://blog.csdn.net/weixin_42831477/article/details/81429004?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522162408790116780262544086%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D&amp;request_id=162408790116780262544086&amp;utm_term=c%2B%2B&amp;utm_medium=distribute.pc_aggpage_search_result.none-task-blog-2~aggregatepage~first_rank_v2~rank_aggregation-2-81429004.pc_agg_rank_aggregation","extra": "{\&quot;utm_medium\&quot;:\&quot;distribute.pc_aggpage_search_result.none-task-blog-2~aggregatepage~first_rank_v2~rank_aggregation-2-81429004.pc_agg_rank_aggregation\&quot;}","index": "1","strategy": "2~aggregatepage~first_rank_v2~rank_aggregation","biz_id": "0","ops_request_misc": "%257B%2522request%255Fid%2522%253A%2522162408790116780262544086%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D","request_id": "162408790116780262544086"}'
+                                   data-report-query="utm_medium=distribute.pc_aggpage_search_result.none-task-blog-2~aggregatepage~first_rank_v2~rank_aggregation-2-81429004.pc_agg_rank_aggregation&utm_term=c%2B%2B&spm=3001.4430"
+                                   target="_blank" class="blog-title">
+                                    <h2>各个版本Microsoft Visual <em>C++</em>运行库下载</h2>
+                                </a>
+                                    <span class="tags">
+                                            <i class="c1">万次阅读</i>
+                                            <i class="c2">多人点赞</i>
+                                    </span>
+                                <span class="update-time">2018-08-05 10:58:00</span>
+                            </div>
+                            <div class="description">
+                                <div class="desc-detail digest">
+                                    各个版本Microsoft Visual <em>C++</em>运行库下载  Microsoft Visual <em>C++</em> 2005  Microsoft Visual <em>C++</em> 2005 Redistributable Package (x86)  https://www.microsoft.com/zh-cn/download/details.aspx?id=3387  Microsoft ...
+                                </div>
+                                <div class="desc-detail content">
+                                    <div class='article_content'>
+                                        <pre class="preclass"><h2><a id="Microsoft_Visual_C_0"></a>各个版本Microsoft Visual C++运行库下载</h2>
+<h4><a id="Microsoft_Visual_C_2005_3"></a><strong>Microsoft Visual C++ 2005</strong></h4>
+<p>Microsoft Visual C++ 2005 Redistributable Package (x86)<br>
+http://download.microsoft.com/download/8/B/4/8B42259F-5D70-43F4-AC2E-4B208FD8D66A/vcredist_x86.exe<br>
+Microsoft Visual C++ 2005 Redistributable Package (x64)<br>
+http://download.microsoft.com/download/8/B/4/8B42259F-5D70-43F4-AC2E-4B208FD8D66A/vcredist_x64.exe</p>
+<h4><a id="Microsoft_Visual_C_2008_9"></a><strong>Microsoft Visual C++ 2008</strong></h4>
+<p>Microsoft Visual C++ 2008 Redistributable Package (x86)<br>
+https://www.microsoft.com/zh-cn/download/details.aspx?id=29<br>
+Microsoft Visual C++ 2008 Redistributable Package (x64)<br>
+https://www.microsoft.com/zh-cn/download/details.aspx?id=15336</p>
+<h4><a id="Microsoft_Visual_C_2010_15"></a><strong>Microsoft Visual C++ 2010</strong></h4>
+<p>Microsoft Visual C++ 2010 SP1 Redistributable Package (x86)<br>
+https://www.microsoft.com/zh-cn/download/details.aspx?id=8328<br>
+Microsoft Visual C++ 2010 SP1 Redistributable Package (x64)<br>
+https://www.microsoft.com/zh-cn/download/details.aspx?id=13523</p>
+<h4><a id="Microsoft_Visual_C2012_21"></a><strong>Microsoft Visual C++2012</strong></h4>
+<p>Visual C++ Redistributable for Visual Studio 2012 Update 4<br>
+https://www.microsoft.com/zh-cn/download/details.aspx?id=30679</p>
+<h4><a id="Microsoft_Visual_C2013_25"></a><strong>Microsoft Visual C++2013</strong></h4>
+<p>Visual C++ Redistributable Packages for Visual Studio 2013<br>
+https://www.microsoft.com/zh-cn/download/details.aspx?id=40784</p>
+<h4><a id="Microsoft_Visual_C_2015_29"></a><strong>Microsoft Visual C++ 2015</strong></h4>
+<p>Microsoft Visual C++ 2015 Redistributable Update 3<br>
+https://www.microsoft.com/zh-cn/download/details.aspx?id=53587<br>
+Visual C++ Redistributable for Visual Studio 2015<br>
+https://www.microsoft.com/zh-cn/download/details.aspx?id=48145</p>
+<h4><a id="Microsoft_Visual_C_2017_35"></a><strong>Microsoft Visual C++ 2017</strong></h4>
+<p>X64<br>
+https://go.microsoft.com/fwlink/?LinkId=746572<br>
+x86<br>
+https://go.microsoft.com/fwlink/?LinkId=746571</p>
+<h4><a id="Visual_Studio_2015_2017_and_2019_41"></a>Visual Studio 2015, 2017 and 2019</h4>
+<p>https://support.microsoft.com/en-us/help/2977003/the-latest-supported-visual-c-downloads</p>
+<p>https://support.microsoft.com/en-us/topic/the-latest-supported-visual-c-downloads-2647da03-1eea-4433-9aff-95f26a218cc0</p>
+<p>#介绍</p>
+<blockquote>
+<p>msvcp、msvcr60、71和80.dll，以及vcomp.dll（不带数字版本号）属于VC++2005版<br>
+msvcp、msvcr、vcomp90.dll属于  VC++2008版<br>
+msvcp、msvcr、vcomp100.dll属于VC++2010版　<br>
+msvcp、msvcr、vcomp110.dll属于VC++2012版　　<br>
+msvcp、msvcr、vcomp120.dll属于VC++2013版　　<br>
+msvcp、msvcr、vcomp140.dll属于VC++2015版</p>
+</blockquote>
+
+</pre>
+                                    </div>
+                                    <div class="hide-content"><a href="javascript:;">收起 <img
+                                                    src="https://csdnimg.cn/release/aggregate/img/arrow-down@2x.png" alt=""></a></div>
+                                </div>
+                                        <a href="javascript:;" class="readmore_btn"
+                                           data-linkUrl="https://blog.csdn.net/weixin_42831477/article/details/81429004"
+                                           data-so-type="blog">
+                                            <span>展开全文</span>
+                                            <img src='https://csdnimg.cn/release/aggregate/img/arrow-down@2x.png' alt="">
+                                        </a>
+                            </div>
+
+                        </li>
+                        <li data-page="1">
+                            <div class="blog-title">
+                                <a href="https://edu.csdn.net/course/detail/1015"
+                                   data-report-click='{"mod": "popu_876","spm": "3001.4430","dest": "https://edu.csdn.net/course/detail/1015?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522162408790116780262544086%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D&amp;request_id=162408790116780262544086&amp;utm_term=c%2B%2B&amp;utm_medium=distribute.pc_aggpage_search_result.none-task-course-2~aggregatepage~first_rank_v2~rank_aggregation-3-1015.pc_agg_rank_aggregation","extra": "{\&quot;utm_medium\&quot;:\&quot;distribute.pc_aggpage_search_result.none-task-course-2~aggregatepage~first_rank_v2~rank_aggregation-3-1015.pc_agg_rank_aggregation\&quot;}","index": "2","strategy": "2~aggregatepage~first_rank_v2~rank_aggregation","biz_id": "3","ops_request_misc": "%257B%2522request%255Fid%2522%253A%2522162408790116780262544086%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D","request_id": "162408790116780262544086"}'
+                                   data-report-view='{"mod": "popu_876","spm": "3001.4430","dest": "https://edu.csdn.net/course/detail/1015?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522162408790116780262544086%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D&amp;request_id=162408790116780262544086&amp;utm_term=c%2B%2B&amp;utm_medium=distribute.pc_aggpage_search_result.none-task-course-2~aggregatepage~first_rank_v2~rank_aggregation-3-1015.pc_agg_rank_aggregation","extra": "{\&quot;utm_medium\&quot;:\&quot;distribute.pc_aggpage_search_result.none-task-course-2~aggregatepage~first_rank_v2~rank_aggregation-3-1015.pc_agg_rank_aggregation\&quot;}","index": "2","strategy": "2~aggregatepage~first_rank_v2~rank_aggregation","biz_id": "3","ops_request_misc": "%257B%2522request%255Fid%2522%253A%2522162408790116780262544086%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D","request_id": "162408790116780262544086"}'
+                                   data-report-query="utm_medium=distribute.pc_aggpage_search_result.none-task-course-2~aggregatepage~first_rank_v2~rank_aggregation-3-1015.pc_agg_rank_aggregation&utm_term=c%2B%2B&spm=3001.4430"
+                                   target="_blank" class="blog-title">
+                                    <h2>《C语言/<em>C++</em>学习指南》语法篇（从入门到精通）</h2>
+                                </a>
+                                    <span class="tags">
+                                            <i class="c1">万人学习</i>
+                                    </span>
+                                <span class="update-time">2015-06-03 11:12:14</span>
+                            </div>
+                            <div class="description">
+                                <div class="desc-detail digest">
+                                    一门初级、从入门到精通的C语言<em>C++</em>语法教程，由毕业于清华大学的业内人士执课。从简单的HelloWorld入门程序，到深入的C语言<em>C++</em>核心概念，均为您娓娓道来，言之必详、听之必懂。让C语言<em>C++</em>编程变得简单，让C语言<em>C++</em>...
+                                </div>
+                                <div class="desc-detail content">
+                                    <div class='article_content'>
+                                        <pre class="preclass"></pre>
+                                    </div>
+                                    <div class="hide-content"><a href="javascript:;">收起 <img
+                                                    src="https://csdnimg.cn/release/aggregate/img/arrow-down@2x.png" alt=""></a></div>
+                                </div>
+                            </div>
+
+                        </li>
+                        <li data-page="1">
+                            <div class="blog-title">
+                                <a href="https://blog.csdn.net/claroja/article/details/79297562"
+                                   data-report-click='{"mod": "popu_876","spm": "3001.4430","dest": "https://blog.csdn.net/claroja/article/details/79297562?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522162408790116780262544086%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D&amp;request_id=162408790116780262544086&amp;utm_term=c%2B%2B&amp;utm_medium=distribute.pc_aggpage_search_result.none-task-blog-2~aggregatepage~first_rank_v2~rank_aggregation-4-79297562.pc_agg_rank_aggregation","extra": "{\&quot;utm_medium\&quot;:\&quot;distribute.pc_aggpage_search_result.none-task-blog-2~aggregatepage~first_rank_v2~rank_aggregation-4-79297562.pc_agg_rank_aggregation\&quot;}","index": "3","strategy": "2~aggregatepage~first_rank_v2~rank_aggregation","biz_id": "0","ops_request_misc": "%257B%2522request%255Fid%2522%253A%2522162408790116780262544086%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D","request_id": "162408790116780262544086"}'
+                                   data-report-view='{"mod": "popu_876","spm": "3001.4430","dest": "https://blog.csdn.net/claroja/article/details/79297562?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522162408790116780262544086%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D&amp;request_id=162408790116780262544086&amp;utm_term=c%2B%2B&amp;utm_medium=distribute.pc_aggpage_search_result.none-task-blog-2~aggregatepage~first_rank_v2~rank_aggregation-4-79297562.pc_agg_rank_aggregation","extra": "{\&quot;utm_medium\&quot;:\&quot;distribute.pc_aggpage_search_result.none-task-blog-2~aggregatepage~first_rank_v2~rank_aggregation-4-79297562.pc_agg_rank_aggregation\&quot;}","index": "3","strategy": "2~aggregatepage~first_rank_v2~rank_aggregation","biz_id": "0","ops_request_misc": "%257B%2522request%255Fid%2522%253A%2522162408790116780262544086%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D","request_id": "162408790116780262544086"}'
+                                   data-report-query="utm_medium=distribute.pc_aggpage_search_result.none-task-blog-2~aggregatepage~first_rank_v2~rank_aggregation-4-79297562.pc_agg_rank_aggregation&utm_term=c%2B%2B&spm=3001.4430"
+                                   target="_blank" class="blog-title">
+                                    <h2><em>C++</em></h2>
+                                </a>
+                                    <span class="tags">
+                                            <i class="c1">千次阅读</i>
+                                            <i class="c2">多人点赞</i>
+                                    </span>
+                                <span class="update-time">2019-03-28 23:11:09</span>
+                            </div>
+                            <div class="description">
+                                <div class="desc-detail digest">
+                                    c ++ helloworld   成员变量和方法的理解    变量类型   基本类型   <em>c++</em> 变量  ... <em>c++</em> 数组(array)  ... <em>c++</em> 字符串  ... <em>c++</em> 结构体与共用体  ... <em>C++</em> 指针  ... <em>c++</em> 循环  ... <em>c++</em> 分支语句  ... <em>c++</em> 函数  ... <em>c++</em> 类...
+                                </div>
+                                <div class="desc-detail content">
+                                    <div class='article_content'>
+                                        <pre class="preclass"><h1><a id="_0"></a>基本类型</h1>
+<p>C语言 数据类型<br />
+C语言 整形<br />
+C语言 浮点型<br />
+C语言 字符类型<br /><a href="https://blog.csdn.net/claroja/article/details/103923422">C++ wchar_t</a><br />
+C语言 布尔类型<br />
+C语言 类型转换<br />
+C语言 变量和常量<br />
+C语言 格式化输出<br />
+C语言 结构体|C语言 结构体对齐<br />
+C语言 共用体<br />
+C语言 枚举类型<br />
+C语言 时间类型</p>
+<h1><a id="_15"></a>复合类型</h1>
+<p>C语言 数组|结构体数组<br /><a href="https://blog.csdn.net/claroja/article/details/88964428">C++ 字符串</a><br /><a href="https://blog.csdn.net/claroja/article/details/88965181">C++ vector</a><br /><a href="https://blog.csdn.net/claroja/article/details/88966715">C++ deque</a><br /><a href="https://blog.csdn.net/claroja/article/details/88966795">C++ stack</a><br /><a href="https://blog.csdn.net/claroja/article/details/88967327">C++ queue</a><br /><a href="https://blog.csdn.net/claroja/article/details/88967575">C++ list</a><br /><a href="https://blog.csdn.net/claroja/article/details/88969918">C++ set</a><br /><a href="https://blog.csdn.net/claroja/article/details/88969924">C++ pair</a><br /><a href="https://blog.csdn.net/claroja/article/details/88970018">C++ map</a><br /><a href="https://blog.csdn.net/claroja/article/details/88992877">C++ 迭代器</a></p>
+<h1><a id="_27"></a>指针类型</h1>
+<p>C语言 指针<br />
+C语言 指针运算<br />
+C语言 二重指针<br />
+C语言 指针与数组<br />
+C语言 指针与字符串<br />
+C语言 指针与结构体<br />
+C语言 指针与常量<br />
+C语言 指针与函数<br />
+C语言 malloc&amp;free|<a href="http://blog.csdn.net/claroja/article/details/79483763">c++ new delete</a><br />
+C语言 堆内存操作</p>
+<h1><a id="_40"></a>引用类型</h1>
+<p><a href="https://blog.csdn.net/claroja/article/details/88871925">C++  引用</a><br />
+C++ 引用与函数</p>
+<h1><a id="_45"></a>函数</h1>
+<p>C语言 函数|<a href="https://blog.csdn.net/claroja/article/details/88872948">C++  内联函数</a><br />
+C语言 函数声明<br />
+C语言 函数参数|<a href="https://blog.csdn.net/claroja/article/details/88873076">C++  函数默认参数和占位参数</a>|C语言 数组参数|C语言 结构体参数<br />
+c语言 函数返回值<br />
+C语言 函数递归<br />
+C语言 闭包 不支持<br />
+C语言 注解 不支持<br />
+C语言 main函数<br />
+C语言 匿名函数 不支持<br /><a href="https://blog.csdn.net/claroja/article/details/88873538">C++  函数重载</a></p>
+<h1><a id="_58"></a>运算符与控制语句</h1>
+<p>C语言 运算符<br />
+C语言 控制语句<br /><a href="https://blog.csdn.net/claroja/article/details/88951701">C++ 异常</a><br />
+函数</p>
+<h1><a id="_66"></a>面向对象</h1>
+<p><a href="https://blog.csdn.net/claroja/article/details/88874532">C++  类的封装</a><br /><a href="http://blog.csdn.net/claroja/article/details/79485261">C++ 友元函数,友元类</a><br /><a href="http://blog.csdn.net/claroja/article/details/79469562">C++ 类和对象</a><br /><a href="http://blog.csdn.net/claroja/article/details/79471279">C++ 类继承</a><br /><a href="https://blog.csdn.net/claroja/article/details/88886043">C++ 拷贝构造函数</a><br /><a href="https://blog.csdn.net/claroja/article/details/88886538">C++ 深拷贝和浅拷贝</a><br /><a href="https://blog.csdn.net/claroja/article/details/88885615">C++ 构造函数和析构函数</a><br /><a href="https://blog.csdn.net/claroja/article/details/88887793">C++ new&amp;delete</a><br /><a href="https://blog.csdn.net/claroja/article/details/88890460">C++ 静态成员变量&amp;静态成员函数</a><br /><a href="https://blog.csdn.net/claroja/article/details/88891162">C++ this指针</a><br /><a href="https://blog.csdn.net/claroja/article/details/88891424">C++ 常函数常对象</a><br /><a href="https://blog.csdn.net/claroja/article/details/88891706">C++ 友元函数</a><br /><a href="https://blog.csdn.net/claroja/article/details/88891967">C++ 泛型编程-类模板</a><br /><a href="https://blog.csdn.net/claroja/article/details/88892114">C++ 对象运算符重载</a><br /><a href="https://blog.csdn.net/claroja/article/details/88946992">C++ 多态</a><br /><a href="https://blog.csdn.net/claroja/article/details/88949963">C++ 泛型编程-函数模板</a><br /><a href="http://blog.csdn.net/claroja/article/details/79484623">c++ 类和对象的内存管理</a></p>
+<h1><a id="IO_86"></a>IO</h1>
+<p>C语言 三种IO<br /><a href="https://blog.csdn.net/claroja/article/details/88952114">C++ 输入和输出IO</a></p>
+<h1><a id="IO_89"></a>底层IO</h1>
+<p>C语言 底层IO<br />
+C语言 底层IO open&amp;close<br />
+C语言 底层IO read&amp;write<br />
+C语言 底层IO lseek<br /><a href="https://blog.csdn.net/claroja/article/details/88952465">C++ 标准IO</a></p>
+<h1><a id="FileStreaming_95"></a>FileStreaming</h1>
+<p>C语言 FileStreaming<br />
+C语言 FileStreaming fopen&amp;fclose<br />
+C语言 FileStreaming fwrite&amp;fread<br />
+C语言 FileStreaming fseek<br />
+C语言 FileStreaming buffer<br />
+C语言 FileStreaming 键盘与屏幕IO</p>
+<h1><a id="socket_103"></a>socket</h1>
+<p>基础|C语言 socket|C语言 socket函数<br />
+并发|C语言 select|C语言 poll|C语言 epoll<br />
+传输层|C语言 TCP|C语言 UDP|C语言 广播|C语言 组播</p>
+<h1><a id="_111"></a>工程</h1>
+<p>C语言 编译|C语言 多文件程序<br />
+C语言 gcc|C语言 gcc API|C语言 ld|C语言 makefile<br />
+C语言 Win静态库|C语言 Win动态库<br />
+C语言 gcc 静态库|C语言 gcc 动态库<br /><a href="https://blog.csdn.net/claroja/article/details/88869158">C++ namespace</a></p>
+<h1><a id="_120"></a>其他</h1>
+<p><a href="https://blog.csdn.net/claroja/article/details/88871308">C++  对比 C语言</a></p>
+<p><a href="https://blog.csdn.net/claroja/article/details/88868264">C++  ::运算符</a><br /><a href="https://blog.csdn.net/claroja/article/details/88869474">C++  using</a><br /><a href="http://blog.csdn.net/claroja/article/details/79297551">c ++ helloworld</a><br /><a href="https://blog.csdn.net/claroja/article/details/88975921">C++ 变量和常量</a><br /><a href="https://blog.csdn.net/claroja/article/details/88976074">C++ 头文件</a><br /><a href="https://blog.csdn.net/claroja/article/details/88950737">C++ 类型转换</a><br /><a href="http://blog.csdn.net/claroja/article/details/79374212">成员变量和方法的理解</a><br />
+基本数据类型与容器<br /><a href="https://blog.csdn.net/claroja/article/details/88975502">C++ 数据类型</a><br /><a href="https://blog.csdn.net/claroja/article/details/88975821">C++ 复合类型</a><br /><a href="https://blog.csdn.net/claroja/article/details/77556320">C语言 数组</a><br />
+流程控制<br /><a href="http://blog.csdn.net/claroja/article/details/79449179">c++ 分支语句</a><br /><a href="http://blog.csdn.net/claroja/article/details/79449057">c++ 循环</a></p>
+<p>stl<br /><a href="https://blog.csdn.net/claroja/article/details/88953825">C++ STL</a><br /><a href="https://blog.csdn.net/claroja/article/details/88970997">C++ 内建函数对象</a><br /><a href="https://blog.csdn.net/claroja/article/details/88971095">C++ 适配器</a><br /><a href="https://blog.csdn.net/claroja/article/details/88970846">C++ 仿函数</a><br /><a href="https://blog.csdn.net/claroja/article/details/88971486">C++ 常用算法</a></p>
+<p><a href="https://blog.csdn.net/claroja/article/details/89082511">C++ GBD调试</a><br /><a href="https://blog.csdn.net/claroja/article/details/89084492">C++ linux系统api</a></p>
+<p>变量类型<br />
+基本类型<br /><a href="http://blog.csdn.net/claroja/article/details/79377345">c++ 变量</a><br />
+复合类型<br /><a href="http://blog.csdn.net/claroja/article/details/79389997">c++ 数组(array)</a><br /><a href="http://blog.csdn.net/claroja/article/details/79390217">c++ 字符串</a><br /><a href="http://blog.csdn.net/claroja/article/details/79390835">c++ 结构体与共用体</a><br /><a href="http://blog.csdn.net/claroja/article/details/79390970">c ++ 枚举</a><br /><a href="http://blog.csdn.net/claroja/article/details/79411345">C++ 指针</a><br /><a href="http://blog.csdn.net/claroja/article/details/79449494">c++ 函数</a><br /><a href="http://blog.csdn.net/claroja/article/details/79467585">c++ 多文件程序</a><br /><a href="http://blog.csdn.net/claroja/article/details/79468524">c++ 命名空间</a></p>
+<p><a href="http://blog.csdn.net/claroja/article/details/79483962">c++ static</a></p>
+
+</pre>
+                                    </div>
+                                    <div class="hide-content"><a href="javascript:;">收起 <img
+                                                    src="https://csdnimg.cn/release/aggregate/img/arrow-down@2x.png" alt=""></a></div>
+                                </div>
+                                        <a href="javascript:;" class="readmore_btn"
+                                           data-linkUrl="https://blog.csdn.net/claroja/article/details/79297562"
+                                           data-so-type="blog">
+                                            <span>展开全文</span>
+                                            <img src='https://csdnimg.cn/release/aggregate/img/arrow-down@2x.png' alt="">
+                                        </a>
+                            </div>
+                                <div class="tags-view">
+                                    <img src='https://csdnimg.cn/release/aggregate/img/tags.png' alt="">
+                                        <a href="../tags/MtTaEg0sMzc0NzktYmxvZwO0O0OO0O0O.html">c语言   </a>
+                                        <a href="../tags/MtTaEg0sMzEyNDYtYmxvZwO0O0OO0O0O.html">helloworld   </a>
+                                </div>
+
+                        </li>
+                        <li data-page="1">
+                            <div class="blog-title">
+                                <a href="https://blog.csdn.net/qq_42623428/article/details/82987274"
+                                   data-report-click='{"mod": "popu_876","spm": "3001.4430","dest": "https://blog.csdn.net/qq_42623428/article/details/82987274?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522162408790116780262544086%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D&amp;request_id=162408790116780262544086&amp;utm_term=c%2B%2B&amp;utm_medium=distribute.pc_aggpage_search_result.none-task-blog-2~aggregatepage~first_rank_v2~rank_aggregation-5-82987274.pc_agg_rank_aggregation","extra": "{\&quot;utm_medium\&quot;:\&quot;distribute.pc_aggpage_search_result.none-task-blog-2~aggregatepage~first_rank_v2~rank_aggregation-5-82987274.pc_agg_rank_aggregation\&quot;}","index": "4","strategy": "2~aggregatepage~first_rank_v2~rank_aggregation","biz_id": "0","ops_request_misc": "%257B%2522request%255Fid%2522%253A%2522162408790116780262544086%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D","request_id": "162408790116780262544086"}'
+                                   data-report-view='{"mod": "popu_876","spm": "3001.4430","dest": "https://blog.csdn.net/qq_42623428/article/details/82987274?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522162408790116780262544086%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D&amp;request_id=162408790116780262544086&amp;utm_term=c%2B%2B&amp;utm_medium=distribute.pc_aggpage_search_result.none-task-blog-2~aggregatepage~first_rank_v2~rank_aggregation-5-82987274.pc_agg_rank_aggregation","extra": "{\&quot;utm_medium\&quot;:\&quot;distribute.pc_aggpage_search_result.none-task-blog-2~aggregatepage~first_rank_v2~rank_aggregation-5-82987274.pc_agg_rank_aggregation\&quot;}","index": "4","strategy": "2~aggregatepage~first_rank_v2~rank_aggregation","biz_id": "0","ops_request_misc": "%257B%2522request%255Fid%2522%253A%2522162408790116780262544086%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D","request_id": "162408790116780262544086"}'
+                                   data-report-query="utm_medium=distribute.pc_aggpage_search_result.none-task-blog-2~aggregatepage~first_rank_v2~rank_aggregation-5-82987274.pc_agg_rank_aggregation&utm_term=c%2B%2B&spm=3001.4430"
+                                   target="_blank" class="blog-title">
+                                    <h2><em>C++</em>学习大纲</h2>
+                                </a>
+                                    <span class="tags">
+                                            <i class="c1">万次阅读</i>
+                                            <i class="c2">多人点赞</i>
+                                    </span>
+                                <span class="update-time">2018-10-09 19:25:35</span>
+                            </div>
+                            <div class="description">
+                                <div class="desc-detail digest">
+                                    <em>C++</em> 基本数据类型和表达式 <em>C++</em> 无条件转移控制 <em>C++</em> 子程序间的数据传递 <em>C++</em> main函数的返回值 <em>C++</em> 标识符的作用域 <em>C++</em> 变量的生存期 <em>C++</em> 宏与内联函数 <em>C++</em> 函数名重载 <em>C++</em> 标准库 <em>C++</em> 条件编译 <em>C++</em> 枚举类型 <em>C++</em> ...
+                                </div>
+                                <div class="desc-detail content">
+                                    <div class='article_content'>
+                                        <pre class="preclass"><ol>
+<li><a href="http://blog.csdn.net/haitaolang/article/details/69942711" rel="nofollow" target="_blank">C++ 基本数据类型和表达式</a></li>
+<li><a href="http://blog.csdn.net/haitaolang/article/details/69943668" rel="nofollow" target="_blank">C++ 无条件转移控制</a></li>
+<li><a href="http://blog.csdn.net/haitaolang/article/details/69943949" rel="nofollow" target="_blank">C++ 子程序间的数据传递</a></li>
+<li><a href="http://blog.csdn.net/haitaolang/article/details/69944122" rel="nofollow" target="_blank">C++ main函数的返回值</a></li>
+<li><a href="http://blog.csdn.net/haitaolang/article/details/69944392" rel="nofollow" target="_blank">C++ 标识符的作用域</a></li>
+<li><a href="http://blog.csdn.net/haitaolang/article/details/69945184" rel="nofollow" target="_blank">C++ 变量的生存期</a></li>
+<li><a href="http://blog.csdn.net/haitaolang/article/details/69945338" rel="nofollow" target="_blank">C++ 宏与内联函数</a></li>
+<li><a href="http://blog.csdn.net/haitaolang/article/details/69945477" rel="nofollow" target="_blank">C++ 函数名重载</a></li>
+<li><a href="http://blog.csdn.net/haitaolang/article/details/69945709" rel="nofollow" target="_blank">C++ 标准库</a></li>
+<li><a href="http://blog.csdn.net/haitaolang/article/details/69945808" rel="nofollow" target="_blank">C++ 条件编译</a></li>
+<li><a href="http://blog.csdn.net/haitaolang/article/details/70014201" rel="nofollow" target="_blank">C++ 枚举类型</a></li>
+<li><a href="http://blog.csdn.net/haitaolang/article/details/70017461" rel="nofollow" target="_blank">C++ 数组类型</a></li>
+<li><a href="http://blog.csdn.net/haitaolang/article/details/70156018" rel="nofollow" target="_blank">C++ 结构类型</a></li>
+<li><a href="http://blog.csdn.net/haitaolang/article/details/70156438" rel="nofollow" target="_blank">C++ 联合类型</a></li>
+<li><a href="http://blog.csdn.net/haitaolang/article/details/70156839" rel="nofollow" target="_blank">C++ 指针类型</a></li>
+<li><a href="http://blog.csdn.net/haitaolang/article/details/70162412" rel="nofollow" target="_blank">C++ 引用类型</a></li>
+<li><a href="http://blog.csdn.net/haitaolang/article/details/70162730" rel="nofollow" target="_blank">C++ 成员的访问控制</a></li>
+<li><a href="http://blog.csdn.net/haitaolang/article/details/70162755" rel="nofollow" target="_blank">C++ this指针</a></li>
+<li><a href="http://blog.csdn.net/haitaolang/article/details/70162890" rel="nofollow" target="_blank">C++ 构造函数</a></li>
+<li><a href="http://blog.csdn.net/haitaolang/article/details/70162896" rel="nofollow" target="_blank">C++ 析构函数</a></li>
+<li><a href="http://blog.csdn.net/haitaolang/article/details/70770204" rel="nofollow" target="_blank">C++ 拷贝构造函数</a></li>
+<li><a href="http://blog.csdn.net/haitaolang/article/details/70162903" rel="nofollow" target="_blank">C++ 常成员函数</a></li>
+<li><a href="http://blog.csdn.net/haitaolang/article/details/70771327" rel="nofollow" target="_blank">C++ 静态成员</a></li>
+<li><a href="http://blog.csdn.net/haitaolang/article/details/70780374" rel="nofollow" target="_blank">C++ 操作符重载</a></li>
+<li><a href="http://blog.csdn.net/haitaolang/article/details/70843934" rel="nofollow" target="_blank">C++ 继承方式</a></li>
+<li><a href="http://blog.csdn.net/haitaolang/article/details/70844494" rel="nofollow" target="_blank">C++ 继承方式的调整</a></li>
+<li><a href="http://blog.csdn.net/haitaolang/article/details/70846369" rel="nofollow" target="_blank">C++ 消息（成员函数调用）的动态绑定</a></li>
+<li><a href="http://blog.csdn.net/haitaolang/article/details/70847172" rel="nofollow" target="_blank">C++ 纯虚函数和抽象类</a></li>
+<li><a href="http://blog.csdn.net/haitaolang/article/details/70847419" rel="nofollow" target="_blank">C++ 多继承</a></li>
+<li><a href="http://blog.csdn.net/haitaolang/article/details/70880586" rel="nofollow" target="_blank">C++ 模板</a></li>
+<li><a href="http://blog.csdn.net/haitaolang/article/details/70880835" rel="nofollow" target="_blank">C++ 标准模板库</a></li>
+<li><a href="http://blog.csdn.net/haitaolang/article/details/70881206" rel="nofollow" target="_blank">C++ 异常处理机制</a></li>
+</ol>
+
+</pre>
+                                    </div>
+                                    <div class="hide-content"><a href="javascript:;">收起 <img
+                                                    src="https://csdnimg.cn/release/aggregate/img/arrow-down@2x.png" alt=""></a></div>
+                                </div>
+                                        <a href="javascript:;" class="readmore_btn"
+                                           data-linkUrl="https://blog.csdn.net/qq_42623428/article/details/82987274"
+                                           data-so-type="blog">
+                                            <span>展开全文</span>
+                                            <img src='https://csdnimg.cn/release/aggregate/img/arrow-down@2x.png' alt="">
+                                        </a>
+                            </div>
+
+                        </li>
+                        <li data-page="1">
+                            <div class="blog-title">
+                                <a href="https://edu.csdn.net/course/detail/2919"
+                                   data-report-click='{"mod": "popu_876","spm": "3001.4430","dest": "https://edu.csdn.net/course/detail/2919?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522162408790116780262544086%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D&amp;request_id=162408790116780262544086&amp;utm_term=c%2B%2B&amp;utm_medium=distribute.pc_aggpage_search_result.none-task-course-2~aggregatepage~first_rank_v2~rank_aggregation-6-2919.pc_agg_rank_aggregation","extra": "{\&quot;utm_medium\&quot;:\&quot;distribute.pc_aggpage_search_result.none-task-course-2~aggregatepage~first_rank_v2~rank_aggregation-6-2919.pc_agg_rank_aggregation\&quot;}","index": "5","strategy": "2~aggregatepage~first_rank_v2~rank_aggregation","biz_id": "3","ops_request_misc": "%257B%2522request%255Fid%2522%253A%2522162408790116780262544086%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D","request_id": "162408790116780262544086"}'
+                                   data-report-view='{"mod": "popu_876","spm": "3001.4430","dest": "https://edu.csdn.net/course/detail/2919?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522162408790116780262544086%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D&amp;request_id=162408790116780262544086&amp;utm_term=c%2B%2B&amp;utm_medium=distribute.pc_aggpage_search_result.none-task-course-2~aggregatepage~first_rank_v2~rank_aggregation-6-2919.pc_agg_rank_aggregation","extra": "{\&quot;utm_medium\&quot;:\&quot;distribute.pc_aggpage_search_result.none-task-course-2~aggregatepage~first_rank_v2~rank_aggregation-6-2919.pc_agg_rank_aggregation\&quot;}","index": "5","strategy": "2~aggregatepage~first_rank_v2~rank_aggregation","biz_id": "3","ops_request_misc": "%257B%2522request%255Fid%2522%253A%2522162408790116780262544086%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D","request_id": "162408790116780262544086"}'
+                                   data-report-query="utm_medium=distribute.pc_aggpage_search_result.none-task-course-2~aggregatepage~first_rank_v2~rank_aggregation-6-2919.pc_agg_rank_aggregation&utm_term=c%2B%2B&spm=3001.4430"
+                                   target="_blank" class="blog-title">
+                                    <h2>征服<em>C++</em> 11视频精讲</h2>
+                                </a>
+                                    <span class="tags">
+                                            <i class="c1">万人学习</i>
+                                    </span>
+                                <span class="update-time">2016-09-02 14:32:07</span>
+                            </div>
+                            <div class="description">
+                                <div class="desc-detail digest">
+                                    【为什么还需要学习<em>C++</em>？】 你是否接触很多语言，但从来没有了解过编程语言的本质？ 你是否想成为一名资深开发人员，想开发别人做不了的高性能程序？ 你是否经常想要窥探大型企业级开发工程的思路，但苦于没有基础...
+                                </div>
+                                <div class="desc-detail content">
+                                    <div class='article_content'>
+                                        <pre class="preclass"></pre>
+                                    </div>
+                                    <div class="hide-content"><a href="javascript:;">收起 <img
+                                                    src="https://csdnimg.cn/release/aggregate/img/arrow-down@2x.png" alt=""></a></div>
+                                </div>
+                            </div>
+
+                        </li>
+                        <li data-page="1">
+                            <div class="blog-title">
+                                <a href="https://blog.csdn.net/sevenjoin/article/details/81943864"
+                                   data-report-click='{"mod": "popu_876","spm": "3001.4430","dest": "https://blog.csdn.net/sevenjoin/article/details/81943864?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522162408790116780262544086%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D&amp;request_id=162408790116780262544086&amp;utm_term=c%2B%2B&amp;utm_medium=distribute.pc_aggpage_search_result.none-task-blog-2~aggregatepage~first_rank_v2~rank_aggregation-7-81943864.pc_agg_rank_aggregation","extra": "{\&quot;utm_medium\&quot;:\&quot;distribute.pc_aggpage_search_result.none-task-blog-2~aggregatepage~first_rank_v2~rank_aggregation-7-81943864.pc_agg_rank_aggregation\&quot;}","index": "6","strategy": "2~aggregatepage~first_rank_v2~rank_aggregation","biz_id": "0","ops_request_misc": "%257B%2522request%255Fid%2522%253A%2522162408790116780262544086%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D","request_id": "162408790116780262544086"}'
+                                   data-report-view='{"mod": "popu_876","spm": "3001.4430","dest": "https://blog.csdn.net/sevenjoin/article/details/81943864?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522162408790116780262544086%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D&amp;request_id=162408790116780262544086&amp;utm_term=c%2B%2B&amp;utm_medium=distribute.pc_aggpage_search_result.none-task-blog-2~aggregatepage~first_rank_v2~rank_aggregation-7-81943864.pc_agg_rank_aggregation","extra": "{\&quot;utm_medium\&quot;:\&quot;distribute.pc_aggpage_search_result.none-task-blog-2~aggregatepage~first_rank_v2~rank_aggregation-7-81943864.pc_agg_rank_aggregation\&quot;}","index": "6","strategy": "2~aggregatepage~first_rank_v2~rank_aggregation","biz_id": "0","ops_request_misc": "%257B%2522request%255Fid%2522%253A%2522162408790116780262544086%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D","request_id": "162408790116780262544086"}'
+                                   data-report-query="utm_medium=distribute.pc_aggpage_search_result.none-task-blog-2~aggregatepage~first_rank_v2~rank_aggregation-7-81943864.pc_agg_rank_aggregation&utm_term=c%2B%2B&spm=3001.4430"
+                                   target="_blank" class="blog-title">
+                                    <h2><em>C++</em> map用法总结（整理）</h2>
+                                </a>
+                                    <span class="tags">
+                                            <i class="c1">万次阅读</i>
+                                            <i class="c2">多人点赞</i>
+                                    </span>
+                                <span class="update-time">2018-08-22 16:16:38</span>
+                            </div>
+                            <div class="description">
+                                <div class="desc-detail digest">
+                                    1，map简介  map是STL的一个关联容器，它提供一对一的hash。  第一个可以称为关键字(key)，每个关键字只能在map中出现一次； 	第二个可能称为该关键字的值(value)；  map以模板(泛型)方式实现，可以存储任意类型的...
+                                </div>
+                                <div class="desc-detail content">
+                                    <div class='article_content'>
+                                        <pre class="preclass"><p><strong>1，map简介</strong></p>
+
+<p>map是STL的一个关联容器，它提供一对一的hash。</p>
+
+<ul><li>第一个可以称为关键字(key)，每个关键字只能在map中出现一次；</li>
+	<li>第二个可能称为该关键字的值(value)；</li>
+</ul><p><br />
+map以模板(泛型)方式实现，可以存储任意类型的数据，包括使用者自定义的数据类型。Map主要用于资料一对一映射(one-to-one)的情況，map內部的实现自建一颗红黑树，这颗树具有对数据自动排序的功能。在map内部所有的数据都是有序的，后边我们会见识到有序的好处。比如一个班级中，每个学生的学号跟他的姓名就存在著一对一映射的关系。</p>
+
+<p style="text-align:center;"><img alt="" class="has" src="https://img-blog.csdnimg.cn/img_convert/ab94f358cc379299731b9aaa4814fd47.png" /></p>
+
+<p><strong>2，map的功能</strong></p>
+
+<p>自动建立key － value的对应。key 和 value可以是任意你需要的类型，包括自定义类型。</p>
+
+<p><strong>3，使用map</strong></p>
+
+<p>使用map得包含map类所在的头文件</p>
+
+<p>#include &lt;map&gt;  //注意，STL头文件没有扩展名.h</p>
+
+<p>map对象是模板类，需要关键字和存储对象两个模板参数：</p>
+
+<p>std:map&lt;<strong>int</strong>, string&gt; personnel;</p>
+
+<p>这样就定义了一个用int作为索引,并拥有相关联的指向string的指针.</p>
+
+<p>为了使用方便，可以对模板类进行一下类型定义，</p>
+
+<p><strong>typedef </strong>map&lt;<strong>int</strong>,CString&gt; UDT_MAP_INT_CSTRING;</p>
+
+<p>UDT_MAP_INT_CSTRING enumMap;</p>
+
+<p><strong>4，map的构造函数</strong></p>
+
+<p>map共提供了6个构造函数，这块涉及到内存分配器这些东西，略过不表，在下面我们将接触到一些map的构造方法，这里要说下的就是，我们通常用如下方法构造一个map：</p>
+
+<p>map&lt;int, string&gt; mapStudent;</p>
+
+<p><strong>5，插入元素</strong></p>
+
+<pre class="has">
+<code class="language-cpp">// 定义一个map对象
+map&lt;int, string&gt; mapStudent;
+
+// 第一种 用insert函數插入pair
+mapStudent.insert(pair&lt;int, string&gt;(000, "student_zero"));
+ 
+// 第二种 用insert函数插入value_type数据
+mapStudent.insert(map&lt;int, string&gt;::value_type(001, "student_one"));
+
+// 第三种 用"array"方式插入
+mapStudent[123] = "student_first";
+mapStudent[456] = "student_second";</code></pre>
+
+<p>以上三种用法，虽然都可以实现数据的插入，但是它们是有区别的，当然了第一种和第二种在效果上是完成一样的，用insert函数插入数据，在数据的 插入上涉及到集合的唯一性这个概念，即当map中有这个关键字时，<span style="color:#f33b45;">insert操作是不能在插入数据的</span>，但是用数组方式就不同了，它可以覆盖以前该关键字对 应的值，用程序说明如下：</p>
+
+<pre class="has">
+<code class="language-cpp">mapStudent.insert(map&lt;int, string&gt;::value_type (001, "student_one"));
+
+mapStudent.insert(map&lt;int, string&gt;::value_type (001, "student_two"));</code></pre>
+
+<p>上面这两条语句执行后，map中001这个关键字对应的值是“student_one”，第二条语句并没有生效，那么这就涉及到我们怎么知道insert语句是否插入成功的问题了，可以用pair来获得是否插入成功，程序如下</p>
+
+<pre class="has">
+<code class="language-cpp">// 构造定义，返回一个pair对象
+pair&lt;iterator,bool&gt; insert (const value_type&amp; val);
+
+pair&lt;map&lt;int, string&gt;::iterator, bool&gt; Insert_Pair;
+
+Insert_Pair = mapStudent.insert(map&lt;int, string&gt;::value_type (001, "student_one"));
+
+if(!Insert_Pair.second)
+    cout &lt;&lt; ""Error insert new element" &lt;&lt; endl;</code></pre>
+
+<p>我们通过pair的第二个变量来知道是否插入成功，它的第一个变量返回的是一个map的迭代器，如果插入成功的话Insert_Pair.second应该是true的，否则为false。</p>
+
+<p><strong>6， 查找元素</strong></p>
+
+<p>当所查找的关键key出现时，它返回数据所在对象的位置，如果沒有，返回iter与end函数的值相同。</p>
+
+<pre class="has">
+<code class="language-cpp">// find 返回迭代器指向当前查找元素的位置否则返回map::end()位置
+iter = mapStudent.find("123");
+ 
+if(iter != mapStudent.end())
+       cout&lt;&lt;"Find, the value is"&lt;&lt;iter-&gt;second&lt;&lt;endl;
+else
+   cout&lt;&lt;"Do not Find"&lt;&lt;endl;</code></pre>
+
+<p><strong>7， 刪除与清空元素</strong></p>
+
+<pre class="has">
+<code class="language-cpp">//迭代器刪除
+iter = mapStudent.find("123");
+mapStudent.erase(iter);
+ 
+//用关键字刪除
+int n = mapStudent.erase("123"); //如果刪除了會返回1，否則返回0
+ 
+//用迭代器范围刪除 : 把整个map清空
+mapStudent.erase(mapStudent.begin(), mapStudent.end());
+//等同于mapStudent.clear()</code></pre>
+
+<p><strong>8，map的大小</strong></p>
+
+<p>在往map里面插入了数据，我们怎么知道当前已经插入了多少数据呢，可以用size函数，用法如下：</p>
+
+<pre class="has">
+<code class="language-cpp">int nSize = mapStudent.size();</code></pre>
+
+<p> </p>
+
+<p><strong> 9，map的基本操作函数：</strong></p>
+
+<p>     C++ maps是一种关联式容器，包含“关键字/值”对</p>
+
+<p>     <strong>begin</strong>()         返回指向map头部的迭代器</p>
+
+<p>     <strong>clear</strong>(）        删除所有元素</p>
+
+<p>     <strong>count</strong>()         返回指定元素出现的次数, (帮助评论区理解： 因为key值不会重复，所以只能是1 or 0)</p>
+
+<p>     <strong>empty</strong>()         如果map为空则返回true</p>
+
+<p>     <strong>end</strong>()           返回指向map末尾的迭代器</p>
+
+<p>     <strong>equal_range</strong>()   返回特殊条目的迭代器对</p>
+
+<p>     <strong>erase</strong>()         删除一个元素</p>
+
+<p>     <strong>find</strong>()          查找一个元素</p>
+
+<p>     <strong>get_allocator</strong>() 返回map的配置器</p>
+
+<p>     <strong>insert</strong>()        插入元素</p>
+
+<p>     <strong>key_comp</strong>()      返回比较元素key的函数</p>
+
+<p>     <strong>lower_bound</strong>()   返回键值&gt;=给定元素的第一个位置</p>
+
+<p>     <strong>max_size</strong>()      返回可以容纳的最大元素个数</p>
+
+<p>     <strong>rbegin</strong>()        返回一个指向map尾部的逆向迭代器</p>
+
+<p>     <strong>rend</strong>()          返回一个指向map头部的逆向迭代器</p>
+
+<p>     <strong>size</strong>()          返回map中元素的个数</p>
+
+<p>     <strong>swap</strong>()           交换两个map</p>
+
+<p>     <strong>upper_bound</strong>()    返回键值&gt;给定元素的第一个位置</p>
+
+<p>     <strong>value_comp</strong>()     返回比较元素value的函数</p>
+
+<p> </p>
+</pre>
+                                    </div>
+                                    <div class="hide-content"><a href="javascript:;">收起 <img
+                                                    src="https://csdnimg.cn/release/aggregate/img/arrow-down@2x.png" alt=""></a></div>
+                                </div>
+                                        <a href="javascript:;" class="readmore_btn"
+                                           data-linkUrl="https://blog.csdn.net/sevenjoin/article/details/81943864"
+                                           data-so-type="blog">
+                                            <span>展开全文</span>
+                                            <img src='https://csdnimg.cn/release/aggregate/img/arrow-down@2x.png' alt="">
+                                        </a>
+                            </div>
+
+                        </li>
+                        <li data-page="1">
+                            <div class="blog-title">
+                                <a href="https://blog.csdn.net/amoscn/article/details/78215641"
+                                   data-report-click='{"mod": "popu_876","spm": "3001.4430","dest": "https://blog.csdn.net/amoscn/article/details/78215641?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522162408790116780262544086%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D&amp;request_id=162408790116780262544086&amp;utm_term=c%2B%2B&amp;utm_medium=distribute.pc_aggpage_search_result.none-task-blog-2~aggregatepage~first_rank_v2~rank_aggregation-8-78215641.pc_agg_rank_aggregation","extra": "{\&quot;utm_medium\&quot;:\&quot;distribute.pc_aggpage_search_result.none-task-blog-2~aggregatepage~first_rank_v2~rank_aggregation-8-78215641.pc_agg_rank_aggregation\&quot;}","index": "7","strategy": "2~aggregatepage~first_rank_v2~rank_aggregation","biz_id": "0","ops_request_misc": "%257B%2522request%255Fid%2522%253A%2522162408790116780262544086%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D","request_id": "162408790116780262544086"}'
+                                   data-report-view='{"mod": "popu_876","spm": "3001.4430","dest": "https://blog.csdn.net/amoscn/article/details/78215641?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522162408790116780262544086%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D&amp;request_id=162408790116780262544086&amp;utm_term=c%2B%2B&amp;utm_medium=distribute.pc_aggpage_search_result.none-task-blog-2~aggregatepage~first_rank_v2~rank_aggregation-8-78215641.pc_agg_rank_aggregation","extra": "{\&quot;utm_medium\&quot;:\&quot;distribute.pc_aggpage_search_result.none-task-blog-2~aggregatepage~first_rank_v2~rank_aggregation-8-78215641.pc_agg_rank_aggregation\&quot;}","index": "7","strategy": "2~aggregatepage~first_rank_v2~rank_aggregation","biz_id": "0","ops_request_misc": "%257B%2522request%255Fid%2522%253A%2522162408790116780262544086%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D","request_id": "162408790116780262544086"}'
+                                   data-report-query="utm_medium=distribute.pc_aggpage_search_result.none-task-blog-2~aggregatepage~first_rank_v2~rank_aggregation-8-78215641.pc_agg_rank_aggregation&utm_term=c%2B%2B&spm=3001.4430"
+                                   target="_blank" class="blog-title">
+                                    <h2>microsoft visual <em>c++</em> 14.0 is required问题解决办法</h2>
+                                </a>
+                                    <span class="tags">
+                                            <i class="c1">万次阅读</i>
+                                            <i class="c2">多人点赞</i>
+                                    </span>
+                                <span class="update-time">2017-10-12 15:41:44</span>
+                            </div>
+                            <div class="description">
+                                <div class="desc-detail digest">
+                                     error: Microsoft Visual <em>C++</em> 14.0 is required. Get it with “Microsoft Visual <em>C++</em> Build Tools”: http://landinghub.visualstudio.com/visual-cpp-build-tools     方法1  不管你是安装什么库，方...
+                                </div>
+                                <div class="desc-detail content">
+                                    <div class='article_content'>
+                                        <pre class="preclass"></pre>
+                                    </div>
+                                    <div class="hide-content"><a href="javascript:;">收起 <img
+                                                    src="https://csdnimg.cn/release/aggregate/img/arrow-down@2x.png" alt=""></a></div>
+                                </div>
+                            </div>
+                                <div class="tags-view">
+                                    <img src='https://csdnimg.cn/release/aggregate/img/tags.png' alt="">
+                                        <a href="../tags/MtTaYg5sODM0NDEtYmxvZwO0O0OO0O0O.html">pip出错   </a>
+                                </div>
+
+                        </li>
+                        <li data-page="1">
+                            <div class="blog-title">
+                                <a href="https://blog.csdn.net/ClaireSy/article/details/108423061"
+                                   data-report-click='{"mod": "popu_876","spm": "3001.4430","dest": "https://blog.csdn.net/ClaireSy/article/details/108423061?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522162408790116780262544086%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D&amp;request_id=162408790116780262544086&amp;utm_term=c%2B%2B&amp;utm_medium=distribute.pc_aggpage_search_result.none-task-blog-2~aggregatepage~first_rank_v2~rank_aggregation-9-108423061.pc_agg_rank_aggregation","extra": "{\&quot;utm_medium\&quot;:\&quot;distribute.pc_aggpage_search_result.none-task-blog-2~aggregatepage~first_rank_v2~rank_aggregation-9-108423061.pc_agg_rank_aggregation\&quot;}","index": "8","strategy": "2~aggregatepage~first_rank_v2~rank_aggregation","biz_id": "0","ops_request_misc": "%257B%2522request%255Fid%2522%253A%2522162408790116780262544086%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D","request_id": "162408790116780262544086"}'
+                                   data-report-view='{"mod": "popu_876","spm": "3001.4430","dest": "https://blog.csdn.net/ClaireSy/article/details/108423061?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522162408790116780262544086%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D&amp;request_id=162408790116780262544086&amp;utm_term=c%2B%2B&amp;utm_medium=distribute.pc_aggpage_search_result.none-task-blog-2~aggregatepage~first_rank_v2~rank_aggregation-9-108423061.pc_agg_rank_aggregation","extra": "{\&quot;utm_medium\&quot;:\&quot;distribute.pc_aggpage_search_result.none-task-blog-2~aggregatepage~first_rank_v2~rank_aggregation-9-108423061.pc_agg_rank_aggregation\&quot;}","index": "8","strategy": "2~aggregatepage~first_rank_v2~rank_aggregation","biz_id": "0","ops_request_misc": "%257B%2522request%255Fid%2522%253A%2522162408790116780262544086%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D","request_id": "162408790116780262544086"}'
+                                   data-report-query="utm_medium=distribute.pc_aggpage_search_result.none-task-blog-2~aggregatepage~first_rank_v2~rank_aggregation-9-108423061.pc_agg_rank_aggregation&utm_term=c%2B%2B&spm=3001.4430"
+                                   target="_blank" class="blog-title">
+                                    <h2>《黑马》——<em>C++</em>提高编程</h2>
+                                </a>
+                                    <span class="tags">
+                                            <i class="c1">万次阅读</i>
+                                            <i class="c2">多人点赞</i>
+                                    </span>
+                                <span class="update-time">2020-09-05 18:38:39</span>
+                            </div>
+                            <div class="description">
+                                <div class="desc-detail digest">
+                                    本阶段主要针对<em>C++</em>泛型编程和STL技术做详细讲解，探讨<em>C++</em>更深层的使用  1 模板 1.1 模板的概念 模板就是建立通用的模具，大大提高复用性 模板的特点：  模板不可以直接使用，它只是一个框架 模板的通用并不
+                                </div>
+                                <div class="desc-detail content">
+                                    <div class='article_content'>
+                                        <pre class="preclass"></pre>
+                                    </div>
+                                    <div class="hide-content"><a href="javascript:;">收起 <img
+                                                    src="https://csdnimg.cn/release/aggregate/img/arrow-down@2x.png" alt=""></a></div>
+                                </div>
+                            </div>
+
+                        </li>
+                        <li data-page="1">
+                            <div class="blog-title">
+                                <a href="https://blog.csdn.net/qq_38161040/article/details/87929616"
+                                   data-report-click='{"mod": "popu_876","spm": "3001.4430","dest": "https://blog.csdn.net/qq_38161040/article/details/87929616?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522162408790116780262544086%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D&amp;request_id=162408790116780262544086&amp;utm_term=c%2B%2B&amp;utm_medium=distribute.pc_aggpage_search_result.none-task-blog-2~aggregatepage~first_rank_v2~rank_aggregation-10-87929616.pc_agg_rank_aggregation","extra": "{\&quot;utm_medium\&quot;:\&quot;distribute.pc_aggpage_search_result.none-task-blog-2~aggregatepage~first_rank_v2~rank_aggregation-10-87929616.pc_agg_rank_aggregation\&quot;}","index": "9","strategy": "2~aggregatepage~first_rank_v2~rank_aggregation","biz_id": "0","ops_request_misc": "%257B%2522request%255Fid%2522%253A%2522162408790116780262544086%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D","request_id": "162408790116780262544086"}'
+                                   data-report-view='{"mod": "popu_876","spm": "3001.4430","dest": "https://blog.csdn.net/qq_38161040/article/details/87929616?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522162408790116780262544086%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D&amp;request_id=162408790116780262544086&amp;utm_term=c%2B%2B&amp;utm_medium=distribute.pc_aggpage_search_result.none-task-blog-2~aggregatepage~first_rank_v2~rank_aggregation-10-87929616.pc_agg_rank_aggregation","extra": "{\&quot;utm_medium\&quot;:\&quot;distribute.pc_aggpage_search_result.none-task-blog-2~aggregatepage~first_rank_v2~rank_aggregation-10-87929616.pc_agg_rank_aggregation\&quot;}","index": "9","strategy": "2~aggregatepage~first_rank_v2~rank_aggregation","biz_id": "0","ops_request_misc": "%257B%2522request%255Fid%2522%253A%2522162408790116780262544086%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D","request_id": "162408790116780262544086"}'
+                                   data-report-query="utm_medium=distribute.pc_aggpage_search_result.none-task-blog-2~aggregatepage~first_rank_v2~rank_aggregation-10-87929616.pc_agg_rank_aggregation&utm_term=c%2B%2B&spm=3001.4430"
+                                   target="_blank" class="blog-title">
+                                    <h2>Python 典藏篇-Microsoft Visual <em>C++</em> 14.0 is required，官方vc++运行库工具一键式解决！</h2>
+                                </a>
+                                    <span class="tags">
+                                            <i class="c1">万次阅读</i>
+                                            <i class="c2">多人点赞</i>
+                                    </span>
+                                <span class="update-time">2019-02-26 10:17:45</span>
+                            </div>
+                            <div class="description">
+                                <div class="desc-detail digest">
+                                    Python 典藏篇-Microsoft Visual <em>C++</em> 14.0 is required，官方vc++运行库工具一键式解决！ Microsoft Visual <em>C++</em> 14.0 is required. Get it with "Microsoft Visual <em>C++</em> Build Tools。 在用pip安装pyHook3的时候报错...
+                                </div>
+                                <div class="desc-detail content">
+                                    <div class='article_content'>
+                                        <pre class="preclass"></pre>
+                                    </div>
+                                    <div class="hide-content"><a href="javascript:;">收起 <img
+                                                    src="https://csdnimg.cn/release/aggregate/img/arrow-down@2x.png" alt=""></a></div>
+                                </div>
+                            </div>
+
+                        </li>
+                        <li data-page="1">
+                            <div class="blog-title">
+                                <a href="https://blog.csdn.net/sinat_41909065/article/details/82960361"
+                                   data-report-click='{"mod": "popu_876","spm": "3001.4430","dest": "https://blog.csdn.net/sinat_41909065/article/details/82960361?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522162408790116780262544086%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D&amp;request_id=162408790116780262544086&amp;utm_term=c%2B%2B&amp;utm_medium=distribute.pc_aggpage_search_result.none-task-blog-2~aggregatepage~first_rank_v2~rank_aggregation-11-82960361.pc_agg_rank_aggregation","extra": "{\&quot;utm_medium\&quot;:\&quot;distribute.pc_aggpage_search_result.none-task-blog-2~aggregatepage~first_rank_v2~rank_aggregation-11-82960361.pc_agg_rank_aggregation\&quot;}","index": "10","strategy": "2~aggregatepage~first_rank_v2~rank_aggregation","biz_id": "0","ops_request_misc": "%257B%2522request%255Fid%2522%253A%2522162408790116780262544086%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D","request_id": "162408790116780262544086"}'
+                                   data-report-view='{"mod": "popu_876","spm": "3001.4430","dest": "https://blog.csdn.net/sinat_41909065/article/details/82960361?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522162408790116780262544086%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D&amp;request_id=162408790116780262544086&amp;utm_term=c%2B%2B&amp;utm_medium=distribute.pc_aggpage_search_result.none-task-blog-2~aggregatepage~first_rank_v2~rank_aggregation-11-82960361.pc_agg_rank_aggregation","extra": "{\&quot;utm_medium\&quot;:\&quot;distribute.pc_aggpage_search_result.none-task-blog-2~aggregatepage~first_rank_v2~rank_aggregation-11-82960361.pc_agg_rank_aggregation\&quot;}","index": "10","strategy": "2~aggregatepage~first_rank_v2~rank_aggregation","biz_id": "0","ops_request_misc": "%257B%2522request%255Fid%2522%253A%2522162408790116780262544086%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D","request_id": "162408790116780262544086"}'
+                                   data-report-query="utm_medium=distribute.pc_aggpage_search_result.none-task-blog-2~aggregatepage~first_rank_v2~rank_aggregation-11-82960361.pc_agg_rank_aggregation&utm_term=c%2B%2B&spm=3001.4430"
+                                   target="_blank" class="blog-title">
+                                    <h2><em>C++</em> 随机数</h2>
+                                </a>
+                                    <span class="tags">
+                                            <i class="c1">万次阅读</i>
+                                            <i class="c2">多人点赞</i>
+                                    </span>
+                                <span class="update-time">2018-10-07 19:20:19</span>
+                            </div>
+                            <div class="description">
+                                <div class="desc-detail digest">
+                                    <em>c++</em>随机数产生以及扩展
+                                </div>
+                                <div class="desc-detail content">
+                                    <div class='article_content'>
+                                        <pre class="preclass"></pre>
+                                    </div>
+                                    <div class="hide-content"><a href="javascript:;">收起 <img
+                                                    src="https://csdnimg.cn/release/aggregate/img/arrow-down@2x.png" alt=""></a></div>
+                                </div>
+                            </div>
+                                <div class="tags-view">
+                                    <img src='https://csdnimg.cn/release/aggregate/img/tags.png' alt="">
+                                        <a href="../tags/MtTaEg0sMDIwNzctYmxvZwO0O0OO0O0O.html">随机数   </a>
+                                </div>
+
+                        </li>
+                        <li data-page="1">
+                            <div class="blog-title">
+                                <a href="https://blog.csdn.net/qq_15057857/article/details/83037978"
+                                   data-report-click='{"mod": "popu_876","spm": "3001.4430","dest": "https://blog.csdn.net/qq_15057857/article/details/83037978?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522162408790116780262544086%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D&amp;request_id=162408790116780262544086&amp;utm_term=c%2B%2B&amp;utm_medium=distribute.pc_aggpage_search_result.none-task-blog-2~aggregatepage~first_rank_v2~rank_aggregation-12-83037978.pc_agg_rank_aggregation","extra": "{\&quot;utm_medium\&quot;:\&quot;distribute.pc_aggpage_search_result.none-task-blog-2~aggregatepage~first_rank_v2~rank_aggregation-12-83037978.pc_agg_rank_aggregation\&quot;}","index": "11","strategy": "2~aggregatepage~first_rank_v2~rank_aggregation","biz_id": "0","ops_request_misc": "%257B%2522request%255Fid%2522%253A%2522162408790116780262544086%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D","request_id": "162408790116780262544086"}'
+                                   data-report-view='{"mod": "popu_876","spm": "3001.4430","dest": "https://blog.csdn.net/qq_15057857/article/details/83037978?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522162408790116780262544086%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D&amp;request_id=162408790116780262544086&amp;utm_term=c%2B%2B&amp;utm_medium=distribute.pc_aggpage_search_result.none-task-blog-2~aggregatepage~first_rank_v2~rank_aggregation-12-83037978.pc_agg_rank_aggregation","extra": "{\&quot;utm_medium\&quot;:\&quot;distribute.pc_aggpage_search_result.none-task-blog-2~aggregatepage~first_rank_v2~rank_aggregation-12-83037978.pc_agg_rank_aggregation\&quot;}","index": "11","strategy": "2~aggregatepage~first_rank_v2~rank_aggregation","biz_id": "0","ops_request_misc": "%257B%2522request%255Fid%2522%253A%2522162408790116780262544086%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D","request_id": "162408790116780262544086"}'
+                                   data-report-query="utm_medium=distribute.pc_aggpage_search_result.none-task-blog-2~aggregatepage~first_rank_v2~rank_aggregation-12-83037978.pc_agg_rank_aggregation&utm_term=c%2B%2B&spm=3001.4430"
+                                   target="_blank" class="blog-title">
+                                    <h2>Visual <em>C++</em>6.0安装教程（win10版）</h2>
+                                </a>
+                                    <span class="tags">
+                                            <i class="c1">万次阅读</i>
+                                            <i class="c2">多人点赞</i>
+                                    </span>
+                                <span class="update-time">2018-10-13 14:03:43</span>
+                            </div>
+                            <div class="description">
+                                <div class="desc-detail digest">
+                                    今天整理百度云文件突然想起来我...1.首先我们需要下载安装文件链接：https://pan.baidu.com/s/1UoyJD6FUARS2EvDdC9l7qA 提取码: 1314，也就是Visual <em>C++</em>6.0.      下载文件即可。  2.双击打开下载的文件默认位置安...
+                                </div>
+                                <div class="desc-detail content">
+                                    <div class='article_content'>
+                                        <pre class="preclass"></pre>
+                                    </div>
+                                    <div class="hide-content"><a href="javascript:;">收起 <img
+                                                    src="https://csdnimg.cn/release/aggregate/img/arrow-down@2x.png" alt=""></a></div>
+                                </div>
+                            </div>
+                                <div class="tags-view">
+                                    <img src='https://csdnimg.cn/release/aggregate/img/tags.png' alt="">
+                                        <a href="../tags/MtTaEg0sMzc0NzktYmxvZwO0O0OO0O0O.html">C语言   </a>
+                                        <a href="../tags/MtTaEg1sMjAyNjctYmxvZwO0O0OO0O0O.html">计算机基础   </a>
+                                </div>
+
+                        </li>
+                        <li data-page="1">
+                            <div class="blog-title">
+                                <a href="https://blog.csdn.net/cpongo1/article/details/43731049"
+                                   data-report-click='{"mod": "popu_876","spm": "3001.4430","dest": "https://blog.csdn.net/cpongo1/article/details/43731049?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522162408790116780262544086%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D&amp;request_id=162408790116780262544086&amp;utm_term=c%2B%2B&amp;utm_medium=distribute.pc_aggpage_search_result.none-task-blog-2~aggregatepage~first_rank_v2~rank_aggregation-13-43731049.pc_agg_rank_aggregation","extra": "{\&quot;utm_medium\&quot;:\&quot;distribute.pc_aggpage_search_result.none-task-blog-2~aggregatepage~first_rank_v2~rank_aggregation-13-43731049.pc_agg_rank_aggregation\&quot;}","index": "12","strategy": "2~aggregatepage~first_rank_v2~rank_aggregation","biz_id": "0","ops_request_misc": "%257B%2522request%255Fid%2522%253A%2522162408790116780262544086%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D","request_id": "162408790116780262544086"}'
+                                   data-report-view='{"mod": "popu_876","spm": "3001.4430","dest": "https://blog.csdn.net/cpongo1/article/details/43731049?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522162408790116780262544086%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D&amp;request_id=162408790116780262544086&amp;utm_term=c%2B%2B&amp;utm_medium=distribute.pc_aggpage_search_result.none-task-blog-2~aggregatepage~first_rank_v2~rank_aggregation-13-43731049.pc_agg_rank_aggregation","extra": "{\&quot;utm_medium\&quot;:\&quot;distribute.pc_aggpage_search_result.none-task-blog-2~aggregatepage~first_rank_v2~rank_aggregation-13-43731049.pc_agg_rank_aggregation\&quot;}","index": "12","strategy": "2~aggregatepage~first_rank_v2~rank_aggregation","biz_id": "0","ops_request_misc": "%257B%2522request%255Fid%2522%253A%2522162408790116780262544086%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D","request_id": "162408790116780262544086"}'
+                                   data-report-query="utm_medium=distribute.pc_aggpage_search_result.none-task-blog-2~aggregatepage~first_rank_v2~rank_aggregation-13-43731049.pc_agg_rank_aggregation&utm_term=c%2B%2B&spm=3001.4430"
+                                   target="_blank" class="blog-title">
+                                    <h2><em>C++</em> <em>c++</em></h2>
+                                </a>
+                                    <span class="tags">
+                                            <i class="c1">千次阅读</i>
+                                    </span>
+                                <span class="update-time">2015-02-11 10:20:24</span>
+                            </div>
+                            <div class="description">
+                                <div class="desc-detail digest">
+                                    <em>c++</em> <em>c++</em> <em>C++</em>
+                                </div>
+                                <div class="desc-detail content">
+                                    <div class='article_content'>
+                                        <pre class="preclass"></pre>
+                                    </div>
+                                    <div class="hide-content"><a href="javascript:;">收起 <img
+                                                    src="https://csdnimg.cn/release/aggregate/img/arrow-down@2x.png" alt=""></a></div>
+                                </div>
+                            </div>
+
+                        </li>
+                        <li data-page="1">
+                            <div class="blog-title">
+                                <a href="https://blog.csdn.net/qq_38161040/article/details/88203864"
+                                   data-report-click='{"mod": "popu_876","spm": "3001.4430","dest": "https://blog.csdn.net/qq_38161040/article/details/88203864?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522162408790116780262544086%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D&amp;request_id=162408790116780262544086&amp;utm_term=c%2B%2B&amp;utm_medium=distribute.pc_aggpage_search_result.none-task-blog-2~aggregatepage~first_rank_v2~rank_aggregation-14-88203864.pc_agg_rank_aggregation","extra": "{\&quot;utm_medium\&quot;:\&quot;distribute.pc_aggpage_search_result.none-task-blog-2~aggregatepage~first_rank_v2~rank_aggregation-14-88203864.pc_agg_rank_aggregation\&quot;}","index": "13","strategy": "2~aggregatepage~first_rank_v2~rank_aggregation","biz_id": "0","ops_request_misc": "%257B%2522request%255Fid%2522%253A%2522162408790116780262544086%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D","request_id": "162408790116780262544086"}'
+                                   data-report-view='{"mod": "popu_876","spm": "3001.4430","dest": "https://blog.csdn.net/qq_38161040/article/details/88203864?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522162408790116780262544086%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D&amp;request_id=162408790116780262544086&amp;utm_term=c%2B%2B&amp;utm_medium=distribute.pc_aggpage_search_result.none-task-blog-2~aggregatepage~first_rank_v2~rank_aggregation-14-88203864.pc_agg_rank_aggregation","extra": "{\&quot;utm_medium\&quot;:\&quot;distribute.pc_aggpage_search_result.none-task-blog-2~aggregatepage~first_rank_v2~rank_aggregation-14-88203864.pc_agg_rank_aggregation\&quot;}","index": "13","strategy": "2~aggregatepage~first_rank_v2~rank_aggregation","biz_id": "0","ops_request_misc": "%257B%2522request%255Fid%2522%253A%2522162408790116780262544086%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D","request_id": "162408790116780262544086"}'
+                                   data-report-query="utm_medium=distribute.pc_aggpage_search_result.none-task-blog-2~aggregatepage~first_rank_v2~rank_aggregation-14-88203864.pc_agg_rank_aggregation&utm_term=c%2B%2B&spm=3001.4430"
+                                   target="_blank" class="blog-title">
+                                    <h2>Windows 典藏篇-vc++运行库安装，Microsoft Visual <em>C++</em> Build Tools官方工具</h2>
+                                </a>
+                                    <span class="tags">
+                                            <i class="c1">万次阅读</i>
+                                            <i class="c2">多人点赞</i>
+                                    </span>
+                                <span class="update-time">2019-03-06 09:50:43</span>
+                            </div>
+                            <div class="description">
+                                <div class="desc-detail digest">
+                                    Windows 典藏篇-vc++运行库安装，Microsoft Visual <em>C++</em> Build Tools官方工具。 解决python库安装Microsoft Visual <em>C++</em> 14.0 is required问题。 想安装最全最完整最新的vc++运行库，莫非用vs2017安装了，这是...
+                                </div>
+                                <div class="desc-detail content">
+                                    <div class='article_content'>
+                                        <pre class="preclass"></pre>
+                                    </div>
+                                    <div class="hide-content"><a href="javascript:;">收起 <img
+                                                    src="https://csdnimg.cn/release/aggregate/img/arrow-down@2x.png" alt=""></a></div>
+                                </div>
+                            </div>
+
+                        </li>
+                        <li data-page="1">
+                            <div class="blog-title">
+                                <a href="https://blog.csdn.net/qq1623803207/article/details/89398435"
+                                   data-report-click='{"mod": "popu_876","spm": "3001.4430","dest": "https://blog.csdn.net/qq1623803207/article/details/89398435?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522162408790116780262544086%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D&amp;request_id=162408790116780262544086&amp;utm_term=c%2B%2B&amp;utm_medium=distribute.pc_aggpage_search_result.none-task-blog-2~aggregatepage~first_rank_v2~rank_aggregation-15-89398435.pc_agg_rank_aggregation","extra": "{\&quot;utm_medium\&quot;:\&quot;distribute.pc_aggpage_search_result.none-task-blog-2~aggregatepage~first_rank_v2~rank_aggregation-15-89398435.pc_agg_rank_aggregation\&quot;}","index": "14","strategy": "2~aggregatepage~first_rank_v2~rank_aggregation","biz_id": "0","ops_request_misc": "%257B%2522request%255Fid%2522%253A%2522162408790116780262544086%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D","request_id": "162408790116780262544086"}'
+                                   data-report-view='{"mod": "popu_876","spm": "3001.4430","dest": "https://blog.csdn.net/qq1623803207/article/details/89398435?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522162408790116780262544086%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D&amp;request_id=162408790116780262544086&amp;utm_term=c%2B%2B&amp;utm_medium=distribute.pc_aggpage_search_result.none-task-blog-2~aggregatepage~first_rank_v2~rank_aggregation-15-89398435.pc_agg_rank_aggregation","extra": "{\&quot;utm_medium\&quot;:\&quot;distribute.pc_aggpage_search_result.none-task-blog-2~aggregatepage~first_rank_v2~rank_aggregation-15-89398435.pc_agg_rank_aggregation\&quot;}","index": "14","strategy": "2~aggregatepage~first_rank_v2~rank_aggregation","biz_id": "0","ops_request_misc": "%257B%2522request%255Fid%2522%253A%2522162408790116780262544086%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D","request_id": "162408790116780262544086"}'
+                                   data-report-query="utm_medium=distribute.pc_aggpage_search_result.none-task-blog-2~aggregatepage~first_rank_v2~rank_aggregation-15-89398435.pc_agg_rank_aggregation&utm_term=c%2B%2B&spm=3001.4430"
+                                   target="_blank" class="blog-title">
+                                    <h2><em>C++</em>中的 ::</h2>
+                                </a>
+                                    <span class="tags">
+                                            <i class="c1">万次阅读</i>
+                                            <i class="c2">多人点赞</i>
+                                    </span>
+                                <span class="update-time">2019-04-19 13:44:22</span>
+                            </div>
+                            <div class="description">
+                                <div class="desc-detail digest">
+                                    <em>C++</em>中的双冒号 ::  第一种，类作用域，用来标明类的变量、函数  	Human::setName(char* name);   第二种，命名空间作用域，用来注明所使用的类、函数属于哪一个命名空间的  	std::cout &lt;&lt; "Hello World" &lt;&...
+                                </div>
+                                <div class="desc-detail content">
+                                    <div class='article_content'>
+                                        <pre class="preclass"></pre>
+                                    </div>
+                                    <div class="hide-content"><a href="javascript:;">收起 <img
+                                                    src="https://csdnimg.cn/release/aggregate/img/arrow-down@2x.png" alt=""></a></div>
+                                </div>
+                            </div>
+                                <div class="tags-view">
+                                    <img src='https://csdnimg.cn/release/aggregate/img/tags.png' alt="">
+                                        <a href="../tags/MtjaQg1sNzM3NC1ibG9n.html">Linux串口   </a>
+                                </div>
+
+                        </li>
+                        <li data-page="1">
+                            <div class="blog-title">
+                                <a href="https://blog.csdn.net/qq_39557240/article/details/86620681"
+                                   data-report-click='{"mod": "popu_876","spm": "3001.4430","dest": "https://blog.csdn.net/qq_39557240/article/details/86620681?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522162408790116780262544086%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D&amp;request_id=162408790116780262544086&amp;utm_term=c%2B%2B&amp;utm_medium=distribute.pc_aggpage_search_result.none-task-blog-2~aggregatepage~first_rank_v2~rank_aggregation-16-86620681.pc_agg_rank_aggregation","extra": "{\&quot;utm_medium\&quot;:\&quot;distribute.pc_aggpage_search_result.none-task-blog-2~aggregatepage~first_rank_v2~rank_aggregation-16-86620681.pc_agg_rank_aggregation\&quot;}","index": "15","strategy": "2~aggregatepage~first_rank_v2~rank_aggregation","biz_id": "0","ops_request_misc": "%257B%2522request%255Fid%2522%253A%2522162408790116780262544086%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D","request_id": "162408790116780262544086"}'
+                                   data-report-view='{"mod": "popu_876","spm": "3001.4430","dest": "https://blog.csdn.net/qq_39557240/article/details/86620681?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522162408790116780262544086%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D&amp;request_id=162408790116780262544086&amp;utm_term=c%2B%2B&amp;utm_medium=distribute.pc_aggpage_search_result.none-task-blog-2~aggregatepage~first_rank_v2~rank_aggregation-16-86620681.pc_agg_rank_aggregation","extra": "{\&quot;utm_medium\&quot;:\&quot;distribute.pc_aggpage_search_result.none-task-blog-2~aggregatepage~first_rank_v2~rank_aggregation-16-86620681.pc_agg_rank_aggregation\&quot;}","index": "15","strategy": "2~aggregatepage~first_rank_v2~rank_aggregation","biz_id": "0","ops_request_misc": "%257B%2522request%255Fid%2522%253A%2522162408790116780262544086%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D","request_id": "162408790116780262544086"}'
+                                   data-report-query="utm_medium=distribute.pc_aggpage_search_result.none-task-blog-2~aggregatepage~first_rank_v2~rank_aggregation-16-86620681.pc_agg_rank_aggregation&utm_term=c%2B%2B&spm=3001.4430"
+                                   target="_blank" class="blog-title">
+                                    <h2><em>c++</em>学习大纲总结</h2>
+                                </a>
+                                    <span class="tags">
+                                            <i class="c1">万次阅读</i>
+                                            <i class="c2">多人点赞</i>
+                                    </span>
+                                <span class="update-time">2019-01-24 09:38:19</span>
+                            </div>
+                            <div class="description">
+                                <div class="desc-detail digest">
+                                    基础简介：从c 到<em>c++</em> <em>c++</em>学习之概述–从C到<em>C++</em>  三大性质之封装性 <em>c++</em>学习之类与对象 <em>c++</em>学习类中的常量const、友元、运算符重载  三大性质之继承性 <em>c++</em>学习继承性、类图、Makefile <em>c++</em>学习继承之多继承与二义性、...
+                                </div>
+                                <div class="desc-detail content">
+                                    <div class='article_content'>
+                                        <pre class="preclass"></pre>
+                                    </div>
+                                    <div class="hide-content"><a href="javascript:;">收起 <img
+                                                    src="https://csdnimg.cn/release/aggregate/img/arrow-down@2x.png" alt=""></a></div>
+                                </div>
+                            </div>
+
+                        </li>
+                        <li data-page="1">
+                            <div class="blog-title">
+                                <a href="https://blog.csdn.net/haitaolang/article/details/70882326"
+                                   data-report-click='{"mod": "popu_876","spm": "3001.4430","dest": "https://blog.csdn.net/haitaolang/article/details/70882326?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522162408790116780262544086%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D&amp;request_id=162408790116780262544086&amp;utm_term=c%2B%2B&amp;utm_medium=distribute.pc_aggpage_search_result.none-task-blog-2~aggregatepage~first_rank_v2~rank_aggregation-17-70882326.pc_agg_rank_aggregation","extra": "{\&quot;utm_medium\&quot;:\&quot;distribute.pc_aggpage_search_result.none-task-blog-2~aggregatepage~first_rank_v2~rank_aggregation-17-70882326.pc_agg_rank_aggregation\&quot;}","index": "16","strategy": "2~aggregatepage~first_rank_v2~rank_aggregation","biz_id": "0","ops_request_misc": "%257B%2522request%255Fid%2522%253A%2522162408790116780262544086%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D","request_id": "162408790116780262544086"}'
+                                   data-report-view='{"mod": "popu_876","spm": "3001.4430","dest": "https://blog.csdn.net/haitaolang/article/details/70882326?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522162408790116780262544086%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D&amp;request_id=162408790116780262544086&amp;utm_term=c%2B%2B&amp;utm_medium=distribute.pc_aggpage_search_result.none-task-blog-2~aggregatepage~first_rank_v2~rank_aggregation-17-70882326.pc_agg_rank_aggregation","extra": "{\&quot;utm_medium\&quot;:\&quot;distribute.pc_aggpage_search_result.none-task-blog-2~aggregatepage~first_rank_v2~rank_aggregation-17-70882326.pc_agg_rank_aggregation\&quot;}","index": "16","strategy": "2~aggregatepage~first_rank_v2~rank_aggregation","biz_id": "0","ops_request_misc": "%257B%2522request%255Fid%2522%253A%2522162408790116780262544086%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D","request_id": "162408790116780262544086"}'
+                                   data-report-query="utm_medium=distribute.pc_aggpage_search_result.none-task-blog-2~aggregatepage~first_rank_v2~rank_aggregation-17-70882326.pc_agg_rank_aggregation&utm_term=c%2B%2B&spm=3001.4430"
+                                   target="_blank" class="blog-title">
+                                    <h2><em>C++</em> 学习大纲</h2>
+                                </a>
+                                    <span class="tags">
+                                            <i class="c1">万次阅读</i>
+                                            <i class="c2">多人点赞</i>
+                                    </span>
+                                <span class="update-time">2017-04-28 08:34:28</span>
+                            </div>
+                            <div class="description">
+                                <div class="desc-detail digest">
+                                    <em>C++</em> 基本数据类型和表达式 <em>C++</em> 无条件转移控制 <em>C++</em> 子程序间的数据传递 <em>C++</em> main函数的返回值 <em>C++</em> 标识符的作用域 <em>C++</em> 变量的生存期 <em>C++</em> 宏与内联函数 <em>C++</em> 函数名重载 <em>C++</em> 标准库 <em>C++</em> 条件编译 <em>C++</em> 枚举类型 <em>C++</em> ...
+                                </div>
+                                <div class="desc-detail content">
+                                    <div class='article_content'>
+                                        <pre class="preclass"></pre>
+                                    </div>
+                                    <div class="hide-content"><a href="javascript:;">收起 <img
+                                                    src="https://csdnimg.cn/release/aggregate/img/arrow-down@2x.png" alt=""></a></div>
+                                </div>
+                            </div>
+
+                        </li>
+                        <li data-page="1">
+                            <div class="blog-title">
+                                <a href="https://edu.csdn.net/course/detail/27659"
+                                   data-report-click='{"mod": "popu_876","spm": "3001.4430","dest": "https://edu.csdn.net/course/detail/27659?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522162408790116780262544086%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D&amp;request_id=162408790116780262544086&amp;utm_term=c%2B%2B&amp;utm_medium=distribute.pc_aggpage_search_result.none-task-course-2~aggregatepage~first_rank_v2~rank_aggregation-18-27659.pc_agg_rank_aggregation","extra": "{\&quot;utm_medium\&quot;:\&quot;distribute.pc_aggpage_search_result.none-task-course-2~aggregatepage~first_rank_v2~rank_aggregation-18-27659.pc_agg_rank_aggregation\&quot;}","index": "17","strategy": "2~aggregatepage~first_rank_v2~rank_aggregation","biz_id": "3","ops_request_misc": "%257B%2522request%255Fid%2522%253A%2522162408790116780262544086%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D","request_id": "162408790116780262544086"}'
+                                   data-report-view='{"mod": "popu_876","spm": "3001.4430","dest": "https://edu.csdn.net/course/detail/27659?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522162408790116780262544086%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D&amp;request_id=162408790116780262544086&amp;utm_term=c%2B%2B&amp;utm_medium=distribute.pc_aggpage_search_result.none-task-course-2~aggregatepage~first_rank_v2~rank_aggregation-18-27659.pc_agg_rank_aggregation","extra": "{\&quot;utm_medium\&quot;:\&quot;distribute.pc_aggpage_search_result.none-task-course-2~aggregatepage~first_rank_v2~rank_aggregation-18-27659.pc_agg_rank_aggregation\&quot;}","index": "17","strategy": "2~aggregatepage~first_rank_v2~rank_aggregation","biz_id": "3","ops_request_misc": "%257B%2522request%255Fid%2522%253A%2522162408790116780262544086%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D","request_id": "162408790116780262544086"}'
+                                   data-report-query="utm_medium=distribute.pc_aggpage_search_result.none-task-course-2~aggregatepage~first_rank_v2~rank_aggregation-18-27659.pc_agg_rank_aggregation&utm_term=c%2B%2B&spm=3001.4430"
+                                   target="_blank" class="blog-title">
+                                    <h2><em>C++</em>编程基础</h2>
+                                </a>
+                                    <span class="tags">
+                                            <i class="c1">万人学习</i>
+                                    </span>
+                                <span class="update-time">2020-02-09 22:57:09</span>
+                            </div>
+                            <div class="description">
+                                <div class="desc-detail digest">
+                                     本课程结合<em>c++</em>编程语言特点以及企业实际需求，经过精心编排和设计，主要有以下特色： 1、精细讲解<em>C++</em>重要语法，快速掌握<em>C++</em>编程技巧； 2、全面领悟STL标准模板库，为存储和处理数据提供标准步骤； 3、深入了解MFC...
+                                </div>
+                                <div class="desc-detail content">
+                                    <div class='article_content'>
+                                        <pre class="preclass"></pre>
+                                    </div>
+                                    <div class="hide-content"><a href="javascript:;">收起 <img
+                                                    src="https://csdnimg.cn/release/aggregate/img/arrow-down@2x.png" alt=""></a></div>
+                                </div>
+                            </div>
+
+                        </li>
+                        <li data-page="1">
+                            <div class="blog-title">
+                                <a href="https://blog.csdn.net/chimomo/article/details/25394959"
+                                   data-report-click='{"mod": "popu_876","spm": "3001.4430","dest": "https://blog.csdn.net/chimomo/article/details/25394959?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522162408790116780262544086%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D&amp;request_id=162408790116780262544086&amp;utm_term=c%2B%2B&amp;utm_medium=distribute.pc_aggpage_search_result.none-task-blog-2~aggregatepage~first_rank_v2~rank_aggregation-19-25394959.pc_agg_rank_aggregation","extra": "{\&quot;utm_medium\&quot;:\&quot;distribute.pc_aggpage_search_result.none-task-blog-2~aggregatepage~first_rank_v2~rank_aggregation-19-25394959.pc_agg_rank_aggregation\&quot;}","index": "18","strategy": "2~aggregatepage~first_rank_v2~rank_aggregation","biz_id": "0","ops_request_misc": "%257B%2522request%255Fid%2522%253A%2522162408790116780262544086%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D","request_id": "162408790116780262544086"}'
+                                   data-report-view='{"mod": "popu_876","spm": "3001.4430","dest": "https://blog.csdn.net/chimomo/article/details/25394959?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522162408790116780262544086%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D&amp;request_id=162408790116780262544086&amp;utm_term=c%2B%2B&amp;utm_medium=distribute.pc_aggpage_search_result.none-task-blog-2~aggregatepage~first_rank_v2~rank_aggregation-19-25394959.pc_agg_rank_aggregation","extra": "{\&quot;utm_medium\&quot;:\&quot;distribute.pc_aggpage_search_result.none-task-blog-2~aggregatepage~first_rank_v2~rank_aggregation-19-25394959.pc_agg_rank_aggregation\&quot;}","index": "18","strategy": "2~aggregatepage~first_rank_v2~rank_aggregation","biz_id": "0","ops_request_misc": "%257B%2522request%255Fid%2522%253A%2522162408790116780262544086%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D","request_id": "162408790116780262544086"}'
+                                   data-report-query="utm_medium=distribute.pc_aggpage_search_result.none-task-blog-2~aggregatepage~first_rank_v2~rank_aggregation-19-25394959.pc_agg_rank_aggregation&utm_term=c%2B%2B&spm=3001.4430"
+                                   target="_blank" class="blog-title">
+                                    <h2>算法 - 求两个自然数的最小公倍数（<em>C++</em>）</h2>
+                                </a>
+                                    <span class="tags">
+                                            <i class="c1">万次阅读</i>
+                                            <i class="c2">多人点赞</i>
+                                    </span>
+                                <span class="update-time">2019-02-27 20:32:12</span>
+                            </div>
+                            <div class="description">
+                                <div class="desc-detail digest">
+                                    分享一个大牛的人工智能教程。... * 求两个自然数的最小公倍数 - <em>C++</em> - by Chimomo  *  * Answer：最小公倍数 = 两数的乘积 / 最大公约数  */  #include &amp;lt;iostream&amp;gt; #include &amp;lt;casser...
+                                </div>
+                                <div class="desc-detail content">
+                                    <div class='article_content'>
+                                        <pre class="preclass"></pre>
+                                    </div>
+                                    <div class="hide-content"><a href="javascript:;">收起 <img
+                                                    src="https://csdnimg.cn/release/aggregate/img/arrow-down@2x.png" alt=""></a></div>
+                                </div>
+                            </div>
+                                <div class="tags-view">
+                                    <img src='https://csdnimg.cn/release/aggregate/img/tags.png' alt="">
+                                        <a href="../tags/MtTaEg0sMTE3MjUtYmxvZwO0O0OO0O0O.html">算法   </a>
+                                </div>
+
+                        </li>
+                        <li data-page="1">
+                            <div class="blog-title">
+                                <a href="https://download.csdn.net/download/u011828957/6024705"
+                                   data-report-click='{"mod": "popu_876","spm": "3001.4430","dest": "https://download.csdn.net/download/u011828957/6024705?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522162408790116780262544086%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D&amp;request_id=162408790116780262544086&amp;utm_term=c%2B%2B&amp;utm_medium=distribute.pc_aggpage_search_result.none-task-download-2~aggregatepage~first_rank_v2~rank_aggregation-20-6024705.pc_agg_rank_aggregation","extra": "{\&quot;utm_medium\&quot;:\&quot;distribute.pc_aggpage_search_result.none-task-download-2~aggregatepage~first_rank_v2~rank_aggregation-20-6024705.pc_agg_rank_aggregation\&quot;}","index": "19","strategy": "2~aggregatepage~first_rank_v2~rank_aggregation","biz_id": "1","ops_request_misc": "%257B%2522request%255Fid%2522%253A%2522162408790116780262544086%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D","request_id": "162408790116780262544086"}'
+                                   data-report-view='{"mod": "popu_876","spm": "3001.4430","dest": "https://download.csdn.net/download/u011828957/6024705?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522162408790116780262544086%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D&amp;request_id=162408790116780262544086&amp;utm_term=c%2B%2B&amp;utm_medium=distribute.pc_aggpage_search_result.none-task-download-2~aggregatepage~first_rank_v2~rank_aggregation-20-6024705.pc_agg_rank_aggregation","extra": "{\&quot;utm_medium\&quot;:\&quot;distribute.pc_aggpage_search_result.none-task-download-2~aggregatepage~first_rank_v2~rank_aggregation-20-6024705.pc_agg_rank_aggregation\&quot;}","index": "19","strategy": "2~aggregatepage~first_rank_v2~rank_aggregation","biz_id": "1","ops_request_misc": "%257B%2522request%255Fid%2522%253A%2522162408790116780262544086%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D","request_id": "162408790116780262544086"}'
+                                   data-report-query="utm_medium=distribute.pc_aggpage_search_result.none-task-download-2~aggregatepage~first_rank_v2~rank_aggregation-20-6024705.pc_agg_rank_aggregation&utm_term=c%2B%2B&spm=3001.4430"
+                                   target="_blank" class="blog-title">
+                                    <h2><em>C++</em>编程实例100篇</h2>
+                                </a>
+                                    <span class="tags">
+                                            <i class="c1">千次下载</i>
+                                            <i class="c2">热门讨论</i>
+                                    </span>
+                                <span class="update-time">2013-08-28 10:48:45</span>
+                            </div>
+                            <div class="description">
+                                <div class="desc-detail digest">
+                                    <em>C++</em>编程实例100篇，里面有很多很基础的编程实例，可以作为参考。
+                                </div>
+                                <div class="desc-detail content">
+                                    <div class='article_content'>
+                                        <pre class="preclass"></pre>
+                                    </div>
+                                    <div class="hide-content"><a href="javascript:;">收起 <img
+                                                    src="https://csdnimg.cn/release/aggregate/img/arrow-down@2x.png" alt=""></a></div>
+                                </div>
+                            </div>
+
+                        </li>
+                        <li data-page="1">
+                            <div class="blog-title">
+                                <a href="https://blog.csdn.net/wjy741223284/article/details/99610223"
+                                   data-report-click='{"mod": "popu_876","spm": "3001.4430","dest": "https://blog.csdn.net/wjy741223284/article/details/99610223?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522162408790116780262544086%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D&amp;request_id=162408790116780262544086&amp;utm_term=c%2B%2B&amp;utm_medium=distribute.pc_aggpage_search_result.none-task-blog-2~aggregatepage~first_rank_v2~rank_aggregation-21-99610223.pc_agg_rank_aggregation","extra": "{\&quot;utm_medium\&quot;:\&quot;distribute.pc_aggpage_search_result.none-task-blog-2~aggregatepage~first_rank_v2~rank_aggregation-21-99610223.pc_agg_rank_aggregation\&quot;}","index": "20","strategy": "2~aggregatepage~first_rank_v2~rank_aggregation","biz_id": "0","ops_request_misc": "%257B%2522request%255Fid%2522%253A%2522162408790116780262544086%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D","request_id": "162408790116780262544086"}'
+                                   data-report-view='{"mod": "popu_876","spm": "3001.4430","dest": "https://blog.csdn.net/wjy741223284/article/details/99610223?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522162408790116780262544086%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D&amp;request_id=162408790116780262544086&amp;utm_term=c%2B%2B&amp;utm_medium=distribute.pc_aggpage_search_result.none-task-blog-2~aggregatepage~first_rank_v2~rank_aggregation-21-99610223.pc_agg_rank_aggregation","extra": "{\&quot;utm_medium\&quot;:\&quot;distribute.pc_aggpage_search_result.none-task-blog-2~aggregatepage~first_rank_v2~rank_aggregation-21-99610223.pc_agg_rank_aggregation\&quot;}","index": "20","strategy": "2~aggregatepage~first_rank_v2~rank_aggregation","biz_id": "0","ops_request_misc": "%257B%2522request%255Fid%2522%253A%2522162408790116780262544086%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D","request_id": "162408790116780262544086"}'
+                                   data-report-query="utm_medium=distribute.pc_aggpage_search_result.none-task-blog-2~aggregatepage~first_rank_v2~rank_aggregation-21-99610223.pc_agg_rank_aggregation&utm_term=c%2B%2B&spm=3001.4430"
+                                   target="_blank" class="blog-title">
+                                    <h2><em>C++</em>字符串的拼接</h2>
+                                </a>
+                                    <span class="tags">
+                                            <i class="c1">万次阅读</i>
+                                            <i class="c2">多人点赞</i>
+                                    </span>
+                                <span class="update-time">2019-08-15 14:18:51</span>
+                            </div>
+                            <div class="description">
+                                <div class="desc-detail digest">
+                                    <em>C++</em>字符串的拼接 字符串拼接是指将两个字符串连接在一起，形成一个更长的字符串 #include &lt;iostream&gt;  int main(int argc,const char* argv[]) {  	std::string str1 = "Hello ;" 	std::string str2 = "World!...
+                                </div>
+                                <div class="desc-detail content">
+                                    <div class='article_content'>
+                                        <pre class="preclass"></pre>
+                                    </div>
+                                    <div class="hide-content"><a href="javascript:;">收起 <img
+                                                    src="https://csdnimg.cn/release/aggregate/img/arrow-down@2x.png" alt=""></a></div>
+                                </div>
+                            </div>
+                                <div class="tags-view">
+                                    <img src='https://csdnimg.cn/release/aggregate/img/tags.png' alt="">
+                                        <a href="../tags/MtTaEg0sMzA5OTUtYmxvZwO0O0OO0O0O.html">字符串拼接   </a>
+                                        <a href="../tags/MtjaQg5sMDY0MC1ibG9n.html">Linux   </a>
+                                        <a href="../tags/MtTaEg0sNDI2NjctYmxvZwO0O0OO0O0O.html">append   </a>
+                                </div>
+
+                        </li>
+                        <li data-page="1">
+                            <div class="blog-title">
+                                <a href="https://blog.csdn.net/zong596568821xp/article/details/81133511"
+                                   data-report-click='{"mod": "popu_876","spm": "3001.4430","dest": "https://blog.csdn.net/zong596568821xp/article/details/81133511?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522162408790116780262544086%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D&amp;request_id=162408790116780262544086&amp;utm_term=c%2B%2B&amp;utm_medium=distribute.pc_aggpage_search_result.none-task-blog-2~aggregatepage~first_rank_v2~rank_aggregation-22-81133511.pc_agg_rank_aggregation","extra": "{\&quot;utm_medium\&quot;:\&quot;distribute.pc_aggpage_search_result.none-task-blog-2~aggregatepage~first_rank_v2~rank_aggregation-22-81133511.pc_agg_rank_aggregation\&quot;}","index": "21","strategy": "2~aggregatepage~first_rank_v2~rank_aggregation","biz_id": "0","ops_request_misc": "%257B%2522request%255Fid%2522%253A%2522162408790116780262544086%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D","request_id": "162408790116780262544086"}'
+                                   data-report-view='{"mod": "popu_876","spm": "3001.4430","dest": "https://blog.csdn.net/zong596568821xp/article/details/81133511?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522162408790116780262544086%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D&amp;request_id=162408790116780262544086&amp;utm_term=c%2B%2B&amp;utm_medium=distribute.pc_aggpage_search_result.none-task-blog-2~aggregatepage~first_rank_v2~rank_aggregation-22-81133511.pc_agg_rank_aggregation","extra": "{\&quot;utm_medium\&quot;:\&quot;distribute.pc_aggpage_search_result.none-task-blog-2~aggregatepage~first_rank_v2~rank_aggregation-22-81133511.pc_agg_rank_aggregation\&quot;}","index": "21","strategy": "2~aggregatepage~first_rank_v2~rank_aggregation","biz_id": "0","ops_request_misc": "%257B%2522request%255Fid%2522%253A%2522162408790116780262544086%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D","request_id": "162408790116780262544086"}'
+                                   data-report-query="utm_medium=distribute.pc_aggpage_search_result.none-task-blog-2~aggregatepage~first_rank_v2~rank_aggregation-22-81133511.pc_agg_rank_aggregation&utm_term=c%2B%2B&spm=3001.4430"
+                                   target="_blank" class="blog-title">
+                                    <h2>Python调用<em>C++</em>程序的几种方法</h2>
+                                </a>
+                                    <span class="tags">
+                                            <i class="c1">万次阅读</i>
+                                            <i class="c2">多人点赞</i>
+                                    </span>
+                                <span class="update-time">2018-07-20 15:43:58</span>
+                            </div>
+                            <div class="description">
+                                <div class="desc-detail digest">
+                                    大家都知道Python的优点是开发效率高，使用方便，<em>C++</em>则是运行效率高，这两者可以相辅相成，不管是在Python项目中嵌入<em>C++</em>代码，或是在<em>C++</em>项目中用Python实现外围功能，都可能遇到Python调用<em>C++</em>模块的需求，下面列举出...
+                                </div>
+                                <div class="desc-detail content">
+                                    <div class='article_content'>
+                                        <pre class="preclass"></pre>
+                                    </div>
+                                    <div class="hide-content"><a href="javascript:;">收起 <img
+                                                    src="https://csdnimg.cn/release/aggregate/img/arrow-down@2x.png" alt=""></a></div>
+                                </div>
+                            </div>
+
+                        </li>
+                        <li data-page="1">
+                            <div class="blog-title">
+                                <a href="https://blog.csdn.net/qq_29695701/article/details/84262492"
+                                   data-report-click='{"mod": "popu_876","spm": "3001.4430","dest": "https://blog.csdn.net/qq_29695701/article/details/84262492?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522162408790116780262544086%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D&amp;request_id=162408790116780262544086&amp;utm_term=c%2B%2B&amp;utm_medium=distribute.pc_aggpage_search_result.none-task-blog-2~aggregatepage~first_rank_v2~rank_aggregation-23-84262492.pc_agg_rank_aggregation","extra": "{\&quot;utm_medium\&quot;:\&quot;distribute.pc_aggpage_search_result.none-task-blog-2~aggregatepage~first_rank_v2~rank_aggregation-23-84262492.pc_agg_rank_aggregation\&quot;}","index": "22","strategy": "2~aggregatepage~first_rank_v2~rank_aggregation","biz_id": "0","ops_request_misc": "%257B%2522request%255Fid%2522%253A%2522162408790116780262544086%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D","request_id": "162408790116780262544086"}'
+                                   data-report-view='{"mod": "popu_876","spm": "3001.4430","dest": "https://blog.csdn.net/qq_29695701/article/details/84262492?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522162408790116780262544086%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D&amp;request_id=162408790116780262544086&amp;utm_term=c%2B%2B&amp;utm_medium=distribute.pc_aggpage_search_result.none-task-blog-2~aggregatepage~first_rank_v2~rank_aggregation-23-84262492.pc_agg_rank_aggregation","extra": "{\&quot;utm_medium\&quot;:\&quot;distribute.pc_aggpage_search_result.none-task-blog-2~aggregatepage~first_rank_v2~rank_aggregation-23-84262492.pc_agg_rank_aggregation\&quot;}","index": "22","strategy": "2~aggregatepage~first_rank_v2~rank_aggregation","biz_id": "0","ops_request_misc": "%257B%2522request%255Fid%2522%253A%2522162408790116780262544086%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D","request_id": "162408790116780262544086"}'
+                                   data-report-query="utm_medium=distribute.pc_aggpage_search_result.none-task-blog-2~aggregatepage~first_rank_v2~rank_aggregation-23-84262492.pc_agg_rank_aggregation&utm_term=c%2B%2B&spm=3001.4430"
+                                   target="_blank" class="blog-title">
+                                    <h2><em>C++</em>读取图片</h2>
+                                </a>
+                                    <span class="tags">
+                                            <i class="c1">万次阅读</i>
+                                            <i class="c2">多人点赞</i>
+                                    </span>
+                                <span class="update-time">2018-11-20 00:12:36</span>
+                            </div>
+                            <div class="description">
+                                <div class="desc-detail digest">
+                                    <em>C++</em>读取图片  以<em>C++</em>风格（文件流）而不是C风格（FILE）读取图片。  使用到的头文件主要是fstream 参考链接： http://www.cplusplus.com/reference/istream/istream/read/ 主要用到的函数： ifstream.seekg() ...
+                                </div>
+                                <div class="desc-detail content">
+                                    <div class='article_content'>
+                                        <pre class="preclass"></pre>
+                                    </div>
+                                    <div class="hide-content"><a href="javascript:;">收起 <img
+                                                    src="https://csdnimg.cn/release/aggregate/img/arrow-down@2x.png" alt=""></a></div>
+                                </div>
+                            </div>
+                                <div class="tags-view">
+                                    <img src='https://csdnimg.cn/release/aggregate/img/tags.png' alt="">
+                                        <a href="../tags/MtTaEg0sMjA0MDYtYmxvZwO0O0OO0O0O.html">文件流   </a>
+                                        <a href="../tags/MtTaEg0sMzI3NTktYmxvZwO0O0OO0O0O.html">fstream   </a>
+                                        <a href="../tags/MtTaEg0sNDg5NjctYmxvZwO0O0OO0O0O.html">图片   </a>
+                                </div>
+
+                        </li>
+                        <li data-page="1">
+                            <div class="blog-title">
+                                <a href="https://blog.csdn.net/qq_40630246/article/details/102643196"
+                                   data-report-click='{"mod": "popu_876","spm": "3001.4430","dest": "https://blog.csdn.net/qq_40630246/article/details/102643196?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522162408790116780262544086%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D&amp;request_id=162408790116780262544086&amp;utm_term=c%2B%2B&amp;utm_medium=distribute.pc_aggpage_search_result.none-task-blog-2~aggregatepage~first_rank_v2~rank_aggregation-24-102643196.pc_agg_rank_aggregation","extra": "{\&quot;utm_medium\&quot;:\&quot;distribute.pc_aggpage_search_result.none-task-blog-2~aggregatepage~first_rank_v2~rank_aggregation-24-102643196.pc_agg_rank_aggregation\&quot;}","index": "23","strategy": "2~aggregatepage~first_rank_v2~rank_aggregation","biz_id": "0","ops_request_misc": "%257B%2522request%255Fid%2522%253A%2522162408790116780262544086%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D","request_id": "162408790116780262544086"}'
+                                   data-report-view='{"mod": "popu_876","spm": "3001.4430","dest": "https://blog.csdn.net/qq_40630246/article/details/102643196?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522162408790116780262544086%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D&amp;request_id=162408790116780262544086&amp;utm_term=c%2B%2B&amp;utm_medium=distribute.pc_aggpage_search_result.none-task-blog-2~aggregatepage~first_rank_v2~rank_aggregation-24-102643196.pc_agg_rank_aggregation","extra": "{\&quot;utm_medium\&quot;:\&quot;distribute.pc_aggpage_search_result.none-task-blog-2~aggregatepage~first_rank_v2~rank_aggregation-24-102643196.pc_agg_rank_aggregation\&quot;}","index": "23","strategy": "2~aggregatepage~first_rank_v2~rank_aggregation","biz_id": "0","ops_request_misc": "%257B%2522request%255Fid%2522%253A%2522162408790116780262544086%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D","request_id": "162408790116780262544086"}'
+                                   data-report-query="utm_medium=distribute.pc_aggpage_search_result.none-task-blog-2~aggregatepage~first_rank_v2~rank_aggregation-24-102643196.pc_agg_rank_aggregation&utm_term=c%2B%2B&spm=3001.4430"
+                                   target="_blank" class="blog-title">
+                                    <h2><em>c++</em> 自制植物大战僵尸（Cocos2dx开源项目）</h2>
+                                </a>
+                                    <span class="tags">
+                                            <i class="c1">万次阅读</i>
+                                            <i class="c2">多人点赞</i>
+                                    </span>
+                                <span class="update-time">2019-10-19 21:15:38</span>
+                            </div>
+                            <div class="description">
+                                <div class="desc-detail digest">
+                                    此游戏全部由本人自己制作完成。游戏大部分的素材来源于原版游戏素材，少部分搜集于网络，以及自己制作。 此游戏为同人游戏而且仅供学习交流使用，任何人未经授权，不得对本游戏进行更改、盗用等，否则后果自负。...
+                                </div>
+                                <div class="desc-detail content">
+                                    <div class='article_content'>
+                                        <pre class="preclass"></pre>
+                                    </div>
+                                    <div class="hide-content"><a href="javascript:;">收起 <img
+                                                    src="https://csdnimg.cn/release/aggregate/img/arrow-down@2x.png" alt=""></a></div>
+                                </div>
+                            </div>
+
+                        </li>
+                        <li data-page="1">
+                            <div class="blog-title">
+                                <a href="https://blog.csdn.net/ZYZMZM_/article/details/102717590"
+                                   data-report-click='{"mod": "popu_876","spm": "3001.4430","dest": "https://blog.csdn.net/ZYZMZM_/article/details/102717590?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522162408790116780262544086%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D&amp;request_id=162408790116780262544086&amp;utm_term=c%2B%2B&amp;utm_medium=distribute.pc_aggpage_search_result.none-task-blog-2~aggregatepage~first_rank_v2~rank_aggregation-25-102717590.pc_agg_rank_aggregation","extra": "{\&quot;utm_medium\&quot;:\&quot;distribute.pc_aggpage_search_result.none-task-blog-2~aggregatepage~first_rank_v2~rank_aggregation-25-102717590.pc_agg_rank_aggregation\&quot;}","index": "24","strategy": "2~aggregatepage~first_rank_v2~rank_aggregation","biz_id": "0","ops_request_misc": "%257B%2522request%255Fid%2522%253A%2522162408790116780262544086%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D","request_id": "162408790116780262544086"}'
+                                   data-report-view='{"mod": "popu_876","spm": "3001.4430","dest": "https://blog.csdn.net/ZYZMZM_/article/details/102717590?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522162408790116780262544086%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D&amp;request_id=162408790116780262544086&amp;utm_term=c%2B%2B&amp;utm_medium=distribute.pc_aggpage_search_result.none-task-blog-2~aggregatepage~first_rank_v2~rank_aggregation-25-102717590.pc_agg_rank_aggregation","extra": "{\&quot;utm_medium\&quot;:\&quot;distribute.pc_aggpage_search_result.none-task-blog-2~aggregatepage~first_rank_v2~rank_aggregation-25-102717590.pc_agg_rank_aggregation\&quot;}","index": "24","strategy": "2~aggregatepage~first_rank_v2~rank_aggregation","biz_id": "0","ops_request_misc": "%257B%2522request%255Fid%2522%253A%2522162408790116780262544086%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D","request_id": "162408790116780262544086"}'
+                                   data-report-query="utm_medium=distribute.pc_aggpage_search_result.none-task-blog-2~aggregatepage~first_rank_v2~rank_aggregation-25-102717590.pc_agg_rank_aggregation&utm_term=c%2B%2B&spm=3001.4430"
+                                   target="_blank" class="blog-title">
+                                    <h2>C/<em>C++</em>后端-服务端开发技术博文分类汇总</h2>
+                                </a>
+                                    <span class="tags">
+                                            <i class="c1">万次阅读</i>
+                                            <i class="c2">多人点赞</i>
+                                    </span>
+                                <span class="update-time">2019-10-24 10:24:17</span>
+                            </div>
+                            <div class="description">
+                                <div class="desc-detail digest">
+                                    C/<em>C++</em>后端/服务端开发技术博文分类汇总：C语言基础、<em>C++</em>基础、算法与数据结构、Linux操作系统(网络)、数据库原理、设计模式、Git
+                                </div>
+                                <div class="desc-detail content">
+                                    <div class='article_content'>
+                                        <pre class="preclass"></pre>
+                                    </div>
+                                    <div class="hide-content"><a href="javascript:;">收起 <img
+                                                    src="https://csdnimg.cn/release/aggregate/img/arrow-down@2x.png" alt=""></a></div>
+                                </div>
+                            </div>
+
+                        </li>
+                        <li data-page="1">
+                            <div class="blog-title">
+                                <a href="https://blog.csdn.net/digitalkee/article/details/97932009"
+                                   data-report-click='{"mod": "popu_876","spm": "3001.4430","dest": "https://blog.csdn.net/digitalkee/article/details/97932009?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522162408790116780262544086%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D&amp;request_id=162408790116780262544086&amp;utm_term=c%2B%2B&amp;utm_medium=distribute.pc_aggpage_search_result.none-task-blog-2~aggregatepage~first_rank_v2~rank_aggregation-26-97932009.pc_agg_rank_aggregation","extra": "{\&quot;utm_medium\&quot;:\&quot;distribute.pc_aggpage_search_result.none-task-blog-2~aggregatepage~first_rank_v2~rank_aggregation-26-97932009.pc_agg_rank_aggregation\&quot;}","index": "25","strategy": "2~aggregatepage~first_rank_v2~rank_aggregation","biz_id": "0","ops_request_misc": "%257B%2522request%255Fid%2522%253A%2522162408790116780262544086%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D","request_id": "162408790116780262544086"}'
+                                   data-report-view='{"mod": "popu_876","spm": "3001.4430","dest": "https://blog.csdn.net/digitalkee/article/details/97932009?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522162408790116780262544086%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D&amp;request_id=162408790116780262544086&amp;utm_term=c%2B%2B&amp;utm_medium=distribute.pc_aggpage_search_result.none-task-blog-2~aggregatepage~first_rank_v2~rank_aggregation-26-97932009.pc_agg_rank_aggregation","extra": "{\&quot;utm_medium\&quot;:\&quot;distribute.pc_aggpage_search_result.none-task-blog-2~aggregatepage~first_rank_v2~rank_aggregation-26-97932009.pc_agg_rank_aggregation\&quot;}","index": "25","strategy": "2~aggregatepage~first_rank_v2~rank_aggregation","biz_id": "0","ops_request_misc": "%257B%2522request%255Fid%2522%253A%2522162408790116780262544086%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D","request_id": "162408790116780262544086"}'
+                                   data-report-query="utm_medium=distribute.pc_aggpage_search_result.none-task-blog-2~aggregatepage~first_rank_v2~rank_aggregation-26-97932009.pc_agg_rank_aggregation&utm_term=c%2B%2B&spm=3001.4430"
+                                   target="_blank" class="blog-title">
+                                    <h2><em>C++</em>初学者必看的50个建议 绝对经典</h2>
+                                </a>
+                                    <span class="tags">
+                                            <i class="c1">万次阅读</i>
+                                            <i class="c2">多人点赞</i>
+                                    </span>
+                                <span class="update-time">2019-07-31 16:42:14</span>
+                            </div>
+                            <div class="description">
+                                <div class="desc-detail digest">
+                                    1.把<em>C++</em>当成一门新的语言学习（和C没啥关系！真的。）；  2.看《Thinking In <em>C++</em>》，不要看《<em>C++</em>变成死相》；  3.看《The <em>C++</em> Programming Language》和《Inside The <em>C++</em> Object Model》,不要因为他们很难而我们自己...
+                                </div>
+                                <div class="desc-detail content">
+                                    <div class='article_content'>
+                                        <pre class="preclass"></pre>
+                                    </div>
+                                    <div class="hide-content"><a href="javascript:;">收起 <img
+                                                    src="https://csdnimg.cn/release/aggregate/img/arrow-down@2x.png" alt=""></a></div>
+                                </div>
+                            </div>
+
+                        </li>
+                        <li data-page="1">
+                            <div class="blog-title">
+                                <a href="https://blog.csdn.net/WALLEZhe/article/details/48739111"
+                                   data-report-click='{"mod": "popu_876","spm": "3001.4430","dest": "https://blog.csdn.net/WALLEZhe/article/details/48739111?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522162408790116780262544086%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D&amp;request_id=162408790116780262544086&amp;utm_term=c%2B%2B&amp;utm_medium=distribute.pc_aggpage_search_result.none-task-blog-2~aggregatepage~first_rank_v2~rank_aggregation-27-48739111.pc_agg_rank_aggregation","extra": "{\&quot;utm_medium\&quot;:\&quot;distribute.pc_aggpage_search_result.none-task-blog-2~aggregatepage~first_rank_v2~rank_aggregation-27-48739111.pc_agg_rank_aggregation\&quot;}","index": "26","strategy": "2~aggregatepage~first_rank_v2~rank_aggregation","biz_id": "0","ops_request_misc": "%257B%2522request%255Fid%2522%253A%2522162408790116780262544086%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D","request_id": "162408790116780262544086"}'
+                                   data-report-view='{"mod": "popu_876","spm": "3001.4430","dest": "https://blog.csdn.net/WALLEZhe/article/details/48739111?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522162408790116780262544086%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D&amp;request_id=162408790116780262544086&amp;utm_term=c%2B%2B&amp;utm_medium=distribute.pc_aggpage_search_result.none-task-blog-2~aggregatepage~first_rank_v2~rank_aggregation-27-48739111.pc_agg_rank_aggregation","extra": "{\&quot;utm_medium\&quot;:\&quot;distribute.pc_aggpage_search_result.none-task-blog-2~aggregatepage~first_rank_v2~rank_aggregation-27-48739111.pc_agg_rank_aggregation\&quot;}","index": "26","strategy": "2~aggregatepage~first_rank_v2~rank_aggregation","biz_id": "0","ops_request_misc": "%257B%2522request%255Fid%2522%253A%2522162408790116780262544086%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D","request_id": "162408790116780262544086"}'
+                                   data-report-query="utm_medium=distribute.pc_aggpage_search_result.none-task-blog-2~aggregatepage~first_rank_v2~rank_aggregation-27-48739111.pc_agg_rank_aggregation&utm_term=c%2B%2B&spm=3001.4430"
+                                   target="_blank" class="blog-title">
+                                    <h2><em>C++</em>的字符串长度获取办法 六年后更新—为啥这么多人骂我</h2>
+                                </a>
+                                    <span class="tags">
+                                            <i class="c1">万次阅读</i>
+                                            <i class="c2">多人点赞</i>
+                                    </span>
+                                <span class="update-time">2015-09-25 22:38:16</span>
+                            </div>
+                            <div class="description">
+                                <div class="desc-detail digest">
+                                    最近在做一些程序题目，需要获取字符串长度。...(C/<em>C++</em> strlen(str)和str.length()和str.size()都可以求字符串长度。   其中str.length()和str.size()是用于求string类对象的成员函数  strlen(str)是用于求字符数组
+                                </div>
+                                <div class="desc-detail content">
+                                    <div class='article_content'>
+                                        <pre class="preclass"></pre>
+                                    </div>
+                                    <div class="hide-content"><a href="javascript:;">收起 <img
+                                                    src="https://csdnimg.cn/release/aggregate/img/arrow-down@2x.png" alt=""></a></div>
+                                </div>
+                            </div>
+
+                        </li>
+                        <li data-page="1">
+                            <div class="blog-title">
+                                <a href="https://download.csdn.net/download/chenxh/150997"
+                                   data-report-click='{"mod": "popu_876","spm": "3001.4430","dest": "https://download.csdn.net/download/chenxh/150997?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522162408790116780262544086%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D&amp;request_id=162408790116780262544086&amp;utm_term=c%2B%2B&amp;utm_medium=distribute.pc_aggpage_search_result.none-task-download-2~aggregatepage~first_rank_v2~rank_aggregation-28-150997.pc_agg_rank_aggregation","extra": "{\&quot;utm_medium\&quot;:\&quot;distribute.pc_aggpage_search_result.none-task-download-2~aggregatepage~first_rank_v2~rank_aggregation-28-150997.pc_agg_rank_aggregation\&quot;}","index": "27","strategy": "2~aggregatepage~first_rank_v2~rank_aggregation","biz_id": "1","ops_request_misc": "%257B%2522request%255Fid%2522%253A%2522162408790116780262544086%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D","request_id": "162408790116780262544086"}'
+                                   data-report-view='{"mod": "popu_876","spm": "3001.4430","dest": "https://download.csdn.net/download/chenxh/150997?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522162408790116780262544086%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D&amp;request_id=162408790116780262544086&amp;utm_term=c%2B%2B&amp;utm_medium=distribute.pc_aggpage_search_result.none-task-download-2~aggregatepage~first_rank_v2~rank_aggregation-28-150997.pc_agg_rank_aggregation","extra": "{\&quot;utm_medium\&quot;:\&quot;distribute.pc_aggpage_search_result.none-task-download-2~aggregatepage~first_rank_v2~rank_aggregation-28-150997.pc_agg_rank_aggregation\&quot;}","index": "27","strategy": "2~aggregatepage~first_rank_v2~rank_aggregation","biz_id": "1","ops_request_misc": "%257B%2522request%255Fid%2522%253A%2522162408790116780262544086%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D","request_id": "162408790116780262544086"}'
+                                   data-report-query="utm_medium=distribute.pc_aggpage_search_result.none-task-download-2~aggregatepage~first_rank_v2~rank_aggregation-28-150997.pc_agg_rank_aggregation&utm_term=c%2B%2B&spm=3001.4430"
+                                   target="_blank" class="blog-title">
+                                    <h2>C~<em>C++</em>程序员实用大全</h2>
+                                </a>
+                                    <span class="tags">
+                                            <i class="c1">千次下载</i>
+                                            <i class="c2">热门讨论</i>
+                                    </span>
+                                <span class="update-time">2006-05-10 10:46:47</span>
+                            </div>
+                            <div class="description">
+                                <div class="desc-detail digest">
+                                    C~<em>C++</em>程序员实用大全――C~<em>C++</em>最佳编程指南
+                                </div>
+                                <div class="desc-detail content">
+                                    <div class='article_content'>
+                                        <pre class="preclass"></pre>
+                                    </div>
+                                    <div class="hide-content"><a href="javascript:;">收起 <img
+                                                    src="https://csdnimg.cn/release/aggregate/img/arrow-down@2x.png" alt=""></a></div>
+                                </div>
+                            </div>
+
+                        </li>
+                        <li data-page="1">
+                            <div class="blog-title">
+                                <a href="https://blog.csdn.net/qq_36409711/article/details/72625140"
+                                   data-report-click='{"mod": "popu_876","spm": "3001.4430","dest": "https://blog.csdn.net/qq_36409711/article/details/72625140?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522162408790116780262544086%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D&amp;request_id=162408790116780262544086&amp;utm_term=c%2B%2B&amp;utm_medium=distribute.pc_aggpage_search_result.none-task-blog-2~aggregatepage~first_rank_v2~rank_aggregation-29-72625140.pc_agg_rank_aggregation","extra": "{\&quot;utm_medium\&quot;:\&quot;distribute.pc_aggpage_search_result.none-task-blog-2~aggregatepage~first_rank_v2~rank_aggregation-29-72625140.pc_agg_rank_aggregation\&quot;}","index": "28","strategy": "2~aggregatepage~first_rank_v2~rank_aggregation","biz_id": "0","ops_request_misc": "%257B%2522request%255Fid%2522%253A%2522162408790116780262544086%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D","request_id": "162408790116780262544086"}'
+                                   data-report-view='{"mod": "popu_876","spm": "3001.4430","dest": "https://blog.csdn.net/qq_36409711/article/details/72625140?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522162408790116780262544086%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D&amp;request_id=162408790116780262544086&amp;utm_term=c%2B%2B&amp;utm_medium=distribute.pc_aggpage_search_result.none-task-blog-2~aggregatepage~first_rank_v2~rank_aggregation-29-72625140.pc_agg_rank_aggregation","extra": "{\&quot;utm_medium\&quot;:\&quot;distribute.pc_aggpage_search_result.none-task-blog-2~aggregatepage~first_rank_v2~rank_aggregation-29-72625140.pc_agg_rank_aggregation\&quot;}","index": "28","strategy": "2~aggregatepage~first_rank_v2~rank_aggregation","biz_id": "0","ops_request_misc": "%257B%2522request%255Fid%2522%253A%2522162408790116780262544086%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D","request_id": "162408790116780262544086"}'
+                                   data-report-query="utm_medium=distribute.pc_aggpage_search_result.none-task-blog-2~aggregatepage~first_rank_v2~rank_aggregation-29-72625140.pc_agg_rank_aggregation&utm_term=c%2B%2B&spm=3001.4430"
+                                   target="_blank" class="blog-title">
+                                    <h2><em>c++</em>中string的几种赋值方法</h2>
+                                </a>
+                                    <span class="tags">
+                                            <i class="c1">万次阅读</i>
+                                    </span>
+                                <span class="update-time">2017-05-22 11:50:48</span>
+                            </div>
+                            <div class="description">
+                                <div class="desc-detail digest">
+                                    在<em>C++</em>中则把字符串封装成了一种数据类型string,可以直接声明变量并进行赋值等字符串操作  <em>c++</em>可以赋一个比现有字符更长的字符串而C不可以#include &quot;stdafx.h&quot; #include #include#include&quot;string&quot...
+                                </div>
+                                <div class="desc-detail content">
+                                    <div class='article_content'>
+                                        <pre class="preclass"></pre>
+                                    </div>
+                                    <div class="hide-content"><a href="javascript:;">收起 <img
+                                                    src="https://csdnimg.cn/release/aggregate/img/arrow-down@2x.png" alt=""></a></div>
+                                </div>
+                            </div>
+
+                        </li>
+                </ul>
+            </div>
+
+            <div class="tab-bd wrap-download">
+                <div class="qa-list"></div>
+                <div class="qa-no-data hide">
+                    <img src="https://csdnimg.cn/release/blogv2/dist/pc/img/monkeyWhite.png" alt="">
+                    <p style="color: #6b6b6b;font-size: 16px;font-weight: bold;letter-spacing: 2px;">空空如也</p>
+                </div>
+            </div>
+
+            <div class="tab-bd wrap-qa">
+                <div class="qa-list"></div>
+                <div class="qa-no-data hide">
+                    <img src="https://csdnimg.cn/release/blogv2/dist/pc/img/monkeyWhite.png" alt="">
+                    <p style="color: #6b6b6b;font-size: 16px;font-weight: bold;letter-spacing: 2px;">空空如也</p>
+                </div>
+            </div>
+
+            <div class="wrap-pagination">
+                <div class="ftl_page">
+
+ <script>  
+    console.log("pageNum", `1`)
+    console.log("pages", `20`)
+    console.log("toalNum", `400`)
+</script>
+
+ <div class="search-result-pagination"> 
+         <div class="csdn-pagination hide-set">
+            <span class="page-nav">
+                    <a class="disable iconfont icon-fanhui btn btn-xs btn-default btn-prev checklogin" href="javascript:;"></a> 
+
+
+                    
+                        <a href="?platform=pc&page=1&pageSize=20"  page_num="1" class="btn btn-xs btn-default active checklogin">1</a> 
+                    
+                    
+                        <a href="?platform=pc&page=2&pageSize=20"  page_num="2" class="btn btn-xs btn-default checklogin">2</a> 
+                    
+                    
+                        <a href="?platform=pc&page=3&pageSize=20"  page_num="3" class="btn btn-xs btn-default checklogin">3</a> 
+                    
+                    
+                        <a href="?platform=pc&page=4&pageSize=20"  page_num="4" class="btn btn-xs btn-default checklogin">4</a> 
+                    
+                    
+                        <a href="?platform=pc&page=5&pageSize=20"  page_num="5" class="btn btn-xs btn-default checklogin">5</a> 
+                    
+                        <span class="ellipsis">...</span> 
+                    
+                        <a href="?platform=pc&page=20&pageSize=20"  page_num="20" class="btn btn-xs btn-default checklogin">20</a> 
+                    
+
+                    <a href="?platform=pc&page=2&pageSize=20" page_num="2" class="iconfont icon-fanhui btn btn-xs btn-default btn-next checklogin"></a>
+            </span>
+        </div>
+   
+</div>                </div>
+                <div class="ant_page hide" style="padding-top: 10px;background-color: #fff;"></div>
+            </div>
+
+        </div>
+    </div>
+    <div class="con-r-tag">
+        <div class="collect-and-boutique">
+            <div>
+                <span>收藏数</span>
+                    <span>1,616,253</span>
+            </div>
+            <div>
+                <span>精华内容</span>
+                    <span>646,501</span>
+            </div>
+        </div>
+        <div class="hot-tags">
+            <div>热门标签</div>
+            <ul class="clearfloat">
+                    <li>
+                        <a href="https://www.csdn.net/tags/MtjaEg4sMzk5MzAtYmxvZwO0O0OO0O0O.html"
+                           target="_blank"
+                           data-report-click='{"spm":"3001.4431","dest":"https://www.csdn.net/tags/MtjaEg4sMzk5MzAtYmxvZwO0O0OO0O0O.html"}'
+                           data-report-query="spm=3001.4431">
+                            c++教程
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.csdn.net/tags/MtTaEg0sNTM1NjYtYmxvZwO0O0OO0O0O.html"
+                           target="_blank"
+                           data-report-click='{"spm":"3001.4431","dest":"https://www.csdn.net/tags/MtTaEg0sNTM1NjYtYmxvZwO0O0OO0O0O.html"}'
+                           data-report-query="spm=3001.4431">
+                            map
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.csdn.net/tags/MtTaEg0sMDUyNTYtYmxvZwO0O0OO0O0O.html"
+                           target="_blank"
+                           data-report-click='{"spm":"3001.4431","dest":"https://www.csdn.net/tags/MtTaEg0sMDUyNTYtYmxvZwO0O0OO0O0O.html"}'
+                           data-report-query="spm=3001.4431">
+                            贪吃蛇
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.csdn.net/tags/MtTaEg0sMzc0NzktYmxvZwO0O0OO0O0O.html"
+                           target="_blank"
+                           data-report-click='{"spm":"3001.4431","dest":"https://www.csdn.net/tags/MtTaEg0sMzc0NzktYmxvZwO0O0OO0O0O.html"}'
+                           data-report-query="spm=3001.4431">
+                            c语言
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.csdn.net/tags/MtTacg3sNTk3OC1ibG9n.html"
+                           target="_blank"
+                           data-report-click='{"spm":"3001.4431","dest":"https://www.csdn.net/tags/MtTacg3sNTk3OC1ibG9n.html"}'
+                           data-report-query="spm=3001.4431">
+                            数据结构
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.csdn.net/tags/NtjaggwsNzgzMS1ibG9n.html"
+                           target="_blank"
+                           data-report-click='{"spm":"3001.4431","dest":"https://www.csdn.net/tags/NtjaggwsNzgzMS1ibG9n.html"}'
+                           data-report-query="spm=3001.4431">
+                            c++小游戏
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.csdn.net/tags/OtTakg2sMTUtYmxvZwO0O0OO0O0O.html"
+                           target="_blank"
+                           data-report-click='{"spm":"3001.4431","dest":"https://www.csdn.net/tags/OtTakg2sMTUtYmxvZwO0O0OO0O0O.html"}'
+                           data-report-query="spm=3001.4431">
+                            c++编程入门
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.csdn.net/tags/NtjaggysMzM4OC1ibG9n.html"
+                           target="_blank"
+                           data-report-click='{"spm":"3001.4431","dest":"https://www.csdn.net/tags/NtjaggysMzM4OC1ibG9n.html"}'
+                           data-report-query="spm=3001.4431">
+                            c++项目
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.csdn.net/tags/MtTaQgwsMjI4LWJsb2cO0O0O.html"
+                           target="_blank"
+                           data-report-click='{"spm":"3001.4431","dest":"https://www.csdn.net/tags/MtTaQgwsMjI4LWJsb2cO0O0O.html"}'
+                           data-report-query="spm=3001.4431">
+                            c++游戏
+                        </a>
+                    </li>
+                    <li>
+                        <a href=""
+                           target="_blank"
+                           data-report-click='{"spm":"3001.4431","dest":""}'
+                           data-report-query="spm=3001.4431">
+                            c++课程设计
+                        </a>
+                    </li>
+            </ul>
+        </div>
+
+        <div class="hot-brand hide" style="margin-top: 8px;background-color: #fff;"></div>
+
+        <div class="hot-tags keywords">
+            关键字：<h1>c++ </h1>
+        </div>
+
+
+
+        <div class="bottom-part">
+            <div class="persion_article" style="width:300px;margin-top: 8px;"></div>
+        </div>
+        <script src="https://g.csdnimg.cn/common/csdn-footer/csdn-footer.js" data-isfootertrack="false"></script>
+    </div>
+</div>
+
+<script id="tpl_qa" type="text/html">
+    <div class="qa-list">
+        {{each items}}
+        <div class="qa-item">
+            <div class="qa-item-hd">
+                <a href="{{$value.ext.url_location}}"
+                   data-report-click='{"mod":"{{@$value.report_data.data.mod}}","spm":"{{@$value.spm}}","dest":"{{$value.ext.url_location}}","index":"{{@$value.report_data.data.index}}","strategy":"{{@$value.report_data.data.strategy}}","biz_id":"{{@$value.report_data.data.biz_id}}","ops_request_misc":"{{@$value.report_data.data.ops_request_misc}}","request_id":"{{@$value.report_data.data.request_id}}"}'
+                   data-report-view='{"mod":"{{@$value.report_data.data.mod}}","spm":"{{@$value.spm}}","dest":"{{$value.ext.url_location}}","index":"{{@$value.report_data.data.index}}","strategy":"{{@$value.report_data.data.strategy}}","biz_id":"{{@$value.report_data.data.biz_id}}","ops_request_misc":"{{@$value.report_data.data.ops_request_misc}}","request_id":"{{@$value.report_data.data.request_id}}"}'
+                   class="list-title" target="_blank">{{@$value.ext.title}}</a>
+            </div>
+            <div class="qa-item-bd">
+                <div class="detail">{{$value.ext.description}}</div>
+                {{if $value.ext.answer && $value.ext.answer != ''}}
+                <div class="answer">
+                    <pre><code>{{$value.ext.answer}}</code></pre>
+                </div>
+                {{/if}}
+            </div>
+            <div class="qa-item-ft">
+                {{if $value.ext.create_time != ''}}
+                <span class="qa-time">{{$value.ext.create_time|parseTime}}</span>
+                {{/if}}
+                {{if $value.ext.nickname != ''}}
+                <a href="https://me.csdn.net/{{$value.ext.author}}" target="_blank" class="qa-nickname">{{$value.ext.nickname}}</a>
+                {{/if}}
+                {{if $value.ext.view != 0}}
+                <span class="qa-view"><i class="icon icon-view"></i>{{$value.ext.view|parseN}}</span>
+                {{/if}}
+                {{if $value.ext.comment != 0}}
+                <span class="qa-comment"><i class="icon icon-comment"></i>{{$value.ext.comment|parseN}}</span>
+                {{/if}}
+                {{if $value.ext.digg != 0}}
+                <span class="qa-dig"><i class="icon icon-dig"></i>{{$value.ext.digg|parseN}}</span>
+                {{/if}}
+
+                {{each $value.ext.tags tag}}
+                <span class="qa-tags">
+                    {{if tag != ''}}
+                    <i class="qa-tag">{{tag}}</i>
+                    {{/if}}
+                </span>
+                {{/each}}
+            </div>
+        </div>
+        {{/each}}
+    </div>
+</script>
+
+<script id="tpl_page" type="text/html">
+    {{set pageNum = data.pageNum}}
+    {{set pages = data.pages}}
+    {{set pageSize = data.pageSize}}
+    {{set toalNum = data.totalNum}}
+    {{set pagesList = data.pageList}}
+
+    <div class="search-result-pagination">
+        {{if toalNum > 0}}
+        <div class="csdn-pagination hide-set">
+            <span class="page-nav">
+                {{if pageNum == 1}}
+                    <a class="disable iconfont icon-fanhui btn btn-xs btn-default btn-prev checklogin"
+                       href="javascript:;"></a>
+                {{/if}}
+                {{if pageNum > 1}}
+                    <a href="javascript:;" page_num="{{pageNum - 1}}"
+                       class="iconfont icon-fanhui btn btn-xs btn-default btn-prev checklogin"></a>
+                 {{/if}}
+
+
+                {{each pagesList pages pages_index}}
+                    {{if pages_index == 0 && pages > 1}}
+                        <a href="javascript:;" page_num="1"
+                           class="btn btn_normal btn-xs btn-default checklogin">1</a>
+                        {{if pageNum != 4}}
+                            <span class="ellipsis">...</span>
+                        {{/if}}
+                    {{/if}}
+
+
+                    {{if pages == pageNum}}
+                        <a href="javascript:;" page_num="{{pages}}"
+                           class="btn btn_normal btn-xs btn-default active checklogin">{{pages}}</a>
+                    {{else}}
+                        <a href="javascript:;" page_num="{{pages}}"
+                           class="btn btn_normal btn-xs btn-default checklogin">{{pages}}</a>
+                    {{/if}}
+
+                    {{set curPageNext=pages_index + 1}}
+                    {{set pl = pagesList[curPageNext]}}
+                    {{set ps = pages + 1}}
+                    {{if pl && ps < pl }}
+                        <span class="ellipsis">...</span>
+                    {{/if}}
+
+                {{/each}}
+
+                 {{if pageNum < 20}}
+                    <a href="javascript:;" page_num="{{pageNum + 1}}"
+                       class="iconfont icon-fanhui btn btn-xs btn-default btn-next checklogin"></a>
+                {{else}}
+                    <a href="javascript:;"
+                       class="disable iconfont icon-fanhui btn btn-xs btn-default btn-next checklogin"></a>
+                {{/if}}
+            </span>
+        </div>
+        {{/if}}
+
+    </div>
+
+</script>
+
+
+<script src='https://csdnimg.cn/release/aggregate/js/common-773ba0471c.min.js' type="text/javascript"></script>
+<script src='https://csdnimg.cn/release/aggregate/js/pc-df555339c0.min.js' type="text/javascript"></script>
+<script src='https://csdnimg.cn/release/aggregate/js/libs/template-web.js' type="text/javascript"></script>
+
+<script type="text/javascript">
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+<script>
+    (function () {
+            var el = document.createElement("script");
+            el.src = "https://s3a.pstatp.com/toutiao/push.js?310416c564ee613927023910da70cee87ab5225d389206dcae94ee9057000d80c50ae680cb4ab776e94401444c404d285b8b644eda8af801d0911a0d00026e7f";
+            el.id = "ttzz";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(el, s);
+        }
+    )(window)
+</script>
+
+<script type="text/javascript">
+    (function ($) {
+
+        function z(s) {
+            return s < 10 ? '0' + s : s;
+        }
+
+        function dwd(data, spm) {
+            if (!data || !data.items.length) return;
+            for (let i = 0; i < data.items.length; i++) {
+                let item = data.items[i];
+                item.ext.tags = item.ext.tags.split(",");
+                item.spm = spm;
+            }
+            return data;
+        }
+
+        template.defaults.imports.parseN = function (n) {
+            return (n > 9999 ? (Math.floor(n / 10000) + '万+') : n);
+        };
+
+        template.defaults.imports.parseTime = function (n) {
+            let d = new Date(parseInt(n));
+            let y = d.getFullYear();
+            let m = d.getMonth() + 1;
+            let dd = d.getDate();
+            return y + '-' + z(m) + '-' + z(dd);
+        };
+        var __agg_pc__ = {
+            isGetDownloadList: false,
+            isGetQaList: false,
+            isAjax: true,
+            initIframeBlinkHeight: function () {
+                let winHeight = window.innerHeight;
+                let isHasBaike = $(".baike-view").size();
+                let other = isHasBaike ? 280 : 140;
+                let res = Math.floor(winHeight - other);
+                $("#blink").css("height", res + 'px');
+            },
+            init: function () {
+                //this.initIframeBlinkHeight();
+                this.events();
+                //this.getQAList();
+                //加载右侧广告
+                this.getBrandDataById(528, function (res) {
+                    $(".hot-brand").removeClass("hide").html(res.data.con);
+                });
+                //加载Top广告
+                this.getBrandDataById(529, function (res) {
+                    $(".top-banner").removeClass("hide").html(res.data.con);
+                });
+            },
+            events: function () {
+                var self = this;
+                let tab_hd = $(".ag-tab-bar").find(".tab-hd-item");
+                let tab_bd = $(".content-list").find(".tab-bd");
+                tab_hd.on('click', function () {
+                    let that = $(this);
+                    let type = that.attr('type');
+
+                    that.addClass("active").siblings().removeClass("active");
+
+                    if (type === 'hot') {
+                        $(".ag-tb-rt").show();
+                        $(".bottom-part").show();
+                        $(".ftl_page").show().siblings("div").hide();
+                    } else if (type === 'blink') {
+                        $("#blink").attr('src', 'https://blink.csdn.net/frame');
+                        __agg_pc__.initIframeBlinkHeight();
+                        $(".ag-tb-rt").hide();
+                        $(".bottom-part").hide();
+                        $(".ftl_page").hide();
+                        $(".ant_page").hide();
+                    } else if (type === 'download') {
+                        if (!self.isGetDownloadList) {
+                            self.isGetDownloadList = true;
+                            $(".wrap-download").html('');
+                            self.getDownloadList(1);
+                        }
+                        $(".ag-tb-rt").show();
+                        $(".bottom-part").show();
+                        $(".ant_page").show().siblings("div").hide();
+                    } else if (type === 'qa') {
+                        if (!self.isGetQaList) {
+                            self.isGetQaList = true;
+                            $(".wrap-qa").html('');
+                            self.getQAList(1);
+                        }
+                        $(".ag-tb-rt").show();
+                        $(".bottom-part").show();
+                        $(".ant_page").show().siblings("div").hide();
+                    }
+                    tab_bd.eq(that.index()).addClass("active").siblings("div.tab-bd").removeClass("active");
+                })
+
+                let btn_link = $(".ag-tab-bar").find(".icon-link");
+                btn_link.on('click', function () {
+                    window.open('https://so.csdn.net/search?mode=1&q=' + mod_keywords + '&spm=1000.2123.3001.5142', '_self');
+                });
+
+                let btn_ask = $(".btn-ask");
+                btn_ask.on('click', function () {
+                    let UserName = self.getCookieByKey("UserName");
+                    if (UserName != null) {
+                        window.open('https://ask.csdn.net/?word=' + mod_keywords, '_blank');
+                    } else {
+                        window.csdn.loginBox.show();
+                    }
+                })
+
+
+                $(".right-special-column .rsc-subscible").on('click', function () {
+                    let userName = getCookie('UserName')
+                    if (!userName) {
+                        window.csdn.loginBox.show();
+                        return
+                    }
+
+                    let title = $(this).prev().text();
+                    // 收藏
+                    var params = {
+                        'url': window.location.href,         // 访问来源地址 必传
+                        'title': title,      // 访问收藏标题 必传ß
+                        'description': '', //访问收藏描述
+                        'author': userName,
+                        'source_id': 1,           // 访问来源项目标识id 必传
+                        'source': 'GATHER'
+                    };
+                    window.csdn.collectionBox.show(params);
+                })
+
+                $(".right-special-column").on('click', 'img', function () {
+                    var that = $(this);
+                    var url = that.attr('data-url');
+                    window.open(url, '_blank');
+                });
+
+                $(".right-special-column").on('click', 'span.rsc-name', function () {
+                    var that = $(this);
+                    var url = that.attr('data-url');
+                    window.open(url, '_blank');
+                });
+
+            },
+            getCookieByKey: function (key) {
+                var cookie = '';
+                var cookieStr = document.cookie || cookie;
+                var cookieObj = {};
+                cookieStr.split(';').forEach(function (value) {
+                    var arr = value.split('=');
+                    cookieObj[$.trim(arr[0])] = $.trim(arr[1]);
+                })
+                return cookieObj[key] || null;
+            },
+            getBrandDataById: function (id, cb) {
+                //528右侧广告位， 529Top广告位
+                $.get('/get_ad_info?ad_id=' + id, function (res) {
+                    if (res.code == 200) {
+                        if (res.data && res.data.con && res.data.status) {
+                            cb(res);
+                        }
+                    } else {
+                        console.log(res.msg);
+                    }
+                })
+            },
+            bindTagEvent: function () {
+                $(".qa-list").on('click', 'i.qa-tag', function () {
+                    var that = $(this);
+                    var val = that.text();
+                    if (val) {
+                        window.open('https://so.csdn.net/so/search/s.do?q=' + val, '_blank');
+                    }
+                });
+
+                setTimeout(function () {
+                    window.csdn.report.viewCheck({'curl': location.href});
+                }, 500)
+            },
+            getQAList: function (pageIndex) {
+                let self = this;
+                //http://local.java.csdn.net:9090
+                $.ajax({
+                    url: '/gather/search_ask?platform=pc&p=' + pageIndex + '&query=' + mod_keywords,
+                    type: 'GET',
+                    success: function (res) {
+                        if (res.code == 200 && res.data.items.length) {
+                            self.isAjax = true;
+                            self.isGetQaList = false;
+                            var new_data = dwd(res.data, '3001.5561');
+                            var html = template("tpl_qa", new_data);
+                            $(".wrap-qa").html(html);
+                            self.bindTagEvent();
+                            self.createPagination(res);
+                        } else {
+                            $(".wrap-qa .qa-no-data").removeClass("hide");
+                        }
+                    },
+                    error: function (err) {
+                        $(".wrap-qa .qa-no-data").removeClass("hide");
+                    }
+                });
+            },
+            getDownloadList: function (pageIndex) {
+                let self = this;
+                //http://local.java.csdn.net:9090
+                $.ajax({
+                    url: '/gather/search_download?platform=pc&p=' + pageIndex + '&query=' + mod_keywords,
+                    type: 'GET',
+                    success: function (res) {
+                        if (res.code == 200 && res.data.items.length) {
+                            self.isAjax = true;
+                            self.isGetDownloadList = false;
+                            var new_data = dwd(res.data, '3001.5560');
+                            var html = template("tpl_qa", new_data);
+                            $(".wrap-download").html(html);
+                            self.bindTagEvent();
+                            self.createPagination(res);
+                        } else {
+                            $(".wrap-download .qa-no-data").removeClass("hide");
+                        }
+                    },
+                    error: function (err) {
+                        $(".wrap-download .qa-no-data").removeClass("hide");
+                    }
+                });
+            },
+            dealWithPageData: function (res) {
+                if (res && res.code == 200) {
+                    return {
+                        data: {
+                            pageNum: res.pageNum,
+                            pages: res.total_page,
+                            pageSize: res.page_size,
+                            totalNum: res.totalNum,
+                            pageList: res.page_list
+                        }
+                    };
+                }
+            },
+            createPagination: function (res) {
+                let self = this;
+                let tpl_data = this.dealWithPageData(res);
+                let tpl_page = template("tpl_page", tpl_data);
+                let ant_page = $(".wrap-pagination .ant_page");
+                let type = $(".tab-hd-item.active").attr('type');
+                ant_page.removeClass("hide").html(tpl_page);
+
+
+                //页码
+                $(".ant_page .btn_normal").on('click', function () {
+                    let that = $(this);
+                    let curr = that.attr('page_num');
+                    that.addClass("active").siblings("a").removeClass("active");
+                    if (curr && self.isAjax) {
+                        self.isAjax = false;
+                        if (type === 'download') {
+                            self.getDownloadList(curr);
+                        } else {
+                            self.getQAList(curr);
+                        }
+
+                    }
+                });
+
+                //上一页
+                $(".ant_page .btn-prev").on('click', function () {
+                    let curr = $(this).attr('page_num');
+                    if (curr && self.isAjax) {
+                        self.isAjax = false;
+                        if (type === 'download') {
+                            self.getDownloadList(curr);
+                        } else {
+                            self.getQAList(curr);
+                        }
+                    }
+                });
+
+                //下一页
+                $(".ant_page .btn-next").on('click', function () {
+                    let curr = $(this).attr('page_num');
+                    if (curr && self.isAjax) {
+                        self.isAjax = false;
+                        if (type === 'download') {
+                            self.getDownloadList(curr);
+                        } else {
+                            self.getQAList(curr);
+                        }
+                    }
+                });
+            }
+        }
+        __agg_pc__.init();
+
+    })($)
+</script>
+
+<script type="text/javascript">
+    $(function () {
+        function insertChromePluginLink() {
+            let count = 0;
+            let timer = null;
+            let link = $('<li class="plugin-link"><a href="https://plugin.csdn.net/?from=ju" target="_blank">Chrome插件</a></li>')
+            timer = setInterval(() => {
+                count++;
+                let menus = $("ul.toolbar-menus");
+                if (menus.length || count > 10) {
+                    clearInterval(timer);
+                }
+                if (!menus.has("li.plugin-link").length) {
+                    menus.append(link)
+                }
+            }, 100)
+        }
+
+        insertChromePluginLink();
+    })
+</script>
+
+<script type="text/javascript">
+    $(function () {
+        window.csdn.cse = null;
+        var _types = {
+            "codes_snippet": '',
+            "blog": "blog",
+            "discuss": "bbs",
+            "doc": "download",
+            "news": "geek",
+            "course": "edu",
+            "gitchat": "gitchat",
+            "ask": "ask"
+        }
+        var _csdnDataObj = {};
+        var _fn = {
+            _CFG: {
+                API_URL: '/api/v1/search',
+                js_insert_first: insert_baidu_first,
+                js_insert_count: insert_baidu_count,
+            },
+            uniqueBaidu: function (data) {
+                var csdnObjKeys = [];
+                var hasOwnProperty = Object.prototype.hasOwnProperty
+                for (var prop in _csdnDataObj) {
+                    if (hasOwnProperty.call(_csdnDataObj, prop)) csdnObjKeys.push(prop);
+                }
+                var csdnObjKeysLink = csdnObjKeys.map(function (v) {
+                    return v.split('?')[0]
+                });
+                return data.filter(function (v) {
+                    try {
+                        return csdnObjKeysLink.indexOf(v.linkUrl.split('?')[0]) < 0;
+                    } catch (e) {
+                        return false
+                    }
+                })
+            },
+            distinct: function (data) {
+                return data.filter(function (obj) {
+                    return !_csdnDataObj[obj['linkUrl']];
+                })
+            },
+            getIdByUrl: function (url) {
+                var id = ""
+                if (url == null || url == undefined || url == "") {
+                    return "";
+                }
+                if (url.indexOf("?") > -1) {
+                    url = url.substring(0, url.indexOf("?"));
+                }
+                if (url.endsWith("/")) {
+                    url = url.substring(0, url.length - 1);
+                }
+                id = url.substring(url.lastIndexOf("/") + 1);
+                if (id.length > 0) {
+                    var regEx = "[0-9]+";
+                    id.replace(regEx, function () {
+                        id = arguments[0];
+                    })
+                }
+                return id;
+            },
+            /**
+             * 数据按 每组sublength个分组
+             * @param {Array} array 源数据
+             * @param {Number} subLength 每组多少个
+             * @return {Boolean} isDom 如果是DOM,则每组为包裹Div
+             */
+            group: function (array, subLength, isDom) {
+                if (Object.prototype.toString.call(array) !== "[object Array]" || typeof subLength !== 'number') {
+                    return [];
+                }
+                var index = 0;
+                var newArray = [];
+
+                while (index < array.length) {
+                    newArray.push(array.slice(index, index += subLength));
+                }
+                if (isDom) {
+                    newArray = newArray.map(function (childrenNodes) {
+                        var $frag = $('<div></div>');
+                        childrenNodes.forEach(function (curNode) {
+                            $frag.append(curNode)
+                        })
+                        return $frag
+                    })
+                }
+                return newArray
+            },
+            baiduDOMHandle: function (pageNo, data, num, type, keyword) {
+                var $data = _fn.group(data, num);
+                var domArr = [];
+                var utm_term = encodeURI(keyword);//当前搜索关键字
+                var requestId = "baidu_js";
+                for (var i in data) {
+                    var item = data[i];
+                    if (item.dispUrl) {
+                        if (item.dispUrl.indexOf('gitchat') > -1) {
+                            item.requestId = requestId
+                            item.bizId = 101
+                            item.type = "gitchat"
+                        } else if (item.dispUrl.indexOf('blog') > -1) {
+                            item.flagIcon = 'flag_icon1'
+                            item.tip = '博客'
+                            item.requestId = requestId
+                            item.bizId = 102
+                            item.type = "blog"
+                        } else if (item.dispUrl.indexOf('download') > -1) {
+                            item.flagIcon = 'flag_icon6'
+                            item.tip = '下载'
+                            item.requestId = requestId
+                            item.bizId = 103
+                            item.type = "download"
+                        } else if (item.dispUrl.indexOf('bbs') > -1 || item.dispUrl.indexOf('forum') > -1) {
+                            item.flagIcon = 'flag_icon2'
+                            item.tip = '论坛'
+                            item.requestId = requestId
+                            item.bizId = 104
+                            item.type = "bbs"
+                        } else if (item.dispUrl.indexOf('edu') > -1) {
+                            item.flagIcon = 'flag_icon3'
+                            item.tip = '学院'
+                            item.requestId = requestId
+                            item.bizId = 105
+                            item.type = "course"
+                        } else if (item.dispUrl.indexOf('ask') > -1) {
+                            item.flagIcon = 'flag_icon4'
+                            item.tip = '问答'
+                            item.requestId = requestId
+                            item.bizId = 106
+                            item.type = "ask"
+                        } else {
+                            item.flagIcon = ''
+                            item.tip = ''
+                            item.requestId = ''
+                            item.bizId = -1
+                            item.type = ''
+                        }
+                    }
+
+                    var strategy = item['strategy'] ? item['strategy'].toUpperCase() : ("2~" + type + "~sobaiduweb~default")
+
+                    var utm_medium = 'distribute.pc_aggpage_search_result.none-task-' + item.type + '-' + strategy + "-" + i + "-" + _fn.getIdByUrl(item.linkUrl);
+                    var objs = {
+                        mod: "popu_876",
+                        dest: item.linkUrl.indexOf('?') > -1 ? item.linkUrl + '&utm_term=' + utm_term + '&utm_medium=' + utm_medium : item.linkUrl + '?utm_term=' + utm_term + '&utm_medium=' + utm_medium + '&spm=3001.4430',
+                        strategy: strategy,
+                        index: i + "",
+                        spm: "3001.4430",
+                        request_id: item['requestId'] + "",
+                        biz_id: item['bizId'] + "",
+                        ops_request_misc: ""
+                    }
+                    var jsonData = JSON.stringify(objs);
+                    var data_report_query = ' data-report-query=""';
+                    var data_report_click = ' data-report-click=' + jsonData;
+                    var data_report_view = ' data-report-view=' + jsonData;
+                    if (item.title) {
+                        var htmlStr = '<li class="baidu_list">\n' +
+                            '                    <div class="blog-title">\n' +
+                            '                         <a href="' + objs.dest + '"  ' + data_report_query + data_report_click + data_report_view + ' target="_blank" class="blog-title">\n' +
+                            '                                    <h2>' + item.title + '</h2>\n' +
+                            '                                </a>\n' +
+                            '                                <span class="update-time"></span>\n' +
+                            '                     </div>\n' +
+                            '                     <div class="description">\n' +
+                            '                          <div class="desc-detail digest">' + item.abstract + '</div>\n' +
+                            '                          <div class="desc-detail content">\n' +
+                            '                                <div class="article_content">\n' +
+                            '                                        <pre class="preclass">' + item.abstract + '</pre>\n' +
+                            '                                </div>\n' +
+                            '                          </div>\n' +
+                            '                      </div>\n' +
+                            '           </li>'
+                    }
+                    domArr.push($(htmlStr))
+                }
+                return {
+                    data: $data,
+                    dom: _fn.group(domArr, num, true)
+                };
+            },
+            /**
+             * 百度数据穿插
+             * @param {Array} baiduData 百度的数据集合
+             * @param {Number} num 每组多少个
+             * @param {Boolean} flag 排序方式，是否百度数据在前
+             */
+            insertFunc: function (pagerNum, baiduData, num, flag, type, keyword) {
+                // 处理后的百度数据
+                var $baiduData = _fn.baiduDOMHandle(pagerNum, baiduData, num, type, keyword)
+                var $csdnDl = $(".wrap-main-list li[data-page='" + pagerNum + "']").not('.baidu_list')
+                var getLastChild = function () {
+                    var searchList = $(".wrap-main-list li[data-page='" + pagerNum + "']")
+                    // 防止出现 678 12345, 应该为
+                    if (searchList.eq($csdnDl.length).length) {
+                        return searchList.eq(searchList.length - 1)
+                    } else {
+                        return $csdnDl.eq($csdnDl.length - 1)
+                    }
+                }
+                $baiduData.dom && $baiduData.dom.forEach(function (curBaiduGroup, index) {
+                    var insertDom = null;
+                    if (flag) { // 百度在前
+                        if (index === 0) {
+                            curBaiduGroup.children().insertBefore($csdnDl.eq(0));
+                        } else {
+                            insertDom = $csdnDl.length - num * index >= 0 ? $csdnDl.eq(index * num - 1) : getLastChild()
+                            curBaiduGroup.children().insertAfter(insertDom);
+                        }
+                    } else { // CSDN在前
+                        insertDom = $csdnDl.length - (index + 1) * num >= 0 ? $csdnDl.eq((index + 1) * num - 1) : getLastChild();
+                        curBaiduGroup.children().insertAfter(insertDom);
+                    }
+                })
+            },
+            baiduDataInsert: function (pageNo, data, keyword, type) {
+                type = type || "all";
+                data = data.filter(function (item) {
+                    if (!item.dispUrl) {
+                        item.dispUrl = ''
+                    }
+                    return item.dispUrl.indexOf('m.blog.csdn.net') === -1
+                });
+                _fn.insertFunc(pageNo, data, _fn._CFG.js_insert_count, _fn._CFG.js_insert_first, type, keyword)
+
+                setTimeout(function () {
+                    window.csdn && window.csdn.report && window.csdn.report.viewCheck()
+                }, 100)
+            },
+            loadBaiduData: function (keyword, domain, pageNo) {
+                if (isContainBaidu != "10") {
+                    _fn.setCsdnDataObj();
+                    console.log("baiduSearch: pageNo:" + pageNo + " keyword:" + keyword + " domain:" + domain);
+                    if (domain) {
+                        domain = _types[domain];
+                    } else {
+                        domain = null;
+                    }
+                    try {
+                        csdn.baiduSearch(keyword, function (data) {
+                            console.log(data);
+                            var newData = _fn.distinct(data);
+                            newData = _fn.uniqueBaidu(newData);
+                            _fn.baiduDataInsert(pageNo, newData, keyword, domain);
+                        }, domain, pageNo);
+                    } catch (e) {
+                        //console.log(e)
+                    }
+                }
+            },
+            setCsdnDataObj: function () {
+                $('.wrap-main-list .main-ul li').each(function () {
+                    var url = $(this).find('a.blog-title').attr('href')
+                    if (url) {
+                        _csdnDataObj[url] = true;
+                    }
+                    window.listUrls = _csdnDataObj;
+                });
+            }
+        }
+
+
+        let timer = null;
+        let count = 0;
+        timer = setInterval(function () {
+            count++;
+            let _cse = csdn.cse;
+            let _ssr = csdn.cse.setSearchRange;
+            if ((_cse && _ssr) || count > 10) {
+                clearInterval(timer)
+                _fn.loadBaiduData(mod_keywords, '', mod_page);
+            }
+        }, 1000)
+
+        window.fillColor = function (color) {
+            color = color || '#44ff8f'
+            $("li.baidu_list").each(function (index, item) {
+                $(item).css("background", color)
+            })
+        }
+
+
+    })
+
+</script>
+</body>
+</html>

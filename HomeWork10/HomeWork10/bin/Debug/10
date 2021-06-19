@@ -1,0 +1,1985 @@
+﻿
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <link rel="canonical" href=""/>
+    <meta name="applicable-device" content="pc">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="renderer" content="webkit"/>
+    <meta name="force-rendering" content="webkit"/>
+    <meta name="csdn-baidu-search" content="{}">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="report" content='{"pid":"tags","spm":"1000.2123"}'>
+    <meta name="referrer" content="always">
+    <meta http-equiv="Cache-Control" content="no-siteapp"/>
+    <link rel="alternate" media="handheld" href="#"/>
+    <meta name="shenma-site-verification" content="5a59773ab8077d4a62bf469ab966a63b_1497598848">
+    <meta name="csdn-baidu-search" content=''>
+    <title>前端和后端 - CSDN</title>
+    <link href="https://g.csdnimg.cn/static/logo/favicon32.ico" rel="shortcut icon" type="image/x-icon"/>
+    <meta name="keywords" content="前端和后端">
+    <meta name="description" content="csdn已为您找到关于前端和后端相关内容，包含前端和后端相关文档代码介绍、相关教程视频课程，以及相关前端和后端问答内容。为您解决当下相关问题，如果想了解更详细前端和后端内容，请点击详情链接进行了解，或者注册账号与客服人员联系给您提供相关内容的帮助，以下是为您准备的相关内容。">
+    <meta name="csdnFooter" content='{"type": "3", "el": ".persion_article"}'>
+    <link rel="stylesheet" href="//csdnimg.cn/public/common/libs/bootstrap/css/bootstrap.css">
+    <script src="https://g.csdnimg.cn/??lib/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://g.csdnimg.cn/collection-box/2.0.4/collection-box.js"></script>
+    <script src="https://g.csdnimg.cn/login-box/1.1.4/login-box.js" type="text/javascript"></script>
+    <script>
+        window.csdn = window.csdn ? window.csdn : {};
+        window.csdn.toolbarIsBlack = false;
+    </script>
+    <script src="//g.csdnimg.cn/fixed-sidebar/1.1.6/fixed-sidebar.js" type="text/javascript"></script>
+    <script src="//g.csdnimg.cn/common/csdn-report/report.js" type="text/javascript"></script>
+    <script src="//g.csdnimg.cn/baidu-search/1.0.9/baidu-search.js" type="text/javascript"></script>
+    <style>
+        .MathJax, .MathJax_Message, .MathJax_Preview {
+            display: none
+        }
+    </style>
+</head>
+<body>
+<link rel="stylesheet" href="https://csdnimg.cn/public/common/toolbar/content_toolbar_css/content_toolbar.css">
+<script id="toolbar-tpl-scriptId" src="https://g.csdnimg.cn/common/csdn-toolbar/csdn-toolbar.js" type="text/javascript">
+</script>
+
+<link rel="stylesheet" href='https://csdnimg.cn/release/aggregate/css/pc-949af63466.min.css'>
+<link rel="stylesheet" href='https://csdnimg.cn/release/aggregate/css/pc_common-c5dae373c3.min.css'>
+<style type="text/css">
+    .qa-item .qa-item-ft .icon {
+        display: inline-block;
+        width: 16px;
+        height: 16px;
+        vertical-align: sub;
+        margin-right: 6px;
+        background-repeat: no-repeat;
+        background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABgCAYAAACtxXToAAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAQKADAAQAAAABAAAAYAAAAACHkG20AAAPT0lEQVR4Ae1cfYxU1RW/583MsghlAwIqEm1VqB9VQLA1JTQgpBTLAgvsNsIqHzs7a9I/TCVSVGwxpAjWUmvSpju7sEsQMPshrCttapGipU1tLIgGJH6laalo3LJUhP2Yee/2d+6b9/bNzJuZN7Mz2ybMzb5999177vndc+73ufeOEEV3eWuAchW/vnn/jdQf2SZJzAQT/jvs92kb165d9lGuPLNJJ5csuVHo+jakmSmIWI7DIhDYSO3tWeHnpIBwuGUqRD4qpRiRkOkuEv6ZodDS9xLC8/oJ4adC+KNgmoQv/P6ZtH+/Z3wtp5yRqFfCk9grhvsmBPwl10GTh8BrrBTR7TnxzCaRrteDPFF45jAWiskKP+sasGvXi1f29kW7UOnOBfzjrl2zZk4vI+/a1XJtbx+9h/DhckTp+LoV5V0cnm8nKyquFNFoOt5SjBw5nvbtS0djZyvrGtDfH53CqVEDTljC8/eqVVX/QuhpKSVpF3uu57CCuKiJn4Y3iR7v+FkrwBA0TYGTOJ2YCVSnMxwmNXFtYlzevimGn46hYXjGz1oBKPpVjE1S/D45D3RJhUm6IjkubyEKPwM3z/hZKSDc2HI/gG9HO/940qRxncmZkNeoME2eTY4bfAh6//tRALdn5OTzecb3Z2QWI6hvartZRI1n1aek9XPmzIkmppWCrkIDEKRr3fWdnXYpjO7pkVVVVT2J9Nl8y2XLbhb9/SZ+poS63i1DIRtfdHdLam11xc84CrS0tPi6P6elJOWz6PgmoPT3h2qrlrrlIdzQwnODmW5xCOvC3KF1dJlYD2V8kYImKVhWVvpEXx/jPYvSn5BE4D0A+NQqhg1bD2XY+EkKqH/zzQAd+/tkIjldCvkt8F8IoVCyarp3KBAYV+7s/Z34jY1t03Qpd5CQkzEY2LzBSwOPUkVL4nVx9fAFdeXlZn/hZAA/Si4gzp6dLDRtOgRW+Hgr/ATS3D6JgH/1AgqHFb6dyZ07W26N6iKMjH8D2UhsGqc0Er8IBisbMes0ckE2lWPsQwv5Kmm0LRSs3ODkIxcvvhWChvEAXyTiO0kH79e0bdTRofDtTjAaFc1m9ZUayu4DruoohYf9Pv/UulDVbbW1VeFcheccB4PLj/uIvs9+acjv8TvOGUYzhOfmU1jhGVQO4A+AkbgTpSNGXDFydHX1vZ/HZS5PH6NGyTe6z6Mpkbg6iSUR8JGBoXBS2vh2DUC2lH/lygUXCpWH8+e165k35PwkCUNi+jRUjsjGTwuKXv0gP3nLlya4ffPq9a+eeGragyCeBNp/eKL3TmTjp1UASupefrzzzUQp72YKDBB/yUSp4qdNa6CXXvoA/lc80XslcuDbCuBFjNf0udKh81MK8JPhpoAkfNq0yRxxchx5UuZT02x8WwEWMapnQXoiTKhGAuM2PBFNG3fcwhvyN1FElJXZ+EkKKFSGui/47gJvTCfEW6kmUoXCjuMr5VvU3NxrhQ2ZAkgaqvqjU7Orn5WJIX07qj/jDpkCMMdQIwDeb3gVWG7aZOYvn0OklHH4AxMhl1xhwvIbjAJ56hNiI0CJ33sNOH68Vi5a9ComDt92yV5uQQk1IK0CsOr7bm4o8amamvZ/uT8SuQqhXXWrKz6Mj03zZRi/ThObS1QXHTgQhz8kTaBfj86L5Tau+uUiwaDSECXh2zWAhz+eC/ByODR9uu4BKGPTaG4+Mqxf//d3wHk7E2ukvZCGL5MkzQXS0OcSlYRvA9aHW94Gx8zmplxgkQYK7qgNLq9INc9AW38bbb1g+MhAh+joSMK3mwAFfDXI3EnklWdfaR8WwssDsaPoSN8jQRsm3TR2eSrhlU79/hpk8iQeGJ4zPJhNI42XJwpevEu0Qdx5Z3p8lYniv6IGihq43DRgjwIseEND+0QpjKcx+5uNPsbc5MibRugsOsQjJLT1tbXLzrixlUuXTsTG59OIm40RIb/4RLxZcgTb5+vpxRdtfFsBpvD6CQg/xi1z+QqDEs6R8E1JVIISPhI5AZyC4oP/ORykmGIpwZ4IxUp+DIas3xJpocQMDlYBSsHSgNldLhBkcCmviONplnyhhWfIMbFapvDteYBZ7XnCkn/hGZUVyrzZb2Gx3+FmO/yF9tpYtgKsNp/vkndKMsDbpX3nu807gRP9DiyHAhKpLo/vogIuj3JOLWWxBqTWzeURU6wBl0c5p5bSngmmJjFjeJMUExhP+4RsTc6XQdXOF2+U8l6htV1mR8R7lCkd1mTh0aBakCYARbG1Jr9OylczCc+Aiga0XsE914C8l6jXHFp0EEqWl7+izGVWmNubN1Gy2EfwrAA3rCEOuw54QV5I5NMVpAnkM4OF5lVUQKE1/P/Ov1gDBkpI2cyUXXAgLL8+tgqZHE2sOO6mzS4uqGAfDiy7BrDBkgElzFYDGc1fFiyTGHO0sBK4H0n4LuSnjWUPg2ytxTHv+Wyzk1L/J/YKXTJApzWS1Tg1+jcrsqnpD6URvetxaYgay6pkxTnfhjT3W02jKLASHay1IhKZj+BC2wXPsWXYgrdrgLLZwVqL/bt9KKMU5+3lzRiGf2YlbmxsnRuJfvYOTn9tTCe8Sc9mcdrnZhHmeGWlhbUW1WMfnhT4FnIOb+bJvB0WYYXrldXOne03RKL6h2DyUWmJ7+t9/fp21JYHYunf0cjHlmTvpz+8AsfocF/gBtwXiDvcYLMgegdtN0SdnVnj203AZpbJI+V43Bo7DbKxeHpw8nuznPqVZ2pnzIhkSpr3eKIe8NyM4+/P4Ph7TvieFaDrujUH5fN+I7GjckiWBB4MZXPkZTAa6O+38E0uRIdwmv3BxCMv2UJ4VoBRhh2d/9AFVPs+HKt+OBSs2p0t2KDoS0vP4ebIBVT1PuHzPQzBhxafM49LFeOcd4EGJVAOiXF9ZlzcXaAceBSTFDVQ1EBRA0UNODRgH5BwhLl6MfxpDU2ts0RUVOBu6C2Y+vLKbiKmt+Ahz8B/BuHvYmw+MPpL+uu4HOnlsKUrllugsvaeODELvw9QgaHwFsxIJ+I9EW9cUwQ+0Rm838X7AC5Hvo7LkZ7wMyqgfm/nWHGxdwNQqrEO4PO+Xhx+SULsIRr2VG3t4k+9JEhFI++7D/gXNyC+GgJ6xoci9iDNU7hykxY/pQJ4ldcf/WwdDNy8chrFGYSu38V0rIN8vlclyTN+I4DfDGDXNwGnbCdirngPasMipPkah4L+ImrF9uHDRm174IH5FznMq5OrV5fizu862PdtfK9pHXQXkYntuCGyjXbvdsV3VUBjY8tNhhStKPGpMWYHfZr2BF9+dDBP6W1oaLvDkMaTIFgSIzoV8IvKtWurTqVM5IjAsdmb8NmKErfwHbE5eIlOQRGVuC2ahJ+kgHC4dSH2NZ4HTBlK8AOs8lYHg8v+lAOsCDe13yUjejPS3qpqA9GaumBlazpesP0vRGafh/Bl6ehyiOPasAZNIg4/TgG431uuG0Y7mAdA3Dpi+IjgYG+RqqnzJ72/gkCroAQdPy+xIhRa7mZtEbg/XA66djyBHATMnIQI+HIFls02vq0ANm7ohjiINjwMh9a31tVWPerGEaMBwbwVRC1hCxDfAoOjkzhdtgP2AL5cHb9qMwkEatZGpNkM2qjQ5JK6YBWwBhx+HGEuengOGzYQWhAfH6Begpqg8JUCGho6rjJk/9sQaDxWetux0lvnBl2/u/0a6tWfR9+Azi7ZoYQPy1Jfdd39y1wtOvj9oSehnR+BLu6sINo89+58XH58MleXEKI/QoifYlX4porV9RlI+wieWS7UbkH2WUFlEjNk3w4WHqXzSm1N5SNuKbjkLeFRymdw+WEF/4YQP+znMFaMSeN+CTMUqvoxNP4S6MYYArfFB9wOz8Jr2hYcfZ+NDq0TZrSz6oGfwzAH2TLAMq1vDOyPzUxBjY3tM3VDPwoBzvt9cjJ66s/ckobDbbU4TMlX6CG8nBIMVp1z0mHkGGNIwklTOREG1hDaeYMz3vLv2fPy6C8u9bwPga/EPf05wc7dEfiPWvFp31zyLHyKLXI1WTp27IjnmuDzzdEMQ/8Bg6J9bkslfCwebR4aE7Q+UXgO5zCOY7/ZP7Av2a1cubAbTWArxxhSPoTMKvxkSpcQVPtUwjO1iuOm4dXp+kMaJirfZHof+falT2d2eEYpHUlFNxBndY7ulLJEmr0wibvRlhW+O2VCqNXmE4LjPr3QDCS42zaL6yW2zW8gutA+TCcLDZGWP0Ys3OWVf1ZEfQmHl5NSqvtEQuuVs5OiYgEDcSZtKjrRR5VmHG5xyhh+SmJHBPf2mZwXGosHbpFq0oefp4FD+/0h2/ysuMQ3j/Mchvb9NHd4ifEcxnEcbtEm0vA3d4IQmhc3aHe+57BLo/DVd6Z/GOrs67QutCqOh0Ovjug5NQ+wDkChc/pdbbByAXr6pKqpJkCNrYfUUIeRgDs8q81zybPwagTAXAA85rnx4Hxhy20/Xkt4zoBjN3M5DNPfg3jdy/6Mjoe6adOeSOwMlfDHj2/G4umxjDyYgOgwJkNz/ewP+EVNf0QNYfOxkOFSTNIiC4SJUHVsnL8HAu8VvC0Bx3fs2LFQPBFKKXxD6yaU/hKQdmOLbJVKxP9KS2tg8j6BuMwTIRbw2LFZmDbHT4SOHctmItSNmqfw7alweGf7PJ6KooRLIMmWutrKx+0MOjyqJuQwFW5oaH0Mw95PoKYoQCtCocqXHWx5HTAPCjiIp8QZXgB/FDwrsB5Q+LYCGCi8o2URNnHb4A2gFFt8WkmwpmbxoH5VhhdD9GnPL7F7vBo1RIdyq/EjSi8wXqLDlHgRwtqghMIthmBYQdW38eMUwBmKrQh5OQwjCL1PfrE6tLbSHCmYIAu3Y0fbDN2Qzag1WDTRJfQba1KtBC22akVoGDF8KzQv70vgssa5EmSuSQrgwKamtkmRqGxDxu9QREQvo1SewFz+Lf7O5OqbWm4XUeL2vtSkpdMQfjmEP5kpLcdjJ3gS5upcExS+lzQZaHgzdzmET8J3VQAzw4+eDD9/ntahs+MOEbVBuVMQpEP4tcM+HKLAyvVjM9g0iUFhc2BJWoQwdQkaVZ6NED8vLRm1NWuTWGXlcHSMMMnF4Ztw3v8rfJjEtmZlEnPyZ6MoXep5VBpUjbLJ3Eubifmn6/ZqomRLnoyibJtgo6h3fIFfvEVnjvaem1HUqQT2o3Q9mcVxTrWjrEy89j8zi8Noi2H1Na9m8UQ5i99FDRQ1cHlp4L8KhCqc0FvyvwAAAABJRU5ErkJggg==);
+        background-size: 32px 48px;
+    }
+</style>
+<script type="text/javascript">
+    var mod_page = "1"
+    var mod_keywords = "前端和后端"
+
+    var insert_baidu_first =
+    true
+    var insert_baidu_count = 10
+
+        //搜索热词
+        window.toolbarSearchExt = JSON.stringify({
+            tag: [mod_keywords],
+            title: "",
+            landingWord: [],
+            queryWord: ""
+        })
+</script>
+
+    <script>
+        var isContainBaidu = "1";
+    </script>
+
+
+<div class="main-tag-container">
+    <div class="con-l-tag">
+        <div class="top-banner hide"></div>
+
+
+        <div class="content-list">
+            <div class="ag-tab-bar">
+                <div class="ag-tb-lt">
+                    <div class="tab-hd-item active" type="hot">精华内容</div>
+                    <div class="tab-hd-item" type="download"
+                         data-report-click='{"spm":"3001.5558","extend1":"聚合页下载TAB"}'>下载资源
+                    </div>
+                    <div class="tab-hd-item" type="qa" data-report-click='{"spm":"3001.5197","extend1":"聚合页问答TAB"}'>
+                        问答
+                    </div>
+                </div>
+                <div class="ag-tb-rt">
+                    <div class="icon-link" data-report-query="spm=3001.5142"
+                         data-report-click='{"spm":"3001.5142","dest":"https://so.csdn.net/search?mode=1&q=前端和后端&spm=1000.2123.3001.5142"}'>
+                    </div>
+                    <div class="tab-rt-btn">
+                        <a class="btn-ask" href="javascript:void(0);"
+                           data-report-click='{"spm":"3001.5198","dest":"https://ask.csdn.net/?word=前端和后端"}'>我要提问</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-bd wrap-main-list active">
+                <ul class="main-ul">
+                        <li data-page="1">
+                            <div class="blog-title">
+                                <a href="https://blog.csdn.net/admin_djp/article/details/103450148"
+                                   data-report-click='{"mod": "popu_876","spm": "3001.4430","dest": "https://blog.csdn.net/admin_djp/article/details/103450148?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522162409288916780357236962%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D&amp;request_id=162409288916780357236962&amp;utm_term=%E5%89%8D%E7%AB%AF%E5%92%8C%E5%90%8E%E7%AB%AF&amp;utm_medium=distribute.pc_aggpage_search_result.none-task-blog-2~aggregatepage~first_rank_v2~rank_aggregation-1-103450148.pc_agg_rank_aggregation","extra": "{\&quot;utm_medium\&quot;:\&quot;distribute.pc_aggpage_search_result.none-task-blog-2~aggregatepage~first_rank_v2~rank_aggregation-1-103450148.pc_agg_rank_aggregation\&quot;}","index": "0","strategy": "2~aggregatepage~first_rank_v2~rank_aggregation","biz_id": "0","ops_request_misc": "%257B%2522request%255Fid%2522%253A%2522162409288916780357236962%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D","request_id": "162409288916780357236962"}'
+                                   data-report-view='{"mod": "popu_876","spm": "3001.4430","dest": "https://blog.csdn.net/admin_djp/article/details/103450148?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522162409288916780357236962%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D&amp;request_id=162409288916780357236962&amp;utm_term=%E5%89%8D%E7%AB%AF%E5%92%8C%E5%90%8E%E7%AB%AF&amp;utm_medium=distribute.pc_aggpage_search_result.none-task-blog-2~aggregatepage~first_rank_v2~rank_aggregation-1-103450148.pc_agg_rank_aggregation","extra": "{\&quot;utm_medium\&quot;:\&quot;distribute.pc_aggpage_search_result.none-task-blog-2~aggregatepage~first_rank_v2~rank_aggregation-1-103450148.pc_agg_rank_aggregation\&quot;}","index": "0","strategy": "2~aggregatepage~first_rank_v2~rank_aggregation","biz_id": "0","ops_request_misc": "%257B%2522request%255Fid%2522%253A%2522162409288916780357236962%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D","request_id": "162409288916780357236962"}'
+                                   data-report-query="utm_medium=distribute.pc_aggpage_search_result.none-task-blog-2~aggregatepage~first_rank_v2~rank_aggregation-1-103450148.pc_agg_rank_aggregation&utm_term=%E5%89%8D%E7%AB%AF%E5%92%8C%E5%90%8E%E7%AB%AF&spm=3001.4430"
+                                   target="_blank" class="blog-title">
+                                    <h2><em>前端和后端</em></h2>
+                                </a>
+                                <span class="update-time">2019-12-08 23:06:20</span>
+                            </div>
+                            <div class="description">
+                                <div class="desc-detail digest">
+                                    因为他以前也在北京培训过前端开发，后来因为个人原因转行了，没坚持下来(听他说是因为年龄大了，思维能力跟不上),我记得我当时回答的是移动应用开发(当时大学所学的专业),当时我对<em>前端和后端</em>没什么概念，后来慢慢的...
+                                </div>
+                                <div class="desc-detail content">
+                                    <div class='article_content'>
+                                        <pre class="preclass"><p>记得以前在上大学兼职时，当时有个经理问我学的是前端还是后端，因为他以前也在北京培训过前端开发，后来因为个人原因转行了，没坚持下来(听他说是因为年龄大了，思维能力跟不上),我记得我当时回答的是移动应用开发(当时大学所学的专业),当时我对前端和后端没什么概念，后来慢慢的了解，也对前端和后端有了一些认识。</p>
+<h5><a id="Web_1"></a>Web前端</h5>
+<p>顾名思义是来做Web的前端的。也就是在Web应用中用户可以看得见碰得着的东西。包括Web页面的结构、Web的外观视觉表现以及Web层面的交互实现。<br>
+前端开发人员应具备技能：精通JS，能熟练应用JQuery，懂CSS，能熟练运用这些知识，进行交互效果的开发。</p>
+<h5><a id="Web_4"></a>Web后端</h5>
+<p>后端更多的是与数据库进行交互以处理相应的业务逻辑。需要考虑的是如何实现功能、数据的存取、平台的稳定性与性能等。<br>
+后端开发人员应具备技能：使用某种语言来进行数据处理，比如java php .net …能够做数据库设计 ，很多网站都是用java php .net …后端数据处理的。<img src="https://img-blog.csdnimg.cn/20191208224729835.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2FkbWluX2RqcA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p>简单的来说，前端就是一个网站所有人都可以看得到页面设计，后端就是需要输入会员账号密码才能进入的后端操作平台。前端需要用到的代码是HTML+CSS+JQuery来实现，后端更重要的是业务逻辑代码的稳定性和安全性，两者对于网站是相辅相成的。网站的漏洞经常出现在后端，所以，后端的开发对于商业型网站尤为重要。形象比喻前端:是收营员,服务员，后端:是厨子，一个负责跟用户(顾客)交互，一个负责跟前端(收营员,服务员)交互。<br>
+其实还有就是关于学方面，大学时前端和后端都有学习过，学习前端是，你敲一行代码就可以看到效果，当你敲完一个页面感觉很有成就感，学起来很有意思，后端呢就截然相反,可能你打了很多行就看不到效果，学起来有点枯燥，一直与后面好多人人学着就不学了，没了兴趣。还有就是现在的前端要求也越来越高了，不光会前端后端也要会一些，所以说学习一下后端也是很有必要滴。</p>
+
+</pre>
+                                    </div>
+                                    <div class="hide-content"><a href="javascript:;">收起 <img
+                                                    src="https://csdnimg.cn/release/aggregate/img/arrow-down@2x.png" alt=""></a></div>
+                                </div>
+                                        <a href="javascript:;" class="readmore_btn"
+                                           data-linkUrl="https://blog.csdn.net/admin_djp/article/details/103450148"
+                                           data-so-type="blog">
+                                            <span>展开全文</span>
+                                            <img src='https://csdnimg.cn/release/aggregate/img/arrow-down@2x.png' alt="">
+                                        </a>
+                            </div>
+                                <div class="tags-view">
+                                    <img src='https://csdnimg.cn/release/aggregate/img/tags.png' alt="">
+                                        <a href="../tags/MtTaEg0sMDI5OTYtYmxvZwO0O0OO0O0O.html">web   </a>
+                                </div>
+
+                        </li>
+                        <li data-page="1">
+                            <div class="blog-title">
+                                <a href="https://blog.csdn.net/qq_35610214/article/details/97717288"
+                                   data-report-click='{"mod": "popu_876","spm": "3001.4430","dest": "https://blog.csdn.net/qq_35610214/article/details/97717288?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522162409288916780357236962%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D&amp;request_id=162409288916780357236962&amp;utm_term=%E5%89%8D%E7%AB%AF%E5%92%8C%E5%90%8E%E7%AB%AF&amp;utm_medium=distribute.pc_aggpage_search_result.none-task-blog-2~aggregatepage~first_rank_v2~rank_aggregation-2-97717288.pc_agg_rank_aggregation","extra": "{\&quot;utm_medium\&quot;:\&quot;distribute.pc_aggpage_search_result.none-task-blog-2~aggregatepage~first_rank_v2~rank_aggregation-2-97717288.pc_agg_rank_aggregation\&quot;}","index": "1","strategy": "2~aggregatepage~first_rank_v2~rank_aggregation","biz_id": "0","ops_request_misc": "%257B%2522request%255Fid%2522%253A%2522162409288916780357236962%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D","request_id": "162409288916780357236962"}'
+                                   data-report-view='{"mod": "popu_876","spm": "3001.4430","dest": "https://blog.csdn.net/qq_35610214/article/details/97717288?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522162409288916780357236962%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D&amp;request_id=162409288916780357236962&amp;utm_term=%E5%89%8D%E7%AB%AF%E5%92%8C%E5%90%8E%E7%AB%AF&amp;utm_medium=distribute.pc_aggpage_search_result.none-task-blog-2~aggregatepage~first_rank_v2~rank_aggregation-2-97717288.pc_agg_rank_aggregation","extra": "{\&quot;utm_medium\&quot;:\&quot;distribute.pc_aggpage_search_result.none-task-blog-2~aggregatepage~first_rank_v2~rank_aggregation-2-97717288.pc_agg_rank_aggregation\&quot;}","index": "1","strategy": "2~aggregatepage~first_rank_v2~rank_aggregation","biz_id": "0","ops_request_misc": "%257B%2522request%255Fid%2522%253A%2522162409288916780357236962%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D","request_id": "162409288916780357236962"}'
+                                   data-report-query="utm_medium=distribute.pc_aggpage_search_result.none-task-blog-2~aggregatepage~first_rank_v2~rank_aggregation-2-97717288.pc_agg_rank_aggregation&utm_term=%E5%89%8D%E7%AB%AF%E5%92%8C%E5%90%8E%E7%AB%AF&spm=3001.4430"
+                                   target="_blank" class="blog-title">
+                                    <h2><em>前端和后端</em>的区别？</h2>
+                                </a>
+                                    <span class="tags">
+                                            <i class="c1">万次阅读</i>
+                                            <i class="c2">多人点赞</i>
+                                    </span>
+                                <span class="update-time">2019-07-30 02:36:16</span>
+                            </div>
+                            <div class="description">
+                                <div class="desc-detail digest">
+                                    <em>前端和后端</em>做简单的叙述    后端：入门难，深入更难，枯燥乏味，没有太大成就感，看一堆业务逻辑代码。  前端：入门简单，先易后难，能看到自己做出来的展示界面，有成就感。      <em>前端和后端</em>两者工作的内容和负责的...
+                                </div>
+                                <div class="desc-detail content">
+                                    <div class='article_content'>
+                                        <pre class="preclass"><p>有的人认为，前端很好学，后端不好学。</p>
+
+<p>也有的人认为，前端不好学，后端好学，归根到底还得看个人兴趣。</p>
+
+<p> </p>
+
+<p><strong>前端和后端做简单的叙述</strong></p>
+
+<p> </p>
+
+<p>后端：入门难，深入更难，枯燥乏味，没有太大成就感，看一堆业务逻辑代码。</p>
+
+<p>前端：入门简单，先易后难，能看到自己做出来的展示界面，有成就感。</p>
+
+<p> </p>
+
+<p> </p>
+
+<p><strong>前端和后端两者工作的内容和负责的东西是完全的不同</strong></p>
+
+<p> </p>
+
+<p><strong>01</strong></p>
+
+<p>展示的方式不同</p>
+
+<p> </p>
+
+<p>前端指的是用户可见的界面，网站前端页面也就是网页的页面开发，比如网页上的特效、布局、图片、视频，音频等内容。前端的工作内容就是将美工设计的效果图的设计成浏览器可以运行的网页，并配合后端做网页的数据显示和交互等可视方面的工作内容。</p>
+
+<p><img alt="" class="has" src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9tbWJpei5xcGljLmNuL21tYml6X3BuZy9iUzl4R0FoQUJhRDBRalJJalhOUjhXYlV3YmVnYTRjbGd6aERRRkZEbG9oaWJzSWljRG5KSmFHcDk0bHpucXloZkg1dHNIVlBrNjZJaWI1UnFrZUY1aWNXMlEvNjQwP3d4X2ZtdD1naWYmdHA9d2VicCZ3eGZyb209NSZ3eF9sYXp5PTEmd3hfY289MQ" /></p>
+
+<p> </p>
+
+<p> </p>
+
+<p>后端是指用户看不见的东西，通常是与前端工程师进行数据交互及网站数据的保存和读取，相对来说后端涉及到的逻辑代码比前端要多的多，后端考虑的是底层业务逻辑的实现，平台的稳定性与性能等。</p>
+
+<p><img alt="" class="has" src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9tbWJpei5xcGljLmNuL21tYml6X2pwZy9iUzl4R0FoQUJhRDBRalJJalhOUjhXYlV3YmVnYTRjbGRqa1ZyR2ljczdqWHhCMVR2d3paU2dpYVZDMXl0aWN6aGljdUM0TkVYUkxIMFJkUzNNQ1QwMklQencvNjQwP3d4X2ZtdD1qcGVnJnRwPXdlYnAmd3hmcm9tPTUmd3hfbGF6eT0xJnd4X2NvPTE" /></p>
+
+<p> </p>
+
+<p> </p>
+
+<p><strong>02</strong></p>
+
+<p>所用的技术不同</p>
+
+<p>前端开发用到的技术包括但不限于html5、css3、javascript、jquery、Bootstrap、Node.js 、Webpack，AngularJs，ReactJs，VueJs等技术。</p>
+
+<p>后端开发 以java为例 主要用到的 是包括但不限于Struts spring springmvc Hibernate Http协议 Servlet Tomcat服务器等技术。</p>
+
+<p> </p>
+
+<p> </p>
+
+<p>比如做一个登陆页面，用户在前端页面上输入了账号密码，然后用鼠标点击了登陆按钮，这时候前端会将账号密码通过请求接口发送给后端做处理，后端收到数据会先检查此账号是否存在，如果不存在，则返回给前端一条类似于这样的信息：“你输入的账号不存在，请重新输入”，用户再次重新输入账号，此时后端查询账户存在，密码也正确，则后端返回登陆成功的信息给前端。现代计算机领域的难题如大规模负载，海量数据处理，实时计算也是后端的，前端集中在表示层。</p>
+
+<p><img alt="" class="has" src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9tbWJpei5xcGljLmNuL21tYml6X2pwZy9iUzl4R0FoQUJhRDBRalJJalhOUjhXYlV3YmVnYTRjbHRBNTVpY3U4MHNTakVoUDZPU21DSnBmUVFobFhtUTZmaFVjU3FBMHNJR2dBM014U09Nd2d4bFEvNjQwP3d4X2ZtdD1qcGVnJnRwPXdlYnAmd3hmcm9tPTUmd3hfbGF6eT0xJnd4X2NvPTE" /></p>
+
+<p> </p>
+
+<p> </p>
+
+<p>想学好任何一门技术，还要看自己对这门技术的感兴趣程度，老弟因为高考结束了，完美拿下620分，全广东省专本科排名3923名，当我听到我弟说他要学计算机时，我那一刹就安静了几秒钟，好好的保住头发不好吗，哈哈隔~  因为他自己也选择了计算机专业，我这边给他最多的就是建议，让他自己去选择自己的人生，谁也无法干预。所以我只是想说，从教育学的角度来讲“没有学不会的知识，只有不想学知识的人”，如果在对自己感兴趣的专业方面多下功夫，终是能学会。</p>
+</pre>
+                                    </div>
+                                    <div class="hide-content"><a href="javascript:;">收起 <img
+                                                    src="https://csdnimg.cn/release/aggregate/img/arrow-down@2x.png" alt=""></a></div>
+                                </div>
+                                        <a href="javascript:;" class="readmore_btn"
+                                           data-linkUrl="https://blog.csdn.net/qq_35610214/article/details/97717288"
+                                           data-so-type="blog">
+                                            <span>展开全文</span>
+                                            <img src='https://csdnimg.cn/release/aggregate/img/arrow-down@2x.png' alt="">
+                                        </a>
+                            </div>
+                                <div class="tags-view">
+                                    <img src='https://csdnimg.cn/release/aggregate/img/tags.png' alt="">
+                                        <a href="../tags/MtTaEg0sNDc3OTMtYmxvZwO0O0OO0O0O.html">技术   </a>
+                                </div>
+
+                        </li>
+                        <li data-page="1">
+                            <div class="blog-title">
+                                <a href="https://blog.csdn.net/cumj63710/article/details/107397802"
+                                   data-report-click='{"mod": "popu_876","spm": "3001.4430","dest": "https://blog.csdn.net/cumj63710/article/details/107397802?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522162409288916780357236962%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D&amp;request_id=162409288916780357236962&amp;utm_term=%E5%89%8D%E7%AB%AF%E5%92%8C%E5%90%8E%E7%AB%AF&amp;utm_medium=distribute.pc_aggpage_search_result.none-task-blog-2~aggregatepage~first_rank_v2~rank_aggregation-3-107397802.pc_agg_rank_aggregation","extra": "{\&quot;utm_medium\&quot;:\&quot;distribute.pc_aggpage_search_result.none-task-blog-2~aggregatepage~first_rank_v2~rank_aggregation-3-107397802.pc_agg_rank_aggregation\&quot;}","index": "2","strategy": "2~aggregatepage~first_rank_v2~rank_aggregation","biz_id": "0","ops_request_misc": "%257B%2522request%255Fid%2522%253A%2522162409288916780357236962%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D","request_id": "162409288916780357236962"}'
+                                   data-report-view='{"mod": "popu_876","spm": "3001.4430","dest": "https://blog.csdn.net/cumj63710/article/details/107397802?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522162409288916780357236962%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D&amp;request_id=162409288916780357236962&amp;utm_term=%E5%89%8D%E7%AB%AF%E5%92%8C%E5%90%8E%E7%AB%AF&amp;utm_medium=distribute.pc_aggpage_search_result.none-task-blog-2~aggregatepage~first_rank_v2~rank_aggregation-3-107397802.pc_agg_rank_aggregation","extra": "{\&quot;utm_medium\&quot;:\&quot;distribute.pc_aggpage_search_result.none-task-blog-2~aggregatepage~first_rank_v2~rank_aggregation-3-107397802.pc_agg_rank_aggregation\&quot;}","index": "2","strategy": "2~aggregatepage~first_rank_v2~rank_aggregation","biz_id": "0","ops_request_misc": "%257B%2522request%255Fid%2522%253A%2522162409288916780357236962%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D","request_id": "162409288916780357236962"}'
+                                   data-report-query="utm_medium=distribute.pc_aggpage_search_result.none-task-blog-2~aggregatepage~first_rank_v2~rank_aggregation-3-107397802.pc_agg_rank_aggregation&utm_term=%E5%89%8D%E7%AB%AF%E5%92%8C%E5%90%8E%E7%AB%AF&spm=3001.4430"
+                                   target="_blank" class="blog-title">
+                                    <h2><em>前端和后端</em>开发人员比例_<em>前端和后端</em>开发人员应该结交朋友</h2>
+                                </a>
+                                    <span class="tags">
+                                            <i class="c1">千次阅读</i>
+                                    </span>
+                                <span class="update-time">2020-06-26 00:45:19</span>
+                            </div>
+                            <div class="description">
+                                <div class="desc-detail digest">
+                                    <em>前端和后端</em>开发人员比例 Natalie Kozlowski是CodeGuard的前端Web开发人员。 她是一位自学成才的编码人员，使用开放源代码，并且将在今年的Raleigh All Things Open会议上发表有关如何与前端开发人员进行交互的演讲 ...
+                                </div>
+                                <div class="desc-detail content">
+                                    <div class='article_content'>
+                                        <pre class="preclass"><div class="field-item even" property="schema:articleBody content:encoded" style="font-size: 16px;">
+<p>前端和后端开发人员比例</p><p> <span>Natalie Kozlowski是<a href="https://www.codeguard.com/" rel="nofollow" target="_blank">CodeGuard</a>的前端Web开发人员。</span> <span>她是一位自学成才的编码人员，使用开放源代码，并且将在今年的Raleigh All Things Open会议上<a href="http://allthingsopen.org/talks/how-to-interact-with-your-front-end-developer/" rel="nofollow" target="_blank">发表有关如何与前端开发人员进行交互</a>的<a href="http://allthingsopen.org/talks/how-to-interact-with-your-front-end-developer/" rel="nofollow" target="_blank">演讲</a> 。</span> </p>
+<p> <span>在这次采访中，我在会议之前赶上了Natalie。</span> <span>我了解了更多有关她的背景，例如她如何获得专业写作学位，如何使她成为当前的前端开发人员以及如何将开源方式应用于她的工作。</span> </p>
+<!--break--><p></p><div style="text-align: center;"><img src="http://imgconvert.csdnimg.cn/aHR0cHM6Ly9vcGVuc291cmNlLmNvbS9zaXRlcy9kZWZhdWx0L2ZpbGVzL2ltYWdlcy9saWZlL0ludGVydmlldyUyMGJhbm5lciUyMFElMjZBLnBuZw?x-oss-process=image/format,png" alt="Interview" title="面试" data-file_info="%7B%22fid%22:%2215378%22,%22view_mode%22:%22default%22,%22fields%22:%7B%22format%22:%22default%22,%22field_file_image_alt_text%5Bund%5D%5B0%5D%5Bvalue%5D%22:%22Interview%22,%22field_file_image_title_text%5Bund%5D%5B0%5D%5Bvalue%5D%22:%22Interview%22,%22field_file_image_caption%5Bund%5D%5B0%5D%5Bvalue%5D%22:%22%22,%22field_file_image_caption%5Bund%5D%5B0%5D%5Bformat%5D%22:%22panopoly_html_text%22,%22field_folder%5Bund%5D%22:%229397%22%7D,%22type%22:%22media%22%7D" height="88" width="520"></div>
+<h3> <span style="font-weight: bold;">您能否谈谈您自己和您的背景？</span> </h3>
+<p> <span>我毕业于密歇根州立大学，获得专业写作学士学位。</span> <span>毕业后，我搬到了乔治亚州亚特兰大，在CodeGuard担任前端Web开发人员。</span> <span>CodeGuard是网站的网站备份，监视和还原服务。</span> <span>作为前端开发人员，我不仅监督应用程序的所有前端代码，还监督我们的所有设计需求。</span> </p>
+<p> <span>就设计而言，我学会了热爱各种各样的活动。</span> <span>我最初在Photoshop中创建网页设计和界面设计，然后从那里扩展到学习Illustrator，为我的工作创建自定义徽标和图标。</span> <span>之后，我进一步涉猎，也热爱印刷设计方面的内容，例如T恤设计，信息图表设计，海报设计，数字漫画插图等等。</span> <span>即使在今天，我仍然在业余时间参加T恤设计比赛，只是为了好玩！</span> </p>
+<p> <span>我也喜欢各种各样的开发学科。</span> <span>我已经能够使用PHP，Node.js，Ruby进行项目，当然，我可以动手使用每个前端框架/库/语言/预处理器！</span> <span>我喜欢学习新技术，并喜欢用从未使用过的新工具挑战自我。</span> <span>我将前端开发视为我喜欢的两件事之间的平衡：设计和开发。</span> </p>
+<p> <span>我在CodeGuard从事的一些备受瞩目的项目包括重新设计我们的主页，对我们的主页进行移动优化以及我们公司T恤的设计。</span> </p>
+<p> <span>在工作之余，我喜欢在亚特兰大远足和骑自行车。</span> <span>我的其他爱好包括在社区乐队中演奏打击乐器和学习讲韩语。</span> </p>
+<h3> <span style="font-weight: bold;">作为专业写作的毕业生，是什么促使您成为前端开发人员？</span> </h3>
+<p> <span>您不敢相信我经常被问到这个！</span> <span>不过，这是我喜欢回答的问题。</span> </p>
+<dl class="alignright wp-caption"> <a href="https://opensource.com/resources/ato2014" rel="nofollow"><div style="text-align: center;"><img src="http://imgconvert.csdnimg.cn/aHR0cHM6Ly9vcGVuc291cmNlLmNvbS9zaXRlcy9kZWZhdWx0L2ZpbGVzL3Jlc2l6ZS9sZWFkLWltYWdlcy9idXR0b25fcHVzaF9vcGVuX2tleWJvYXJkX2ZpbGVfb3JnYW5pemUtMTAweDU2LnBuZw?x-oss-process=image/format,png" height="56" width="100"></div></a> <br><h4> <span style="font-weight: bold;"><a href="https://opensource.com/resources/ato2014" rel="nofollow">查看完整的All Things Open演讲者访谈系列</a></span> </h4>
+</dl>
+<p> <span>在密歇根州立大学的专业写作专业中，您可以选择专门研究以下三个方向之一。</span> <span>我选择了“数字与技术写作”课程，该课程有助于我对代码（主要是HTML / CSS）有所了解，对Web设计最佳实践有很好的了解，并且对如何为Web编写以及如何集中精力有很好的了解。在您所创造的数字化修辞上。</span> <span>基本上，我的专业是针对网站而言最重要的内容：内容。</span> <span>我当时的专业的另一个名字是“用户体验设计”。</span> </p>
+<p> <span>我喜欢我的专业，但是与此同时，我发现自己越来越被编码和开发所吸引。</span> <span>我非常重视自己所学的用户体验和写作技能，因此，我没有自学专业，而是转向免费的在线资源和Web开发实习/学生职位（自学成才），从而自学成才。</span> </p>
+<p> <span>在高三结束时，我肯定将自己定位为“后端”开发人员，但是我仍然对网页设计非常感兴趣，并且对使用我的专业教授的图形设计技能也很感兴趣。</span> <span>最后，前端开发对我来说是我对设计的热爱与对编码的热爱之间的完美平衡。</span> <span>前端开发使我可以在需要时成为技术和书呆子，同时还可以关心用户体验和所创建事物的美感。</span> <span>在这一点上，我认为我真的不能再选择一个学科了（只能是Web / UI / UX设计人员或仅是Web开发人员）。</span> <span>我喜欢前端开发让我俩都做！</span> </p>
+<p> <span>因此回答这个问题：我认为我的专业确实为我成为一名前端开发人员做好了准备，尽管这还需要大量的自我教育和推动，才能使自己成为我想要成为的专业人士。</span> <span>并不是每个人一开始都会看到我的教育与我的职业之间的联系，但是在我解释了我的上学经历后，大多数人开始了解我如何到达今天的位置。</span> </p>
+<p> <span>我绝对认为开源技术使我对发展进行自我教育成为可能。</span> <span>我认为能够在年轻的时候就尝试开放源代码项目和图书馆对于我成为今天的我至关重要。</span> <span>没有这种机会，也没有进入发展世界的机会，我可能会因为沮丧而感到沮丧，因为进入壁垒太高或太过头了！</span> <span>我很高兴能够发现开源世界。</span> </p>
+<h3> <span style="font-weight: bold;">开发是开源项目的核心。</span> <span style="font-weight: bold;">这些团队（通常是分散的和自组织的）可以从您领导开发团队的经验中学到什么？</span> </h3>
+<p> <span>我想说，沟通是任何开发项目成功的关键。</span> <span>每天早上10点，CodeGuard的所有开发人员都会聚集在一个上午的讨论会上，讨论我们昨天所做的工作，我们计划今天进行的工作以及对我们的工作有何阻碍。</span> </p>
+<p> <span>这些简短的15分钟长的会议极大地帮助了我们的流程。</span> <span>例如，当团队构建某些东西时，我的同事Jonathan和我可能从来没有在功能的同一部分上工作，但是了解他的代码部分的工作方式对我来说仍然非常宝贵。</span> <span>将来我需要修改或添加部分代码的时间可能会长一些，对他构建的代码有一个很好的了解将为我或为从事此工作的任何开发人员节省大量时间特征。</span> </p>
+<p> <span>在签入新代码和审查彼此的工作时，我们还严重依赖GitHub Issues和GitHub Pull Requests。</span> <span>GitHub内部的评论系统已经成为团队进行大量交流的地方，也是我们解决许多问题的地方。</span> </p>
+<p> <span>作为一个团队，我们也是一个非常健谈的团体。</span> <span>我的意思不是说我们在办公室里经常大声地进行对话，但是我们确实使用了名为HipChat的群聊服务，该服务是系统所有警报和一天中大部分团队讨论的中心。</span> <span>我们为开发人员对话，支持讨论，提交的代码以及其他提供了一个单独的聊天室。</span> <span>我们甚至还有一个单独的聊天室来讨论办公室的温度，以防万一有人想调高或调低恒温器的情况。</span> <span>最后一个有点愚蠢，即使<em>我们</em>意识到这一点，但我要强调的是我们进行了很多交流，并且我们使用多种服务/平台来做到这一点。</span> <span>我们通常也有团队中的一些成员在远程工作，因此保持每个人的速度对我们至关重要。</span> <span>我们每天早上的聚会以及使用的其他工具肯定会有所帮助。</span> <span>如果当天有团队成员不在身边，我们一定要通过视频呼叫他们，以帮助他们解决问题！</span> </p>
+<h3> <span style="font-weight: bold;">开源方式是关于开放交换，快速原型制作和参与。</span> <span style="font-weight: bold;">您是否在日常工作中以及与后端开发人员的协作中运用了这些特性？</span> <span style="font-weight: bold;">您会从中受益吗？</span> </h3>
+<p> <span>我认为我确实接受了这些特征。</span> <span>我从事过的大多数公司都从事敏捷开发工作，因此我习惯了快速节奏的环境，在这种环境中，我们会获得“ MVP（最小可行产品）”，然后反复进行操作。</span> <span>我们也在CodeGuard进行很多配对编程。</span> <span>作为唯一的前端开发人员，意味着我总是与后端开发人员配对。</span> <span>我想我们已经找到了一种很好的方式来进行合作，共享知识并有效地进行协作。</span> <span>它带有实践！</span> </p>
+<p> <span>即使我没有配对，我仍然会与后端人员进行大量互动。</span> <span>我认为，促进这种交互的工作环境（设计人员与后端开发人员紧密合作，前端开发人员与后端开发人员紧密合作，开发人员与销售团队或市场营销团队紧密合作等）将最终得到解决。生产出更强大的产品。</span> <span>我认为这是真的，因为团队的每个部分最终都比团队其他角色暴露更多的机会。</span> <span>我认为，从长远来看，更好地了解团队中的其他角色可以使工作效率更高。</span> <span>因此，任何团队都可以从中受益！</span> </p>
+<h3> <span style="font-weight: bold;">您能否分享一个基于开源的用户体验或您（和您的团队）构建的Web应用程序的示例？</span> </h3>
+<p> <span>我们绝对在CodeGuard接受开源技术。</span> <span>我们的主要应用程序是使用Ruby on Rails构建的，并且我们使用了许多其他开源技术来将所有内容结合在一起。</span> </p>
+<p> <span>我们的一位开发人员在Go中编写了一个名为s3goph3r的工具，用于将内容同时流式传输到Amazon S3。</span> <span>我们使用Amazon S3来存储所有备份，而他所创建的解决方案正是针对CodeGuard所遇到问题的急需解决方案。</span> <span>他在GitHub上开源了该项目，到目前为止，社区对此React非常积极！</span> <span>人们甚至开始下载它并为代码库做贡献。</span> <span>这是他第一次开源某些东西，我记得他在开玩笑地说他不确定他对有人向他的项目提交他们的第一个拉取请求有何感想！</span> </p>
+<h3> <span style="font-weight: bold;">还有什么要说的吗？</span> <span style="font-weight: bold;">偷看您的演讲或给开源开发人员的提示？</span> </h3>
+<p> <span>我的演讲实际上是关于团队沟通的，以及后端开发人员和前端开发人员如何在一个项目上最好地合作，以使每个人都满意并按时完成任务。</span> <span>上面我提到了我认为良好的沟通对开发项目的重要性。</span> <span>我肯定会在我的演讲中深入探讨所有这些！</span> </p>
+<p> <span>我将从前端开发人员还是设计师的角度对这个话题发表看法。</span> <span>我认为，无论您是在从事开源项目，私有项目，编写Ruby代码，Perl代码或Lisp等工作，任何开发人员都可以从这次演讲中受益。我与足够多的开发人员进行了交谈，以了解在某些工作场所中，开发人员和设计师之间存在严重隔离。</span> <span>在这种情况下，根本不会发生任何互动！</span> </p>
+<p> <span>我的演讲涉及为什么我认为我们这样做会给自己和我们的产品带来不公平，还谈到人们如何可以在工作场所开始改善这一点。</span> </p>
+<p> <span><a title="ATO2014演讲者访谈" href="https://opensource.com/resources/ato2014" rel="nofollow" target="_blank"><strong>请参阅《 All Things Open 2014演讲者访谈》的完整系列。</strong></a></span> </p>
+<blockquote><p>翻译自: <a href="https://opensource.com/business/14/10/interview-natalie-kozlowski-codeguard" rel="nofollow">https://opensource.com/business/14/10/interview-natalie-kozlowski-codeguard</a></p></blockquote><p>前端和后端开发人员比例</p></div>
+</pre>
+                                    </div>
+                                    <div class="hide-content"><a href="javascript:;">收起 <img
+                                                    src="https://csdnimg.cn/release/aggregate/img/arrow-down@2x.png" alt=""></a></div>
+                                </div>
+                                        <a href="javascript:;" class="readmore_btn"
+                                           data-linkUrl="https://blog.csdn.net/cumj63710/article/details/107397802"
+                                           data-so-type="blog">
+                                            <span>展开全文</span>
+                                            <img src='https://csdnimg.cn/release/aggregate/img/arrow-down@2x.png' alt="">
+                                        </a>
+                            </div>
+
+                        </li>
+                        <li data-page="1">
+                            <div class="blog-title">
+                                <a href="https://blog.csdn.net/weixin_51051051/article/details/109043555"
+                                   data-report-click='{"mod": "popu_876","spm": "3001.4430","dest": "https://blog.csdn.net/weixin_51051051/article/details/109043555?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522162409288916780357236962%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D&amp;request_id=162409288916780357236962&amp;utm_term=%E5%89%8D%E7%AB%AF%E5%92%8C%E5%90%8E%E7%AB%AF&amp;utm_medium=distribute.pc_aggpage_search_result.none-task-blog-2~aggregatepage~first_rank_v2~rank_aggregation-4-109043555.pc_agg_rank_aggregation","extra": "{\&quot;utm_medium\&quot;:\&quot;distribute.pc_aggpage_search_result.none-task-blog-2~aggregatepage~first_rank_v2~rank_aggregation-4-109043555.pc_agg_rank_aggregation\&quot;}","index": "3","strategy": "2~aggregatepage~first_rank_v2~rank_aggregation","biz_id": "0","ops_request_misc": "%257B%2522request%255Fid%2522%253A%2522162409288916780357236962%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D","request_id": "162409288916780357236962"}'
+                                   data-report-view='{"mod": "popu_876","spm": "3001.4430","dest": "https://blog.csdn.net/weixin_51051051/article/details/109043555?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522162409288916780357236962%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D&amp;request_id=162409288916780357236962&amp;utm_term=%E5%89%8D%E7%AB%AF%E5%92%8C%E5%90%8E%E7%AB%AF&amp;utm_medium=distribute.pc_aggpage_search_result.none-task-blog-2~aggregatepage~first_rank_v2~rank_aggregation-4-109043555.pc_agg_rank_aggregation","extra": "{\&quot;utm_medium\&quot;:\&quot;distribute.pc_aggpage_search_result.none-task-blog-2~aggregatepage~first_rank_v2~rank_aggregation-4-109043555.pc_agg_rank_aggregation\&quot;}","index": "3","strategy": "2~aggregatepage~first_rank_v2~rank_aggregation","biz_id": "0","ops_request_misc": "%257B%2522request%255Fid%2522%253A%2522162409288916780357236962%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D","request_id": "162409288916780357236962"}'
+                                   data-report-query="utm_medium=distribute.pc_aggpage_search_result.none-task-blog-2~aggregatepage~first_rank_v2~rank_aggregation-4-109043555.pc_agg_rank_aggregation&utm_term=%E5%89%8D%E7%AB%AF%E5%92%8C%E5%90%8E%E7%AB%AF&spm=3001.4430"
+                                   target="_blank" class="blog-title">
+                                    <h2><em>前端和后端</em>区别</h2>
+                                </a>
+                                <span class="update-time">2020-10-13 07:54:16</span>
+                            </div>
+                            <div class="description">
+                                <div class="desc-detail digest">
+                                    <em>前端和后端</em>的区别 有的人认为，前端很好学，后端不好学。 也有的人认为，前端不好学，后端好学，归根到底还得看个人兴趣。 <em>前端和后端</em>做简单的叙述 后端：入门难，深入更难，枯燥乏味，没有太大成就感，看一堆业务...
+                                </div>
+                                <div class="desc-detail content">
+                                    <div class='article_content'>
+                                        <pre class="preclass"><p><strong>前端和后端的区别</strong></p>
+<p>有的人认为，前端很好学，后端不好学。<br>
+也有的人认为，前端不好学，后端好学，归根到底还得看个人兴趣。<br>
+前端和后端做简单的叙述<br>
+后端：入门难，深入更难，枯燥乏味，没有太大成就感，看一堆业务逻辑代码。<br>
+前端：入门简单，先易后难，能看到自己做出来的展示界面，有成就感。<br>
+前端和后端两者工作的内容和负责的东西是完全的不同</p>
+<p>展示方式<br>
+前端指的是用户可见的界面，网站前端页面也就是网页的页面开发，比如网页上的特效、布局、图片、视频，音频等内容。前端的工作内容就是将美工设计的效果图的设计成浏览器可以运行的网页，并配合后端做网页的数据显示和交互等可视方面的工作内容。<br>
+后端是指用户看不见的东西，通常是与前端工程师进行数据交互及网站数据的保存和读取，相对来说后端涉及到的逻辑代码比前端要多的多，后端考虑的是底层业务逻辑的实现，平台的稳定性与性能等。</p>
+<p>所用技术<br>
+前端开发用到的技术包括但不限于html5、css3、javascript、jquery、Bootstrap、Node.js 、Webpack，AngularJs，ReactJs，VueJs等技术。<br>
+后端开发 以java为例 主要用到的 是包括但不限于Struts spring springmvc Hibernate Http协议 Servlet Tomcat服务器等技术。</p>
+<p>工作职责<br>
+前端工程师主要的工作职责分为三大部分，分别是传统的Web前端开发，移动端开发和大数据呈现端开发。Web前端开发主要针对的是PC端开发任务；移动端开发则包括Android开发、iOS开发和各种小程序开发，在移动互联网迅速发展的带动下，移动端的开发任务量是比较大的，随着5G标准的落地，未来移动端的开发任务将得到进一步的拓展；大数据呈现则主要是基于已有的平台完成最终分析结果的呈现，呈现方式通常也有多种选择，比如大屏展示等。<br>
+后端工程师的主要职责也集中在三大部分，分别是平台设计、接口设计和功能实现。平台设计主要是搭建后端的支撑服务容器；接口设计主要针对于不同行业进行相应的功能接口设计，通常一个平台有多套接口，就像卫星导航平台设有民用和军用两套接口一样；功能实现则是完成具体的业务逻辑实现。</p>
+<p>知识结构<br>
+在知识结构方面，前端开发涉及到的内容包括Html、CSS、JavaScript、Android开发（采用Java或者kotlin）、iOS开发（采用OC或者Swift）、各种小程序开发技术（类Html），随着前端开发任务的不断拓展，前端开发后端化也是一个较为明显的趋势，比如Nodejs的应用。 后端开发通常需要根据业务场景进行不同语言的选择，另外后端开发的重点在于算法设计、数据结构、性能优化等方面，在具体的功能实现部分可以采用Java、Python或者PHP等编程语言来实现。对于不少中小企业来说，后端开发通常都会采用开源的开发平台，这样就可以把精力集中在业务处理上，通常应用级程序员就可以解决问题，相应的开发成本也会有大幅度的下降。</p>
+<p>应用范围<br>
+从应用范围来看，前端开发不仅被常人所知、且应用场景也要比后端广泛的太多太多。<br>
+一是PC (Personal Computer) 即个人电脑。目前电脑端仍是前端一个主要的领域，主要分为面向大众的各类网站，如新闻媒体、社交、电商、论坛等和面向管理员的各种 CMS (内容管理系统)和其它的后台管理系统。<br>
+二Web App 是指使用 Web 开发技术，实现的有较好用户体验的 Web 应用程序。它是运行在手机和桌面端浏览中，随着移动端网络速度的提升，Web App 为我们提供了很大的便利。此外近两年 Google 提出了一种新的 Web App 形态，即 PWA(渐进增强 Web APP) 。三WeChat (微信) 这个平台，拥有大量的用户群体，因此它也是我们前端开发另一个重要的领域。微信的公众号与订阅号为市场营销和自媒体从业者，打造了一个新的天地。<br>
+四Hybrid App (混合应用) 是指介于 Web App、原生 App (主要是 Android 或 iOS )之间的 App，它兼具原生 App 良好用户交互体验的优势和 Web App 跨平台开发的优势。<br>
+五Game（游戏），HTML5 游戏从 2014 年 Egret 引擎开发的神经猫引爆朋友圈之后，就开始一发不可收拾。不过现在游戏开发变得越来越复杂，需要制作各种炫丽炫丽的效果，还要制作各炫丽于 2D 或者 3D 的场景。<br>
+六Desktop桌面应用软件，就是我们日常生活中电脑中安装的各类软件。早期要开发桌面应用程序，就需要有专门的语言 UI (界面) 库支持，如 C++ 中的 Qt 库、MFC 库，Java 的 Swing、Python 的 PyQT 等，否则语言是没办法进行快速界面开发。<br>
+七Server Node.js 一发布，立刻在前端工程师中引起了轩然大波，前端工程师们几乎立刻对这一项技术表露出了相当大的热情和期待。看到 Node.js 这个名字，初学者可能会误以为这是一个 Java 应用，事实上，Node.js 采用 C++ 语言编写而成，是一个 Java 的运行环境。</p>
+
+</pre>
+                                    </div>
+                                    <div class="hide-content"><a href="javascript:;">收起 <img
+                                                    src="https://csdnimg.cn/release/aggregate/img/arrow-down@2x.png" alt=""></a></div>
+                                </div>
+                                        <a href="javascript:;" class="readmore_btn"
+                                           data-linkUrl="https://blog.csdn.net/weixin_51051051/article/details/109043555"
+                                           data-so-type="blog">
+                                            <span>展开全文</span>
+                                            <img src='https://csdnimg.cn/release/aggregate/img/arrow-down@2x.png' alt="">
+                                        </a>
+                            </div>
+
+                        </li>
+                        <li data-page="1">
+                            <div class="blog-title">
+                                <a href="https://blog.csdn.net/lin123_00/article/details/106259234"
+                                   data-report-click='{"mod": "popu_876","spm": "3001.4430","dest": "https://blog.csdn.net/lin123_00/article/details/106259234?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522162409288916780357236962%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D&amp;request_id=162409288916780357236962&amp;utm_term=%E5%89%8D%E7%AB%AF%E5%92%8C%E5%90%8E%E7%AB%AF&amp;utm_medium=distribute.pc_aggpage_search_result.none-task-blog-2~aggregatepage~first_rank_v2~rank_aggregation-5-106259234.pc_agg_rank_aggregation","extra": "{\&quot;utm_medium\&quot;:\&quot;distribute.pc_aggpage_search_result.none-task-blog-2~aggregatepage~first_rank_v2~rank_aggregation-5-106259234.pc_agg_rank_aggregation\&quot;}","index": "4","strategy": "2~aggregatepage~first_rank_v2~rank_aggregation","biz_id": "0","ops_request_misc": "%257B%2522request%255Fid%2522%253A%2522162409288916780357236962%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D","request_id": "162409288916780357236962"}'
+                                   data-report-view='{"mod": "popu_876","spm": "3001.4430","dest": "https://blog.csdn.net/lin123_00/article/details/106259234?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522162409288916780357236962%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D&amp;request_id=162409288916780357236962&amp;utm_term=%E5%89%8D%E7%AB%AF%E5%92%8C%E5%90%8E%E7%AB%AF&amp;utm_medium=distribute.pc_aggpage_search_result.none-task-blog-2~aggregatepage~first_rank_v2~rank_aggregation-5-106259234.pc_agg_rank_aggregation","extra": "{\&quot;utm_medium\&quot;:\&quot;distribute.pc_aggpage_search_result.none-task-blog-2~aggregatepage~first_rank_v2~rank_aggregation-5-106259234.pc_agg_rank_aggregation\&quot;}","index": "4","strategy": "2~aggregatepage~first_rank_v2~rank_aggregation","biz_id": "0","ops_request_misc": "%257B%2522request%255Fid%2522%253A%2522162409288916780357236962%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D","request_id": "162409288916780357236962"}'
+                                   data-report-query="utm_medium=distribute.pc_aggpage_search_result.none-task-blog-2~aggregatepage~first_rank_v2~rank_aggregation-5-106259234.pc_agg_rank_aggregation&utm_term=%E5%89%8D%E7%AB%AF%E5%92%8C%E5%90%8E%E7%AB%AF&spm=3001.4430"
+                                   target="_blank" class="blog-title">
+                                    <h2>什么是<em>前端和后端</em></h2>
+                                </a>
+                                <span class="update-time">2020-05-21 15:33:37</span>
+                            </div>
+                            <div class="description">
+                                <div class="desc-detail digest">
+                                    什么是<em>前端和后端</em>？<em>前端和后端</em>哪个好？相信很多小白都会有这样的的问题，下面我们就来讲解一下<em>前端和后端</em>的区别是什么？  什么是<em>前端和后端</em>？  网站前端是对网页静态页面的设计，通俗的来说，就是我们肉眼能看的到的...
+                                </div>
+                                <div class="desc-detail content">
+                                    <div class='article_content'>
+                                        <pre class="preclass"></pre>
+                                    </div>
+                                    <div class="hide-content"><a href="javascript:;">收起 <img
+                                                    src="https://csdnimg.cn/release/aggregate/img/arrow-down@2x.png" alt=""></a></div>
+                                </div>
+                            </div>
+                                <div class="tags-view">
+                                    <img src='https://csdnimg.cn/release/aggregate/img/tags.png' alt="">
+                                        <a href="../tags/OtDaQg2sNzExLWJsb2cO0O0O.html">javascript   </a>
+                                        <a href="../tags/MtTaEg0sMzgzMjItYmxvZwO0O0OO0O0O.html">css   </a>
+                                        <a href="../tags/MtTaEg0sMzA4NjQtYmxvZwO0O0OO0O0O.html">html   </a>
+                                </div>
+
+                        </li>
+                        <li data-page="1">
+                            <div class="blog-title">
+                                <a href="https://download.csdn.net/download/weixin_38547409/12784611"
+                                   data-report-click='{"mod": "popu_876","spm": "3001.4430","dest": "https://download.csdn.net/download/weixin_38547409/12784611?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522162409288916780357236962%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D&amp;request_id=162409288916780357236962&amp;utm_term=%E5%89%8D%E7%AB%AF%E5%92%8C%E5%90%8E%E7%AB%AF&amp;utm_medium=distribute.pc_aggpage_search_result.none-task-download-2~aggregatepage~first_rank_v2~rank_aggregation-6-12784611.pc_agg_rank_aggregation","extra": "{\&quot;utm_medium\&quot;:\&quot;distribute.pc_aggpage_search_result.none-task-download-2~aggregatepage~first_rank_v2~rank_aggregation-6-12784611.pc_agg_rank_aggregation\&quot;}","index": "5","strategy": "2~aggregatepage~first_rank_v2~rank_aggregation","biz_id": "1","ops_request_misc": "%257B%2522request%255Fid%2522%253A%2522162409288916780357236962%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D","request_id": "162409288916780357236962"}'
+                                   data-report-view='{"mod": "popu_876","spm": "3001.4430","dest": "https://download.csdn.net/download/weixin_38547409/12784611?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522162409288916780357236962%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D&amp;request_id=162409288916780357236962&amp;utm_term=%E5%89%8D%E7%AB%AF%E5%92%8C%E5%90%8E%E7%AB%AF&amp;utm_medium=distribute.pc_aggpage_search_result.none-task-download-2~aggregatepage~first_rank_v2~rank_aggregation-6-12784611.pc_agg_rank_aggregation","extra": "{\&quot;utm_medium\&quot;:\&quot;distribute.pc_aggpage_search_result.none-task-download-2~aggregatepage~first_rank_v2~rank_aggregation-6-12784611.pc_agg_rank_aggregation\&quot;}","index": "5","strategy": "2~aggregatepage~first_rank_v2~rank_aggregation","biz_id": "1","ops_request_misc": "%257B%2522request%255Fid%2522%253A%2522162409288916780357236962%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D","request_id": "162409288916780357236962"}'
+                                   data-report-query="utm_medium=distribute.pc_aggpage_search_result.none-task-download-2~aggregatepage~first_rank_v2~rank_aggregation-6-12784611.pc_agg_rank_aggregation&utm_term=%E5%89%8D%E7%AB%AF%E5%92%8C%E5%90%8E%E7%AB%AF&spm=3001.4430"
+                                   target="_blank" class="blog-title">
+                                    <h2>SpringMVC<em>前端和后端</em>数据交互总结</h2>
+                                </a>
+                                <span class="update-time">2020-08-31 04:29:59</span>
+                            </div>
+                            <div class="description">
+                                <div class="desc-detail digest">
+                                    本篇文章主要介绍了SpringMVC<em>前端和后端</em>数据交互总结，具有一定的参考价值，感兴趣的小伙伴们可以参考一下。
+                                </div>
+                                <div class="desc-detail content">
+                                    <div class='article_content'>
+                                        <pre class="preclass"></pre>
+                                    </div>
+                                    <div class="hide-content"><a href="javascript:;">收起 <img
+                                                    src="https://csdnimg.cn/release/aggregate/img/arrow-down@2x.png" alt=""></a></div>
+                                </div>
+                            </div>
+
+                        </li>
+                        <li data-page="1">
+                            <div class="blog-title">
+                                <a href="https://blog.csdn.net/qq_40147863/article/details/82997367"
+                                   data-report-click='{"mod": "popu_876","spm": "3001.4430","dest": "https://blog.csdn.net/qq_40147863/article/details/82997367?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522162409288916780357236962%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D&amp;request_id=162409288916780357236962&amp;utm_term=%E5%89%8D%E7%AB%AF%E5%92%8C%E5%90%8E%E7%AB%AF&amp;utm_medium=distribute.pc_aggpage_search_result.none-task-blog-2~aggregatepage~first_rank_v2~rank_aggregation-7-82997367.pc_agg_rank_aggregation","extra": "{\&quot;utm_medium\&quot;:\&quot;distribute.pc_aggpage_search_result.none-task-blog-2~aggregatepage~first_rank_v2~rank_aggregation-7-82997367.pc_agg_rank_aggregation\&quot;}","index": "6","strategy": "2~aggregatepage~first_rank_v2~rank_aggregation","biz_id": "0","ops_request_misc": "%257B%2522request%255Fid%2522%253A%2522162409288916780357236962%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D","request_id": "162409288916780357236962"}'
+                                   data-report-view='{"mod": "popu_876","spm": "3001.4430","dest": "https://blog.csdn.net/qq_40147863/article/details/82997367?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522162409288916780357236962%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D&amp;request_id=162409288916780357236962&amp;utm_term=%E5%89%8D%E7%AB%AF%E5%92%8C%E5%90%8E%E7%AB%AF&amp;utm_medium=distribute.pc_aggpage_search_result.none-task-blog-2~aggregatepage~first_rank_v2~rank_aggregation-7-82997367.pc_agg_rank_aggregation","extra": "{\&quot;utm_medium\&quot;:\&quot;distribute.pc_aggpage_search_result.none-task-blog-2~aggregatepage~first_rank_v2~rank_aggregation-7-82997367.pc_agg_rank_aggregation\&quot;}","index": "6","strategy": "2~aggregatepage~first_rank_v2~rank_aggregation","biz_id": "0","ops_request_misc": "%257B%2522request%255Fid%2522%253A%2522162409288916780357236962%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D","request_id": "162409288916780357236962"}'
+                                   data-report-query="utm_medium=distribute.pc_aggpage_search_result.none-task-blog-2~aggregatepage~first_rank_v2~rank_aggregation-7-82997367.pc_agg_rank_aggregation&utm_term=%E5%89%8D%E7%AB%AF%E5%92%8C%E5%90%8E%E7%AB%AF&spm=3001.4430"
+                                   target="_blank" class="blog-title">
+                                    <h2>Web<em>前端和后端</em>开发的区别和要求</h2>
+                                </a>
+                                    <span class="tags">
+                                            <i class="c1">万次阅读</i>
+                                            <i class="c2">多人点赞</i>
+                                    </span>
+                                <span class="update-time">2018-10-10 15:06:09</span>
+                            </div>
+                            <div class="description">
+                                <div class="desc-detail digest">
+                                    Web<em>前端和后端</em>开发的区别和要求    有时候自己会分不清，其实是因为前后端都了解，类似于全栈工程师，但又什么都不是很精通。那到底什么是前端、后端呢，我整理了一些企业要求级别的前端/后端基础，开发框架等。    ...
+                                </div>
+                                <div class="desc-detail content">
+                                    <div class='article_content'>
+                                        <pre class="preclass"></pre>
+                                    </div>
+                                    <div class="hide-content"><a href="javascript:;">收起 <img
+                                                    src="https://csdnimg.cn/release/aggregate/img/arrow-down@2x.png" alt=""></a></div>
+                                </div>
+                            </div>
+
+                        </li>
+                        <li data-page="1">
+                            <div class="blog-title">
+                                <a href="https://blog.csdn.net/qq_45259315/article/details/108607156"
+                                   data-report-click='{"mod": "popu_876","spm": "3001.4430","dest": "https://blog.csdn.net/qq_45259315/article/details/108607156?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522162409288916780357236962%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D&amp;request_id=162409288916780357236962&amp;utm_term=%E5%89%8D%E7%AB%AF%E5%92%8C%E5%90%8E%E7%AB%AF&amp;utm_medium=distribute.pc_aggpage_search_result.none-task-blog-2~aggregatepage~first_rank_v2~rank_aggregation-8-108607156.pc_agg_rank_aggregation","extra": "{\&quot;utm_medium\&quot;:\&quot;distribute.pc_aggpage_search_result.none-task-blog-2~aggregatepage~first_rank_v2~rank_aggregation-8-108607156.pc_agg_rank_aggregation\&quot;}","index": "7","strategy": "2~aggregatepage~first_rank_v2~rank_aggregation","biz_id": "0","ops_request_misc": "%257B%2522request%255Fid%2522%253A%2522162409288916780357236962%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D","request_id": "162409288916780357236962"}'
+                                   data-report-view='{"mod": "popu_876","spm": "3001.4430","dest": "https://blog.csdn.net/qq_45259315/article/details/108607156?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522162409288916780357236962%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D&amp;request_id=162409288916780357236962&amp;utm_term=%E5%89%8D%E7%AB%AF%E5%92%8C%E5%90%8E%E7%AB%AF&amp;utm_medium=distribute.pc_aggpage_search_result.none-task-blog-2~aggregatepage~first_rank_v2~rank_aggregation-8-108607156.pc_agg_rank_aggregation","extra": "{\&quot;utm_medium\&quot;:\&quot;distribute.pc_aggpage_search_result.none-task-blog-2~aggregatepage~first_rank_v2~rank_aggregation-8-108607156.pc_agg_rank_aggregation\&quot;}","index": "7","strategy": "2~aggregatepage~first_rank_v2~rank_aggregation","biz_id": "0","ops_request_misc": "%257B%2522request%255Fid%2522%253A%2522162409288916780357236962%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D","request_id": "162409288916780357236962"}'
+                                   data-report-query="utm_medium=distribute.pc_aggpage_search_result.none-task-blog-2~aggregatepage~first_rank_v2~rank_aggregation-8-108607156.pc_agg_rank_aggregation&utm_term=%E5%89%8D%E7%AB%AF%E5%92%8C%E5%90%8E%E7%AB%AF&spm=3001.4430"
+                                   target="_blank" class="blog-title">
+                                    <h2><em>前端和后端</em>的区别</h2>
+                                </a>
+                                <span class="update-time">2020-09-15 19:25:38</span>
+                            </div>
+                            <div class="description">
+                                <div class="desc-detail digest">
+                                    <em>前端和后端</em>做简单的叙述 后端：入门难，深入更难，枯燥乏味，没有太大成就感，看一堆业务逻辑代码。 前端：入门简单，先易后难，能看到自己做出来的展示界面，有成就感。 <em>前端和后端</em>两者工作的内容和负责的东西是...
+                                </div>
+                                <div class="desc-detail content">
+                                    <div class='article_content'>
+                                        <pre class="preclass"></pre>
+                                    </div>
+                                    <div class="hide-content"><a href="javascript:;">收起 <img
+                                                    src="https://csdnimg.cn/release/aggregate/img/arrow-down@2x.png" alt=""></a></div>
+                                </div>
+                            </div>
+
+                        </li>
+                        <li data-page="1">
+                            <div class="blog-title">
+                                <a href="https://blog.csdn.net/weixin_46112908/article/details/104174683"
+                                   data-report-click='{"mod": "popu_876","spm": "3001.4430","dest": "https://blog.csdn.net/weixin_46112908/article/details/104174683?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522162409288916780357236962%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D&amp;request_id=162409288916780357236962&amp;utm_term=%E5%89%8D%E7%AB%AF%E5%92%8C%E5%90%8E%E7%AB%AF&amp;utm_medium=distribute.pc_aggpage_search_result.none-task-blog-2~aggregatepage~first_rank_v2~rank_aggregation-9-104174683.pc_agg_rank_aggregation","extra": "{\&quot;utm_medium\&quot;:\&quot;distribute.pc_aggpage_search_result.none-task-blog-2~aggregatepage~first_rank_v2~rank_aggregation-9-104174683.pc_agg_rank_aggregation\&quot;}","index": "8","strategy": "2~aggregatepage~first_rank_v2~rank_aggregation","biz_id": "0","ops_request_misc": "%257B%2522request%255Fid%2522%253A%2522162409288916780357236962%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D","request_id": "162409288916780357236962"}'
+                                   data-report-view='{"mod": "popu_876","spm": "3001.4430","dest": "https://blog.csdn.net/weixin_46112908/article/details/104174683?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522162409288916780357236962%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D&amp;request_id=162409288916780357236962&amp;utm_term=%E5%89%8D%E7%AB%AF%E5%92%8C%E5%90%8E%E7%AB%AF&amp;utm_medium=distribute.pc_aggpage_search_result.none-task-blog-2~aggregatepage~first_rank_v2~rank_aggregation-9-104174683.pc_agg_rank_aggregation","extra": "{\&quot;utm_medium\&quot;:\&quot;distribute.pc_aggpage_search_result.none-task-blog-2~aggregatepage~first_rank_v2~rank_aggregation-9-104174683.pc_agg_rank_aggregation\&quot;}","index": "8","strategy": "2~aggregatepage~first_rank_v2~rank_aggregation","biz_id": "0","ops_request_misc": "%257B%2522request%255Fid%2522%253A%2522162409288916780357236962%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D","request_id": "162409288916780357236962"}'
+                                   data-report-query="utm_medium=distribute.pc_aggpage_search_result.none-task-blog-2~aggregatepage~first_rank_v2~rank_aggregation-9-104174683.pc_agg_rank_aggregation&utm_term=%E5%89%8D%E7%AB%AF%E5%92%8C%E5%90%8E%E7%AB%AF&spm=3001.4430"
+                                   target="_blank" class="blog-title">
+                                    <h2><em>前端和后端</em>哪个累，前端入职之后真的很痛苦吗</h2>
+                                </a>
+                                    <span class="tags">
+                                            <i class="c1">万次阅读</i>
+                                    </span>
+                                <span class="update-time">2020-02-04 20:40:05</span>
+                            </div>
+                            <div class="description">
+                                <div class="desc-detail digest">
+                                    web前端开发和后端开发哪个好，这是许多程序员新手一定会问的问题，毕竟，男怕入错行，那么<em>前端和后端</em>哪个是更好的选择，小职就在下面几方面给大家分析一下。   Q裙：768976403领取学习资料 薪资  <em>前端和后端</em>哪个累...
+                                </div>
+                                <div class="desc-detail content">
+                                    <div class='article_content'>
+                                        <pre class="preclass"></pre>
+                                    </div>
+                                    <div class="hide-content"><a href="javascript:;">收起 <img
+                                                    src="https://csdnimg.cn/release/aggregate/img/arrow-down@2x.png" alt=""></a></div>
+                                </div>
+                            </div>
+
+                        </li>
+                        <li data-page="1">
+                            <div class="blog-title">
+                                <a href="https://blog.csdn.net/Ghostofu/article/details/117774978"
+                                   data-report-click='{"mod": "popu_876","spm": "3001.4430","dest": "https://blog.csdn.net/Ghostofu/article/details/117774978?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522162409288916780357236962%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D&amp;request_id=162409288916780357236962&amp;utm_term=%E5%89%8D%E7%AB%AF%E5%92%8C%E5%90%8E%E7%AB%AF&amp;utm_medium=distribute.pc_aggpage_search_result.none-task-blog-2~aggregatepage~first_rank_v2~rank_aggregation-10-117774978.pc_agg_rank_aggregation","extra": "{\&quot;utm_medium\&quot;:\&quot;distribute.pc_aggpage_search_result.none-task-blog-2~aggregatepage~first_rank_v2~rank_aggregation-10-117774978.pc_agg_rank_aggregation\&quot;}","index": "9","strategy": "2~aggregatepage~first_rank_v2~rank_aggregation","biz_id": "0","ops_request_misc": "%257B%2522request%255Fid%2522%253A%2522162409288916780357236962%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D","request_id": "162409288916780357236962"}'
+                                   data-report-view='{"mod": "popu_876","spm": "3001.4430","dest": "https://blog.csdn.net/Ghostofu/article/details/117774978?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522162409288916780357236962%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D&amp;request_id=162409288916780357236962&amp;utm_term=%E5%89%8D%E7%AB%AF%E5%92%8C%E5%90%8E%E7%AB%AF&amp;utm_medium=distribute.pc_aggpage_search_result.none-task-blog-2~aggregatepage~first_rank_v2~rank_aggregation-10-117774978.pc_agg_rank_aggregation","extra": "{\&quot;utm_medium\&quot;:\&quot;distribute.pc_aggpage_search_result.none-task-blog-2~aggregatepage~first_rank_v2~rank_aggregation-10-117774978.pc_agg_rank_aggregation\&quot;}","index": "9","strategy": "2~aggregatepage~first_rank_v2~rank_aggregation","biz_id": "0","ops_request_misc": "%257B%2522request%255Fid%2522%253A%2522162409288916780357236962%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D","request_id": "162409288916780357236962"}'
+                                   data-report-query="utm_medium=distribute.pc_aggpage_search_result.none-task-blog-2~aggregatepage~first_rank_v2~rank_aggregation-10-117774978.pc_agg_rank_aggregation&utm_term=%E5%89%8D%E7%AB%AF%E5%92%8C%E5%90%8E%E7%AB%AF&spm=3001.4430"
+                                   target="_blank" class="blog-title">
+                                    <h2><em>前端和后端</em>是什么？</h2>
+                                </a>
+                                <span class="update-time">2021-06-10 12:16:19</span>
+                            </div>
+                            <div class="description">
+                                <div class="desc-detail digest">
+                                    <em>前端和后端</em>是什么？ 为了给后期的开发和维护带来便利，<em>前端和后端</em>的界限被很多公司分的越来越明显，那么什么是前端，什么又是后端呢？ 前端，百度定义前端即网站前台部分，运行在PC端，移动端等浏览器上展现给用户...
+                                </div>
+                                <div class="desc-detail content">
+                                    <div class='article_content'>
+                                        <pre class="preclass"></pre>
+                                    </div>
+                                    <div class="hide-content"><a href="javascript:;">收起 <img
+                                                    src="https://csdnimg.cn/release/aggregate/img/arrow-down@2x.png" alt=""></a></div>
+                                </div>
+                            </div>
+
+                        </li>
+                        <li data-page="1">
+                            <div class="blog-title">
+                                <a href="https://blog.csdn.net/BOM485480/article/details/104648635"
+                                   data-report-click='{"mod": "popu_876","spm": "3001.4430","dest": "https://blog.csdn.net/BOM485480/article/details/104648635?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522162409288916780357236962%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D&amp;request_id=162409288916780357236962&amp;utm_term=%E5%89%8D%E7%AB%AF%E5%92%8C%E5%90%8E%E7%AB%AF&amp;utm_medium=distribute.pc_aggpage_search_result.none-task-blog-2~aggregatepage~first_rank_v2~rank_aggregation-11-104648635.pc_agg_rank_aggregation","extra": "{\&quot;utm_medium\&quot;:\&quot;distribute.pc_aggpage_search_result.none-task-blog-2~aggregatepage~first_rank_v2~rank_aggregation-11-104648635.pc_agg_rank_aggregation\&quot;}","index": "10","strategy": "2~aggregatepage~first_rank_v2~rank_aggregation","biz_id": "0","ops_request_misc": "%257B%2522request%255Fid%2522%253A%2522162409288916780357236962%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D","request_id": "162409288916780357236962"}'
+                                   data-report-view='{"mod": "popu_876","spm": "3001.4430","dest": "https://blog.csdn.net/BOM485480/article/details/104648635?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522162409288916780357236962%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D&amp;request_id=162409288916780357236962&amp;utm_term=%E5%89%8D%E7%AB%AF%E5%92%8C%E5%90%8E%E7%AB%AF&amp;utm_medium=distribute.pc_aggpage_search_result.none-task-blog-2~aggregatepage~first_rank_v2~rank_aggregation-11-104648635.pc_agg_rank_aggregation","extra": "{\&quot;utm_medium\&quot;:\&quot;distribute.pc_aggpage_search_result.none-task-blog-2~aggregatepage~first_rank_v2~rank_aggregation-11-104648635.pc_agg_rank_aggregation\&quot;}","index": "10","strategy": "2~aggregatepage~first_rank_v2~rank_aggregation","biz_id": "0","ops_request_misc": "%257B%2522request%255Fid%2522%253A%2522162409288916780357236962%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D","request_id": "162409288916780357236962"}'
+                                   data-report-query="utm_medium=distribute.pc_aggpage_search_result.none-task-blog-2~aggregatepage~first_rank_v2~rank_aggregation-11-104648635.pc_agg_rank_aggregation&utm_term=%E5%89%8D%E7%AB%AF%E5%92%8C%E5%90%8E%E7%AB%AF&spm=3001.4430"
+                                   target="_blank" class="blog-title">
+                                    <h2><em>前端和后端</em>哪个工资高？做前端好还是做后端好？</h2>
+                                </a>
+                                    <span class="tags">
+                                            <i class="c1">万次阅读</i>
+                                    </span>
+                                <span class="update-time">2020-03-04 10:44:25</span>
+                            </div>
+                            <div class="description">
+                                <div class="desc-detail digest">
+                                    <em>前端和后端</em>哪个工资高？事实上，两个都是属于技术研发岗位，都是高薪有前途的职业，不存在说哪个工资更高些，都基本在一万到五万之间，工资的差别主要体现在个人技术上。要问做前端好还是做后端好？其实无论做前端...
+                                </div>
+                                <div class="desc-detail content">
+                                    <div class='article_content'>
+                                        <pre class="preclass"></pre>
+                                    </div>
+                                    <div class="hide-content"><a href="javascript:;">收起 <img
+                                                    src="https://csdnimg.cn/release/aggregate/img/arrow-down@2x.png" alt=""></a></div>
+                                </div>
+                            </div>
+                                <div class="tags-view">
+                                    <img src='https://csdnimg.cn/release/aggregate/img/tags.png' alt="">
+                                        <a href="../tags/OtDaQg2sNzExLWJsb2cO0O0O.html">javascript   </a>
+                                        <a href="../tags/MtTaEg0sMzgzMjItYmxvZwO0O0OO0O0O.html">css   </a>
+                                        <a href="../tags/MtTaEg0sMzA4NjQtYmxvZwO0O0OO0O0O.html">html   </a>
+                                        <a href="../tags/OtDaMgzsMzI0LWJsb2cO0O0O.html">html5   </a>
+                                        <a href="../tags/NtTaIg5sMzYyLWJsb2cO0O0O.html">java   </a>
+                                </div>
+
+                        </li>
+                        <li data-page="1">
+                            <div class="blog-title">
+                                <a href="https://download.csdn.net/download/weixin_42133861/15559050"
+                                   data-report-click='{"mod": "popu_876","spm": "3001.4430","dest": "https://download.csdn.net/download/weixin_42133861/15559050?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522162409288916780357236962%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D&amp;request_id=162409288916780357236962&amp;utm_term=%E5%89%8D%E7%AB%AF%E5%92%8C%E5%90%8E%E7%AB%AF&amp;utm_medium=distribute.pc_aggpage_search_result.none-task-download-2~aggregatepage~first_rank_v2~rank_aggregation-12-15559050.pc_agg_rank_aggregation","extra": "{\&quot;utm_medium\&quot;:\&quot;distribute.pc_aggpage_search_result.none-task-download-2~aggregatepage~first_rank_v2~rank_aggregation-12-15559050.pc_agg_rank_aggregation\&quot;}","index": "11","strategy": "2~aggregatepage~first_rank_v2~rank_aggregation","biz_id": "1","ops_request_misc": "%257B%2522request%255Fid%2522%253A%2522162409288916780357236962%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D","request_id": "162409288916780357236962"}'
+                                   data-report-view='{"mod": "popu_876","spm": "3001.4430","dest": "https://download.csdn.net/download/weixin_42133861/15559050?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522162409288916780357236962%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D&amp;request_id=162409288916780357236962&amp;utm_term=%E5%89%8D%E7%AB%AF%E5%92%8C%E5%90%8E%E7%AB%AF&amp;utm_medium=distribute.pc_aggpage_search_result.none-task-download-2~aggregatepage~first_rank_v2~rank_aggregation-12-15559050.pc_agg_rank_aggregation","extra": "{\&quot;utm_medium\&quot;:\&quot;distribute.pc_aggpage_search_result.none-task-download-2~aggregatepage~first_rank_v2~rank_aggregation-12-15559050.pc_agg_rank_aggregation\&quot;}","index": "11","strategy": "2~aggregatepage~first_rank_v2~rank_aggregation","biz_id": "1","ops_request_misc": "%257B%2522request%255Fid%2522%253A%2522162409288916780357236962%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D","request_id": "162409288916780357236962"}'
+                                   data-report-query="utm_medium=distribute.pc_aggpage_search_result.none-task-download-2~aggregatepage~first_rank_v2~rank_aggregation-12-15559050.pc_agg_rank_aggregation&utm_term=%E5%89%8D%E7%AB%AF%E5%92%8C%E5%90%8E%E7%AB%AF&spm=3001.4430"
+                                   target="_blank" class="blog-title">
+                                    <h2>my-framework：这是一个包含<em>前端和后端</em>的框架。 前端由vue构建，后端基于SpringBoot-源码</h2>
+                                </a>
+                                <span class="update-time">2021-03-04 10:33:59</span>
+                            </div>
+                            <div class="description">
+                                <div class="desc-detail digest">
+                                    my-framework：这是一个包含<em>前端和后端</em>的框架。 前端由vue构建，后端基于SpringBoot
+                                </div>
+                                <div class="desc-detail content">
+                                    <div class='article_content'>
+                                        <pre class="preclass"></pre>
+                                    </div>
+                                    <div class="hide-content"><a href="javascript:;">收起 <img
+                                                    src="https://csdnimg.cn/release/aggregate/img/arrow-down@2x.png" alt=""></a></div>
+                                </div>
+                            </div>
+                                <div class="tags-view">
+                                    <img src='https://csdnimg.cn/release/aggregate/img/tags.png' alt="">
+                                        <a href="../tags/NtTaIg5sMzYyLWJsb2cO0O0O.html">Java   </a>
+                                </div>
+
+                        </li>
+                        <li data-page="1">
+                            <div class="blog-title">
+                                <a href="https://blog.csdn.net/yawei_liu1688/article/details/108007065"
+                                   data-report-click='{"mod": "popu_876","spm": "3001.4430","dest": "https://blog.csdn.net/yawei_liu1688/article/details/108007065?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522162409288916780357236962%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D&amp;request_id=162409288916780357236962&amp;utm_term=%E5%89%8D%E7%AB%AF%E5%92%8C%E5%90%8E%E7%AB%AF&amp;utm_medium=distribute.pc_aggpage_search_result.none-task-blog-2~aggregatepage~first_rank_v2~rank_aggregation-13-108007065.pc_agg_rank_aggregation","extra": "{\&quot;utm_medium\&quot;:\&quot;distribute.pc_aggpage_search_result.none-task-blog-2~aggregatepage~first_rank_v2~rank_aggregation-13-108007065.pc_agg_rank_aggregation\&quot;}","index": "12","strategy": "2~aggregatepage~first_rank_v2~rank_aggregation","biz_id": "0","ops_request_misc": "%257B%2522request%255Fid%2522%253A%2522162409288916780357236962%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D","request_id": "162409288916780357236962"}'
+                                   data-report-view='{"mod": "popu_876","spm": "3001.4430","dest": "https://blog.csdn.net/yawei_liu1688/article/details/108007065?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522162409288916780357236962%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D&amp;request_id=162409288916780357236962&amp;utm_term=%E5%89%8D%E7%AB%AF%E5%92%8C%E5%90%8E%E7%AB%AF&amp;utm_medium=distribute.pc_aggpage_search_result.none-task-blog-2~aggregatepage~first_rank_v2~rank_aggregation-13-108007065.pc_agg_rank_aggregation","extra": "{\&quot;utm_medium\&quot;:\&quot;distribute.pc_aggpage_search_result.none-task-blog-2~aggregatepage~first_rank_v2~rank_aggregation-13-108007065.pc_agg_rank_aggregation\&quot;}","index": "12","strategy": "2~aggregatepage~first_rank_v2~rank_aggregation","biz_id": "0","ops_request_misc": "%257B%2522request%255Fid%2522%253A%2522162409288916780357236962%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D","request_id": "162409288916780357236962"}'
+                                   data-report-query="utm_medium=distribute.pc_aggpage_search_result.none-task-blog-2~aggregatepage~first_rank_v2~rank_aggregation-13-108007065.pc_agg_rank_aggregation&utm_term=%E5%89%8D%E7%AB%AF%E5%92%8C%E5%90%8E%E7%AB%AF&spm=3001.4430"
+                                   target="_blank" class="blog-title">
+                                    <h2>认识计算机<em>前端和后端</em></h2>
+                                </a>
+                                <span class="update-time">2020-08-14 17:39:39</span>
+                            </div>
+                            <div class="description">
+                                <div class="desc-detail digest">
+                                    <em>前端和后端</em>开发内容的区别  1、运行环境不同  （1）Web前端代码主要在客户端（PC、手机、pad）运行；  （2）Web后端的代码主要在服务端运行，服务器可以在提供服务厂家的数据中心，也可以在云端。  2、与用户紧密...
+                                </div>
+                                <div class="desc-detail content">
+                                    <div class='article_content'>
+                                        <pre class="preclass"></pre>
+                                    </div>
+                                    <div class="hide-content"><a href="javascript:;">收起 <img
+                                                    src="https://csdnimg.cn/release/aggregate/img/arrow-down@2x.png" alt=""></a></div>
+                                </div>
+                            </div>
+                                <div class="tags-view">
+                                    <img src='https://csdnimg.cn/release/aggregate/img/tags.png' alt="">
+                                        <a href="../tags/MtTaEg0sNDcxOTgtYmxvZwO0O0OO0O0O.html">服务器   </a>
+                                </div>
+
+                        </li>
+                        <li data-page="1">
+                            <div class="blog-title">
+                                <a href="https://download.csdn.net/download/weixin_42197110/15516314"
+                                   data-report-click='{"mod": "popu_876","spm": "3001.4430","dest": "https://download.csdn.net/download/weixin_42197110/15516314?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522162409288916780357236962%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D&amp;request_id=162409288916780357236962&amp;utm_term=%E5%89%8D%E7%AB%AF%E5%92%8C%E5%90%8E%E7%AB%AF&amp;utm_medium=distribute.pc_aggpage_search_result.none-task-download-2~aggregatepage~first_rank_v2~rank_aggregation-14-15516314.pc_agg_rank_aggregation","extra": "{\&quot;utm_medium\&quot;:\&quot;distribute.pc_aggpage_search_result.none-task-download-2~aggregatepage~first_rank_v2~rank_aggregation-14-15516314.pc_agg_rank_aggregation\&quot;}","index": "13","strategy": "2~aggregatepage~first_rank_v2~rank_aggregation","biz_id": "1","ops_request_misc": "%257B%2522request%255Fid%2522%253A%2522162409288916780357236962%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D","request_id": "162409288916780357236962"}'
+                                   data-report-view='{"mod": "popu_876","spm": "3001.4430","dest": "https://download.csdn.net/download/weixin_42197110/15516314?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522162409288916780357236962%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D&amp;request_id=162409288916780357236962&amp;utm_term=%E5%89%8D%E7%AB%AF%E5%92%8C%E5%90%8E%E7%AB%AF&amp;utm_medium=distribute.pc_aggpage_search_result.none-task-download-2~aggregatepage~first_rank_v2~rank_aggregation-14-15516314.pc_agg_rank_aggregation","extra": "{\&quot;utm_medium\&quot;:\&quot;distribute.pc_aggpage_search_result.none-task-download-2~aggregatepage~first_rank_v2~rank_aggregation-14-15516314.pc_agg_rank_aggregation\&quot;}","index": "13","strategy": "2~aggregatepage~first_rank_v2~rank_aggregation","biz_id": "1","ops_request_misc": "%257B%2522request%255Fid%2522%253A%2522162409288916780357236962%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D","request_id": "162409288916780357236962"}'
+                                   data-report-query="utm_medium=distribute.pc_aggpage_search_result.none-task-download-2~aggregatepage~first_rank_v2~rank_aggregation-14-15516314.pc_agg_rank_aggregation&utm_term=%E5%89%8D%E7%AB%AF%E5%92%8C%E5%90%8E%E7%AB%AF&spm=3001.4430"
+                                   target="_blank" class="blog-title">
+                                    <h2><em>前端和后端</em>终极学习视频（百度网盘资料）-附件资源</h2>
+                                </a>
+                                <span class="update-time">2021-03-02 15:03:35</span>
+                            </div>
+                            <div class="description">
+                                <div class="desc-detail digest">
+                                    <em>前端和后端</em>终极学习视频（百度网盘资料）-附件资源
+                                </div>
+                                <div class="desc-detail content">
+                                    <div class='article_content'>
+                                        <pre class="preclass"></pre>
+                                    </div>
+                                    <div class="hide-content"><a href="javascript:;">收起 <img
+                                                    src="https://csdnimg.cn/release/aggregate/img/arrow-down@2x.png" alt=""></a></div>
+                                </div>
+                            </div>
+
+                        </li>
+                        <li data-page="1">
+                            <div class="blog-title">
+                                <a href="https://blog.csdn.net/weixin_55765992/article/details/116529890"
+                                   data-report-click='{"mod": "popu_876","spm": "3001.4430","dest": "https://blog.csdn.net/weixin_55765992/article/details/116529890?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522162409288916780357236962%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D&amp;request_id=162409288916780357236962&amp;utm_term=%E5%89%8D%E7%AB%AF%E5%92%8C%E5%90%8E%E7%AB%AF&amp;utm_medium=distribute.pc_aggpage_search_result.none-task-blog-2~aggregatepage~first_rank_v2~rank_aggregation-15-116529890.pc_agg_rank_aggregation","extra": "{\&quot;utm_medium\&quot;:\&quot;distribute.pc_aggpage_search_result.none-task-blog-2~aggregatepage~first_rank_v2~rank_aggregation-15-116529890.pc_agg_rank_aggregation\&quot;}","index": "14","strategy": "2~aggregatepage~first_rank_v2~rank_aggregation","biz_id": "0","ops_request_misc": "%257B%2522request%255Fid%2522%253A%2522162409288916780357236962%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D","request_id": "162409288916780357236962"}'
+                                   data-report-view='{"mod": "popu_876","spm": "3001.4430","dest": "https://blog.csdn.net/weixin_55765992/article/details/116529890?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522162409288916780357236962%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D&amp;request_id=162409288916780357236962&amp;utm_term=%E5%89%8D%E7%AB%AF%E5%92%8C%E5%90%8E%E7%AB%AF&amp;utm_medium=distribute.pc_aggpage_search_result.none-task-blog-2~aggregatepage~first_rank_v2~rank_aggregation-15-116529890.pc_agg_rank_aggregation","extra": "{\&quot;utm_medium\&quot;:\&quot;distribute.pc_aggpage_search_result.none-task-blog-2~aggregatepage~first_rank_v2~rank_aggregation-15-116529890.pc_agg_rank_aggregation\&quot;}","index": "14","strategy": "2~aggregatepage~first_rank_v2~rank_aggregation","biz_id": "0","ops_request_misc": "%257B%2522request%255Fid%2522%253A%2522162409288916780357236962%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D","request_id": "162409288916780357236962"}'
+                                   data-report-query="utm_medium=distribute.pc_aggpage_search_result.none-task-blog-2~aggregatepage~first_rank_v2~rank_aggregation-15-116529890.pc_agg_rank_aggregation&utm_term=%E5%89%8D%E7%AB%AF%E5%92%8C%E5%90%8E%E7%AB%AF&spm=3001.4430"
+                                   target="_blank" class="blog-title">
+                                    <h2><em>前端和后端</em>到底有什么区别？待遇和前景如何？</h2>
+                                </a>
+                                <span class="update-time">2021-05-08 15:31:10</span>
+                            </div>
+                            <div class="description">
+                                <div class="desc-detail digest">
+                                    三、<em>前端和后端</em>哪个好就业？   四、<em>前端和后端</em>哪个薪资待遇好？  一、什么是前端开发？ 前端即网站前台部分，运行在PC端，移动端等浏览器上展现给用户浏览的网页。 随着互联网技术的发展，HTML5，CSS3，前端框架的...
+                                </div>
+                                <div class="desc-detail content">
+                                    <div class='article_content'>
+                                        <pre class="preclass"></pre>
+                                    </div>
+                                    <div class="hide-content"><a href="javascript:;">收起 <img
+                                                    src="https://csdnimg.cn/release/aggregate/img/arrow-down@2x.png" alt=""></a></div>
+                                </div>
+                            </div>
+
+                        </li>
+                        <li data-page="1">
+                            <div class="blog-title">
+                                <a href="https://blog.csdn.net/sxuek/article/details/114892402"
+                                   data-report-click='{"mod": "popu_876","spm": "3001.4430","dest": "https://blog.csdn.net/sxuek/article/details/114892402?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522162409288916780357236962%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D&amp;request_id=162409288916780357236962&amp;utm_term=%E5%89%8D%E7%AB%AF%E5%92%8C%E5%90%8E%E7%AB%AF&amp;utm_medium=distribute.pc_aggpage_search_result.none-task-blog-2~aggregatepage~first_rank_v2~rank_aggregation-16-114892402.pc_agg_rank_aggregation","extra": "{\&quot;utm_medium\&quot;:\&quot;distribute.pc_aggpage_search_result.none-task-blog-2~aggregatepage~first_rank_v2~rank_aggregation-16-114892402.pc_agg_rank_aggregation\&quot;}","index": "15","strategy": "2~aggregatepage~first_rank_v2~rank_aggregation","biz_id": "0","ops_request_misc": "%257B%2522request%255Fid%2522%253A%2522162409288916780357236962%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D","request_id": "162409288916780357236962"}'
+                                   data-report-view='{"mod": "popu_876","spm": "3001.4430","dest": "https://blog.csdn.net/sxuek/article/details/114892402?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522162409288916780357236962%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D&amp;request_id=162409288916780357236962&amp;utm_term=%E5%89%8D%E7%AB%AF%E5%92%8C%E5%90%8E%E7%AB%AF&amp;utm_medium=distribute.pc_aggpage_search_result.none-task-blog-2~aggregatepage~first_rank_v2~rank_aggregation-16-114892402.pc_agg_rank_aggregation","extra": "{\&quot;utm_medium\&quot;:\&quot;distribute.pc_aggpage_search_result.none-task-blog-2~aggregatepage~first_rank_v2~rank_aggregation-16-114892402.pc_agg_rank_aggregation\&quot;}","index": "15","strategy": "2~aggregatepage~first_rank_v2~rank_aggregation","biz_id": "0","ops_request_misc": "%257B%2522request%255Fid%2522%253A%2522162409288916780357236962%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D","request_id": "162409288916780357236962"}'
+                                   data-report-query="utm_medium=distribute.pc_aggpage_search_result.none-task-blog-2~aggregatepage~first_rank_v2~rank_aggregation-16-114892402.pc_agg_rank_aggregation&utm_term=%E5%89%8D%E7%AB%AF%E5%92%8C%E5%90%8E%E7%AB%AF&spm=3001.4430"
+                                   target="_blank" class="blog-title">
+                                    <h2><em>前端和后端</em>哪个工资高？</h2>
+                                </a>
+                                <span class="update-time">2021-03-16 18:08:46</span>
+                            </div>
+                            <div class="description">
+                                <div class="desc-detail digest">
+                                    IT行业的<em>前端和后端</em>那个行业工资会更高一点儿呢?这个问题对于想要进入这个行业的人可能是有些不太清楚的，今天就详细来说一下<em>前端和后端</em>的薪资情况。 在整体这个行业上，大部分人都会觉得后端的薪资会比前端的要高，...
+                                </div>
+                                <div class="desc-detail content">
+                                    <div class='article_content'>
+                                        <pre class="preclass"></pre>
+                                    </div>
+                                    <div class="hide-content"><a href="javascript:;">收起 <img
+                                                    src="https://csdnimg.cn/release/aggregate/img/arrow-down@2x.png" alt=""></a></div>
+                                </div>
+                            </div>
+
+                        </li>
+                        <li data-page="1">
+                            <div class="blog-title">
+                                <a href="https://blog.csdn.net/weixin_30762087/article/details/99454746"
+                                   data-report-click='{"mod": "popu_876","spm": "3001.4430","dest": "https://blog.csdn.net/weixin_30762087/article/details/99454746?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522162409288916780357236962%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D&amp;request_id=162409288916780357236962&amp;utm_term=%E5%89%8D%E7%AB%AF%E5%92%8C%E5%90%8E%E7%AB%AF&amp;utm_medium=distribute.pc_aggpage_search_result.none-task-blog-2~aggregatepage~first_rank_v2~rank_aggregation-17-99454746.pc_agg_rank_aggregation","extra": "{\&quot;utm_medium\&quot;:\&quot;distribute.pc_aggpage_search_result.none-task-blog-2~aggregatepage~first_rank_v2~rank_aggregation-17-99454746.pc_agg_rank_aggregation\&quot;}","index": "16","strategy": "2~aggregatepage~first_rank_v2~rank_aggregation","biz_id": "0","ops_request_misc": "%257B%2522request%255Fid%2522%253A%2522162409288916780357236962%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D","request_id": "162409288916780357236962"}'
+                                   data-report-view='{"mod": "popu_876","spm": "3001.4430","dest": "https://blog.csdn.net/weixin_30762087/article/details/99454746?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522162409288916780357236962%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D&amp;request_id=162409288916780357236962&amp;utm_term=%E5%89%8D%E7%AB%AF%E5%92%8C%E5%90%8E%E7%AB%AF&amp;utm_medium=distribute.pc_aggpage_search_result.none-task-blog-2~aggregatepage~first_rank_v2~rank_aggregation-17-99454746.pc_agg_rank_aggregation","extra": "{\&quot;utm_medium\&quot;:\&quot;distribute.pc_aggpage_search_result.none-task-blog-2~aggregatepage~first_rank_v2~rank_aggregation-17-99454746.pc_agg_rank_aggregation\&quot;}","index": "16","strategy": "2~aggregatepage~first_rank_v2~rank_aggregation","biz_id": "0","ops_request_misc": "%257B%2522request%255Fid%2522%253A%2522162409288916780357236962%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D","request_id": "162409288916780357236962"}'
+                                   data-report-query="utm_medium=distribute.pc_aggpage_search_result.none-task-blog-2~aggregatepage~first_rank_v2~rank_aggregation-17-99454746.pc_agg_rank_aggregation&utm_term=%E5%89%8D%E7%AB%AF%E5%92%8C%E5%90%8E%E7%AB%AF&spm=3001.4430"
+                                   target="_blank" class="blog-title">
+                                    <h2>Day18-<em>前端和后端</em>怎么区分</h2>
+                                </a>
+                                <span class="update-time">2017-11-03 10:22:00</span>
+                            </div>
+                            <div class="description">
+                                <div class="desc-detail digest">
+                                    <em>前端和后端</em>指的是网站建设当中的分工，之所以分<em>前端和后端</em>是因为网站建设要不同的人分工合作，主要分为<em>前端和后端</em>，下面说一下什么是<em>前端和后端</em>。    1、网站前端    网站前端就是网站的页面设计或者是静态的网页...
+                                </div>
+                                <div class="desc-detail content">
+                                    <div class='article_content'>
+                                        <pre class="preclass"></pre>
+                                    </div>
+                                    <div class="hide-content"><a href="javascript:;">收起 <img
+                                                    src="https://csdnimg.cn/release/aggregate/img/arrow-down@2x.png" alt=""></a></div>
+                                </div>
+                            </div>
+
+                        </li>
+                        <li data-page="1">
+                            <div class="blog-title">
+                                <a href="https://blog.csdn.net/qq_32653877/article/details/52599562"
+                                   data-report-click='{"mod": "popu_876","spm": "3001.4430","dest": "https://blog.csdn.net/qq_32653877/article/details/52599562?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522162409288916780357236962%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D&amp;request_id=162409288916780357236962&amp;utm_term=%E5%89%8D%E7%AB%AF%E5%92%8C%E5%90%8E%E7%AB%AF&amp;utm_medium=distribute.pc_aggpage_search_result.none-task-blog-2~aggregatepage~first_rank_v2~rank_aggregation-18-52599562.pc_agg_rank_aggregation","extra": "{\&quot;utm_medium\&quot;:\&quot;distribute.pc_aggpage_search_result.none-task-blog-2~aggregatepage~first_rank_v2~rank_aggregation-18-52599562.pc_agg_rank_aggregation\&quot;}","index": "17","strategy": "2~aggregatepage~first_rank_v2~rank_aggregation","biz_id": "0","ops_request_misc": "%257B%2522request%255Fid%2522%253A%2522162409288916780357236962%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D","request_id": "162409288916780357236962"}'
+                                   data-report-view='{"mod": "popu_876","spm": "3001.4430","dest": "https://blog.csdn.net/qq_32653877/article/details/52599562?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522162409288916780357236962%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D&amp;request_id=162409288916780357236962&amp;utm_term=%E5%89%8D%E7%AB%AF%E5%92%8C%E5%90%8E%E7%AB%AF&amp;utm_medium=distribute.pc_aggpage_search_result.none-task-blog-2~aggregatepage~first_rank_v2~rank_aggregation-18-52599562.pc_agg_rank_aggregation","extra": "{\&quot;utm_medium\&quot;:\&quot;distribute.pc_aggpage_search_result.none-task-blog-2~aggregatepage~first_rank_v2~rank_aggregation-18-52599562.pc_agg_rank_aggregation\&quot;}","index": "17","strategy": "2~aggregatepage~first_rank_v2~rank_aggregation","biz_id": "0","ops_request_misc": "%257B%2522request%255Fid%2522%253A%2522162409288916780357236962%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D","request_id": "162409288916780357236962"}'
+                                   data-report-query="utm_medium=distribute.pc_aggpage_search_result.none-task-blog-2~aggregatepage~first_rank_v2~rank_aggregation-18-52599562.pc_agg_rank_aggregation&utm_term=%E5%89%8D%E7%AB%AF%E5%92%8C%E5%90%8E%E7%AB%AF&spm=3001.4430"
+                                   target="_blank" class="blog-title">
+                                    <h2>Web<em>前端和后端</em></h2>
+                                </a>
+                                <span class="update-time">2016-09-20 20:23:01</span>
+                            </div>
+                            <div class="description">
+                                <div class="desc-detail digest">
+                                    Web<em>前端和后端</em>，有点类似数据的物理结构和逻辑结构。Web前端Web前端是指Web中可以看得见，摸得着的东西。包括页面的结构、视觉效果、Web层面交互实现。而这些内容主要由前端设计和前端开发负责。 前端设计主要负责...
+                                </div>
+                                <div class="desc-detail content">
+                                    <div class='article_content'>
+                                        <pre class="preclass"></pre>
+                                    </div>
+                                    <div class="hide-content"><a href="javascript:;">收起 <img
+                                                    src="https://csdnimg.cn/release/aggregate/img/arrow-down@2x.png" alt=""></a></div>
+                                </div>
+                            </div>
+                                <div class="tags-view">
+                                    <img src='https://csdnimg.cn/release/aggregate/img/tags.png' alt="">
+                                        <a href="../tags/MtTaEg0sMzgzMjItYmxvZwO0O0OO0O0O.html">css   </a>
+                                        <a href="../tags/MtTaEg0sMzA4NjQtYmxvZwO0O0OO0O0O.html">html   </a>
+                                        <a href="../tags/OtDaQg2sNzExLWJsb2cO0O0O.html">javascript   </a>
+                                </div>
+
+                        </li>
+                        <li data-page="1">
+                            <div class="blog-title">
+                                <a href="https://blog.csdn.net/weixin_46112908/article/details/104187866"
+                                   data-report-click='{"mod": "popu_876","spm": "3001.4430","dest": "https://blog.csdn.net/weixin_46112908/article/details/104187866?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522162409288916780357236962%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D&amp;request_id=162409288916780357236962&amp;utm_term=%E5%89%8D%E7%AB%AF%E5%92%8C%E5%90%8E%E7%AB%AF&amp;utm_medium=distribute.pc_aggpage_search_result.none-task-blog-2~aggregatepage~first_rank_v2~rank_aggregation-19-104187866.pc_agg_rank_aggregation","extra": "{\&quot;utm_medium\&quot;:\&quot;distribute.pc_aggpage_search_result.none-task-blog-2~aggregatepage~first_rank_v2~rank_aggregation-19-104187866.pc_agg_rank_aggregation\&quot;}","index": "18","strategy": "2~aggregatepage~first_rank_v2~rank_aggregation","biz_id": "0","ops_request_misc": "%257B%2522request%255Fid%2522%253A%2522162409288916780357236962%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D","request_id": "162409288916780357236962"}'
+                                   data-report-view='{"mod": "popu_876","spm": "3001.4430","dest": "https://blog.csdn.net/weixin_46112908/article/details/104187866?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522162409288916780357236962%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D&amp;request_id=162409288916780357236962&amp;utm_term=%E5%89%8D%E7%AB%AF%E5%92%8C%E5%90%8E%E7%AB%AF&amp;utm_medium=distribute.pc_aggpage_search_result.none-task-blog-2~aggregatepage~first_rank_v2~rank_aggregation-19-104187866.pc_agg_rank_aggregation","extra": "{\&quot;utm_medium\&quot;:\&quot;distribute.pc_aggpage_search_result.none-task-blog-2~aggregatepage~first_rank_v2~rank_aggregation-19-104187866.pc_agg_rank_aggregation\&quot;}","index": "18","strategy": "2~aggregatepage~first_rank_v2~rank_aggregation","biz_id": "0","ops_request_misc": "%257B%2522request%255Fid%2522%253A%2522162409288916780357236962%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D","request_id": "162409288916780357236962"}'
+                                   data-report-query="utm_medium=distribute.pc_aggpage_search_result.none-task-blog-2~aggregatepage~first_rank_v2~rank_aggregation-19-104187866.pc_agg_rank_aggregation&utm_term=%E5%89%8D%E7%AB%AF%E5%92%8C%E5%90%8E%E7%AB%AF&spm=3001.4430"
+                                   target="_blank" class="blog-title">
+                                    <h2><em>前端和后端</em>之间有什么区别</h2>
+                                </a>
+                                    <span class="tags">
+                                            <i class="c1">千次阅读</i>
+                                    </span>
+                                <span class="update-time">2020-02-05 20:23:34</span>
+                            </div>
+                            <div class="description">
+                                <div class="desc-detail digest">
+                                    在web开发过程中，<em>前端和后端</em>是两个最常用到的术语，它们在Web开发中发挥着重要作用。前端就是我们所看到用户界面而后端是我们无法看到并与之交互的部分。接下来在文章中将为大家具体介绍这两者之间的区别  加Q裙...
+                                </div>
+                                <div class="desc-detail content">
+                                    <div class='article_content'>
+                                        <pre class="preclass"></pre>
+                                    </div>
+                                    <div class="hide-content"><a href="javascript:;">收起 <img
+                                                    src="https://csdnimg.cn/release/aggregate/img/arrow-down@2x.png" alt=""></a></div>
+                                </div>
+                            </div>
+
+                        </li>
+                        <li data-page="1">
+                            <div class="blog-title">
+                                <a href="https://blog.csdn.net/BOM485480/article/details/111865626"
+                                   data-report-click='{"mod": "popu_876","spm": "3001.4430","dest": "https://blog.csdn.net/BOM485480/article/details/111865626?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522162409288916780357236962%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D&amp;request_id=162409288916780357236962&amp;utm_term=%E5%89%8D%E7%AB%AF%E5%92%8C%E5%90%8E%E7%AB%AF&amp;utm_medium=distribute.pc_aggpage_search_result.none-task-blog-2~aggregatepage~first_rank_v2~rank_aggregation-20-111865626.pc_agg_rank_aggregation","extra": "{\&quot;utm_medium\&quot;:\&quot;distribute.pc_aggpage_search_result.none-task-blog-2~aggregatepage~first_rank_v2~rank_aggregation-20-111865626.pc_agg_rank_aggregation\&quot;}","index": "19","strategy": "2~aggregatepage~first_rank_v2~rank_aggregation","biz_id": "0","ops_request_misc": "%257B%2522request%255Fid%2522%253A%2522162409288916780357236962%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D","request_id": "162409288916780357236962"}'
+                                   data-report-view='{"mod": "popu_876","spm": "3001.4430","dest": "https://blog.csdn.net/BOM485480/article/details/111865626?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522162409288916780357236962%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D&amp;request_id=162409288916780357236962&amp;utm_term=%E5%89%8D%E7%AB%AF%E5%92%8C%E5%90%8E%E7%AB%AF&amp;utm_medium=distribute.pc_aggpage_search_result.none-task-blog-2~aggregatepage~first_rank_v2~rank_aggregation-20-111865626.pc_agg_rank_aggregation","extra": "{\&quot;utm_medium\&quot;:\&quot;distribute.pc_aggpage_search_result.none-task-blog-2~aggregatepage~first_rank_v2~rank_aggregation-20-111865626.pc_agg_rank_aggregation\&quot;}","index": "19","strategy": "2~aggregatepage~first_rank_v2~rank_aggregation","biz_id": "0","ops_request_misc": "%257B%2522request%255Fid%2522%253A%2522162409288916780357236962%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D","request_id": "162409288916780357236962"}'
+                                   data-report-query="utm_medium=distribute.pc_aggpage_search_result.none-task-blog-2~aggregatepage~first_rank_v2~rank_aggregation-20-111865626.pc_agg_rank_aggregation&utm_term=%E5%89%8D%E7%AB%AF%E5%92%8C%E5%90%8E%E7%AB%AF&spm=3001.4430"
+                                   target="_blank" class="blog-title">
+                                    <h2><em>前端和后端</em>开发哪个工资高？</h2>
+                                </a>
+                                <span class="update-time">2020-12-28 14:23:51</span>
+                            </div>
+                            <div class="description">
+                                <div class="desc-detail digest">
+                                    <em>前端和后端</em>开发哪个工资高？一般来说前端开发平均薪资17k左右，后端开发平均工资16k左右，能拿到这个薪资水平的一般是有1-2年工作经验的开发人员，由于公司要求几个人能力不同薪资差距还是比较大的。  <em>前端和后端</em>...
+                                </div>
+                                <div class="desc-detail content">
+                                    <div class='article_content'>
+                                        <pre class="preclass"></pre>
+                                    </div>
+                                    <div class="hide-content"><a href="javascript:;">收起 <img
+                                                    src="https://csdnimg.cn/release/aggregate/img/arrow-down@2x.png" alt=""></a></div>
+                                </div>
+                            </div>
+                                <div class="tags-view">
+                                    <img src='https://csdnimg.cn/release/aggregate/img/tags.png' alt="">
+                                        <a href="../tags/MtTaEg0sMTA0OTctYmxvZwO0O0OO0O0O.html">编程语言   </a>
+                                        <a href="../tags/MtTaEg0sMDI5OTYtYmxvZwO0O0OO0O0O.html">web   </a>
+                                        <a href="../tags/MtzaIgwsNjI0MDQtYmxvZwO0O0OO0O0O.html">js   </a>
+                                        <a href="../tags/NtTaIg5sMzYyLWJsb2cO0O0O.html">java   </a>
+                                </div>
+
+                        </li>
+                        <li data-page="1">
+                            <div class="blog-title">
+                                <a href="https://blog.csdn.net/weixin_34392435/article/details/94649540"
+                                   data-report-click='{"mod": "popu_876","spm": "3001.4430","dest": "https://blog.csdn.net/weixin_34392435/article/details/94649540?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522162409288916780357236962%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D&amp;request_id=162409288916780357236962&amp;utm_term=%E5%89%8D%E7%AB%AF%E5%92%8C%E5%90%8E%E7%AB%AF&amp;utm_medium=distribute.pc_aggpage_search_result.none-task-blog-2~aggregatepage~first_rank_v2~rank_aggregation-21-94649540.pc_agg_rank_aggregation","extra": "{\&quot;utm_medium\&quot;:\&quot;distribute.pc_aggpage_search_result.none-task-blog-2~aggregatepage~first_rank_v2~rank_aggregation-21-94649540.pc_agg_rank_aggregation\&quot;}","index": "20","strategy": "2~aggregatepage~first_rank_v2~rank_aggregation","biz_id": "0","ops_request_misc": "%257B%2522request%255Fid%2522%253A%2522162409288916780357236962%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D","request_id": "162409288916780357236962"}'
+                                   data-report-view='{"mod": "popu_876","spm": "3001.4430","dest": "https://blog.csdn.net/weixin_34392435/article/details/94649540?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522162409288916780357236962%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D&amp;request_id=162409288916780357236962&amp;utm_term=%E5%89%8D%E7%AB%AF%E5%92%8C%E5%90%8E%E7%AB%AF&amp;utm_medium=distribute.pc_aggpage_search_result.none-task-blog-2~aggregatepage~first_rank_v2~rank_aggregation-21-94649540.pc_agg_rank_aggregation","extra": "{\&quot;utm_medium\&quot;:\&quot;distribute.pc_aggpage_search_result.none-task-blog-2~aggregatepage~first_rank_v2~rank_aggregation-21-94649540.pc_agg_rank_aggregation\&quot;}","index": "20","strategy": "2~aggregatepage~first_rank_v2~rank_aggregation","biz_id": "0","ops_request_misc": "%257B%2522request%255Fid%2522%253A%2522162409288916780357236962%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D","request_id": "162409288916780357236962"}'
+                                   data-report-query="utm_medium=distribute.pc_aggpage_search_result.none-task-blog-2~aggregatepage~first_rank_v2~rank_aggregation-21-94649540.pc_agg_rank_aggregation&utm_term=%E5%89%8D%E7%AB%AF%E5%92%8C%E5%90%8E%E7%AB%AF&spm=3001.4430"
+                                   target="_blank" class="blog-title">
+                                    <h2><em>前端和后端</em>开发的异同</h2>
+                                </a>
+                                <span class="update-time">2019-04-03 11:21:00</span>
+                            </div>
+                            <div class="description">
+                                <div class="desc-detail digest">
+                                    我被这个问题给愣住了，问题不在<em>前端和后端</em>，而在于这么多年我还是一个开发人员。但我不在乎这件事情，因为这么多年了，我发现我对写代码的热情不减反增，我的愿望是退休之后还能继续写代码。回到正题，我觉得没有...
+                                </div>
+                                <div class="desc-detail content">
+                                    <div class='article_content'>
+                                        <pre class="preclass"></pre>
+                                    </div>
+                                    <div class="hide-content"><a href="javascript:;">收起 <img
+                                                    src="https://csdnimg.cn/release/aggregate/img/arrow-down@2x.png" alt=""></a></div>
+                                </div>
+                            </div>
+
+                        </li>
+                        <li data-page="1">
+                            <div class="blog-title">
+                                <a href="https://download.csdn.net/download/hope0916/13012101"
+                                   data-report-click='{"mod": "popu_876","spm": "3001.4430","dest": "https://download.csdn.net/download/hope0916/13012101?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522162409288916780357236962%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D&amp;request_id=162409288916780357236962&amp;utm_term=%E5%89%8D%E7%AB%AF%E5%92%8C%E5%90%8E%E7%AB%AF&amp;utm_medium=distribute.pc_aggpage_search_result.none-task-download-2~aggregatepage~first_rank_v2~rank_aggregation-22-13012101.pc_agg_rank_aggregation","extra": "{\&quot;utm_medium\&quot;:\&quot;distribute.pc_aggpage_search_result.none-task-download-2~aggregatepage~first_rank_v2~rank_aggregation-22-13012101.pc_agg_rank_aggregation\&quot;}","index": "21","strategy": "2~aggregatepage~first_rank_v2~rank_aggregation","biz_id": "1","ops_request_misc": "%257B%2522request%255Fid%2522%253A%2522162409288916780357236962%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D","request_id": "162409288916780357236962"}'
+                                   data-report-view='{"mod": "popu_876","spm": "3001.4430","dest": "https://download.csdn.net/download/hope0916/13012101?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522162409288916780357236962%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D&amp;request_id=162409288916780357236962&amp;utm_term=%E5%89%8D%E7%AB%AF%E5%92%8C%E5%90%8E%E7%AB%AF&amp;utm_medium=distribute.pc_aggpage_search_result.none-task-download-2~aggregatepage~first_rank_v2~rank_aggregation-22-13012101.pc_agg_rank_aggregation","extra": "{\&quot;utm_medium\&quot;:\&quot;distribute.pc_aggpage_search_result.none-task-download-2~aggregatepage~first_rank_v2~rank_aggregation-22-13012101.pc_agg_rank_aggregation\&quot;}","index": "21","strategy": "2~aggregatepage~first_rank_v2~rank_aggregation","biz_id": "1","ops_request_misc": "%257B%2522request%255Fid%2522%253A%2522162409288916780357236962%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D","request_id": "162409288916780357236962"}'
+                                   data-report-query="utm_medium=distribute.pc_aggpage_search_result.none-task-download-2~aggregatepage~first_rank_v2~rank_aggregation-22-13012101.pc_agg_rank_aggregation&utm_term=%E5%89%8D%E7%AB%AF%E5%92%8C%E5%90%8E%E7%AB%AF&spm=3001.4430"
+                                   target="_blank" class="blog-title">
+                                    <h2>20余套微信小程序源代码（含<em>前端和后端</em>）</h2>
+                                </a>
+                                <span class="update-time">2020-10-22 16:25:08</span>
+                            </div>
+                            <div class="description">
+                                <div class="desc-detail digest">
+                                    20余套微信小程序源代码（含<em>前端和后端</em>）微信小程序源码带后台+教程+不同行业的源码集合。如有侵权或安装问题请联系附带微信.
+                                </div>
+                                <div class="desc-detail content">
+                                    <div class='article_content'>
+                                        <pre class="preclass"></pre>
+                                    </div>
+                                    <div class="hide-content"><a href="javascript:;">收起 <img
+                                                    src="https://csdnimg.cn/release/aggregate/img/arrow-down@2x.png" alt=""></a></div>
+                                </div>
+                            </div>
+
+                        </li>
+                        <li data-page="1">
+                            <div class="blog-title">
+                                <a href="https://blog.csdn.net/qf2019/article/details/109239183"
+                                   data-report-click='{"mod": "popu_876","spm": "3001.4430","dest": "https://blog.csdn.net/qf2019/article/details/109239183?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522162409288916780357236962%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D&amp;request_id=162409288916780357236962&amp;utm_term=%E5%89%8D%E7%AB%AF%E5%92%8C%E5%90%8E%E7%AB%AF&amp;utm_medium=distribute.pc_aggpage_search_result.none-task-blog-2~aggregatepage~first_rank_v2~rank_aggregation-23-109239183.pc_agg_rank_aggregation","extra": "{\&quot;utm_medium\&quot;:\&quot;distribute.pc_aggpage_search_result.none-task-blog-2~aggregatepage~first_rank_v2~rank_aggregation-23-109239183.pc_agg_rank_aggregation\&quot;}","index": "22","strategy": "2~aggregatepage~first_rank_v2~rank_aggregation","biz_id": "0","ops_request_misc": "%257B%2522request%255Fid%2522%253A%2522162409288916780357236962%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D","request_id": "162409288916780357236962"}'
+                                   data-report-view='{"mod": "popu_876","spm": "3001.4430","dest": "https://blog.csdn.net/qf2019/article/details/109239183?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522162409288916780357236962%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D&amp;request_id=162409288916780357236962&amp;utm_term=%E5%89%8D%E7%AB%AF%E5%92%8C%E5%90%8E%E7%AB%AF&amp;utm_medium=distribute.pc_aggpage_search_result.none-task-blog-2~aggregatepage~first_rank_v2~rank_aggregation-23-109239183.pc_agg_rank_aggregation","extra": "{\&quot;utm_medium\&quot;:\&quot;distribute.pc_aggpage_search_result.none-task-blog-2~aggregatepage~first_rank_v2~rank_aggregation-23-109239183.pc_agg_rank_aggregation\&quot;}","index": "22","strategy": "2~aggregatepage~first_rank_v2~rank_aggregation","biz_id": "0","ops_request_misc": "%257B%2522request%255Fid%2522%253A%2522162409288916780357236962%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D","request_id": "162409288916780357236962"}'
+                                   data-report-query="utm_medium=distribute.pc_aggpage_search_result.none-task-blog-2~aggregatepage~first_rank_v2~rank_aggregation-23-109239183.pc_agg_rank_aggregation&utm_term=%E5%89%8D%E7%AB%AF%E5%92%8C%E5%90%8E%E7%AB%AF&spm=3001.4430"
+                                   target="_blank" class="blog-title">
+                                    <h2><em>前端和后端</em>的学习零基础怎么学习？</h2>
+                                </a>
+                                <span class="update-time">2020-10-23 11:25:35</span>
+                            </div>
+                            <div class="description">
+                                <div class="desc-detail digest">
+                                    随着互联网的发展和变革，IT行业岗位也越来越多样化，很多初学者想要进入IT行业却不知道该选择哪个方向，接下来千锋重庆web前端的小编就为大家介绍一下Web<em>前端和后端</em>有啥区别，应该如何去选择。 Web<em>前端和后端</em>严格来...
+                                </div>
+                                <div class="desc-detail content">
+                                    <div class='article_content'>
+                                        <pre class="preclass"></pre>
+                                    </div>
+                                    <div class="hide-content"><a href="javascript:;">收起 <img
+                                                    src="https://csdnimg.cn/release/aggregate/img/arrow-down@2x.png" alt=""></a></div>
+                                </div>
+                            </div>
+
+                        </li>
+                        <li data-page="1">
+                            <div class="blog-title">
+                                <a href="https://blog.csdn.net/JACK_15/article/details/116674825"
+                                   data-report-click='{"mod": "popu_876","spm": "3001.4430","dest": "https://blog.csdn.net/JACK_15/article/details/116674825?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522162409288916780357236962%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D&amp;request_id=162409288916780357236962&amp;utm_term=%E5%89%8D%E7%AB%AF%E5%92%8C%E5%90%8E%E7%AB%AF&amp;utm_medium=distribute.pc_aggpage_search_result.none-task-blog-2~aggregatepage~first_rank_v2~rank_aggregation-24-116674825.pc_agg_rank_aggregation","extra": "{\&quot;utm_medium\&quot;:\&quot;distribute.pc_aggpage_search_result.none-task-blog-2~aggregatepage~first_rank_v2~rank_aggregation-24-116674825.pc_agg_rank_aggregation\&quot;}","index": "23","strategy": "2~aggregatepage~first_rank_v2~rank_aggregation","biz_id": "0","ops_request_misc": "%257B%2522request%255Fid%2522%253A%2522162409288916780357236962%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D","request_id": "162409288916780357236962"}'
+                                   data-report-view='{"mod": "popu_876","spm": "3001.4430","dest": "https://blog.csdn.net/JACK_15/article/details/116674825?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522162409288916780357236962%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D&amp;request_id=162409288916780357236962&amp;utm_term=%E5%89%8D%E7%AB%AF%E5%92%8C%E5%90%8E%E7%AB%AF&amp;utm_medium=distribute.pc_aggpage_search_result.none-task-blog-2~aggregatepage~first_rank_v2~rank_aggregation-24-116674825.pc_agg_rank_aggregation","extra": "{\&quot;utm_medium\&quot;:\&quot;distribute.pc_aggpage_search_result.none-task-blog-2~aggregatepage~first_rank_v2~rank_aggregation-24-116674825.pc_agg_rank_aggregation\&quot;}","index": "23","strategy": "2~aggregatepage~first_rank_v2~rank_aggregation","biz_id": "0","ops_request_misc": "%257B%2522request%255Fid%2522%253A%2522162409288916780357236962%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D","request_id": "162409288916780357236962"}'
+                                   data-report-query="utm_medium=distribute.pc_aggpage_search_result.none-task-blog-2~aggregatepage~first_rank_v2~rank_aggregation-24-116674825.pc_agg_rank_aggregation&utm_term=%E5%89%8D%E7%AB%AF%E5%92%8C%E5%90%8E%E7%AB%AF&spm=3001.4430"
+                                   target="_blank" class="blog-title">
+                                    <h2>谈一谈<em>前端和后端</em>的联系</h2>
+                                </a>
+                                <span class="update-time">2021-05-11 23:11:29</span>
+                            </div>
+                            <div class="description">
+                                <div class="desc-detail digest">
+                                    关于<em>前端和后端</em>互相取其精华的现象我的理解 前端  前端语言完善基础语法规则，ECMA2015中添加let和const关键字形成了块级作用域 前端语言逐渐吸收后端语言面向对象的编程方式，ECMA2015中使用extends关键字进行继承...
+                                </div>
+                                <div class="desc-detail content">
+                                    <div class='article_content'>
+                                        <pre class="preclass"></pre>
+                                    </div>
+                                    <div class="hide-content"><a href="javascript:;">收起 <img
+                                                    src="https://csdnimg.cn/release/aggregate/img/arrow-down@2x.png" alt=""></a></div>
+                                </div>
+                            </div>
+                                <div class="tags-view">
+                                    <img src='https://csdnimg.cn/release/aggregate/img/tags.png' alt="">
+                                        <a href="../tags/OtDaQg2sNzExLWJsb2cO0O0O.html">javascript   </a>
+                                        <a href="../tags/NtTaIg5sMzYyLWJsb2cO0O0O.html">java   </a>
+                                </div>
+
+                        </li>
+                        <li data-page="1">
+                            <div class="blog-title">
+                                <a href="https://blog.csdn.net/xiaoxijing/article/details/108713821"
+                                   data-report-click='{"mod": "popu_876","spm": "3001.4430","dest": "https://blog.csdn.net/xiaoxijing/article/details/108713821?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522162409288916780357236962%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D&amp;request_id=162409288916780357236962&amp;utm_term=%E5%89%8D%E7%AB%AF%E5%92%8C%E5%90%8E%E7%AB%AF&amp;utm_medium=distribute.pc_aggpage_search_result.none-task-blog-2~aggregatepage~first_rank_v2~rank_aggregation-25-108713821.pc_agg_rank_aggregation","extra": "{\&quot;utm_medium\&quot;:\&quot;distribute.pc_aggpage_search_result.none-task-blog-2~aggregatepage~first_rank_v2~rank_aggregation-25-108713821.pc_agg_rank_aggregation\&quot;}","index": "24","strategy": "2~aggregatepage~first_rank_v2~rank_aggregation","biz_id": "0","ops_request_misc": "%257B%2522request%255Fid%2522%253A%2522162409288916780357236962%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D","request_id": "162409288916780357236962"}'
+                                   data-report-view='{"mod": "popu_876","spm": "3001.4430","dest": "https://blog.csdn.net/xiaoxijing/article/details/108713821?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522162409288916780357236962%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D&amp;request_id=162409288916780357236962&amp;utm_term=%E5%89%8D%E7%AB%AF%E5%92%8C%E5%90%8E%E7%AB%AF&amp;utm_medium=distribute.pc_aggpage_search_result.none-task-blog-2~aggregatepage~first_rank_v2~rank_aggregation-25-108713821.pc_agg_rank_aggregation","extra": "{\&quot;utm_medium\&quot;:\&quot;distribute.pc_aggpage_search_result.none-task-blog-2~aggregatepage~first_rank_v2~rank_aggregation-25-108713821.pc_agg_rank_aggregation\&quot;}","index": "24","strategy": "2~aggregatepage~first_rank_v2~rank_aggregation","biz_id": "0","ops_request_misc": "%257B%2522request%255Fid%2522%253A%2522162409288916780357236962%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D","request_id": "162409288916780357236962"}'
+                                   data-report-query="utm_medium=distribute.pc_aggpage_search_result.none-task-blog-2~aggregatepage~first_rank_v2~rank_aggregation-25-108713821.pc_agg_rank_aggregation&utm_term=%E5%89%8D%E7%AB%AF%E5%92%8C%E5%90%8E%E7%AB%AF&spm=3001.4430"
+                                   target="_blank" class="blog-title">
+                                    <h2>三方面详细说明，Web<em>前端和后端</em>的区别</h2>
+                                </a>
+                                <span class="update-time">2020-09-21 16:52:57</span>
+                            </div>
+                            <div class="description">
+                                <div class="desc-detail digest">
+                                    最近看到很多人问，Web<em>前端和后端</em>的区别是什么？如何区分？从<em>前端和后端</em>两者工作内容和负责项目是完全不同。后端：入门难深入更难，枯燥乏味，看业务逻辑代码；前端：入门简单先易后难，能看到自己做出来的展示界面...
+                                </div>
+                                <div class="desc-detail content">
+                                    <div class='article_content'>
+                                        <pre class="preclass"></pre>
+                                    </div>
+                                    <div class="hide-content"><a href="javascript:;">收起 <img
+                                                    src="https://csdnimg.cn/release/aggregate/img/arrow-down@2x.png" alt=""></a></div>
+                                </div>
+                            </div>
+
+                        </li>
+                        <li data-page="1">
+                            <div class="blog-title">
+                                <a href="https://blog.csdn.net/cumichun6193/article/details/108098151"
+                                   data-report-click='{"mod": "popu_876","spm": "3001.4430","dest": "https://blog.csdn.net/cumichun6193/article/details/108098151?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522162409288916780357236962%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D&amp;request_id=162409288916780357236962&amp;utm_term=%E5%89%8D%E7%AB%AF%E5%92%8C%E5%90%8E%E7%AB%AF&amp;utm_medium=distribute.pc_aggpage_search_result.none-task-blog-2~aggregatepage~first_rank_v2~rank_aggregation-26-108098151.pc_agg_rank_aggregation","extra": "{\&quot;utm_medium\&quot;:\&quot;distribute.pc_aggpage_search_result.none-task-blog-2~aggregatepage~first_rank_v2~rank_aggregation-26-108098151.pc_agg_rank_aggregation\&quot;}","index": "25","strategy": "2~aggregatepage~first_rank_v2~rank_aggregation","biz_id": "0","ops_request_misc": "%257B%2522request%255Fid%2522%253A%2522162409288916780357236962%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D","request_id": "162409288916780357236962"}'
+                                   data-report-view='{"mod": "popu_876","spm": "3001.4430","dest": "https://blog.csdn.net/cumichun6193/article/details/108098151?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522162409288916780357236962%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D&amp;request_id=162409288916780357236962&amp;utm_term=%E5%89%8D%E7%AB%AF%E5%92%8C%E5%90%8E%E7%AB%AF&amp;utm_medium=distribute.pc_aggpage_search_result.none-task-blog-2~aggregatepage~first_rank_v2~rank_aggregation-26-108098151.pc_agg_rank_aggregation","extra": "{\&quot;utm_medium\&quot;:\&quot;distribute.pc_aggpage_search_result.none-task-blog-2~aggregatepage~first_rank_v2~rank_aggregation-26-108098151.pc_agg_rank_aggregation\&quot;}","index": "25","strategy": "2~aggregatepage~first_rank_v2~rank_aggregation","biz_id": "0","ops_request_misc": "%257B%2522request%255Fid%2522%253A%2522162409288916780357236962%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D","request_id": "162409288916780357236962"}'
+                                   data-report-query="utm_medium=distribute.pc_aggpage_search_result.none-task-blog-2~aggregatepage~first_rank_v2~rank_aggregation-26-108098151.pc_agg_rank_aggregation&utm_term=%E5%89%8D%E7%AB%AF%E5%92%8C%E5%90%8E%E7%AB%AF&spm=3001.4430"
+                                   target="_blank" class="blog-title">
+                                    <h2><em>前端和后端</em>开发人员比例_前端开发人员vs后端开发人员–实践中的定义和含义</h2>
+                                </a>
+                                    <span class="tags">
+                                            <i class="c1">千次阅读</i>
+                                    </span>
+                                <span class="update-time">2020-08-17 12:55:04</span>
+                            </div>
+                            <div class="description">
+                                <div class="desc-detail digest">
+                                    <em>前端和后端</em>开发人员比例Websites and applications are complex! Buttons and images are just the tip of the iceberg. With this kind of complexity, you need people to manage it, but which parts are the ...
+                                </div>
+                                <div class="desc-detail content">
+                                    <div class='article_content'>
+                                        <pre class="preclass"></pre>
+                                    </div>
+                                    <div class="hide-content"><a href="javascript:;">收起 <img
+                                                    src="https://csdnimg.cn/release/aggregate/img/arrow-down@2x.png" alt=""></a></div>
+                                </div>
+                            </div>
+                                <div class="tags-view">
+                                    <img src='https://csdnimg.cn/release/aggregate/img/tags.png' alt="">
+                                        <a href="../tags/MtTaEg0sMTA0OTctYmxvZwO0O0OO0O0O.html">编程语言   </a>
+                                        <a href="../tags/OtDaQg2sNzExLWJsb2cO0O0O.html">javascript   </a>
+                                        <a href="../tags/NtTaIg5sMzYyLWJsb2cO0O0O.html">java   </a>
+                                        <a href="../tags/Mtzacg0sMzg3Ny1ibG9n.html">vue   </a>
+                                        <a href="../tags/MtTaEg0sMDI5OTYtYmxvZwO0O0OO0O0O.html">web   </a>
+                                </div>
+
+                        </li>
+                        <li data-page="1">
+                            <div class="blog-title">
+                                <a href="https://blog.csdn.net/BOM485480/article/details/108680311"
+                                   data-report-click='{"mod": "popu_876","spm": "3001.4430","dest": "https://blog.csdn.net/BOM485480/article/details/108680311?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522162409288916780357236962%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D&amp;request_id=162409288916780357236962&amp;utm_term=%E5%89%8D%E7%AB%AF%E5%92%8C%E5%90%8E%E7%AB%AF&amp;utm_medium=distribute.pc_aggpage_search_result.none-task-blog-2~aggregatepage~first_rank_v2~rank_aggregation-27-108680311.pc_agg_rank_aggregation","extra": "{\&quot;utm_medium\&quot;:\&quot;distribute.pc_aggpage_search_result.none-task-blog-2~aggregatepage~first_rank_v2~rank_aggregation-27-108680311.pc_agg_rank_aggregation\&quot;}","index": "26","strategy": "2~aggregatepage~first_rank_v2~rank_aggregation","biz_id": "0","ops_request_misc": "%257B%2522request%255Fid%2522%253A%2522162409288916780357236962%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D","request_id": "162409288916780357236962"}'
+                                   data-report-view='{"mod": "popu_876","spm": "3001.4430","dest": "https://blog.csdn.net/BOM485480/article/details/108680311?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522162409288916780357236962%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D&amp;request_id=162409288916780357236962&amp;utm_term=%E5%89%8D%E7%AB%AF%E5%92%8C%E5%90%8E%E7%AB%AF&amp;utm_medium=distribute.pc_aggpage_search_result.none-task-blog-2~aggregatepage~first_rank_v2~rank_aggregation-27-108680311.pc_agg_rank_aggregation","extra": "{\&quot;utm_medium\&quot;:\&quot;distribute.pc_aggpage_search_result.none-task-blog-2~aggregatepage~first_rank_v2~rank_aggregation-27-108680311.pc_agg_rank_aggregation\&quot;}","index": "26","strategy": "2~aggregatepage~first_rank_v2~rank_aggregation","biz_id": "0","ops_request_misc": "%257B%2522request%255Fid%2522%253A%2522162409288916780357236962%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D","request_id": "162409288916780357236962"}'
+                                   data-report-query="utm_medium=distribute.pc_aggpage_search_result.none-task-blog-2~aggregatepage~first_rank_v2~rank_aggregation-27-108680311.pc_agg_rank_aggregation&utm_term=%E5%89%8D%E7%AB%AF%E5%92%8C%E5%90%8E%E7%AB%AF&spm=3001.4430"
+                                   target="_blank" class="blog-title">
+                                    <h2>Web<em>前端和后端</em>的区别是什么？如何区分？</h2>
+                                </a>
+                                <span class="update-time">2020-09-19 14:01:36</span>
+                            </div>
+                            <div class="description">
+                                <div class="desc-detail digest">
+                                    Web<em>前端和后端</em>的区别是什么？如何区分？从<em>前端和后端</em>两者工作内容和负责项目是完全不同。后端：入门难深入更难，枯燥乏味，看业务逻辑代码；前端：入门简单先易后难，能看到自己做出来的展示界面，有成就感。  Web...
+                                </div>
+                                <div class="desc-detail content">
+                                    <div class='article_content'>
+                                        <pre class="preclass"></pre>
+                                    </div>
+                                    <div class="hide-content"><a href="javascript:;">收起 <img
+                                                    src="https://csdnimg.cn/release/aggregate/img/arrow-down@2x.png" alt=""></a></div>
+                                </div>
+                            </div>
+                                <div class="tags-view">
+                                    <img src='https://csdnimg.cn/release/aggregate/img/tags.png' alt="">
+                                        <a href="../tags/MtTaEg0sMTA0OTctYmxvZwO0O0OO0O0O.html">编程语言   </a>
+                                        <a href="../tags/MtTaEg0sMDI5OTYtYmxvZwO0O0OO0O0O.html">web   </a>
+                                        <a href="../tags/MtTaEg0sMzgzMjItYmxvZwO0O0OO0O0O.html">css   </a>
+                                        <a href="../tags/OtDaQg2sNzExLWJsb2cO0O0O.html">JavaScript   </a>
+                                </div>
+
+                        </li>
+                        <li data-page="1">
+                            <div class="blog-title">
+                                <a href="https://download.csdn.net/download/qq_38183446/10215920"
+                                   data-report-click='{"mod": "popu_876","spm": "3001.4430","dest": "https://download.csdn.net/download/qq_38183446/10215920?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522162409288916780357236962%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D&amp;request_id=162409288916780357236962&amp;utm_term=%E5%89%8D%E7%AB%AF%E5%92%8C%E5%90%8E%E7%AB%AF&amp;utm_medium=distribute.pc_aggpage_search_result.none-task-download-2~aggregatepage~first_rank_v2~rank_aggregation-28-10215920.pc_agg_rank_aggregation","extra": "{\&quot;utm_medium\&quot;:\&quot;distribute.pc_aggpage_search_result.none-task-download-2~aggregatepage~first_rank_v2~rank_aggregation-28-10215920.pc_agg_rank_aggregation\&quot;}","index": "27","strategy": "2~aggregatepage~first_rank_v2~rank_aggregation","biz_id": "1","ops_request_misc": "%257B%2522request%255Fid%2522%253A%2522162409288916780357236962%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D","request_id": "162409288916780357236962"}'
+                                   data-report-view='{"mod": "popu_876","spm": "3001.4430","dest": "https://download.csdn.net/download/qq_38183446/10215920?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522162409288916780357236962%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D&amp;request_id=162409288916780357236962&amp;utm_term=%E5%89%8D%E7%AB%AF%E5%92%8C%E5%90%8E%E7%AB%AF&amp;utm_medium=distribute.pc_aggpage_search_result.none-task-download-2~aggregatepage~first_rank_v2~rank_aggregation-28-10215920.pc_agg_rank_aggregation","extra": "{\&quot;utm_medium\&quot;:\&quot;distribute.pc_aggpage_search_result.none-task-download-2~aggregatepage~first_rank_v2~rank_aggregation-28-10215920.pc_agg_rank_aggregation\&quot;}","index": "27","strategy": "2~aggregatepage~first_rank_v2~rank_aggregation","biz_id": "1","ops_request_misc": "%257B%2522request%255Fid%2522%253A%2522162409288916780357236962%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D","request_id": "162409288916780357236962"}'
+                                   data-report-query="utm_medium=distribute.pc_aggpage_search_result.none-task-download-2~aggregatepage~first_rank_v2~rank_aggregation-28-10215920.pc_agg_rank_aggregation&utm_term=%E5%89%8D%E7%AB%AF%E5%92%8C%E5%90%8E%E7%AB%AF&spm=3001.4430"
+                                   target="_blank" class="blog-title">
+                                    <h2>基于ThinkPHP框架写的一个小Demo，包括<em>前端和后端</em>。</h2>
+                                </a>
+                                <span class="update-time">2018-01-20 19:56:27</span>
+                            </div>
+                            <div class="description">
+                                <div class="desc-detail digest">
+                                    基于ThinkPHP框架写的一个小Demo，包括<em>前端和后端</em>。非常适合新手了解ThinkPHP框架。
+                                </div>
+                                <div class="desc-detail content">
+                                    <div class='article_content'>
+                                        <pre class="preclass"></pre>
+                                    </div>
+                                    <div class="hide-content"><a href="javascript:;">收起 <img
+                                                    src="https://csdnimg.cn/release/aggregate/img/arrow-down@2x.png" alt=""></a></div>
+                                </div>
+                            </div>
+
+                        </li>
+                </ul>
+            </div>
+
+            <div class="tab-bd wrap-download">
+                <div class="qa-list"></div>
+                <div class="qa-no-data hide">
+                    <img src="https://csdnimg.cn/release/blogv2/dist/pc/img/monkeyWhite.png" alt="">
+                    <p style="color: #6b6b6b;font-size: 16px;font-weight: bold;letter-spacing: 2px;">空空如也</p>
+                </div>
+            </div>
+
+            <div class="tab-bd wrap-qa">
+                <div class="qa-list"></div>
+                <div class="qa-no-data hide">
+                    <img src="https://csdnimg.cn/release/blogv2/dist/pc/img/monkeyWhite.png" alt="">
+                    <p style="color: #6b6b6b;font-size: 16px;font-weight: bold;letter-spacing: 2px;">空空如也</p>
+                </div>
+            </div>
+
+            <div class="wrap-pagination">
+                <div class="ftl_page">
+
+ <script>  
+    console.log("pageNum", `1`)
+    console.log("pages", `20`)
+    console.log("toalNum", `400`)
+</script>
+
+ <div class="search-result-pagination"> 
+         <div class="csdn-pagination hide-set">
+            <span class="page-nav">
+                    <a class="disable iconfont icon-fanhui btn btn-xs btn-default btn-prev checklogin" href="javascript:;"></a> 
+
+
+                    
+                        <a href="?platform=pc&page=1&pageSize=20"  page_num="1" class="btn btn-xs btn-default active checklogin">1</a> 
+                    
+                    
+                        <a href="?platform=pc&page=2&pageSize=20"  page_num="2" class="btn btn-xs btn-default checklogin">2</a> 
+                    
+                    
+                        <a href="?platform=pc&page=3&pageSize=20"  page_num="3" class="btn btn-xs btn-default checklogin">3</a> 
+                    
+                    
+                        <a href="?platform=pc&page=4&pageSize=20"  page_num="4" class="btn btn-xs btn-default checklogin">4</a> 
+                    
+                    
+                        <a href="?platform=pc&page=5&pageSize=20"  page_num="5" class="btn btn-xs btn-default checklogin">5</a> 
+                    
+                        <span class="ellipsis">...</span> 
+                    
+                        <a href="?platform=pc&page=20&pageSize=20"  page_num="20" class="btn btn-xs btn-default checklogin">20</a> 
+                    
+
+                    <a href="?platform=pc&page=2&pageSize=20" page_num="2" class="iconfont icon-fanhui btn btn-xs btn-default btn-next checklogin"></a>
+            </span>
+        </div>
+   
+</div>                </div>
+                <div class="ant_page hide" style="padding-top: 10px;background-color: #fff;"></div>
+            </div>
+
+        </div>
+    </div>
+    <div class="con-r-tag">
+        <div class="collect-and-boutique">
+            <div>
+                <span>收藏数</span>
+                    <span>39,253</span>
+            </div>
+            <div>
+                <span>精华内容</span>
+                    <span>15,701</span>
+            </div>
+        </div>
+        <div class="hot-tags">
+            <div>热门标签</div>
+            <ul class="clearfloat">
+                    <li>
+                        <a href="https://www.csdn.net/tags/MtTaEg0sMzc5NTAtYmxvZwO0O0OO0O0O.html"
+                           target="_blank"
+                           data-report-click='{"spm":"3001.4431","dest":"https://www.csdn.net/tags/MtTaEg0sMzc5NTAtYmxvZwO0O0OO0O0O.html"}'
+                           data-report-query="spm=3001.4431">
+                            前端后端
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.csdn.net/tags/MtjaYg5sNjM2Mi1ibG9n.html"
+                           target="_blank"
+                           data-report-click='{"spm":"3001.4431","dest":"https://www.csdn.net/tags/MtjaYg5sNjM2Mi1ibG9n.html"}'
+                           data-report-query="spm=3001.4431">
+                            前端和后端的区别
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.csdn.net/tags/MtTaYgzsODk5MTctYmxvZwO0O0OO0O0O.html"
+                           target="_blank"
+                           data-report-click='{"spm":"3001.4431","dest":"https://www.csdn.net/tags/MtTaYgzsODk5MTctYmxvZwO0O0OO0O0O.html"}'
+                           data-report-query="spm=3001.4431">
+                            前端后端哪个好
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.csdn.net/tags/MtTaYgysNDgyNzEtYmxvZwO0O0OO0O0O.html"
+                           target="_blank"
+                           data-report-click='{"spm":"3001.4431","dest":"https://www.csdn.net/tags/MtTaYgysNDgyNzEtYmxvZwO0O0OO0O0O.html"}'
+                           data-report-query="spm=3001.4431">
+                            前端和后端哪个好
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.csdn.net/tags/Mtjacg3sOTU4Ny1ibG9n.html"
+                           target="_blank"
+                           data-report-click='{"spm":"3001.4431","dest":"https://www.csdn.net/tags/Mtjacg3sOTU4Ny1ibG9n.html"}'
+                           data-report-query="spm=3001.4431">
+                            javaweb是前端还是后端
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.csdn.net/tags/MtjaYg5sNTYxNi1ibG9n.html"
+                           target="_blank"
+                           data-report-click='{"spm":"3001.4431","dest":"https://www.csdn.net/tags/MtjaYg5sNTYxNi1ibG9n.html"}'
+                           data-report-query="spm=3001.4431">
+                            前端调用后端接口
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.csdn.net/tags/MtTaYgysNDY3OTEtYmxvZwO0O0OO0O0O.html"
+                           target="_blank"
+                           data-report-click='{"spm":"3001.4431","dest":"https://www.csdn.net/tags/MtTaYgysNDY3OTEtYmxvZwO0O0OO0O0O.html"}'
+                           data-report-query="spm=3001.4431">
+                            前端获取后端数据
+                        </a>
+                    </li>
+                    <li>
+                        <a href=""
+                           target="_blank"
+                           data-report-click='{"spm":"3001.4431","dest":""}'
+                           data-report-query="spm=3001.4431">
+                            后端转前端
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.csdn.net/tags/NtzaUgzsNzEyOC1ibG9n.html"
+                           target="_blank"
+                           data-report-click='{"spm":"3001.4431","dest":"https://www.csdn.net/tags/NtzaUgzsNzEyOC1ibG9n.html"}'
+                           data-report-query="spm=3001.4431">
+                            前端后端数据库
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.csdn.net/tags/MtTaEg0sMTc3MjAtYmxvZwO0O0OO0O0O.html"
+                           target="_blank"
+                           data-report-click='{"spm":"3001.4431","dest":"https://www.csdn.net/tags/MtTaEg0sMTc3MjAtYmxvZwO0O0OO0O0O.html"}'
+                           data-report-query="spm=3001.4431">
+                            php是前端还是后端
+                        </a>
+                    </li>
+            </ul>
+        </div>
+
+        <div class="hot-brand hide" style="margin-top: 8px;background-color: #fff;"></div>
+
+        <div class="hot-tags keywords">
+            关键字：<h1>前端和后端 </h1>
+        </div>
+
+
+
+        <div class="bottom-part">
+            <div class="persion_article" style="width:300px;margin-top: 8px;"></div>
+        </div>
+        <script src="https://g.csdnimg.cn/common/csdn-footer/csdn-footer.js" data-isfootertrack="false"></script>
+    </div>
+</div>
+
+<script id="tpl_qa" type="text/html">
+    <div class="qa-list">
+        {{each items}}
+        <div class="qa-item">
+            <div class="qa-item-hd">
+                <a href="{{$value.ext.url_location}}"
+                   data-report-click='{"mod":"{{@$value.report_data.data.mod}}","spm":"{{@$value.spm}}","dest":"{{$value.ext.url_location}}","index":"{{@$value.report_data.data.index}}","strategy":"{{@$value.report_data.data.strategy}}","biz_id":"{{@$value.report_data.data.biz_id}}","ops_request_misc":"{{@$value.report_data.data.ops_request_misc}}","request_id":"{{@$value.report_data.data.request_id}}"}'
+                   data-report-view='{"mod":"{{@$value.report_data.data.mod}}","spm":"{{@$value.spm}}","dest":"{{$value.ext.url_location}}","index":"{{@$value.report_data.data.index}}","strategy":"{{@$value.report_data.data.strategy}}","biz_id":"{{@$value.report_data.data.biz_id}}","ops_request_misc":"{{@$value.report_data.data.ops_request_misc}}","request_id":"{{@$value.report_data.data.request_id}}"}'
+                   class="list-title" target="_blank">{{@$value.ext.title}}</a>
+            </div>
+            <div class="qa-item-bd">
+                <div class="detail">{{$value.ext.description}}</div>
+                {{if $value.ext.answer && $value.ext.answer != ''}}
+                <div class="answer">
+                    <pre><code>{{$value.ext.answer}}</code></pre>
+                </div>
+                {{/if}}
+            </div>
+            <div class="qa-item-ft">
+                {{if $value.ext.create_time != ''}}
+                <span class="qa-time">{{$value.ext.create_time|parseTime}}</span>
+                {{/if}}
+                {{if $value.ext.nickname != ''}}
+                <a href="https://me.csdn.net/{{$value.ext.author}}" target="_blank" class="qa-nickname">{{$value.ext.nickname}}</a>
+                {{/if}}
+                {{if $value.ext.view != 0}}
+                <span class="qa-view"><i class="icon icon-view"></i>{{$value.ext.view|parseN}}</span>
+                {{/if}}
+                {{if $value.ext.comment != 0}}
+                <span class="qa-comment"><i class="icon icon-comment"></i>{{$value.ext.comment|parseN}}</span>
+                {{/if}}
+                {{if $value.ext.digg != 0}}
+                <span class="qa-dig"><i class="icon icon-dig"></i>{{$value.ext.digg|parseN}}</span>
+                {{/if}}
+
+                {{each $value.ext.tags tag}}
+                <span class="qa-tags">
+                    {{if tag != ''}}
+                    <i class="qa-tag">{{tag}}</i>
+                    {{/if}}
+                </span>
+                {{/each}}
+            </div>
+        </div>
+        {{/each}}
+    </div>
+</script>
+
+<script id="tpl_page" type="text/html">
+    {{set pageNum = data.pageNum}}
+    {{set pages = data.pages}}
+    {{set pageSize = data.pageSize}}
+    {{set toalNum = data.totalNum}}
+    {{set pagesList = data.pageList}}
+
+    <div class="search-result-pagination">
+        {{if toalNum > 0}}
+        <div class="csdn-pagination hide-set">
+            <span class="page-nav">
+                {{if pageNum == 1}}
+                    <a class="disable iconfont icon-fanhui btn btn-xs btn-default btn-prev checklogin"
+                       href="javascript:;"></a>
+                {{/if}}
+                {{if pageNum > 1}}
+                    <a href="javascript:;" page_num="{{pageNum - 1}}"
+                       class="iconfont icon-fanhui btn btn-xs btn-default btn-prev checklogin"></a>
+                 {{/if}}
+
+
+                {{each pagesList pages pages_index}}
+                    {{if pages_index == 0 && pages > 1}}
+                        <a href="javascript:;" page_num="1"
+                           class="btn btn_normal btn-xs btn-default checklogin">1</a>
+                        {{if pageNum != 4}}
+                            <span class="ellipsis">...</span>
+                        {{/if}}
+                    {{/if}}
+
+
+                    {{if pages == pageNum}}
+                        <a href="javascript:;" page_num="{{pages}}"
+                           class="btn btn_normal btn-xs btn-default active checklogin">{{pages}}</a>
+                    {{else}}
+                        <a href="javascript:;" page_num="{{pages}}"
+                           class="btn btn_normal btn-xs btn-default checklogin">{{pages}}</a>
+                    {{/if}}
+
+                    {{set curPageNext=pages_index + 1}}
+                    {{set pl = pagesList[curPageNext]}}
+                    {{set ps = pages + 1}}
+                    {{if pl && ps < pl }}
+                        <span class="ellipsis">...</span>
+                    {{/if}}
+
+                {{/each}}
+
+                 {{if pageNum < 20}}
+                    <a href="javascript:;" page_num="{{pageNum + 1}}"
+                       class="iconfont icon-fanhui btn btn-xs btn-default btn-next checklogin"></a>
+                {{else}}
+                    <a href="javascript:;"
+                       class="disable iconfont icon-fanhui btn btn-xs btn-default btn-next checklogin"></a>
+                {{/if}}
+            </span>
+        </div>
+        {{/if}}
+
+    </div>
+
+</script>
+
+
+<script src='https://csdnimg.cn/release/aggregate/js/common-773ba0471c.min.js' type="text/javascript"></script>
+<script src='https://csdnimg.cn/release/aggregate/js/pc-df555339c0.min.js' type="text/javascript"></script>
+<script src='https://csdnimg.cn/release/aggregate/js/libs/template-web.js' type="text/javascript"></script>
+
+<script type="text/javascript">
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+<script>
+    (function () {
+            var el = document.createElement("script");
+            el.src = "https://s3a.pstatp.com/toutiao/push.js?310416c564ee613927023910da70cee87ab5225d389206dcae94ee9057000d80c50ae680cb4ab776e94401444c404d285b8b644eda8af801d0911a0d00026e7f";
+            el.id = "ttzz";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(el, s);
+        }
+    )(window)
+</script>
+
+<script type="text/javascript">
+    (function ($) {
+
+        function z(s) {
+            return s < 10 ? '0' + s : s;
+        }
+
+        function dwd(data, spm) {
+            if (!data || !data.items.length) return;
+            for (let i = 0; i < data.items.length; i++) {
+                let item = data.items[i];
+                item.ext.tags = item.ext.tags.split(",");
+                item.spm = spm;
+            }
+            return data;
+        }
+
+        template.defaults.imports.parseN = function (n) {
+            return (n > 9999 ? (Math.floor(n / 10000) + '万+') : n);
+        };
+
+        template.defaults.imports.parseTime = function (n) {
+            let d = new Date(parseInt(n));
+            let y = d.getFullYear();
+            let m = d.getMonth() + 1;
+            let dd = d.getDate();
+            return y + '-' + z(m) + '-' + z(dd);
+        };
+        var __agg_pc__ = {
+            isGetDownloadList: false,
+            isGetQaList: false,
+            isAjax: true,
+            initIframeBlinkHeight: function () {
+                let winHeight = window.innerHeight;
+                let isHasBaike = $(".baike-view").size();
+                let other = isHasBaike ? 280 : 140;
+                let res = Math.floor(winHeight - other);
+                $("#blink").css("height", res + 'px');
+            },
+            init: function () {
+                //this.initIframeBlinkHeight();
+                this.events();
+                //this.getQAList();
+                //加载右侧广告
+                this.getBrandDataById(528, function (res) {
+                    $(".hot-brand").removeClass("hide").html(res.data.con);
+                });
+                //加载Top广告
+                this.getBrandDataById(529, function (res) {
+                    $(".top-banner").removeClass("hide").html(res.data.con);
+                });
+            },
+            events: function () {
+                var self = this;
+                let tab_hd = $(".ag-tab-bar").find(".tab-hd-item");
+                let tab_bd = $(".content-list").find(".tab-bd");
+                tab_hd.on('click', function () {
+                    let that = $(this);
+                    let type = that.attr('type');
+
+                    that.addClass("active").siblings().removeClass("active");
+
+                    if (type === 'hot') {
+                        $(".ag-tb-rt").show();
+                        $(".bottom-part").show();
+                        $(".ftl_page").show().siblings("div").hide();
+                    } else if (type === 'blink') {
+                        $("#blink").attr('src', 'https://blink.csdn.net/frame');
+                        __agg_pc__.initIframeBlinkHeight();
+                        $(".ag-tb-rt").hide();
+                        $(".bottom-part").hide();
+                        $(".ftl_page").hide();
+                        $(".ant_page").hide();
+                    } else if (type === 'download') {
+                        if (!self.isGetDownloadList) {
+                            self.isGetDownloadList = true;
+                            $(".wrap-download").html('');
+                            self.getDownloadList(1);
+                        }
+                        $(".ag-tb-rt").show();
+                        $(".bottom-part").show();
+                        $(".ant_page").show().siblings("div").hide();
+                    } else if (type === 'qa') {
+                        if (!self.isGetQaList) {
+                            self.isGetQaList = true;
+                            $(".wrap-qa").html('');
+                            self.getQAList(1);
+                        }
+                        $(".ag-tb-rt").show();
+                        $(".bottom-part").show();
+                        $(".ant_page").show().siblings("div").hide();
+                    }
+                    tab_bd.eq(that.index()).addClass("active").siblings("div.tab-bd").removeClass("active");
+                })
+
+                let btn_link = $(".ag-tab-bar").find(".icon-link");
+                btn_link.on('click', function () {
+                    window.open('https://so.csdn.net/search?mode=1&q=' + mod_keywords + '&spm=1000.2123.3001.5142', '_self');
+                });
+
+                let btn_ask = $(".btn-ask");
+                btn_ask.on('click', function () {
+                    let UserName = self.getCookieByKey("UserName");
+                    if (UserName != null) {
+                        window.open('https://ask.csdn.net/?word=' + mod_keywords, '_blank');
+                    } else {
+                        window.csdn.loginBox.show();
+                    }
+                })
+
+
+                $(".right-special-column .rsc-subscible").on('click', function () {
+                    let userName = getCookie('UserName')
+                    if (!userName) {
+                        window.csdn.loginBox.show();
+                        return
+                    }
+
+                    let title = $(this).prev().text();
+                    // 收藏
+                    var params = {
+                        'url': window.location.href,         // 访问来源地址 必传
+                        'title': title,      // 访问收藏标题 必传ß
+                        'description': '', //访问收藏描述
+                        'author': userName,
+                        'source_id': 1,           // 访问来源项目标识id 必传
+                        'source': 'GATHER'
+                    };
+                    window.csdn.collectionBox.show(params);
+                })
+
+                $(".right-special-column").on('click', 'img', function () {
+                    var that = $(this);
+                    var url = that.attr('data-url');
+                    window.open(url, '_blank');
+                });
+
+                $(".right-special-column").on('click', 'span.rsc-name', function () {
+                    var that = $(this);
+                    var url = that.attr('data-url');
+                    window.open(url, '_blank');
+                });
+
+            },
+            getCookieByKey: function (key) {
+                var cookie = '';
+                var cookieStr = document.cookie || cookie;
+                var cookieObj = {};
+                cookieStr.split(';').forEach(function (value) {
+                    var arr = value.split('=');
+                    cookieObj[$.trim(arr[0])] = $.trim(arr[1]);
+                })
+                return cookieObj[key] || null;
+            },
+            getBrandDataById: function (id, cb) {
+                //528右侧广告位， 529Top广告位
+                $.get('/get_ad_info?ad_id=' + id, function (res) {
+                    if (res.code == 200) {
+                        if (res.data && res.data.con && res.data.status) {
+                            cb(res);
+                        }
+                    } else {
+                        console.log(res.msg);
+                    }
+                })
+            },
+            bindTagEvent: function () {
+                $(".qa-list").on('click', 'i.qa-tag', function () {
+                    var that = $(this);
+                    var val = that.text();
+                    if (val) {
+                        window.open('https://so.csdn.net/so/search/s.do?q=' + val, '_blank');
+                    }
+                });
+
+                setTimeout(function () {
+                    window.csdn.report.viewCheck({'curl': location.href});
+                }, 500)
+            },
+            getQAList: function (pageIndex) {
+                let self = this;
+                //http://local.java.csdn.net:9090
+                $.ajax({
+                    url: '/gather/search_ask?platform=pc&p=' + pageIndex + '&query=' + mod_keywords,
+                    type: 'GET',
+                    success: function (res) {
+                        if (res.code == 200 && res.data.items.length) {
+                            self.isAjax = true;
+                            self.isGetQaList = false;
+                            var new_data = dwd(res.data, '3001.5561');
+                            var html = template("tpl_qa", new_data);
+                            $(".wrap-qa").html(html);
+                            self.bindTagEvent();
+                            self.createPagination(res);
+                        } else {
+                            $(".wrap-qa .qa-no-data").removeClass("hide");
+                        }
+                    },
+                    error: function (err) {
+                        $(".wrap-qa .qa-no-data").removeClass("hide");
+                    }
+                });
+            },
+            getDownloadList: function (pageIndex) {
+                let self = this;
+                //http://local.java.csdn.net:9090
+                $.ajax({
+                    url: '/gather/search_download?platform=pc&p=' + pageIndex + '&query=' + mod_keywords,
+                    type: 'GET',
+                    success: function (res) {
+                        if (res.code == 200 && res.data.items.length) {
+                            self.isAjax = true;
+                            self.isGetDownloadList = false;
+                            var new_data = dwd(res.data, '3001.5560');
+                            var html = template("tpl_qa", new_data);
+                            $(".wrap-download").html(html);
+                            self.bindTagEvent();
+                            self.createPagination(res);
+                        } else {
+                            $(".wrap-download .qa-no-data").removeClass("hide");
+                        }
+                    },
+                    error: function (err) {
+                        $(".wrap-download .qa-no-data").removeClass("hide");
+                    }
+                });
+            },
+            dealWithPageData: function (res) {
+                if (res && res.code == 200) {
+                    return {
+                        data: {
+                            pageNum: res.pageNum,
+                            pages: res.total_page,
+                            pageSize: res.page_size,
+                            totalNum: res.totalNum,
+                            pageList: res.page_list
+                        }
+                    };
+                }
+            },
+            createPagination: function (res) {
+                let self = this;
+                let tpl_data = this.dealWithPageData(res);
+                let tpl_page = template("tpl_page", tpl_data);
+                let ant_page = $(".wrap-pagination .ant_page");
+                let type = $(".tab-hd-item.active").attr('type');
+                ant_page.removeClass("hide").html(tpl_page);
+
+
+                //页码
+                $(".ant_page .btn_normal").on('click', function () {
+                    let that = $(this);
+                    let curr = that.attr('page_num');
+                    that.addClass("active").siblings("a").removeClass("active");
+                    if (curr && self.isAjax) {
+                        self.isAjax = false;
+                        if (type === 'download') {
+                            self.getDownloadList(curr);
+                        } else {
+                            self.getQAList(curr);
+                        }
+
+                    }
+                });
+
+                //上一页
+                $(".ant_page .btn-prev").on('click', function () {
+                    let curr = $(this).attr('page_num');
+                    if (curr && self.isAjax) {
+                        self.isAjax = false;
+                        if (type === 'download') {
+                            self.getDownloadList(curr);
+                        } else {
+                            self.getQAList(curr);
+                        }
+                    }
+                });
+
+                //下一页
+                $(".ant_page .btn-next").on('click', function () {
+                    let curr = $(this).attr('page_num');
+                    if (curr && self.isAjax) {
+                        self.isAjax = false;
+                        if (type === 'download') {
+                            self.getDownloadList(curr);
+                        } else {
+                            self.getQAList(curr);
+                        }
+                    }
+                });
+            }
+        }
+        __agg_pc__.init();
+
+    })($)
+</script>
+
+<script type="text/javascript">
+    $(function () {
+        function insertChromePluginLink() {
+            let count = 0;
+            let timer = null;
+            let link = $('<li class="plugin-link"><a href="https://plugin.csdn.net/?from=ju" target="_blank">Chrome插件</a></li>')
+            timer = setInterval(() => {
+                count++;
+                let menus = $("ul.toolbar-menus");
+                if (menus.length || count > 10) {
+                    clearInterval(timer);
+                }
+                if (!menus.has("li.plugin-link").length) {
+                    menus.append(link)
+                }
+            }, 100)
+        }
+
+        insertChromePluginLink();
+    })
+</script>
+
+<script type="text/javascript">
+    $(function () {
+        window.csdn.cse = null;
+        var _types = {
+            "codes_snippet": '',
+            "blog": "blog",
+            "discuss": "bbs",
+            "doc": "download",
+            "news": "geek",
+            "course": "edu",
+            "gitchat": "gitchat",
+            "ask": "ask"
+        }
+        var _csdnDataObj = {};
+        var _fn = {
+            _CFG: {
+                API_URL: '/api/v1/search',
+                js_insert_first: insert_baidu_first,
+                js_insert_count: insert_baidu_count,
+            },
+            uniqueBaidu: function (data) {
+                var csdnObjKeys = [];
+                var hasOwnProperty = Object.prototype.hasOwnProperty
+                for (var prop in _csdnDataObj) {
+                    if (hasOwnProperty.call(_csdnDataObj, prop)) csdnObjKeys.push(prop);
+                }
+                var csdnObjKeysLink = csdnObjKeys.map(function (v) {
+                    return v.split('?')[0]
+                });
+                return data.filter(function (v) {
+                    try {
+                        return csdnObjKeysLink.indexOf(v.linkUrl.split('?')[0]) < 0;
+                    } catch (e) {
+                        return false
+                    }
+                })
+            },
+            distinct: function (data) {
+                return data.filter(function (obj) {
+                    return !_csdnDataObj[obj['linkUrl']];
+                })
+            },
+            getIdByUrl: function (url) {
+                var id = ""
+                if (url == null || url == undefined || url == "") {
+                    return "";
+                }
+                if (url.indexOf("?") > -1) {
+                    url = url.substring(0, url.indexOf("?"));
+                }
+                if (url.endsWith("/")) {
+                    url = url.substring(0, url.length - 1);
+                }
+                id = url.substring(url.lastIndexOf("/") + 1);
+                if (id.length > 0) {
+                    var regEx = "[0-9]+";
+                    id.replace(regEx, function () {
+                        id = arguments[0];
+                    })
+                }
+                return id;
+            },
+            /**
+             * 数据按 每组sublength个分组
+             * @param {Array} array 源数据
+             * @param {Number} subLength 每组多少个
+             * @return {Boolean} isDom 如果是DOM,则每组为包裹Div
+             */
+            group: function (array, subLength, isDom) {
+                if (Object.prototype.toString.call(array) !== "[object Array]" || typeof subLength !== 'number') {
+                    return [];
+                }
+                var index = 0;
+                var newArray = [];
+
+                while (index < array.length) {
+                    newArray.push(array.slice(index, index += subLength));
+                }
+                if (isDom) {
+                    newArray = newArray.map(function (childrenNodes) {
+                        var $frag = $('<div></div>');
+                        childrenNodes.forEach(function (curNode) {
+                            $frag.append(curNode)
+                        })
+                        return $frag
+                    })
+                }
+                return newArray
+            },
+            baiduDOMHandle: function (pageNo, data, num, type, keyword) {
+                var $data = _fn.group(data, num);
+                var domArr = [];
+                var utm_term = encodeURI(keyword);//当前搜索关键字
+                var requestId = "baidu_js";
+                for (var i in data) {
+                    var item = data[i];
+                    if (item.dispUrl) {
+                        if (item.dispUrl.indexOf('gitchat') > -1) {
+                            item.requestId = requestId
+                            item.bizId = 101
+                            item.type = "gitchat"
+                        } else if (item.dispUrl.indexOf('blog') > -1) {
+                            item.flagIcon = 'flag_icon1'
+                            item.tip = '博客'
+                            item.requestId = requestId
+                            item.bizId = 102
+                            item.type = "blog"
+                        } else if (item.dispUrl.indexOf('download') > -1) {
+                            item.flagIcon = 'flag_icon6'
+                            item.tip = '下载'
+                            item.requestId = requestId
+                            item.bizId = 103
+                            item.type = "download"
+                        } else if (item.dispUrl.indexOf('bbs') > -1 || item.dispUrl.indexOf('forum') > -1) {
+                            item.flagIcon = 'flag_icon2'
+                            item.tip = '论坛'
+                            item.requestId = requestId
+                            item.bizId = 104
+                            item.type = "bbs"
+                        } else if (item.dispUrl.indexOf('edu') > -1) {
+                            item.flagIcon = 'flag_icon3'
+                            item.tip = '学院'
+                            item.requestId = requestId
+                            item.bizId = 105
+                            item.type = "course"
+                        } else if (item.dispUrl.indexOf('ask') > -1) {
+                            item.flagIcon = 'flag_icon4'
+                            item.tip = '问答'
+                            item.requestId = requestId
+                            item.bizId = 106
+                            item.type = "ask"
+                        } else {
+                            item.flagIcon = ''
+                            item.tip = ''
+                            item.requestId = ''
+                            item.bizId = -1
+                            item.type = ''
+                        }
+                    }
+
+                    var strategy = item['strategy'] ? item['strategy'].toUpperCase() : ("2~" + type + "~sobaiduweb~default")
+
+                    var utm_medium = 'distribute.pc_aggpage_search_result.none-task-' + item.type + '-' + strategy + "-" + i + "-" + _fn.getIdByUrl(item.linkUrl);
+                    var objs = {
+                        mod: "popu_876",
+                        dest: item.linkUrl.indexOf('?') > -1 ? item.linkUrl + '&utm_term=' + utm_term + '&utm_medium=' + utm_medium : item.linkUrl + '?utm_term=' + utm_term + '&utm_medium=' + utm_medium + '&spm=3001.4430',
+                        strategy: strategy,
+                        index: i + "",
+                        spm: "3001.4430",
+                        request_id: item['requestId'] + "",
+                        biz_id: item['bizId'] + "",
+                        ops_request_misc: ""
+                    }
+                    var jsonData = JSON.stringify(objs);
+                    var data_report_query = ' data-report-query=""';
+                    var data_report_click = ' data-report-click=' + jsonData;
+                    var data_report_view = ' data-report-view=' + jsonData;
+                    if (item.title) {
+                        var htmlStr = '<li class="baidu_list">\n' +
+                            '                    <div class="blog-title">\n' +
+                            '                         <a href="' + objs.dest + '"  ' + data_report_query + data_report_click + data_report_view + ' target="_blank" class="blog-title">\n' +
+                            '                                    <h2>' + item.title + '</h2>\n' +
+                            '                                </a>\n' +
+                            '                                <span class="update-time"></span>\n' +
+                            '                     </div>\n' +
+                            '                     <div class="description">\n' +
+                            '                          <div class="desc-detail digest">' + item.abstract + '</div>\n' +
+                            '                          <div class="desc-detail content">\n' +
+                            '                                <div class="article_content">\n' +
+                            '                                        <pre class="preclass">' + item.abstract + '</pre>\n' +
+                            '                                </div>\n' +
+                            '                          </div>\n' +
+                            '                      </div>\n' +
+                            '           </li>'
+                    }
+                    domArr.push($(htmlStr))
+                }
+                return {
+                    data: $data,
+                    dom: _fn.group(domArr, num, true)
+                };
+            },
+            /**
+             * 百度数据穿插
+             * @param {Array} baiduData 百度的数据集合
+             * @param {Number} num 每组多少个
+             * @param {Boolean} flag 排序方式，是否百度数据在前
+             */
+            insertFunc: function (pagerNum, baiduData, num, flag, type, keyword) {
+                // 处理后的百度数据
+                var $baiduData = _fn.baiduDOMHandle(pagerNum, baiduData, num, type, keyword)
+                var $csdnDl = $(".wrap-main-list li[data-page='" + pagerNum + "']").not('.baidu_list')
+                var getLastChild = function () {
+                    var searchList = $(".wrap-main-list li[data-page='" + pagerNum + "']")
+                    // 防止出现 678 12345, 应该为
+                    if (searchList.eq($csdnDl.length).length) {
+                        return searchList.eq(searchList.length - 1)
+                    } else {
+                        return $csdnDl.eq($csdnDl.length - 1)
+                    }
+                }
+                $baiduData.dom && $baiduData.dom.forEach(function (curBaiduGroup, index) {
+                    var insertDom = null;
+                    if (flag) { // 百度在前
+                        if (index === 0) {
+                            curBaiduGroup.children().insertBefore($csdnDl.eq(0));
+                        } else {
+                            insertDom = $csdnDl.length - num * index >= 0 ? $csdnDl.eq(index * num - 1) : getLastChild()
+                            curBaiduGroup.children().insertAfter(insertDom);
+                        }
+                    } else { // CSDN在前
+                        insertDom = $csdnDl.length - (index + 1) * num >= 0 ? $csdnDl.eq((index + 1) * num - 1) : getLastChild();
+                        curBaiduGroup.children().insertAfter(insertDom);
+                    }
+                })
+            },
+            baiduDataInsert: function (pageNo, data, keyword, type) {
+                type = type || "all";
+                data = data.filter(function (item) {
+                    if (!item.dispUrl) {
+                        item.dispUrl = ''
+                    }
+                    return item.dispUrl.indexOf('m.blog.csdn.net') === -1
+                });
+                _fn.insertFunc(pageNo, data, _fn._CFG.js_insert_count, _fn._CFG.js_insert_first, type, keyword)
+
+                setTimeout(function () {
+                    window.csdn && window.csdn.report && window.csdn.report.viewCheck()
+                }, 100)
+            },
+            loadBaiduData: function (keyword, domain, pageNo) {
+                if (isContainBaidu != "10") {
+                    _fn.setCsdnDataObj();
+                    console.log("baiduSearch: pageNo:" + pageNo + " keyword:" + keyword + " domain:" + domain);
+                    if (domain) {
+                        domain = _types[domain];
+                    } else {
+                        domain = null;
+                    }
+                    try {
+                        csdn.baiduSearch(keyword, function (data) {
+                            console.log(data);
+                            var newData = _fn.distinct(data);
+                            newData = _fn.uniqueBaidu(newData);
+                            _fn.baiduDataInsert(pageNo, newData, keyword, domain);
+                        }, domain, pageNo);
+                    } catch (e) {
+                        //console.log(e)
+                    }
+                }
+            },
+            setCsdnDataObj: function () {
+                $('.wrap-main-list .main-ul li').each(function () {
+                    var url = $(this).find('a.blog-title').attr('href')
+                    if (url) {
+                        _csdnDataObj[url] = true;
+                    }
+                    window.listUrls = _csdnDataObj;
+                });
+            }
+        }
+
+
+        let timer = null;
+        let count = 0;
+        timer = setInterval(function () {
+            count++;
+            let _cse = csdn.cse;
+            let _ssr = csdn.cse.setSearchRange;
+            if ((_cse && _ssr) || count > 10) {
+                clearInterval(timer)
+                _fn.loadBaiduData(mod_keywords, '', mod_page);
+            }
+        }, 1000)
+
+        window.fillColor = function (color) {
+            color = color || '#44ff8f'
+            $("li.baidu_list").each(function (index, item) {
+                $(item).css("background", color)
+            })
+        }
+
+
+    })
+
+</script>
+</body>
+</html>

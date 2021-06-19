@@ -1,866 +1,1625 @@
 ﻿
 
-
-  
-
-
-
 <!DOCTYPE html>
-<html class="no-js" lang="en-US" dir="ltr" data-gtm-container-id="UA-36116321-2">
+<html lang="zh-CN">
 <head>
-  
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-  <title>Mozilla Support</title>
-
-  
-  <link rel="apple-touch-icon" sizes="180x180" href="https://static-media-prod-cdn.itsre-sumo.mozilla.net/static/sumo/img/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="https://static-media-prod-cdn.itsre-sumo.mozilla.net/static/sumo/img/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="https://static-media-prod-cdn.itsre-sumo.mozilla.net/static/sumo/img/favicon-16x16.png">
-  <link rel="manifest" href="https://static-media-prod-cdn.itsre-sumo.mozilla.net/static/sumo/manifest.json">
-  <link rel="shortcut icon" href="https://static-media-prod-cdn.itsre-sumo.mozilla.net/static/sumo/img/favicon.ico">
-  <meta name="msapplication-config" content="https://static-media-prod-cdn.itsre-sumo.mozilla.net/static/sumo/browserconfig.xml">
-  <meta name="theme-color" content="#ffffff">
-
-
-  <link rel="search" type="application/opensearchdescription+xml" title="Mozilla Support" href="/en-US/search/xml"/>
-  
-
-  <link href="https://static-media-prod-cdn.itsre-sumo.mozilla.net/static/sumo/css/screen.845fb9a46a00.css" rel="stylesheet" type="text/css" />
-
-  
-
-  
-  <meta name="google-site-verification" content="2URA-2Y9BeYYUf8B2BSsBSVetJJS3TZwlXBOaMx2VfY" />
-  
-  <meta name="google-site-verification" content="ueNbCgS4e1JIAgLGwufm-jHaIcLXFLtFMmR_65S1Ag0" />
-  
-  <meta name="msvalidate.01" content="1659173DC94819093068B0ED7C51C527" />
-
-  
-
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-
-  
-    <link rel="canonical" href="https://support.mozilla.org/en-US/" />
-  
-
-  <!--[if lt IE 9]>
-  
-  <script src="https://static-media-prod-cdn.itsre-sumo.mozilla.net/static/sumo/js/libs/html5-shiv.js"></script>
-  <![endif]-->
-
-  <!--
-Read more about our custom configuration and use of Google Analytics here:
-https://bugzilla.mozilla.org/show_bug.cgi?id=1122305#c8
--->
-
-<!-- Google Tag Manager -->
-
-  <script type="text/javascript" src="https://static-media-prod-cdn.itsre-sumo.mozilla.net/static/build/gtm-snippet-min.98ca663fd559.js" charset="utf-8"></script>
-
-<!-- End Google Tag Manager -->
+    <meta charset="utf-8">
+    <link rel="canonical" href=""/>
+    <meta name="applicable-device" content="pc">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="renderer" content="webkit"/>
+    <meta name="force-rendering" content="webkit"/>
+    <meta name="csdn-baidu-search" content="{}">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="report" content='{"pid":"tags","spm":"1000.2123"}'>
+    <meta name="referrer" content="always">
+    <meta http-equiv="Cache-Control" content="no-siteapp"/>
+    <link rel="alternate" media="handheld" href="#"/>
+    <meta name="shenma-site-verification" content="5a59773ab8077d4a62bf469ab966a63b_1497598848">
+    <meta name="csdn-baidu-search" content=''>
+    <title>离散数学 - CSDN</title>
+    <link href="https://g.csdnimg.cn/static/logo/favicon32.ico" rel="shortcut icon" type="image/x-icon"/>
+    <meta name="keywords" content="离散数学">
+    <meta name="description" content="csdn已为您找到关于离散数学相关内容，包含离散数学相关文档代码介绍、相关教程视频课程，以及相关离散数学问答内容。为您解决当下相关问题，如果想了解更详细离散数学内容，请点击详情链接进行了解，或者注册账号与客服人员联系给您提供相关内容的帮助，以下是为您准备的相关内容。">
+    <meta name="csdnFooter" content='{"type": "3", "el": ".persion_article"}'>
+    <link rel="stylesheet" href="//csdnimg.cn/public/common/libs/bootstrap/css/bootstrap.css">
+    <script src="https://g.csdnimg.cn/??lib/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://g.csdnimg.cn/collection-box/2.0.4/collection-box.js"></script>
+    <script src="https://g.csdnimg.cn/login-box/1.1.4/login-box.js" type="text/javascript"></script>
+    <script>
+        window.csdn = window.csdn ? window.csdn : {};
+        window.csdn.toolbarIsBlack = false;
+    </script>
+    <script src="//g.csdnimg.cn/fixed-sidebar/1.1.6/fixed-sidebar.js" type="text/javascript"></script>
+    <script src="//g.csdnimg.cn/common/csdn-report/report.js" type="text/javascript"></script>
+    <script src="//g.csdnimg.cn/baidu-search/1.0.9/baidu-search.js" type="text/javascript"></script>
+    <style>
+        .MathJax, .MathJax_Message, .MathJax_Preview {
+            display: none
+        }
+    </style>
 </head>
+<body>
+<link rel="stylesheet" href="https://csdnimg.cn/public/common/toolbar/content_toolbar_css/content_toolbar.css">
+<script id="toolbar-tpl-scriptId" src="https://g.csdnimg.cn/common/csdn-toolbar/csdn-toolbar.js" type="text/javascript">
+</script>
 
-<body class="html-ltr logged-out responsive  en-US"
-      data-readonly="false"
-      data-usernames-api="/en-US/users/api/usernames"
-      data-static-url="https://static-media-prod-cdn.itsre-sumo.mozilla.net/static/"
-      data-media-url="https://user-media-prod-cdn.itsre-sumo.mozilla.net/"
-      
-        data-survey-gizmos="[]"
-      
-      
-      data-waffle-refresh-survey="true"
->
+<link rel="stylesheet" href='https://csdnimg.cn/release/aggregate/css/pc-949af63466.min.css'>
+<link rel="stylesheet" href='https://csdnimg.cn/release/aggregate/css/pc_common-c5dae373c3.min.css'>
+<style type="text/css">
+    .qa-item .qa-item-ft .icon {
+        display: inline-block;
+        width: 16px;
+        height: 16px;
+        vertical-align: sub;
+        margin-right: 6px;
+        background-repeat: no-repeat;
+        background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABgCAYAAACtxXToAAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAQKADAAQAAAABAAAAYAAAAACHkG20AAAPT0lEQVR4Ae1cfYxU1RW/583MsghlAwIqEm1VqB9VQLA1JTQgpBTLAgvsNsIqHzs7a9I/TCVSVGwxpAjWUmvSpju7sEsQMPshrCttapGipU1tLIgGJH6laalo3LJUhP2Yee/2d+6b9/bNzJuZN7Mz2ybMzb5999177vndc+73ufeOEEV3eWuAchW/vnn/jdQf2SZJzAQT/jvs92kb165d9lGuPLNJJ5csuVHo+jakmSmIWI7DIhDYSO3tWeHnpIBwuGUqRD4qpRiRkOkuEv6ZodDS9xLC8/oJ4adC+KNgmoQv/P6ZtH+/Z3wtp5yRqFfCk9grhvsmBPwl10GTh8BrrBTR7TnxzCaRrteDPFF45jAWiskKP+sasGvXi1f29kW7UOnOBfzjrl2zZk4vI+/a1XJtbx+9h/DhckTp+LoV5V0cnm8nKyquFNFoOt5SjBw5nvbtS0djZyvrGtDfH53CqVEDTljC8/eqVVX/QuhpKSVpF3uu57CCuKiJn4Y3iR7v+FkrwBA0TYGTOJ2YCVSnMxwmNXFtYlzevimGn46hYXjGz1oBKPpVjE1S/D45D3RJhUm6IjkubyEKPwM3z/hZKSDc2HI/gG9HO/940qRxncmZkNeoME2eTY4bfAh6//tRALdn5OTzecb3Z2QWI6hvartZRI1n1aek9XPmzIkmppWCrkIDEKRr3fWdnXYpjO7pkVVVVT2J9Nl8y2XLbhb9/SZ+poS63i1DIRtfdHdLam11xc84CrS0tPi6P6elJOWz6PgmoPT3h2qrlrrlIdzQwnODmW5xCOvC3KF1dJlYD2V8kYImKVhWVvpEXx/jPYvSn5BE4D0A+NQqhg1bD2XY+EkKqH/zzQAd+/tkIjldCvkt8F8IoVCyarp3KBAYV+7s/Z34jY1t03Qpd5CQkzEY2LzBSwOPUkVL4nVx9fAFdeXlZn/hZAA/Si4gzp6dLDRtOgRW+Hgr/ATS3D6JgH/1AgqHFb6dyZ07W26N6iKMjH8D2UhsGqc0Er8IBisbMes0ckE2lWPsQwv5Kmm0LRSs3ODkIxcvvhWChvEAXyTiO0kH79e0bdTRofDtTjAaFc1m9ZUayu4DruoohYf9Pv/UulDVbbW1VeFcheccB4PLj/uIvs9+acjv8TvOGUYzhOfmU1jhGVQO4A+AkbgTpSNGXDFydHX1vZ/HZS5PH6NGyTe6z6Mpkbg6iSUR8JGBoXBS2vh2DUC2lH/lygUXCpWH8+e165k35PwkCUNi+jRUjsjGTwuKXv0gP3nLlya4ffPq9a+eeGragyCeBNp/eKL3TmTjp1UASupefrzzzUQp72YKDBB/yUSp4qdNa6CXXvoA/lc80XslcuDbCuBFjNf0udKh81MK8JPhpoAkfNq0yRxxchx5UuZT02x8WwEWMapnQXoiTKhGAuM2PBFNG3fcwhvyN1FElJXZ+EkKKFSGui/47gJvTCfEW6kmUoXCjuMr5VvU3NxrhQ2ZAkgaqvqjU7Orn5WJIX07qj/jDpkCMMdQIwDeb3gVWG7aZOYvn0OklHH4AxMhl1xhwvIbjAJ56hNiI0CJ33sNOH68Vi5a9ComDt92yV5uQQk1IK0CsOr7bm4o8amamvZ/uT8SuQqhXXWrKz6Mj03zZRi/ThObS1QXHTgQhz8kTaBfj86L5Tau+uUiwaDSECXh2zWAhz+eC/ByODR9uu4BKGPTaG4+Mqxf//d3wHk7E2ukvZCGL5MkzQXS0OcSlYRvA9aHW94Gx8zmplxgkQYK7qgNLq9INc9AW38bbb1g+MhAh+joSMK3mwAFfDXI3EnklWdfaR8WwssDsaPoSN8jQRsm3TR2eSrhlU79/hpk8iQeGJ4zPJhNI42XJwpevEu0Qdx5Z3p8lYniv6IGihq43DRgjwIseEND+0QpjKcx+5uNPsbc5MibRugsOsQjJLT1tbXLzrixlUuXTsTG59OIm40RIb/4RLxZcgTb5+vpxRdtfFsBpvD6CQg/xi1z+QqDEs6R8E1JVIISPhI5AZyC4oP/ORykmGIpwZ4IxUp+DIas3xJpocQMDlYBSsHSgNldLhBkcCmviONplnyhhWfIMbFapvDteYBZ7XnCkn/hGZUVyrzZb2Gx3+FmO/yF9tpYtgKsNp/vkndKMsDbpX3nu807gRP9DiyHAhKpLo/vogIuj3JOLWWxBqTWzeURU6wBl0c5p5bSngmmJjFjeJMUExhP+4RsTc6XQdXOF2+U8l6htV1mR8R7lCkd1mTh0aBakCYARbG1Jr9OylczCc+Aiga0XsE914C8l6jXHFp0EEqWl7+izGVWmNubN1Gy2EfwrAA3rCEOuw54QV5I5NMVpAnkM4OF5lVUQKE1/P/Ov1gDBkpI2cyUXXAgLL8+tgqZHE2sOO6mzS4uqGAfDiy7BrDBkgElzFYDGc1fFiyTGHO0sBK4H0n4LuSnjWUPg2ytxTHv+Wyzk1L/J/YKXTJApzWS1Tg1+jcrsqnpD6URvetxaYgay6pkxTnfhjT3W02jKLASHay1IhKZj+BC2wXPsWXYgrdrgLLZwVqL/bt9KKMU5+3lzRiGf2YlbmxsnRuJfvYOTn9tTCe8Sc9mcdrnZhHmeGWlhbUW1WMfnhT4FnIOb+bJvB0WYYXrldXOne03RKL6h2DyUWmJ7+t9/fp21JYHYunf0cjHlmTvpz+8AsfocF/gBtwXiDvcYLMgegdtN0SdnVnj203AZpbJI+V43Bo7DbKxeHpw8nuznPqVZ2pnzIhkSpr3eKIe8NyM4+/P4Ph7TvieFaDrujUH5fN+I7GjckiWBB4MZXPkZTAa6O+38E0uRIdwmv3BxCMv2UJ4VoBRhh2d/9AFVPs+HKt+OBSs2p0t2KDoS0vP4ebIBVT1PuHzPQzBhxafM49LFeOcd4EGJVAOiXF9ZlzcXaAceBSTFDVQ1EBRA0UNODRgH5BwhLl6MfxpDU2ts0RUVOBu6C2Y+vLKbiKmt+Ahz8B/BuHvYmw+MPpL+uu4HOnlsKUrllugsvaeODELvw9QgaHwFsxIJ+I9EW9cUwQ+0Rm838X7AC5Hvo7LkZ7wMyqgfm/nWHGxdwNQqrEO4PO+Xhx+SULsIRr2VG3t4k+9JEhFI++7D/gXNyC+GgJ6xoci9iDNU7hykxY/pQJ4ldcf/WwdDNy8chrFGYSu38V0rIN8vlclyTN+I4DfDGDXNwGnbCdirngPasMipPkah4L+ImrF9uHDRm174IH5FznMq5OrV5fizu862PdtfK9pHXQXkYntuCGyjXbvdsV3VUBjY8tNhhStKPGpMWYHfZr2BF9+dDBP6W1oaLvDkMaTIFgSIzoV8IvKtWurTqVM5IjAsdmb8NmKErfwHbE5eIlOQRGVuC2ahJ+kgHC4dSH2NZ4HTBlK8AOs8lYHg8v+lAOsCDe13yUjejPS3qpqA9GaumBlazpesP0vRGafh/Bl6ehyiOPasAZNIg4/TgG431uuG0Y7mAdA3Dpi+IjgYG+RqqnzJ72/gkCroAQdPy+xIhRa7mZtEbg/XA66djyBHATMnIQI+HIFls02vq0ANm7ohjiINjwMh9a31tVWPerGEaMBwbwVRC1hCxDfAoOjkzhdtgP2AL5cHb9qMwkEatZGpNkM2qjQ5JK6YBWwBhx+HGEuengOGzYQWhAfH6Begpqg8JUCGho6rjJk/9sQaDxWetux0lvnBl2/u/0a6tWfR9+Azi7ZoYQPy1Jfdd39y1wtOvj9oSehnR+BLu6sINo89+58XH58MleXEKI/QoifYlX4porV9RlI+wieWS7UbkH2WUFlEjNk3w4WHqXzSm1N5SNuKbjkLeFRymdw+WEF/4YQP+znMFaMSeN+CTMUqvoxNP4S6MYYArfFB9wOz8Jr2hYcfZ+NDq0TZrSz6oGfwzAH2TLAMq1vDOyPzUxBjY3tM3VDPwoBzvt9cjJ66s/ckobDbbU4TMlX6CG8nBIMVp1z0mHkGGNIwklTOREG1hDaeYMz3vLv2fPy6C8u9bwPga/EPf05wc7dEfiPWvFp31zyLHyKLXI1WTp27IjnmuDzzdEMQ/8Bg6J9bkslfCwebR4aE7Q+UXgO5zCOY7/ZP7Av2a1cubAbTWArxxhSPoTMKvxkSpcQVPtUwjO1iuOm4dXp+kMaJirfZHof+falT2d2eEYpHUlFNxBndY7ulLJEmr0wibvRlhW+O2VCqNXmE4LjPr3QDCS42zaL6yW2zW8gutA+TCcLDZGWP0Ys3OWVf1ZEfQmHl5NSqvtEQuuVs5OiYgEDcSZtKjrRR5VmHG5xyhh+SmJHBPf2mZwXGosHbpFq0oefp4FD+/0h2/ysuMQ3j/Mchvb9NHd4ifEcxnEcbtEm0vA3d4IQmhc3aHe+57BLo/DVd6Z/GOrs67QutCqOh0Ovjug5NQ+wDkChc/pdbbByAXr6pKqpJkCNrYfUUIeRgDs8q81zybPwagTAXAA85rnx4Hxhy20/Xkt4zoBjN3M5DNPfg3jdy/6Mjoe6adOeSOwMlfDHj2/G4umxjDyYgOgwJkNz/ewP+EVNf0QNYfOxkOFSTNIiC4SJUHVsnL8HAu8VvC0Bx3fs2LFQPBFKKXxD6yaU/hKQdmOLbJVKxP9KS2tg8j6BuMwTIRbw2LFZmDbHT4SOHctmItSNmqfw7alweGf7PJ6KooRLIMmWutrKx+0MOjyqJuQwFW5oaH0Mw95PoKYoQCtCocqXHWx5HTAPCjiIp8QZXgB/FDwrsB5Q+LYCGCi8o2URNnHb4A2gFFt8WkmwpmbxoH5VhhdD9GnPL7F7vBo1RIdyq/EjSi8wXqLDlHgRwtqghMIthmBYQdW38eMUwBmKrQh5OQwjCL1PfrE6tLbSHCmYIAu3Y0fbDN2Qzag1WDTRJfQba1KtBC22akVoGDF8KzQv70vgssa5EmSuSQrgwKamtkmRqGxDxu9QREQvo1SewFz+Lf7O5OqbWm4XUeL2vtSkpdMQfjmEP5kpLcdjJ3gS5upcExS+lzQZaHgzdzmET8J3VQAzw4+eDD9/ntahs+MOEbVBuVMQpEP4tcM+HKLAyvVjM9g0iUFhc2BJWoQwdQkaVZ6NED8vLRm1NWuTWGXlcHSMMMnF4Ztw3v8rfJjEtmZlEnPyZ6MoXep5VBpUjbLJ3Eubifmn6/ZqomRLnoyibJtgo6h3fIFfvEVnjvaem1HUqQT2o3Q9mcVxTrWjrEy89j8zi8Noi2H1Na9m8UQ5i99FDRQ1cHlp4L8KhCqc0FvyvwAAAABJRU5ErkJggg==);
+        background-size: 32px 48px;
+    }
+</style>
+<script type="text/javascript">
+    var mod_page = "1"
+    var mod_keywords = "离散数学"
+
+    var insert_baidu_first =
+    true
+    var insert_baidu_count = 10
+
+        //搜索热词
+        window.toolbarSearchExt = JSON.stringify({
+            tag: [mod_keywords],
+            title: "",
+            landingWord: [],
+            queryWord: ""
+        })
+</script>
+
+    <script>
+        var isContainBaidu = "1";
+    </script>
 
 
+<div class="main-tag-container">
+    <div class="con-l-tag">
+        <div class="top-banner hide"></div>
+            <script>
+                window.baiduCollection = {
+                    title: "离散数学 - CSDN",
+                    desc: "csdn已为您找到关于离散数学相关内容，包含离散数学相关文档代码介绍、相关教程视频课程，以及相关离散数学问答内容。为您解决当下相关问题，如果想了解更详细离散数学内容，请点击详情链接进行了解，或者注册账号与客服人员联系给您提供相关内容的帮助，以下是为您准备的相关内容。",
+                }
+            </script>
+            <div class="baike-container">
+                <div class="baike-view">
+                    <div class="baike-l">
+                            <img class="inner-img" src="https://img-search.csdnimg.cn/bkimg/ca1349540923dd54f96b6165d109b3de9c8248a7/aggregate_page" alt="">
+                    </div>
+                    <div class="baike-r">
+                        <div class="b-title">
+                            <span>离散数学</span>
+                            <a class="collect-a" href="javascript:;">订阅</a>
+                        </div>
+                        <div class="b-description baike-intro" id="baike-intro">
+                            <span>离散数学（Discrete mathematics）是研究离散量的结构及其相互关系的数学学科，是现代数学的一个重要分支。离散的含义是指不同的连接在一起的元素，主要是研究基于离散量的结构和相互间的关系，其对象一般是有限个或可数个元素。离散数学在各学科领域，特别在计算机科学与技术领域有着广泛的应用，同时离散数学也是计算机专业的专业课程，如程序设计语言、数据结构、操作系统、编译技术、人工智能、数据库、算法设计与分析、理论计算机科学基础等必不可少的先行课程。通过离散数学的学习，不但可以掌握处理离散结构的描述工具和方法，为后续课程的学习创造条件，而且可以提高抽象思维和严格的逻辑推理能力，为将来参与创新性的研究和开发工作打下坚实的基础。
+[1]</span>
+                            <a href="javascript:;">
+                                <span>展开全文</span>
+                                <img src='https://csdnimg.cn/release/aggregate/img/arrow-down@2x.png' alt="">
+                            </a>
+                        </div>
+                        <div class="b-description baike-all" id="baike-all">
+                            <span>离散数学（Discrete mathematics）是研究离散量的结构及其相互关系的数学学科，是现代数学的一个重要分支。离散的含义是指不同的连接在一起的元素，主要是研究基于离散量的结构和相互间的关系，其对象一般是有限个或可数个元素。离散数学在各学科领域，特别在计算机科学与技术领域有着广泛的应用，同时离散数学也是计算机专业的专业课程，如程序设计语言、数据结构、操作系统、编译技术、人工智能、数据库、算法设计与分析、理论计算机科学基础等必不可少的先行课程。通过离散数学的学习，不但可以掌握处理离散结构的描述工具和方法，为后续课程的学习创造条件，而且可以提高抽象思维和严格的逻辑推理能力，为将来参与创新性的研究和开发工作打下坚实的基础。
+[1]</span>
+                        </div>
+                    </div>
+                </div>
+                        <div class="basic-info-wrap">
+                            <div class="title-basic">信息</div>
+                            <div class="basic-info">
+                                    <dl class="basicInfo-block basicInfo-right">
+                                            <dt>对    象</dt>
+                                            <dd>有限个或可数个元素</dd>
+                                            <dt>分    类</dt>
+                                            <dd>数学学科</dd>
+                                    </dl>
+                                    <dl class="basicInfo-block basicInfo-left">
+                                            <dt>中文名</dt>
+                                            <dd>离散数学</dd>
+                                            <dt>外文名</dt>
+                                            <dd>Discrete mathematics</dd>
+                                    </dl>
+                            </div>
+                        </div>
+                    <div class="basic-info-content">
+                        <div class="title-basic">离散数学发展</div>
+                        <div class="conetent">
+                            随着信息时代的到来，工业革命时代以微积分为代表的连续数学占主流的地位已经发生了变化，离散数学的重要性逐渐被人们认识。离散数学课程所传授的思想和方法，广泛地体现在计算机科学技术及相关专业的诸领域，从科学计算到信息处理，从理论计算机科学到计算机应用技术，从计算机软件到计算机硬件，从人工智能到认知系统，无不与离散数学密切相关。由于数字电子计算机是一个离散结构，它只能处理离散的或离散化了的数量关系， 因此，无论计算机科学本身，还是与计算机科学及其应用密切相关的现代科学研究领域，都面临着如何对离散结构建立相应的数学模型；又如何将已用连续数量关系建立起来的数学模型离散化，从而可由计算机加以处理。离散数学是传统的逻辑学，集合论（包括函数），数论基础，算法设计，组合分析，离散概率，关系理论，图论与树，抽象代数（包括代数系统，群、环、域等），布尔代数，计算模型（语言与自动机）等汇集起来的一门综合学科。离散数学的应用遍及现代科学技术的诸多领域。离散数学也可以说是计算机科学的基础核心学科，在离散数学中的有一个著名的典型例子-四色定理又称四色猜想，这是世界近代三大数学难题之一，它是在1852年，由英国的一名绘图员弗南西斯·格思里提出的，他在进行地图着色时，发现了一个现象，“每幅地图都可以仅用四种颜色着色，并且共同边界的国家都可以被着上不同的颜色”。那么这能否从数学上进行证明呢？100多年后的1976年，肯尼斯·阿佩尔（Kenneth Appel）和沃尔夫冈·哈肯（Wolfgang Haken）使用计算机辅助计算，用了1200个小时和100亿次的判断，终于证明了四色定理，轰动世界，这就是离散数学与计算机科学相互协作的结果。离散数学可以看成是构筑在数学和计算机科学之间的桥梁，因为离散数学既离不开集合论、图论等数学知识，又和计算机科学中的数据库理论、数据结构等相关，它可以引导人们进入计算机科学的思维领域，促进了计算机科学的发展。
+                        </div>
+                    </div>
+                <div class="hide-content" href="javascript:;">收起全文 <img src="https://csdnimg.cn/release/aggregate/img/arrow-down@2x.png"
+                                                                        alt=""></div>
+            </div>
 
-<ul class="sumo-nav-access" id="nav-access">
-  <li><a href="#main-content">Skip to main content</a></li>
-  <li><a href="/en-US/locales">Switch language</a></li>
-  <li><a id="skip-to-search" href="#search-q">Skip to search</a></li>
-</ul>
+
+        <div class="content-list">
+            <div class="ag-tab-bar">
+                <div class="ag-tb-lt">
+                    <div class="tab-hd-item active" type="hot">精华内容</div>
+                    <div class="tab-hd-item" type="download"
+                         data-report-click='{"spm":"3001.5558","extend1":"聚合页下载TAB"}'>下载资源
+                    </div>
+                    <div class="tab-hd-item" type="qa" data-report-click='{"spm":"3001.5197","extend1":"聚合页问答TAB"}'>
+                        问答
+                    </div>
+                </div>
+                <div class="ag-tb-rt">
+                    <div class="icon-link" data-report-query="spm=3001.5142"
+                         data-report-click='{"spm":"3001.5142","dest":"https://so.csdn.net/search?mode=1&q=离散数学&spm=1000.2123.3001.5142"}'>
+                    </div>
+                    <div class="tab-rt-btn">
+                        <a class="btn-ask" href="javascript:void(0);"
+                           data-report-click='{"spm":"3001.5198","dest":"https://ask.csdn.net/?word=离散数学"}'>我要提问</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-bd wrap-main-list active">
+                <ul class="main-ul">
+                        <li data-page="1">
+                            <div class="blog-title">
+                                <a href="https://blog.csdn.net/qq_39286483/article/details/108901836"
+                                   data-report-click='{"mod": "popu_876","spm": "3001.4430","dest": "https://blog.csdn.net/qq_39286483/article/details/108901836?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522162408685216780357248482%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D&amp;request_id=162408685216780357248482&amp;utm_term=%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6&amp;utm_medium=distribute.pc_aggpage_search_result.none-task-blog-2~aggregatepage~first_rank_v2~rank_aggregation-1-108901836.pc_agg_rank_aggregation","extra": "{\&quot;utm_medium\&quot;:\&quot;distribute.pc_aggpage_search_result.none-task-blog-2~aggregatepage~first_rank_v2~rank_aggregation-1-108901836.pc_agg_rank_aggregation\&quot;}","index": "0","strategy": "2~aggregatepage~first_rank_v2~rank_aggregation","biz_id": "0","ops_request_misc": "%257B%2522request%255Fid%2522%253A%2522162408685216780357248482%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D","request_id": "162408685216780357248482"}'
+                                   data-report-view='{"mod": "popu_876","spm": "3001.4430","dest": "https://blog.csdn.net/qq_39286483/article/details/108901836?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522162408685216780357248482%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D&amp;request_id=162408685216780357248482&amp;utm_term=%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6&amp;utm_medium=distribute.pc_aggpage_search_result.none-task-blog-2~aggregatepage~first_rank_v2~rank_aggregation-1-108901836.pc_agg_rank_aggregation","extra": "{\&quot;utm_medium\&quot;:\&quot;distribute.pc_aggpage_search_result.none-task-blog-2~aggregatepage~first_rank_v2~rank_aggregation-1-108901836.pc_agg_rank_aggregation\&quot;}","index": "0","strategy": "2~aggregatepage~first_rank_v2~rank_aggregation","biz_id": "0","ops_request_misc": "%257B%2522request%255Fid%2522%253A%2522162408685216780357248482%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D","request_id": "162408685216780357248482"}'
+                                   data-report-query="utm_medium=distribute.pc_aggpage_search_result.none-task-blog-2~aggregatepage~first_rank_v2~rank_aggregation-1-108901836.pc_agg_rank_aggregation&utm_term=%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6&spm=3001.4430"
+                                   target="_blank" class="blog-title">
+                                    <h2><em>离散数学</em></h2>
+                                </a>
+                                <span class="update-time">2020-10-02 14:27:47</span>
+                            </div>
+                            <div class="description">
+                                <div class="desc-detail digest">
+                                    <em>离散数学</em>专栏
+                                </div>
+                                <div class="desc-detail content">
+                                    <div class='article_content'>
+                                        <pre class="preclass"><h1><a id="__0"></a>第一节 命题与命题联结词语</h1>
+<h2><a id="1__1"></a>1. 命题与命题的表示</h2>
+<pre><code>1.推理：由一个或几个已知的前提，推导出一个未知结论的思维过程称为推理。
+2.推理的基本要素就是表达这些前提的一些==陈述句==
+</code></pre>
+<ol start="3">
+<li>命题的否定</li>
+<li>命题的和取</li>
+<li>命题的析取</li>
+<li>条件命题</li>
+<li>双条件命题</li>
+</ol>
+<h1><a id="__10"></a>第二节 命题公式</h1>
+<ol>
+<li>和式公式及联结词的优先次序</li>
+<li>真值指派</li>
+<li>等价命题</li>
+<li>重言式、矛盾式与可满足式</li>
+</ol>
+<h1><a id="__17"></a>第三节 等值演算</h1>
+<h1><a id="__18"></a>第四节 范式</h1>
+<h1><a id="__19"></a>第五节 主范式</h1>
+<h1><a id="__20"></a>第六节 自然推理系统</h1>
+<h1><a id="__21"></a>第七节 谓词的概念与表示</h1>
+<h1><a id="__22"></a>第八节 量词与合式公式</h1>
+<h1><a id="__23"></a>第九节 谓词演算的等价式与蕴含式</h1>
+<h1><a id="__24"></a>第十节 前束范式与谓词演算的推理理论</h1>
+<h1><a id="__25"></a>第十一节 集合的基本概念</h1>
+<h1><a id="__26"></a>第十二节 集合运算</h1>
+<h1><a id="__27"></a>第十三节 有序对与笛卡尔积</h1>
+<h1><a id="__28"></a>第十四节 关系及关系的性质</h1>
+<h1><a id="__29"></a>第十五节 关系的运算</h1>
+<h1><a id="__30"></a>第十六节 等价关系与序关系</h1>
+<h1><a id="__31"></a>第十七节 函数</h1>
+<h1><a id="__32"></a>第十八节 代数系统</h1>
+<h1><a id="__33"></a>第十九节 群与半群</h1>
+<h1><a id="__34"></a>第二十节 环与域</h1>
+<h1><a id="__35"></a>第二十一节 格的基本概念</h1>
+<h1><a id="__36"></a>第二十二节 分配格与有补格</h1>
+<h1><a id="__37"></a>第二十三节 布尔代数</h1>
+<h1><a id="__38"></a>第二十四节 图的基本概念</h1>
+<h1><a id="__39"></a>第二十五节 图的联通性</h1>
+<h1><a id="__40"></a>第二十六节 图的表示</h1>
+<h1><a id="__41"></a>第二十七节 欧拉图与哈密顿图</h1>
+<h1><a id="__42"></a>第二十八节 平面图</h1>
+<h1><a id="__43"></a>第二十九节 数及其遍历</h1>
+
+</pre>
+                                    </div>
+                                    <div class="hide-content"><a href="javascript:;">收起 <img
+                                                    src="https://csdnimg.cn/release/aggregate/img/arrow-down@2x.png" alt=""></a></div>
+                                </div>
+                                        <a href="javascript:;" class="readmore_btn"
+                                           data-linkUrl="https://blog.csdn.net/qq_39286483/article/details/108901836"
+                                           data-so-type="blog">
+                                            <span>展开全文</span>
+                                            <img src='https://csdnimg.cn/release/aggregate/img/arrow-down@2x.png' alt="">
+                                        </a>
+                            </div>
+
+                        </li>
+                        <li data-page="1">
+                            <div class="blog-title">
+                                <a href="https://download.csdn.net/download/qq_41887427/16073385"
+                                   data-report-click='{"mod": "popu_876","spm": "3001.4430","dest": "https://download.csdn.net/download/qq_41887427/16073385?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522162408685216780357248482%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D&amp;request_id=162408685216780357248482&amp;utm_term=%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6&amp;utm_medium=distribute.pc_aggpage_search_result.none-task-download-2~aggregatepage~first_rank_v2~rank_aggregation-2-16073385.pc_agg_rank_aggregation","extra": "{\&quot;utm_medium\&quot;:\&quot;distribute.pc_aggpage_search_result.none-task-download-2~aggregatepage~first_rank_v2~rank_aggregation-2-16073385.pc_agg_rank_aggregation\&quot;}","index": "1","strategy": "2~aggregatepage~first_rank_v2~rank_aggregation","biz_id": "1","ops_request_misc": "%257B%2522request%255Fid%2522%253A%2522162408685216780357248482%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D","request_id": "162408685216780357248482"}'
+                                   data-report-view='{"mod": "popu_876","spm": "3001.4430","dest": "https://download.csdn.net/download/qq_41887427/16073385?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522162408685216780357248482%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D&amp;request_id=162408685216780357248482&amp;utm_term=%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6&amp;utm_medium=distribute.pc_aggpage_search_result.none-task-download-2~aggregatepage~first_rank_v2~rank_aggregation-2-16073385.pc_agg_rank_aggregation","extra": "{\&quot;utm_medium\&quot;:\&quot;distribute.pc_aggpage_search_result.none-task-download-2~aggregatepage~first_rank_v2~rank_aggregation-2-16073385.pc_agg_rank_aggregation\&quot;}","index": "1","strategy": "2~aggregatepage~first_rank_v2~rank_aggregation","biz_id": "1","ops_request_misc": "%257B%2522request%255Fid%2522%253A%2522162408685216780357248482%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D","request_id": "162408685216780357248482"}'
+                                   data-report-query="utm_medium=distribute.pc_aggpage_search_result.none-task-download-2~aggregatepage~first_rank_v2~rank_aggregation-2-16073385.pc_agg_rank_aggregation&utm_term=%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6&spm=3001.4430"
+                                   target="_blank" class="blog-title">
+                                    <h2><em>离散数学</em>第一章<em>离散数学</em>第一章<em>离散数学</em>第一章<em>离散数学</em>第一章</h2>
+                                </a>
+                                <span class="update-time">2021-03-24 10:43:41</span>
+                            </div>
+                            <div class="description">
+                                <div class="desc-detail digest">
+                                    <em>离散数学</em>第一章<em>离散数学</em>第一章<em>离散数学</em>第一章<em>离散数学</em>第一章<em>离散数学</em>第一章
+                                </div>
+                                <div class="desc-detail content">
+                                    <div class='article_content'>
+                                        <pre class="preclass"></pre>
+                                    </div>
+                                    <div class="hide-content"><a href="javascript:;">收起 <img
+                                                    src="https://csdnimg.cn/release/aggregate/img/arrow-down@2x.png" alt=""></a></div>
+                                </div>
+                            </div>
+                                <div class="tags-view">
+                                    <img src='https://csdnimg.cn/release/aggregate/img/tags.png' alt="">
+                                        <a href="../tags/NtTaIg5sMzYyLWJsb2cO0O0O.html">java   </a>
+                                </div>
+
+                        </li>
+                        <li data-page="1">
+                            <div class="blog-title">
+                                <a href="https://download.csdn.net/download/as346247898/1804429"
+                                   data-report-click='{"mod": "popu_876","spm": "3001.4430","dest": "https://download.csdn.net/download/as346247898/1804429?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522162408685216780357248482%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D&amp;request_id=162408685216780357248482&amp;utm_term=%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6&amp;utm_medium=distribute.pc_aggpage_search_result.none-task-download-2~aggregatepage~first_rank_v2~rank_aggregation-3-1804429.pc_agg_rank_aggregation","extra": "{\&quot;utm_medium\&quot;:\&quot;distribute.pc_aggpage_search_result.none-task-download-2~aggregatepage~first_rank_v2~rank_aggregation-3-1804429.pc_agg_rank_aggregation\&quot;}","index": "2","strategy": "2~aggregatepage~first_rank_v2~rank_aggregation","biz_id": "1","ops_request_misc": "%257B%2522request%255Fid%2522%253A%2522162408685216780357248482%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D","request_id": "162408685216780357248482"}'
+                                   data-report-view='{"mod": "popu_876","spm": "3001.4430","dest": "https://download.csdn.net/download/as346247898/1804429?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522162408685216780357248482%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D&amp;request_id=162408685216780357248482&amp;utm_term=%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6&amp;utm_medium=distribute.pc_aggpage_search_result.none-task-download-2~aggregatepage~first_rank_v2~rank_aggregation-3-1804429.pc_agg_rank_aggregation","extra": "{\&quot;utm_medium\&quot;:\&quot;distribute.pc_aggpage_search_result.none-task-download-2~aggregatepage~first_rank_v2~rank_aggregation-3-1804429.pc_agg_rank_aggregation\&quot;}","index": "2","strategy": "2~aggregatepage~first_rank_v2~rank_aggregation","biz_id": "1","ops_request_misc": "%257B%2522request%255Fid%2522%253A%2522162408685216780357248482%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D","request_id": "162408685216780357248482"}'
+                                   data-report-query="utm_medium=distribute.pc_aggpage_search_result.none-task-download-2~aggregatepage~first_rank_v2~rank_aggregation-3-1804429.pc_agg_rank_aggregation&utm_term=%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6&spm=3001.4430"
+                                   target="_blank" class="blog-title">
+                                    <h2><em>离散数学离散数学离散数学</em></h2>
+                                </a>
+                                <span class="update-time">2009-11-09 23:46:31</span>
+                            </div>
+                            <div class="description">
+                                <div class="desc-detail digest">
+                                    <em>离散数学离散数学离散数学离散数学离散数学离散数学离散数学离散数学离散数学离散数学</em>
+                                </div>
+                                <div class="desc-detail content">
+                                    <div class='article_content'>
+                                        <pre class="preclass"></pre>
+                                    </div>
+                                    <div class="hide-content"><a href="javascript:;">收起 <img
+                                                    src="https://csdnimg.cn/release/aggregate/img/arrow-down@2x.png" alt=""></a></div>
+                                </div>
+                            </div>
+
+                        </li>
+                        <li data-page="1">
+                            <div class="blog-title">
+                                <a href="https://download.csdn.net/download/lantian1908/2349802"
+                                   data-report-click='{"mod": "popu_876","spm": "3001.4430","dest": "https://download.csdn.net/download/lantian1908/2349802?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522162408685216780357248482%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D&amp;request_id=162408685216780357248482&amp;utm_term=%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6&amp;utm_medium=distribute.pc_aggpage_search_result.none-task-download-2~aggregatepage~first_rank_v2~rank_aggregation-4-2349802.pc_agg_rank_aggregation","extra": "{\&quot;utm_medium\&quot;:\&quot;distribute.pc_aggpage_search_result.none-task-download-2~aggregatepage~first_rank_v2~rank_aggregation-4-2349802.pc_agg_rank_aggregation\&quot;}","index": "3","strategy": "2~aggregatepage~first_rank_v2~rank_aggregation","biz_id": "1","ops_request_misc": "%257B%2522request%255Fid%2522%253A%2522162408685216780357248482%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D","request_id": "162408685216780357248482"}'
+                                   data-report-view='{"mod": "popu_876","spm": "3001.4430","dest": "https://download.csdn.net/download/lantian1908/2349802?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522162408685216780357248482%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D&amp;request_id=162408685216780357248482&amp;utm_term=%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6&amp;utm_medium=distribute.pc_aggpage_search_result.none-task-download-2~aggregatepage~first_rank_v2~rank_aggregation-4-2349802.pc_agg_rank_aggregation","extra": "{\&quot;utm_medium\&quot;:\&quot;distribute.pc_aggpage_search_result.none-task-download-2~aggregatepage~first_rank_v2~rank_aggregation-4-2349802.pc_agg_rank_aggregation\&quot;}","index": "3","strategy": "2~aggregatepage~first_rank_v2~rank_aggregation","biz_id": "1","ops_request_misc": "%257B%2522request%255Fid%2522%253A%2522162408685216780357248482%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D","request_id": "162408685216780357248482"}'
+                                   data-report-query="utm_medium=distribute.pc_aggpage_search_result.none-task-download-2~aggregatepage~first_rank_v2~rank_aggregation-4-2349802.pc_agg_rank_aggregation&utm_term=%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6&spm=3001.4430"
+                                   target="_blank" class="blog-title">
+                                    <h2><em>离散数学</em> <em>离散数学</em> <em>离散数学</em></h2>
+                                </a>
+                                <span class="update-time">2010-05-13 21:28:29</span>
+                            </div>
+                            <div class="description">
+                                <div class="desc-detail digest">
+                                    <em>离散数学</em> <em>离散数学</em> 离散数 学<em>离散数学</em> <em>离散数学</em> <em>离散数学</em> <em>离散数学</em>
+                                </div>
+                                <div class="desc-detail content">
+                                    <div class='article_content'>
+                                        <pre class="preclass"></pre>
+                                    </div>
+                                    <div class="hide-content"><a href="javascript:;">收起 <img
+                                                    src="https://csdnimg.cn/release/aggregate/img/arrow-down@2x.png" alt=""></a></div>
+                                </div>
+                            </div>
+
+                        </li>
+                        <li data-page="1">
+                            <div class="blog-title">
+                                <a href="https://download.csdn.net/download/tiantiandada/1080172"
+                                   data-report-click='{"mod": "popu_876","spm": "3001.4430","dest": "https://download.csdn.net/download/tiantiandada/1080172?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522162408685216780357248482%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D&amp;request_id=162408685216780357248482&amp;utm_term=%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6&amp;utm_medium=distribute.pc_aggpage_search_result.none-task-download-2~aggregatepage~first_rank_v2~rank_aggregation-5-1080172.pc_agg_rank_aggregation","extra": "{\&quot;utm_medium\&quot;:\&quot;distribute.pc_aggpage_search_result.none-task-download-2~aggregatepage~first_rank_v2~rank_aggregation-5-1080172.pc_agg_rank_aggregation\&quot;}","index": "4","strategy": "2~aggregatepage~first_rank_v2~rank_aggregation","biz_id": "1","ops_request_misc": "%257B%2522request%255Fid%2522%253A%2522162408685216780357248482%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D","request_id": "162408685216780357248482"}'
+                                   data-report-view='{"mod": "popu_876","spm": "3001.4430","dest": "https://download.csdn.net/download/tiantiandada/1080172?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522162408685216780357248482%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D&amp;request_id=162408685216780357248482&amp;utm_term=%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6&amp;utm_medium=distribute.pc_aggpage_search_result.none-task-download-2~aggregatepage~first_rank_v2~rank_aggregation-5-1080172.pc_agg_rank_aggregation","extra": "{\&quot;utm_medium\&quot;:\&quot;distribute.pc_aggpage_search_result.none-task-download-2~aggregatepage~first_rank_v2~rank_aggregation-5-1080172.pc_agg_rank_aggregation\&quot;}","index": "4","strategy": "2~aggregatepage~first_rank_v2~rank_aggregation","biz_id": "1","ops_request_misc": "%257B%2522request%255Fid%2522%253A%2522162408685216780357248482%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D","request_id": "162408685216780357248482"}'
+                                   data-report-query="utm_medium=distribute.pc_aggpage_search_result.none-task-download-2~aggregatepage~first_rank_v2~rank_aggregation-5-1080172.pc_agg_rank_aggregation&utm_term=%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6&spm=3001.4430"
+                                   target="_blank" class="blog-title">
+                                    <h2><em>离散数学</em>课件<em>离散数学</em>课件<em>离散数学</em>课件<em>离散数学</em>课件<em>离散数学</em>课件<em>离散数学</em>课件<em>离散数学</em>课件<em>离散数学</em>课件</h2>
+                                </a>
+                                <span class="update-time">2009-03-07 17:54:21</span>
+                            </div>
+                            <div class="description">
+                                <div class="desc-detail digest">
+                                    <em>离散数学</em>课件<em>离散数学</em>课件<em>离散数学</em>课件<em>离散数学</em>课件<em>离散数学</em>课件<em>离散数学</em>课件<em>离散数学</em>课件<em>离散数学</em>课件<em>离散数学</em>课件<em>离散数学</em>课件<em>离散数学</em>课件<em>离散数学</em>课件<em>离散数学</em>课件<em>离散数学</em>课件<em>离散数学</em>课件<em>离散数学</em>课件<em>离散数学</em>...
+                                </div>
+                                <div class="desc-detail content">
+                                    <div class='article_content'>
+                                        <pre class="preclass"></pre>
+                                    </div>
+                                    <div class="hide-content"><a href="javascript:;">收起 <img
+                                                    src="https://csdnimg.cn/release/aggregate/img/arrow-down@2x.png" alt=""></a></div>
+                                </div>
+                            </div>
+
+                        </li>
+                        <li data-page="1">
+                            <div class="blog-title">
+                                <a href="https://download.csdn.net/download/lu123321456654/2184245"
+                                   data-report-click='{"mod": "popu_876","spm": "3001.4430","dest": "https://download.csdn.net/download/lu123321456654/2184245?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522162408685216780357248482%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D&amp;request_id=162408685216780357248482&amp;utm_term=%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6&amp;utm_medium=distribute.pc_aggpage_search_result.none-task-download-2~aggregatepage~first_rank_v2~rank_aggregation-6-2184245.pc_agg_rank_aggregation","extra": "{\&quot;utm_medium\&quot;:\&quot;distribute.pc_aggpage_search_result.none-task-download-2~aggregatepage~first_rank_v2~rank_aggregation-6-2184245.pc_agg_rank_aggregation\&quot;}","index": "5","strategy": "2~aggregatepage~first_rank_v2~rank_aggregation","biz_id": "1","ops_request_misc": "%257B%2522request%255Fid%2522%253A%2522162408685216780357248482%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D","request_id": "162408685216780357248482"}'
+                                   data-report-view='{"mod": "popu_876","spm": "3001.4430","dest": "https://download.csdn.net/download/lu123321456654/2184245?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522162408685216780357248482%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D&amp;request_id=162408685216780357248482&amp;utm_term=%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6&amp;utm_medium=distribute.pc_aggpage_search_result.none-task-download-2~aggregatepage~first_rank_v2~rank_aggregation-6-2184245.pc_agg_rank_aggregation","extra": "{\&quot;utm_medium\&quot;:\&quot;distribute.pc_aggpage_search_result.none-task-download-2~aggregatepage~first_rank_v2~rank_aggregation-6-2184245.pc_agg_rank_aggregation\&quot;}","index": "5","strategy": "2~aggregatepage~first_rank_v2~rank_aggregation","biz_id": "1","ops_request_misc": "%257B%2522request%255Fid%2522%253A%2522162408685216780357248482%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D","request_id": "162408685216780357248482"}'
+                                   data-report-query="utm_medium=distribute.pc_aggpage_search_result.none-task-download-2~aggregatepage~first_rank_v2~rank_aggregation-6-2184245.pc_agg_rank_aggregation&utm_term=%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6&spm=3001.4430"
+                                   target="_blank" class="blog-title">
+                                    <h2><em>离散数学</em>答案 <em>离散数学</em>答案 <em>离散数学</em>答案<em>离散数学</em>答案</h2>
+                                </a>
+                                <span class="update-time">2010-03-30 16:27:00</span>
+                            </div>
+                            <div class="description">
+                                <div class="desc-detail digest">
+                                    <em>离散数学</em>答案 <em>离散数学</em>答案<em>离散数学</em>答案 超好！
+                                </div>
+                                <div class="desc-detail content">
+                                    <div class='article_content'>
+                                        <pre class="preclass"></pre>
+                                    </div>
+                                    <div class="hide-content"><a href="javascript:;">收起 <img
+                                                    src="https://csdnimg.cn/release/aggregate/img/arrow-down@2x.png" alt=""></a></div>
+                                </div>
+                            </div>
+
+                        </li>
+                        <li data-page="1">
+                            <div class="blog-title">
+                                <a href="https://download.csdn.net/download/qq18180564/11447080"
+                                   data-report-click='{"mod": "popu_876","spm": "3001.4430","dest": "https://download.csdn.net/download/qq18180564/11447080?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522162408685216780357248482%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D&amp;request_id=162408685216780357248482&amp;utm_term=%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6&amp;utm_medium=distribute.pc_aggpage_search_result.none-task-download-2~aggregatepage~first_rank_v2~rank_aggregation-7-11447080.pc_agg_rank_aggregation","extra": "{\&quot;utm_medium\&quot;:\&quot;distribute.pc_aggpage_search_result.none-task-download-2~aggregatepage~first_rank_v2~rank_aggregation-7-11447080.pc_agg_rank_aggregation\&quot;}","index": "6","strategy": "2~aggregatepage~first_rank_v2~rank_aggregation","biz_id": "1","ops_request_misc": "%257B%2522request%255Fid%2522%253A%2522162408685216780357248482%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D","request_id": "162408685216780357248482"}'
+                                   data-report-view='{"mod": "popu_876","spm": "3001.4430","dest": "https://download.csdn.net/download/qq18180564/11447080?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522162408685216780357248482%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D&amp;request_id=162408685216780357248482&amp;utm_term=%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6&amp;utm_medium=distribute.pc_aggpage_search_result.none-task-download-2~aggregatepage~first_rank_v2~rank_aggregation-7-11447080.pc_agg_rank_aggregation","extra": "{\&quot;utm_medium\&quot;:\&quot;distribute.pc_aggpage_search_result.none-task-download-2~aggregatepage~first_rank_v2~rank_aggregation-7-11447080.pc_agg_rank_aggregation\&quot;}","index": "6","strategy": "2~aggregatepage~first_rank_v2~rank_aggregation","biz_id": "1","ops_request_misc": "%257B%2522request%255Fid%2522%253A%2522162408685216780357248482%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D","request_id": "162408685216780357248482"}'
+                                   data-report-query="utm_medium=distribute.pc_aggpage_search_result.none-task-download-2~aggregatepage~first_rank_v2~rank_aggregation-7-11447080.pc_agg_rank_aggregation&utm_term=%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6&spm=3001.4430"
+                                   target="_blank" class="blog-title">
+                                    <h2><em>离散数学</em> 中山大学<em>离散数学</em>课件</h2>
+                                </a>
+                                <span class="update-time">2019-07-29 16:33:47</span>
+                            </div>
+                            <div class="description">
+                                <div class="desc-detail digest">
+                                    <em>离散数学</em> 中山大学<em>离散数学</em>课件
+                                </div>
+                                <div class="desc-detail content">
+                                    <div class='article_content'>
+                                        <pre class="preclass"></pre>
+                                    </div>
+                                    <div class="hide-content"><a href="javascript:;">收起 <img
+                                                    src="https://csdnimg.cn/release/aggregate/img/arrow-down@2x.png" alt=""></a></div>
+                                </div>
+                            </div>
+
+                        </li>
+                        <li data-page="1">
+                            <div class="blog-title">
+                                <a href="https://download.csdn.net/download/wapxiaosi/2282606"
+                                   data-report-click='{"mod": "popu_876","spm": "3001.4430","dest": "https://download.csdn.net/download/wapxiaosi/2282606?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522162408685216780357248482%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D&amp;request_id=162408685216780357248482&amp;utm_term=%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6&amp;utm_medium=distribute.pc_aggpage_search_result.none-task-download-2~aggregatepage~first_rank_v2~rank_aggregation-8-2282606.pc_agg_rank_aggregation","extra": "{\&quot;utm_medium\&quot;:\&quot;distribute.pc_aggpage_search_result.none-task-download-2~aggregatepage~first_rank_v2~rank_aggregation-8-2282606.pc_agg_rank_aggregation\&quot;}","index": "7","strategy": "2~aggregatepage~first_rank_v2~rank_aggregation","biz_id": "1","ops_request_misc": "%257B%2522request%255Fid%2522%253A%2522162408685216780357248482%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D","request_id": "162408685216780357248482"}'
+                                   data-report-view='{"mod": "popu_876","spm": "3001.4430","dest": "https://download.csdn.net/download/wapxiaosi/2282606?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522162408685216780357248482%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D&amp;request_id=162408685216780357248482&amp;utm_term=%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6&amp;utm_medium=distribute.pc_aggpage_search_result.none-task-download-2~aggregatepage~first_rank_v2~rank_aggregation-8-2282606.pc_agg_rank_aggregation","extra": "{\&quot;utm_medium\&quot;:\&quot;distribute.pc_aggpage_search_result.none-task-download-2~aggregatepage~first_rank_v2~rank_aggregation-8-2282606.pc_agg_rank_aggregation\&quot;}","index": "7","strategy": "2~aggregatepage~first_rank_v2~rank_aggregation","biz_id": "1","ops_request_misc": "%257B%2522request%255Fid%2522%253A%2522162408685216780357248482%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D","request_id": "162408685216780357248482"}'
+                                   data-report-query="utm_medium=distribute.pc_aggpage_search_result.none-task-download-2~aggregatepage~first_rank_v2~rank_aggregation-8-2282606.pc_agg_rank_aggregation&utm_term=%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6&spm=3001.4430"
+                                   target="_blank" class="blog-title">
+                                    <h2><em>离散数学</em>课件<em>离散数学</em>课件<em>离散数学</em>课件</h2>
+                                </a>
+                                <span class="update-time">2010-04-25 14:40:31</span>
+                            </div>
+                            <div class="description">
+                                <div class="desc-detail digest">
+                                    <em>离散数学</em>课件<em>离散数学</em>课件<em>离散数学</em>课件<em>离散数学</em>课件<em>离散数学</em>课件<em>离散数学</em>课件
+                                </div>
+                                <div class="desc-detail content">
+                                    <div class='article_content'>
+                                        <pre class="preclass"></pre>
+                                    </div>
+                                    <div class="hide-content"><a href="javascript:;">收起 <img
+                                                    src="https://csdnimg.cn/release/aggregate/img/arrow-down@2x.png" alt=""></a></div>
+                                </div>
+                            </div>
+
+                        </li>
+                        <li data-page="1">
+                            <div class="blog-title">
+                                <a href="https://download.csdn.net/download/g3d4rpg/1957295"
+                                   data-report-click='{"mod": "popu_876","spm": "3001.4430","dest": "https://download.csdn.net/download/g3d4rpg/1957295?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522162408685216780357248482%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D&amp;request_id=162408685216780357248482&amp;utm_term=%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6&amp;utm_medium=distribute.pc_aggpage_search_result.none-task-download-2~aggregatepage~first_rank_v2~rank_aggregation-9-1957295.pc_agg_rank_aggregation","extra": "{\&quot;utm_medium\&quot;:\&quot;distribute.pc_aggpage_search_result.none-task-download-2~aggregatepage~first_rank_v2~rank_aggregation-9-1957295.pc_agg_rank_aggregation\&quot;}","index": "8","strategy": "2~aggregatepage~first_rank_v2~rank_aggregation","biz_id": "1","ops_request_misc": "%257B%2522request%255Fid%2522%253A%2522162408685216780357248482%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D","request_id": "162408685216780357248482"}'
+                                   data-report-view='{"mod": "popu_876","spm": "3001.4430","dest": "https://download.csdn.net/download/g3d4rpg/1957295?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522162408685216780357248482%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D&amp;request_id=162408685216780357248482&amp;utm_term=%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6&amp;utm_medium=distribute.pc_aggpage_search_result.none-task-download-2~aggregatepage~first_rank_v2~rank_aggregation-9-1957295.pc_agg_rank_aggregation","extra": "{\&quot;utm_medium\&quot;:\&quot;distribute.pc_aggpage_search_result.none-task-download-2~aggregatepage~first_rank_v2~rank_aggregation-9-1957295.pc_agg_rank_aggregation\&quot;}","index": "8","strategy": "2~aggregatepage~first_rank_v2~rank_aggregation","biz_id": "1","ops_request_misc": "%257B%2522request%255Fid%2522%253A%2522162408685216780357248482%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D","request_id": "162408685216780357248482"}'
+                                   data-report-query="utm_medium=distribute.pc_aggpage_search_result.none-task-download-2~aggregatepage~first_rank_v2~rank_aggregation-9-1957295.pc_agg_rank_aggregation&utm_term=%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6&spm=3001.4430"
+                                   target="_blank" class="blog-title">
+                                    <h2>电大 <em>离散数学</em>电大<em>离散数学</em>电大<em>离散数学</em></h2>
+                                </a>
+                                <span class="update-time">2010-01-02 22:12:50</span>
+                            </div>
+                            <div class="description">
+                                <div class="desc-detail digest">
+                                    电大<em>离散数学</em>电大<em>离散数学</em>电大<em>离散数学</em>电大<em>离散数学</em>电大<em>离散数学</em>电大<em>离散数学</em>
+                                </div>
+                                <div class="desc-detail content">
+                                    <div class='article_content'>
+                                        <pre class="preclass"></pre>
+                                    </div>
+                                    <div class="hide-content"><a href="javascript:;">收起 <img
+                                                    src="https://csdnimg.cn/release/aggregate/img/arrow-down@2x.png" alt=""></a></div>
+                                </div>
+                            </div>
+
+                        </li>
+                        <li data-page="1">
+                            <div class="blog-title">
+                                <a href="https://download.csdn.net/download/wkkys/2103368"
+                                   data-report-click='{"mod": "popu_876","spm": "3001.4430","dest": "https://download.csdn.net/download/wkkys/2103368?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522162408685216780357248482%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D&amp;request_id=162408685216780357248482&amp;utm_term=%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6&amp;utm_medium=distribute.pc_aggpage_search_result.none-task-download-2~aggregatepage~first_rank_v2~rank_aggregation-10-2103368.pc_agg_rank_aggregation","extra": "{\&quot;utm_medium\&quot;:\&quot;distribute.pc_aggpage_search_result.none-task-download-2~aggregatepage~first_rank_v2~rank_aggregation-10-2103368.pc_agg_rank_aggregation\&quot;}","index": "9","strategy": "2~aggregatepage~first_rank_v2~rank_aggregation","biz_id": "1","ops_request_misc": "%257B%2522request%255Fid%2522%253A%2522162408685216780357248482%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D","request_id": "162408685216780357248482"}'
+                                   data-report-view='{"mod": "popu_876","spm": "3001.4430","dest": "https://download.csdn.net/download/wkkys/2103368?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522162408685216780357248482%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D&amp;request_id=162408685216780357248482&amp;utm_term=%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6&amp;utm_medium=distribute.pc_aggpage_search_result.none-task-download-2~aggregatepage~first_rank_v2~rank_aggregation-10-2103368.pc_agg_rank_aggregation","extra": "{\&quot;utm_medium\&quot;:\&quot;distribute.pc_aggpage_search_result.none-task-download-2~aggregatepage~first_rank_v2~rank_aggregation-10-2103368.pc_agg_rank_aggregation\&quot;}","index": "9","strategy": "2~aggregatepage~first_rank_v2~rank_aggregation","biz_id": "1","ops_request_misc": "%257B%2522request%255Fid%2522%253A%2522162408685216780357248482%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D","request_id": "162408685216780357248482"}'
+                                   data-report-query="utm_medium=distribute.pc_aggpage_search_result.none-task-download-2~aggregatepage~first_rank_v2~rank_aggregation-10-2103368.pc_agg_rank_aggregation&utm_term=%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6&spm=3001.4430"
+                                   target="_blank" class="blog-title">
+                                    <h2><em>离散数学</em>习题<em>离散数学</em>习题<em>离散数学</em>习题</h2>
+                                </a>
+                                <span class="update-time">2010-03-07 11:59:46</span>
+                            </div>
+                            <div class="description">
+                                <div class="desc-detail digest">
+                                    <em>离散数学</em>习题<em>离散数学</em>习题<em>离散数学</em>习题<em>离散数学</em>习题<em>离散数学</em>习题
+                                </div>
+                                <div class="desc-detail content">
+                                    <div class='article_content'>
+                                        <pre class="preclass"></pre>
+                                    </div>
+                                    <div class="hide-content"><a href="javascript:;">收起 <img
+                                                    src="https://csdnimg.cn/release/aggregate/img/arrow-down@2x.png" alt=""></a></div>
+                                </div>
+                            </div>
+
+                        </li>
+                        <li data-page="1">
+                            <div class="blog-title">
+                                <a href="https://download.csdn.net/download/chen85584563/2309087"
+                                   data-report-click='{"mod": "popu_876","spm": "3001.4430","dest": "https://download.csdn.net/download/chen85584563/2309087?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522162408685216780357248482%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D&amp;request_id=162408685216780357248482&amp;utm_term=%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6&amp;utm_medium=distribute.pc_aggpage_search_result.none-task-download-2~aggregatepage~first_rank_v2~rank_aggregation-11-2309087.pc_agg_rank_aggregation","extra": "{\&quot;utm_medium\&quot;:\&quot;distribute.pc_aggpage_search_result.none-task-download-2~aggregatepage~first_rank_v2~rank_aggregation-11-2309087.pc_agg_rank_aggregation\&quot;}","index": "10","strategy": "2~aggregatepage~first_rank_v2~rank_aggregation","biz_id": "1","ops_request_misc": "%257B%2522request%255Fid%2522%253A%2522162408685216780357248482%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D","request_id": "162408685216780357248482"}'
+                                   data-report-view='{"mod": "popu_876","spm": "3001.4430","dest": "https://download.csdn.net/download/chen85584563/2309087?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522162408685216780357248482%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D&amp;request_id=162408685216780357248482&amp;utm_term=%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6&amp;utm_medium=distribute.pc_aggpage_search_result.none-task-download-2~aggregatepage~first_rank_v2~rank_aggregation-11-2309087.pc_agg_rank_aggregation","extra": "{\&quot;utm_medium\&quot;:\&quot;distribute.pc_aggpage_search_result.none-task-download-2~aggregatepage~first_rank_v2~rank_aggregation-11-2309087.pc_agg_rank_aggregation\&quot;}","index": "10","strategy": "2~aggregatepage~first_rank_v2~rank_aggregation","biz_id": "1","ops_request_misc": "%257B%2522request%255Fid%2522%253A%2522162408685216780357248482%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D","request_id": "162408685216780357248482"}'
+                                   data-report-query="utm_medium=distribute.pc_aggpage_search_result.none-task-download-2~aggregatepage~first_rank_v2~rank_aggregation-11-2309087.pc_agg_rank_aggregation&utm_term=%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6&spm=3001.4430"
+                                   target="_blank" class="blog-title">
+                                    <h2><em>离散数学</em>复习题<em>离散数学</em>复习题<em>离散数学</em>复习题<em>离散数学</em>复习题</h2>
+                                </a>
+                                <span class="update-time">2010-05-02 18:51:34</span>
+                            </div>
+                            <div class="description">
+                                <div class="desc-detail digest">
+                                    <em>离散数学</em>复习题<em>离散数学</em>复习题<em>离散数学</em>复习题<em>离散数学</em>复习题<em>离散数学</em>复习题<em>离散数学</em>复习题<em>离散数学</em>复习题<em>离散数学</em>复习题
+                                </div>
+                                <div class="desc-detail content">
+                                    <div class='article_content'>
+                                        <pre class="preclass"></pre>
+                                    </div>
+                                    <div class="hide-content"><a href="javascript:;">收起 <img
+                                                    src="https://csdnimg.cn/release/aggregate/img/arrow-down@2x.png" alt=""></a></div>
+                                </div>
+                            </div>
+
+                        </li>
+                        <li data-page="1">
+                            <div class="blog-title">
+                                <a href="https://download.csdn.net/download/mjcoolguy/1529063"
+                                   data-report-click='{"mod": "popu_876","spm": "3001.4430","dest": "https://download.csdn.net/download/mjcoolguy/1529063?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522162408685216780357248482%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D&amp;request_id=162408685216780357248482&amp;utm_term=%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6&amp;utm_medium=distribute.pc_aggpage_search_result.none-task-download-2~aggregatepage~first_rank_v2~rank_aggregation-12-1529063.pc_agg_rank_aggregation","extra": "{\&quot;utm_medium\&quot;:\&quot;distribute.pc_aggpage_search_result.none-task-download-2~aggregatepage~first_rank_v2~rank_aggregation-12-1529063.pc_agg_rank_aggregation\&quot;}","index": "11","strategy": "2~aggregatepage~first_rank_v2~rank_aggregation","biz_id": "1","ops_request_misc": "%257B%2522request%255Fid%2522%253A%2522162408685216780357248482%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D","request_id": "162408685216780357248482"}'
+                                   data-report-view='{"mod": "popu_876","spm": "3001.4430","dest": "https://download.csdn.net/download/mjcoolguy/1529063?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522162408685216780357248482%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D&amp;request_id=162408685216780357248482&amp;utm_term=%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6&amp;utm_medium=distribute.pc_aggpage_search_result.none-task-download-2~aggregatepage~first_rank_v2~rank_aggregation-12-1529063.pc_agg_rank_aggregation","extra": "{\&quot;utm_medium\&quot;:\&quot;distribute.pc_aggpage_search_result.none-task-download-2~aggregatepage~first_rank_v2~rank_aggregation-12-1529063.pc_agg_rank_aggregation\&quot;}","index": "11","strategy": "2~aggregatepage~first_rank_v2~rank_aggregation","biz_id": "1","ops_request_misc": "%257B%2522request%255Fid%2522%253A%2522162408685216780357248482%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D","request_id": "162408685216780357248482"}'
+                                   data-report-query="utm_medium=distribute.pc_aggpage_search_result.none-task-download-2~aggregatepage~first_rank_v2~rank_aggregation-12-1529063.pc_agg_rank_aggregation&utm_term=%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6&spm=3001.4430"
+                                   target="_blank" class="blog-title">
+                                    <h2><em>离散数学</em>教程 <em>离散数学</em>教程 <em>离散数学</em>教程</h2>
+                                </a>
+                                <span class="update-time">2009-07-29 16:18:47</span>
+                            </div>
+                            <div class="description">
+                                <div class="desc-detail digest">
+                                    <em>离散数学</em>教程 <em>离散数学</em>教程 <em>离散数学</em>教程 <em>离散数学</em>教程 <em>离散数学</em>教程 <em>离散数学</em>教程 <em>离散数学</em>教程
+                                </div>
+                                <div class="desc-detail content">
+                                    <div class='article_content'>
+                                        <pre class="preclass"></pre>
+                                    </div>
+                                    <div class="hide-content"><a href="javascript:;">收起 <img
+                                                    src="https://csdnimg.cn/release/aggregate/img/arrow-down@2x.png" alt=""></a></div>
+                                </div>
+                            </div>
+
+                        </li>
+                        <li data-page="1">
+                            <div class="blog-title">
+                                <a href="https://download.csdn.net/download/w251311807/657034"
+                                   data-report-click='{"mod": "popu_876","spm": "3001.4430","dest": "https://download.csdn.net/download/w251311807/657034?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522162408685216780357248482%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D&amp;request_id=162408685216780357248482&amp;utm_term=%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6&amp;utm_medium=distribute.pc_aggpage_search_result.none-task-download-2~aggregatepage~first_rank_v2~rank_aggregation-13-657034.pc_agg_rank_aggregation","extra": "{\&quot;utm_medium\&quot;:\&quot;distribute.pc_aggpage_search_result.none-task-download-2~aggregatepage~first_rank_v2~rank_aggregation-13-657034.pc_agg_rank_aggregation\&quot;}","index": "12","strategy": "2~aggregatepage~first_rank_v2~rank_aggregation","biz_id": "1","ops_request_misc": "%257B%2522request%255Fid%2522%253A%2522162408685216780357248482%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D","request_id": "162408685216780357248482"}'
+                                   data-report-view='{"mod": "popu_876","spm": "3001.4430","dest": "https://download.csdn.net/download/w251311807/657034?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522162408685216780357248482%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D&amp;request_id=162408685216780357248482&amp;utm_term=%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6&amp;utm_medium=distribute.pc_aggpage_search_result.none-task-download-2~aggregatepage~first_rank_v2~rank_aggregation-13-657034.pc_agg_rank_aggregation","extra": "{\&quot;utm_medium\&quot;:\&quot;distribute.pc_aggpage_search_result.none-task-download-2~aggregatepage~first_rank_v2~rank_aggregation-13-657034.pc_agg_rank_aggregation\&quot;}","index": "12","strategy": "2~aggregatepage~first_rank_v2~rank_aggregation","biz_id": "1","ops_request_misc": "%257B%2522request%255Fid%2522%253A%2522162408685216780357248482%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D","request_id": "162408685216780357248482"}'
+                                   data-report-query="utm_medium=distribute.pc_aggpage_search_result.none-task-download-2~aggregatepage~first_rank_v2~rank_aggregation-13-657034.pc_agg_rank_aggregation&utm_term=%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6&spm=3001.4430"
+                                   target="_blank" class="blog-title">
+                                    <h2>清华大学<em>离散数学</em>清华大学<em>离散数学</em>清华大学<em>离散数学</em>清华大学<em>离散数学</em></h2>
+                                </a>
+                                <span class="update-time">2008-09-29 11:38:43</span>
+                            </div>
+                            <div class="description">
+                                <div class="desc-detail digest">
+                                    清华大学<em>离散数学</em>清华大学<em>离散数学</em>清华大学<em>离散数学</em>清华大学<em>离散数学</em>清华大学<em>离散数学</em>清华大学<em>离散数学</em>清华大学<em>离散数学</em>清华大学<em>离散数学</em>清华大学<em>离散数学</em>
+                                </div>
+                                <div class="desc-detail content">
+                                    <div class='article_content'>
+                                        <pre class="preclass"></pre>
+                                    </div>
+                                    <div class="hide-content"><a href="javascript:;">收起 <img
+                                                    src="https://csdnimg.cn/release/aggregate/img/arrow-down@2x.png" alt=""></a></div>
+                                </div>
+                            </div>
+
+                        </li>
+                        <li data-page="1">
+                            <div class="blog-title">
+                                <a href="https://download.csdn.net/download/zbtx_168/350352"
+                                   data-report-click='{"mod": "popu_876","spm": "3001.4430","dest": "https://download.csdn.net/download/zbtx_168/350352?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522162408685216780357248482%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D&amp;request_id=162408685216780357248482&amp;utm_term=%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6&amp;utm_medium=distribute.pc_aggpage_search_result.none-task-download-2~aggregatepage~first_rank_v2~rank_aggregation-14-350352.pc_agg_rank_aggregation","extra": "{\&quot;utm_medium\&quot;:\&quot;distribute.pc_aggpage_search_result.none-task-download-2~aggregatepage~first_rank_v2~rank_aggregation-14-350352.pc_agg_rank_aggregation\&quot;}","index": "13","strategy": "2~aggregatepage~first_rank_v2~rank_aggregation","biz_id": "1","ops_request_misc": "%257B%2522request%255Fid%2522%253A%2522162408685216780357248482%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D","request_id": "162408685216780357248482"}'
+                                   data-report-view='{"mod": "popu_876","spm": "3001.4430","dest": "https://download.csdn.net/download/zbtx_168/350352?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522162408685216780357248482%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D&amp;request_id=162408685216780357248482&amp;utm_term=%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6&amp;utm_medium=distribute.pc_aggpage_search_result.none-task-download-2~aggregatepage~first_rank_v2~rank_aggregation-14-350352.pc_agg_rank_aggregation","extra": "{\&quot;utm_medium\&quot;:\&quot;distribute.pc_aggpage_search_result.none-task-download-2~aggregatepage~first_rank_v2~rank_aggregation-14-350352.pc_agg_rank_aggregation\&quot;}","index": "13","strategy": "2~aggregatepage~first_rank_v2~rank_aggregation","biz_id": "1","ops_request_misc": "%257B%2522request%255Fid%2522%253A%2522162408685216780357248482%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D","request_id": "162408685216780357248482"}'
+                                   data-report-query="utm_medium=distribute.pc_aggpage_search_result.none-task-download-2~aggregatepage~first_rank_v2~rank_aggregation-14-350352.pc_agg_rank_aggregation&utm_term=%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6&spm=3001.4430"
+                                   target="_blank" class="blog-title">
+                                    <h2><em>离散数学离散数学</em></h2>
+                                </a>
+                                <span class="update-time">2008-02-04 09:06:06</span>
+                            </div>
+                            <div class="description">
+                                <div class="desc-detail digest">
+                                    <em>离散数学离散数学离散数学</em>
+                                </div>
+                                <div class="desc-detail content">
+                                    <div class='article_content'>
+                                        <pre class="preclass"></pre>
+                                    </div>
+                                    <div class="hide-content"><a href="javascript:;">收起 <img
+                                                    src="https://csdnimg.cn/release/aggregate/img/arrow-down@2x.png" alt=""></a></div>
+                                </div>
+                            </div>
+
+                        </li>
+                        <li data-page="1">
+                            <div class="blog-title">
+                                <a href="https://download.csdn.net/download/zhangcan506/1347451"
+                                   data-report-click='{"mod": "popu_876","spm": "3001.4430","dest": "https://download.csdn.net/download/zhangcan506/1347451?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522162408685216780357248482%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D&amp;request_id=162408685216780357248482&amp;utm_term=%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6&amp;utm_medium=distribute.pc_aggpage_search_result.none-task-download-2~aggregatepage~first_rank_v2~rank_aggregation-15-1347451.pc_agg_rank_aggregation","extra": "{\&quot;utm_medium\&quot;:\&quot;distribute.pc_aggpage_search_result.none-task-download-2~aggregatepage~first_rank_v2~rank_aggregation-15-1347451.pc_agg_rank_aggregation\&quot;}","index": "14","strategy": "2~aggregatepage~first_rank_v2~rank_aggregation","biz_id": "1","ops_request_misc": "%257B%2522request%255Fid%2522%253A%2522162408685216780357248482%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D","request_id": "162408685216780357248482"}'
+                                   data-report-view='{"mod": "popu_876","spm": "3001.4430","dest": "https://download.csdn.net/download/zhangcan506/1347451?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522162408685216780357248482%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D&amp;request_id=162408685216780357248482&amp;utm_term=%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6&amp;utm_medium=distribute.pc_aggpage_search_result.none-task-download-2~aggregatepage~first_rank_v2~rank_aggregation-15-1347451.pc_agg_rank_aggregation","extra": "{\&quot;utm_medium\&quot;:\&quot;distribute.pc_aggpage_search_result.none-task-download-2~aggregatepage~first_rank_v2~rank_aggregation-15-1347451.pc_agg_rank_aggregation\&quot;}","index": "14","strategy": "2~aggregatepage~first_rank_v2~rank_aggregation","biz_id": "1","ops_request_misc": "%257B%2522request%255Fid%2522%253A%2522162408685216780357248482%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D","request_id": "162408685216780357248482"}'
+                                   data-report-query="utm_medium=distribute.pc_aggpage_search_result.none-task-download-2~aggregatepage~first_rank_v2~rank_aggregation-15-1347451.pc_agg_rank_aggregation&utm_term=%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6&spm=3001.4430"
+                                   target="_blank" class="blog-title">
+                                    <h2><em>离散数学</em>课件 <em>离散数学</em>课件 <em>离散数学</em>课件</h2>
+                                </a>
+                                <span class="update-time">2009-05-25 08:23:25</span>
+                            </div>
+                            <div class="description">
+                                <div class="desc-detail digest">
+                                    蔡振华 <em>离散数学</em> 课件 蔡振华 <em>离散数学</em> 课件 蔡振华 <em>离散数学</em> 课件
+                                </div>
+                                <div class="desc-detail content">
+                                    <div class='article_content'>
+                                        <pre class="preclass"></pre>
+                                    </div>
+                                    <div class="hide-content"><a href="javascript:;">收起 <img
+                                                    src="https://csdnimg.cn/release/aggregate/img/arrow-down@2x.png" alt=""></a></div>
+                                </div>
+                            </div>
+
+                        </li>
+                        <li data-page="1">
+                            <div class="blog-title">
+                                <a href="https://download.csdn.net/download/fatereverie/2364159"
+                                   data-report-click='{"mod": "popu_876","spm": "3001.4430","dest": "https://download.csdn.net/download/fatereverie/2364159?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522162408685216780357248482%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D&amp;request_id=162408685216780357248482&amp;utm_term=%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6&amp;utm_medium=distribute.pc_aggpage_search_result.none-task-download-2~aggregatepage~first_rank_v2~rank_aggregation-16-2364159.pc_agg_rank_aggregation","extra": "{\&quot;utm_medium\&quot;:\&quot;distribute.pc_aggpage_search_result.none-task-download-2~aggregatepage~first_rank_v2~rank_aggregation-16-2364159.pc_agg_rank_aggregation\&quot;}","index": "15","strategy": "2~aggregatepage~first_rank_v2~rank_aggregation","biz_id": "1","ops_request_misc": "%257B%2522request%255Fid%2522%253A%2522162408685216780357248482%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D","request_id": "162408685216780357248482"}'
+                                   data-report-view='{"mod": "popu_876","spm": "3001.4430","dest": "https://download.csdn.net/download/fatereverie/2364159?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522162408685216780357248482%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D&amp;request_id=162408685216780357248482&amp;utm_term=%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6&amp;utm_medium=distribute.pc_aggpage_search_result.none-task-download-2~aggregatepage~first_rank_v2~rank_aggregation-16-2364159.pc_agg_rank_aggregation","extra": "{\&quot;utm_medium\&quot;:\&quot;distribute.pc_aggpage_search_result.none-task-download-2~aggregatepage~first_rank_v2~rank_aggregation-16-2364159.pc_agg_rank_aggregation\&quot;}","index": "15","strategy": "2~aggregatepage~first_rank_v2~rank_aggregation","biz_id": "1","ops_request_misc": "%257B%2522request%255Fid%2522%253A%2522162408685216780357248482%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D","request_id": "162408685216780357248482"}'
+                                   data-report-query="utm_medium=distribute.pc_aggpage_search_result.none-task-download-2~aggregatepage~first_rank_v2~rank_aggregation-16-2364159.pc_agg_rank_aggregation&utm_term=%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6&spm=3001.4430"
+                                   target="_blank" class="blog-title">
+                                    <h2><em>离散数学</em> 经典啊 <em>离散数学</em> <em>离散数学</em></h2>
+                                </a>
+                                <span class="update-time">2010-05-17 22:03:33</span>
+                            </div>
+                            <div class="description">
+                                <div class="desc-detail digest">
+                                    <em>离散数学</em> 很经典的一本书 学习信号的最好要看一下
+                                </div>
+                                <div class="desc-detail content">
+                                    <div class='article_content'>
+                                        <pre class="preclass"></pre>
+                                    </div>
+                                    <div class="hide-content"><a href="javascript:;">收起 <img
+                                                    src="https://csdnimg.cn/release/aggregate/img/arrow-down@2x.png" alt=""></a></div>
+                                </div>
+                            </div>
+
+                        </li>
+                        <li data-page="1">
+                            <div class="blog-title">
+                                <a href="https://download.csdn.net/download/abc316647586/2354377"
+                                   data-report-click='{"mod": "popu_876","spm": "3001.4430","dest": "https://download.csdn.net/download/abc316647586/2354377?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522162408685216780357248482%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D&amp;request_id=162408685216780357248482&amp;utm_term=%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6&amp;utm_medium=distribute.pc_aggpage_search_result.none-task-download-2~aggregatepage~first_rank_v2~rank_aggregation-17-2354377.pc_agg_rank_aggregation","extra": "{\&quot;utm_medium\&quot;:\&quot;distribute.pc_aggpage_search_result.none-task-download-2~aggregatepage~first_rank_v2~rank_aggregation-17-2354377.pc_agg_rank_aggregation\&quot;}","index": "16","strategy": "2~aggregatepage~first_rank_v2~rank_aggregation","biz_id": "1","ops_request_misc": "%257B%2522request%255Fid%2522%253A%2522162408685216780357248482%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D","request_id": "162408685216780357248482"}'
+                                   data-report-view='{"mod": "popu_876","spm": "3001.4430","dest": "https://download.csdn.net/download/abc316647586/2354377?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522162408685216780357248482%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D&amp;request_id=162408685216780357248482&amp;utm_term=%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6&amp;utm_medium=distribute.pc_aggpage_search_result.none-task-download-2~aggregatepage~first_rank_v2~rank_aggregation-17-2354377.pc_agg_rank_aggregation","extra": "{\&quot;utm_medium\&quot;:\&quot;distribute.pc_aggpage_search_result.none-task-download-2~aggregatepage~first_rank_v2~rank_aggregation-17-2354377.pc_agg_rank_aggregation\&quot;}","index": "16","strategy": "2~aggregatepage~first_rank_v2~rank_aggregation","biz_id": "1","ops_request_misc": "%257B%2522request%255Fid%2522%253A%2522162408685216780357248482%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D","request_id": "162408685216780357248482"}'
+                                   data-report-query="utm_medium=distribute.pc_aggpage_search_result.none-task-download-2~aggregatepage~first_rank_v2~rank_aggregation-17-2354377.pc_agg_rank_aggregation&utm_term=%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6&spm=3001.4430"
+                                   target="_blank" class="blog-title">
+                                    <h2><em>离散数学</em>资源<em>离散数学</em>资源</h2>
+                                </a>
+                                <span class="update-time">2010-05-15 01:50:15</span>
+                            </div>
+                            <div class="description">
+                                <div class="desc-detail digest">
+                                    <em>离散数学</em>资源<em>离散数学</em>资源<em>离散数学</em>资源<em>离散数学</em>资源
+                                </div>
+                                <div class="desc-detail content">
+                                    <div class='article_content'>
+                                        <pre class="preclass"></pre>
+                                    </div>
+                                    <div class="hide-content"><a href="javascript:;">收起 <img
+                                                    src="https://csdnimg.cn/release/aggregate/img/arrow-down@2x.png" alt=""></a></div>
+                                </div>
+                            </div>
+
+                        </li>
+                        <li data-page="1">
+                            <div class="blog-title">
+                                <a href="https://download.csdn.net/download/wuqiuqun/1895832"
+                                   data-report-click='{"mod": "popu_876","spm": "3001.4430","dest": "https://download.csdn.net/download/wuqiuqun/1895832?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522162408685216780357248482%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D&amp;request_id=162408685216780357248482&amp;utm_term=%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6&amp;utm_medium=distribute.pc_aggpage_search_result.none-task-download-2~aggregatepage~first_rank_v2~rank_aggregation-18-1895832.pc_agg_rank_aggregation","extra": "{\&quot;utm_medium\&quot;:\&quot;distribute.pc_aggpage_search_result.none-task-download-2~aggregatepage~first_rank_v2~rank_aggregation-18-1895832.pc_agg_rank_aggregation\&quot;}","index": "17","strategy": "2~aggregatepage~first_rank_v2~rank_aggregation","biz_id": "1","ops_request_misc": "%257B%2522request%255Fid%2522%253A%2522162408685216780357248482%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D","request_id": "162408685216780357248482"}'
+                                   data-report-view='{"mod": "popu_876","spm": "3001.4430","dest": "https://download.csdn.net/download/wuqiuqun/1895832?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522162408685216780357248482%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D&amp;request_id=162408685216780357248482&amp;utm_term=%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6&amp;utm_medium=distribute.pc_aggpage_search_result.none-task-download-2~aggregatepage~first_rank_v2~rank_aggregation-18-1895832.pc_agg_rank_aggregation","extra": "{\&quot;utm_medium\&quot;:\&quot;distribute.pc_aggpage_search_result.none-task-download-2~aggregatepage~first_rank_v2~rank_aggregation-18-1895832.pc_agg_rank_aggregation\&quot;}","index": "17","strategy": "2~aggregatepage~first_rank_v2~rank_aggregation","biz_id": "1","ops_request_misc": "%257B%2522request%255Fid%2522%253A%2522162408685216780357248482%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D","request_id": "162408685216780357248482"}'
+                                   data-report-query="utm_medium=distribute.pc_aggpage_search_result.none-task-download-2~aggregatepage~first_rank_v2~rank_aggregation-18-1895832.pc_agg_rank_aggregation&utm_term=%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6&spm=3001.4430"
+                                   target="_blank" class="blog-title">
+                                    <h2><em>离散数学</em>答案<em>离散数学</em>答案</h2>
+                                </a>
+                                <span class="update-time">2009-12-12 14:54:31</span>
+                            </div>
+                            <div class="description">
+                                <div class="desc-detail digest">
+                                    <em>离散数学</em>答案<em>离散数学</em>答案<em>离散数学</em>答案<em>离散数学</em>答案
+                                </div>
+                                <div class="desc-detail content">
+                                    <div class='article_content'>
+                                        <pre class="preclass"></pre>
+                                    </div>
+                                    <div class="hide-content"><a href="javascript:;">收起 <img
+                                                    src="https://csdnimg.cn/release/aggregate/img/arrow-down@2x.png" alt=""></a></div>
+                                </div>
+                            </div>
+
+                        </li>
+                        <li data-page="1">
+                            <div class="blog-title">
+                                <a href="https://download.csdn.net/download/baogehaohao/1806985"
+                                   data-report-click='{"mod": "popu_876","spm": "3001.4430","dest": "https://download.csdn.net/download/baogehaohao/1806985?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522162408685216780357248482%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D&amp;request_id=162408685216780357248482&amp;utm_term=%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6&amp;utm_medium=distribute.pc_aggpage_search_result.none-task-download-2~aggregatepage~first_rank_v2~rank_aggregation-19-1806985.pc_agg_rank_aggregation","extra": "{\&quot;utm_medium\&quot;:\&quot;distribute.pc_aggpage_search_result.none-task-download-2~aggregatepage~first_rank_v2~rank_aggregation-19-1806985.pc_agg_rank_aggregation\&quot;}","index": "18","strategy": "2~aggregatepage~first_rank_v2~rank_aggregation","biz_id": "1","ops_request_misc": "%257B%2522request%255Fid%2522%253A%2522162408685216780357248482%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D","request_id": "162408685216780357248482"}'
+                                   data-report-view='{"mod": "popu_876","spm": "3001.4430","dest": "https://download.csdn.net/download/baogehaohao/1806985?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522162408685216780357248482%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D&amp;request_id=162408685216780357248482&amp;utm_term=%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6&amp;utm_medium=distribute.pc_aggpage_search_result.none-task-download-2~aggregatepage~first_rank_v2~rank_aggregation-19-1806985.pc_agg_rank_aggregation","extra": "{\&quot;utm_medium\&quot;:\&quot;distribute.pc_aggpage_search_result.none-task-download-2~aggregatepage~first_rank_v2~rank_aggregation-19-1806985.pc_agg_rank_aggregation\&quot;}","index": "18","strategy": "2~aggregatepage~first_rank_v2~rank_aggregation","biz_id": "1","ops_request_misc": "%257B%2522request%255Fid%2522%253A%2522162408685216780357248482%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Faggregatepage.%2522%257D","request_id": "162408685216780357248482"}'
+                                   data-report-query="utm_medium=distribute.pc_aggpage_search_result.none-task-download-2~aggregatepage~first_rank_v2~rank_aggregation-19-1806985.pc_agg_rank_aggregation&utm_term=%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6&spm=3001.4430"
+                                   target="_blank" class="blog-title">
+                                    <h2><em>离散数学</em>答案 <em>离散数学</em>答案</h2>
+                                </a>
+                                <span class="update-time">2009-11-10 21:59:57</span>
+                            </div>
+                            <div class="description">
+                                <div class="desc-detail digest">
+                                    <em>离散数学</em>答案 <em>离散数学</em>答案 <em>离散数学</em>答案 <em>离散数学</em>答案
+                                </div>
+                                <div class="desc-detail content">
+                                    <div class='article_content'>
+                                        <pre class="preclass"></pre>
+                                    </div>
+                                    <div class="hide-content"><a href="javascript:;">收起 <img
+                                                    src="https://csdnimg.cn/release/aggregate/img/arrow-down@2x.png" alt=""></a></div>
+                                </div>
+                            </div>
+
+                        </li>
+                </ul>
+            </div>
+
+            <div class="tab-bd wrap-download">
+                <div class="qa-list"></div>
+                <div class="qa-no-data hide">
+                    <img src="https://csdnimg.cn/release/blogv2/dist/pc/img/monkeyWhite.png" alt="">
+                    <p style="color: #6b6b6b;font-size: 16px;font-weight: bold;letter-spacing: 2px;">空空如也</p>
+                </div>
+            </div>
+
+            <div class="tab-bd wrap-qa">
+                <div class="qa-list"></div>
+                <div class="qa-no-data hide">
+                    <img src="https://csdnimg.cn/release/blogv2/dist/pc/img/monkeyWhite.png" alt="">
+                    <p style="color: #6b6b6b;font-size: 16px;font-weight: bold;letter-spacing: 2px;">空空如也</p>
+                </div>
+            </div>
+
+            <div class="wrap-pagination">
+                <div class="ftl_page">
+
+ <script>  
+    console.log("pageNum", `1`)
+    console.log("pages", `20`)
+    console.log("toalNum", `400`)
+</script>
+
+ <div class="search-result-pagination"> 
+         <div class="csdn-pagination hide-set">
+            <span class="page-nav">
+                    <a class="disable iconfont icon-fanhui btn btn-xs btn-default btn-prev checklogin" href="javascript:;"></a> 
 
 
+                    
+                        <a href="?platform=pc&page=1&pageSize=20"  page_num="1" class="btn btn-xs btn-default active checklogin">1</a> 
+                    
+                    
+                        <a href="?platform=pc&page=2&pageSize=20"  page_num="2" class="btn btn-xs btn-default checklogin">2</a> 
+                    
+                    
+                        <a href="?platform=pc&page=3&pageSize=20"  page_num="3" class="btn btn-xs btn-default checklogin">3</a> 
+                    
+                    
+                        <a href="?platform=pc&page=4&pageSize=20"  page_num="4" class="btn btn-xs btn-default checklogin">4</a> 
+                    
+                    
+                        <a href="?platform=pc&page=5&pageSize=20"  page_num="5" class="btn btn-xs btn-default checklogin">5</a> 
+                    
+                        <span class="ellipsis">...</span> 
+                    
+                        <a href="?platform=pc&page=20&pageSize=20"  page_num="20" class="btn btn-xs btn-default checklogin">20</a> 
+                    
 
-<div class="media-test"></div>
+                    <a href="?platform=pc&page=2&pageSize=20" page_num="2" class="iconfont icon-fanhui btn btn-xs btn-default btn-next checklogin"></a>
+            </span>
+        </div>
+   
+</div>                </div>
+                <div class="ant_page hide" style="padding-top: 10px;background-color: #fff;"></div>
+            </div>
 
-<div id="announcements">
-  <div id="announce-geoip-suggestion" class="mzp-c-notification-bar mzp-t-warning">
-    <button
-      class="mzp-c-notification-bar-button close-button"
-      data-close-id="announce-geoip-suggestion"
-      type="button"
-      data-close-memory="remember"
-      data-close-type="remove"
-    >
-    </button>
-    <p></p>
-  </div>
-
-
-  
-  
-</div>
-
-<header class="mzp-c-navigation sumo-nav">
-  <div class="mzp-c-navigation-l-content">
-    <div class="sumo-nav--container">
-      <div class="sumo-nav--logo">
-        <a href="/en-US/"><img src="https://static-media-prod-cdn.itsre-sumo.mozilla.net/static/sumo/img/mozilla-support.svg" alt="Mozilla Support Logo"/></a>
-      </div>
-
-      <button data-mobile-nav-search-button class="sumo-nav--search-button" type="button">Search</button>
-      <button data-sumo-toggle-nav="#main-navigation" class="sumo-nav--toggle-button" type="button" aria-controls="main-navigation">Menu</button>
-      <a class="sumo-nav--avatar-button" data-sumo-toggle-nav="#profile-navigation" aria-controls="profile-navigation" aria-role="button">
-        
-        <img class="avatar" src="https://static-media-prod-cdn.itsre-sumo.mozilla.net/static/sumo/img/default-FFA-avatar.png" alt="Avatar for Username">
-        
-
-      </a>
-      <div class="mzp-c-navigation-items sumo-nav--list-wrap" id="main-navigation">
-        <div class="mzp-c-navigation-menu">
-          <nav class="mzp-c-menu mzp-is-basic">
-              
-              <ul class="mzp-c-menu-category-list sumo-nav--list">
-                
-  
-    
-      
-    
-  
-  <li class="mzp-c-menu-category mzp-has-drop-down mzp-js-expandable">
-    <a class="mzp-c-menu-title sumo-nav--link" href="/en-US/questions" aria-haspopup="true" aria-controls="mzp-c-menu-panel-help">Get Help</a>
-    <div class="mzp-c-menu-panel mzp-has-card" id="mzp-c-menu-panel-help">
-      <div class="sumo-nav--dropdown-container">
-        <div class="sumo-nav--dropdown-grid">
-          <button class="mzp-c-menu-button-close" type="button" aria-controls="mzp-c-menu-panel-example">Close Firefox menu</button>
-          <div class="sumo-nav--dropdown-col">
-            <section class="mzp-c-menu-item mzp-has-icon sumo-nav--dropdown-item">
-              <a class="mzp-c-menu-item-link" href="/en-US/questions/new">
-                <svg class="mzp-c-menu-item-icon" width="24" height="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g stroke="#000" stroke-width="2" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"><path d="M11 3H4a2 2 0 00-2 2v12a2 2 0 002 2h9l2 4 2-4h2a2 2 0 002-2v-6"/><path d="M17.5 2.5a2.121 2.121 0 013 3L13 13l-4 1 1-4 7.5-7.5z"/></g></svg>
-                <h4 class="mzp-c-menu-item-title">Ask the Community</h4>
-                <p class="mzp-c-menu-item-desc">
-                  Create a thread and find answers by posting a question to any of our product support forums.
-                </p>
-              </a>
-              <ul class="mzp-c-menu-item-list sumo-nav--sublist">
-                <li><a href="/questions/new/desktop">Firefox Browser</a></li>
-                <li><a href="/questions/new/firefox-private-network">Firefox Private Network</a></li>
-                <li><a href="/questions/new/ios">Firefox for iOS</a></li>
-                <li><a href="/questions/new/firefox-lockwise">Firefox Lockwise</a></li>
-                <li><a href="/questions/new/mobile">Firefox for Android</a></li>
-                <li><a class="color-link" href="/en-US/questions">Browse All Product Forums</a></li>
-              </ul>
-            </section>
-           </div>
-           <div class="sumo-nav--dropdown-col">
-             <section class="mzp-c-menu-item mzp-has-icon sumo-nav--dropdown-item">
-               <a class="mzp-c-menu-item-link" href="/products">
-                 <svg class="mzp-c-menu-item-icon" width="24" height="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g transform="translate(3 3)" stroke="#000" stroke-width="2" fill="none" fill-rule="evenodd" stroke-linecap="round"><rect stroke-linejoin="round" width="18" height="18" rx="2"/><path d="M4 5h10M4 9h10M4 13h4"/></g></svg>
-                 <h4 class="mzp-c-menu-item-title">Explore Our Help Articles</h4>
-                 <p class="mzp-c-menu-item-desc">
-                   Dig into the knowledge base, tips and tricks, troubleshooting, and so much more.
-                 </p>
-               </a>
-               <ul class="mzp-c-menu-item-list sumo-nav--sublist">
-                 <li><a href="/products/firefox">Firefox Browser</a></li>
-                 <li><a href="/products/firefox-private-network">Firefox Private Network</a></li>
-                 <li><a href="/products/ios">Firefox for iOS</a></li>
-                 <li><a href="/products/firefox-lockwise">Firefox Lockwise</a></li>
-                 <li><a href="/products/mobile">Firefox for Android</a></li>
-                 <li><a class="color-link" href="/products">See All Articles</a></li>
-               </ul>
-             </section>
+        </div>
+    </div>
+    <div class="con-r-tag">
+        <div class="collect-and-boutique">
+            <div>
+                <span>收藏数</span>
+                    <span>13,621</span>
+            </div>
+            <div>
+                <span>精华内容</span>
+                    <span>5,448</span>
             </div>
         </div>
-      </div>
+        <div class="hot-tags">
+            <div>热门标签</div>
+            <ul class="clearfloat">
+                    <li>
+                        <a href=""
+                           target="_blank"
+                           data-report-click='{"spm":"3001.4431","dest":""}'
+                           data-report-query="spm=3001.4431">
+                            离散数学笔记
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.csdn.net/tags/MtjaUg3sMjQzMzktYmxvZwO0O0OO0O0O.html"
+                           target="_blank"
+                           data-report-click='{"spm":"3001.4431","dest":"https://www.csdn.net/tags/MtjaUg3sMjQzMzktYmxvZwO0O0OO0O0O.html"}'
+                           data-report-query="spm=3001.4431">
+                            离散数学答案
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.csdn.net/tags/MtTaYg5sMjc2MzMtYmxvZwO0O0OO0O0O.html"
+                           target="_blank"
+                           data-report-click='{"spm":"3001.4431","dest":"https://www.csdn.net/tags/MtTaYg5sMjc2MzMtYmxvZwO0O0OO0O0O.html"}'
+                           data-report-query="spm=3001.4431">
+                            离散数学复习
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.csdn.net/tags/MtTakg0sMTQ1MTgtYmxvZwO0O0OO0O0O.html"
+                           target="_blank"
+                           data-report-click='{"spm":"3001.4431","dest":"https://www.csdn.net/tags/MtTakg0sMTQ1MTgtYmxvZwO0O0OO0O0O.html"}'
+                           data-report-query="spm=3001.4431">
+                            离散数学期末复习
+                        </a>
+                    </li>
+                    <li>
+                        <a href=""
+                           target="_blank"
+                           data-report-click='{"spm":"3001.4431","dest":""}'
+                           data-report-query="spm=3001.4431">
+                            离散
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.csdn.net/tags/MtTacgwsMDE3ODUtYmxvZwO0O0OO0O0O.html"
+                           target="_blank"
+                           data-report-click='{"spm":"3001.4431","dest":"https://www.csdn.net/tags/MtTacgwsMDE3ODUtYmxvZwO0O0OO0O0O.html"}'
+                           data-report-query="spm=3001.4431">
+                            离散数学实验
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.csdn.net/tags/MtTaMgxsNjg5NDItYmxvZwO0O0OO0O0O.html"
+                           target="_blank"
+                           data-report-click='{"spm":"3001.4431","dest":"https://www.csdn.net/tags/MtTaMgxsNjg5NDItYmxvZwO0O0OO0O0O.html"}'
+                           data-report-query="spm=3001.4431">
+                            离散数学思维导图
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.csdn.net/tags/MtTacgwsMDE2NjYtYmxvZwO0O0OO0O0O.html"
+                           target="_blank"
+                           data-report-click='{"spm":"3001.4431","dest":"https://www.csdn.net/tags/MtTacgwsMDE2NjYtYmxvZwO0O0OO0O0O.html"}'
+                           data-report-query="spm=3001.4431">
+                            离散数学知识点
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.csdn.net/tags/MtTaIgysMDI2NjAtYmxvZwO0O0OO0O0O.html"
+                           target="_blank"
+                           data-report-click='{"spm":"3001.4431","dest":"https://www.csdn.net/tags/MtTaIgysMDI2NjAtYmxvZwO0O0OO0O0O.html"}'
+                           data-report-query="spm=3001.4431">
+                            离散数学第二版
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.csdn.net/tags/MtjaQgysMzY5MzEtYmxvZwO0O0OO0O0O.html"
+                           target="_blank"
+                           data-report-click='{"spm":"3001.4431","dest":"https://www.csdn.net/tags/MtjaQgysMzY5MzEtYmxvZwO0O0OO0O0O.html"}'
+                           data-report-query="spm=3001.4431">
+                            离散数学实验报告
+                        </a>
+                    </li>
+            </ul>
+        </div>
+
+        <div class="hot-brand hide" style="margin-top: 8px;background-color: #fff;"></div>
+
+        <div class="hot-tags keywords">
+            关键字：<h1>离散数学 </h1>
+        </div>
+
+
+
+        <div class="bottom-part">
+            <div class="persion_article" style="width:300px;margin-top: 8px;"></div>
+        </div>
+        <script src="https://g.csdnimg.cn/common/csdn-footer/csdn-footer.js" data-isfootertrack="false"></script>
     </div>
-  </li>
-  
-
-  <li class="mzp-c-menu-category">
-    <a class="mzp-c-menu-title sumo-nav--link" href="/en-US/get-involved">Volunteer</a>
-  </li>
-
-              </ul>
-              
-          </nav>
-        </div>
-      </div>
-
-      <div class="mzp-c-navigation-items sumo-nav--list-wrap-right logged-out" id="profile-navigation">
-        <div class="mzp-c-navigation-menu">
-          <nav class="mzp-c-menu mzp-is-basic">
-              
-              <ul class="mzp-c-menu-category-list sumo-nav--list">
-                
-
-<li class="mzp-c-menu-category sumo-nav--item-right">
-  
-  <form data-instant-search="form" id="support-search" action="/en-US/search" method="get"  class="simple-search-form">
-    
-    <input type="search" autocomplete="off" name="q" aria-required="true" placeholder="Find help..." class="searchbox" id="search-q" />
-    <button type="submit" title="Search" class="search-button">Search</button>
-  </form>
-
-
-  
-    
-    <a href="https://www.mozilla.org/firefox/new/?utm_source=support.mozilla.org&amp;utm_medium=referral&amp;utm_campaign=non-fx-button&amp;utm_content=header-download-button" class="firefox-download-button hidden sumo-button primary-button button-lg" data-event-category="Download Button" data-event-action="Firefox for Desktop">Download Firefox</a>
-  
-</li>
-
-
-<li class="mzp-c-menu-category logged-out-button-row ">
-  
-    <a href="/en-US/users/auth" class="sumo-button secondary-button button-lg" data-event-category="navigation" data-event-action="main navigation" data-event-label="Sign In">Sign In/Up</a>
-  
-</li>
-
-              </ul>
-              
-          </nav>
-        </div>
-      </div>
-      <div class="mzp-c-navigation-items sumo-nav--mobile-search-form" id="search-navigation">
-        <div class="mzp-c-navigation-menu">
-          <nav class="mzp-c-menu mzp-is-basic">
-            
-  <form data-instant-search="form" id="mobile-search-results" action="/en-US/search" method="get"  class="simple-search-form">
-    
-    <input type="search" autocomplete="off" name="q" aria-required="true" placeholder="Find help..." class="searchbox" id="search-q" />
-    <button type="submit" title="Search" class="search-button">Search</button>
-  </form>
-
-          </nav>
-        </div>
-      </div>
-    </div>
-  </div>
-</header><!--/.mzp-c-navigation -->
-
-
-
-
-
-<section class="home-search-section sumo-page-section--lg extra-pad-bottom shade-bg">
-  <div class="mzp-l-content narrow">
-    <div class="home-search-section--content">
-      <h1 class="sumo-page-heading-xl">Search Support</h1>
-      
-  <form data-instant-search="form" id="support-search-masthead" action="/en-US/search" method="get"  class="simple-search-form">
-    
-    <input type="search" autocomplete="off" name="q" aria-required="true" placeholder="Find help..." class="searchbox" id="search-q" />
-    <button type="submit" title="Search" class="search-button">Search</button>
-  </form>
-
-
-      <p class="popular-searches">
-        <span>Popular Searches:</span>
-        <a href="#popular_search_1" data-featured-search>Firefox Accounts</a>
-        <a href="#popular_search_2" data-featured-search>VPN</a>
-        <a href="#popular_search_3" data-featured-search>Tracking Protection</a>
-      </p>
-    </div>
-  </div>
-</section>
-
-
-
-
-
-<div id="main-content">
-  <section class="mzp-l-content sumo-page-section--inner">
-    <div class="text-center-to-left-on-large">
-      <h2 class="sumo-page-subheading">Get Help</h2>
-      <p class="sumo-page-intro">Pick your product</p>
-    </div>
-    <div class="sumo-card-grid is-product-wrap" style="--cg-count: 14;">
-  <div class="scroll-wrap">
-    
-      <div class="card card--product zoom-on-hover">
-        
-          
-        
-
-          <img class="card--icon" src="https://user-media-prod-cdn.itsre-sumo.mozilla.net/uploads/products/2020-04-14-08-36-12-8dda6f.png" alt="Firefox" />
-          <div class="card--details">
-            <h3 class="card--title">
-              <a class="expand-this-link" href="/en-US/products/firefox" data-event-category="link click" data-event-action="product" data-event-label="Firefox">
-                Firefox
-              </a>
-            </h3>
-            <p class="card--desc">Web browser for Windows, Mac and Linux</p>
-          </div>
-      </div>
-    
-      <div class="card card--product zoom-on-hover">
-        
-          
-        
-
-          <img class="card--icon" src="https://user-media-prod-cdn.itsre-sumo.mozilla.net/uploads/products/2020-04-14-08-37-28-a0d9f0.png" alt="Firefox for Android" />
-          <div class="card--details">
-            <h3 class="card--title">
-              <a class="expand-this-link" href="/en-US/products/mobile" data-event-category="link click" data-event-action="product" data-event-label="Firefox for Android">
-                Firefox for Android
-              </a>
-            </h3>
-            <p class="card--desc">Web browser for Android smartphones and tablets</p>
-          </div>
-      </div>
-    
-      <div class="card card--product zoom-on-hover">
-        
-          
-        
-
-          <img class="card--icon" src="https://user-media-prod-cdn.itsre-sumo.mozilla.net/uploads/products/2020-04-14-08-37-48-1aeaf0.png" alt="Firefox for iOS" />
-          <div class="card--details">
-            <h3 class="card--title">
-              <a class="expand-this-link" href="/en-US/products/ios" data-event-category="link click" data-event-action="product" data-event-label="Firefox for iOS">
-                Firefox for iOS
-              </a>
-            </h3>
-            <p class="card--desc">Firefox for iPhone, iPad and iPod touch devices</p>
-          </div>
-      </div>
-    
-      <div class="card card--product zoom-on-hover">
-        
-          
-        
-
-          <img class="card--icon" src="https://user-media-prod-cdn.itsre-sumo.mozilla.net/uploads/products/2020-04-14-08-36-42-8dda6f.png" alt="Firefox for Enterprise" />
-          <div class="card--details">
-            <h3 class="card--title">
-              <a class="expand-this-link" href="/en-US/products/firefox-enterprise" data-event-category="link click" data-event-action="product" data-event-label="Firefox for Enterprise">
-                Firefox for Enterprise
-              </a>
-            </h3>
-            <p class="card--desc">Firefox Quantum for businesses</p>
-          </div>
-      </div>
-    
-      <div class="card card--product zoom-on-hover">
-        
-          
-        
-
-          <img class="card--icon" src="https://user-media-prod-cdn.itsre-sumo.mozilla.net/uploads/products/2020-04-14-08-46-26-08f689.png" alt="Firefox Lite" />
-          <div class="card--details">
-            <h3 class="card--title">
-              <a class="expand-this-link" href="/en-US/products/firefox-lite" data-event-category="link click" data-event-action="product" data-event-label="Firefox Lite">
-                Firefox Lite
-              </a>
-            </h3>
-            <p class="card--desc">Mobile browser for Indonesia, India, The Philippines, and Thailand</p>
-          </div>
-      </div>
-    
-      <div class="card card--product zoom-on-hover">
-        
-          
-        
-
-          <img class="card--icon" src="https://user-media-prod-cdn.itsre-sumo.mozilla.net/uploads/products/2020-04-14-08-45-52-01797f.png" alt="Firefox Reality" />
-          <div class="card--details">
-            <h3 class="card--title">
-              <a class="expand-this-link" href="/en-US/products/firefox-reality" data-event-category="link click" data-event-action="product" data-event-label="Firefox Reality">
-                Firefox Reality
-              </a>
-            </h3>
-            <p class="card--desc">Web browser for virtual reality headsets</p>
-          </div>
-      </div>
-    
-      <div class="card card--product zoom-on-hover">
-        
-          
-        
-
-          <img class="card--icon" src="https://user-media-prod-cdn.itsre-sumo.mozilla.net/uploads/products/2020-07-14-17-10-01-e9ae16.png" alt="Mozilla VPN" />
-          <div class="card--details">
-            <h3 class="card--title">
-              <a class="expand-this-link" href="/en-US/products/firefox-private-network-vpn" data-event-category="link click" data-event-action="product" data-event-label="Mozilla VPN">
-                Mozilla VPN
-              </a>
-            </h3>
-            <p class="card--desc">VPN for Windows 10, Mac, Linux, Android, and iOS devices</p>
-          </div>
-      </div>
-    
-      <div class="card card--product zoom-on-hover">
-        
-          
-        
-
-          <img class="card--icon" src="https://user-media-prod-cdn.itsre-sumo.mozilla.net/uploads/products/2020-08-04-08-27-27-baec64.png" alt="Firefox Private Network" />
-          <div class="card--details">
-            <h3 class="card--title">
-              <a class="expand-this-link" href="/en-US/products/firefox-private-network" data-event-category="link click" data-event-action="product" data-event-label="Firefox Private Network">
-                Firefox Private Network
-              </a>
-            </h3>
-            <p class="card--desc">Browse securely on public Wi-Fi using a Firefox add-on.</p>
-          </div>
-      </div>
-    
-      <div class="card card--product zoom-on-hover">
-        
-          
-        
-
-          <img class="card--icon" src="https://user-media-prod-cdn.itsre-sumo.mozilla.net/uploads/products/2020-04-14-08-45-38-8caccd.png" alt="Firefox Lockwise" />
-          <div class="card--details">
-            <h3 class="card--title">
-              <a class="expand-this-link" href="/en-US/products/firefox-lockwise" data-event-category="link click" data-event-action="product" data-event-label="Firefox Lockwise">
-                Firefox Lockwise
-              </a>
-            </h3>
-            <p class="card--desc">Mobile app that gives you access to passwords you've saved to Firefox.</p>
-          </div>
-      </div>
-    
-      <div class="card card--product zoom-on-hover">
-        
-          
-        
-
-          <img class="card--icon" src="https://user-media-prod-cdn.itsre-sumo.mozilla.net/uploads/products/2020-04-14-08-46-59-72ba12.png" alt="Firefox ScreenshotGo" />
-          <div class="card--details">
-            <h3 class="card--title">
-              <a class="expand-this-link" href="/en-US/products/screenshot-go" data-event-category="link click" data-event-action="product" data-event-label="Firefox ScreenshotGo">
-                Firefox ScreenshotGo
-              </a>
-            </h3>
-            <p class="card--desc">Screenshot app for mobile</p>
-          </div>
-      </div>
-    
-      <div class="card card--product zoom-on-hover">
-        
-          
-        
-
-          <img class="card--icon" src="https://user-media-prod-cdn.itsre-sumo.mozilla.net/uploads/products/2020-11-09-13-02-56-d55d1d.png" alt="Hubs" />
-          <div class="card--details">
-            <h3 class="card--title">
-              <a class="expand-this-link" href="/en-US/products/hubs" data-event-category="link click" data-event-action="product" data-event-label="Hubs">
-                Hubs
-              </a>
-            </h3>
-            <p class="card--desc">Virtual 3D meeting spaces for collaborating with friends, family, and colleagues on your browser or VR headset</p>
-          </div>
-      </div>
-    
-      <div class="card card--product zoom-on-hover">
-        
-          
-        
-
-          <img class="card--icon" src="https://user-media-prod-cdn.itsre-sumo.mozilla.net/uploads/products/2020-04-14-08-43-46-836ad6.png" alt="Firefox for Amazon Devices" />
-          <div class="card--details">
-            <h3 class="card--title">
-              <a class="expand-this-link" href="/en-US/products/firefox-amazon-devices" data-event-category="link click" data-event-action="product" data-event-label="Firefox for Amazon Devices">
-                Firefox for Amazon Devices
-              </a>
-            </h3>
-            <p class="card--desc">Browser for Amazon devices</p>
-          </div>
-      </div>
-    
-      <div class="card card--product zoom-on-hover">
-        
-          
-        
-
-          <img class="card--icon" src="https://user-media-prod-cdn.itsre-sumo.mozilla.net/uploads/products/2020-04-14-08-47-12-0d1c59.png" alt="Thunderbird" />
-          <div class="card--details">
-            <h3 class="card--title">
-              <a class="expand-this-link" href="/en-US/products/thunderbird" data-event-category="link click" data-event-action="product" data-event-label="Thunderbird">
-                Thunderbird
-              </a>
-            </h3>
-            <p class="card--desc">Email software for Windows, Mac and Linux</p>
-          </div>
-      </div>
-    
-      <div class="card card--product zoom-on-hover">
-        
-          
-        
-
-          <img class="card--icon" src="https://user-media-prod-cdn.itsre-sumo.mozilla.net/uploads/products/2020-04-14-08-46-45-f56efb.png" alt="Firefox Focus" />
-          <div class="card--details">
-            <h3 class="card--title">
-              <a class="expand-this-link" href="/en-US/products/focus-firefox" data-event-category="link click" data-event-action="product" data-event-label="Firefox Focus">
-                Firefox Focus
-              </a>
-            </h3>
-            <p class="card--desc">Automatic privacy browser and content blocker</p>
-          </div>
-      </div>
-    
-  </div>
-</div>
-  </section>
-  
-    <section class="mzp-l-content sumo-page-section--inner">
-      <div class="text-center-to-left-on-large">
-        <h2 class="sumo-page-subheading">Featured Articles</h2>
-      </div>
-      
-  <div class="sumo-card-grid is-four-wide" style="--cg-count: 4;">
-    <div class="scroll-wrap">
-      
-        <div class="card card--article zoom-on-hover">
-          <img class="card--icon-sm" src="https://static-media-prod-cdn.itsre-sumo.mozilla.net/static/protocol/img/icons/reader-mode.6193b1b1a9dc.svg" alt="Update Firefox to the latest version" />
-          <div class="card--details">
-            <h3 class="card--title">
-              <a class="expand-this-link"
-                href="/en-US/kb/update-firefox-latest-version"
-                
-                data-event-category="link click"
-                data-event-action="product"
-                data-event-label="#Update Firefox to the latest version">Update Firefox to the latest version</a>
-            </h3>
-            <p class="card--desc">
-              
-            </p>
-          </div>
-        </div>
-      
-        <div class="card card--article zoom-on-hover">
-          <img class="card--icon-sm" src="https://static-media-prod-cdn.itsre-sumo.mozilla.net/static/protocol/img/icons/reader-mode.6193b1b1a9dc.svg" alt="Update Firefox to the latest release" />
-          <div class="card--details">
-            <h3 class="card--title">
-              <a class="expand-this-link"
-                href="/en-US/kb/update-firefox-latest-release"
-                
-                data-event-category="link click"
-                data-event-action="product"
-                data-event-label="#Update Firefox to the latest release">Update Firefox to the latest release</a>
-            </h3>
-            <p class="card--desc">
-              Firefox automatically updates itself by default but you can always do a manual update. Learn how to update Firefox on Windows, Mac or Linux.
-            </p>
-          </div>
-        </div>
-      
-        <div class="card card--article zoom-on-hover">
-          <img class="card--icon-sm" src="https://static-media-prod-cdn.itsre-sumo.mozilla.net/static/protocol/img/icons/reader-mode.6193b1b1a9dc.svg" alt="Secure connection failed and Firefox did not connect" />
-          <div class="card--details">
-            <h3 class="card--title">
-              <a class="expand-this-link"
-                href="/en-US/kb/secure-connection-failed-firefox-did-not-connect"
-                
-                data-event-category="link click"
-                data-event-action="product"
-                data-event-label="#Secure connection failed and Firefox did not connect">Secure connection failed and Firefox did not connect</a>
-            </h3>
-            <p class="card--desc">
-              If a website requires a secure connection that cannot be established, Firefox will not connect and will show you an error page. Learn more.
-            </p>
-          </div>
-        </div>
-      
-        <div class="card card--article zoom-on-hover">
-          <img class="card--icon-sm" src="https://static-media-prod-cdn.itsre-sumo.mozilla.net/static/protocol/img/icons/reader-mode.6193b1b1a9dc.svg" alt="Refresh Firefox - reset add-ons and settings" />
-          <div class="card--details">
-            <h3 class="card--title">
-              <a class="expand-this-link"
-                href="/en-US/kb/refresh-firefox-reset-add-ons-and-settings"
-                
-                data-event-category="link click"
-                data-event-action="product"
-                data-event-label="#Refresh Firefox - reset add-ons and settings">Refresh Firefox - reset add-ons and settings</a>
-            </h3>
-            <p class="card--desc">
-              A Refresh  can fix many issues by restoring Firefox to its default state while saving essential information like bookmarks and passwords.
-            </p>
-          </div>
-        </div>
-      
-    </div>
-  </div>
-
-    </section>
-  
-  <section class="mzp-l-content sumo-page-section--inner">
-    <div class="card card--callout is-full-width has-moz-headings">
-  <div class="card--callout-wrap-narrow">
-    <img class="card--feature-img" src="https://static-media-prod-cdn.itsre-sumo.mozilla.net/static/sumo/img/join-our-community.png" alt="Illustration of community" />
-    <div class="card--details">
-      <h3 class="card--title">Join Our Community</h3>
-      <p class="card--desc">Grow and share your expertise with others. Answer questions and improve our knowledge base.</p>
-      <p class="card--desc"><strong><a href="/en-US/get-involved">Learn More</a></strong></p>
-    </div>
-  </div>
-</div>
-  </section>
 </div>
 
+<script id="tpl_qa" type="text/html">
+    <div class="qa-list">
+        {{each items}}
+        <div class="qa-item">
+            <div class="qa-item-hd">
+                <a href="{{$value.ext.url_location}}"
+                   data-report-click='{"mod":"{{@$value.report_data.data.mod}}","spm":"{{@$value.spm}}","dest":"{{$value.ext.url_location}}","index":"{{@$value.report_data.data.index}}","strategy":"{{@$value.report_data.data.strategy}}","biz_id":"{{@$value.report_data.data.biz_id}}","ops_request_misc":"{{@$value.report_data.data.ops_request_misc}}","request_id":"{{@$value.report_data.data.request_id}}"}'
+                   data-report-view='{"mod":"{{@$value.report_data.data.mod}}","spm":"{{@$value.spm}}","dest":"{{$value.ext.url_location}}","index":"{{@$value.report_data.data.index}}","strategy":"{{@$value.report_data.data.strategy}}","biz_id":"{{@$value.report_data.data.biz_id}}","ops_request_misc":"{{@$value.report_data.data.ops_request_misc}}","request_id":"{{@$value.report_data.data.request_id}}"}'
+                   class="list-title" target="_blank">{{@$value.ext.title}}</a>
+            </div>
+            <div class="qa-item-bd">
+                <div class="detail">{{$value.ext.description}}</div>
+                {{if $value.ext.answer && $value.ext.answer != ''}}
+                <div class="answer">
+                    <pre><code>{{$value.ext.answer}}</code></pre>
+                </div>
+                {{/if}}
+            </div>
+            <div class="qa-item-ft">
+                {{if $value.ext.create_time != ''}}
+                <span class="qa-time">{{$value.ext.create_time|parseTime}}</span>
+                {{/if}}
+                {{if $value.ext.nickname != ''}}
+                <a href="https://me.csdn.net/{{$value.ext.author}}" target="_blank" class="qa-nickname">{{$value.ext.nickname}}</a>
+                {{/if}}
+                {{if $value.ext.view != 0}}
+                <span class="qa-view"><i class="icon icon-view"></i>{{$value.ext.view|parseN}}</span>
+                {{/if}}
+                {{if $value.ext.comment != 0}}
+                <span class="qa-comment"><i class="icon icon-comment"></i>{{$value.ext.comment|parseN}}</span>
+                {{/if}}
+                {{if $value.ext.digg != 0}}
+                <span class="qa-dig"><i class="icon icon-dig"></i>{{$value.ext.digg|parseN}}</span>
+                {{/if}}
 
-<footer class="mzp-c-footer">
-  <div class="mzp-l-content">
-    <nav class="mzp-c-footer-primary">
-      <div class="mzp-c-footer-cols">
-        <section class="mzp-c-footer-col">
-          <h5 class="mzp-c-footer-heading">Mozilla</h5>
-          <ul class="mzp-c-footer-list">
-            <li><a href="https://www.mozilla.org/en-US/about/legal/fraud-report/">Report Trademark Abuse</a></li>
-            <li><a href="https://github.com/mozilla/kitsune/">Source code</a></li>
-            <li><a href="https://twitter.com/firefox">Twitter</a></li>
-            <li><a href="/en-US/get-involved">Join our Community</a></li>
-            <li><a href="/en-US/">Explore Help Articles</a></li>
-          </ul>
-        </section>
-
-        <section class="mzp-c-footer-col">
-          <h5 class="mzp-c-footer-heading">Firefox</h5>
-          <ul class="mzp-c-footer-list">
-            <li><a href="https://www.mozilla.org/firefox/new/?utm_source=support.mozilla.org&utm_campaign=footer&utm_medium=referral">Download</a></li>
-            <li><a href="https://www.mozilla.org/firefox/new/?utm_source=support.mozilla.org&utm_campaign=footer&utm_medium=referral">Firefox Desktop</a></li>
-            <li><a href="https://www.mozilla.org/firefox/mobile/?utm_source=support.mozilla.org&utm_campaign=footer&utm_medium=referral">Android Browser</a></li>
-            <li><a href="https://www.mozilla.org/firefox/mobile/?utm_source=support.mozilla.org&utm_campaign=footer&utm_medium=referral">iOS Browser</a></li>
-            <li><a href="https://www.mozilla.org/firefox/mobile/?utm_source=support.mozilla.org&utm_campaign=footer&utm_medium=referral">Focus Browser</a></li>
-          </ul>
-        </section>
-
-        <section class="mzp-c-footer-col">
-          <h5 class="mzp-c-footer-heading">Firefox for Developers</h5>
-          <ul class="mzp-c-footer-list">
-            <li><a href="https://www.mozilla.org/en-US/firefox/developer/?utm_source=support.mozilla.org&utm_campaign=footer&utm_medium=referral">Developer Edition</a></li>
-            <li><a href="https://www.mozilla.org/en-US/firefox/channel/desktop/?utm_source=support.mozilla.org&utm_campaign=footer&utm_medium=referral#beta">Beta</a></li>
-            <li><a href="https://www.mozilla.org/en-US/firefox/channel/android/?utm_source=support.mozilla.org&utm_campaign=footer&utm_medium=referral#beta">Beta for Android</a></li>
-            <li><a href="https://www.mozilla.org/en-US/firefox/channel/desktop/?utm_source=support.mozilla.org&utm_campaign=footer&utm_medium=referral#nightly">Nightly</a></li>
-            <li><a href="https://www.mozilla.org/en-US/firefox/channel/android/?utm_source=support.mozilla.org&utm_campaign=footer&utm_medium=referral#nightly">Nightly for Android</a></li>
-          </ul>
-        </section>
-
-        <section class="mzp-c-footer-col">
-          <h5 class="mzp-c-footer-heading">Firefox Accounts</h5>
-          <ul class="mzp-c-footer-list">
-            <li><a href="/en-US/users/auth">Sign In/Up</a></li>
-            <li><a href="https://www.mozilla.org/en-US/firefox/accounts/">Benefits</a></li>
-            <li class="mzp-c-footer-heading"><br><a href="https://fpn.firefox.com/">Firefox Private Network</a></li>
-          </ul>
-        </section>
-
-        <section class="mzp-c-footer-col lang-col">
-          <form class="mzp-c-language-switcher" method="get" action="#">
-            <a class="mzp-c-language-switcher-link" href="https://www.mozilla.org/locales/">Language</a>
-            <label for="mzp-c-language-switcher-select">Language</label>
-            <select id="mzp-c-language-switcher-select" class="mzp-js-language-switcher-select"
-             name="lang">
-              
-                  <option value="af" >Afrikaans</option>
-              
-                  <option value="ar" >عربي</option>
-              
-                  <option value="az" >Azərbaycanca</option>
-              
-                  <option value="bg" >Български</option>
-              
-                  <option value="bm" >Bamanankan</option>
-              
-                  <option value="bn" >বাংলা</option>
-              
-                  <option value="bs" >Bosanski</option>
-              
-                  <option value="ca" >català</option>
-              
-                  <option value="cs" >Čeština</option>
-              
-                  <option value="da" >Dansk</option>
-              
-                  <option value="de" >Deutsch</option>
-              
-                  <option value="ee" >Èʋegbe</option>
-              
-                  <option value="el" >Ελληνικά</option>
-              
-                  <option value="en-US" selected>English</option>
-              
-                  <option value="es" >Español</option>
-              
-                  <option value="et" >eesti keel</option>
-              
-                  <option value="eu" >Euskara</option>
-              
-                  <option value="fa" >فارسی</option>
-              
-                  <option value="fi" >suomi</option>
-              
-                  <option value="fr" >Français</option>
-              
-                  <option value="fy-NL" >Frysk</option>
-              
-                  <option value="ga-IE" >Gaeilge (Éire)</option>
-              
-                  <option value="gl" >Galego</option>
-              
-                  <option value="gn" >Avañe&#39;ẽ</option>
-              
-                  <option value="gu-IN" >ગુજરાતી</option>
-              
-                  <option value="ha" >هَرْشَن هَوْسَ</option>
-              
-                  <option value="he" >עברית</option>
-              
-                  <option value="hi-IN" >हिन्दी (भारत)</option>
-              
-                  <option value="hr" >Hrvatski</option>
-              
-                  <option value="hu" >Magyar</option>
-              
-                  <option value="dsb" >Dolnoserbšćina</option>
-              
-                  <option value="hsb" >Hornjoserbsce</option>
-              
-                  <option value="id" >Bahasa Indonesia</option>
-              
-                  <option value="ig" >Asụsụ Igbo</option>
-              
-                  <option value="it" >Italiano</option>
-              
-                  <option value="ja" >日本語</option>
-              
-                  <option value="ka" >ქართული</option>
-              
-                  <option value="km" >ខ្មែរ</option>
-              
-                  <option value="kn" >ಕನ್ನಡ</option>
-              
-                  <option value="ko" >한국어</option>
-              
-                  <option value="ln" >Lingála</option>
-              
-                  <option value="lt" >lietuvių kalba</option>
-              
-                  <option value="mg" >Malagasy</option>
-              
-                  <option value="mk" >Македонски</option>
-              
-                  <option value="ml" >മലയാളം</option>
-              
-                  <option value="ms" >Bahasa Melayu</option>
-              
-                  <option value="ne-NP" >नेपाली</option>
-              
-                  <option value="nl" >Nederlands</option>
-              
-                  <option value="no" >Norsk</option>
-              
-                  <option value="pl" >Polski</option>
-              
-                  <option value="pt-BR" >Português (do Brasil)</option>
-              
-                  <option value="pt-PT" >Português (Europeu)</option>
-              
-                  <option value="ro" >română</option>
-              
-                  <option value="ru" >Русский</option>
-              
-                  <option value="si" >සිංහල</option>
-              
-                  <option value="sk" >slovenčina</option>
-              
-                  <option value="sl" >slovenščina</option>
-              
-                  <option value="sq" >Shqip</option>
-              
-                  <option value="sr" >Српски</option>
-              
-                  <option value="sw" >Kiswahili</option>
-              
-                  <option value="sv" >Svenska</option>
-              
-                  <option value="ta" >தமிழ்</option>
-              
-                  <option value="ta-LK" >தமிழ் (இலங்கை)</option>
-              
-                  <option value="te" >తెలుగు</option>
-              
-                  <option value="th" >ไทย</option>
-              
-                  <option value="tn" >Setswana</option>
-              
-                  <option value="tr" >Türkçe</option>
-              
-                  <option value="uk" >Українська</option>
-              
-                  <option value="ur" >اُردو</option>
-              
-                  <option value="vi" >Tiếng Việt</option>
-              
-                  <option value="wo" >Wolof</option>
-              
-                  <option value="xh" >isiXhosa</option>
-              
-                  <option value="yo" >èdè Yorùbá</option>
-              
-                  <option value="zh-CN" >中文 (简体)</option>
-              
-                  <option value="zh-TW" >正體中文 (繁體)</option>
-              
-                  <option value="zu" >isiZulu</option>
-              
-            </select>
-            <!-- form submit button is shown when JavaScript is not enabled -->
-            <button type="submit">Go</button>
-          </form>
-          <ul class="mzp-c-footer-links-social">
-            <li><a class="twitter" href="https://twitter.com/firefox">Twitter<span>(@firefox)</span></a></li>
-            <li><a class="youtube" href="https://www.youtube.com/firefoxchannel">YouTube<span> (firefoxchannel)</span></a></li>
-            <li><a class="instagram" href="https://www.instagram.com/firefox">Instagram<span> (firefox)</span></a></li>
-          </ul>
-        </section>
-
-      </div>
-    </nav>
-
-    <nav class="mzp-c-footer-secondary">
-      <div class="mzp-c-footer-link-col">
-        <div class="mzp-c-footer-primary-logo"><a href="https://www.mozilla.org/">Mozilla</a></div>
-        <div class="mzp-c-footer-legal">
-          <ul>
-            <li><a href="https://www.mozilla.org/">mozilla.org</a></li>
-            <li><a href="https://www.mozilla.org/about/legal/terms/mozilla/">Terms of Service</a></li>
-            <li><a href="https://www.mozilla.org/privacy/websites/">Privacy</a></li>
-            <li><a href="https://www.mozilla.org/privacy/websites/#cookies">Cookies</a></li>
-            <li><a href="https://www.mozilla.org/en-US/contact/">Contact</a></li>
-          </ul>
+                {{each $value.ext.tags tag}}
+                <span class="qa-tags">
+                    {{if tag != ''}}
+                    <i class="qa-tag">{{tag}}</i>
+                    {{/if}}
+                </span>
+                {{/each}}
+            </div>
         </div>
-      </div>
-      <div class="mzp-c-footer-legal-col">
-        <p>
-          Visit <a href="https://www.mozilla.org" rel="external noopener" data-link-type="footer" data-link-name="Mozilla Corporation">Mozilla Corporation’s</a> not-for-profit parent, the <a href="https://foundation.mozilla.org" rel="external noopener" data-link-type="footer" data-link-name="Mozilla Foundation">Mozilla Foundation</a>.
-        </p>
-        <p>
-          Portions of this content are ©1998–2021 by individual mozilla.org contributors. Content available under a <a rel="external noopener" href="https://www.mozilla.org/foundation/licensing/website-content/">Creative Commons license</a>.
-        </p>
-      </div>
-    </nav>
-  </div>
-</footer>
+        {{/each}}
+    </div>
+</script>
 
-  
-    <script src="https://static-media-prod-cdn.itsre-sumo.mozilla.net/static/jsi18n/en-us/djangojs-min.eba373c6bfad.js"></script>
-  
+<script id="tpl_page" type="text/html">
+    {{set pageNum = data.pageNum}}
+    {{set pages = data.pages}}
+    {{set pageSize = data.pageSize}}
+    {{set toalNum = data.totalNum}}
+    {{set pagesList = data.pageList}}
 
-
-<script type="text/javascript" src="https://static-media-prod-cdn.itsre-sumo.mozilla.net/static/build/common-min.58791aced613.js" charset="utf-8"></script>
-
-
-<script type="text/javascript" src="https://static-media-prod-cdn.itsre-sumo.mozilla.net/static/build/show-fx-download.4fef4fded9ba.js" charset="utf-8"></script>
-
-
-
+    <div class="search-result-pagination">
+        {{if toalNum > 0}}
+        <div class="csdn-pagination hide-set">
+            <span class="page-nav">
+                {{if pageNum == 1}}
+                    <a class="disable iconfont icon-fanhui btn btn-xs btn-default btn-prev checklogin"
+                       href="javascript:;"></a>
+                {{/if}}
+                {{if pageNum > 1}}
+                    <a href="javascript:;" page_num="{{pageNum - 1}}"
+                       class="iconfont icon-fanhui btn btn-xs btn-default btn-prev checklogin"></a>
+                 {{/if}}
 
 
+                {{each pagesList pages pages_index}}
+                    {{if pages_index == 0 && pages > 1}}
+                        <a href="javascript:;" page_num="1"
+                           class="btn btn_normal btn-xs btn-default checklogin">1</a>
+                        {{if pageNum != 4}}
+                            <span class="ellipsis">...</span>
+                        {{/if}}
+                    {{/if}}
 
+
+                    {{if pages == pageNum}}
+                        <a href="javascript:;" page_num="{{pages}}"
+                           class="btn btn_normal btn-xs btn-default active checklogin">{{pages}}</a>
+                    {{else}}
+                        <a href="javascript:;" page_num="{{pages}}"
+                           class="btn btn_normal btn-xs btn-default checklogin">{{pages}}</a>
+                    {{/if}}
+
+                    {{set curPageNext=pages_index + 1}}
+                    {{set pl = pagesList[curPageNext]}}
+                    {{set ps = pages + 1}}
+                    {{if pl && ps < pl }}
+                        <span class="ellipsis">...</span>
+                    {{/if}}
+
+                {{/each}}
+
+                 {{if pageNum < 20}}
+                    <a href="javascript:;" page_num="{{pageNum + 1}}"
+                       class="iconfont icon-fanhui btn btn-xs btn-default btn-next checklogin"></a>
+                {{else}}
+                    <a href="javascript:;"
+                       class="disable iconfont icon-fanhui btn btn-xs btn-default btn-next checklogin"></a>
+                {{/if}}
+            </span>
+        </div>
+        {{/if}}
+
+    </div>
+
+</script>
+
+
+<script src='https://csdnimg.cn/release/aggregate/js/common-773ba0471c.min.js' type="text/javascript"></script>
+<script src='https://csdnimg.cn/release/aggregate/js/pc-df555339c0.min.js' type="text/javascript"></script>
+<script src='https://csdnimg.cn/release/aggregate/js/libs/template-web.js' type="text/javascript"></script>
+
+<script type="text/javascript">
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+<script>
+    (function () {
+            var el = document.createElement("script");
+            el.src = "https://s3a.pstatp.com/toutiao/push.js?310416c564ee613927023910da70cee87ab5225d389206dcae94ee9057000d80c50ae680cb4ab776e94401444c404d285b8b644eda8af801d0911a0d00026e7f";
+            el.id = "ttzz";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(el, s);
+        }
+    )(window)
+</script>
+
+<script type="text/javascript">
+    (function ($) {
+
+        function z(s) {
+            return s < 10 ? '0' + s : s;
+        }
+
+        function dwd(data, spm) {
+            if (!data || !data.items.length) return;
+            for (let i = 0; i < data.items.length; i++) {
+                let item = data.items[i];
+                item.ext.tags = item.ext.tags.split(",");
+                item.spm = spm;
+            }
+            return data;
+        }
+
+        template.defaults.imports.parseN = function (n) {
+            return (n > 9999 ? (Math.floor(n / 10000) + '万+') : n);
+        };
+
+        template.defaults.imports.parseTime = function (n) {
+            let d = new Date(parseInt(n));
+            let y = d.getFullYear();
+            let m = d.getMonth() + 1;
+            let dd = d.getDate();
+            return y + '-' + z(m) + '-' + z(dd);
+        };
+        var __agg_pc__ = {
+            isGetDownloadList: false,
+            isGetQaList: false,
+            isAjax: true,
+            initIframeBlinkHeight: function () {
+                let winHeight = window.innerHeight;
+                let isHasBaike = $(".baike-view").size();
+                let other = isHasBaike ? 280 : 140;
+                let res = Math.floor(winHeight - other);
+                $("#blink").css("height", res + 'px');
+            },
+            init: function () {
+                //this.initIframeBlinkHeight();
+                this.events();
+                //this.getQAList();
+                //加载右侧广告
+                this.getBrandDataById(528, function (res) {
+                    $(".hot-brand").removeClass("hide").html(res.data.con);
+                });
+                //加载Top广告
+                this.getBrandDataById(529, function (res) {
+                    $(".top-banner").removeClass("hide").html(res.data.con);
+                });
+            },
+            events: function () {
+                var self = this;
+                let tab_hd = $(".ag-tab-bar").find(".tab-hd-item");
+                let tab_bd = $(".content-list").find(".tab-bd");
+                tab_hd.on('click', function () {
+                    let that = $(this);
+                    let type = that.attr('type');
+
+                    that.addClass("active").siblings().removeClass("active");
+
+                    if (type === 'hot') {
+                        $(".ag-tb-rt").show();
+                        $(".bottom-part").show();
+                        $(".ftl_page").show().siblings("div").hide();
+                    } else if (type === 'blink') {
+                        $("#blink").attr('src', 'https://blink.csdn.net/frame');
+                        __agg_pc__.initIframeBlinkHeight();
+                        $(".ag-tb-rt").hide();
+                        $(".bottom-part").hide();
+                        $(".ftl_page").hide();
+                        $(".ant_page").hide();
+                    } else if (type === 'download') {
+                        if (!self.isGetDownloadList) {
+                            self.isGetDownloadList = true;
+                            $(".wrap-download").html('');
+                            self.getDownloadList(1);
+                        }
+                        $(".ag-tb-rt").show();
+                        $(".bottom-part").show();
+                        $(".ant_page").show().siblings("div").hide();
+                    } else if (type === 'qa') {
+                        if (!self.isGetQaList) {
+                            self.isGetQaList = true;
+                            $(".wrap-qa").html('');
+                            self.getQAList(1);
+                        }
+                        $(".ag-tb-rt").show();
+                        $(".bottom-part").show();
+                        $(".ant_page").show().siblings("div").hide();
+                    }
+                    tab_bd.eq(that.index()).addClass("active").siblings("div.tab-bd").removeClass("active");
+                })
+
+                let btn_link = $(".ag-tab-bar").find(".icon-link");
+                btn_link.on('click', function () {
+                    window.open('https://so.csdn.net/search?mode=1&q=' + mod_keywords + '&spm=1000.2123.3001.5142', '_self');
+                });
+
+                let btn_ask = $(".btn-ask");
+                btn_ask.on('click', function () {
+                    let UserName = self.getCookieByKey("UserName");
+                    if (UserName != null) {
+                        window.open('https://ask.csdn.net/?word=' + mod_keywords, '_blank');
+                    } else {
+                        window.csdn.loginBox.show();
+                    }
+                })
+
+
+                $(".right-special-column .rsc-subscible").on('click', function () {
+                    let userName = getCookie('UserName')
+                    if (!userName) {
+                        window.csdn.loginBox.show();
+                        return
+                    }
+
+                    let title = $(this).prev().text();
+                    // 收藏
+                    var params = {
+                        'url': window.location.href,         // 访问来源地址 必传
+                        'title': title,      // 访问收藏标题 必传ß
+                        'description': '', //访问收藏描述
+                        'author': userName,
+                        'source_id': 1,           // 访问来源项目标识id 必传
+                        'source': 'GATHER'
+                    };
+                    window.csdn.collectionBox.show(params);
+                })
+
+                $(".right-special-column").on('click', 'img', function () {
+                    var that = $(this);
+                    var url = that.attr('data-url');
+                    window.open(url, '_blank');
+                });
+
+                $(".right-special-column").on('click', 'span.rsc-name', function () {
+                    var that = $(this);
+                    var url = that.attr('data-url');
+                    window.open(url, '_blank');
+                });
+
+            },
+            getCookieByKey: function (key) {
+                var cookie = '';
+                var cookieStr = document.cookie || cookie;
+                var cookieObj = {};
+                cookieStr.split(';').forEach(function (value) {
+                    var arr = value.split('=');
+                    cookieObj[$.trim(arr[0])] = $.trim(arr[1]);
+                })
+                return cookieObj[key] || null;
+            },
+            getBrandDataById: function (id, cb) {
+                //528右侧广告位， 529Top广告位
+                $.get('/get_ad_info?ad_id=' + id, function (res) {
+                    if (res.code == 200) {
+                        if (res.data && res.data.con && res.data.status) {
+                            cb(res);
+                        }
+                    } else {
+                        console.log(res.msg);
+                    }
+                })
+            },
+            bindTagEvent: function () {
+                $(".qa-list").on('click', 'i.qa-tag', function () {
+                    var that = $(this);
+                    var val = that.text();
+                    if (val) {
+                        window.open('https://so.csdn.net/so/search/s.do?q=' + val, '_blank');
+                    }
+                });
+
+                setTimeout(function () {
+                    window.csdn.report.viewCheck({'curl': location.href});
+                }, 500)
+            },
+            getQAList: function (pageIndex) {
+                let self = this;
+                //http://local.java.csdn.net:9090
+                $.ajax({
+                    url: '/gather/search_ask?platform=pc&p=' + pageIndex + '&query=' + mod_keywords,
+                    type: 'GET',
+                    success: function (res) {
+                        if (res.code == 200 && res.data.items.length) {
+                            self.isAjax = true;
+                            self.isGetQaList = false;
+                            var new_data = dwd(res.data, '3001.5561');
+                            var html = template("tpl_qa", new_data);
+                            $(".wrap-qa").html(html);
+                            self.bindTagEvent();
+                            self.createPagination(res);
+                        } else {
+                            $(".wrap-qa .qa-no-data").removeClass("hide");
+                        }
+                    },
+                    error: function (err) {
+                        $(".wrap-qa .qa-no-data").removeClass("hide");
+                    }
+                });
+            },
+            getDownloadList: function (pageIndex) {
+                let self = this;
+                //http://local.java.csdn.net:9090
+                $.ajax({
+                    url: '/gather/search_download?platform=pc&p=' + pageIndex + '&query=' + mod_keywords,
+                    type: 'GET',
+                    success: function (res) {
+                        if (res.code == 200 && res.data.items.length) {
+                            self.isAjax = true;
+                            self.isGetDownloadList = false;
+                            var new_data = dwd(res.data, '3001.5560');
+                            var html = template("tpl_qa", new_data);
+                            $(".wrap-download").html(html);
+                            self.bindTagEvent();
+                            self.createPagination(res);
+                        } else {
+                            $(".wrap-download .qa-no-data").removeClass("hide");
+                        }
+                    },
+                    error: function (err) {
+                        $(".wrap-download .qa-no-data").removeClass("hide");
+                    }
+                });
+            },
+            dealWithPageData: function (res) {
+                if (res && res.code == 200) {
+                    return {
+                        data: {
+                            pageNum: res.pageNum,
+                            pages: res.total_page,
+                            pageSize: res.page_size,
+                            totalNum: res.totalNum,
+                            pageList: res.page_list
+                        }
+                    };
+                }
+            },
+            createPagination: function (res) {
+                let self = this;
+                let tpl_data = this.dealWithPageData(res);
+                let tpl_page = template("tpl_page", tpl_data);
+                let ant_page = $(".wrap-pagination .ant_page");
+                let type = $(".tab-hd-item.active").attr('type');
+                ant_page.removeClass("hide").html(tpl_page);
+
+
+                //页码
+                $(".ant_page .btn_normal").on('click', function () {
+                    let that = $(this);
+                    let curr = that.attr('page_num');
+                    that.addClass("active").siblings("a").removeClass("active");
+                    if (curr && self.isAjax) {
+                        self.isAjax = false;
+                        if (type === 'download') {
+                            self.getDownloadList(curr);
+                        } else {
+                            self.getQAList(curr);
+                        }
+
+                    }
+                });
+
+                //上一页
+                $(".ant_page .btn-prev").on('click', function () {
+                    let curr = $(this).attr('page_num');
+                    if (curr && self.isAjax) {
+                        self.isAjax = false;
+                        if (type === 'download') {
+                            self.getDownloadList(curr);
+                        } else {
+                            self.getQAList(curr);
+                        }
+                    }
+                });
+
+                //下一页
+                $(".ant_page .btn-next").on('click', function () {
+                    let curr = $(this).attr('page_num');
+                    if (curr && self.isAjax) {
+                        self.isAjax = false;
+                        if (type === 'download') {
+                            self.getDownloadList(curr);
+                        } else {
+                            self.getQAList(curr);
+                        }
+                    }
+                });
+            }
+        }
+        __agg_pc__.init();
+
+    })($)
+</script>
+
+<script type="text/javascript">
+    $(function () {
+        function insertChromePluginLink() {
+            let count = 0;
+            let timer = null;
+            let link = $('<li class="plugin-link"><a href="https://plugin.csdn.net/?from=ju" target="_blank">Chrome插件</a></li>')
+            timer = setInterval(() => {
+                count++;
+                let menus = $("ul.toolbar-menus");
+                if (menus.length || count > 10) {
+                    clearInterval(timer);
+                }
+                if (!menus.has("li.plugin-link").length) {
+                    menus.append(link)
+                }
+            }, 100)
+        }
+
+        insertChromePluginLink();
+    })
+</script>
+
+<script type="text/javascript">
+    $(function () {
+        window.csdn.cse = null;
+        var _types = {
+            "codes_snippet": '',
+            "blog": "blog",
+            "discuss": "bbs",
+            "doc": "download",
+            "news": "geek",
+            "course": "edu",
+            "gitchat": "gitchat",
+            "ask": "ask"
+        }
+        var _csdnDataObj = {};
+        var _fn = {
+            _CFG: {
+                API_URL: '/api/v1/search',
+                js_insert_first: insert_baidu_first,
+                js_insert_count: insert_baidu_count,
+            },
+            uniqueBaidu: function (data) {
+                var csdnObjKeys = [];
+                var hasOwnProperty = Object.prototype.hasOwnProperty
+                for (var prop in _csdnDataObj) {
+                    if (hasOwnProperty.call(_csdnDataObj, prop)) csdnObjKeys.push(prop);
+                }
+                var csdnObjKeysLink = csdnObjKeys.map(function (v) {
+                    return v.split('?')[0]
+                });
+                return data.filter(function (v) {
+                    try {
+                        return csdnObjKeysLink.indexOf(v.linkUrl.split('?')[0]) < 0;
+                    } catch (e) {
+                        return false
+                    }
+                })
+            },
+            distinct: function (data) {
+                return data.filter(function (obj) {
+                    return !_csdnDataObj[obj['linkUrl']];
+                })
+            },
+            getIdByUrl: function (url) {
+                var id = ""
+                if (url == null || url == undefined || url == "") {
+                    return "";
+                }
+                if (url.indexOf("?") > -1) {
+                    url = url.substring(0, url.indexOf("?"));
+                }
+                if (url.endsWith("/")) {
+                    url = url.substring(0, url.length - 1);
+                }
+                id = url.substring(url.lastIndexOf("/") + 1);
+                if (id.length > 0) {
+                    var regEx = "[0-9]+";
+                    id.replace(regEx, function () {
+                        id = arguments[0];
+                    })
+                }
+                return id;
+            },
+            /**
+             * 数据按 每组sublength个分组
+             * @param {Array} array 源数据
+             * @param {Number} subLength 每组多少个
+             * @return {Boolean} isDom 如果是DOM,则每组为包裹Div
+             */
+            group: function (array, subLength, isDom) {
+                if (Object.prototype.toString.call(array) !== "[object Array]" || typeof subLength !== 'number') {
+                    return [];
+                }
+                var index = 0;
+                var newArray = [];
+
+                while (index < array.length) {
+                    newArray.push(array.slice(index, index += subLength));
+                }
+                if (isDom) {
+                    newArray = newArray.map(function (childrenNodes) {
+                        var $frag = $('<div></div>');
+                        childrenNodes.forEach(function (curNode) {
+                            $frag.append(curNode)
+                        })
+                        return $frag
+                    })
+                }
+                return newArray
+            },
+            baiduDOMHandle: function (pageNo, data, num, type, keyword) {
+                var $data = _fn.group(data, num);
+                var domArr = [];
+                var utm_term = encodeURI(keyword);//当前搜索关键字
+                var requestId = "baidu_js";
+                for (var i in data) {
+                    var item = data[i];
+                    if (item.dispUrl) {
+                        if (item.dispUrl.indexOf('gitchat') > -1) {
+                            item.requestId = requestId
+                            item.bizId = 101
+                            item.type = "gitchat"
+                        } else if (item.dispUrl.indexOf('blog') > -1) {
+                            item.flagIcon = 'flag_icon1'
+                            item.tip = '博客'
+                            item.requestId = requestId
+                            item.bizId = 102
+                            item.type = "blog"
+                        } else if (item.dispUrl.indexOf('download') > -1) {
+                            item.flagIcon = 'flag_icon6'
+                            item.tip = '下载'
+                            item.requestId = requestId
+                            item.bizId = 103
+                            item.type = "download"
+                        } else if (item.dispUrl.indexOf('bbs') > -1 || item.dispUrl.indexOf('forum') > -1) {
+                            item.flagIcon = 'flag_icon2'
+                            item.tip = '论坛'
+                            item.requestId = requestId
+                            item.bizId = 104
+                            item.type = "bbs"
+                        } else if (item.dispUrl.indexOf('edu') > -1) {
+                            item.flagIcon = 'flag_icon3'
+                            item.tip = '学院'
+                            item.requestId = requestId
+                            item.bizId = 105
+                            item.type = "course"
+                        } else if (item.dispUrl.indexOf('ask') > -1) {
+                            item.flagIcon = 'flag_icon4'
+                            item.tip = '问答'
+                            item.requestId = requestId
+                            item.bizId = 106
+                            item.type = "ask"
+                        } else {
+                            item.flagIcon = ''
+                            item.tip = ''
+                            item.requestId = ''
+                            item.bizId = -1
+                            item.type = ''
+                        }
+                    }
+
+                    var strategy = item['strategy'] ? item['strategy'].toUpperCase() : ("2~" + type + "~sobaiduweb~default")
+
+                    var utm_medium = 'distribute.pc_aggpage_search_result.none-task-' + item.type + '-' + strategy + "-" + i + "-" + _fn.getIdByUrl(item.linkUrl);
+                    var objs = {
+                        mod: "popu_876",
+                        dest: item.linkUrl.indexOf('?') > -1 ? item.linkUrl + '&utm_term=' + utm_term + '&utm_medium=' + utm_medium : item.linkUrl + '?utm_term=' + utm_term + '&utm_medium=' + utm_medium + '&spm=3001.4430',
+                        strategy: strategy,
+                        index: i + "",
+                        spm: "3001.4430",
+                        request_id: item['requestId'] + "",
+                        biz_id: item['bizId'] + "",
+                        ops_request_misc: ""
+                    }
+                    var jsonData = JSON.stringify(objs);
+                    var data_report_query = ' data-report-query=""';
+                    var data_report_click = ' data-report-click=' + jsonData;
+                    var data_report_view = ' data-report-view=' + jsonData;
+                    if (item.title) {
+                        var htmlStr = '<li class="baidu_list">\n' +
+                            '                    <div class="blog-title">\n' +
+                            '                         <a href="' + objs.dest + '"  ' + data_report_query + data_report_click + data_report_view + ' target="_blank" class="blog-title">\n' +
+                            '                                    <h2>' + item.title + '</h2>\n' +
+                            '                                </a>\n' +
+                            '                                <span class="update-time"></span>\n' +
+                            '                     </div>\n' +
+                            '                     <div class="description">\n' +
+                            '                          <div class="desc-detail digest">' + item.abstract + '</div>\n' +
+                            '                          <div class="desc-detail content">\n' +
+                            '                                <div class="article_content">\n' +
+                            '                                        <pre class="preclass">' + item.abstract + '</pre>\n' +
+                            '                                </div>\n' +
+                            '                          </div>\n' +
+                            '                      </div>\n' +
+                            '           </li>'
+                    }
+                    domArr.push($(htmlStr))
+                }
+                return {
+                    data: $data,
+                    dom: _fn.group(domArr, num, true)
+                };
+            },
+            /**
+             * 百度数据穿插
+             * @param {Array} baiduData 百度的数据集合
+             * @param {Number} num 每组多少个
+             * @param {Boolean} flag 排序方式，是否百度数据在前
+             */
+            insertFunc: function (pagerNum, baiduData, num, flag, type, keyword) {
+                // 处理后的百度数据
+                var $baiduData = _fn.baiduDOMHandle(pagerNum, baiduData, num, type, keyword)
+                var $csdnDl = $(".wrap-main-list li[data-page='" + pagerNum + "']").not('.baidu_list')
+                var getLastChild = function () {
+                    var searchList = $(".wrap-main-list li[data-page='" + pagerNum + "']")
+                    // 防止出现 678 12345, 应该为
+                    if (searchList.eq($csdnDl.length).length) {
+                        return searchList.eq(searchList.length - 1)
+                    } else {
+                        return $csdnDl.eq($csdnDl.length - 1)
+                    }
+                }
+                $baiduData.dom && $baiduData.dom.forEach(function (curBaiduGroup, index) {
+                    var insertDom = null;
+                    if (flag) { // 百度在前
+                        if (index === 0) {
+                            curBaiduGroup.children().insertBefore($csdnDl.eq(0));
+                        } else {
+                            insertDom = $csdnDl.length - num * index >= 0 ? $csdnDl.eq(index * num - 1) : getLastChild()
+                            curBaiduGroup.children().insertAfter(insertDom);
+                        }
+                    } else { // CSDN在前
+                        insertDom = $csdnDl.length - (index + 1) * num >= 0 ? $csdnDl.eq((index + 1) * num - 1) : getLastChild();
+                        curBaiduGroup.children().insertAfter(insertDom);
+                    }
+                })
+            },
+            baiduDataInsert: function (pageNo, data, keyword, type) {
+                type = type || "all";
+                data = data.filter(function (item) {
+                    if (!item.dispUrl) {
+                        item.dispUrl = ''
+                    }
+                    return item.dispUrl.indexOf('m.blog.csdn.net') === -1
+                });
+                _fn.insertFunc(pageNo, data, _fn._CFG.js_insert_count, _fn._CFG.js_insert_first, type, keyword)
+
+                setTimeout(function () {
+                    window.csdn && window.csdn.report && window.csdn.report.viewCheck()
+                }, 100)
+            },
+            loadBaiduData: function (keyword, domain, pageNo) {
+                if (isContainBaidu != "10") {
+                    _fn.setCsdnDataObj();
+                    console.log("baiduSearch: pageNo:" + pageNo + " keyword:" + keyword + " domain:" + domain);
+                    if (domain) {
+                        domain = _types[domain];
+                    } else {
+                        domain = null;
+                    }
+                    try {
+                        csdn.baiduSearch(keyword, function (data) {
+                            console.log(data);
+                            var newData = _fn.distinct(data);
+                            newData = _fn.uniqueBaidu(newData);
+                            _fn.baiduDataInsert(pageNo, newData, keyword, domain);
+                        }, domain, pageNo);
+                    } catch (e) {
+                        //console.log(e)
+                    }
+                }
+            },
+            setCsdnDataObj: function () {
+                $('.wrap-main-list .main-ul li').each(function () {
+                    var url = $(this).find('a.blog-title').attr('href')
+                    if (url) {
+                        _csdnDataObj[url] = true;
+                    }
+                    window.listUrls = _csdnDataObj;
+                });
+            }
+        }
+
+
+        let timer = null;
+        let count = 0;
+        timer = setInterval(function () {
+            count++;
+            let _cse = csdn.cse;
+            let _ssr = csdn.cse.setSearchRange;
+            if ((_cse && _ssr) || count > 10) {
+                clearInterval(timer)
+                _fn.loadBaiduData(mod_keywords, '', mod_page);
+            }
+        }, 1000)
+
+        window.fillColor = function (color) {
+            color = color || '#44ff8f'
+            $("li.baidu_list").each(function (index, item) {
+                $(item).css("background", color)
+            })
+        }
+
+
+    })
+
+</script>
 </body>
 </html>

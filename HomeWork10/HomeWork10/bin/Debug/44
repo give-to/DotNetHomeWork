@@ -1,0 +1,2477 @@
+﻿<!doctype html>
+<html>
+    <!-- homeLayout -->
+    <head>
+        <meta charset="utf-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"/>
+        <title>imSiLop,封装了阿里云的配网sdk_APICloud模块</title>
+        <meta name="keywords" content="封装了阿里云的配网sdk"/>
+        <meta name="description" content="封装了阿里云的配网sdk" />
+        <meta http-equiv="Cache-Control" content="no-transform"/>
+        <link rel="shortcut icon" href="/img/favicon.png"/>
+        <script>
+            var seaIn = ''
+            var i18n_lang = 'zh-CN'
+            var loginStat = Boolean(false)
+        </script>
+                <link rel='stylesheet' href=/src/css/common/com.css />
+                <link rel='stylesheet' href=/src/css/common/login_menu.css />
+                <link rel='stylesheet' href=/src/css/common/h_footer.css />
+                <link rel='stylesheet' href=/libs/vue/v2.6.1/element-ui2.10.1.css />
+                <link rel='stylesheet' href=/src/css/common/h_header.css />
+                <link rel='stylesheet' href=/src/css/common/reset.css />
+                <link rel='stylesheet' href=/libs/jquery/iCheck/skins/minimal/orange.css />
+                <link rel='stylesheet' href=/libs/jquery/iCheck/skins/minimal/green.css />
+                <link rel='stylesheet' href=/fonts/font-awesome/css/font-awesome.min.css />
+                <link rel='stylesheet' href=/css/bootstrap.css />
+                <link rel='stylesheet' href=/css/homeLayout.css />
+            
+                    <script src=/libs/seajs/sea.js></script>
+                    <script src=/libs/seajs/seajs-text.js></script>
+                    <script src=/libs/seajs/seajs-css.js></script>
+    </head>
+    <body class="home-layout ">
+        <header class="header-nav 
+                light-bk
+        ">
+            <div class="nav-left">
+                <a href="https://www.apicloud.com" class="logo" title='APICloud'>
+                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 120 19.4" style="enable-background:new 0 0 120 19.4;" xml:space="preserve">
+                        <g id="XMLID_34_">
+                        <path id="XMLID_35_" class="st0" d="M23.6,18h-2.6v-3h2.6c1.5,0,2.8-1.3,2.8-2.8c0-1.5-1.3-2.8-2.8-2.8h-0.5
+                    c-0.2,4.7-4.2,8.5-9,8.5H5.7C2.6,18,0,15.4,0,12.2c0-3.2,2.6-5.7,5.7-5.7h13.9c-1-2.1-3.1-3.5-5.5-3.5c-1.9,0-3.6,0.9-4.8,2.3
+                    L8.4,6.5L6.1,4.6L7,3.5C8.7,1.3,11.3,0,14.1,0c4.1,0,7.6,2.7,8.6,6.5h0.8c3.2,0,5.7,2.6,5.7,5.7C29.3,15.4,26.7,18,23.6,18z
+                    M5.7,9.5C4.2,9.5,3,10.7,3,12.2C3,13.8,4.2,15,5.7,15h8.4c3.2,0,5.8-2.5,6-5.6H5.7z"></path>
+                        </g>
+                        <path id="XMLID_31_" class="st1" d="M46.1,13.9H41l-1.3,4.2h-2.4l4.9-14.8h2.7l4.9,14.8h-2.5L46.1,13.9z M45.6,12.1l-0.6-2
+                    c-0.5-1.6-0.9-3.3-1.4-4.9h-0.1c-0.4,1.7-0.9,3.3-1.4,4.9l-0.6,2H45.6z"></path>
+                        <path id="XMLID_28_" class="st1" d="M51.8,3.4h4.5c3.3,0,5.6,1.1,5.6,4.5c0,3.2-2.4,4.7-5.6,4.7h-2.2v5.6h-2.3V3.4z M56.1,10.7
+                    c2.4,0,3.5-0.9,3.5-2.9c0-1.9-1.2-2.6-3.6-2.6h-1.9v5.4H56.1z"></path>
+                        <path id="XMLID_26_" class="st1" d="M64.8,3.4h2.3v14.8h-2.3V3.4z"></path>
+                        <g id="XMLID_16_">
+                        <path id="XMLID_7_" class="st1" d="M80,15.7c-1.1,1.2-2.2,1.8-3.6,1.8c-3.1,0-5.1-2.6-5.1-6.7c0-4.1,2-6.6,5.2-6.6
+                        C78,4.2,79,5,79.5,5.7l0.1,0.2L80.4,5l-0.1-0.1c-0.5-0.5-1.7-1.8-3.9-1.8c-3.9,0-6.3,3-6.3,7.7c0,4.7,2.5,7.8,6.2,7.8
+                        c1.8,0,3.2-0.7,4.4-2.1l0.1-0.1l-0.7-0.8L80,15.7z"></path>
+                        <path id="XMLID_6_" class="st1" d="M85.1,17.5c-0.2,0-0.3,0-0.4,0c-0.1,0-0.3,0-0.3-0.5V2h-1.1V17c0,1.4,0.7,1.6,1.3,1.6
+                        c0.3,0,0.4,0,0.6-0.1l0.3-0.1l-0.2-1L85.1,17.5z"></path>
+                        <path id="XMLID_21_" class="st1" d="M92.5,7.1c-2.9,0-4.9,2.4-4.9,5.8c0,3.4,2,5.7,4.9,5.7c2.9,0,4.9-2.4,4.9-5.7
+                        C97.4,9.5,95.3,7.1,92.5,7.1z M92.5,17.5c-2.2,0-3.7-1.9-3.7-4.7c0-2.7,1.6-4.7,3.7-4.7c2.2,0,3.8,2,3.8,4.7
+                        C96.2,15.6,94.6,17.5,92.5,17.5z"></path>
+                        <path id="XMLID_3_" class="st1" d="M106.9,15.4c-1.4,1.6-2.3,2.1-3.4,2.1c-1.1,0-2.4-0.4-2.4-3.3V7.5h-0.9v6.9c0,2.9,1,4.2,3.3,4.2
+                        c1.5,0,2.6-0.9,3.4-1.8l0.1,1.5h1V7.5h-1.1V15.4z"></path>
+                        <path id="XMLID_17_" class="st1" d="M118.9,2v4.6l0,1.6c-1-0.7-1.8-1.1-3.1-1.1c-2.9,0-4.9,2.4-4.9,5.8c0,3.6,1.7,5.7,4.6,5.7
+                        c1.2,0,2.4-0.5,3.4-1.5l0.1,1.1h1V2H118.9z M118.9,9.5v6.3c-1.2,1.2-2.2,1.7-3.3,1.7c-2.1,0-3.5-1.8-3.5-4.7c0-2.7,1.7-4.7,3.8-4.7
+                        C116.9,8.1,117.8,8.5,118.9,9.5z"></path>
+                    </g>
+                </svg>
+                </a>
+            </div>
+            <div class="nav-center">
+                <ul class="nav-list">
+                    <li class="nav-item platforms"><!-- 平台与产品 -->
+                        <a class="menu-t" href="https://www.apicloud.com"> 
+                            <span>
+                                低代码开发平台
+                            </span>
+                        </a>
+                        <div class="nav-group"> <!--菜单列表-->
+                            <div class="navlist-content">
+                                <ul class="navlist-ul">
+                                    <li class="navlist-li">
+                                        <a class="navsecond-t nt1" href="https://www.apicloud.com">
+                                            <span>
+                                                App开发平台
+                                            </span>
+                                        </a>
+                                        <div class="navsecond-group">
+                                            <ul class="navsecond-left">
+                                                <li>
+                                                    <a href="https://www.apicloud.com/deepengine">
+                                                        <span><!--class="sale-hint"-->
+                                                            Deep Engine
+                                                        </span>
+                                                    </a>
+                                                    <span>高效的跨平台App引擎</span>
+                                                </li>
+                                                <li>
+                                                    <a href="https://www.apicloud.com/superwebview">
+                                                        SuperWebView
+                                                    </a>
+                                                    <span>帮助原生程序员快速迭代</span>
+                                                </li>
+                                                <li>
+                                                    <!-- <a href="/webCode"> -->
+                                                    <a href="https://www.apicloud.com/autoCode">
+                                                        多终端代码自动生成
+                                                    </a>
+                                                    <span>一次编译同时生成App与小程序</span>
+                                                </li>
+                                            </ul>
+                                            <ul class="navsecond-right">
+                                                <li>
+                                                    <!-- <a href="/devtools"> -->
+                                                    <a class="new-hot" href="https://www.apicloud.com/studio3">
+                                                        <span>
+                                                            开发工具
+                                                        </span>
+                                                    </a>
+                                                    <span>支持全流程开发</span>
+                                                </li>
+                                                <li>
+                                                    <a href="https://www.apicloud.com/AVMframe">
+                                                        AVM框架
+                                                    </a>
+                                                    <span>高性能跨端JS框架</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+        
+                                    </li>
+                                    <li class="navlist-li">
+                                        <a class="navsecond-t nt2" href="https://www.apicloud.com/visualDev">
+                                            <span>
+                                                PaaS平台
+                                            </span>
+                                        </a>
+                                        <div class="navsecond-group">
+                                            <ul class="navsecond-left">
+                                                <li>
+                                                    <!-- <a href="/cloudservice"> -->
+                                                    <a href="https://www.apicloud.com/dataCloud">
+                                                      <span>
+                                                        <!-- class="sale-hint" -->
+                                                        数据云
+                                                      </span>
+                                                    </a>
+                                                    <span>无需编程自动生成服务端</span>
+                                                </li>
+                                                <li>
+                                                    <a href="https://www.apicloud.com/cloudmanage">
+                                                        运营云
+                                                    </a>
+                                                    <span>提升您的运维效率</span>
+                                                </li>
+                                                
+                                            </ul>
+                                            <ul class="navsecond-right">
+                                                <li>
+                                                    <a href="https://www.apicloud.com/visualDev">
+                                                      <span>
+                                                        可视化云开发
+                                                      </span>
+                                                    </a>
+                                                    <span>敏捷开发云端可视化</span>
+                                                </li>
+                                                <li>
+                                                    <a href="https://www.apicloud.com/backCode">
+                                                        API连接平台
+                                                    </a>
+                                                    <span>Integrate with everything</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="navlist-li">
+                                        <a class="navsecond-t nt3" href="https://www.apicloud.com/product">
+                                            <span>
+                                                BizDevOps
+                                            </span>
+                                        </a>
+                                        <div class="navsecond-group">
+                                            <ul class="navsecond-left">
+                                                <li>
+                                                    <a href="https://www.apicloud.com/projectManage">
+                                                      <span>
+                                                        项目管理
+                                                      </span>
+                                                    </a>
+                                                    <span>开发透明化敏捷推进</span>
+                                                </li>
+                                                <li>
+                                                    <a href="https://www.apicloud.com/prototype">
+                                                        产品原型
+                                                    </a>
+                                                    <span>自动生成产品原型2倍提效</span>
+                                                </li>
+                                                <li>
+                                                    <a href="https://www.apicloud.com/uiPlugIn">
+                                                        UI设计
+                                                    </a>
+                                                    <span>自动生成云端标注</span>
+                                                </li>
+            
+                                            </ul>
+                                            <ul class="navsecond-right">
+                                                <li>
+                                                    <a href="https://www.apicloud.com/needsAnalysis">
+                                                        业务流程分析
+                                                    </a>
+                                                    <span>节点式搭建流程模型</span>
+                                                </li>
+                                                <li style="margin-top: 42px;margin-left: 5px;">
+                                                    <div class="navsecond-group">
+                                                        <img class="online_img" src="/src/image/common/header/online_img.png">
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <!-- <li class="navlist-li">
+                                        <a class="navsecond-t nt4" href="/modulestore">
+                                            <span>
+                                                Marketplace
+                                            </span>
+                                        </a>
+                                        <div class="navsecond-group">
+                                            <ul>
+                                                <li>
+                                                    <a href="/modulestore">
+                                                        API模块Store
+                                                    </a>
+                                                    <span>一站聚合1000+主流云API</span>
+                                                </li>
+                                                <li>
+                                                    <a href="/posterCHosting">
+                                                        <span>
+                                                            腾讯云主机
+                                                        </span>
+                                                    </a>
+                                                    <span>帮助用户快速低成本上云</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li> -->
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item"><!-- 定制服务 -->
+                        <a class="menu-t" href="//app.apicloud.com" target="_blank" title='定制服务'>
+                            <span> <!-- class="badge-red" -->
+                                定制服务
+                            </span>
+                        </a>
+                        <div class="nav-group"><!--菜单列表-->
+                            <div class="navlist-content">
+                                <ul class="navlist-ul">
+                                    <li class="navlist-li">
+                                        <a class="navsecond-t nt5" href="https://www.apicloud.com/solution/electricity">
+                                            <span>
+                                                行业解决方案
+                                            </span>
+                                        </a>
+                                        <div class="navsecond-group">
+                                            <ul class="navsecond-left">
+                                                <li>
+                                                    <a href="https://www.apicloud.com/solution/electricity">
+                                                        电商
+                                                    </a>
+                                                    <span>B2B B2C C2C C2B 更多</span>
+                                                </li>
+                                                <li>
+                                                    <a href="https://www.apicloud.com/solution/social">
+                                                        社交
+                                                    </a>
+                                                    <span>社群 C2C 更多</span>
+                                                </li>
+                                                <li>
+                                                    <a href="https://www.apicloud.com/solution/o2o">
+                                                        O2O
+                                                    </a>
+                                                    <span>餐饮 亲子 美容 更多</span>
+                                                </li>
+                                            </ul>
+                                            <ul class="navsecond-right">
+                                                <li>
+                                                    <a href="https://www.apicloud.com/solution/education">
+                                                        在线教育
+                                                    </a>
+                                                    <span>早教 解题 考试 视频 更多</span>
+                                                </li>
+                                                <li>
+                                                    <a href="https://www.apicloud.com/solution/IoT">
+                                                        物联网
+                                                    </a>
+                                                    <span>家居 城市 穿戴 车联网 更多</span>
+                                                </li>
+                                                <li>
+                                                    <a href="https://www.apicloud.com/solution/live">
+                                                        视频直播
+                                                    </a>
+                                                    <span>教育 电台 会议 更多</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+        
+                                    </li>
+                                    <li class="navlist-li">
+                                        <a class="navsecond-t nt6" href="//app.apicloud.com">
+                                            <span>
+                                                定制开发
+                                            </span>
+                                        </a>
+                                        <div class="navsecond-group">
+                                            <ul>
+                                                <li>
+                                                    <a href="//app.apicloud.com">
+                                                        <span>
+                                                            App、小程序、后台
+                                                        </span>
+                                                    </a>
+                                                    <span>企业数字化应用定制服务</span>
+                                                </li>
+                                                <li>
+                                                    <div class="navsecond-group">
+                                                        <img class="custom-img" src="/src/image/common/header/custom_img@2x.png">
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="navlist-li">
+                                        <div class="navsecond-group">
+                                            <img class="product-qr" src="/img/product/apiclouImg.png" alt="二维码">
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <!-- 云市场 -->
+                    <li class="nav-item">
+                        <a class="menu-t" href="https://www.apicloud.com/cloudAppStore" target="_blank" title='云市场'>
+                          <span class="">
+                            云市场
+                          </span>
+                        </a>
+                        <div class="nav-group">
+                            <div class="navlist-content">
+                                <ul class="navlist-ul">
+                                    <li class="navlist-li">
+                                        <a class="navsecond-t nt10" href="https://www.apicloud.com/modulestore">
+                                            <span>
+                                                模块store
+                                            </span>
+                                        </a>
+                                        <div class="navsecond-group">
+                                            <ul class="navsecond-left">
+                                                <li>
+                                                    <a href="https://www.apicloud.com/mod-ui">
+                                                        界面布局
+                                                    </a>
+                                                    <span>下拉刷新 导航菜单 列表 </span>
+                                                </li>
+                                                <li>
+                                                    <a href="https://www.apicloud.com/mod-dev">
+                                                        设备访问
+                                                    </a>
+                                                    <span>蓝牙WIFI 传感器</span>
+                                                </li>
+                                                <li>
+                                                    <a href="https://www.apicloud.com/mod-ext">
+                                                        功能扩展
+                                                    </a>
+                                                    <span>数据存储 网络通信 多媒体</span>
+                                                </li>
+                                            </ul>
+                                            <ul class="navsecond-right">
+                                                <li>
+                                                    <a href="https://www.apicloud.com/mod-sdk">
+                                                        开放SDK
+                                                    </a>
+                                                    <span>分享与登录 推送与IM</span>
+                                                </li>
+                                                <li>
+                                                    <a href="https://www.apicloud.com/mod-H5">
+                                                        H5模块
+                                                    </a>
+                                                    <span>图片处理 日历 编辑器</span>
+                                                </li>
+                                                <li>
+                                                    <a href="https://www.apicloud.com/modulestore">
+                                                        <span class="more">
+                                                            <!-- <img src="/src/image/common/header/more.png" alt=""> -->
+                                                        </span>
+                                                        更多
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+        
+                                    </li>
+                                    <li class="navlist-li">
+                                        <a class="navsecond-t nt11" href="https://www.apicloud.com/cloudAppStore">
+                                            <span>
+                                                云应用·小程序
+                                            </span>
+                                        </a>
+                                        <div class="navsecond-group">
+                                            <ul class="navsecond-left">
+                                                <li>
+                                                    <a href="https://www.apicloud.com/cloudAppStore/education">
+                                                        教育培训
+                                                    </a>
+                                                    <span>预约线下课程、在线观看课程视频</span>
+                                                </li>
+                                                <li>
+                                                    <a href="https://www.apicloud.com/cloudAppStore/takeOut">
+                                                        餐饮外卖
+                                                    </a>
+                                                    <span>有序管理门店外卖订单</span>
+                                                </li>
+                                                <li>
+                                                    <a href="https://www.apicloud.com/cloudAppStore/corporate">
+                                                        企业展示
+                                                    </a>
+                                                    <span>展示企业信息、产品、案例</span>
+                                                </li>
+                                            </ul>
+                                            <ul class="navsecond-right">
+                                                <li>
+                                                    <a  class="free-hint" href="https://www.apicloud.com/cloudAppStore/order">
+                                                        堂食点餐
+                                                    </a>
+                                                    <span>在线点菜，让门店服务更高效</span>
+                                                </li>
+                                                <li>
+                                                    <a href="https://www.apicloud.com/cloudAppStore/service">
+                                                        服务预约
+                                                    </a>
+                                                    <span>线上预约，线下使用</span>
+                                                </li>
+                                                <!-- <li>
+                                                    <a href="https://www.apicloud.com/cloudAppStore/fresh">
+                                                        实体生鲜
+                                                    </a>
+                                                    <span>多门店管理，在线下单</span>
+                                                </li> -->
+                                                <li>
+                                                    <a href="https://www.apicloud.com/cloudAppStore/live">
+                                                        直播带货
+                                                    </a>
+                                                    <span>性能流畅、稳定的电商直播</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="navlist-li">
+                                        <a class="navsecond-t nt12" href="https://www.apicloud.com/posterCHosting">
+                                            <span>
+                                                云主机
+                                            </span>
+                                        </a>
+                                        <div class="navsecond-group">
+                                            <ul>
+                                                <li>
+                                                    <a href="https://www.apicloud.com/posterCHosting">
+                                                        云主机
+                                                    </a>
+                                                    <span>帮助用户快速降低成本上云</span>
+                                                </li>
+                                                <li>
+                                                    <img class="product-qr nt12_img" src="/src/image/common/header/computer_img.png" alt="云主机">
+                                                </li>
+                                            </ul>
+                                            
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item"><!-- 开发者 -->
+                        <a class="menu-t" href="https://www.apicloud.com/vipservice/price" target="_blank" title='开发者'>
+                            <span class="badge-red"><!-- badge-red -->
+                                开发者
+                            </span>
+                        </a>
+                        <div class="nav-group"><!--菜单列表-->
+                            <div class="navlist-content">
+                                <ul class="navlist-ul">
+                                    <li class="navlist-li">
+                                        <a class="navsecond-t nt7" href="https://www.apicloud.com/vipservice/price">
+                                            <span>
+                                                开发者服务
+                                            </span>
+                                        </a>
+                                        <!-- <p>
+                                            <a href="//community.apicloud.com/bbs"> 社区问答 </a>
+                                            <span>技术答疑·专业及时</span>
+                                        </p> -->
+                                        <div class="navsecond-group">
+                                            <ul class="navsecond-left">
+                                                <li>
+                                                    <a class="" href="https://community.apicloud.com/bbs/forum-2-1.html">
+                                                        <span class="">
+                                                            社区问答
+                                                        </span>
+                                                    </a>
+                                                    <span>技术答疑·专业及时</span>
+                                                </li>
+                                                <li>
+                                                    <a class="" href="https://www.apicloud.com/vipservice/course">
+                                                        <span><!--class="sale-hint-2"-->
+                                                            7天培训课
+                                                        </span>
+                                                    </a>
+                                                    <span>带你7天开发一款商业应用</span>
+                                                </li>
+                                                
+                                                <li>
+                                                    <a href="https://www.apicloud.com/vipservice/attest">
+                                                        <!-- <span class="sale-hint"> -->
+                                                            官方书籍
+                                                        <!-- </span> -->
+                                                    </a>
+                                                    <span>30天，教你从0到1开发APP</span>
+                                                </li>
+                                            </ul>
+                                            <ul class="navsecond-right">
+                                                <li>
+                                                    <a class="sale-hint" href="https://www.apicloud.com/vipservice/price">
+                                                        <span><!-- sale-hint -->
+                                                            VIP服务
+                                                        </span>
+                                                    </a>
+                                                    <span>更多功能·更高效率</span>
+                                                </li>
+                                                <li>
+                                                    <a href="//docs.apicloud.com">
+                                                        文档
+                                                    </a>
+                                                    <span>开发文档，快速掌握实战技能</span>
+                                                </li>
+                                                <li>
+                                                    <a href="https://www.apicloud.com/video_list">
+                                                        视频教程
+                                                    </a>
+                                                    <span>海量免费教程，随时随地学习</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="navlist-li">
+                                        <a class="navsecond-t nt8" href="https://www.apicloud.com/service_provider">
+                                            <span>
+                                                生态合作
+                                            </span>
+                                        </a>
+                                        <div class="navsecond-group">
+                                            <ul class="appUl_leftAll">
+                                                <li>
+                                                    <a href="https://www.apicloud.com/service_provider">
+                                                        生态合作计划
+                                                    </a>
+                                                    <span>APICloud ISV认证计划已认证800+</span>
+                                                </li>
+                                                <li>
+                                                    <a href="https://www.apicloud.com/sharedOffice_cq">
+                                                        共享办公
+                                                    </a>
+                                                    <span>优先获得项目、技术、场地支持</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="navlist-li">
+                                        <a class="navsecond-t nt9" href="https://www.apicloud.com/conference">
+                                            <span>
+                                                APICloud大会
+                                            </span>
+                                        </a>
+                                        <div class="navsecond-group">
+                                            <ul>
+                                                <li>
+                                                    <a href="https://www.apicloud.com/conference">
+                                                        AI移动技术创新大会
+                                                    </a>
+                                                    <span>千人技术大会，引领行业变革</span>
+                                                </li>
+                                                <li>
+                                                    <a href="https://www.apicloud.com/financingConference">
+                                                        新一轮融资暨战略发布会
+                                                    </a>
+                                                    <span>完成亿元融资，步入新征途</span>
+                                                </li>
+                                                <!--最佳合作伙伴-->
+                                                <!-- <li>  
+                                                    <a href="//app.apicloud.com/award">
+                                                        最佳合作伙伴
+                                                    </a>
+                                                    <span>与合作伙伴共同构建数字化业务</span>
+                                                </li> -->
+                                                <li>
+                                                    <a href="https://www.apicloud.com/conference20200818">
+                                                        2020生态开发者大会
+                                                    </a>
+                                                    <span>APICloud全面进入3.0时代</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+        
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item"><!-- 案例 -->
+                        <a class="menu-t" href="https://www.apicloud.com/cases" target="_blank" title='案例'>
+                            <span>
+                                案例
+                            </span>
+                        </a>
+                    </li>
+                    <li class="nav-item"><!-- 案例 -->
+                        <a class="menu-t" href="https://www.apicloud.com/studio_subject" target="_blank" title='APICloud3.0'>
+                            <span class="new-badge">
+                                APICloud3.0
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="nav-right">
+                    <div class="login-group"><!--登录group-->
+                        <a class="login-button" href="/signin" rel="nofollow">
+                            登录
+                        </a>
+                        <span>
+                        </span>
+                        <a class="green-button register-button unifiedbtn-primary" href="/signup" rel="nofollow" id="layout-singup">
+                            注册
+                        </a>
+                    </div>
+            </div>
+        </header>
+        <div class="hidden">
+            <a id="mod-ui" href="/mod-ui"></a>
+            <a id="mod-nav" href="/mod-nav"></a>
+            <a id="mod-ext" href="/mod-ext"></a>
+            <a id="mod-sdk" href="/mod-sdk"></a>
+            <a id="mod-dev" href="/mod-dev"></a>
+            <a id="mod-cloud" href="/mod-cloud"></a>
+            <a id="mod-store" href="/modulestore"></a>
+            <a id="mod-ai" href="/mod-ai"></a>
+            <a id="mod-live" href="/mod-live"></a>
+            <a id="mod-iot" href="/mod-iot"></a>
+            <a id="mod-mina" href="/mod-mina"></a>
+        </div>
+        <div class="wrapper">
+            <link rel="stylesheet" type="text/css" href="/libs/jquery/iCheck/skins/minimal/green.css">
+<link rel="stylesheet" type="text/css" href="/libs/jquery/iCheck/skins/minimal/orange.css">
+<link rel="stylesheet" type="text/css" href="/css/modulestore.css">
+<link rel="stylesheet" type="text/css" href="/css/mod_detail.css">
+<link rel="stylesheet" type="text/css" href="/libs/swiper/swiper.min.css">
+<link href="/libs/video/video-js.css" rel="stylesheet" type="text/css">
+<style>
+    .nav-before{
+        width:3px;
+        height:14px;
+        background-color:#96b819;
+        display:inline-block;
+        position: relative;
+        top: 2px;
+        margin-right: 3px;
+    }
+    .character{
+        color:#333;
+    }
+    #modulestore .breadCrumbNav-group{
+        width: auto;
+        margin-top:26px;
+    }
+    .qq-top-fixed {
+    position: fixed;
+    right: 10px;
+    top: 330px;
+    z-index: 5;
+	text-decoration: none;
+	cursor:pointer;
+}
+.qq-top-fixed a{
+	display:block;
+	width: 72px;
+	height: 73px;
+	background:url("/img/vipService/qq_fixed.png") no-repeat center center;
+	background-size:100% 100%;
+}
+.qq-top-fixed a:hover{
+	background:url("/img/vipService/qq_fixed_active.png") no-repeat center center;
+}
+</style>
+<div id="modulestore" class="mod-filter" userstate="0">
+    <div id="module-carousel" class="">
+        <ul class="bxslider">
+            <li>
+				<!-- <a href="/signup" target="_blank" mdid="" class="no_link">
+                    <img src="/img/moduledetail/banner-0418small.png" alt="&nbsp;"/>
+                </a> -->
+                <!-- <a href="https://community.apicloud.com/bbs/thread-168574-1-1.html" target="_blank">
+                    <img src="/img/moduledetail/banner-1210small.png" alt="&nbsp;"> </a> -->
+                    <img src="/img/moduledetail/banner-0418small.png" alt="&nbsp;"/>
+            </li>
+        </ul>
+    </div>
+    <div class="module-main mod-select">
+        <div class="modulestore-tabBar">
+            <div id="modulestore_tabBar"></div>
+            <div class="modulestore-tabBar-inner">
+                <div class="modulestore-text-group">
+                    <div class="modulestore-text-inner">
+                        <span class="modulestore-text">
+                            <!-- 精选 -->
+                            精选
+                        </span>
+                        <span class="modulestore-text-highlight">
+                            <i class="modulestore-icon modulestore-icon-select"></i>
+                            <!-- 精选 -->
+                            精选
+                        </span>
+                    </div>
+                </div>
+                <!-- <ul class="modulestore-filter-list">
+                    <li>
+                        这是精选
+                    </li>
+                </ul> -->
+            </div>
+            <div class="modulestore-tabBar-inner">
+                <div class="modulestore-text-group">
+                    <div class="modulestore-text-inner">
+                        <span class="modulestore-text">
+                            <!-- 界面布局 -->
+                            界面布局
+                        </span>
+                        <span class="modulestore-text-highlight" data-first="3" data-second="0">
+                            <i class="modulestore-icon modulestore-icon-ui"></i>
+                            <!-- 界面布局 -->
+                            界面布局
+                        </span>
+                    </div>
+                </div>
+                <ul class="modulestore-filter-list">
+                    <li data-first="3" data-second="5">
+                        <!-- 导航菜单 -->
+                        导航菜单
+                    </li>
+                    <li data-first="3" data-second="6">
+                        <!-- 第三方APP效果 -->
+                        第三方APP效果
+                    </li>
+                    <li data-first="3" data-second="1">
+                        <!-- 列表 -->
+                        列表
+                    </li>
+                    <li data-first="3" data-second="2">
+                        <!-- 选择器 -->
+                        选择器
+                    </li>
+                    <li data-first="3" data-second="3">
+                        <!-- 图表 -->
+                        图表
+                    </li>
+                    <li data-first="3" data-second="7">
+                        <!-- 下拉刷新 -->
+                        下拉刷新
+                    </li>
+                    <li data-first="3" data-second="8">
+                        <!-- 基本组件 -->
+                        基本组件
+                    </li>
+                    <li data-first="3" data-second="9">
+                        <!-- 小程序 -->
+                        小程序(公测)
+                    </li>
+                    <li data-first="3" data-second="4">
+                        <!-- 其它 -->
+                        其它
+                    </li>
+                </ul>
+            </div>
+            <div class="modulestore-tabBar-inner">
+                <div class="modulestore-text-group">
+                    <div class="modulestore-text-inner">
+                        <span class="modulestore-text">
+                            <!-- 设备访问 -->
+                            设备访问
+                        </span>
+                        <span class="modulestore-text-highlight" data-first="2" data-second="0">
+                            <i class="modulestore-icon modulestore-icon-dev"></i>
+                            <!-- 设备访问 -->
+                            设备访问
+                        </span>
+                    </div>
+                </div>
+                <ul class="modulestore-filter-list">
+                    <li data-first="2" data-second="1">
+                        <!-- 蓝牙WIFI -->
+                        蓝牙WIFI
+                    </li>
+                    <li data-first="2" data-second="2">
+                        <!-- 传感器 -->
+                        传感器
+                    </li>
+                    <li data-first="2" data-second="3">
+                        <!-- 其他 -->
+                        其它
+                    </li>
+                </ul>
+            </div>
+            <div class="modulestore-tabBar-inner">
+                <div class="modulestore-text-group">
+                    <div class="modulestore-text-inner">
+                        <span class="modulestore-text">
+                            <!-- 功能扩展 -->
+                            功能扩展
+                        </span>
+                        <span class="modulestore-text-highlight" data-first="5" data-second="0">
+                            <i class="modulestore-icon modulestore-icon-fn"></i>
+                            <!-- 功能扩展 -->
+                            功能扩展
+                        </span>
+                    </div>
+                </div>
+                <ul class="modulestore-filter-list">
+                    <li data-first="5" data-second="1">
+                        <!-- 数据存储 -->
+                        数据存储
+                    </li>
+                    <li data-first="5" data-second="3">
+                        <!-- 网络通信 -->
+                        网络通信
+                    </li>
+                    <li data-first="5" data-second="2">
+                        <!-- 文本浏览 -->
+                        文本浏览
+                    </li>
+                    <li data-first="5" data-second="4">
+                        <!-- 多媒体 -->
+                        多媒体
+                    </li>
+                    <li data-first="5" data-second="6">
+                        <!-- 工具  -->
+                        工具
+                    </li>
+                    <li data-first="5" data-second="7">
+                        <!-- 设备   -->
+                        设备
+                    </li>
+                    <li data-first="5" data-second="8">
+                        <!-- 云服务对接 -->
+                        云服务对接
+                    </li>
+                    <li data-first="5" data-second="5">
+                        <!-- 其它 -->
+                        其它
+                    </li>
+                </ul>
+            </div>
+            <div class="modulestore-tabBar-inner">
+                <div class="modulestore-text-group">
+                    <div class="modulestore-text-inner">
+                        <span class="modulestore-text">
+                            <!-- 开放SDK -->
+                            开放SDK
+                        </span>
+                        <span class="modulestore-text-highlight" data-first="8" data-second="0">
+                            <i class="modulestore-icon modulestore-icon-sdk"></i>
+                            <!-- 开放SDK -->
+                            开放SDK
+                        </span>
+                    </div>
+                </div>
+                <ul class="modulestore-filter-list">
+                    <li data-first="8" data-second="1">
+                        <!-- 分享与登录 -->
+                        分享与登录
+                    </li>
+                    <li data-first="8" data-second="2">
+                        <!-- 推送与IM -->
+                        推送与IM
+                    </li>
+                    <li data-first="8" data-second="3">
+                        <!-- 支付 -->
+                        支付
+                    </li>
+                    <li data-first="8" data-second="4">
+                        <!-- 地图与位置 -->
+                        地图与位置
+                    </li>
+                    <!--<li data-first="8" data-second="5">-->
+                    <!--&lt;!&ndash; 智能识别 &ndash;&gt;-->
+                    <!--智能识别-->
+                    <!--</li>-->
+                    <li data-first="8" data-second="9">
+                        <!-- 统计分析 -->
+                        统计分析
+                    </li>
+                    <li data-first="8" data-second="10">
+                        <!-- 客服 -->
+                        客服
+                    </li>
+                    <li data-first="8" data-second="6">
+                        <!-- 验证与安全 -->
+                        验证与安全
+                    </li>
+                    <li data-first="8" data-second="7">
+                        <!-- 广告 -->
+                        广告
+                    </li>
+                    <li data-first="8" data-second="8">
+                        <!-- 其它 -->
+                        其它
+                    </li>
+                </ul>
+            </div>
+            <div class="modulestore-tabBar-inner">
+                <div class="modulestore-text-group">
+                    <div class="modulestore-text-inner">
+                        <span class="modulestore-text">
+                            <!-- 人工智能 -->
+                            AI
+                        </span>
+                        <span class="modulestore-text-highlight" data-first="10" data-second="0">
+                            <i class="modulestore-icon modulestore-icon-ai"></i>
+                            <!-- 人工智能 -->
+                            AI
+                        </span>
+                    </div>
+                </div>
+                <ul class="modulestore-filter-list">
+                    <li data-first="10" data-second="1">
+                        <!-- 语音识别 -->
+                        语音识别
+                    </li>
+                    <li data-first="10" data-second="2">
+                        <!-- 生物识别 -->
+                        生物识别
+                    </li>
+                    <li data-first="10" data-second="3">
+                        <!-- 文本识别 -->
+                        文本识别
+                    </li>
+                    <li data-first="10" data-second="4">
+                        <!--其他-->
+                        其它
+                    </li>
+                </ul>
+            </div>
+            <div class="modulestore-tabBar-inner">
+                <div class="modulestore-text-group">
+                    <div class="modulestore-text-inner">
+                        <span class="modulestore-text">
+                            <!-- 直播 -->
+                            直播|音视频
+                        </span>
+                        <span class="modulestore-text-highlight" data-first="11" data-second="0">
+                            <i class="modulestore-icon modulestore-icon-live"></i>
+                            <!-- 直播 -->
+                            直播|音视频
+                        </span>
+                    </div>
+                </div>
+                <ul class="modulestore-filter-list">
+                    <li data-first="11" data-second="1">
+                        <!-- 直播 -->
+                        直播
+                    </li>
+                    <li data-first="11" data-second="2">
+                        <!-- 视频 -->
+                        视频
+                    </li>
+                    <li data-first="11" data-second="3">
+                        <!-- 音频 -->
+                        音频
+                    </li>
+                </ul>
+            </div>
+            <div class="modulestore-tabBar-inner">
+                <div class="modulestore-text-group">
+                    <div class="modulestore-text-inner">
+                        <span class="modulestore-text">
+                            <!-- 物联网 -->
+                            物联网
+                        </span>
+                        <span class="modulestore-text-highlight" data-first="12" data-second="0">
+                            <i class="modulestore-icon modulestore-icon-iot"></i>
+                            <!-- 物联网 -->
+                            物联网
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="modulestore-tabBar-inner">
+                <div class="modulestore-text-group">
+                    <div class="modulestore-text-inner">
+                        <span class="modulestore-text">
+                            云服务对接
+                        </span>
+                        <span class="modulestore-text-highlight" data-first="9" data-second="0">
+                            <i class="modulestore-icon modulestore-icon-serv"></i>
+                            云服务对接
+                        </span>
+                    </div>
+                </div>
+            </div> -->
+            <div class="modulestore-tabBar-inner">
+                <div class="modulestore-text-group">
+                    <div class="modulestore-text-inner">
+                        <span class="modulestore-text">
+                            多端组件
+                        </span>
+                        <span class="modulestore-text-highlight" data-first="13" data-second="0">
+                            <!-- <i class="modulestore-icon icon-comments"></i> -->
+                            <img src="/img/modulestore/H5Module.png" style="width: 17px;height: 17px;display: inline;margin-bottom: 2px;" alt="">
+                            多端组件
+                        </span>
+                    </div>
+                </div>
+                <ul class="modulestore-filter-list">
+                    <li data-first="13" data-second="1">
+                        <!-- h5组件 -->
+                        H5组件
+                    </li>
+                    <li data-first="13" data-second="2">
+                        <!-- AVM组件 -->
+                        AVM组件
+                    </li>
+                </ul>
+            </div>
+            <div class="search-group">
+                <form method="" class="search-group-inner">
+                    <input type="text" id="modulestore-search-input" placeholder="搜索">
+                    <i class="clearBtn" style=""></i>
+                    <i class="modulestore-icon-search"></i>
+                </form>
+            </div>
+        </div>
+        <div class="modulestore-filter-group">
+            <div class="breadCrumbNav-group">
+                <div class="nav-before" style=""></div>
+                <a href="/" class="">首页</a><span class="character">&nbsp;&gt;</span>
+                <a href="/modulestore" class="">模块Store</a><span class="character">&nbsp;&gt;</span>
+                <a href="javascript:void(0)" class="secondList" rel="nofollow" mdType="8"></a>
+                <!-- <a href="javascript:void(0)" class=""></a> -->
+                <span class="right-quo">&gt;</span>
+                <span class="last-one" subclass="8"></span><span class="character">&nbsp;&gt;</span>
+                <span class="">imSiLop</span>
+            </div>
+            <div class="filter-message-back">
+                <a class="btn-back" href="javascript:void(0)">
+                    <i class="icon icon-angle-left"></i>
+                    <!-- 返回 -->
+                    返回
+                </a>
+                <label>
+                    <!-- 共找到 -->
+                    共找到
+                </label>
+                <span class="count">0</span>
+                <label>
+                    <!-- 条相关信息 -->
+                    条相关信息
+                </label>
+            </div>
+        </div>
+        <!-- 详情部分 -->
+        <div class="modulestore-detail-container">
+        	<!-- 模块详情 -->
+        	<div class="modulestore-detail-section clearfix" mdid="105607" mdName="imSiLop">
+        		<div class="section-detail-left">
+                    <div class="section-detail-img-mobile">
+                    </div>
+        			<ul class="section-img-selector">
+
+                        
+        				
+        			</ul>
+        		</div>
+
+        		<div class="section-detail-main">
+        			<p class="name-group">
+        				imSiLop
+        				<span class="ver">v1.0.0</span>
+        			</p>
+        			<div class="app-types-group">
+        				<!-- <span class="title">相关APP 类型：</span> -->
+        				<ul class="app-types-list">
+        					<li class="app-types-item">识别</li>
+        				</ul>
+        			</div>
+        			<p class="module-info">
+        				封装了阿里云的配网sdk
+        			</p>
+        			<div class="statistic-group">
+        				<span class="c-icon-phone"></span>
+        				<span class="text">1</span>
+        				<span class="divid-line"></span>
+	        				<span class="c-icon-i"></span>
+							<span class="text">iOS</span>
+        				<span class="divid-line"></span>
+        				<span class="c-icon-p"></span>
+        				<span class="text official" official="1">APICloud提供</span>
+        				<span class="divid-line"></span>
+						<span class="text">2020-3-31</span>
+        			</div>
+
+        			<div class="modulestore-des-group">
+        				<p class="title">
+                            <!--模块概述-->
+                            模块概述
+                        </p>
+        				<p class="modulestore-des-description">
+        					封装了阿里云的配网sdk
+        				</p>
+        			</div>
+					<div class="modulestore-docs-group">
+						<a target="_blank" href="http://docs.apicloud.com/Client-API/Open-SDK/imSiLop" class="fake-links">
+
+							<span class="c-icon-file"></span>
+							<!--查看模块文档-->
+                            查看模块文档
+						</a>
+                        <a href="javascript:void (0)" class="fake-links checkDependencies" data-mdid="105607"  data-toggle="modal" data-target="#checkDependencies">
+                            <span class="icon-indent-right"></span>
+                              查看依赖库
+                          </a>
+                        <a href="javascript:void (0)" class="fake-links problemFeedback" data-toggle="modal" data-target="#feedbackModal">
+                          <span class="icon-comment-alt"></span>
+                          <!--给模块提建议-->
+                            给模块提建议
+                        </a>
+                        <a href="https://community.apicloud.com/bbs/forum.php?mod=forumdisplay&fid=37" target="_blank" class="btn-bug fake-links"><img src="/img/console/priority_o.png" alt="" style="width:14px;height:14px;display:inline-block;"> 技术咨询</a>
+					</div>
+					<div class="fn-btn-group">
+                                <span class="btns btn-empty go_batch_bind" data-mdid="105607" data-platform="0" data-mdname="imSiLop" data-icon="http://module.apicloud.com/icon/1585640420731_模块默认图.png" data-mdType="8">立即使用</span>
+                                <span class="btns btn-empty giveReward" data-mdid="105607" data-platform="0" data-mdname="imSiLop" data-icon="http://module.apicloud.com/icon/1585640420731_模块默认图.png"><i></i>打赏作者</span>
+					</div>
+
+        		</div>
+        	</div>
+			<!-- 相关模块 轮播图 -->
+        	<!-- <div class="modulestore-relavant-section">
+        		<p class="section-title">
+        			RELEVANT&nbsp;相关模块
+        		</p>
+        		<div id="swiper_1" class="swiper-container">
+        			<span class="swiper-prev-btn-1"></span>
+			        <div class="swiper-wrapper">
+			        	<a target="_blank" href="/mod_detail/132162" class="modulestore-swiper-module-container swiper-slide">
+		                    <div class="img-box">
+		                        <img class="img" src="http://module.apicloud.com/icon/1548405162694_apsaraShortVideoBase.png" alt="">
+		                        <div class="img-shadow"></div>
+		                    </div>
+		                    <span class="modulestore-module-name" title="apsaraShortVideoBase">
+		                        apsaraShortVideoBase
+		                    </span>
+		                    <span class="price free">免费</span>
+		                </a>
+			        	<a target="_blank" href="/mod_detail/132040" class="modulestore-swiper-module-container swiper-slide">
+		                    <div class="img-box">
+		                        <img class="img" src="http://module.apicloud.com/icon/1590129364176_talkFun观看.png" alt="">
+		                        <div class="img-shadow"></div>
+		                    </div>
+		                    <span class="modulestore-module-name" title="talkFun">
+		                        talkFun
+		                    </span>
+		                    <span class="price free">免费</span>
+		                </a>
+			        	<a target="_blank" href="/mod_detail/131914" class="modulestore-swiper-module-container swiper-slide">
+		                    <div class="img-box">
+		                        <img class="img" src="http://www.apicloud.com/icon_path/0d/a1/0da129708edf7da60adcf78c86ffe781.png" alt="">
+		                        <div class="img-shadow"></div>
+		                    </div>
+		                    <span class="modulestore-module-name" title="sharetrace">
+		                        sharetrace
+		                    </span>
+		                    <span class="price free">免费</span>
+		                </a>
+			        	<a target="_blank" href="/mod_detail/131798" class="modulestore-swiper-module-container swiper-slide">
+		                    <div class="img-box">
+		                        <img class="img" src="http://www.apicloud.com/icon_path/04/7c/047cb700f1215b02e0eff4ab76eadaeb.png" alt="">
+		                        <div class="img-shadow"></div>
+		                    </div>
+		                    <span class="modulestore-module-name" title="baiduPlayer">
+		                        baiduPlayer
+		                    </span>
+                                    <span class="origin-price">￥300</span>&nbsp;
+                                    <span class="price vip-price">限时￥150</span>
+		                </a>
+			        	<a target="_blank" href="/mod_detail/131792" class="modulestore-swiper-module-container swiper-slide">
+		                    <div class="img-box">
+		                        <img class="img" src="http://www.apicloud.com/icon_path/d6/fe/d6fe29829e8361eaa7b7bce4fca64c09.png" alt="">
+		                        <div class="img-shadow"></div>
+		                    </div>
+		                    <span class="modulestore-module-name" title="UIBaiduOCR">
+		                        UIBaiduOCR
+		                    </span>
+                                    <span class="price">￥355</span>&nbsp;
+		                </a>
+			        	<a target="_blank" href="/mod_detail/131482" class="modulestore-swiper-module-container swiper-slide">
+		                    <div class="img-box">
+		                        <img class="img" src="http://www.apicloud.com/icon_path/b6/6d/b66d2480e80a5659cc7716093a83b736.png" alt="">
+		                        <div class="img-shadow"></div>
+		                    </div>
+		                    <span class="modulestore-module-name" title="tencentPlayers">
+		                        tencentPlayers
+		                    </span>
+                                    <span class="price">￥199</span>&nbsp;
+		                </a>
+			        	<a target="_blank" href="/mod_detail/131481" class="modulestore-swiper-module-container swiper-slide">
+		                    <div class="img-box">
+		                        <img class="img" src="http://www.apicloud.com/icon_path/f0/7b/f07bc658e68ca28f8a442449d939c93a.png" alt="">
+		                        <div class="img-shadow"></div>
+		                    </div>
+		                    <span class="modulestore-module-name" title="tencentMLVB">
+		                        tencentMLVB
+		                    </span>
+                                    <span class="price">￥499</span>&nbsp;
+		                </a>
+			        	<a target="_blank" href="/mod_detail/131480" class="modulestore-swiper-module-container swiper-slide">
+		                    <div class="img-box">
+		                        <img class="img" src="http://www.apicloud.com/icon_path/e6/6f/e66f3de1b41226d884de34e970eab92a.png" alt="">
+		                        <div class="img-shadow"></div>
+		                    </div>
+		                    <span class="modulestore-module-name" title="tencentLiveRoom">
+		                        tencentLiveRoom
+		                    </span>
+                                    <span class="price">￥199</span>&nbsp;
+		                </a>
+			        	<a target="_blank" href="/mod_detail/131479" class="modulestore-swiper-module-container swiper-slide">
+		                    <div class="img-box">
+		                        <img class="img" src="http://www.apicloud.com/icon_path/b1/ed/b1ed36073724fc7af3bda852d18b42b3.png" alt="">
+		                        <div class="img-shadow"></div>
+		                    </div>
+		                    <span class="modulestore-module-name" title="tencentLive">
+		                        tencentLive
+		                    </span>
+                                    <span class="price">￥299</span>&nbsp;
+		                </a>
+			        	<a target="_blank" href="/mod_detail/131478" class="modulestore-swiper-module-container swiper-slide">
+		                    <div class="img-box">
+		                        <img class="img" src="http://www.apicloud.com/icon_path/71/57/715799b51de9c1bd277598c63c1cd1f2.png" alt="">
+		                        <div class="img-shadow"></div>
+		                    </div>
+		                    <span class="modulestore-module-name" title="tencentIMPro">
+		                        tencentIMPro
+		                    </span>
+                                    <span class="price">￥999</span>&nbsp;
+		                </a>
+			        	<a target="_blank" href="/mod_detail/131315" class="modulestore-swiper-module-container swiper-slide">
+		                    <div class="img-box">
+		                        <img class="img" src="http://module.apicloud.com/icon/1543996033617_sqlCipher.png" alt="">
+		                        <div class="img-shadow"></div>
+		                    </div>
+		                    <span class="modulestore-module-name" title="sqlCipher">
+		                        sqlCipher
+		                    </span>
+                                    <span class="price">￥99</span>&nbsp;
+		                </a>
+			        	<a target="_blank" href="/mod_detail/131294" class="modulestore-swiper-module-container swiper-slide">
+		                    <div class="img-box">
+		                        <img class="img" src="http://www.apicloud.com/icon_path/8c/47/8c4775027d3b0bcd155189fec677ede7.png" alt="">
+		                        <div class="img-shadow"></div>
+		                    </div>
+		                    <span class="modulestore-module-name" title="sunlogin">
+		                        sunlogin
+		                    </span>
+                                    <span class="price">￥200</span>&nbsp;
+		                </a>
+			        	<a target="_blank" href="/mod_detail/131084" class="modulestore-swiper-module-container swiper-slide">
+		                    <div class="img-box">
+		                        <img class="img" src="http://module.apicloud.com/icon/1461565713603_X5.jpg" alt="">
+		                        <div class="img-shadow"></div>
+		                    </div>
+		                    <span class="modulestore-module-name" title="webBrowser">
+		                        webBrowser
+		                    </span>
+		                    <span class="price free">免费</span>
+		                </a>
+			        	<a target="_blank" href="/mod_detail/130803" class="modulestore-swiper-module-container swiper-slide">
+		                    <div class="img-box">
+		                        <img class="img" src="http://module.apicloud.com/icon/1554967278953_txCameraRecord.png" alt="">
+		                        <div class="img-shadow"></div>
+		                    </div>
+		                    <span class="modulestore-module-name" title="txCameraRecord">
+		                        txCameraRecord
+		                    </span>
+                                    <span class="price">￥666</span>&nbsp;
+		                </a>
+			        	<a target="_blank" href="/mod_detail/130801" class="modulestore-swiper-module-container swiper-slide">
+		                    <div class="img-box">
+		                        <img class="img" src="http://module.apicloud.com/icon/1555579448735_tencentOSS.png" alt="">
+		                        <div class="img-shadow"></div>
+		                    </div>
+		                    <span class="modulestore-module-name" title="tencentOSS">
+		                        tencentOSS
+		                    </span>
+                                    <span class="price">￥255</span>&nbsp;
+		                </a>
+			        	<a target="_blank" href="/mod_detail/130791" class="modulestore-swiper-module-container swiper-slide">
+		                    <div class="img-box">
+		                        <img class="img" src="http://www.apicloud.com/icon_path/3f/7c/3f7c23f879f78345a389d9d6dabc6e63.jpg" alt="">
+		                        <div class="img-shadow"></div>
+		                    </div>
+		                    <span class="modulestore-module-name" title="baiduBos">
+		                        baiduBos
+		                    </span>
+                                    <span class="price">￥280</span>&nbsp;
+		                </a>
+			        	<a target="_blank" href="/mod_detail/130786" class="modulestore-swiper-module-container swiper-slide">
+		                    <div class="img-box">
+		                        <img class="img" src="http://module.apicloud.com/icon/1548907829706_alibcTrade-.png" alt="">
+		                        <div class="img-shadow"></div>
+		                    </div>
+		                    <span class="modulestore-module-name" title="alibcTrade">
+		                        alibcTrade
+		                    </span>
+                                    <span class="price">￥298</span>&nbsp;
+		                </a>
+			        	<a target="_blank" href="/mod_detail/130646" class="modulestore-swiper-module-container swiper-slide">
+		                    <div class="img-box">
+		                        <img class="img" src="http://www.apicloud.com/icon_path/ac/f4/acf4ee67c4cbf0998f972c70c89eb501.png" alt="">
+		                        <div class="img-shadow"></div>
+		                    </div>
+		                    <span class="modulestore-module-name" title="tencentLivePusher">
+		                        tencentLivePusher
+		                    </span>
+                                    <span class="price">￥99</span>&nbsp;
+		                </a>
+			        	<a target="_blank" href="/mod_detail/130634" class="modulestore-swiper-module-container swiper-slide">
+		                    <div class="img-box">
+		                        <img class="img" src="http://module.apicloud.com/icon/1606206478386_RecognizeCard.png" alt="">
+		                        <div class="img-shadow"></div>
+		                    </div>
+		                    <span class="modulestore-module-name" title="recognizeCard">
+		                        recognizeCard
+		                    </span>
+                                    <span class="price">￥300</span>&nbsp;
+		                </a>
+			        	<a target="_blank" href="/mod_detail/130393" class="modulestore-swiper-module-container swiper-slide">
+		                    <div class="img-box">
+		                        <img class="img" src="http://www.apicloud.com/icon_path/98/1c/981c9cbb74facfbdf68f4c799244bd8e.jpeg" alt="">
+		                        <div class="img-shadow"></div>
+		                    </div>
+		                    <span class="modulestore-module-name" title="tencentLivePlayer">
+		                        tencentLivePlayer
+		                    </span>
+                                    <span class="price">￥99</span>&nbsp;
+		                </a>
+			        	<a target="_blank" href="/mod_detail/129722" class="modulestore-swiper-module-container swiper-slide">
+		                    <div class="img-box">
+		                        <img class="img" src="http://module.apicloud.com/icon/1547629559219_txShortVideo.png" alt="">
+		                        <div class="img-shadow"></div>
+		                    </div>
+		                    <span class="modulestore-module-name" title="txShortVideo">
+		                        txShortVideo
+		                    </span>
+                                    <span class="origin-price">￥498</span>&nbsp;
+                                    <span class="price vip-price">限时￥398</span>
+		                </a>
+			        </div>
+			        <span class="swiper-next-btn-1"></span>
+        		</div>
+            </div> -->
+            
+			<!-- 关于提供者 -->
+			<!-- 其他信息 -->
+        	<div class="other-info-section clearfix" id="otherModulPart">
+        		<div class="questions-container">
+                    <div id="popularForm" v-if="popularLength>0">   
+                        <p class="section-title">
+                            <span class="sectionLabel"></span>他们都在用
+                        </p>
+                        <div class="popular">
+                            <ul>
+                                <li v-for="(index,item) in popular">
+                                    <div class="popular_con">
+                                        <div class="imgDiv">
+                                            <img :src="item.iconUrl" alt="">
+                                        </div>
+                                        <div class="nameDiv">
+                                            <p v-text="item.upkName"></p>
+                                            <span v-text="item.catName"></span>
+                                        </div>
+                                    </div>
+                                </li>
+                                
+                            </ul>
+                        </div>
+                    </div>
+                    <div id="questionForm">
+                        <p class="section-title">
+                            <span class="sectionLabel"></span>问题解答
+                        </p>
+                            <div class="qa-group" v-for="(index,item) in question">
+                                <a :href="item.queLink">
+                                    <p class="qa-text">
+                                        <span class="qa-q">Q</span>
+                                        <span v-text="item.subject">模块store里没有我想要的模块功能怎么办？</span>
+                                        <span class="questionNum">
+                                            <span class="iconImg c-icon-see"></span><span v-text="item.views"></span>
+                                            <span class="iconImg c-icon-reply"></span><span v-text="item.replies"></span>
+                                        </span>
+
+                                    </p>
+                                    <p class="qa-text">
+                                        <span class="qa-a">A</span>
+                                        <span  v-text="item.message">您可以您的需求，付费定制个性专属模块。</span>
+
+                                    </p>
+                                </a>
+                            </div>
+                        
+                        <div class="record-page">
+                            <div class="pull-right" id="pagination" :totalPage="totalPage" :currentPage="currentPage"></div>
+                        </div>
+                    </div>
+		        	
+		        </div>
+        		<div class="modulestore-list-box clearfix modulestore-list-cont">
+		            <!-- <div class="modulestore-list-type clearfix">
+		                <span class="modulestore-list-free active">
+		                    推荐模块
+		                </span>
+		                <span class="modulestore-list-pay">
+		                    使用排行
+		                </span>
+                    </div> -->
+                    <div id="alikeForm">   
+                        <p class="section-title">
+                            <span class="sectionLabel"></span>相似模块
+                        </p>
+                        <div class="alike">
+                            <ul class="modulestore-free-list active">
+                                <li  v-for="(index,item) in alike">
+                                    <a target="_blank" :href="item.link" class="modulestore-list-li">
+                                        <div class="modulestore-li-inner clearfix">
+                                            <div class="img-box">
+                                                <img class="img" :src="item.icon_path" alt="">
+                                                <div class="img-shadow"></div>
+                                            </div>
+                                            <span class="module-name" v-text="item.mdName">
+                                            </span>
+                                            <span class="price free" v-if="item.isfree==1">免费</span>
+                                            <span class="price" v-else v-text="item.discount_price"></span>
+
+                                            <span class="origin-price" v-if="item.price" v-text="item.priceStr"></span>
+                                            <div class="module-hot">
+                                                <i class="icon-hot"></i>
+                                                <span class="module-hot-count" v-text="item.num">
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                            <div v-if="alikeChange" class="changeMd" @click="clickChangeMd()">换一换</div>
+                        </div>
+                    </div>
+                    <div id="newListForm">   
+                        <p class="section-title">
+                            <span class="sectionLabel"></span>最新发布
+                        </p>
+                        <div class="newList">
+                            <ul class="modulestore-free-list active">
+                                <li  v-for="(index,item) in newList">
+                                    <a target="_blank" :href="item.link" class="modulestore-list-li">
+                                        <div class="modulestore-li-inner clearfix">
+                                            <div class="img-box">
+                                                <img class="img" :src="item.icon_path" alt="">
+                                                <div class="img-shadow"></div>
+                                            </div>
+                                            <span class="module-name" v-text="item.mdName">
+                                            </span>
+                                            <span class="price free" v-if="item.isfree=1">免费</span>
+                                            <span class="price" v-else>
+                                                <span class="price" v-else v-text="item.discount_price"></span>
+                                                <span class="origin-price" v-if="item.price" v-text="item.priceStr"></span>
+                                            </span>
+
+                                            
+                                            <div class="module-hot">
+                                                <i class="icon-hot"></i>
+                                                <span class="module-hot-count" v-text="item.num">
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                            <div v-if="newChange" class="changeMd" @click="clickChangeMdNew()">换一换</div>
+                        </div>
+                    </div>
+		            
+		        </div>
+        	</div>
+        	
+        </div>
+        <div class="modulestore-module-box clearfix">
+        </div>
+        <div id="modulestore-page-box">
+            <div class="modulestore-page-inner">
+                <span class="modulestore-btn btn-prev icon-caret-left"></span>
+                <div class="module-page-container clearfix">
+                    <span class="modulestore-btn active">1</span>
+                    <!-- <span class="modulestore-btn">2</span>
+                    <span class="modulestore-btn">3</span>
+                    <span class="modulestore-btn">4</span>
+                    <span class="modulestore-btn">5</span>
+                    <span class="modulestore-btn more-page">...</span>
+                    <span class="modulestore-btn">12</span> -->
+                </div>
+                <span class="modulestore-btn btn-next icon-caret-right"></span>
+            </div>
+        </div>
+    </div>
+    <!--H5协议-->
+    <div class="modal fade" id="H5Agreement">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button class="close" data-dismiss="modal" type="button">
+                        <span aria-hidden="true">
+                            ×
+                        </span>
+                        <span class="sr-only">
+                            Close
+                        </span>
+                    </button>
+                    <p class="modal-title">
+                        H5模块协议
+                    </p>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <!--<h3>H5模块协议</h3>-->
+                        <h4 class="">声明：</h4>
+                        <p>在您使用本平台之前请审慎阅读以下内容，以下内容需要您确认后方可继续访问，若您阅读后不接受APICloud平台的规定，请您放弃操作。</p>
+                        <h4>简介：</h4>
+                        <p>APICloud平台通过可复用的跨平台引擎和模块，为APP开发节省了大量的工作效率。开发者在使用平台进行APP开发时，以编写H5代码为主，辅以原生模块和引擎API，经过长期的实践我们发现，除了引擎和模块本身，一个APP中至少有50%的H5代码，也是可以在另一个APP中直接或者进行少量改动后复用的，但因为APP都属于不同的开发者，彼此之间无法沟通，缺乏复用的桥梁。</p>
+                        <p>因此我们希望在平台现有的模块生态下，新增H5类型模块，为开发者建立H5代码复用的桥梁。该类型模块要求提交H5源码，该源码可以是某个功能的抽象封装，比如操作数据库；可以是某个效果的封装，比如日历效果；也可以是功能加效果的封装，比如基于融云模块的聊天列表等等。开发者通过平台获取到该模块的源码后，可以在自身APP中直接使用。</p>
+                        <h4>解释：</h4>
+                        <p>提供者：提供H5模块源码并进行合规发布的开发者</p>
+                        <p>使用者：下载使用H5模块源码的开发者</p>
+                        <h4>一、权利义务规定</h4>
+                        <p>1、APICloud平台不对组件的提供者承担任何保证义务，提供者提供源代码的行为为自愿行为，提供者愿意自行承担在APICloud平台发布自己产品产生的全部责任。</p>
+                        <p>2、组件的提供者应对上传至APICloud平台的产品承担保证责任，不得侵犯任何第三方的权益，因侵权给APICloud平台造成损失的，提供者应承担全部损失的赔偿责任。</p>
+                        <p>3、使用人承诺在使用提供者提供的组件而发生的全部责任由自己承担。</p>
+                        <p>4、提供者发布的内容应符合中华人民共和国法律法规的规定，承担因违反法律法规的强制性规定的法律责任。</p>
+                        <p>5、使用者不得将提供者上传至APICloud平台的产品进行传播，倒卖，租赁、违反此项规定应向提供者承担赔偿责任。</p>
+                        <p>6、提供者不得以用户侵犯知识产权为由让APICloud平台承担任何责任，APICloud平台提供的是一个共享资源池，不对组件的知识产权和传播问题做任何担保，如有使用者打赏的费用先中转到APICloud平台， 之后平台再转给提供者。</p>
+                        <p>7、提供者、使用者不会利用本平台进行任何违法或不正当的活动，包括但不限于下列行为：</p>
+                        <ul>
+                            <li>（1）违反宪法或法律法规规定的；</li>
+                            <li>（2）危害国家安全，泄露国家秘密，颠覆国家政权，破坏国家统一的； </li>
+                            <li>（3）损害国家荣誉和利益的，损害公共利益的；</li>
+                            <li>（4）煽动民族仇恨、民族歧视，破坏民族团结的； </li>
+                            <li>（5）破坏国家宗教政策，宣扬邪教和封建迷信的； </li>
+                            <li>（6）散布谣言，扰乱社会秩序，破坏社会稳定的； </li>
+                            <li>（7）散布淫秽、色情、赌博、暴力、凶杀、恐怖或者教唆犯罪的； </li>
+                            <li>（8）侮辱或者诽谤他人，侵害他人合法权益的； </li>
+                            <li>（9）含有法律、行政法规禁止的其他内容的。</li>
+                        </ul>
+                        <h4>二、信息披露</h4>
+                        <p>根据需要“APICloud”平台可以对提供者的信息进行披露：</p>
+                        <p>1、为促成提供方与需求方顺利达成合作事宜而向需求方披露的信息。</p>
+                        <p>2、为了提供所需向第三方披露</p>
+                        <p>3、因违反法律、法规、根据行政或司法机关的要求向行政或司法机关或第三方披漏</p>
+                        <p>4、因违反“APICloud”平台的会员入住协议，根据需要“APICloud”平台向第三方披露</p>
+                        <p>5、其他根据法律或“APICloud”平台规定认为需要进行披露的信息。</p>
+                        <h4>三、知识产权的约定</h4>
+                        <p>1、提供者承诺提供的产品不会侵犯他人的著作权、商标侵权、专利权，对自身发布的内容承担保证责任，若违反以上规定给用户、“APICloud”平台造成损失的应承担全部损失的赔偿责任。</p>
+                        <p>2、提供者承诺提供的全部源代码是开源的，提供者将自己的产品上传至APICloud平台后，不会向在“APICloud”本平台的使用者主张任何知识产权侵权。</p>
+                        <h4>四、其他约定</h4>
+                        <p>1、APICloud平台有随时更新本协议内条款的权利，本协议更新后若您对本协议的更新内容不予认可，请立即停止使用本平台发布的任何产品，若您继续使用，说明您已经同意条款更新内容，愿意接受本协议规定的相关权利义务。</p>
+                        <p>2、提供者、使用者应 遵守APICloud平台所有协议、规范的规定，本协议未规定的参照其他协议、规范的规定，其他协议、规范未规定的适用中华人民共和国法律法规的相关规定。</p>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-12">
+                            <div class="checkbox">
+                                <label class="changeTrue">
+                                    <input id="istrue" type="checkbox" style="display: block"> 我已阅读并同意《H5模块协议》
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <!--<div class="btn-bind-mod">确认打赏</div>-->
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn okChecked btn-default" data-dismiss="modal" disabled>确认</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--打赏金额输入-->
+    <div class="modal fade" id="freePlay">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button class="close" data-dismiss="modal" type="button">
+                        <span aria-hidden="true">
+                            ×
+                        </span>
+                        <span class="sr-only">
+                            Close
+                        </span>
+                    </button>
+                    <p class="modal-title">
+                        请输入打赏金额
+                    </p>
+                </div>
+                <div class="modal-body" style="height: 80px;">
+                    <div class="form-group">
+                        <input type="password" style="display: none;">
+                        <!--<label for="paymaney" class="col-sm-2 control-label">打赏金额</label>-->
+                        <div class="col-sm-2"></div>
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control" id="paymaney" placeholder="金额">
+                            <span>元</span>
+                            <p class="numShow" style="color: red;display: none;text-align: center;font-size: 12px;margin-top:5px;">打赏金额不可低于1元哦~</p>
+                        </div>
+                        <div class="col-sm-2"></div>
+                    <!--<div class="btn-bind-mod">确认打赏</div>-->
+                        <div class="col-sm-12">
+                            <p>贡献无价，感谢您对作者的认可与鼓励！</p>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn okpay btn-default" data-dismiss="modal">确认</button>
+            </div>
+        </div>
+    </div>
+    </div>
+    <!-- 选择要绑定的APP -->
+    <div class="modal fade" id="bind_modal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button class="close" data-dismiss="modal" type="button">
+                        <span aria-hidden="true">
+                            ×
+                        </span>
+                        <span class="sr-only">
+                            Close
+                        </span>
+                    </button>
+                    <p class="modal-title">
+                        请选择要添加到的APP
+                    </p>
+                </div>
+                <div class="modal-body">
+                    <ul class="app-container clearfix">
+
+                    </ul>
+                    <div class="btn-bind-mod">确认添加</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 推荐的模块 -->
+    <div class="modal fade" id="recommend_mod_modal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button class="close" data-dismiss="modal" type="button">
+                        <span aria-hidden="true">
+                            ×
+                        </span>
+                        <span class="sr-only">
+                            Close
+                        </span>
+                    </button>
+                    <p class="modal-title">
+
+                    </p>
+                </div>
+                <div class="modal-body">
+                    <p class="bind-success">
+                        <img src="/img/bind_success.png" alt="">
+                        <span>已成功添加到 hello app!</span>
+                    </p>
+                    <div class="current-mod clearfix">
+                        <img src="/img/module_default.jpg" alt="">
+                        <a href="/appoverview" class="go-appoverview">
+                            去APP看看>>
+                        </a>
+                        <div class="current-center">
+                            <p class="mod-name">xxxxxxxxxx</p>
+                            <p class="platform">
+                                支持Android及iOS
+                            </p>
+                        </div>
+                    </div>
+                    <div class="recommend-slider">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="checkDependencies" tabindex="-1" role="dialog" aria-labelledby="checkDependencies" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+              <h4 class="modal-title">【imSiLop】的依赖库</h4>
+              <div class="searchList">
+                <div class="btn-group">  
+                    <div data-toggle="dropdown" style="font-size: 12px;padding: 11px 6px 1px 11px;">系统：
+                        <span id="sourceText" data-value="-1" style="color: #ff6723;">全部</span>
+                        <span class="showMenu"><img src="/img/arr_b.png" alt=""></span>
+                    </div>
+                    <ul role="menu" class="dropdown-menu" id="sourceList">
+                        <li>
+                            <a data-value="-1" href="javascript:void(0)">
+                                全部
+                            </a>
+                        </li>
+                        <li>
+                            <a data-value="1" href="javascript:void(0)">
+                                Android
+                            </a>
+                        </li>
+                        <li>
+                            <a data-value="2" href="javascript:void(0)">
+                                IOS
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+              </div>
+            </div>
+            <div class="modal-body">
+                <table class="table table-bordered table-hover" style="text-align: center;table-layout: fixed;">
+                    <thead>
+                        <tr>
+                            <th style="border: 0;text-align: center;">系统</th>
+                            <th style="border: 0;text-align: center;">库名</th>
+                            <th style="border: 0;text-align: center;">版本</th>
+                        </tr>
+                    </thead>
+                    <tbody id="dependencies" style="word-wrap: break-word;">
+                        <tr>
+                            <td style="border: 0;text-align: center;" >...</td>
+                            <td style="border: 0;text-align: center;" >...</td>
+                            <td style="border: 0;text-align: center;" >...</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+          </div><!-- /.modal-content -->
+        </div><!-- /.modal -->
+      </div>
+    <!--模块反馈弹窗-->
+  <div class="modal fade" id="feedbackModal" tabindex="-1" role="dialog" aria-labelledby="feedbackModal" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          <h4 class="modal-title">留下您宝贵的意见</h4>
+        </div>
+        <div class="modal-body">
+          <div class="form-box">
+            <div class="form-group clearfix question-type">
+              <label class="col-sm-2 control-label">建议类型</label>
+              <div class="col-sm-10">
+                <div class="col-md-12 typeitems">
+                  <div class="typeitem" type="0">意见建议</div>
+                  <div class="typeitem" type="1">新需求</div>
+                  <!-- <div class="typeitem" type="2">bug</div> -->
+                  <div class="typeitem" type="3">其他</div>
+                </div>
+              </div>
+            </div>
+            <div class="form-group clearfix question-desc">
+                <label class="col-sm-2 control-label">标题</label>
+                <div class="col-sm-10">
+                  <input type="text" class="form-control" placeholder="" id="ques-tit">
+                </div>
+              </div>
+            <div class="form-group clearfix question-desc">
+              <label class="col-sm-2 control-label">描述</label>
+              <div class="col-sm-10">
+                <textarea class="form-control" placeholder="留下您对此模块宝贵的建议。" id="ques-desc"></textarea>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary">提交</button>
+          <!-- <a href="https://community.apicloud.com/bbs/forum.php?mod=forumdisplay&fid=37" target="_blank" class="btn-bug">有疑问&提bug>></a> -->
+        </div>
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal -->
+  </div>
+    <div class="modalx">
+        <a href="javascript:void(0);" class="close"></a>
+        <div class="content">
+        </div>
+    </div>
+
+<div class="modal fade pay-pop" id="moduelPayPop" userstate="0">
+    <div class="modal-dialog">
+        <div class="modal-content border-r">
+            <div class="modal-body">
+                <span type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></span>
+                <div class="module-pay">
+                    <div class="left">
+                        <h2 class="module-title" v-text="name"></h2>
+                        <div class="module-type">
+                            <p class="module-info" v-text="info"></p>
+                            <p class="price">
+                                ￥<span v-text="price"></span>
+                                <a v-if="showVIP" class="vip-a" href="/vipservice/price" target="_blank">想要<span class="vip-price" v-text="VIPprice"></span>元购买？</a>
+                            </p>
+                        </div>
+                        <div class="module-pic">
+                            <img :src="imgUrl">
+                        </div>
+                    </div>
+                    <div class="right">
+                        <div class="qrcode-box">
+                            <div class="col-md-6">
+                                <span class="weixin"></span>
+                                <p><b>微信</b>扫描购买</p>
+                            </div>
+                            <div class="col-md-6">
+                                <span class="taobao"></span>
+                                <p><b>支付宝</b>扫描购买</p>
+                            </div>
+                        </div>
+                        <div class="success-box">
+                                <div class="pic"></div>
+                                <p class="succ-info">支付成功</p>
+                                <p class="module-key">授权码：<span v-text="key"></span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade mdRatingPop pay-pop fade" id="mdRatingPop">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body">
+                <span type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></span>
+                <div class="modal-rating">
+                    <div class="mdName">UICalender（模块名称） 1.0.1</div>
+                    <p class="tit">评价模块</p>
+                    <div class="rating-box">
+                        <span class="img-ret" data-ret="1"></span>
+                        <span class="img-ret" data-ret="2"></span>
+                        <span class="img-ret" data-ret="3"></span>
+                        <span class="img-ret" data-ret="4"></span>
+                        <span class="img-ret" data-ret="5"></span>
+                    </div>
+                    <a href="javascript:void(0);" class="subimitbtn btn">保存</a>
+                    <a href="javascript:void(0);" class="cancel btn" data-dismiss="modal" aria-label="Close">取消</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--绿钻是什么-->
+<div class="modal fade mdRatingPop pay-pop fade" id="greenModelShow">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <!--<span>什么是绿钻包？</span>-->
+
+                <h4 class="pull-left">什么是绿钻包？</h4>
+                <span type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">×</span></span>
+            </div>
+            <div class="modal-body">
+                <div class="modal-rating">
+                    <p class="col-md-11">APICloud模块store为开发者提供了上千个优质的原生功能模块，为了更好的服务有大量模块需求的开发者，APICloud联合模块开发者选择了80%的付费模块加入绿钻免费权限，凡是升级VIP的用户，享有绿钻模块免费使用权。</p>
+                    <!--<a href="javascript:void(0);" class="subimitbtn btn">保存</a>
+                    <a href="javascript:void(0);" class="cancel btn" data-dismiss="modal" aria-label="Close">取消</a>-->
+                </div>
+            </div>
+            <div class="modal-footer">
+                <a class="btn green-btn" href="https://community.apicloud.com/bbs/thread-125124-1-1.html" target="_blank">绿钻模块包说明</a>
+                <a class="btn addVip" href="/vipservice/price" class="btn btn-primary btn-lg vipBtn">升级vip免费使用</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!--VIP支付-->
+<div class="modal fade payModalDialog paySelectModalDialog in" id="vipPayModel" tabindex="-1" role="dialog" aria-labelledby="payModalDialog" aria-hidden="false">
+        <div class="modal-dialog" style="margin-top: 100px;">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                    <h4 class="modal-title">VIP模块支付</h4>
+                </div>
+                <div class="modal-body" style="padding:10px 20px;">
+                    <div id="pay-window" style="display:none;">
+                        <div class="from-con VipPrePay" style="display: none;">
+                            <div class="row row-serviceName form-group clearfix">
+                                <label class="pull-left">服务名称：</label>
+                                <div class="pull-left clearfix" style="width: 450px;">
+                                    <div class="serviceName">购买模块</div>
+                                    <div style="width: 65%;float: right;display: none;"><span><a href="https://www.apicloud.com/activity" target="_blank"><img src="/img/activity/activity1024.png" alt="&amp;nbsp;" style="width: 100%;"></a></span></div>
+                                </div>
+                            </div>
+                            <div class="row-payType form-group clearfix"> 
+                                <label class="pull-left">支付方式：</label> 
+                                <div class="pull-left clearfix pay-items">
+                                    <div class="pay-item weixinManey dis-item"><i class="icon-wx"></i>微信支付</div>
+                                    <!-- <div class="pay-item marginright0 dis-item"><i class="icon-alipay"></i>支付宝支付</div> -->
+                                    <div class="pay-item pay-item-yue dis-item"><!--<i class="icon-yue"></i>-->账号余额：<span class="balance"></span></div>
+                                    <div class="pay-item yu-e dis-item" style="display: none;"><i class="icon-yue"></i>余额不足</div>
+                                    <div>
+                                        <div class="pay-item marginright0 pay-item-times"style="display: none;">
+                                            <span>VIP/绿钻包<span class="greendiamTimes"></span>次</span>
+                                        </div>
+                                        <div class="pay-item marginright0 pay-item-notimes active" data-paytype="4" style=""><span>VIP不限次</span>
+                                        </div>
+                                        <!-- <a class="upgradeLink" href="/vipservice/price" style="position: absolute;top:107px;color: #ff9348;right: 105px;">升级VIP&gt;&gt;</a> -->
+                                    </div>
+                                    <p class="upgradeLink" style="display:none;">您的企业版绿钻免费次数已不足，立即升级专业版，获取更高权益吧～<a href="/vipservice/price" style="color: #ff9348;right: 105px;">升级VIP&gt;&gt;</a></p>
+                                </div>
+                            </div>
+                            <div class="row-paybtn form-group clearfix">
+                                <div class="paybtn-con">
+                                    <button class="btn btnTopay">前往支付</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="payStatus-con pay-password greendt-wrapper" style="display: none;">
+                            <div class="p-title">请输入登录密码完成支付</div>
+                            <div class="row-password error-input-line" style="margin-bottom:10px;">
+                                <input id="vip_pay_pwd" type="password" class="form-control input-password" placeholder="请输入登录密码">
+                            </div>
+                            <div class="seccussModul" style="display: none;margin-bottom: 60px;">
+                                剩余支付次数
+                                <span class="greendiamTimes" class="residueDegree"></span>次
+                            </div> 
+                            <div class="pay-password-footer clearfix"> 
+                                <button id="vipPayBtn" type="button" class="btn btn-primary btn-affirm-pay" data-mdid="105607">确认支付</button>
+                            </div>
+                        </div>
+                        <div class="key-wrapper payStatus-con pay-success-con model-con" style="display: none;">
+                            <div class="pic">
+                                <i class="icon icon-ok-circle"></i>
+                            </div>
+                            <div class="p-info">支付成功</div>
+                                <div class="paymodel">
+                                    <div class="hf-con1">请将已购买模块添加到应用，在“已添加模块”中进行授权</div>
+                                    <div class="hf-con2 accredit-con">
+                                        授权码：<div class="accredit-code" id="keyShow"></div>
+                                    </div>
+                                    <div class="hf-con3">
+                                        *在我的账户—<a href="/modulePubHistory" target="_blank">模块购买记录</a>查看您已购买的模块和授权码。
+                                    </div>
+                                </div>
+                        </div>
+                    </div>
+                    <div id="hint-window" class="from-con" style="display:none;">
+                        <div class="row" style="text-align: center;margin-bottom:10px;">
+                                <img src="/libs/dev/module_vue/integral/img/fail.png" alt="" style="display: inline-block;margin-bottom:20px;">
+                                <p>该模块为vip专属模块，前往升级VIP，获取更高权益吧～</p>
+                        </div>
+                        <div class="row-paybtn form-group clearfix">
+                            <div class="paybtn-con">
+                                <button class="btn toup">前往升级</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+</div>
+    <script id="mod-template" type="text/x-handlebars-template">
+    {{#each body}}
+    <a target="_blank" href="/mod_detail/{{mdId}}" class="modulestore-module-container">
+        <div class="img-box">
+            {{#if icon_path}}
+            <img class="img" src="{{icon_path}}" alt="">
+            {{else}}
+            <img class="img" src="/img/module_default.jpg" alt="">
+            {{/if}}
+            <div class="img-shadow"></div>
+        </div>
+        <span class="modulestore-module-name">
+            {{mdName}}
+        </span>
+        <div class="modulestore-price-group clearfix">
+            <div class="module-hot">
+                <i class="icon-hot"></i>
+                <span class="module-hot-count">
+                {{#if num}}
+                {{num}}
+                {{else}}
+                0
+                {{/if}}
+                </span>
+            </div>
+            {{#if isfree}}
+            <span class="price free">免费</span>
+            {{else}}
+            <span class="price">￥{{price}}</span>
+            {{/if}}
+        </div>
+        <div class="modulestore-container-detail-box">
+            {{outline}}
+        </div>
+    </a>
+    {{/each}}
+    </script>
+    <div id="qqkf" class="qq-top-fixed">
+        <a href="http://wpa.qq.com/msgrd?v=3&uin=2461068866&site=qq&menu=yes" target="_black"></a>
+    </div>
+    </div>
+
+        </div>
+        <footer>
+            <section class="one-section">
+                <div class="">
+                    <dl class="footer_first">
+                        <dt>
+                            低代码开发平台
+                        </dt>
+                        <dd>
+                            <a href="https://www.apicloud.com">
+                                App开发平台
+                            </a>
+                        </dd>
+                        <dd>
+                            <a href="https://www.apicloud.com/cloudservice">
+                                PaaS平台
+                            </a>
+                        </dd>
+        
+                        <dd>
+                            <a href="https://www.apicloud.com/product">
+                                BizDevOps
+                            </a>
+                        </dd>
+                        <dd>
+                            <a href="https://www.apicloud.com/modulestore">
+                                API模块Store
+                            </a>
+                        </dd>
+                        <dd>
+                            <a href="https://www.apicloud.com/posterCHosting">
+                                腾讯云主机
+                            </a>
+                        </dd>
+                    </dl>
+                    <dl class="footer_second">
+                        <dt>
+                            定制服务
+                        </dt>
+                        <dd>
+                            <a href="//app.apicloud.com">
+                                定制开发
+                            </a>
+                        </dd>
+                        <dd>
+                            <a href="https://www.apicloud.com/solution/electricity">
+                                电商解决方案
+                            </a>
+                        </dd>
+                        <dd>
+                            <a href="https://www.apicloud.com/solution/education">
+                                教育解决方案
+                            </a>
+                        </dd>
+                        <dd>
+                            <a href="https://www.apicloud.com/solution/IoT">
+                                物联网解决方案
+                            </a>
+                        </dd>
+                        <dd>
+                            <a href="https://www.apicloud.com/solution/o2o">
+                                O2O解决方案
+                            </a>
+                        </dd>
+                        <dd>
+                            <a href="https://www.apicloud.com/solution/electricity">
+                                更多
+                            </a>
+                        </dd>
+                    </dl>
+                    <dl class="footer_three">
+                        <dt>
+                            开发者服务
+                        </dt>
+                        <dd>
+                            <a href="https://www.apicloud.com/service_provider" rel="nofollow">
+                                生态合作计划
+                            </a>
+                        </dd>
+                        <dd>
+                            <a target="" href="https://www.apicloud.com/vipservice/price">
+                                VIP服务
+                            </a>
+                        </dd>
+                        <dd>
+                            <a target="" href="https://www.apicloud.com/vipservice/plan" rel="nofollow">
+                                云服务价格
+                            </a>
+                        </dd>
+                        <dd>
+                            <a target="" href="https://www.apicloud.com/vipservice/course">
+                                培训认证
+                            </a>
+                        </dd>
+                        <dd>
+                            <a target="" href="https://www.apicloud.com/vipservice/channel">
+                                渠道打包
+                            </a>
+                        </dd>
+                        <dd>
+                            <a href="https://www.apicloud.com/sharedOffice_cq" target="">
+                                共享办公
+                            </a>
+                        </dd>
+                    </dl>
+                    <dl class="footer_four">
+                        <dt>
+                            资源
+                        </dt>
+                        <dd>
+                            <a href="//docs.apicloud.com/" target="">
+                                文档
+                            </a>
+                        </dd>
+                        <dd>
+                            <a href="https://community.apicloud.com/bbs/forum.php" target="">
+                                在线社区
+                            </a>
+                        </dd>
+                        <dd>
+                            <a href="https://www.apicloud.com/video_list" target="">
+                                视频教程
+                            </a>
+                        </dd>
+                        <dd>
+                            <a href="https://www.apicloud.com/source_code" target="">
+                                源码下载
+                            </a>
+                        </dd>
+                        <dd>
+                            <a href="https://www.apicloud.com/studio3" target="">
+                                开发工具
+                            </a>
+                        </dd>
+                    </dl>
+                    <dl class="footer_five">
+                        <dt>
+                            APICloud
+                        </dt>
+                        <dd>
+                            <a href="https://www.apicloud.com/about" rel="nofollow">
+                                关于我们
+                            </a>
+                        </dd>
+                        <dd>
+                            <a target="_blank" href="//docs.apicloud.com/%E5%85%B6%E5%AE%83/terms-of-service" rel="nofollow">
+                                服务条款
+                            </a>
+                        </dd>
+                        <dd>
+                            <a target="_blank" href="//docs.apicloud.com/%E5%85%B6%E5%AE%83/privacy-policy" rel="nofollow">
+                                隐私条款
+                            </a>
+                        </dd>
+                        <dd>
+                            <a href="https://www.apicloud.com/customers">
+                                行业客户
+                            </a>
+                        </dd>
+                        <dd>
+                            <a href="https://www.apicloud.com/cases" target="">
+                                案例
+                            </a>
+                        </dd>
+                        <dd>
+                            <a href="https://www.apicloud.com/blog">
+                                Blog
+                            </a>
+                        </dd>
+                    </dl>
+                    <dl class="footer_six">
+                        <dt>联系方式</dt>
+                        <dd>
+                            <a>
+                                电话：400-0132-920
+                            </a>
+                        </dd>
+                        <dd>
+                            <a>
+                                邮箱：app@apicloud.com
+                            </a>
+                        </dd>
+                        <dd class="footer-img">
+                            <a href="http://weibo.com/u/5217078032" target="_blank" rel="nofollow">
+                                <img class="oneImg" src="/img/product/weibo.png" alt="weibo">
+                            </a>
+                            <img class="twoImg" src="/img/product/weixin.png" alt="weixin">
+                            <div class="hovershou">
+                                <img src="/img/product/erweima.png" alt="">
+                            </div>
+                        </dd>
+                    </dl>
+                    <link rel="stylesheet" href="/css/lang.css"/>
+                </div>
+            </section>
+            <section class="footer-section" style="margin-top: 48px;">
+                <h3 class="footer-label">合作伙伴</h3>
+                <img src="/img/product/zhengtiao.png" alt="">
+            </section>
+            <section class="link-exchange-box">
+                <div class="link-exchange">
+                    <h5 class="tab">友情链接</h5>
+                    <h5 class="tab">热门标签</h5>
+                    <h5 class="tab"><a href="https://www.apicloud.com/webmap" target="_blank">地图</a></h5>
+                    <p class="list-con">
+                    </p>
+                    <p class="list-con">
+                    </p>
+                </div>
+            </section>
+            <section class="copyright">
+                <label>
+                    &copy;2014-2020&nbsp;APICloud&nbsp;&nbsp;&nbsp;&nbsp;<a target="_blank" href=" https://beian.miit.gov.cn" rel="nofollow">京ICP备14027692号</a>&nbsp;&nbsp;&nbsp;&nbsp;京ICP证151131号&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11010502043803" target="_blank" rel="nofollow">京公网安备 11010502043803号</a>
+                </label>
+                <div class="langouter">
+                    <div class="langbox" id="selectLang">
+                        <div class="leftimg imgCN">
+                            <img src="/img/zh-CN.png" alt="中文"/>
+                        </div>
+                        <div class="rightlabel">
+                            简体中文
+                        </div>
+                    </div>
+                    <div class="hidebox">
+                        <div class="lang-tri-bottom">
+                        </div>
+                        <div class="langbox selected" lang="zh-CN">
+                            <div class="leftimg imgCN">
+                                <img src="/img/zh-CN.png" alt="中文"/>
+                            </div>
+                            <div class="rightlabel">
+                                简体中文
+                            </div>
+                        </div>
+                        <div class="langbox" lang="en-US">
+                            <div class="leftimg imgUS">
+                                <img src="/img/en-US.png" alt="English"/>
+                            </div>
+                            <div class="rightlabel">
+                                English
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        
+            </section>
+        </footer>
+        
+
+        <!-- 右侧侧边栏 -->
+        
+        
+        
+        
+        <iframe id="bbsLogin" style="display:none" src="/bbsLogin.html"></iframe>
+        <script src='/libs/less.js',></script>
+        <script></script>
+        <script>
+            function getJsName(){
+            return "mod_detail";
+            }
+        </script>
+        <script src="/_conf/config.js"></script>
+        <script type="text/javascript">
+            seajs.config({
+            // preload: [
+            //     // Function.prototype.bind ? '' : 'es5-safe',
+            //     this.JSON ? '' : 'json'
+            // ],
+            base: "/libs/",
+            vars: {
+                'ENV': config.ENV    //toggle environment('dev'|'pub')
+            },
+            alias: {
+            "jquery": "jquery/jquery.js",
+            "Handlebars": "handlebars/handlebars.js",
+            "page": "page/page.js",
+            "modernizr": "modernizr/modernizr.js",
+            "cookie":"jquery/jquery.cookies.js",
+            "icheck": "jquery/iCheck/icheck.min.js",
+            "request": "browser-request/index.js",
+            "i18next": "i18next/i18next.js",
+            "bootstrap": "bootstrap/bootstrap.min.js",
+            "placeholder": "jquery/placeholder.js",
+            "validate": "jquery/jquery.validate.min.js",
+            "utils": "dev/utils.js",		
+            "ueditor.upload":"library/ue/kf5_uploader.js",
+            "ueditor": "library/ue/ueditor.min.js",
+            "ueditor.config": "library/ue/ueditor.config.js",
+            "ueditor.image":"library/ue/ueditor_insertimage_ui.js",
+            "ueditor.dialog": "library/ue/dialog.js",
+            "webuploader": "webuploader/webuploader.min.js",
+            "d3":"new/d3.v3.min.js",
+            "d3.queue":"new/queue.v1.min.js",
+            "countup":"countUp.min.js",
+            "parallax":"jquery/parallax.min.js",
+            "vue":"vue/vue.min.js",
+            "vue257": "vue/vue.2.5.7.js",
+            "elementUI":"vue/elementUI.js",
+            "axios":"vue/axios.min.js",
+            "Vue": "vue/v2.6.1/vue.2.5.7.js",
+            "vue-i18n":"vue/v2.6.1/vue-i18n.min.js",
+            "ElementUI":"seajs_module/vue/v2.6.1/element-ui2.10.1.js",
+            "vueCookies": "vue/v2.6.1/vue-cookies.js",
+            'lodash': 'seajs_module/lodash.js',
+            'underscorejs': 'seajs_module/underscorejs.js',
+            "QrCode":'seajs_module/qrcode.js',
+            "async": "async.js",
+            "switchbutton": "jquery/switchButton/switchButton.js",
+            "webuploader0.1.5": "webuploader/_webuploader.min.js",
+            "daterangepicker": "daterangepicker/picker.js",
+            "moment": "daterangepicker/moment.min.js",
+            "jqui": "jquery/jqueryui/jquery-ui.min.js",
+            "echarts": "Echarts/echarts-plain.js",
+            "echarts-map": "Echarts/echarts-plain-map.js",
+            "pagination": "jquery/jquery.pagination.js",
+            "jquerydrag": "jquery/jquery.event.drag-2.2.js",
+            "timepicker-addon": "jquery/jquery-ui-timepicker-addon.min.js",
+            "slickgrid": "SlickGrid/js/slick.js",
+            "vue.2.3.4": "vue/vue.2.3.4.min.js",
+            "vue-dev": "vue/vue.2.3.4.js",
+            "qrcode": "jquery/jquery.qrcode.min.js",
+            }
+            });
+            seajs.use(["axios","Vue","vueCookies","ElementUI","vue-i18n"],function(A,V,C,E,i18){ //Vue 全局设置
+                // seajs.use('/libs/vue/v2.6.1/element-ui2.10.1.css')
+                V.use(C)
+                V.use(E)
+                V.use(i18)
+                var i18n = new i18({
+                    locale:i18n_lang||"zh-CN",
+                    messages: { 
+                        'zh-CN': {},
+                        'en-US': {}
+                    }
+                })
+                V.mixin({
+                    i18n:i18n,
+                    delimiters: ['$[', ']'],
+                    filters:{
+                        ellipsis:function(val,limit){
+                            if(val && val.length > limit){
+                                return val.slice(0,limit*1)+'...'
+                            }
+                            return val
+                        }
+                    }
+                })
+                // seajs.use("/src/js/com.js");
+            });
+            seajs.use(["jquery","cookie"],function($){
+                $.ajax({
+                    url: '/getUserState',
+                    type: 'GET',
+                    cache: false,
+                    async: false
+                }).done(function(data) {
+                    if (data && data.status == 1) {
+                        var state = data.result[0].state;
+                        if(state == 20){
+                            $.removeCookie('curAppId');
+                            $.removeCookie('curAppName');
+                            $.removeCookie('username');
+                            $.removeCookie('nickname');
+                            $.removeCookie('ul_token');
+                            $.removeCookie('apiprojectid');
+                            $.removeCookie('curAppId',{ domain:'.apicloud.com'});
+                            $.removeCookie('curAppName',{ domain:'.apicloud.com'});
+                            $.removeCookie('username',{ domain:'.apicloud.com'});
+                            $.removeCookie('nickname',{ domain:'.apicloud.com'});
+                            $.removeCookie('ul_token',{ domain:'.apicloud.com'});
+                            $.removeCookie('certificateNum');
+                            $.removeCookie('certificateNum2');
+                            $.removeCookie('expiredate');
+                            $.ajax({
+                                url: '/api/user/signout',
+                                type: 'GET',
+                                cache: false,
+                                async: false
+                            }).done(function (data) {
+                                if (data && data.status == 1) {
+                                    var bbsFrm = $('#bbsLogin')[0].contentWindow.document.getElementById('bbsFrm3');
+                                    try{
+                                        bbsFrm.submit();
+                                    }
+                                    catch(e) {
+                                    
+                                    }
+                                    window.location.href = '/freeze';
+                                }
+                            });
+                            // window.location.href = '/freeze';
+                            // return false;
+                        }
+                    }
+                });
+            });
+            seajs.use("/src/js/common/footer.js")
+        </script>
+        
+        
+            <script>
+                if(seajs){
+                        seajs.use('/src/js/common/footer.js')
+                }
+            </script>
+            <script>
+                seajs.use("dev/homeLayout.js");
+            </script>
+        <!-- baidu statistics -->
+        <script>
+            var _hmt = _hmt || [];
+            (function() {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?ae739dc4e9f16c0da7b6f2e4108cad83";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+            })();
+        </script>
+        <!-- start Dplus -->
+        <!-- end Dplus -->
+        <script type="text/javascript">
+            (function(){
+                var bp = document.createElement('script');
+                var curProtocol = window.location.protocol.split(':')[0];
+                if (curProtocol === 'https') {
+                    bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+                }
+                else {
+                    bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+                }
+                var s = document.getElementsByTagName("script")[0];
+                s.parentNode.insertBefore(bp, s);
+            })();
+        </script>
+        <!--360-->
+        <script>
+            (function(b,a,e,h,f,c,g,s){b[h]=b[h]||function(){(b[h].c=b[h].c||[]).push(arguments)};
+                b[h].s=!!c;g=a.getElementsByTagName(e)[0];s=a.createElement(e);
+                s.src="//s.union.360.cn/"+f+".js";s.defer=!0;s.async=!0;g.parentNode.insertBefore(s,g)
+            })(window,document,"script","_qha",214477,false);
+        </script>
+        
+    </body>
+</html>

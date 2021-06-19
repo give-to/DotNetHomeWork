@@ -9,7 +9,8 @@ namespace homework8
 {
     public class OrderDetails
     {
-        public int orderId { get; set; }
+        public Order Order { get; set; }
+        public int OrderId { get; set; }
         [Key]
         public string GoodName { get; set; }        
         public double CostPerGood { get; set; }

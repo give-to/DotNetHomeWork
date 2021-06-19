@@ -23,8 +23,7 @@ namespace homework8
             CreateOrder createOrder = new CreateOrder(); 
             if(createOrder.ShowDialog()==DialogResult.OK)
             {
-                this.orderService.AddOneOrder((Order)Intent.dict["order"]);
-                Intent.dict["orders"] = orderService.Orders;
+                this.orderService.AddOneOrder(createOrder.order);
                 RefreshDgv();
             }            
         }
@@ -34,8 +33,8 @@ namespace homework8
             DeleteOrder deleteOrder = new DeleteOrder();
             if(deleteOrder.ShowDialog()==DialogResult.OK)
             {
-                Order temp = (Order)Intent.dict["deleteItem"];
-                orderService.DeleteOneOrder(temp.orderId);
+                Order temp = deleteOrder.DeleteItem;
+                orderService.DeleteOneOrder(temp.OrderId);
                 RefreshDgv();
             }
         }
@@ -45,12 +44,11 @@ namespace homework8
             UpdateOrder updateOrder = new UpdateOrder();
             if(updateOrder.ShowDialog()==DialogResult.OK)
             {
-                Order tempDelete = (Order)Intent.dict["updateItem"];
+                Order tempDelete = updateOrder.UpdateItem;
                 CreateOrder createOrder = new CreateOrder();
                 if (createOrder.ShowDialog() == DialogResult.OK)
                 {
-                    Order tempCreate = (Order)Intent.dict["order"];
-                    orderService.UpdateOrder(tempDelete.orderId, tempCreate);
+                    orderService.UpdateOrder(tempDelete.OrderId, createOrder.order);
                     RefreshDgv();
                 }
             }
@@ -78,7 +76,6 @@ namespace homework8
             orderService.Import();
             Message message = new Message("导入成功");
             message.ShowDialog();
-            Intent.dict["orders"] = orderService.Orders;
             if(message.DialogResult==DialogResult.OK)
             {
                 RefreshDgv();
@@ -88,14 +85,13 @@ namespace homework8
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            dgvOrder.DataSource = new OrderContext().Orders.ToList();
-            //dgvOrder.DataSource = orderService.Orders;
+            dgvOrder.DataSource = new OrderService().Orders;
         }
 
         private void RefreshDgv()
         {
             dgvOrder.DataSource = null;
-            dgvOrder.DataSource = orderService.Orders;
+            dgvOrder.DataSource = new OrderService().Orders;
         }
     }
 }

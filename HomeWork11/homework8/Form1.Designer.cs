@@ -38,14 +38,14 @@ namespace homework8
             this.btnExportOrder = new System.Windows.Forms.Button();
             this.btnImportOrder = new System.Windows.Forms.Button();
             this.dgvOrder = new System.Windows.Forms.DataGridView();
-            this.iDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bdsOrder = new System.Windows.Forms.BindingSource(this.components);
+            this.orderId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.senderDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.receiverDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.payTimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.senderAddressDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.receiverAddressDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.costSumDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bdsOrder = new System.Windows.Forms.BindingSource(this.components);
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvOrder)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdsOrder)).BeginInit();
@@ -145,7 +145,7 @@ namespace homework8
             this.dgvOrder.AutoGenerateColumns = false;
             this.dgvOrder.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvOrder.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.iDDataGridViewTextBoxColumn,
+            this.orderId,
             this.senderDataGridViewTextBoxColumn,
             this.receiverDataGridViewTextBoxColumn,
             this.payTimeDataGridViewTextBoxColumn,
@@ -162,14 +162,18 @@ namespace homework8
             this.dgvOrder.Size = new System.Drawing.Size(675, 450);
             this.dgvOrder.TabIndex = 1;
             // 
-            // iDDataGridViewTextBoxColumn
+            // bdsOrder
             // 
-            this.iDDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.iDDataGridViewTextBoxColumn.DataPropertyName = "ID";
-            this.iDDataGridViewTextBoxColumn.HeaderText = "订单ID";
-            this.iDDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.iDDataGridViewTextBoxColumn.Name = "iDDataGridViewTextBoxColumn";
-            this.iDDataGridViewTextBoxColumn.ReadOnly = true;
+            this.bdsOrder.DataSource = typeof(homework8.Order);
+            // 
+            // orderId
+            // 
+            this.orderId.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.orderId.DataPropertyName = "orderId";
+            this.orderId.HeaderText = "订单ID";
+            this.orderId.MinimumWidth = 6;
+            this.orderId.Name = "orderId";
+            this.orderId.ReadOnly = true;
             // 
             // senderDataGridViewTextBoxColumn
             // 
@@ -225,10 +229,6 @@ namespace homework8
             this.costSumDataGridViewTextBoxColumn.Name = "costSumDataGridViewTextBoxColumn";
             this.costSumDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // bdsOrder
-            // 
-            this.bdsOrder.DataSource = typeof(homework8.Order);
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
@@ -258,6 +258,7 @@ namespace homework8
         private System.Windows.Forms.DataGridView dgvOrder;
         private System.Windows.Forms.BindingSource bdsOrder;
         private System.Windows.Forms.DataGridViewTextBoxColumn iDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn orderId;
         private System.Windows.Forms.DataGridViewTextBoxColumn senderDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn receiverDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn payTimeDataGridViewTextBoxColumn;

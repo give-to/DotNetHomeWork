@@ -18,7 +18,6 @@ namespace homework8
         {
             InitializeComponent();
             orderDetailDataSource.DataSource = order.Goods;
-            //order.AddOneDetail("11", 2, 3);
         }
         private void CreateOrder_Load(object sender, EventArgs e)
         {
@@ -31,10 +30,8 @@ namespace homework8
         private void btnAdd_Click(object sender, EventArgs e)
         {
             if (txtSender == null || txtReceiver == null || txtSenderAddress == null || txtReceiverAddress == null)
-                return;
-            Intent.dict["order"] = order;            
+                return;  
             this.DialogResult = DialogResult.OK;
-            //this.Close();
 
         }
         private void btnAddOneDetail_Click(object sender, EventArgs e)
@@ -42,7 +39,7 @@ namespace homework8
             AddOneDetail addOneDetail = new AddOneDetail();
             if(addOneDetail.ShowDialog()==DialogResult.OK)
             {
-                order.AddOneDetail((OrderDetails)Intent.dict["detail"]);
+                order.AddOneDetail(addOneDetail.orderDetails);
                 orderDetailDataSource.DataSource = null;
                 orderDetailDataSource.DataSource = order.Goods;
             }            

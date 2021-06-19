@@ -20,16 +20,15 @@ namespace homework8
 
         private void Update_Load(object sender, EventArgs e)
         {
-            if (!Intent.dict.ContainsKey("orders"))
+            if (new OrderContext().Orders.ToList().Count<=0)
                 return;
-            cmbUpdateID.DataSource = (List<Order>)Intent.dict["orders"];
+            cmbUpdateID.DataSource = new OrderContext().Orders.ToList();
             cmbUpdateID.DisplayMember = "orderId";
             cmbUpdateID.DataBindings.Add("SelectedItem", this, "UpdateItem");
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            Intent.dict["updateItem"] = UpdateItem;
             this.DialogResult = DialogResult.OK;
         }
     }

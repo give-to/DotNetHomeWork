@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,7 +16,8 @@ namespace homework8
         public DateTime PayTime { get; set; }
         public string SenderAddress { get; set; }
         public string ReceiverAddress { get; set; }
-        public int orderId { get; set; }
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
+        public int OrderId { get; set; }
         public List<OrderDetails> Goods { get; set; }
         public double CostSum
         {
@@ -29,17 +31,19 @@ namespace homework8
                 return costSum;
             }
         }
+
         public Order()
         {
             Goods = new List<OrderDetails>();
             count++;
-            orderId = count;
+            OrderId = count;
             PayTime = DateTime.Now;
         }
+
         public Order(string sender, string receiver, string senderAddress, string receiveAddress)
         {
             count++;
-            orderId = count;
+            OrderId = count;
             Sender = sender;
             Receiver = receiver;
             SenderAddress = senderAddress;
@@ -55,17 +59,16 @@ namespace homework8
             orderDetailsTemp = new OrderDetails(name, price, num);
             Goods.Add(orderDetailsTemp);
         }
+
         public void AddOneDetail(OrderDetails orderDetails)
         {            
             Goods.Add(orderDetails);
         }
 
-
-
         public override string ToString()
         {
             StringBuilder str = new StringBuilder();
-            str.Append("订单ID：" + orderId);
+            str.Append("订单ID：" + OrderId);
             str.Append('\n');
             str.Append("下单时间：" + PayTime + '\n');
             str.Append("用户：" + Sender + "-------->" + Receiver + '\n');
@@ -79,6 +82,5 @@ namespace homework8
             str.Append('\n');
             return str.ToString();
         }
-
     }
 }

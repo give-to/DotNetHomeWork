@@ -12,7 +12,7 @@ namespace homework8
 {
     public partial class AddOneDetail : Form
     {
-        OrderDetails orderDetails = new OrderDetails();
+        public OrderDetails orderDetails = new OrderDetails();
         public AddOneDetail()
         {
             InitializeComponent();
@@ -27,7 +27,6 @@ namespace homework8
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            Intent.dict["detail"] = orderDetails;
             this.DialogResult = DialogResult.OK;
             this.Close();
         }

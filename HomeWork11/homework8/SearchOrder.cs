@@ -12,7 +12,8 @@ namespace homework8
 {
     public partial class SearchOrder : Form
     {
-        public Order SearchItem { get; set; }        
+        public List<Order> SearchItem { get; set; } 
+       
         public SearchOrder()
         {
             InitializeComponent();
@@ -20,24 +21,19 @@ namespace homework8
 
         private void SearchOrder_Load(object sender, EventArgs e)
         {
-            if (!Intent.dict.ContainsKey("orders"))
-                return;
-            List<Order> orders = (List<Order>)Intent.dict["orders"];
+            List<Order> orders = new OrderContext().Orders.ToList();
             cmbSearchID.DataSource = orders;
             cmbSearchID.DisplayMember = "orderId";
-            cmbSearchID.DataBindings.Add("SelectedItem", this, "SearchItem");
-            
+            cmbSearchID.DataBindings.Add("SelectedItem", this, "SearchItem");      
         }
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            Intent.dict["searchItem"] = SearchItem;
-            List<Order> orders = new List<Order>();
-            orders.Add(SearchItem);
+            SearchItem = new OrderService().SearchById(((Order)cmbSearchID.SelectedItem).OrderId);
             dgvOrder.DataSource = null;
             dgvDetails.DataSource = null;
-            dgvOrder.DataSource = orders;
-            dgvDetails.DataSource = SearchItem.Goods;
+            dgvOrder.DataSource = SearchItem;
+            dgvDetails.DataSource = SearchItem[0].Goods;
         }
     }
 }

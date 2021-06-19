@@ -1,4 +1,3 @@
-C:\CSharp\HomeWork11\homework8\obj\Debug\HomeWork11.csprojAssemblyReference.cache
 C:\CSharp\HomeWork11\homework8\obj\Debug\homework8.AddOneDetail.resources
 C:\CSharp\HomeWork11\homework8\obj\Debug\homework8.CreateOrder.resources
 C:\CSharp\HomeWork11\homework8\obj\Debug\homework8.DeleteOrder.resources
@@ -43,3 +42,4 @@ C:\CSharp\HomeWork11\homework8\bin\Debug\System.Memory.xml
 C:\CSharp\HomeWork11\homework8\bin\Debug\System.Numerics.Vectors.xml
 C:\CSharp\HomeWork11\homework8\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 C:\CSharp\HomeWork11\homework8\obj\Debug\HomeWork11.csproj.CopyComplete
+C:\CSharp\HomeWork11\homework8\obj\Debug\HomeWork11.csprojAssemblyReference.cache
